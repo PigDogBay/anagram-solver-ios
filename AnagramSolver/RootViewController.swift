@@ -7,23 +7,19 @@
 //
 
 import UIKit
+import SwiftUtils
 
-class RootViewController: UIViewController {
-
+class RootViewController: UIViewController
+{
+    var model : Model!
+    
     private var tipsPageVC : TipsPageViewController!
     
+    @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var textFieldQuery: UITextField!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    
 
     @IBAction func doneEditing(sender: UITextField) {
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func searchBtnPressed(sender: AnyObject) {
@@ -31,6 +27,18 @@ class RootViewController: UIViewController {
     @IBAction func showMePressed(sender: AnyObject) {
         textFieldQuery.text = tipsPageVC.getSearchAction()
     }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        model = Model()
+        loadDictionary()
+    }
+    
+    
     /*
     Recommended way to initialize child view controllers
     is here in prepareForSegue
@@ -53,5 +61,19 @@ class RootViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    private func loadDictionary()
+    {
+        //update UI to show dictionary is loading
+        self.searchButton.enabled=false
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
+        {
+                self.model.loadDictionary()
+                dispatch_async(dispatch_get_main_queue())
+                {
+                    //Update UI to show dictionary has loaded
+                    self.searchButton.enabled=true
+                }
+        }
+    }
 }
