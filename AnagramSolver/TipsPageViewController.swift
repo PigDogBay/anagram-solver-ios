@@ -1,0 +1,77 @@
+//
+//  TipsPageViewController.swift
+//  ProtoTypeUI
+//
+//  Created by Mark Bailey on 24/02/2015.
+//  Copyright (c) 2015 MPD Bailey Technology. All rights reserved.
+//
+
+import UIKit
+
+class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSource {
+
+    private let tips = ["Tip 1","Tip 2","Tip 3","Tip 4","Tip 5"]
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.dataSource=self
+        var startView = viewControllerAtIndex(0)
+        self.setViewControllers([startView], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    func getSearchAction()->String
+    {
+        var tipsVC = self.viewControllers[0] as TipViewController
+        return tipsVC.query
+        
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        
+        let pageContentVC = viewController as TipViewController
+        var index = pageContentVC.pageIndex
+        if index == 0{
+            return nil
+        }
+        index--
+        return viewControllerAtIndex(index)
+    }
+    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+        let pageContentVC = viewController as TipViewController
+        var index = pageContentVC.pageIndex
+        if index == NSNotFound{
+            return nil
+        }
+        index++
+        if index==self.tips.count
+        {
+            return nil
+        }
+        return viewControllerAtIndex(index)
+    }
+    
+    private func viewControllerAtIndex(index: Int) -> TipViewController!
+    {
+        let pageContentVC = self.storyboard?.instantiateViewControllerWithIdentifier("TipViewController") as TipViewController
+        if tips.count == 0 || index >= self.tips.count
+        {
+            return nil
+        }
+        pageContentVC.pageIndex = index
+//        pageContentVC.tip = self.tips[index]
+        return pageContentVC
+    }
+    
+    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return self.tips.count
+    }
+    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 0
+    }
+
+
+}

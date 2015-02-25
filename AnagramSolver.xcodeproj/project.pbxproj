@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		4D45EFBA1A9DFABA00C40BB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */; };
-		4D45EFBC1A9DFABA00C40BB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45EFBB1A9DFABA00C40BB4 /* ViewController.swift */; };
 		4D45EFBF1A9DFABA00C40BB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */; };
 		4D45EFC11A9DFABA00C40BB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */; };
 		4D45EFC41A9DFABA00C40BB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */; };
 		4D45EFD01A9DFABA00C40BB4 /* AnagramSolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45EFCF1A9DFABA00C40BB4 /* AnagramSolverTests.swift */; };
+		4D45F0161A9E03A400C40BB4 /* DefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0151A9E03A400C40BB4 /* DefinitionViewController.swift */; };
+		4D45F01B1A9E03BE00C40BB4 /* MacthesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0171A9E03BE00C40BB4 /* MacthesTableViewController.swift */; };
+		4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */; };
+		4D45F01D1A9E03BE00C40BB4 /* TipsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0191A9E03BE00C40BB4 /* TipsPageViewController.swift */; };
+		4D45F01E1A9E03BE00C40BB4 /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F01A1A9E03BE00C40BB4 /* TipViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +33,17 @@
 		4D45EFB41A9DFABA00C40BB4 /* AnagramSolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnagramSolver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D45EFB81A9DFABA00C40BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D45EFBB1A9DFABA00C40BB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4D45EFBE1A9DFABA00C40BB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4D45EFC31A9DFABA00C40BB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4D45EFC91A9DFABA00C40BB4 /* AnagramSolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnagramSolverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D45EFCE1A9DFABA00C40BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D45EFCF1A9DFABA00C40BB4 /* AnagramSolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolverTests.swift; sourceTree = "<group>"; };
+		4D45F0151A9E03A400C40BB4 /* DefinitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionViewController.swift; sourceTree = "<group>"; };
+		4D45F0171A9E03BE00C40BB4 /* MacthesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacthesTableViewController.swift; sourceTree = "<group>"; };
+		4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		4D45F0191A9E03BE00C40BB4 /* TipsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsPageViewController.swift; sourceTree = "<group>"; };
+		4D45F01A1A9E03BE00C40BB4 /* TipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +86,11 @@
 			isa = PBXGroup;
 			children = (
 				4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */,
-				4D45EFBB1A9DFABA00C40BB4 /* ViewController.swift */,
+				4D45F0151A9E03A400C40BB4 /* DefinitionViewController.swift */,
+				4D45F0171A9E03BE00C40BB4 /* MacthesTableViewController.swift */,
+				4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */,
+				4D45F0191A9E03BE00C40BB4 /* TipsPageViewController.swift */,
+				4D45F01A1A9E03BE00C40BB4 /* TipViewController.swift */,
 				4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */,
 				4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */,
 				4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */,
@@ -212,7 +224,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D45EFBC1A9DFABA00C40BB4 /* ViewController.swift in Sources */,
+				4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */,
+				4D45F01D1A9E03BE00C40BB4 /* TipsPageViewController.swift in Sources */,
+				4D45F01E1A9E03BE00C40BB4 /* TipViewController.swift in Sources */,
+				4D45F0161A9E03A400C40BB4 /* DefinitionViewController.swift in Sources */,
+				4D45F01B1A9E03BE00C40BB4 /* MacthesTableViewController.swift in Sources */,
 				4D45EFBA1A9DFABA00C40BB4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +423,7 @@
 				4D45EFD51A9DFABA00C40BB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D45EFD61A9DFABA00C40BB4 /* Build configuration list for PBXNativeTarget "AnagramSolverTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +432,7 @@
 				4D45EFD81A9DFABA00C40BB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
