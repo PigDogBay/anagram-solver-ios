@@ -17,6 +17,7 @@
 		4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */; };
 		4D45F01D1A9E03BE00C40BB4 /* TipsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0191A9E03BE00C40BB4 /* TipsPageViewController.swift */; };
 		4D45F01E1A9E03BE00C40BB4 /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F01A1A9E03BE00C40BB4 /* TipViewController.swift */; };
+		4D45F0201A9E460300C40BB4 /* standard.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D45F01F1A9E460300C40BB4 /* standard.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		4D45F0191A9E03BE00C40BB4 /* TipsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsPageViewController.swift; sourceTree = "<group>"; };
 		4D45F01A1A9E03BE00C40BB4 /* TipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
+		4D45F01F1A9E460300C40BB4 /* standard.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = standard.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				4D45F0191A9E03BE00C40BB4 /* TipsPageViewController.swift */,
 				4D45F01A1A9E03BE00C40BB4 /* TipViewController.swift */,
 				4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */,
+				4D45F01F1A9E460300C40BB4 /* standard.txt */,
 				4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */,
 				4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */,
 				4D45EFB71A9DFABA00C40BB4 /* Supporting Files */,
@@ -207,6 +210,7 @@
 				4D45EFBF1A9DFABA00C40BB4 /* Main.storyboard in Resources */,
 				4D45EFC41A9DFABA00C40BB4 /* LaunchScreen.xib in Resources */,
 				4D45EFC11A9DFABA00C40BB4 /* Images.xcassets in Resources */,
+				4D45F0201A9E460300C40BB4 /* standard.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
