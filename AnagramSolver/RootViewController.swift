@@ -9,7 +9,7 @@
 import UIKit
 import SwiftUtils
 
-class RootViewController: UIViewController
+class RootViewController: UIViewController, StateChangeObserver
 {
     var model : Model!
     
@@ -19,23 +19,22 @@ class RootViewController: UIViewController
     @IBOutlet weak var textFieldQuery: UITextField!
     
 
-    @IBAction func doneEditing(sender: UITextField) {
-    }
-    
-    @IBAction func searchBtnPressed(sender: AnyObject) {
-    }
-    @IBAction func showMePressed(sender: AnyObject) {
+    @IBAction func showMePressed(sender: AnyObject)
+    {
         textFieldQuery.text = tipsPageVC.getSearchAction()
     }
-    override func didReceiveMemoryWarning() {
+
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        model = Model()
-        loadDictionary()
+        model = Model(resourceName: "standard")
+        model.addObserver("root", observer: self)
+        modelToView(model.state)
     }
     
     
@@ -51,29 +50,56 @@ class RootViewController: UIViewController
             self.tipsPageVC = segue.destinationViewController as TipsPageViewController
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
-    private func loadDictionary()
-    {
-        //update UI to show dictionary is loading
-        self.searchButton.enabled=false
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+        
+        if "searchSegue" == identifier
         {
+            return false
+        }
+        
+        return true
+    }
+    
+    func stateChanged(newState: Model.States)
+    {
+        //update UI on main thread
+        dispatch_async(dispatch_get_main_queue())
+        {
+            self.modelToView(newState)
+        }
+    }
+    private func search()
+    {
+        let query = textFieldQuery.text
+        if model.validateQuery(query)
+        {
+            //start search
+        }
+        else
+        {
+            //show error
+        }
+    }
+    private func modelToView(state : Model.States)
+    {
+        switch state
+        {
+        case .uninitialized:
+            self.searchButton.enabled=false
+            //load dictionary on a worker thread
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
+            {
                 self.model.loadDictionary()
-                dispatch_async(dispatch_get_main_queue())
-                {
-                    //Update UI to show dictionary has loaded
-                    self.searchButton.enabled=true
-                }
+            }
+        case .loading:
+            self.searchButton.enabled=false
+        case .ready:
+            self.searchButton.enabled=true
+        case .searching:
+            self.searchButton.enabled=false
+        case .finished:
+            self.searchButton.enabled=true
         }
     }
 }
