@@ -13,6 +13,10 @@ protocol StateChangeObserver
 {
     func stateChanged(newState : Model.States)
 }
+protocol WordSearchObserver : class
+{
+    func matchFound(match : String)
+}
 class Model : WordListCallback
 {
     enum States : Int
@@ -32,7 +36,8 @@ class Model : WordListCallback
     //Unable to search protocols due limitation in Swift, cannot use == on protocol!!!
     //see http://stackoverflow.com/questions/24888560/usage-of-protocols-as-array-types-and-function-parameters-in-swift
     var observersDictionary : [String : StateChangeObserver] = [:]
-
+    weak var wordSearchObserver : WordSearchObserver!
+    
     init(resourceName: String)
     {
         self.wordSearch = WordSearch(wordList: self.wordList)
@@ -66,6 +71,7 @@ class Model : WordListCallback
     
     func changeState(state: States)
     {
+        println("State: \(state.rawValue)")
         for (_,observer) in observersDictionary
         {
             observer.stateChanged(state)
@@ -76,21 +82,29 @@ class Model : WordListCallback
     {
         return true
     }
+    func stop()
+    {
+        self.wordList.stopSearch()
+    }
     func search()
     {
+        changeState(States.searching)
         matches.removeAll(keepCapacity: true)
         var processedQuery = self.wordSearch.preProcessQuery(query)
         let searchType = self.wordSearch.getQueryType(processedQuery)
         processedQuery = self.wordSearch.postProcessQuery(processedQuery, type: searchType)
         self.wordSearch.runQuery(processedQuery, type: searchType, callback: self)
+        changeState(States.finished)
     }
     
-    func update(result: String) {
+    func update(result: String)
+    {
         matches.append(result)
         //only update the table until we have enough items to fill the screen
-        if (self.matches.count<self.TABLE_MAX_COUNT_TO_RELOAD)
+        if self.matches.count<self.TABLE_MAX_COUNT_TO_RELOAD
+            && self.wordSearchObserver != nil
         {
-            //update observer
+            self.wordSearchObserver.matchFound(result)
         }
     }
     

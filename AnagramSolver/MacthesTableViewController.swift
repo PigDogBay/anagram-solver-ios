@@ -8,32 +8,36 @@
 
 import UIKit
 
-class MacthesTableViewController: UITableViewController, StateChangeObserver {
+class MacthesTableViewController: UITableViewController, StateChangeObserver, WordSearchObserver {
 
     @IBOutlet weak var statusLabel: UILabel!
     private let cellIdentifier = "Matches"
     var model : Model!
     
     @IBOutlet weak var navigationBar: UINavigationItem!
-    override func viewDidLoad() {
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         println("MatchesVC loaded")
-        navigationBar.title = "Searching..."
         model.addObserver("matches", observer: self)
-        model.search()
+        model.wordSearchObserver = self
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
+        {
+            self.model.search()
+        }
+    }
+    override func willMoveToParentViewController(parent: UIViewController?) {
+        println("MatchesVC gooing back")
+        model.stop()
+        model.removeObserver("matches")
+        model.wordSearchObserver = nil
     }
     deinit
     {
         println("MatchesVC unloaded")
-        model.removeObserver("matches")
     }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -42,72 +46,57 @@ class MacthesTableViewController: UITableViewController, StateChangeObserver {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         return model.matches.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
         
         cell.textLabel?.text = model.matches[indexPath.row]
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
+    // MARK: - StateChangeObserver Conformance
+    func stateChanged(newState: Model.States)
+    {
+        //update UI on main thread
+        dispatch_async(dispatch_get_main_queue())
+        {
+            self.modelToView(newState)
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    // MARK: - WordSearchObserver Conformance
+    func matchFound(match: String)
+    {
+        //update UI on main thread
+        dispatch_sync(dispatch_get_main_queue())
+        {
+            self.tableView.reloadData()
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    func stateChanged(newState: Model.States) {
-        
+    private func modelToView(state : Model.States)
+    {
+        switch state
+        {
+        case .uninitialized:
+            break
+        case .loading:
+            break
+        case .ready:
+            break
+        case .searching:
+            navigationBar.title = "Searching..."
+        case .finished:
+            navigationBar.title = "Matches: \(model.matches.count)"
+            tableView.reloadData()
+        }
     }
 
 }
