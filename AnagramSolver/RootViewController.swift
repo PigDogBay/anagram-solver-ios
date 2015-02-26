@@ -15,13 +15,24 @@ class RootViewController: UIViewController, StateChangeObserver
     
     private var tipsPageVC : TipsPageViewController!
     
+    let searchSegueId = "searchSegue"
+    
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var textFieldQuery: UITextField!
     
+ 
+    @IBAction func queryFinished(sender: UITextField) {
+        if shouldPerformSegueWithIdentifier(searchSegueId, sender: self)
+        {
+            performSegueWithIdentifier(searchSegueId, sender: self)
+        }
+    }
 
     @IBAction func showMePressed(sender: AnyObject)
     {
+        //don't validate
         textFieldQuery.text = tipsPageVC.getSearchAction()
+        performSegueWithIdentifier(searchSegueId, sender: self)
     }
     @IBAction func backgroundTap(sender: UIControl) {
         //close the keyboard
@@ -36,6 +47,7 @@ class RootViewController: UIViewController, StateChangeObserver
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        println("RootVC loaded")
         model = Model(resourceName: "standard")
         model.addObserver("root", observer: self)
         modelToView(model.state)
@@ -53,13 +65,28 @@ class RootViewController: UIViewController, StateChangeObserver
         {
             self.tipsPageVC = segue.destinationViewController as TipsPageViewController
         }
+        else if segue.identifier == searchSegueId
+        {
+            self.model.query = textFieldQuery.text
+            let matchesVC = segue.destinationViewController as MacthesTableViewController
+            matchesVC.model = self.model
+        }
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
-        
-        if "searchSegue" == identifier
+    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool
+    {
+        if searchSegueId == identifier
         {
-            return false
+            let query = textFieldQuery.text
+            if model.validateQuery(query)
+            {
+                return true
+            }
+            else
+            {
+                //show error
+                return false
+            }
         }
         
         return true
@@ -71,18 +98,6 @@ class RootViewController: UIViewController, StateChangeObserver
         dispatch_async(dispatch_get_main_queue())
         {
             self.modelToView(newState)
-        }
-    }
-    private func search()
-    {
-        let query = textFieldQuery.text
-        if model.validateQuery(query)
-        {
-            //start search
-        }
-        else
-        {
-            //show error
         }
     }
     private func modelToView(state : Model.States)

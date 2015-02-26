@@ -11,6 +11,8 @@ import UIKit
 class MacthesTableViewController: UITableViewController {
 
     private let cellIdentifier = "Matches"
+    var model : Model!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +21,7 @@ class MacthesTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        println("MatchesVC loaded")
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +46,7 @@ class MacthesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = "crossword"
+        cell.textLabel?.text = model.query
         return cell
     }
 

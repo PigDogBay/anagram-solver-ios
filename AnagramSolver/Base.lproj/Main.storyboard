@@ -48,9 +48,9 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter letters" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="a7i-Fj-C2n">
                                 <rect key="frame" x="16" y="72" width="512" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="search"/>
                                 <connections>
-                                    <segue destination="wS8-5K-aEj" kind="show" identifier="searchSegue" id="3IG-Qv-GlK"/>
+                                    <action selector="queryFinished:" destination="ldH-pm-mdz" eventType="editingDidEndOnExit" id="1VD-bB-bLp"/>
                                 </connections>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeI-aX-jLr">
@@ -248,7 +248,4 @@
     <resources>
         <image name="lightbulb_on" width="42" height="42"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="0HP-rw-0zR"/>
-    </inferredMetricsTieBreakers>
 </document>

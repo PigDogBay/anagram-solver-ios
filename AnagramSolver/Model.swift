@@ -24,6 +24,8 @@ class Model
     let wordSearch : WordSearch
     private let resourceName : String
     var state : States = States.uninitialized
+    var query = ""
+    
     //Need to use a dictionary, so I can use the string key to search on
     //Unable to search protocols due limitation in Swift, cannot use == on protocol!!!
     //see http://stackoverflow.com/questions/24888560/usage-of-protocols-as-array-types-and-function-parameters-in-swift

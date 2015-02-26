@@ -15,6 +15,7 @@ class TipViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        println("TipsVC \(pageIndex) loaded")
 
         // Do any additional setup after loading the view.
     }
