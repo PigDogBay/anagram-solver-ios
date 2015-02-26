@@ -18,8 +18,9 @@
 		4D45F01D1A9E03BE00C40BB4 /* TipsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0191A9E03BE00C40BB4 /* TipsPageViewController.swift */; };
 		4D45F01E1A9E03BE00C40BB4 /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F01A1A9E03BE00C40BB4 /* TipViewController.swift */; };
 		4D45F0201A9E460300C40BB4 /* standard.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D45F01F1A9E460300C40BB4 /* standard.txt */; };
-		4D45F0221A9E475B00C40BB4 /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D45F0211A9E475B00C40BB4 /* SwiftUtils.framework */; };
 		4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0231A9E487A00C40BB4 /* Model.swift */; };
+		4D4F370D1A9FBA8D00F3E2D3 /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */; };
+		4D4F370F1A9FBB4500F3E2D3 /* SwiftUtils.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,19 @@
 			remoteInfo = AnagramSolver;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D4F370E1A9FBB2100F3E2D3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4D4F370F1A9FBB4500F3E2D3 /* SwiftUtils.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4D45EFB41A9DFABA00C40BB4 /* AnagramSolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnagramSolver.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,8 +62,8 @@
 		4D45F0191A9E03BE00C40BB4 /* TipsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsPageViewController.swift; sourceTree = "<group>"; };
 		4D45F01A1A9E03BE00C40BB4 /* TipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
 		4D45F01F1A9E460300C40BB4 /* standard.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = standard.txt; sourceTree = "<group>"; };
-		4D45F0211A9E475B00C40BB4 /* SwiftUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUtils.framework; path = "../SwiftUtils/build/Debug-iphoneos/SwiftUtils.framework"; sourceTree = "<group>"; };
 		4D45F0231A9E487A00C40BB4 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUtils.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SwiftApps-ccgtjtkyvrlkquhiegcysvtkucvq/Build/Products/Release-iphoneos/SwiftUtils.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D45F0221A9E475B00C40BB4 /* SwiftUtils.framework in Frameworks */,
+				4D4F370D1A9FBA8D00F3E2D3 /* SwiftUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +88,7 @@
 		4D45EFAB1A9DFABA00C40BB4 = {
 			isa = PBXGroup;
 			children = (
-				4D45F0211A9E475B00C40BB4 /* SwiftUtils.framework */,
+				4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */,
 				4D45EFB61A9DFABA00C40BB4 /* AnagramSolver */,
 				4D45EFCC1A9DFABA00C40BB4 /* AnagramSolverTests */,
 				4D45EFB51A9DFABA00C40BB4 /* Products */,
@@ -144,6 +158,7 @@
 				4D45EFB01A9DFABA00C40BB4 /* Sources */,
 				4D45EFB11A9DFABA00C40BB4 /* Frameworks */,
 				4D45EFB21A9DFABA00C40BB4 /* Resources */,
+				4D4F370E1A9FBB2100F3E2D3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -369,6 +384,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/mark/Documents/projects/Workspace/SwiftUtils/build/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SwiftApps-ccgtjtkyvrlkquhiegcysvtkucvq/Build/Products/Release-iphoneos",
 				);
 				INFOPLIST_FILE = AnagramSolver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -383,6 +399,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/mark/Documents/projects/Workspace/SwiftUtils/build/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SwiftApps-ccgtjtkyvrlkquhiegcysvtkucvq/Build/Products/Release-iphoneos",
 				);
 				INFOPLIST_FILE = AnagramSolver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
