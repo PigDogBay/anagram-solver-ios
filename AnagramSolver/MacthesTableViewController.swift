@@ -8,11 +8,13 @@
 
 import UIKit
 
-class MacthesTableViewController: UITableViewController {
+class MacthesTableViewController: UITableViewController, StateChangeObserver {
 
+    @IBOutlet weak var statusLabel: UILabel!
     private let cellIdentifier = "Matches"
     var model : Model!
     
+    @IBOutlet weak var navigationBar: UINavigationItem!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +24,16 @@ class MacthesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         println("MatchesVC loaded")
+        navigationBar.title = "Searching..."
+        model.addObserver("matches", observer: self)
+        model.search()
     }
+    deinit
+    {
+        println("MatchesVC unloaded")
+        model.removeObserver("matches")
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -40,13 +51,13 @@ class MacthesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 1
+        return model.matches.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = model.query
+        cell.textLabel?.text = model.matches[indexPath.row]
         return cell
     }
 
@@ -94,5 +105,9 @@ class MacthesTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func stateChanged(newState: Model.States) {
+        
+    }
 
 }

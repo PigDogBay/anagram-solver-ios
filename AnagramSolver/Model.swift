@@ -13,15 +13,17 @@ protocol StateChangeObserver
 {
     func stateChanged(newState : Model.States)
 }
-class Model
+class Model : WordListCallback
 {
     enum States : Int
     {
         case uninitialized,loading, ready, searching, finished
     }
-    
+    let TABLE_MAX_COUNT_TO_RELOAD = 20
+
     let wordList = WordList()
     let wordSearch : WordSearch
+    var matches: [String] = []
     private let resourceName : String
     var state : States = States.uninitialized
     var query = ""
@@ -73,6 +75,23 @@ class Model
     func validateQuery(query : String) ->Bool
     {
         return true
+    }
+    func search()
+    {
+        matches.removeAll(keepCapacity: true)
+        var processedQuery = self.wordSearch.preProcessQuery(query)
+        let searchType = self.wordSearch.getQueryType(processedQuery)
+        processedQuery = self.wordSearch.postProcessQuery(processedQuery, type: searchType)
+        self.wordSearch.runQuery(processedQuery, type: searchType, callback: self)
+    }
+    
+    func update(result: String) {
+        matches.append(result)
+        //only update the table until we have enough items to fill the screen
+        if (self.matches.count<self.TABLE_MAX_COUNT_TO_RELOAD)
+        {
+            //update observer
+        }
     }
     
 }

@@ -205,6 +205,9 @@
                     <navigationItem key="navigationItem" title="Matches" id="Fhn-5c-ak7">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="ubs-Lf-mGj"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="navigationBar" destination="Fhn-5c-ak7" id="a1G-df-Mf7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHJ-g2-sRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
