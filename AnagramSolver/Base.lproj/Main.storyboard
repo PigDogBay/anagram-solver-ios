@@ -29,7 +29,7 @@
                         <viewControllerLayoutGuide type="top" id="yWz-ye-xPk"/>
                         <viewControllerLayoutGuide type="bottom" id="gAs-cQ-TGt"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="86g-zU-DtL">
+                    <view key="view" contentMode="scaleToFill" id="86g-zU-DtL" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -87,6 +87,9 @@
                             <constraint firstItem="a7i-Fj-C2n" firstAttribute="leading" secondItem="86g-zU-DtL" secondAttribute="leadingMargin" id="q21-q7-bJ2"/>
                             <constraint firstItem="TCo-FZ-tAJ" firstAttribute="trailing" secondItem="86g-zU-DtL" secondAttribute="trailingMargin" id="uxb-fn-FIW"/>
                         </constraints>
+                        <connections>
+                            <action selector="backgroundTap:" destination="ldH-pm-mdz" eventType="touchDown" id="o1n-DW-yI0"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="iTJ-cg-KFN">
                         <barButtonItem key="rightBarButtonItem" title="About" id="iyZ-W6-vJs"/>

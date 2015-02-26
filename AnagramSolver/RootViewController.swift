@@ -23,6 +23,10 @@ class RootViewController: UIViewController, StateChangeObserver
     {
         textFieldQuery.text = tipsPageVC.getSearchAction()
     }
+    @IBAction func backgroundTap(sender: UIControl) {
+        //close the keyboard
+        textFieldQuery.resignFirstResponder();
+    }
 
     override func didReceiveMemoryWarning()
     {
