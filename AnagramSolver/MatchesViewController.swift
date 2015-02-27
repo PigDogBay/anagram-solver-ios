@@ -10,7 +10,7 @@ import UIKit
 
 class MatchesViewController: UIViewController, StateChangeObserver, WordSearchObserver, UITableViewDataSource
 {
-    private let cellIdentifier = "Matches"
+    private let cellIdentifier = "MatchesCell"
     var model : Model!
 
     @IBOutlet weak var statusLabel: UILabel!
@@ -22,7 +22,6 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     {
         super.viewDidLoad()
         println("MatchesVC loaded")
-        matchesTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
 
         navBar.title = model.query
         
