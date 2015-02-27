@@ -14,7 +14,7 @@ class TipViewController: UIViewController
     let tip0 : [String] = ["Anagrams","Find words from jumbled letters\n\nEnter persia\n\nTo find\n\naspire, praise...","persia"]
     let tip1 : [String] = ["Crossword Clues","Use dots for missing letters\n\nEnter m.g..\n\nTo find\n\nmagic, megan, mcgeee...","m.g.."]
     let tip2 = ["Sub Anagrams","Find words within words\n\nEnter goldmine\n\nTo find\n\nmolding, golden, gnome...","goldmine"]
-    let tip3 = ["Look Up Words","Select a word to\n\nlook up it's meaning","wonderous"]
+    let tip3 = ["Look Up Words","Press the info icon\n\non the right of a word\n\nto look up it's meaning","definition"]
     let tip4 = ["Two Word Anagrams","Use a space to split the letters\n\nEnter manchester united\n\nTo find\n\nfunny names","manchester united"]
     let tip5 = ["Shortcuts","Use numbers instead of dots\n\nEnter z9\n\nTo find\n\nzombie, zookeepers","z9"]
 
