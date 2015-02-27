@@ -13,7 +13,6 @@
 		4D45EFC41A9DFABA00C40BB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */; };
 		4D45EFD01A9DFABA00C40BB4 /* AnagramSolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45EFCF1A9DFABA00C40BB4 /* AnagramSolverTests.swift */; };
 		4D45F0161A9E03A400C40BB4 /* DefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0151A9E03A400C40BB4 /* DefinitionViewController.swift */; };
-		4D45F01B1A9E03BE00C40BB4 /* MacthesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0171A9E03BE00C40BB4 /* MacthesTableViewController.swift */; };
 		4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */; };
 		4D45F01D1A9E03BE00C40BB4 /* TipsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0191A9E03BE00C40BB4 /* TipsPageViewController.swift */; };
 		4D45F01E1A9E03BE00C40BB4 /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F01A1A9E03BE00C40BB4 /* TipViewController.swift */; };
@@ -59,7 +58,6 @@
 		4D45EFCE1A9DFABA00C40BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D45EFCF1A9DFABA00C40BB4 /* AnagramSolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolverTests.swift; sourceTree = "<group>"; };
 		4D45F0151A9E03A400C40BB4 /* DefinitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionViewController.swift; sourceTree = "<group>"; };
-		4D45F0171A9E03BE00C40BB4 /* MacthesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacthesTableViewController.swift; sourceTree = "<group>"; };
 		4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		4D45F0191A9E03BE00C40BB4 /* TipsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipsPageViewController.swift; sourceTree = "<group>"; };
 		4D45F01A1A9E03BE00C40BB4 /* TipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 				4D45F0231A9E487A00C40BB4 /* Model.swift */,
 				4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */,
 				4D45F0151A9E03A400C40BB4 /* DefinitionViewController.swift */,
-				4D45F0171A9E03BE00C40BB4 /* MacthesTableViewController.swift */,
 				4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */,
 				4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */,
 				4D45F0191A9E03BE00C40BB4 /* TipsPageViewController.swift */,
@@ -260,7 +257,6 @@
 				4D45F01D1A9E03BE00C40BB4 /* TipsPageViewController.swift in Sources */,
 				4D45F01E1A9E03BE00C40BB4 /* TipViewController.swift in Sources */,
 				4D45F0161A9E03A400C40BB4 /* DefinitionViewController.swift in Sources */,
-				4D45F01B1A9E03BE00C40BB4 /* MacthesTableViewController.swift in Sources */,
 				4D45EFBA1A9DFABA00C40BB4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
