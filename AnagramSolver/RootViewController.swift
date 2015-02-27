@@ -87,7 +87,6 @@ class RootViewController: UIViewController, StateChangeObserver
             let query = textFieldQuery.text
             if model.validateQuery(query)
             {
-                println("3")
                 return true
             }
             else
