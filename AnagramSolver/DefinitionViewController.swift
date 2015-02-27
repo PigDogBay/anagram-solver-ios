@@ -16,6 +16,7 @@ class DefinitionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.automaticallyAdjustsScrollViewInsets = false
         // Do any additional setup after loading the view.
         let processedWord = stripUnusedChars(word)
         let requestURL = NSURL(string:"http://www.google.com/search?q=define:\(processedWord)")
