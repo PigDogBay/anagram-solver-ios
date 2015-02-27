@@ -260,6 +260,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Definition" id="DWD-wG-j73"/>
                     <connections>
+                        <outlet property="navigationBar" destination="DWD-wG-j73" id="KUL-Nx-zAb"/>
                         <outlet property="webView" destination="a1T-yg-SLP" id="9bK-Rd-aZl"/>
                     </connections>
                 </viewController>

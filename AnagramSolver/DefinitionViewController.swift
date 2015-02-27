@@ -11,6 +11,8 @@ import UIKit
 class DefinitionViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var navigationBar: UINavigationItem!
+
     var word : String!
     
     override func viewDidLoad() {
@@ -20,6 +22,7 @@ class DefinitionViewController: UIViewController {
         self.automaticallyAdjustsScrollViewInsets = false
 
         let processedWord = stripUnusedChars(word)
+        navigationBar.title=processedWord
         let requestURL = NSURL(string:"http://www.google.com/search?q=define:\(processedWord)")
         let request = NSURLRequest(URL: requestURL!)
         webView.loadRequest(request)
