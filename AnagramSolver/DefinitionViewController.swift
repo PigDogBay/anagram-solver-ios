@@ -15,9 +15,10 @@ class DefinitionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //remove the gap above the web view
         self.automaticallyAdjustsScrollViewInsets = false
-        // Do any additional setup after loading the view.
+
         let processedWord = stripUnusedChars(word)
         let requestURL = NSURL(string:"http://www.google.com/search?q=define:\(processedWord)")
         let request = NSURLRequest(URL: requestURL!)
