@@ -17,14 +17,18 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     @IBOutlet weak var matchesTable: UITableView!
     @IBOutlet weak var navBar: UINavigationItem!
     
-    
+    @IBAction func shareButton(sender: UIBarButtonItem)
+    {
+        let firstActivityItem = model.share()
+        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: nil)
+        self.presentViewController(activityViewController, animated: true, completion: nil)
+    }
     override func viewDidLoad()
     {
         super.viewDidLoad()
         println("MatchesVC loaded")
-
-        navBar.title = model.query
         
+        self.stateChanged(model.state)
         model.addObserver("matches", observer: self)
         model.wordSearchObserver = self
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
@@ -105,14 +109,17 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         case .loading:
             break
         case .ready:
+            navBar.title = model.query
+            navBar.rightBarButtonItem?.enabled=false
             break
         case .searching:
             statusLabel.text = "Searching..."
+            navBar.rightBarButtonItem?.enabled=false
         case .finished:
             statusLabel.text = "Matches: \(model.matches.count)"
             matchesTable.reloadData()
+            navBar.rightBarButtonItem?.enabled=true
         }
     }
-
-
+ 
 }

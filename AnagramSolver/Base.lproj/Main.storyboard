@@ -228,7 +228,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Matches" id="drl-D2-IA4">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="DYg-zH-Q7J"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="DYg-zH-Q7J">
+                            <connections>
+                                <action selector="shareButton:" destination="VQ0-Lb-tBU" id="9Go-eC-e0b"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="matchesTable" destination="8RR-Nh-2cY" id="MWx-Su-Tuy"/>

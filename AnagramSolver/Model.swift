@@ -108,4 +108,15 @@ class Model : WordListCallback
         }
     }
     
+    func share()->String
+    {
+        var builder = "-Anagram Solver-\n\nQuery:\n\(self.query)\n\nMatches:\n"
+        for s in matches
+        {
+            builder = builder + s + "\n"
+        }
+        builder+="www.pigdogbay.com"
+        return builder
+    }
+    
 }
