@@ -10,7 +10,7 @@ import UIKit
 
 class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSource {
 
-    private let tips = ["Tip 1","Tip 2","Tip 3","Tip 4","Tip 5"]
+    let tipsCount = 6
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSour
             return nil
         }
         index++
-        if index==self.tips.count
+        if index==tipsCount
         {
             return nil
         }
@@ -57,7 +57,7 @@ class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSour
     private func viewControllerAtIndex(index: Int) -> TipViewController!
     {
         let pageContentVC = self.storyboard?.instantiateViewControllerWithIdentifier("TipViewController") as TipViewController
-        if tips.count == 0 || index >= self.tips.count
+        if index >= tipsCount
         {
             return nil
         }
@@ -67,7 +67,7 @@ class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSour
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return self.tips.count
+        return tipsCount
     }
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         return 0
