@@ -20,7 +20,8 @@
 		4D45F0201A9E460300C40BB4 /* standard.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D45F01F1A9E460300C40BB4 /* standard.txt */; };
 		4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0231A9E487A00C40BB4 /* Model.swift */; };
 		4D4F370D1A9FBA8D00F3E2D3 /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */; };
-		4D4F370F1A9FBB4500F3E2D3 /* SwiftUtils.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4D4F370F1A9FBB4500F3E2D3 /* SwiftUtils.framework in Copy Files (1 item) */ = {isa = PBXBuildFile; fileRef = 4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +35,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4D4F370E1A9FBB2100F3E2D3 /* CopyFiles */ = {
+		4D4F370E1A9FBB2100F3E2D3 /* Copy Files (1 item) */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4D4F370F1A9FBB4500F3E2D3 /* SwiftUtils.framework in CopyFiles */,
+				4D4F370F1A9FBB4500F3E2D3 /* SwiftUtils.framework in Copy Files (1 item) */,
 			);
+			name = "Copy Files (1 item)";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -64,6 +66,7 @@
 		4D45F01F1A9E460300C40BB4 /* standard.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = standard.txt; sourceTree = "<group>"; };
 		4D45F0231A9E487A00C40BB4 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUtils.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SwiftApps-ccgtjtkyvrlkquhiegcysvtkucvq/Build/Products/Release-iphoneos/SwiftUtils.framework"; sourceTree = "<group>"; };
+		4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,7 @@
 				4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */,
 				4D45F0151A9E03A400C40BB4 /* DefinitionViewController.swift */,
 				4D45F0171A9E03BE00C40BB4 /* MacthesTableViewController.swift */,
+				4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */,
 				4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */,
 				4D45F0191A9E03BE00C40BB4 /* TipsPageViewController.swift */,
 				4D45F01A1A9E03BE00C40BB4 /* TipViewController.swift */,
@@ -158,7 +162,7 @@
 				4D45EFB01A9DFABA00C40BB4 /* Sources */,
 				4D45EFB11A9DFABA00C40BB4 /* Frameworks */,
 				4D45EFB21A9DFABA00C40BB4 /* Resources */,
-				4D4F370E1A9FBB2100F3E2D3 /* CopyFiles */,
+				4D4F370E1A9FBB2100F3E2D3 /* Copy Files (1 item) */,
 			);
 			buildRules = (
 			);
@@ -252,6 +256,7 @@
 			files = (
 				4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */,
 				4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */,
+				4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */,
 				4D45F01D1A9E03BE00C40BB4 /* TipsPageViewController.swift in Sources */,
 				4D45F01E1A9E03BE00C40BB4 /* TipViewController.swift in Sources */,
 				4D45F0161A9E03A400C40BB4 /* DefinitionViewController.swift in Sources */,

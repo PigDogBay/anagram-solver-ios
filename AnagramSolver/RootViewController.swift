@@ -68,7 +68,7 @@ class RootViewController: UIViewController, StateChangeObserver
         else if segue.identifier == searchSegueId
         {
             self.model.query = textFieldQuery.text
-            let matchesVC = segue.destinationViewController as MacthesTableViewController
+            let matchesVC = segue.destinationViewController as MatchesViewController
             matchesVC.model = self.model
         }
     }
