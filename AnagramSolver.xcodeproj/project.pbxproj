@@ -21,7 +21,6 @@
 		4D4F370D1A9FBA8D00F3E2D3 /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */; };
 		4D4F370F1A9FBB4500F3E2D3 /* SwiftUtils.framework in Copy Files (1 item) */ = {isa = PBXBuildFile; fileRef = 4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */; };
-		4DF8C2401AA09CB900642E75 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8C23F1AA09CB900642E75 /* MatchCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +65,6 @@
 		4D45F0231A9E487A00C40BB4 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUtils.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SwiftApps-ccgtjtkyvrlkquhiegcysvtkucvq/Build/Products/Release-iphoneos/SwiftUtils.framework"; sourceTree = "<group>"; };
 		4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
-		4DF8C23F1AA09CB900642E75 /* MatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +116,6 @@
 				4D45F0191A9E03BE00C40BB4 /* TipsPageViewController.swift */,
 				4D45F01A1A9E03BE00C40BB4 /* TipViewController.swift */,
 				4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */,
-				4DF8C23F1AA09CB900642E75 /* MatchCell.swift */,
 				4D45F01F1A9E460300C40BB4 /* standard.txt */,
 				4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */,
 				4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */,
@@ -261,7 +258,6 @@
 				4D45F01E1A9E03BE00C40BB4 /* TipViewController.swift in Sources */,
 				4D45F0161A9E03A400C40BB4 /* DefinitionViewController.swift in Sources */,
 				4D45EFBA1A9DFABA00C40BB4 /* AppDelegate.swift in Sources */,
-				4DF8C2401AA09CB900642E75 /* MatchCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

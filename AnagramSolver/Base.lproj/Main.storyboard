@@ -207,7 +207,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="2tR-EW-1Aq" kind="show" trigger="accessoryAction" id="kV8-yp-vNU"/>
+                                            <segue destination="2tR-EW-1Aq" kind="show" identifier="definitionSegue" trigger="accessoryAction" id="kV8-yp-vNU"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

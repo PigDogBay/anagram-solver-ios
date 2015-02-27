@@ -11,11 +11,14 @@ import UIKit
 class DefinitionViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
+    var word : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let requestURL = NSURL(string:"http://www.google.com/search?q=define:crossword")
+        let processedWord = stripUnusedChars(word)
+        let requestURL = NSURL(string:"http://www.google.com/search?q=define:\(processedWord)")
         let request = NSURLRequest(URL: requestURL!)
         webView.loadRequest(request)
     }
@@ -23,5 +26,15 @@ class DefinitionViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    private func stripUnusedChars(word : String) -> String
+    {
+        if word.mpdb_contains(" ")
+        {
+            let index = word.rangeOfString(" ")
+            return word.substringToIndex(advance(index!.endIndex,-1))
+        }
+        return word
     }
 }

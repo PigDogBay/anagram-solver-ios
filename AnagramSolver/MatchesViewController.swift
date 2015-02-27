@@ -49,6 +49,14 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "definitionSegue"
+        {
+            let definitionVC = segue.destinationViewController as DefinitionViewController
+            let cell = sender as UITableViewCell
+            definitionVC.word = cell.textLabel?.text
+        }
+    }
     
     // MARK: - Table view data source
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
