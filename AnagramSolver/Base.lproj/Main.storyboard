@@ -21,7 +21,7 @@
             </objects>
             <point key="canvasLocation" x="-519" y="216"/>
         </scene>
-        <!--Search-->
+        <!--Anagram Solver-->
         <scene sceneID="duY-AS-EmT">
             <objects>
                 <viewController id="ldH-pm-mdz" customClass="RootViewController" customModule="AnagramSolver" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,26 +33,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCo-FZ-tAJ">
-                                <rect key="frame" x="536" y="72" width="48" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="cjD-P1-M0G"/>
-                                </constraints>
-                                <state key="normal" title="Search">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="VQ0-Lb-tBU" kind="show" identifier="searchSegue" id="U98-oh-zln"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter letters" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="a7i-Fj-C2n">
-                                <rect key="frame" x="16" y="72" width="512" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="search"/>
-                                <connections>
-                                    <action selector="queryFinished:" destination="ldH-pm-mdz" eventType="editingDidEndOnExit" id="1VD-bB-bLp"/>
-                                </connections>
-                            </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeI-aX-jLr">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
@@ -71,29 +51,44 @@
                                     <segue destination="ik4-1Y-ZfB" kind="embed" identifier="TipsSegue" id="oAC-W3-2DF"/>
                                 </connections>
                             </containerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter letters" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="a7i-Fj-C2n">
+                                <rect key="frame" x="16" y="72" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="plt-OJ-fIO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="search"/>
+                                <connections>
+                                    <action selector="queryFinished:" destination="ldH-pm-mdz" eventType="editingDidEndOnExit" id="1VD-bB-bLp"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="TCo-FZ-tAJ" firstAttribute="top" secondItem="yWz-ye-xPk" secondAttribute="bottom" constant="8" id="1DF-G0-Baa"/>
                             <constraint firstItem="eeI-aX-jLr" firstAttribute="leading" secondItem="86g-zU-DtL" secondAttribute="leading" id="3dt-CJ-Sic"/>
                             <constraint firstItem="H35-x4-2pP" firstAttribute="leading" secondItem="86g-zU-DtL" secondAttribute="leadingMargin" id="AWP-9b-dZW"/>
                             <constraint firstItem="eeI-aX-jLr" firstAttribute="top" secondItem="H35-x4-2pP" secondAttribute="bottom" id="CwH-2b-zZp"/>
+                            <constraint firstItem="a7i-Fj-C2n" firstAttribute="trailing" secondItem="86g-zU-DtL" secondAttribute="trailingMargin" id="IFR-oK-U5l"/>
                             <constraint firstItem="H35-x4-2pP" firstAttribute="trailing" secondItem="86g-zU-DtL" secondAttribute="trailingMargin" id="Z4W-Bj-nEP"/>
                             <constraint firstAttribute="trailing" secondItem="eeI-aX-jLr" secondAttribute="trailing" id="aJY-tm-H8j"/>
-                            <constraint firstItem="TCo-FZ-tAJ" firstAttribute="leading" secondItem="a7i-Fj-C2n" secondAttribute="trailing" constant="8" id="fdD-LP-PVq"/>
                             <constraint firstItem="H35-x4-2pP" firstAttribute="top" secondItem="a7i-Fj-C2n" secondAttribute="bottom" constant="8" id="fql-jA-ehg"/>
                             <constraint firstItem="a7i-Fj-C2n" firstAttribute="top" secondItem="yWz-ye-xPk" secondAttribute="bottom" constant="8" id="i54-Rs-hK1"/>
                             <constraint firstItem="gAs-cQ-TGt" firstAttribute="top" secondItem="eeI-aX-jLr" secondAttribute="bottom" id="iuZ-TL-pWO"/>
                             <constraint firstItem="a7i-Fj-C2n" firstAttribute="leading" secondItem="86g-zU-DtL" secondAttribute="leadingMargin" id="q21-q7-bJ2"/>
-                            <constraint firstItem="TCo-FZ-tAJ" firstAttribute="trailing" secondItem="86g-zU-DtL" secondAttribute="trailingMargin" id="uxb-fn-FIW"/>
                         </constraints>
                         <connections>
                             <action selector="backgroundTap:" destination="ldH-pm-mdz" eventType="touchDown" id="o1n-DW-yI0"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="iTJ-cg-KFN"/>
+                    <navigationItem key="navigationItem" title="Anagram Solver" id="iTJ-cg-KFN">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="a8L-df-lOj">
+                            <connections>
+                                <segue destination="VQ0-Lb-tBU" kind="show" identifier="searchSegue" id="gg0-3H-TMR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="searchButton" destination="TCo-FZ-tAJ" id="L2j-LT-dLw"/>
+                        <outlet property="searchButton" destination="a8L-df-lOj" id="QZ0-bu-JwH"/>
                         <outlet property="textFieldQuery" destination="a7i-Fj-C2n" id="230-eb-cbu"/>
                     </connections>
                 </viewController>

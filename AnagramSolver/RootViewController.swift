@@ -17,7 +17,7 @@ class RootViewController: UIViewController, StateChangeObserver
     
     let searchSegueId = "searchSegue"
     
-    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var textFieldQuery: UITextField!
     
  
