@@ -42,7 +42,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="VQ0-Lb-tBU" kind="show" identifier="searchSegue" id="fnn-R4-dWa"/>
+                                    <segue destination="VQ0-Lb-tBU" kind="show" identifier="searchSegue" id="U98-oh-zln"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter letters" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="a7i-Fj-C2n">
@@ -91,9 +91,7 @@
                             <action selector="backgroundTap:" destination="ldH-pm-mdz" eventType="touchDown" id="o1n-DW-yI0"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="iTJ-cg-KFN">
-                        <barButtonItem key="rightBarButtonItem" title="About" id="iyZ-W6-vJs"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Search" id="iTJ-cg-KFN"/>
                     <connections>
                         <outlet property="searchButton" destination="TCo-FZ-tAJ" id="L2j-LT-dLw"/>
                         <outlet property="textFieldQuery" destination="a7i-Fj-C2n" id="230-eb-cbu"/>

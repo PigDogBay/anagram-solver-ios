@@ -69,9 +69,10 @@ class Model : WordListCallback
         changeState(States.ready)
     }
     
-    func changeState(state: States)
+    func changeState(newState: States)
     {
-        println("State: \(state.rawValue)")
+        println("State: \(newState.rawValue)")
+        self.state = newState
         for (_,observer) in observersDictionary
         {
             observer.stateChanged(state)
@@ -117,6 +118,15 @@ class Model : WordListCallback
         }
         builder+="www.pigdogbay.com"
         return builder
+    }
+    
+    func isReady() -> Bool
+    {
+        if States.finished == self.state
+        {
+            state = States.ready
+        }
+        return States.ready == self.state
     }
     
 }

@@ -30,9 +30,11 @@ class RootViewController: UIViewController, StateChangeObserver
 
     @IBAction func showMePressed(sender: AnyObject)
     {
-        //don't validate
-        textFieldQuery.text = tipsPageVC.getSearchAction()
-        performSegueWithIdentifier(searchSegueId, sender: self)
+        if shouldPerformSegueWithIdentifier(searchSegueId, sender: self)
+        {
+            textFieldQuery.text = tipsPageVC.getSearchAction()
+            performSegueWithIdentifier(searchSegueId, sender: self)
+        }
     }
     @IBAction func backgroundTap(sender: UIControl) {
         //close the keyboard
@@ -77,9 +79,15 @@ class RootViewController: UIViewController, StateChangeObserver
     {
         if searchSegueId == identifier
         {
+            if !model.isReady()
+            {
+                //show error
+                return false
+            }
             let query = textFieldQuery.text
             if model.validateQuery(query)
             {
+                println("3")
                 return true
             }
             else
