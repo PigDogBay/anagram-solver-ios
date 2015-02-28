@@ -33,8 +33,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eeI-aX-jLr">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeI-aX-jLr">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <barButtonItem systemItem="flexibleSpace" id="OPz-yA-wzA"/>
                                     <barButtonItem title="Show Me" id="sYx-Yt-VXH">
@@ -56,14 +57,14 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="plt-OJ-fIO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="search"/>
                                 <connections>
                                     <action selector="queryFinished:" destination="ldH-pm-mdz" eventType="editingDidEndOnExit" id="1VD-bB-bLp"/>
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="eeI-aX-jLr" firstAttribute="leading" secondItem="86g-zU-DtL" secondAttribute="leading" id="3dt-CJ-Sic"/>
                             <constraint firstItem="H35-x4-2pP" firstAttribute="leading" secondItem="86g-zU-DtL" secondAttribute="leadingMargin" id="AWP-9b-dZW"/>
