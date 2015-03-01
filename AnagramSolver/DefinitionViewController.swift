@@ -43,6 +43,10 @@ class DefinitionViewController: UIViewController {
         }
         return word
     }
+    
+    //MARK:- Webview delegate functions
+    //To make this class a delegate from the storyboard
+    //In the webview connections inspector, connect delegate connection to view controller
     func webViewDidStartLoad(_ : UIWebView)
     {
         loadingIndicator.startAnimating()
