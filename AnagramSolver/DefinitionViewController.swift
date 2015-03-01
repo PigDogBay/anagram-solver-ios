@@ -12,7 +12,8 @@ class DefinitionViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var navigationBar: UINavigationItem!
-
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
     var word : String!
     
     override func viewDidLoad() {
@@ -41,5 +42,13 @@ class DefinitionViewController: UIViewController {
             return word.substringToIndex(advance(index!.endIndex,-1))
         }
         return word
+    }
+    func webViewDidStartLoad(_ : UIWebView)
+    {
+        loadingIndicator.startAnimating()
+    }
+    func webViewDidFinishLoad(_ : UIWebView)
+    {
+        loadingIndicator.stopAnimating()
     }
 }
