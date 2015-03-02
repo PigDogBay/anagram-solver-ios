@@ -21,6 +21,12 @@ class TipViewController: UIViewController
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
 
+    @IBAction func backgroundTap(sender: AnyObject)
+    {
+        //dismiss the keyboard
+        UIApplication.sharedApplication().sendAction("resignFirstResponder", to: nil, from: nil, forEvent: nil)
+    }
+
     var pageIndex : Int = 0
     var query = "m.g.."
 

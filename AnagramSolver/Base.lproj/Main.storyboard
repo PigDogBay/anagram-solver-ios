@@ -113,7 +113,7 @@
                         <viewControllerLayoutGuide type="top" id="xJ9-XC-VIm"/>
                         <viewControllerLayoutGuide type="bottom" id="uMR-60-1Gy"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rJA-qV-VSE">
+                    <view key="view" contentMode="scaleToFill" id="rJA-qV-VSE" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -145,6 +145,9 @@
                             <constraint firstItem="uMR-60-1Gy" firstAttribute="top" secondItem="V51-vV-BUc" secondAttribute="bottom" constant="15" id="tjC-ZF-JfC"/>
                             <constraint firstItem="UgC-Vv-mjn" firstAttribute="top" secondItem="xJ9-XC-VIm" secondAttribute="bottom" constant="40" id="vay-es-AXA"/>
                         </constraints>
+                        <connections>
+                            <action selector="backgroundTap:" destination="4Ba-OE-cnx" eventType="touchUpInside" id="mZg-cT-a7a"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="V51-vV-BUc" id="Tse-WB-Rfl"/>
