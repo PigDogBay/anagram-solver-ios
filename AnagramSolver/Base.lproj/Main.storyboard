@@ -117,17 +117,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Crossword Clues" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryz-77-O1h">
-                                <rect key="frame" x="118" y="70" width="466" height="23"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crossword Clues" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryz-77-O1h">
+                                <rect key="frame" x="214" y="59" width="173" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="lightbulb_on" translatesAutoresizingMaskIntoConstraints="NO" id="UgC-Vv-mjn">
-                                <rect key="frame" x="56" y="60" width="42" height="42"/>
+                            <imageView userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightbulb_on" translatesAutoresizingMaskIntoConstraints="NO" id="UgC-Vv-mjn">
+                                <rect key="frame" x="164" y="52" width="42" height="42"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V51-vV-BUc">
-                                <rect key="frame" x="36" y="143" width="548" height="442"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V51-vV-BUc">
+                                <rect key="frame" x="279" y="131" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -135,15 +135,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="V51-vV-BUc" firstAttribute="trailing" secondItem="rJA-qV-VSE" secondAttribute="trailingMargin" id="4h0-Ly-JKK"/>
-                            <constraint firstItem="Ryz-77-O1h" firstAttribute="centerY" secondItem="UgC-Vv-mjn" secondAttribute="centerY" id="5KD-Rp-vuz"/>
-                            <constraint firstItem="V51-vV-BUc" firstAttribute="leading" secondItem="rJA-qV-VSE" secondAttribute="leadingMargin" constant="20" id="Gbr-cX-ZG4"/>
-                            <constraint firstItem="UgC-Vv-mjn" firstAttribute="leading" secondItem="rJA-qV-VSE" secondAttribute="leadingMargin" constant="40" id="I7x-Mj-tPY"/>
-                            <constraint firstItem="V51-vV-BUc" firstAttribute="top" secondItem="UgC-Vv-mjn" secondAttribute="bottom" constant="41" id="MbV-Ku-baN"/>
-                            <constraint firstItem="Ryz-77-O1h" firstAttribute="leading" secondItem="UgC-Vv-mjn" secondAttribute="trailing" id="Zvo-OM-PnY"/>
-                            <constraint firstItem="Ryz-77-O1h" firstAttribute="trailing" secondItem="rJA-qV-VSE" secondAttribute="trailingMargin" id="qIj-VB-F48"/>
-                            <constraint firstItem="uMR-60-1Gy" firstAttribute="top" secondItem="V51-vV-BUc" secondAttribute="bottom" constant="15" id="tjC-ZF-JfC"/>
-                            <constraint firstItem="UgC-Vv-mjn" firstAttribute="top" secondItem="xJ9-XC-VIm" secondAttribute="bottom" constant="40" id="vay-es-AXA"/>
+                            <constraint firstItem="V51-vV-BUc" firstAttribute="top" secondItem="Ryz-77-O1h" secondAttribute="bottom" constant="45" id="Xh2-1y-CJ2"/>
+                            <constraint firstItem="UgC-Vv-mjn" firstAttribute="top" secondItem="xJ9-XC-VIm" secondAttribute="bottom" constant="32" id="YDf-Xu-Bkm"/>
+                            <constraint firstItem="Ryz-77-O1h" firstAttribute="centerY" secondItem="UgC-Vv-mjn" secondAttribute="centerY" id="cMe-5t-WwS"/>
+                            <constraint firstAttribute="centerX" secondItem="Ryz-77-O1h" secondAttribute="centerX" id="f2B-b1-c49"/>
+                            <constraint firstAttribute="centerX" secondItem="V51-vV-BUc" secondAttribute="centerX" id="g52-Jc-cN0"/>
+                            <constraint firstItem="Ryz-77-O1h" firstAttribute="leading" secondItem="UgC-Vv-mjn" secondAttribute="trailing" constant="8" id="yz5-sp-HTc"/>
                         </constraints>
                         <connections>
                             <action selector="backgroundTap:" destination="4Ba-OE-cnx" eventType="touchUpInside" id="mZg-cT-a7a"/>
