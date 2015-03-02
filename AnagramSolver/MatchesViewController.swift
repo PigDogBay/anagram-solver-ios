@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import iAd
 
 class MatchesViewController: UIViewController, StateChangeObserver, WordSearchObserver, UITableViewDataSource
 {
@@ -27,6 +28,11 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     {
         super.viewDidLoad()
         println("MatchesVC loaded")
+        //Add iAd.Framework in the project page-> general tab->Linked frameworks and libraries
+        //import iAd
+        //Set extension property canDisplayBannerAds to true
+        //A parent View is created to hold this view and the ad will appear from below
+        self.canDisplayBannerAds = true
         
         self.stateChanged(model.state)
         model.addObserver("matches", observer: self)
@@ -39,6 +45,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     override func willMoveToParentViewController(parent: UIViewController?)
     {
         println("MatchesVC gooing back")
+        self.canDisplayBannerAds = false
         model.stop()
         model.removeObserver("matches")
         model.wordSearchObserver = nil
@@ -56,6 +63,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "definitionSegue"
         {
+            self.canDisplayBannerAds = false
             let definitionVC = segue.destinationViewController as DefinitionViewController
             let cell = sender as UITableViewCell
             definitionVC.word = cell.textLabel?.text
