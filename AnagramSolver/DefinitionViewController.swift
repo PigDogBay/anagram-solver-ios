@@ -14,6 +14,7 @@ class DefinitionViewController: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationItem!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var loadingLabel: UILabel!
     var word : String!
     
     override func viewDidLoad() {
@@ -50,9 +51,11 @@ class DefinitionViewController: UIViewController {
     func webViewDidStartLoad(_ : UIWebView)
     {
         loadingIndicator.startAnimating()
+        loadingLabel.hidden=false
     }
     func webViewDidFinishLoad(_ : UIWebView)
     {
         loadingIndicator.stopAnimating()
+        loadingLabel.hidden=true
     }
 }
