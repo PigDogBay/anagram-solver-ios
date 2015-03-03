@@ -79,9 +79,10 @@ class Model : WordListCallback
         }
     }
     
-    func validateQuery(query : String) ->Bool
+    func setAndValidateQuery(var raw : String) ->Bool
     {
-        return true
+        self.query = wordSearch.clean(raw)
+        return self.query.utf16Count>0
     }
     func stop()
     {

@@ -30,9 +30,9 @@ class RootViewController: UIViewController, StateChangeObserver
 
     @IBAction func showMePressed(sender: AnyObject)
     {
+        textFieldQuery.text = tipsPageVC.getSearchAction()
         if shouldPerformSegueWithIdentifier(searchSegueId, sender: self)
         {
-            textFieldQuery.text = tipsPageVC.getSearchAction()
             performSegueWithIdentifier(searchSegueId, sender: self)
         }
     }
@@ -70,7 +70,6 @@ class RootViewController: UIViewController, StateChangeObserver
         }
         else if segue.identifier == searchSegueId
         {
-            self.model.query = textFieldQuery.text
             let matchesVC = segue.destinationViewController as MatchesViewController
             matchesVC.model = self.model
         }
@@ -82,22 +81,30 @@ class RootViewController: UIViewController, StateChangeObserver
         {
             if !model.isReady()
             {
-                //show error
+                showErrorAlert("Loading...", msg: "Please wait, loading the wordlist")
                 return false
             }
             let query = textFieldQuery.text
-            if model.validateQuery(query)
+            if model.setAndValidateQuery(query)
             {
                 return true
             }
             else
             {
-                //show error
+                showErrorAlert("Search Error", msg: "Please enter letters a to z")
                 return false
             }
         }
         
         return true
+    }
+    
+    private func showErrorAlert(title: String, msg : String)
+    {
+        let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+        let controller = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.Alert)
+        controller.addAction(action)
+        self.presentViewController(controller, animated: true, completion: nil)
     }
     
     func stateChanged(newState: Model.States)
