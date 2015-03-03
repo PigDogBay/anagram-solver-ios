@@ -34,15 +34,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H35-x4-2pP">
-                                <rect key="frame" x="16" y="110" width="568" height="482"/>
+                                <rect key="frame" x="16" y="120" width="568" height="472"/>
                                 <connections>
                                     <segue destination="ik4-1Y-ZfB" kind="embed" identifier="TipsSegue" id="oAC-W3-2DF"/>
                                 </connections>
                             </containerView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter letters" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="a7i-Fj-C2n">
-                                <rect key="frame" x="16" y="72" width="568" height="30"/>
+                                <rect key="frame" x="16" y="72" width="568" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="plt-OJ-fIO"/>
+                                    <constraint firstAttribute="height" constant="40" id="plt-OJ-fIO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="search"/>
@@ -51,7 +51,7 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.29019607843137252" green="0.43529411764705883" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.22435467216022403" green="0.33736878876537241" blue="0.60241948341836737" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="H35-x4-2pP" firstAttribute="leading" secondItem="86g-zU-DtL" secondAttribute="leadingMargin" id="AWP-9b-dZW"/>
                             <constraint firstItem="gAs-cQ-TGt" firstAttribute="top" secondItem="H35-x4-2pP" secondAttribute="bottom" constant="8" id="CCc-z2-Ze1"/>
