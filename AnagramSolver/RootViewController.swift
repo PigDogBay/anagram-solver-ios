@@ -13,8 +13,6 @@ class RootViewController: UIViewController, StateChangeObserver
 {
     var model : Model!
     
-    private var tipsPageVC : TipsPageViewController!
-    
     let searchSegueId = "searchSegue"
     
     @IBOutlet weak var searchButton: UIBarButtonItem!
@@ -28,14 +26,6 @@ class RootViewController: UIViewController, StateChangeObserver
         }
     }
 
-    @IBAction func showMePressed(sender: AnyObject)
-    {
-        textFieldQuery.text = tipsPageVC.getSearchAction()
-        if shouldPerformSegueWithIdentifier(searchSegueId, sender: self)
-        {
-            performSegueWithIdentifier(searchSegueId, sender: self)
-        }
-    }
     @IBAction func backgroundTap(sender: UIControl) {
         //close the keyboard
         textFieldQuery.resignFirstResponder();
@@ -62,13 +52,9 @@ class RootViewController: UIViewController, StateChangeObserver
     is here in prepareForSegue
     http://stackoverflow.com/questions/13279105/access-container-view-controller-from-parent-ios
     */
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        //remember to set the segue identifier in the storyboard
-        if segue.identifier == "TipsSegue"
-        {
-            self.tipsPageVC = segue.destinationViewController as TipsPageViewController
-        }
-        else if segue.identifier == searchSegueId
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == searchSegueId
         {
             let matchesVC = segue.destinationViewController as MatchesViewController
             matchesVC.model = self.model

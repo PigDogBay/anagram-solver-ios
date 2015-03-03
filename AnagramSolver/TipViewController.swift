@@ -8,10 +8,9 @@
 
 import UIKit
 
-class TipViewController: UIViewController
+class TipViewController: PageContentController
 {
-    
-    let tip0 : [String] = ["Anagrams","Find words from jumbled letters\n\nEnter persia\n\nPress Search to find\n\naspire, praise...","persia"]
+    let tip0 : [String] = ["Anagrams","Find words from jumbled letters\n\nEnter persia\n\nTo find\n\naspire, praise...","persia"]
     let tip1 : [String] = ["Crosswords","Use dots for missing letters\n\nEnter m.g..\n\nTo find\n\nmagic, megan, mcgeee...","m.g.."]
     let tip2 = ["Sub Words","Find words within words\n\nEnter goldmine\n\nTo find\n\nmolding, golden, gnome...","goldmine"]
     let tip3 = ["Wildcards","Use @ for 1 or more letters\n\nEnter @ace\n\nTo find\n\nembrace, cyberspace...","@ace"]
@@ -21,13 +20,6 @@ class TipViewController: UIViewController
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
 
-    @IBAction func backgroundTap(sender: AnyObject)
-    {
-        //dismiss the keyboard
-        UIApplication.sharedApplication().sendAction("resignFirstResponder", to: nil, from: nil, forEvent: nil)
-    }
-
-    var pageIndex : Int = 0
     var query = "m.g.."
 
     override func viewDidLoad()

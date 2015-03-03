@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D3367D01AA64A8D00EA824A /* PageContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3367CF1AA64A8D00EA824A /* PageContentController.swift */; };
+		4D3367D21AA64CFA00EA824A /* HelpOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3367D11AA64CFA00EA824A /* HelpOutViewController.swift */; };
 		4D45EFBA1A9DFABA00C40BB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */; };
 		4D45EFBF1A9DFABA00C40BB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */; };
 		4D45EFC11A9DFABA00C40BB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */; };
@@ -49,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D3367CF1AA64A8D00EA824A /* PageContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentController.swift; sourceTree = "<group>"; };
+		4D3367D11AA64CFA00EA824A /* HelpOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpOutViewController.swift; sourceTree = "<group>"; };
 		4D45EFB41A9DFABA00C40BB4 /* AnagramSolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnagramSolver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D45EFB81A9DFABA00C40BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,8 +121,10 @@
 				4D45F0151A9E03A400C40BB4 /* DefinitionViewController.swift */,
 				4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */,
 				4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */,
+				4D3367CF1AA64A8D00EA824A /* PageContentController.swift */,
 				4D45F0191A9E03BE00C40BB4 /* TipsPageViewController.swift */,
 				4D45F01A1A9E03BE00C40BB4 /* TipViewController.swift */,
+				4D3367D11AA64CFA00EA824A /* HelpOutViewController.swift */,
 				4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */,
 				4D45F01F1A9E460300C40BB4 /* standard.txt */,
 				4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */,
@@ -257,6 +263,8 @@
 			files = (
 				4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */,
 				4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */,
+				4D3367D01AA64A8D00EA824A /* PageContentController.swift in Sources */,
+				4D3367D21AA64CFA00EA824A /* HelpOutViewController.swift in Sources */,
 				4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */,
 				4D45F01D1A9E03BE00C40BB4 /* TipsPageViewController.swift in Sources */,
 				4D45F01E1A9E03BE00C40BB4 /* TipViewController.swift in Sources */,
