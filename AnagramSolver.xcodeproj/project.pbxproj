@@ -23,6 +23,7 @@
 		4D4F370D1A9FBA8D00F3E2D3 /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */; };
 		4D4F370F1A9FBB4500F3E2D3 /* SwiftUtils.framework in Copy Files (1 item) */ = {isa = PBXBuildFile; fileRef = 4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D9927931AA488440005D5B0 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9927921AA488440005D5B0 /* iAd.framework */; };
+		4DBAF0A11AA75BEA00400AA4 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAF0A01AA75BEA00400AA4 /* iRate.m */; };
 		4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,9 @@
 		4D45F0231A9E487A00C40BB4 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUtils.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SwiftApps-ccgtjtkyvrlkquhiegcysvtkucvq/Build/Products/Release-iphoneos/SwiftUtils.framework"; sourceTree = "<group>"; };
 		4D9927921AA488440005D5B0 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		4DBAF09E1AA75BD900400AA4 /* iRate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
+		4DBAF09F1AA75BEA00400AA4 /* AnagramSolver-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnagramSolver-Bridging-Header.h"; sourceTree = "<group>"; };
+		4DBAF0A01AA75BEA00400AA4 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +134,9 @@
 				4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */,
 				4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */,
 				4D45EFB71A9DFABA00C40BB4 /* Supporting Files */,
+				4DBAF09E1AA75BD900400AA4 /* iRate.h */,
+				4DBAF0A01AA75BEA00400AA4 /* iRate.m */,
+				4DBAF09F1AA75BEA00400AA4 /* AnagramSolver-Bridging-Header.h */,
 			);
 			path = AnagramSolver;
 			sourceTree = "<group>";
@@ -262,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */,
+				4DBAF0A11AA75BEA00400AA4 /* iRate.m in Sources */,
 				4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */,
 				4D3367D01AA64A8D00EA824A /* PageContentController.swift in Sources */,
 				4D3367D21AA64CFA00EA824A /* HelpOutViewController.swift in Sources */,
@@ -394,6 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/mark/Documents/projects/Workspace/SwiftUtils/build/Debug-iphoneos",
@@ -402,6 +411,8 @@
 				INFOPLIST_FILE = AnagramSolver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AnagramSolver/AnagramSolver-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -409,6 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/mark/Documents/projects/Workspace/SwiftUtils/build/Debug-iphoneos",
@@ -417,6 +429,7 @@
 				INFOPLIST_FILE = AnagramSolver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AnagramSolver/AnagramSolver-Bridging-Header.h";
 			};
 			name = Release;
 		};
