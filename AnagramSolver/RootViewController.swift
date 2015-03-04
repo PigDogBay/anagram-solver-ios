@@ -45,8 +45,13 @@ class RootViewController: UIViewController, StateChangeObserver
         model.addObserver("root", observer: self)
         modelToView(model.state)
     }
-    
-    
+    override func viewDidAppear(animated: Bool)
+    {
+        if mpdbCheckIsFirstTime()
+        {
+            mpdbShowAlert("Welcome",msg: "Thanks for trying Anagram Solver, enter your letters and search over 130,000 words!")
+        }
+    }
     /*
     Recommended way to initialize child view controllers
     is here in prepareForSegue
