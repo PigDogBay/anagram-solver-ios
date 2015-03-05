@@ -61,6 +61,7 @@ class RootViewController: UIViewController, StateChangeObserver
     {
         if segue.identifier == searchSegueId
         {
+            model.prepareToSearch()
             let matchesVC = segue.destinationViewController as MatchesViewController
             matchesVC.model = self.model
         }

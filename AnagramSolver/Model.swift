@@ -96,10 +96,13 @@ class Model : WordListCallback
     {
         self.wordList.stopSearch()
     }
+    func prepareToSearch()
+    {
+        matches.removeAll(keepCapacity: true)
+    }
     func search()
     {
         changeState(States.searching)
-        matches.removeAll(keepCapacity: true)
         var processedQuery = self.wordSearch.standardSearchesOnly(query)
         processedQuery = self.wordSearch.preProcessQuery(processedQuery)
         let searchType = self.wordSearch.getQueryType(processedQuery)

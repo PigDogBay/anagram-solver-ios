@@ -37,9 +37,17 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         self.stateChanged(model.state)
         model.addObserver("matches", observer: self)
         model.wordSearchObserver = self
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
+    }
+    override func viewDidAppear(animated: Bool)
+    {
+        //Run worker thread here as if started in viewDidLoad
+        //the ui may not be ready for when a match comes in
+        if model.state == .ready
         {
-            self.model.search()
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
+            {
+                self.model.search()
+            }
         }
     }
     override func willMoveToParentViewController(parent: UIViewController?)
@@ -118,8 +126,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
             break
         case .ready:
             navBar.title = model.query
-            navBar.rightBarButtonItem?.enabled=false
-            break
+            fallthrough
         case .searching:
             statusLabel.text = "Searching..."
             navBar.rightBarButtonItem?.enabled=false
