@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //iRate.sharedInstance().promptAtLaunch = false
         
         //enable preview mode
-        //        iRate.sharedInstance().previewMode = true
+        iRate.sharedInstance().previewMode = false
     }
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
