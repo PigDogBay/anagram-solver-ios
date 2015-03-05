@@ -92,7 +92,8 @@ class Model : WordListCallback
     {
         changeState(States.searching)
         matches.removeAll(keepCapacity: true)
-        var processedQuery = self.wordSearch.preProcessQuery(query)
+        var processedQuery = self.wordSearch.standardSearchesOnly(query)
+        processedQuery = self.wordSearch.preProcessQuery(processedQuery)
         let searchType = self.wordSearch.getQueryType(processedQuery)
         processedQuery = self.wordSearch.postProcessQuery(processedQuery, type: searchType)
         self.wordSearch.runQuery(processedQuery, type: searchType, callback: self)
