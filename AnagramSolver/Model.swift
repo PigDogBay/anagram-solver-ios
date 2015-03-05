@@ -19,6 +19,14 @@ protocol WordSearchObserver : class
 }
 class Model : WordListCallback
 {
+    class func getAppUrl()->String
+    {
+        return "itms-apps://itunes.apple.com/app/id973923699"
+    }
+    class func getAppWebUrl()->String
+    {
+        return "http://itunes.apple.com/app/id973923699"
+    }
     enum States : Int
     {
         case uninitialized,loading, ready, searching, finished

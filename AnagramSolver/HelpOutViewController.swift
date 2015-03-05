@@ -15,7 +15,7 @@ class HelpOutViewController : PageContentController, MFMailComposeViewController
     @IBAction func rateBtnPressed(sender: UIButton)
     {
         //TO DO - insert own url
-        UIApplication.sharedApplication().openURL(NSURL(string: "itms-apps://itunes.apple.com/us/app/apple-store/id375380948?mt=8")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: Model.getAppUrl())!)
     }
     
     @IBAction func tellFriendsBtnPressed(sender: UIButton)
@@ -28,7 +28,7 @@ class HelpOutViewController : PageContentController, MFMailComposeViewController
         var mailVC = MFMailComposeViewController()
         mailVC.mailComposeDelegate = self
         mailVC.setSubject("Anagram Solver")
-        mailVC.setMessageBody("Check out this free new app for iPhone, iPad and iPod touch - now available in the App Store<br/><br/><b>Anagram Solver</b> Ideal for crosswords, scrabble and word puzzle games<br/><br/><a href=\"http://google.co.uk\">Available on the App Store</a><br/><br/><a href=\"http://play.google.com/store/apps/details?id=com.pigdogbay.anagramsolver\">Available for Android on Google Play</a><br/><br/><br/>Thanks", isHTML: true)
+        mailVC.setMessageBody("Check out this free new app for iPhone, iPad and iPod touch - now available in the App Store<br/><br/><b>Anagram Solver</b> Ideal for crosswords, scrabble and word puzzle games<br/><br/><a href=\""+Model.getAppWebUrl()+"\">Available on the App Store</a><br/><br/><a href=\"http://play.google.com/store/apps/details?id=com.pigdogbay.anagramsolver\">Available for Android on Google Play</a><br/><br/><br/>Thanks", isHTML: true)
         presentViewController(mailVC, animated: true, completion: nil)
     }
     
