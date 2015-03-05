@@ -216,6 +216,7 @@
 				TargetAttributes = {
 					4D45EFB31A9DFABA00C40BB4 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = ZYM8DA54T6;
 					};
 					4D45EFC81A9DFABA00C40BB4 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -403,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/mark/Documents/projects/Workspace/SwiftUtils/build/Debug-iphoneos",
@@ -421,6 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/mark/Documents/projects/Workspace/SwiftUtils/build/Debug-iphoneos",
