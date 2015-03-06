@@ -29,10 +29,24 @@ class DefinitionViewController: UIViewController {
         let request = NSURLRequest(URL: requestURL!)
         webView.loadRequest(request)
     }
+    deinit
+    {
+        //Doesn't get rid of the webview memory leak
+        //not entirely sure if it helps
+        webView.delegate = nil
+        webView.removeFromSuperview()
+        webView.stopLoading()
+        webView.loadHTMLString("", baseURL: nil)
+        webView = nil
+    }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        //testing with thegardian.co.uk
+        // this can save 30Mb
+        webView.stopLoading()
+        webView.loadHTMLString("", baseURL: nil)
     }
     
     private func stripUnusedChars(word : String) -> String
