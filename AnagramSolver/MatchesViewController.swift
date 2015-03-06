@@ -69,6 +69,8 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        model.stop()
+        model.wordSearchObserver = nil
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
