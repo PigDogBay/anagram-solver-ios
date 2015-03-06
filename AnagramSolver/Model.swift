@@ -129,7 +129,8 @@ class Model : WordListCallback
         {
             builder = builder + s + "\n"
         }
-        builder+="www.pigdogbay.com"
+        builder+="\nAvailable on the App Store\n"
+        builder+=Model.getAppWebUrl()
         return builder
     }
     
