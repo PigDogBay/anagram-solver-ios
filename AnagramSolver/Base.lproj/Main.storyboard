@@ -292,8 +292,18 @@
                                     <action selector="rateBtnPressed:" destination="i0K-yE-Yir" eventType="touchUpInside" id="BC1-6S-n5d"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rt6-Of-Fid">
+                                <rect key="frame" x="237" y="157" width="127" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Send Feedback">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="feedbackBtnPressed:" destination="i0K-yE-Yir" eventType="touchUpInside" id="WPU-zj-zA8"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBu-MK-Zxs">
-                                <rect key="frame" x="255" y="157" width="91" height="34"/>
+                                <rect key="frame" x="255" y="199" width="91" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Tell Friends">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -305,20 +315,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Rt6-Of-Fid" firstAttribute="top" secondItem="hRp-gv-542" secondAttribute="bottom" constant="8" id="2Ob-ra-NX5"/>
                             <constraint firstItem="8au-vi-BMJ" firstAttribute="leading" secondItem="3Tz-6m-sr5" secondAttribute="leadingMargin" id="3jD-Nl-lfR"/>
                             <constraint firstItem="hp8-iE-WCS" firstAttribute="leading" secondItem="suO-jR-hHQ" secondAttribute="trailing" constant="8" id="4H1-co-ohs"/>
                             <constraint firstItem="suO-jR-hHQ" firstAttribute="leading" secondItem="ZJK-HW-0WI" secondAttribute="trailing" constant="8" id="8Pt-dD-0y3"/>
                             <constraint firstItem="suO-jR-hHQ" firstAttribute="centerY" secondItem="ZJK-HW-0WI" secondAttribute="centerY" id="KKP-rq-zLA"/>
+                            <constraint firstItem="eBu-MK-Zxs" firstAttribute="top" secondItem="Rt6-Of-Fid" secondAttribute="bottom" constant="8" id="Lhv-uG-Zp8"/>
                             <constraint firstAttribute="centerX" secondItem="eBu-MK-Zxs" secondAttribute="centerX" id="NLX-ST-IgR"/>
                             <constraint firstItem="hp8-iE-WCS" firstAttribute="trailing" secondItem="3Tz-6m-sr5" secondAttribute="trailingMargin" id="RF2-q8-O8g"/>
                             <constraint firstItem="hRp-gv-542" firstAttribute="top" secondItem="suO-jR-hHQ" secondAttribute="bottom" constant="29" id="W82-ql-ZgY"/>
                             <constraint firstAttribute="centerX" secondItem="hRp-gv-542" secondAttribute="centerX" id="XUJ-dI-bLa"/>
+                            <constraint firstAttribute="centerX" secondItem="Rt6-Of-Fid" secondAttribute="centerX" id="aVe-U1-Ic6"/>
                             <constraint firstItem="ZJK-HW-0WI" firstAttribute="leading" secondItem="8au-vi-BMJ" secondAttribute="trailing" constant="8" id="cL7-Gl-GHi"/>
                             <constraint firstItem="hp8-iE-WCS" firstAttribute="top" secondItem="jw8-m0-8Rm" secondAttribute="bottom" constant="8" id="gSM-c6-NgR"/>
                             <constraint firstItem="ZJK-HW-0WI" firstAttribute="top" secondItem="jw8-m0-8Rm" secondAttribute="bottom" constant="32" id="o8f-fw-szW"/>
                             <constraint firstItem="hp8-iE-WCS" firstAttribute="width" secondItem="8au-vi-BMJ" secondAttribute="width" constant="-1" id="qfd-3e-OqB"/>
                             <constraint firstItem="8au-vi-BMJ" firstAttribute="top" secondItem="jw8-m0-8Rm" secondAttribute="bottom" id="u81-GJ-8hb"/>
-                            <constraint firstItem="eBu-MK-Zxs" firstAttribute="top" secondItem="hRp-gv-542" secondAttribute="bottom" constant="8" id="zD0-Qd-NjX"/>
                         </constraints>
                         <connections>
                             <action selector="backgroundTap:" destination="i0K-yE-Yir" eventType="touchDown" id="oGa-nJ-KBM"/>
