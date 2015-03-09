@@ -76,7 +76,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "definitionSegue"
         {
-            self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"Matches", style:.Plain, target:nil, action:nil)
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"Back", style:.Plain, target:nil, action:nil)
             self.canDisplayBannerAds = false
             let definitionVC = segue.destinationViewController as DefinitionViewController
             let cell = sender as UITableViewCell
