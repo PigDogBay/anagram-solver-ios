@@ -30,7 +30,6 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        println("MatchesVC loaded")
         //Add iAd.Framework in the project page-> general tab->Linked frameworks and libraries
         //import iAd
         //Set extension property canDisplayBannerAds to true
@@ -55,16 +54,12 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     }
     override func willMoveToParentViewController(parent: UIViewController?)
     {
-        println("MatchesVC gooing back")
         self.canDisplayBannerAds = false
         model.stop()
         model.removeObserver("matches")
         model.wordSearchObserver = nil
     }
-    deinit
-    {
-        println("MatchesVC unloaded")
-    }
+
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()

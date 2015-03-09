@@ -79,7 +79,6 @@ class Model : WordListCallback
     
     func changeState(newState: States)
     {
-        println("State: \(newState.rawValue)")
         self.state = newState
         for (_,observer) in observersDictionary
         {

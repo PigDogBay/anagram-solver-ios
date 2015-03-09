@@ -39,7 +39,6 @@ class RootViewController: UIViewController, StateChangeObserver
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        println("RootVC loaded")
         self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
         model = Model(resourceName: "standard")
         model.addObserver("root", observer: self)

@@ -25,7 +25,6 @@ class TipViewController: PageContentController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        println("TipsVC \(pageIndex) loaded")
         let tip = getTip(pageIndex)
         titleLabel.text=tip[0]
         descriptionLabel.text = tip[1]
