@@ -26,7 +26,6 @@ class DefinitionViewController: UIViewController {
         let processedWord = stripUnusedChars(word)
         navigationBar.title=processedWord
         let requestURL = NSURL(string:"http://www.google.com/search?q=define:\(processedWord)")
-        print(requestURL)
         let request = NSURLRequest(URL: requestURL!)
         webView.loadRequest(request)
     }
