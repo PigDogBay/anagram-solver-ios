@@ -67,7 +67,7 @@ class Model : WordListCallback
     {
         changeState(States.loading)
         let path = NSBundle.mainBundle().pathForResource(resourceName, ofType: "txt")
-        var possibleContent = String(contentsOfFile: path!, encoding: NSUTF8StringEncoding, error: nil)
+        let possibleContent = try? String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
         
         if let content = possibleContent
         {
@@ -86,10 +86,10 @@ class Model : WordListCallback
         }
     }
     
-    func setAndValidateQuery(var raw : String) ->Bool
+    func setAndValidateQuery( raw : String) ->Bool
     {
         self.query = wordSearch.clean(raw)
-        return self.query.utf16Count>0
+        return self.query.length>0
     }
     func stop()
     {

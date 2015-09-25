@@ -61,12 +61,12 @@ class RootViewController: UIViewController, StateChangeObserver
         if segue.identifier == searchSegueId
         {
             model.prepareToSearch()
-            let matchesVC = segue.destinationViewController as MatchesViewController
+            let matchesVC = segue.destinationViewController as! MatchesViewController
             matchesVC.model = self.model
         }
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool
     {
         if searchSegueId == identifier
         {
@@ -76,7 +76,7 @@ class RootViewController: UIViewController, StateChangeObserver
                 return false
             }
             let query = textFieldQuery.text
-            if model.setAndValidateQuery(query)
+            if model.setAndValidateQuery(query!)
             {
                 return true
             }

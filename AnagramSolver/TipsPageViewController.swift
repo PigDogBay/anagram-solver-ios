@@ -15,7 +15,7 @@ class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource=self
-        var startView = viewControllerAtIndex(0)
+        let startView = viewControllerAtIndex(0)
         self.setViewControllers([startView], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
     }
 
@@ -25,14 +25,14 @@ class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSour
     }
     func getSearchAction()->String
     {
-        var tipsVC = self.viewControllers[0] as TipViewController
+        let tipsVC = self.viewControllers![0] as! TipViewController
         return tipsVC.query
         
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         
-        let pageContentVC = viewController as PageContentController
+        let pageContentVC = viewController as! PageContentController
         var index = pageContentVC.pageIndex
         if index == 0{
             return nil
@@ -41,7 +41,7 @@ class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSour
         return viewControllerAtIndex(index)
     }
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        let pageContentVC = viewController as PageContentController
+        let pageContentVC = viewController as! PageContentController
         var index = pageContentVC.pageIndex
         if index == NSNotFound{
             return nil
@@ -63,11 +63,11 @@ class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSour
         var pageContentVC : PageContentController!
         if index == 6
         {
-            pageContentVC = self.storyboard?.instantiateViewControllerWithIdentifier("HelpOutViewController") as PageContentController
+            pageContentVC = self.storyboard?.instantiateViewControllerWithIdentifier("HelpOutViewController") as! PageContentController
         }
         else
         {
-            pageContentVC = self.storyboard?.instantiateViewControllerWithIdentifier("TipViewController") as PageContentController
+            pageContentVC = self.storyboard?.instantiateViewControllerWithIdentifier("TipViewController") as! PageContentController
         }
         pageContentVC.pageIndex = index
         return pageContentVC

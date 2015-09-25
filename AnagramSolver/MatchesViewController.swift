@@ -73,8 +73,8 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         {
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"Back", style:.Plain, target:nil, action:nil)
             self.canDisplayBannerAds = false
-            let definitionVC = segue.destinationViewController as DefinitionViewController
-            let cell = sender as UITableViewCell
+            let definitionVC = segue.destinationViewController as! DefinitionViewController
+            let cell = sender as! UITableViewCell
             definitionVC.word = cell.textLabel?.text
         }
     }

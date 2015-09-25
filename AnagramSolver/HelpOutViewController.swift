@@ -24,7 +24,7 @@ class HelpOutViewController : PageContentController, MFMailComposeViewController
             self.mpdbShowErrorAlert("No Email", msg: "This device is not configured for sending emails.")
             return
         }
-        var mailVC = MFMailComposeViewController()
+        let mailVC = MFMailComposeViewController()
         mailVC.mailComposeDelegate = self
         mailVC.setSubject("Anagram Solver Feedback")
         mailVC.setToRecipients(["pigdogbay@yahoo.co.uk"])
@@ -38,7 +38,7 @@ class HelpOutViewController : PageContentController, MFMailComposeViewController
             self.mpdbShowErrorAlert("No Email", msg: "This device is not configured for sending emails.")
             return
         }
-        var mailVC = MFMailComposeViewController()
+        let mailVC = MFMailComposeViewController()
         mailVC.mailComposeDelegate = self
         mailVC.setSubject("Anagram Solver")
         mailVC.setMessageBody("Check out this free new app for iPhone, iPad and iPod touch - now available in the App Store<br/><br/><b>Anagram Solver</b> Ideal for crosswords, scrabble and word puzzle games<br/><br/><a href=\""+Model.getAppWebUrl()+"\">Available on the App Store</a><br/><br/><a href=\"http://play.google.com/store/apps/details?id=com.pigdogbay.anagramsolver\">Available for Android on Google Play</a><br/><br/><br/>Thanks", isHTML: true)
@@ -46,7 +46,7 @@ class HelpOutViewController : PageContentController, MFMailComposeViewController
     }
     
     // MARK:- MFMailComposeViewControllerDelegate
-    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!)
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?)
     {
         //dismiss on send
         dismissViewControllerAnimated(true, completion: nil)
