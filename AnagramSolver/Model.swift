@@ -33,6 +33,7 @@ class Model : WordListCallback
     }
     let TABLE_MAX_COUNT_TO_RELOAD = 20
 
+    var isProMode = false
     let wordList = WordList()
     let wordSearch : WordSearch
     var matches: [String] = []
@@ -85,7 +86,6 @@ class Model : WordListCallback
             observer.stateChanged(state)
         }
     }
-    
     func setAndValidateQuery( raw : String) ->Bool
     {
         self.query = wordSearch.clean(raw)
@@ -102,7 +102,11 @@ class Model : WordListCallback
     func search()
     {
         changeState(States.searching)
-        var processedQuery = self.wordSearch.standardSearchesOnly(query)
+        var processedQuery = query;
+        if (!isProMode)
+        {
+            processedQuery = self.wordSearch.standardSearchesOnly(processedQuery)
+        }
         processedQuery = self.wordSearch.preProcessQuery(processedQuery)
         let searchType = self.wordSearch.getQueryType(processedQuery)
         processedQuery = self.wordSearch.postProcessQuery(processedQuery, type: searchType)

@@ -75,8 +75,13 @@ class RootViewController: UIViewController, StateChangeObserver
                 showErrorAlert("Loading...", msg: "Please wait, loading the wordlist")
                 return false
             }
-            let query = textFieldQuery.text
-            if model.setAndValidateQuery(query!)
+            let query = textFieldQuery.text!
+            if isQueryACommand(query)
+            {
+                showErrorAlert("Command", msg: executeCommand(query))
+                return false
+            }
+            if model.setAndValidateQuery(query)
             {
                 return true
             }
@@ -126,5 +131,23 @@ class RootViewController: UIViewController, StateChangeObserver
         case .finished:
             self.searchButton.enabled=true
         }
+    }
+    private func isQueryACommand(cmd : String) -> Bool
+    {
+        return cmd.hasPrefix("-cmd")
+    }
+    private func executeCommand(cmd : String) -> String
+    {
+        if cmd == "-cmdpro"
+        {
+            self.model.isProMode = true
+            return "Pro Mode On"
+        }
+        else if cmd == "-cmdstd"
+        {
+            self.model.isProMode = false
+            return "Std Mode On"
+        }
+        return "Bad Command"
     }
 }
