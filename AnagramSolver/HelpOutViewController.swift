@@ -26,7 +26,7 @@ class HelpOutViewController : PageContentController, MFMailComposeViewController
         }
         let mailVC = MFMailComposeViewController()
         mailVC.mailComposeDelegate = self
-        mailVC.setSubject("Anagram Solver Feedback")
+        mailVC.setSubject("Anagram Solver Feedback iOS")
         mailVC.setToRecipients(["pigdogbay@yahoo.co.uk"])
         mailVC.setMessageBody("Your feedback is most welcome\n *Report Bugs\n *Suggest new features\n *Ask for help\n\n\nHi Mark,\n\n[Enter you message here]", isHTML: false)
         presentViewController(mailVC, animated: true, completion: nil)    }
