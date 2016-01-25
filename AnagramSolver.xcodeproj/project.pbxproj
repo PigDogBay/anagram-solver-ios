@@ -23,6 +23,7 @@
 		4D4F370D1A9FBA8D00F3E2D3 /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */; };
 		4D4F370F1A9FBB4500F3E2D3 /* SwiftUtils.framework in Copy Files (1 item) */ = {isa = PBXBuildFile; fileRef = 4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D9927931AA488440005D5B0 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9927921AA488440005D5B0 /* iAd.framework */; };
+		4DA729DD1C565E5000C7B85D /* pro.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DA729DC1C565E5000C7B85D /* pro.txt */; };
 		4DBAF0A11AA75BEA00400AA4 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAF0A01AA75BEA00400AA4 /* iRate.m */; };
 		4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		4D45F0231A9E487A00C40BB4 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4D4F370C1A9FBA8D00F3E2D3 /* SwiftUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUtils.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SwiftApps-ccgtjtkyvrlkquhiegcysvtkucvq/Build/Products/Release-iphoneos/SwiftUtils.framework"; sourceTree = "<group>"; };
 		4D9927921AA488440005D5B0 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		4DA729DC1C565E5000C7B85D /* pro.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pro.txt; sourceTree = "<group>"; };
 		4DBAF09E1AA75BD900400AA4 /* iRate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
 		4DBAF09F1AA75BEA00400AA4 /* AnagramSolver-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnagramSolver-Bridging-Header.h"; sourceTree = "<group>"; };
 		4DBAF0A01AA75BEA00400AA4 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				4D45F01A1A9E03BE00C40BB4 /* TipViewController.swift */,
 				4D3367D11AA64CFA00EA824A /* HelpOutViewController.swift */,
 				4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */,
+				4DA729DC1C565E5000C7B85D /* pro.txt */,
 				4D45F01F1A9E460300C40BB4 /* standard.txt */,
 				4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */,
 				4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */,
@@ -250,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA729DD1C565E5000C7B85D /* pro.txt in Resources */,
 				4D45EFBF1A9DFABA00C40BB4 /* Main.storyboard in Resources */,
 				4D45EFC41A9DFABA00C40BB4 /* LaunchScreen.xib in Resources */,
 				4D45EFC11A9DFABA00C40BB4 /* Images.xcassets in Resources */,

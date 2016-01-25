@@ -40,7 +40,7 @@ class RootViewController: UIViewController, StateChangeObserver
     {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
-        model = Model(resourceName: "standard")
+        model = Model()
         model.addObserver("root", observer: self)
         modelToView(model.state)
     }
@@ -120,7 +120,8 @@ class RootViewController: UIViewController, StateChangeObserver
             //load dictionary on a worker thread
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
             {
-                self.model.loadDictionary()
+                let resourceName = self.model.isProMode ? "pro" : "standard"
+                self.model.loadDictionary(resourceName)
             }
         case .loading:
             self.searchButton.enabled=false
@@ -141,11 +142,13 @@ class RootViewController: UIViewController, StateChangeObserver
         if cmd == "-cmdpro"
         {
             self.model.isProMode = true
+            self.model.unloadDictionary()
             return "Pro Mode On"
         }
         else if cmd == "-cmdstd"
         {
             self.model.isProMode = false
+            self.model.unloadDictionary()
             return "Std Mode On"
         }
         return "Bad Command"

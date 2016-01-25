@@ -37,7 +37,6 @@ class Model : WordListCallback
     let wordList = WordList()
     let wordSearch : WordSearch
     var matches: [String] = []
-    private let resourceName : String
     var state : States = States.uninitialized
     var query = ""
     
@@ -47,10 +46,9 @@ class Model : WordListCallback
     var observersDictionary : [String : StateChangeObserver] = [:]
     weak var wordSearchObserver : WordSearchObserver!
     
-    init(resourceName: String)
+    init()
     {
         self.wordSearch = WordSearch(wordList: self.wordList)
-        self.resourceName = resourceName
     }
     
     func addObserver(name: String, observer : StateChangeObserver)
@@ -63,8 +61,13 @@ class Model : WordListCallback
         observersDictionary.removeValueForKey(name)
     }
 
-
-    func loadDictionary()
+    func unloadDictionary()
+    {
+        self.wordList.wordlist = nil
+        changeState(States.uninitialized)
+    }
+    
+    func loadDictionary(resourceName: String)
     {
         changeState(States.loading)
         let path = NSBundle.mainBundle().pathForResource(resourceName, ofType: "txt")
