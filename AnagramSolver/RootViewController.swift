@@ -120,6 +120,9 @@ class RootViewController: UIViewController, StateChangeObserver
             //load dictionary on a worker thread
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
             {
+                //There are two word lists pro and standard
+                //pro contains all the words in standard
+                //This approach takes more memory but is faster
                 let resourceName = self.model.isProMode ? "pro" : "standard"
                 self.model.loadDictionary(resourceName)
             }
