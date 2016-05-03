@@ -14,7 +14,7 @@ class PageContentController: UIViewController
     @IBAction func backgroundTap(sender: AnyObject)
     {
         //dismiss the keyboard
-        UIApplication.sharedApplication().sendAction("resignFirstResponder", to: nil, from: nil, forEvent: nil)
+        UIApplication.sharedApplication().sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, forEvent: nil)
     }
 
 }

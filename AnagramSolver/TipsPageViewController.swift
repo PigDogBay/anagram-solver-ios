@@ -37,7 +37,7 @@ class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSour
         if index == 0{
             return nil
         }
-        index--
+        index -= 1
         return viewControllerAtIndex(index)
     }
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
@@ -46,7 +46,7 @@ class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSour
         if index == NSNotFound{
             return nil
         }
-        index++
+        index += 1
         if index==tipsCount
         {
             return nil
