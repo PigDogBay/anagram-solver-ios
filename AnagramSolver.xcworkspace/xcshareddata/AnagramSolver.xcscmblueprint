@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2F936222394C91E67781583FE207B03325F39BF6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2F936222394C91E67781583FE207B03325F39BF6" : 0,
+    "96D037BF7065A81741FE00056B98DDD27898AD0E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "71649B82-B754-4C0B-A62F-F378B3238DD4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2F936222394C91E67781583FE207B03325F39BF6" : "AnagramSolver\/",
+    "96D037BF7065A81741FE00056B98DDD27898AD0E" : "SwiftUtils\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AnagramSolver",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AnagramSolver.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PigDogBay\/anagram-solver-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2F936222394C91E67781583FE207B03325F39BF6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/PigDogBay\/swift-utils.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "96D037BF7065A81741FE00056B98DDD27898AD0E"
+    }
+  ]
+}
