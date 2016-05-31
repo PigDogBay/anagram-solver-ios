@@ -1,0 +1,6 @@
+framework module Pods_AnagramSolverTests {
+  umbrella header "Pods-AnagramSolverTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
