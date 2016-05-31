@@ -7,13 +7,15 @@
 //
 
 import UIKit
-import iAd
+import GoogleMobileAds
 
 class MatchesViewController: UIViewController, StateChangeObserver, WordSearchObserver, UITableViewDataSource
 {
+    @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     private let cellIdentifier = "MatchesCell"
     var model : Model!
 
+    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var matchesTable: UITableView!
     @IBOutlet weak var navBar: UINavigationItem!
@@ -31,6 +33,20 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     {
         super.viewDidLoad()
         
+        if model.isProMode
+        {
+            bannerHeightConstraint.constant = 0
+       
+        }
+        else
+        {
+            bannerView.adUnitID = "ca-app-pub-3582986480189311/9351680384"
+            bannerView.rootViewController = self
+            let request = GADRequest()
+            request.testDevices = ["Simulator"]
+            bannerView.loadRequest(request)
+        }
+
         self.stateChanged(model.state)
         model.addObserver("matches", observer: self)
         model.wordSearchObserver = self
