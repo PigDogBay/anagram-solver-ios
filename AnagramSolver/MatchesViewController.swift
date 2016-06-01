@@ -63,11 +63,19 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
             }
         }
     }
+    //
+    // This function is called twice, first when child view is added to parent
+    // then secondly when it is removed, in this case parent is nil
+    //
     override func willMoveToParentViewController(parent: UIViewController?)
     {
-        model.stop()
-        model.removeObserver("matches")
-        model.wordSearchObserver = nil
+        //Only do something when moving back to parent
+        if parent == nil
+        {
+            model.stop()
+            model.removeObserver("matches")
+            model.wordSearchObserver = nil
+        }
     }
 
     override func didReceiveMemoryWarning()
