@@ -40,11 +40,9 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         }
         else
         {
-            bannerView.adUnitID = "ca-app-pub-3582986480189311/9351680384"
+            bannerView.adUnitID = Ads.getBannerAdId()
             bannerView.rootViewController = self
-            let request = GADRequest()
-            request.testDevices = ["Simulator"]
-            bannerView.loadRequest(request)
+            bannerView.loadRequest(Ads.createRequest())
         }
 
         self.stateChanged(model.state)
@@ -75,6 +73,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
             model.stop()
             model.removeObserver("matches")
             model.wordSearchObserver = nil
+            model.ads.showInterstitial(self.parentViewController!)
         }
     }
 

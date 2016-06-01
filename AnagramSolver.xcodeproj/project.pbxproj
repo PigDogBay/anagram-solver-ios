@@ -14,6 +14,7 @@
 		4D3367D21AA64CFA00EA824A /* HelpOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3367D11AA64CFA00EA824A /* HelpOutViewController.swift */; };
 		4D33DF001CFDB86B00678B53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D33DEFF1CFDB86B00678B53 /* GoogleService-Info.plist */; };
 		4D33DF011CFDB86B00678B53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D33DEFF1CFDB86B00678B53 /* GoogleService-Info.plist */; };
+		4D3596411CFEEA50008D2FAF /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3596401CFEEA50008D2FAF /* Ads.swift */; };
 		4D45EFBA1A9DFABA00C40BB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */; };
 		4D45EFBF1A9DFABA00C40BB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */; };
 		4D45EFC11A9DFABA00C40BB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */; };
@@ -81,6 +82,7 @@
 		4D3367CF1AA64A8D00EA824A /* PageContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentController.swift; sourceTree = "<group>"; };
 		4D3367D11AA64CFA00EA824A /* HelpOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpOutViewController.swift; sourceTree = "<group>"; };
 		4D33DEFF1CFDB86B00678B53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4D3596401CFEEA50008D2FAF /* Ads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
 		4D45EFB41A9DFABA00C40BB4 /* AnagramSolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnagramSolver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D45EFB81A9DFABA00C40BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				4D45F0231A9E487A00C40BB4 /* Model.swift */,
+				4D3596401CFEEA50008D2FAF /* Ads.swift */,
 				4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */,
 				4D45F0151A9E03A400C40BB4 /* DefinitionViewController.swift */,
 				4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */,
@@ -468,6 +471,7 @@
 				4DBAF0A11AA75BEA00400AA4 /* iRate.m in Sources */,
 				4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */,
 				4D3367D01AA64A8D00EA824A /* PageContentController.swift in Sources */,
+				4D3596411CFEEA50008D2FAF /* Ads.swift in Sources */,
 				4D3367D21AA64CFA00EA824A /* HelpOutViewController.swift in Sources */,
 				4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */,
 				4D45F01D1A9E03BE00C40BB4 /* TipsPageViewController.swift in Sources */,

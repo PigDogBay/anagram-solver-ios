@@ -39,6 +39,7 @@ class Model : WordListCallback
     var matches: [String] = []
     var state : States = States.uninitialized
     var query = ""
+    let ads = Ads()
     
     //Need to use a dictionary, so I can use the string key to search on
     //Unable to search protocols due limitation in Swift, cannot use == on protocol!!!
