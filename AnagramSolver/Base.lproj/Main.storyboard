@@ -67,6 +67,11 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Anagram Solver" id="iTJ-cg-KFN">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="nE8-C3-UlE">
+                            <connections>
+                                <action selector="menuButtonPressed:" destination="ldH-pm-mdz" id="aOe-UV-bZU"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Search" id="a8L-df-lOj">
                             <connections>
                                 <segue destination="VQ0-Lb-tBU" kind="show" identifier="searchSegue" id="gg0-3H-TMR"/>
@@ -74,6 +79,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="menuButton" destination="nE8-C3-UlE" id="bcH-Wi-cQa"/>
                         <outlet property="searchButton" destination="a8L-df-lOj" id="QZ0-bu-JwH"/>
                         <outlet property="textFieldQuery" destination="a7i-Fj-C2n" id="230-eb-cbu"/>
                     </connections>

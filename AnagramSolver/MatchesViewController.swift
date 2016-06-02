@@ -25,7 +25,9 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         let firstActivityItem = model.share()
         let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: nil)
         //For iPads need to anchor the popover to the right bar button, crashes if not set
-        activityViewController.popoverPresentationController?.barButtonItem = navBar.rightBarButtonItem
+        if let ppc = activityViewController.popoverPresentationController {
+            ppc.barButtonItem = navBar.rightBarButtonItem
+        }
         
         self.presentViewController(activityViewController, animated: true, completion: nil)
     }

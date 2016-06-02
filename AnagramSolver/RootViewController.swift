@@ -15,6 +15,7 @@ class RootViewController: UIViewController, StateChangeObserver
     
     let searchSegueId = "searchSegue"
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var textFieldQuery: UITextField!
     
@@ -25,6 +26,32 @@ class RootViewController: UIViewController, StateChangeObserver
             performSegueWithIdentifier(searchSegueId, sender: self)
         }
     }
+
+    @IBAction func menuButtonPressed(sender: UIBarButtonItem) {
+        let controller = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        let helpAction = UIAlertAction(title: "Help", style: .Default, handler: {action in self.showHelp()})
+        let goProAction = UIAlertAction(title: "Go Pro", style: .Default, handler: {action in self.showGoPro()})
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        controller.addAction(helpAction)
+        controller.addAction(goProAction)
+        controller.addAction(cancelAction)
+        
+        //Anchor popover to button for iPads
+        if let ppc = controller.popoverPresentationController{
+            ppc.barButtonItem = menuButton
+        }
+        
+        presentViewController(controller, animated: true, completion: nil)
+        
+    }
+    
+    func showHelp(){
+        
+    }
+    func showGoPro(){
+        
+    }
+    
 
     @IBAction func backgroundTap(sender: UIControl) {
         //close the keyboard
