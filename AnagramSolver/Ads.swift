@@ -19,7 +19,8 @@ class Ads
     class func createRequest() -> GADRequest
     {
         let request = GADRequest()
-        request.testDevices = ["Simulator"]
+        request.testDevices = ["Simulator",
+                               "bc49124e40b1cdbc39e9be4bc9fa46b7"] //iPad
         return request
     }
     enum States : Int {
