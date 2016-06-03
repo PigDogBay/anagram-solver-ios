@@ -14,6 +14,8 @@ class RootViewController: UIViewController, StateChangeObserver
     var model : Model!
     
     let searchSegueId = "searchSegue"
+    let goProSegueId = "goProSegue"
+    let helpSegueId = "helpSegue"
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var searchButton: UIBarButtonItem!
@@ -46,10 +48,10 @@ class RootViewController: UIViewController, StateChangeObserver
     }
     
     func showHelp(){
-        
+        performSegueWithIdentifier(helpSegueId, sender: self)
     }
     func showGoPro(){
-        
+        performSegueWithIdentifier(goProSegueId, sender: self)
     }
     
 
