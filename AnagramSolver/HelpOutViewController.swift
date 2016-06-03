@@ -33,16 +33,11 @@ class HelpOutViewController : PageContentController, MFMailComposeViewController
     
     @IBAction func tellFriendsBtnPressed(sender: UIButton)
     {
-        if !MFMailComposeViewController.canSendMail()
+        if let rootVC = self.parentViewController?.parentViewController as! RootViewController!
         {
-            self.mpdbShowErrorAlert("No Email", msg: "This device is not configured for sending emails.")
-            return
+            rootVC.showGoPro()
         }
-        let mailVC = MFMailComposeViewController()
-        mailVC.mailComposeDelegate = self
-        mailVC.setSubject("Anagram Solver")
-        mailVC.setMessageBody("Check out this free new app for iPhone, iPad and iPod touch - now available in the App Store<br/><br/><b>Anagram Solver</b> Ideal for crosswords, scrabble and word puzzle games<br/><br/><a href=\""+Model.getAppWebUrl()+"\">Available on the App Store</a><br/><br/><a href=\"http://play.google.com/store/apps/details?id=com.pigdogbay.anagramsolver\">Available for Android on Google Play</a><br/><br/><br/>Thanks", isHTML: true)
-        presentViewController(mailVC, animated: true, completion: nil)
+
     }
     
     // MARK:- MFMailComposeViewControllerDelegate

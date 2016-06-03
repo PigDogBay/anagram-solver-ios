@@ -347,10 +347,10 @@
                                     <action selector="feedbackBtnPressed:" destination="i0K-yE-Yir" eventType="touchUpInside" id="WPU-zj-zA8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBu-MK-Zxs">
-                                <rect key="frame" x="254" y="199" width="93" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBu-MK-Zxs">
+                                <rect key="frame" x="235" y="199" width="133" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Tell Friends">
+                                <state key="normal" title="Go Pro For More">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
