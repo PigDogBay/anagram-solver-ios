@@ -23,38 +23,48 @@ class Ads
         return request
     }
     enum States : Int {
-        case unititialized, loading, counting
+        case initialize, counting, loading, noAds
     }
     
     let INTERSTITIAL_AD_UNIT_ID = "ca-app-pub-3582986480189311/6308985582"
     let MAX_COUNTS = 3
     var interstitial : GADInterstitial!
-    var state = States.unititialized
+    var state = States.initialize
     var count = 0
     
     func loadInterstitial()
     {
+        NSLog("Loading ad")
         interstitial = GADInterstitial(adUnitID: INTERSTITIAL_AD_UNIT_ID)
         interstitial.loadRequest(Ads.createRequest())
         state = .loading
+    }
+    
+    func noAds()
+    {
+        state = .noAds
     }
     
     func showInterstitial(vc: UIViewController)
     {
         switch (state)
         {
-        case .unititialized:
-            loadInterstitial()
-        case .loading:
+        case .initialize:
             count = 0
             state = .counting
         case .counting:
             count = count + 1
-            if (count>=MAX_COUNTS && interstitial.isReady)
+            if (count>=MAX_COUNTS)
+            {
+                loadInterstitial()
+            }
+        case .loading:
+            if (interstitial.isReady)
             {
                 interstitial.presentFromRootViewController(vc)
-                state = .unititialized
+                state = .initialize
             }
+        case .noAds: break
         }
     }
     
