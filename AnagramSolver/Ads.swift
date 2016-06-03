@@ -23,14 +23,33 @@ class Ads
         return request
     }
     enum States : Int {
-        case initialize, counting, loading, noAds
+        case counting, loading, noAds
     }
     
     let INTERSTITIAL_AD_UNIT_ID = "ca-app-pub-3582986480189311/6308985582"
-    let MAX_COUNTS = 3
+    let MAX_COUNTS = 10
+    let key = "AdsInterstitialCount"
     var interstitial : GADInterstitial!
-    var state = States.initialize
-    var count = 0
+    var state = States.counting
+    
+    var count : Int {
+        get{
+            let defaults = NSUserDefaults.standardUserDefaults()
+            let c = defaults.objectForKey(key) as? Int
+            if c == nil
+            {
+                defaults.setInteger(0, forKey: key)
+                defaults.synchronize()
+                return 0
+            }
+            return c!
+        }
+        set(value){
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setInteger(value, forKey: key)
+            defaults.synchronize()
+        }
+    }
     
     func loadInterstitial()
     {
@@ -48,16 +67,14 @@ class Ads
     func reset()
     {
         interstitial = nil
-        state = .initialize
+        state = .counting
+        count = 0
     }
     
     func showInterstitial(vc: UIViewController)
     {
         switch (state)
         {
-        case .initialize:
-            count = 0
-            state = .counting
         case .counting:
             count = count + 1
             if (count>=MAX_COUNTS)
@@ -68,7 +85,8 @@ class Ads
             if (interstitial.isReady)
             {
                 interstitial.presentFromRootViewController(vc)
-                state = .initialize
+                state = .counting
+                count=0
             }
         case .noAds: break
         }
