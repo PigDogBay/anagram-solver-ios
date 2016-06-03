@@ -175,12 +175,14 @@ class RootViewController: UIViewController, StateChangeObserver
         {
             self.model.isProMode = true
             self.model.unloadDictionary()
+            self.model.ads.noAds()
             return "Pro Mode On"
         }
         else if cmd == "-cmdstd"
         {
             self.model.isProMode = false
             self.model.unloadDictionary()
+            self.model.ads.reset()
             return "Std Mode On"
         }
         return "Bad Command"

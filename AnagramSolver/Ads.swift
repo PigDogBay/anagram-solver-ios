@@ -43,6 +43,12 @@ class Ads
     func noAds()
     {
         state = .noAds
+        interstitial = nil
+    }
+    func reset()
+    {
+        interstitial = nil
+        state = .initialize
     }
     
     func showInterstitial(vc: UIViewController)
