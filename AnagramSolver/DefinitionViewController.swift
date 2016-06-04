@@ -7,21 +7,23 @@
 //
 
 import UIKit
+import WebKit
 
-class DefinitionViewController: UIViewController {
+class DefinitionViewController: UIViewController, WKNavigationDelegate {
 
-    @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var navigationBar: UINavigationItem!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
-    
     @IBOutlet weak var loadingLabel: UILabel!
+    
     var word : String!
+    private var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //remove the gap above the web view
-        self.automaticallyAdjustsScrollViewInsets = false
+
+        webView = WKWebView(frame: view.bounds)
+        webView.navigationDelegate = self
+        view.insertSubview(webView, atIndex: 0)
 
         let processedWord = stripUnusedChars(word)
         navigationBar.title=processedWord
@@ -29,24 +31,11 @@ class DefinitionViewController: UIViewController {
         let request = NSURLRequest(URL: requestURL!)
         webView.loadRequest(request)
     }
-    deinit
-    {
-        //Doesn't get rid of the webview memory leak
-        //not entirely sure if it helps
-        webView.delegate = nil
-        webView.removeFromSuperview()
-        webView.stopLoading()
-        webView.loadHTMLString("", baseURL: nil)
-        webView = nil
-    }
 
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
-        //testing with thegardian.co.uk
-        // this can save 30Mb
         webView.stopLoading()
-        webView.loadHTMLString("", baseURL: nil)
     }
     
     private func stripUnusedChars(word : String) -> String
@@ -59,17 +48,20 @@ class DefinitionViewController: UIViewController {
         return word
     }
     
-    //MARK:- Webview delegate functions
-    //To make this class a delegate from the storyboard
-    //In the webview connections inspector, connect delegate connection to view controller
-    func webViewDidStartLoad(_ : UIWebView)
-    {
+    
+    
+    //MARK:- WKNavigationDelegate
+    
+    func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         loadingIndicator.startAnimating()
         loadingLabel.hidden=false
+        UIApplication.sharedApplication().networkActivityIndicatorVisible=true;
     }
-    func webViewDidFinishLoad(_ : UIWebView)
-    {
+    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
         loadingIndicator.stopAnimating()
         loadingLabel.hidden=true
+        UIApplication.sharedApplication().networkActivityIndicatorVisible=false;
     }
+    
+    
 }
