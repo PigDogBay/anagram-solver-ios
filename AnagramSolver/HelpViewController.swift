@@ -7,13 +7,22 @@
 //
 
 import UIKit
+import WebKit
 
 class HelpViewController: UIViewController {
 
+    private var webView: WKWebView?
+    
+    override func loadView() {
+        webView = WKWebView()
+        view = webView
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if let url = NSURL(string: "https://google.com") {
+            let req = NSURLRequest(URL: url)
+            webView?.loadRequest(req)
+        }
     }
 
     override func didReceiveMemoryWarning() {
