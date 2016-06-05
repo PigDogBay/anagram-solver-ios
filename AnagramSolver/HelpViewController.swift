@@ -19,9 +19,14 @@ class HelpViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let url = NSURL(string: "https://google.com") {
-            let req = NSURLRequest(URL: url)
-            webView?.loadRequest(req)
+        
+        if let url = NSBundle.mainBundle().URLForResource("help", withExtension: "html") {
+            if #available(iOS 9.0, *) {
+                webView?.loadFileURL(url,allowingReadAccessToURL: url)
+            } else {
+                // To Do: Fallback on earlier versions
+                self.mpdbShowErrorAlert("Not Supported", msg: "Help is only available for iOS 9 onwards")
+            }
         }
     }
 
