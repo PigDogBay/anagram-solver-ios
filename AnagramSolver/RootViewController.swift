@@ -34,7 +34,9 @@ class RootViewController: UIViewController, StateChangeObserver
         let helpAction = UIAlertAction(title: "Help", style: .Default, handler: {action in self.showHelp()})
         let goProAction = UIAlertAction(title: "Go Pro", style: .Default, handler: {action in self.showGoPro()})
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
-        controller.addAction(helpAction)
+        if #available(iOS 9.0, *) {
+            controller.addAction(helpAction)
+        }
         controller.addAction(goProAction)
         controller.addAction(cancelAction)
         
