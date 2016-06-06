@@ -31,8 +31,8 @@ class Model : WordListCallback
     {
         case uninitialized,loading, ready, searching, finished
     }
-    let TABLE_MAX_COUNT_TO_RELOAD = 20
-    let isProKey = "isProFlag"
+    private let TABLE_MAX_COUNT_TO_RELOAD = 20
+    private let isProKey = "isProFlag"
 
     private(set) var isProMode : Bool{
         get{
