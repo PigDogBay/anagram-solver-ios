@@ -154,13 +154,15 @@ class RootViewController: UIViewController, StateChangeObserver
         {
         case .uninitialized:
             self.searchButton.enabled=false
+            let proFlag = self.model.isProMode
+            self.title = proFlag ? "Anagram Solver Pro" : "Anagram Solver"
+            let resourceName = proFlag ? "pro" : "standard"
             //load dictionary on a worker thread
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
             {
                 //There are two word lists pro and standard
                 //pro contains all the words in standard
                 //This approach takes more memory but is faster
-                let resourceName = self.model.isProMode ? "pro" : "standard"
                 self.model.loadDictionary(resourceName)
             }
         case .loading:

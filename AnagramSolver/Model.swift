@@ -32,8 +32,27 @@ class Model : WordListCallback
         case uninitialized,loading, ready, searching, finished
     }
     let TABLE_MAX_COUNT_TO_RELOAD = 20
+    let isProKey = "isProFlag"
 
-    var isProMode = false
+    private(set) var isProMode : Bool{
+        get{
+            let defaults = NSUserDefaults.standardUserDefaults()
+            let flag = defaults.objectForKey(isProKey) as? Bool
+            if flag == nil
+            {
+                defaults.setBool(false, forKey: isProKey)
+                defaults.synchronize()
+                return false
+            }
+            return flag!
+        }
+        set(flag) {
+            let defaults = NSUserDefaults.standardUserDefaults()
+            defaults.setBool(flag, forKey: isProKey)
+            defaults.synchronize()
+            
+        }
+    }
     let wordList = WordList()
     let wordSearch : WordSearch
     var matches: [String] = []
