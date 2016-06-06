@@ -95,6 +95,12 @@ class RootViewController: UIViewController, StateChangeObserver
             let matchesVC = segue.destinationViewController as! MatchesViewController
             matchesVC.model = self.model
         }
+        else if segue.identifier == goProSegueId
+        {
+            let goProVC = segue.destinationViewController as! GoProViewController
+            goProVC.model = self.model
+        }
+        
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool
@@ -175,16 +181,12 @@ class RootViewController: UIViewController, StateChangeObserver
     {
         if cmd == "-cmdpro"
         {
-            self.model.isProMode = true
-            self.model.unloadDictionary()
-            self.model.ads.noAds()
+            self.model.proMode()
             return "Pro Mode On"
         }
         else if cmd == "-cmdstd"
         {
-            self.model.isProMode = false
-            self.model.unloadDictionary()
-            self.model.ads.reset()
+            self.model.stdMode()
             return "Std Mode On"
         }
         return "Bad Command"

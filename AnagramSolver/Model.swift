@@ -150,4 +150,17 @@ class Model : WordListCallback
         return States.ready == self.state
     }
     
+    func stdMode()
+    {
+        self.isProMode = false
+        self.unloadDictionary()
+        self.ads.reset()
+    }
+    func proMode()
+    {
+        self.isProMode = true
+        self.unloadDictionary()
+        self.ads.noAds()
+    }
+    
 }
