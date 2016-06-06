@@ -56,7 +56,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BiN-z6-GJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="829" y="-493"/>
+            <point key="canvasLocation" x="867" y="-503"/>
         </scene>
         <!--Anagram Solver-->
         <scene sceneID="duY-AS-EmT">
@@ -515,19 +515,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzp-93-vMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1486" y="216"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="UWh-pC-anU">
-            <objects>
-                <viewController id="RQ8-7U-hy8" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QyE-Y7-wuj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kgf-Qb-y17" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
