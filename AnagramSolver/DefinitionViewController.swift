@@ -31,6 +31,10 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
         let request = NSURLRequest(URL: requestURL!)
         webView.loadRequest(request)
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        webView.stopLoading()
+    }
 
     override func didReceiveMemoryWarning()
     {
@@ -55,12 +59,14 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
     func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         loadingIndicator.startAnimating()
         loadingLabel.hidden=false
-        UIApplication.sharedApplication().networkActivityIndicatorVisible=true;
     }
     func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
         loadingIndicator.stopAnimating()
         loadingLabel.hidden=true
-        UIApplication.sharedApplication().networkActivityIndicatorVisible=false;
+    }
+    func webView(webView: WKWebView, didFailNavigation navigation: WKNavigation!, withError error: NSError) {
+        loadingIndicator.stopAnimating()
+        loadingLabel.hidden=true
     }
     
     
