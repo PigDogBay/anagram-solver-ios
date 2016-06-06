@@ -19,6 +19,9 @@ protocol WordSearchObserver : class
 }
 class Model : WordListCallback
 {
+    //Singleton
+    static let sharedInstance = Model()
+    
     class func getAppUrl()->String
     {
         return "itms-apps://itunes.apple.com/app/id973923699"
@@ -66,7 +69,7 @@ class Model : WordListCallback
     var observersDictionary : [String : StateChangeObserver] = [:]
     weak var wordSearchObserver : WordSearchObserver!
     
-    init()
+    private init()
     {
         self.wordSearch = WordSearch(wordList: self.wordList)
     }

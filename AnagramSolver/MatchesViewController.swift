@@ -13,7 +13,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
 {
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     private let cellIdentifier = "MatchesCell"
-    var model : Model!
+    private var model : Model!
 
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var statusLabel: UILabel!
@@ -34,6 +34,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.model = Model.sharedInstance
         
         if model.isProMode
         {

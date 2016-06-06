@@ -11,7 +11,7 @@ import SwiftUtils
 
 class RootViewController: UIViewController, StateChangeObserver
 {
-    var model : Model!
+    private var model : Model!
     
     let searchSegueId = "searchSegue"
     let goProSegueId = "goProSegue"
@@ -71,7 +71,7 @@ class RootViewController: UIViewController, StateChangeObserver
     {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
-        model = Model()
+        model = Model.sharedInstance
         model.addObserver("root", observer: self)
         modelToView(model.state)
     }
@@ -92,15 +92,7 @@ class RootViewController: UIViewController, StateChangeObserver
         if segue.identifier == searchSegueId
         {
             model.prepareToSearch()
-            let matchesVC = segue.destinationViewController as! MatchesViewController
-            matchesVC.model = self.model
         }
-        else if segue.identifier == goProSegueId
-        {
-            let goProVC = segue.destinationViewController as! GoProViewController
-            goProVC.model = self.model
-        }
-        
     }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool

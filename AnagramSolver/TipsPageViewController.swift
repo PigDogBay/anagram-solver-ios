@@ -29,8 +29,7 @@ class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSour
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let model = Model()
-        setMode(model.isProMode)
+        setMode(Model.sharedInstance.isProMode)
         self.dataSource=self
         let startView = viewControllerAtIndex(0)
         self.setViewControllers([startView], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)

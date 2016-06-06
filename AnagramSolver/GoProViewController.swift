@@ -21,12 +21,12 @@ class GoProViewController: UIViewController {
         modelToView()
     }
 
-    var model : Model!
+    private var model : Model!
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.model = Model.sharedInstance
         modelToView()
     }
 
