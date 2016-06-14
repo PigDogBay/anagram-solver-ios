@@ -31,6 +31,7 @@
 		4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0231A9E487A00C40BB4 /* Model.swift */; };
 		4DA729DD1C565E5000C7B85D /* pro.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DA729DC1C565E5000C7B85D /* pro.txt */; };
 		4DBAF0A11AA75BEA00400AA4 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAF0A01AA75BEA00400AA4 /* iRate.m */; };
+		4DF7B6D61D10419F00A26A20 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF7B6D51D10419F00A26A20 /* StoreKit.framework */; };
 		4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */; };
 		E8B5F6758746C4EA02BC05A9 /* Pods_AnagramSolverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891A847B857B88BB9F0B311E /* Pods_AnagramSolverTests.framework */; };
 /* End PBXBuildFile section */
@@ -109,6 +110,7 @@
 		4DBAF09E1AA75BD900400AA4 /* iRate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
 		4DBAF09F1AA75BEA00400AA4 /* AnagramSolver-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnagramSolver-Bridging-Header.h"; sourceTree = "<group>"; };
 		4DBAF0A01AA75BEA00400AA4 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
+		4DF7B6D51D10419F00A26A20 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		891A847B857B88BB9F0B311E /* Pods_AnagramSolverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnagramSolverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F767D7B066CC063F11B0CB8 /* Pods-AnagramSolver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnagramSolver.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DF7B6D61D10419F00A26A20 /* StoreKit.framework in Frameworks */,
 				4D0543851CFDBE060084538A /* SwiftUtils.framework in Frameworks */,
 				345530AFB616B753D44CBC8A /* Pods_AnagramSolver.framework in Frameworks */,
 			);
@@ -142,6 +145,7 @@
 		1E9D5EE9EB3E676642812536 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DF7B6D51D10419F00A26A20 /* StoreKit.framework */,
 				4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */,
 				F2B1163F388B1F29DAE1B77C /* Pods_AnagramSolver.framework */,
 				891A847B857B88BB9F0B311E /* Pods_AnagramSolverTests.framework */,
@@ -305,6 +309,11 @@
 					4D45EFB31A9DFABA00C40BB4 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = ZYM8DA54T6;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					4D45EFC81A9DFABA00C40BB4 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -574,6 +583,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -610,6 +620,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

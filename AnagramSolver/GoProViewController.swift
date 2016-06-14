@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import StoreKit
 
-class GoProViewController: UIViewController {
+class GoProViewController: UIViewController, SKProductsRequestDelegate {
+    private static let productId = "com.mpdbailey.ios.anagramsolver.gopro"
+    private let productIdentifiers = Set([productId])
+    private var product: SKProduct?
 
     @IBOutlet weak var statusLabel: UILabel!
     @IBAction func stdBtnClick(sender: AnyObject)
@@ -28,6 +32,7 @@ class GoProViewController: UIViewController {
         super.viewDidLoad()
         self.model = Model.sharedInstance
         modelToView()
+        requestProductData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +42,31 @@ class GoProViewController: UIViewController {
     
     func modelToView(){
         statusLabel.text = model.isProMode ? "Pro" : "Standard"
+    }
+    
+    func requestProductData(){
+        if (SKPaymentQueue.canMakePayments()){
+            let request = SKProductsRequest(productIdentifiers: self.productIdentifiers)
+            request.delegate = self
+            request.start()
+        }
+        else
+        {
+            //show alert that user can not make payment
+            print("Cannot make payment")
+        }
+    }
+    
+    // MARK:- SKProductsRequestDelegate
+    func productsRequest(request: SKProductsRequest, didReceiveResponse response: SKProductsResponse) {
+        if (response.products.count == 0){
+            print("No products found")
+            return
+        }
+        self.product = response.products[0]
+        print("Product \(self.product?.localizedTitle) \(self.product?.price)")
+        print(self.product?.localizedDescription)
+        
     }
 
 }
