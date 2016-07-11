@@ -32,9 +32,15 @@ class GoProViewController: UIViewController, IAPDelegate {
         buyButton.enabled=false
     }
     override func viewDidAppear(animated: Bool) {
-        model.iap.observable.addObserver(observerName, observer: self)
-        if model.iap.canMakePayments()
+        if model.isProMode
         {
+            //purchase already made
+            self.buyButton.enabled=false
+            self.buyButton.setTitle("Purchased",forState: .Normal)
+        }
+        else if model.iap.canMakePayments()
+        {
+            model.iap.observable.addObserver(observerName, observer: self)
             model.iap.requestProducts()
         }
     }
@@ -69,12 +75,22 @@ class GoProViewController: UIViewController, IAPDelegate {
     }
     func purchaseRequest(productID : String){
         if (productID == IAPFactory.getGoProId()){
-            showPurchased()
+            dispatch_async(dispatch_get_main_queue())
+            {
+                self.buyButton.enabled=false
+                self.buyButton.setTitle("Purchased",forState: .Normal)
+                self.mpdbShowAlert("Purchase Complete",msg: "Thanks for purchasing the Go Pro upgrade, new features are now unlocked.")
+            }
         }
     }
     func restoreRequest(productID : String){
         if (productID == IAPFactory.getGoProId()){
-            showPurchased()
+            dispatch_async(dispatch_get_main_queue())
+            {
+                self.buyButton.enabled=false
+                self.buyButton.setTitle("Purchased",forState: .Normal)
+                self.mpdbShowAlert("Purchase Restored",msg: "Go Pro purchase has been restored, Pro features are now unlocked.")
+            }
         }
         
     }
@@ -83,15 +99,6 @@ class GoProViewController: UIViewController, IAPDelegate {
         {
             self.buyButton.enabled=true
             self.mpdbShowAlert("Purchase Failed",msg: "Sorry, unable to complete the purchase. You have not been charged.")
-        }
-    }
-    
-    private func showPurchased(){
-        dispatch_async(dispatch_get_main_queue())
-        {
-            self.buyButton.enabled=false
-            self.buyButton.setTitle("Purchased",forState: .Normal)
-            self.mpdbShowAlert("Purchase Complete",msg: "Thanks for purchasing the Go Pro upgrade, new features are now unlocked.")
         }
     }
     

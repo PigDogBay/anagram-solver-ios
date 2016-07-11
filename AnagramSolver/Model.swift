@@ -196,6 +196,7 @@ class Model : WordListCallback, IAPDelegate
     func purchaseRequest(productID : String){
         //purchase successful, store in NSDefaults
         print("Model-IAPDelegate-purchaseRequest \(productID)")
+        proMode()
     }
     func restoreRequest(productID : String){
         //purchase successful, store in NSDefaults

@@ -148,6 +148,7 @@ class RootViewController: UIViewController, StateChangeObserver
             self.searchButton.enabled=false
             let proFlag = self.model.isProMode
             self.title = proFlag ? "Anagram Solver Pro" : "Anagram Solver"
+            self.searchButton.title = proFlag ? "Search+" : "Search"
             let resourceName = proFlag ? "pro" : "standard"
             //load dictionary on a worker thread
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
