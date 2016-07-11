@@ -82,6 +82,7 @@ class GoProViewController: UIViewController, IAPDelegate {
         dispatch_async(dispatch_get_main_queue())
         {
             self.buyButton.enabled=true
+            self.mpdbShowAlert("Purchase Failed",msg: "Sorry, unable to complete the purchase. You have not been charged.")
         }
     }
     
@@ -90,8 +91,8 @@ class GoProViewController: UIViewController, IAPDelegate {
         {
             self.buyButton.enabled=false
             self.buyButton.setTitle("Purchased",forState: .Normal)
+            self.mpdbShowAlert("Purchase Complete",msg: "Thanks for purchasing the Go Pro upgrade, new features are now unlocked.")
         }
     }
-
     
 }
