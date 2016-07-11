@@ -7,66 +7,91 @@
 //
 
 import UIKit
-import StoreKit
+import SwiftUtils
 
-class GoProViewController: UIViewController, SKProductsRequestDelegate {
-    private static let productId = "com.mpdbailey.ios.anagramsolver.gopro"
-    private let productIdentifiers = Set([productId])
-    private var product: SKProduct?
+class GoProViewController: UIViewController, IAPDelegate {
+    @IBOutlet weak var buyButton: UIButton!
 
-    @IBOutlet weak var statusLabel: UILabel!
-    @IBAction func stdBtnClick(sender: AnyObject)
-    {
-        model.stdMode()
-        modelToView()
+    @IBAction func buyBtnClicked(sender: UIButton) {
+        if model.iap.canMakePayments(){
+            buyButton.enabled=false
+            model.iap.requestPurchase(IAPFactory.getGoProId())
+        }
     }
-    @IBAction func proBtnClicked(sender: AnyObject) {
-        model.proMode()
-        modelToView()
+    @IBAction func restoreBtnClicked(sender: UIButton) {
+        model.iap.restorePurchase(IAPFactory.getGoProId())
     }
 
     private var model : Model!
+    let observerName = "GoProVC"
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.model = Model.sharedInstance
-        modelToView()
-        requestProductData()
+        buyButton.enabled=false
     }
-
+    override func viewDidAppear(animated: Bool) {
+        model.iap.observable.addObserver(observerName, observer: self)
+        if model.iap.canMakePayments()
+        {
+            model.iap.requestProducts()
+        }
+    }
+    //
+    // This function is called twice, first when child view is added to parent
+    // then secondly when it is removed, in this case parent is nil
+    //
+    override func willMoveToParentViewController(parent: UIViewController?)
+    {
+        //Only do something when moving back to parent
+        if parent == nil
+        {
+            model.iap.observable.removeObserver(observerName)
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
-    func modelToView(){
-        statusLabel.text = model.isProMode ? "Pro" : "Standard"
-    }
-    
-    func requestProductData(){
-        if (SKPaymentQueue.canMakePayments()){
-            let request = SKProductsRequest(productIdentifiers: self.productIdentifiers)
-            request.delegate = self
-            request.start()
-        }
-        else
+    //MARK:- IAPDelegate
+    func productsRequest(){
+        if let product = model.iap.getProduct(IAPFactory.getGoProId())
         {
-            //show alert that user can not make payment
-            print("Cannot make payment")
+            dispatch_async(dispatch_get_main_queue())
+            {
+                self.buyButton.enabled=true
+                self.buyButton.setTitle("Buy \(product.price)",forState: .Normal)
+            }
         }
     }
-    
-    // MARK:- SKProductsRequestDelegate
-    func productsRequest(request: SKProductsRequest, didReceiveResponse response: SKProductsResponse) {
-        if (response.products.count == 0){
-            print("No products found")
-            return
+    func purchaseRequest(productID : String){
+        if (productID == IAPFactory.getGoProId()){
+            showPurchased()
         }
-        self.product = response.products[0]
-        print("Product \(self.product?.localizedTitle) \(self.product?.price)")
-        print(self.product?.localizedDescription)
+    }
+    func restoreRequest(productID : String){
+        if (productID == IAPFactory.getGoProId()){
+            showPurchased()
+        }
         
     }
+    func purchaseFailed(productID : String){
+        dispatch_async(dispatch_get_main_queue())
+        {
+            self.buyButton.enabled=true
+        }
+    }
+    
+    private func showPurchased(){
+        dispatch_async(dispatch_get_main_queue())
+        {
+            self.buyButton.enabled=false
+            self.buyButton.setTitle("Purchased",forState: .Normal)
+        }
+    }
 
+    
 }

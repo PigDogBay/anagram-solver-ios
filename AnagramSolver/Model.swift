@@ -17,7 +17,7 @@ protocol WordSearchObserver : class
 {
     func matchFound(match : String)
 }
-class Model : WordListCallback
+class Model : WordListCallback, IAPDelegate
 {
     //Singleton
     static let sharedInstance = Model()
@@ -62,6 +62,7 @@ class Model : WordListCallback
     var state : States = States.uninitialized
     var query = ""
     let ads = Ads()
+    let iap : IAPInterface
     
     //Need to use a dictionary, so I can use the string key to search on
     //Unable to search protocols due limitation in Swift, cannot use == on protocol!!!
@@ -72,6 +73,8 @@ class Model : WordListCallback
     private init()
     {
         self.wordSearch = WordSearch(wordList: self.wordList)
+        self.iap = IAPFactory.createMock()
+        self.iap.observable.addObserver("model", observer: self)
     }
     
     func addObserver(name: String, observer : StateChangeObserver)
@@ -184,5 +187,25 @@ class Model : WordListCallback
         self.unloadDictionary()
         self.ads.noAds()
     }
+    
+    //MARK:- IAPDelegate
+    func productsRequest(){
+        //list of products received - do nothing
+        print("Model-IAPDelegate-products request")
+    }
+    func purchaseRequest(productID : String){
+        //purchase successful, store in NSDefaults
+        print("Model-IAPDelegate-purchaseRequest \(productID)")
+    }
+    func restoreRequest(productID : String){
+        //purchase successful, store in NSDefaults
+        print("Model-IAPDelegate-restore request \(productID)")
+        
+    }
+    func purchaseFailed(productID : String){
+        //purchase failed - do nothing here
+        print("Model-IAPDelegate-purchase failed \(productID)")
+    }
+
     
 }

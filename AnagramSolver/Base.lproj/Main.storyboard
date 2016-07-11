@@ -34,45 +34,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVm-40-ZKP">
-                                <rect key="frame" x="279" y="93" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2M-aR-XRO">
-                                <rect key="frame" x="267" y="134" width="67" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="67" id="sGd-tq-nSF"/>
-                                </constraints>
-                                <state key="normal" title="Standard"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiJ-KV-KlY">
+                                <rect key="frame" x="236" y="550" width="129" height="30"/>
+                                <state key="normal" title="Restore Purchases"/>
                                 <connections>
-                                    <action selector="stdBtnClick:" destination="Ka6-c6-The" eventType="touchUpInside" id="wQf-57-1bc"/>
+                                    <action selector="restoreBtnClicked:" destination="Ka6-c6-The" eventType="touchUpInside" id="YJh-Ei-Dln"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7D-zA-ECy">
-                                <rect key="frame" x="277" y="181" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msL-QM-hiI">
+                                <rect key="frame" x="216" y="72" width="169" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="mz8-zm-Cf3"/>
+                                    <constraint firstAttribute="width" constant="169" id="Van-CE-Qtb"/>
                                 </constraints>
-                                <state key="normal" title="Pro"/>
+                                <state key="normal" title="Buy"/>
                                 <connections>
-                                    <action selector="proBtnClicked:" destination="Ka6-c6-The" eventType="touchUpInside" id="PDb-Md-KuT"/>
+                                    <action selector="buyBtnClicked:" destination="Ka6-c6-The" eventType="touchUpInside" id="pku-Lb-ODB"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="P7D-zA-ECy" firstAttribute="top" secondItem="l2M-aR-XRO" secondAttribute="bottom" constant="17" id="Pgh-if-ib5"/>
-                            <constraint firstItem="iVm-40-ZKP" firstAttribute="top" secondItem="yOD-G8-O8R" secondAttribute="bottom" constant="29" id="jJQ-Vu-YUK"/>
-                            <constraint firstItem="l2M-aR-XRO" firstAttribute="top" secondItem="iVm-40-ZKP" secondAttribute="bottom" constant="20" id="pTC-p0-meh"/>
-                            <constraint firstItem="iVm-40-ZKP" firstAttribute="centerX" secondItem="NGr-GJ-3Si" secondAttribute="centerX" id="rc6-8E-kj2"/>
-                            <constraint firstItem="l2M-aR-XRO" firstAttribute="centerX" secondItem="iVm-40-ZKP" secondAttribute="centerX" id="sEV-d6-KH6"/>
-                            <constraint firstItem="P7D-zA-ECy" firstAttribute="centerX" secondItem="l2M-aR-XRO" secondAttribute="centerX" id="xj2-Nk-BGR"/>
+                            <constraint firstItem="msL-QM-hiI" firstAttribute="top" secondItem="yOD-G8-O8R" secondAttribute="bottom" constant="8" symbolic="YES" id="QA7-0e-7rn"/>
+                            <constraint firstItem="AjA-MY-Ihl" firstAttribute="top" secondItem="IiJ-KV-KlY" secondAttribute="bottom" constant="20" id="k7V-yU-AT1"/>
+                            <constraint firstItem="IiJ-KV-KlY" firstAttribute="centerX" secondItem="NGr-GJ-3Si" secondAttribute="centerX" id="kzF-ri-neJ"/>
+                            <constraint firstItem="msL-QM-hiI" firstAttribute="centerX" secondItem="IiJ-KV-KlY" secondAttribute="centerX" id="tUj-9X-JUH"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="statusLabel" destination="iVm-40-ZKP" id="FFV-O5-dTB"/>
+                        <outlet property="buyButton" destination="msL-QM-hiI" id="zIm-lI-Ed2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfb-og-jtM" userLabel="First Responder" sceneMemberID="firstResponder"/>
