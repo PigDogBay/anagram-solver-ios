@@ -15,11 +15,11 @@ class GoProViewController: UIViewController, IAPDelegate {
     @IBAction func buyBtnClicked(sender: UIButton) {
         if model.iap.canMakePayments(){
             buyButton.enabled=false
-            model.iap.requestPurchase(IAPFactory.getGoProId())
+            model.iap.requestPurchase(IAPFactory.getProductID())
         }
     }
     @IBAction func restoreBtnClicked(sender: UIButton) {
-        model.iap.restorePurchase(IAPFactory.getGoProId())
+        model.iap.restorePurchases()
     }
 
     private var model : Model!
@@ -64,7 +64,7 @@ class GoProViewController: UIViewController, IAPDelegate {
     
     //MARK:- IAPDelegate
     func productsRequest(){
-        if let product = model.iap.getProduct(IAPFactory.getGoProId())
+        if let product = model.iap.getProduct(IAPFactory.getProductID())
         {
             dispatch_async(dispatch_get_main_queue())
             {
@@ -74,21 +74,22 @@ class GoProViewController: UIViewController, IAPDelegate {
         }
     }
     func purchaseRequest(productID : String){
-        if (productID == IAPFactory.getGoProId()){
+        if (productID == IAPFactory.getProductID()){
             dispatch_async(dispatch_get_main_queue())
             {
                 self.buyButton.enabled=false
                 self.buyButton.setTitle("Purchased",forState: .Normal)
-                self.mpdbShowAlert("Purchase Complete",msg: "Thanks for purchasing the Go Pro upgrade, new features are now unlocked.")
+                //no need to show an alert, StoreKit will show a thank you
             }
         }
     }
     func restoreRequest(productID : String){
-        if (productID == IAPFactory.getGoProId()){
+        if (productID == IAPFactory.getProductID()){
             dispatch_async(dispatch_get_main_queue())
             {
                 self.buyButton.enabled=false
                 self.buyButton.setTitle("Purchased",forState: .Normal)
+                //Does StoreKit show an alert here?
                 self.mpdbShowAlert("Purchase Restored",msg: "Go Pro purchase has been restored, Pro features are now unlocked.")
             }
         }
@@ -98,6 +99,7 @@ class GoProViewController: UIViewController, IAPDelegate {
         dispatch_async(dispatch_get_main_queue())
         {
             self.buyButton.enabled=true
+            //Pressing cancel (causing a fail) will not show an alert
             self.mpdbShowAlert("Purchase Failed",msg: "Sorry, unable to complete the purchase. You have not been charged.")
         }
     }

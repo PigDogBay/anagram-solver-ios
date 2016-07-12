@@ -5,39 +5,83 @@
 //  Created by Mark Bailey on 18/06/2016.
 //  Copyright © 2016 MPD Bailey Technology. All rights reserved.
 //
-//  Based on code https://www.raywenderlich.com/122144/in-app-purchase-tutorial
 //
 
 import StoreKit
+import SwiftUtils
 
-public class IAPHelper : NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserver
+public class IAPHelper : NSObject, IAPInterface, SKProductsRequestDelegate, SKPaymentTransactionObserver
 {
-    private static let productId = "com.mpdbailey.ios.anagramsolver.gopro"
-    private let productIdentifiers = Set([productId])
-    private var product: SKProduct?
+    public var productIdentifiers = Set<String>()
+    
+    private var products : [SKProduct] = []
+    
+    private let currencyFormatter : NSNumberFormatter
 
-    func requestProductData(){
-        if (SKPaymentQueue.canMakePayments()){
-            let request = SKProductsRequest(productIdentifiers: self.productIdentifiers)
-            request.delegate = self
-            request.start()
-        }
-        else
-        {
-            //show alert that user can not make payment
-            print("Cannot make payment")
-        }
+    public override init(){
+        self.observable = IAPObservable()
+        currencyFormatter = NSNumberFormatter()
+        currencyFormatter.numberStyle = .CurrencyStyle
+        currencyFormatter.formatterBehavior = .Behavior10_4
+        
+        super.init()
+        SKPaymentQueue.defaultQueue().addTransactionObserver(self)
     }
     
+    private func createIAPProduct(product: SKProduct)->IAPProduct{
+        currencyFormatter.locale = product.priceLocale
+        return IAPProduct(id: product.productIdentifier,
+                          price: currencyFormatter.stringFromNumber(product.price)!,
+                          title: product.localizedTitle,
+                          description: product.description)
+        
+    }
+    private func getSKProduct(productID:String)->SKProduct?{
+        for p in products {
+            if p.productIdentifier == productID{
+                return p
+            }
+        }
+        return nil
+    }
+
+    //MARK:- IAPInterface
+    public var observable : IAPObservable
+    
+    public func canMakePayments() -> Bool {
+        return SKPaymentQueue.canMakePayments()
+    }
+    public func requestProducts(){
+        let request = SKProductsRequest(productIdentifiers: self.productIdentifiers)
+        request.delegate = self
+        request.start()
+    }
+    public func requestPurchase(productID : String){
+        if let skproduct = getSKProduct(productID)
+        {
+            let payment = SKPayment(product: skproduct)
+            SKPaymentQueue.defaultQueue().addPayment(payment)
+        }
+    }
+    public func restorePurchases(){
+        SKPaymentQueue.defaultQueue().restoreCompletedTransactions()
+    }
+    
+    public func getProduct(productID : String) -> IAPProduct?
+    {
+        for p in products
+        {
+            if p.productIdentifier == productID {
+                return createIAPProduct(p)
+            }
+        }
+        return nil
+    }
+
     // MARK:- SKProductsRequestDelegate
     public func productsRequest(request: SKProductsRequest, didReceiveResponse response: SKProductsResponse) {
-        if (response.products.count == 0){
-            print("No products found")
-            return
-        }
-        self.product = response.products[0]
-        print("Product \(self.product?.localizedTitle) \(self.product?.price)")
-        print(self.product?.localizedDescription)
+        self.products = response.products
+        self.observable.onProductsRequestCompleted()
     }
     
     //MARK:- SKPaymentTransactionObserver
@@ -70,6 +114,8 @@ public class IAPHelper : NSObject, SKProductsRequestDelegate, SKPaymentTransacti
     private func failedTransaction(transaction: SKPaymentTransaction){
         print("Transaction: failed")
         SKPaymentQueue.defaultQueue().finishTransaction(transaction)
+        let productID = transaction.payment.productIdentifier
+        observable.onPurchaseRequestFailed(productID)
     }
     private func purchasingTransaction(transaction: SKPaymentTransaction){
         print("Transaction: purchasing")
@@ -77,10 +123,15 @@ public class IAPHelper : NSObject, SKProductsRequestDelegate, SKPaymentTransacti
     private func purchasedTransaction(transaction: SKPaymentTransaction){
         print("Transaction: purchased")
         SKPaymentQueue.defaultQueue().finishTransaction(transaction)
+        let productID = transaction.payment.productIdentifier
+        observable.onPurchaseRequestCompleted(productID)
     }
     private func restoredTransaction(transaction: SKPaymentTransaction){
         print("Transaction: restored")
         SKPaymentQueue.defaultQueue().finishTransaction(transaction)
+        let productID = transaction.payment.productIdentifier
+        observable.onRestorePurchaseCompleted(productID)
+
     }
     
 }

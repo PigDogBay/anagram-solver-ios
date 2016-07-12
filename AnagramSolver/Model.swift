@@ -73,7 +73,7 @@ class Model : WordListCallback, IAPDelegate
     private init()
     {
         self.wordSearch = WordSearch(wordList: self.wordList)
-        self.iap = IAPFactory.createMock()
+        self.iap = IAPFactory.createIAPInterface()
         self.iap.observable.addObserver("model", observer: self)
     }
     

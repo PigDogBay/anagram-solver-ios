@@ -11,19 +11,42 @@ import SwiftUtils
 
 public class IAPFactory
 {
-    class func getGoProId()->String
+    class func createIAPInterface()->IAPInterface{
+        //return createMock()
+        return createReal()
+    }
+    class func getProductID()->String{
+        return getTestPurchaseId()
+    }
+
+    private class func getGoProId()->String
     {
         return "com.mpdbailey.ios.anagramsolver.gopro"
     }
+    private class func getTestPurchaseId()->String
+    {
+        return "com.mpdbailey.ios.anagramsolver.testpurchase"
+    }
 
-    class func createGoProProduct() -> IAPProduct
+    private class func createGoProProduct() -> IAPProduct
     {
         return IAPProduct(id: IAPFactory.getGoProId(),price: "£2.99", title: "Go Pro", description: "Bigger word list, supergram searches and No ads!")
     }
-    class func createMock()->IAPInterface{
+    private class func createTestProduct() -> IAPProduct
+    {
+        return IAPProduct(id: IAPFactory.getTestPurchaseId(),price: "£0.69", title: "Test", description: "Consumable test purchase")
+    }
+    private class func createMock()->IAPInterface{
         let mock = MockIAP()
-        mock.delay=5
+        mock.delay=3
         mock.serverProducts.append(createGoProProduct())
+        mock.serverProducts.append(createTestProduct())
         return mock
+    }
+    private class func createReal()->IAPInterface{
+        let real = IAPHelper()
+        real.productIdentifiers.insert(getGoProId())
+        real.productIdentifiers.insert(getTestPurchaseId())
+        return real
     }
 }
