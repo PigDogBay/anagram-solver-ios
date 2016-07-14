@@ -16,8 +16,9 @@ class TipViewController: PageContentController
     let tip3 = ["Wildcards","Use @ for 1 or more letters\n\nEnter @ace\n\nTo find\n\nembrace, cyberspace...","@ace"]
     let tip4 = ["Two Words","Use a space to split the letters\n\nEnter james bond\n\nTo find\n\njabs demon and admen jobs","james bond"]
     let tip5 = ["Shortcuts","Use numbers instead of dots\n\nEnter z9\n\nTo find\n\nzombielike, zookeepers","z9"]
-    let tip6 = ["Supergrams I","Find larger words\n\nEnter kayleigh*\n\nTo find\n\nbreathtakingly, heartbreakingly","kayleigh*"]
-    let tip7 = ["Supergrams II","Use + to pad length\n\nEnter obama+++\n\nTo find\n\nbatwoman, catacomb...","obama+++"]
+    let tip6 = ["Definitions","Touch the info icon\n\nTo the right of a word\n\nTo look up its meaning",""]
+    let tip6Pro = ["Supergrams I","Find larger words\n\nEnter kayleigh*\n\nTo find\n\nbreathtakingly, heartbreakingly","kayleigh*"]
+    let tip7Pro = ["Supergrams II","Use + to pad length\n\nEnter obama+++\n\nTo find\n\nbatwoman, catacomb...","obama+++"]
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -56,9 +57,9 @@ class TipViewController: PageContentController
         case 5:
             return tip5
         case 6:
-            return tip6
+            return Model.sharedInstance.isProMode ? tip6Pro : tip6
         case 7:
-            return tip7
+            return Model.sharedInstance.isProMode ? tip7Pro : tip0
         default:
             return tip0
         }

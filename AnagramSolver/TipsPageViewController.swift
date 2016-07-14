@@ -10,26 +10,10 @@ import UIKit
 
 class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSource {
 
-    let stdTipsCount = 7
-    let proTipsCount = 8
-    var tipsCount = 7
+    private let tipsCount = 8
     
-    private var isProMode = false;
-    
-    func setMode(isPro : Bool){
-        if (isPro){
-            isProMode = true
-            tipsCount = proTipsCount
-        }
-        else{
-            isProMode = false
-            tipsCount = stdTipsCount
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        setMode(Model.sharedInstance.isProMode)
         self.dataSource=self
         let startView = viewControllerAtIndex(0)
         self.setViewControllers([startView], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
@@ -77,7 +61,7 @@ class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSour
             return nil
         }
         var pageContentVC : PageContentController!
-        if !isProMode && index == (tipsCount-1)
+        if !Model.sharedInstance.isProMode && index == (tipsCount-1)
         {
             pageContentVC = self.storyboard?.instantiateViewControllerWithIdentifier("HelpOutViewController") as! PageContentController
         }
