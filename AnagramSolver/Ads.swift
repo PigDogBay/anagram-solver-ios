@@ -31,7 +31,7 @@ class Ads
     }
     
     let INTERSTITIAL_AD_UNIT_ID = "ca-app-pub-3582986480189311/6308985582"
-    let MAX_COUNTS = 10
+    let MAX_COUNTS = 20
     let key = "AdsInterstitialCount"
     var interstitial : GADInterstitial!
     var state = States.counting
