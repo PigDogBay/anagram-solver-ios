@@ -12,8 +12,8 @@ import SwiftUtils
 public class IAPFactory
 {
     class func createIAPInterface()->IAPInterface{
-        //return createMock()
-        return createReal()
+        return createMock()
+        //return createReal()
     }
     class func getProductID()->String{
         return getTestPurchaseId()
