@@ -650,7 +650,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SwiftApps-ccgtjtkyvrlkquhiegcysvtkucvq/Build/Products/Release-iphoneos",
 				);
 				INFOPLIST_FILE = AnagramSolver/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pigdogbay.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -675,7 +675,7 @@
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/SwiftApps-ccgtjtkyvrlkquhiegcysvtkucvq/Build/Products/Release-iphoneos",
 				);
 				INFOPLIST_FILE = AnagramSolver/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pigdogbay.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
