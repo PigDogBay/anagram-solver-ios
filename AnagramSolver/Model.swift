@@ -191,21 +191,21 @@ class Model : WordListCallback, IAPDelegate
     //MARK:- IAPDelegate
     func productsRequest(){
         //list of products received - do nothing
-        print("Model-IAPDelegate-products request")
+        //print("Model-IAPDelegate-products request")
     }
     func purchaseRequest(productID : String){
         //purchase successful, store in NSDefaults
-        print("Model-IAPDelegate-purchaseRequest \(productID)")
+        //print("Model-IAPDelegate-purchaseRequest \(productID)")
         proMode()
     }
     func restoreRequest(productID : String){
         //purchase successful, store in NSDefaults
-        print("Model-IAPDelegate-restore request \(productID)")
-        
+        //print("Model-IAPDelegate-restore request \(productID)")
+        proMode()
     }
     func purchaseFailed(productID : String){
         //purchase failed - do nothing here
-        print("Model-IAPDelegate-purchase failed \(productID)")
+        //print("Model-IAPDelegate-purchase failed \(productID)")
     }
 
     
