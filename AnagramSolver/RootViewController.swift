@@ -170,7 +170,9 @@ class RootViewController: UIViewController, StateChangeObserver
     }
     private func isQueryACommand(cmd : String) -> Bool
     {
-        return cmd.hasPrefix("-cmd")
+        //Comment out this line to enable commands
+        return false
+//        return cmd.hasPrefix("-cmd")
     }
     private func executeCommand(cmd : String) -> String
     {
