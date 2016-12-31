@@ -11,11 +11,11 @@ import SwiftUtils
 
 protocol StateChangeObserver
 {
-    func stateChanged(newState : Model.States)
+    func stateChanged(_ newState : Model.States)
 }
 protocol WordSearchObserver : class
 {
-    func matchFound(match : String)
+    func matchFound(_ match : String)
 }
 class Model : WordListCallback, IAPDelegate
 {
@@ -34,24 +34,24 @@ class Model : WordListCallback, IAPDelegate
     {
         case uninitialized,loading, ready, searching, finished
     }
-    private let TABLE_MAX_COUNT_TO_RELOAD = 20
-    private let isProKey = "isProFlag"
+    fileprivate let TABLE_MAX_COUNT_TO_RELOAD = 20
+    fileprivate let isProKey = "isProFlag"
 
-    private(set) var isProMode : Bool{
+    fileprivate(set) var isProMode : Bool{
         get{
-            let defaults = NSUserDefaults.standardUserDefaults()
-            let flag = defaults.objectForKey(isProKey) as? Bool
+            let defaults = UserDefaults.standard
+            let flag = defaults.object(forKey: isProKey) as? Bool
             if flag == nil
             {
-                defaults.setBool(false, forKey: isProKey)
+                defaults.set(false, forKey: isProKey)
                 defaults.synchronize()
                 return false
             }
             return flag!
         }
         set(flag) {
-            let defaults = NSUserDefaults.standardUserDefaults()
-            defaults.setBool(flag, forKey: isProKey)
+            let defaults = UserDefaults.standard
+            defaults.set(flag, forKey: isProKey)
             defaults.synchronize()
             
         }
@@ -70,21 +70,21 @@ class Model : WordListCallback, IAPDelegate
     var observersDictionary : [String : StateChangeObserver] = [:]
     weak var wordSearchObserver : WordSearchObserver!
     
-    private init()
+    fileprivate init()
     {
         self.wordSearch = WordSearch(wordList: self.wordList)
         self.iap = IAPFactory.createIAPInterface()
         self.iap.observable.addObserver("model", observer: self)
     }
     
-    func addObserver(name: String, observer : StateChangeObserver)
+    func addObserver(_ name: String, observer : StateChangeObserver)
     {
         observersDictionary[name]=observer
     }
     
-    func removeObserver(name: String)
+    func removeObserver(_ name: String)
     {
-        observersDictionary.removeValueForKey(name)
+        observersDictionary.removeValue(forKey: name)
     }
 
     func unloadDictionary()
@@ -93,21 +93,21 @@ class Model : WordListCallback, IAPDelegate
         changeState(States.uninitialized)
     }
     
-    func loadDictionary(resourceName: String)
+    func loadDictionary(_ resourceName: String)
     {
         changeState(States.loading)
-        let path = NSBundle.mainBundle().pathForResource(resourceName, ofType: "txt")
-        let possibleContent = try? String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
+        let path = Bundle.main.path(forResource: resourceName, ofType: "txt")
+        let possibleContent = try? String(contentsOfFile: path!, encoding: String.Encoding.utf8)
         
         if let content = possibleContent
         {
-            let words = content.componentsSeparatedByString("\n")
+            let words = content.components(separatedBy: "\n")
             self.wordList.wordlist = words
         }
         changeState(States.ready)
     }
     
-    func changeState(newState: States)
+    func changeState(_ newState: States)
     {
         self.state = newState
         for (_,observer) in observersDictionary
@@ -115,7 +115,7 @@ class Model : WordListCallback, IAPDelegate
             observer.stateChanged(state)
         }
     }
-    func setAndValidateQuery( raw : String) ->Bool
+    func setAndValidateQuery( _ raw : String) ->Bool
     {
         self.query = wordSearch.clean(raw)
         return self.query.length>0
@@ -126,7 +126,7 @@ class Model : WordListCallback, IAPDelegate
     }
     func prepareToSearch()
     {
-        matches.removeAll(keepCapacity: true)
+        matches.removeAll(keepingCapacity: true)
     }
     func search()
     {
@@ -143,7 +143,7 @@ class Model : WordListCallback, IAPDelegate
         changeState(States.finished)
     }
     
-    func update(result: String)
+    func update(_ result: String)
     {
         matches.append(result)
         //only update the table until we have enough items to fill the screen
@@ -193,17 +193,17 @@ class Model : WordListCallback, IAPDelegate
         //list of products received - do nothing
         //print("Model-IAPDelegate-products request")
     }
-    func purchaseRequest(productID : String){
+    func purchaseRequest(_ productID : String){
         //purchase successful, store in NSDefaults
         //print("Model-IAPDelegate-purchaseRequest \(productID)")
         proMode()
     }
-    func restoreRequest(productID : String){
+    func restoreRequest(_ productID : String){
         //purchase successful, store in NSDefaults
         //print("Model-IAPDelegate-restore request \(productID)")
         proMode()
     }
-    func purchaseFailed(productID : String){
+    func purchaseFailed(_ productID : String){
         //purchase failed - do nothing here
         //print("Model-IAPDelegate-purchase failed \(productID)")
     }

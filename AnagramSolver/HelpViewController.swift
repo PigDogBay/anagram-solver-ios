@@ -11,7 +11,7 @@ import WebKit
 
 class HelpViewController: UIViewController {
 
-    private var webView: WKWebView?
+    fileprivate var webView: WKWebView?
     
     override func loadView() {
         webView = WKWebView()
@@ -20,9 +20,9 @@ class HelpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let url = NSBundle.mainBundle().URLForResource("help", withExtension: "html") {
+        if let url = Bundle.main.url(forResource: "help", withExtension: "html") {
             if #available(iOS 9.0, *) {
-                webView?.loadFileURL(url,allowingReadAccessToURL: url)
+                webView?.loadFileURL(url,allowingReadAccessTo: url)
             } else {
                 // To Do: Fallback on earlier versions
                 self.mpdbShowErrorAlert("Not Supported", msg: "Help is only available for iOS 9 onwards")

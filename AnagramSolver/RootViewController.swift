@@ -11,7 +11,7 @@ import SwiftUtils
 
 class RootViewController: UIViewController, StateChangeObserver
 {
-    private var model : Model!
+    fileprivate var model : Model!
     
     let searchSegueId = "searchSegue"
     let goProSegueId = "goProSegue"
@@ -22,18 +22,18 @@ class RootViewController: UIViewController, StateChangeObserver
     @IBOutlet weak var textFieldQuery: UITextField!
     
  
-    @IBAction func queryFinished(sender: UITextField) {
-        if shouldPerformSegueWithIdentifier(searchSegueId, sender: self)
+    @IBAction func queryFinished(_ sender: UITextField) {
+        if shouldPerformSegue(withIdentifier: searchSegueId, sender: self)
         {
-            performSegueWithIdentifier(searchSegueId, sender: self)
+            performSegue(withIdentifier: searchSegueId, sender: self)
         }
     }
 
-    @IBAction func menuButtonPressed(sender: UIBarButtonItem) {
-        let controller = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
-        let helpAction = UIAlertAction(title: "Help", style: .Default, handler: {action in self.showHelp()})
-        let goProAction = UIAlertAction(title: "Go Pro", style: .Default, handler: {action in self.showGoPro()})
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+    @IBAction func menuButtonPressed(_ sender: UIBarButtonItem) {
+        let controller = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let helpAction = UIAlertAction(title: "Help", style: .default, handler: {action in self.showHelp()})
+        let goProAction = UIAlertAction(title: "Go Pro", style: .default, handler: {action in self.showGoPro()})
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         if #available(iOS 9.0, *) {
             controller.addAction(helpAction)
         }
@@ -45,19 +45,19 @@ class RootViewController: UIViewController, StateChangeObserver
             ppc.barButtonItem = menuButton
         }
         
-        presentViewController(controller, animated: true, completion: nil)
+        present(controller, animated: true, completion: nil)
         
     }
     
     func showHelp(){
-        performSegueWithIdentifier(helpSegueId, sender: self)
+        performSegue(withIdentifier: helpSegueId, sender: self)
     }
     func showGoPro(){
-        performSegueWithIdentifier(goProSegueId, sender: self)
+        performSegue(withIdentifier: goProSegueId, sender: self)
     }
     
 
-    @IBAction func backgroundTap(sender: UIControl) {
+    @IBAction func backgroundTap(_ sender: UIControl) {
         //close the keyboard
         textFieldQuery.resignFirstResponder();
     }
@@ -70,7 +70,7 @@ class RootViewController: UIViewController, StateChangeObserver
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
         model = Model.sharedInstance
         model.addObserver("root", observer: self)
         if mpdbCheckIsFirstTime()
@@ -78,7 +78,7 @@ class RootViewController: UIViewController, StateChangeObserver
             mpdbShowAlert("Welcome",msg: "Thanks for trying Anagram Solver, enter your letters and search over 130,000 words!")
         }
     }
-    override func viewDidAppear(animated: Bool)
+    override func viewDidAppear(_ animated: Bool)
     {
         modelToView(model.state)
     }
@@ -87,7 +87,7 @@ class RootViewController: UIViewController, StateChangeObserver
     is here in prepareForSegue
     http://stackoverflow.com/questions/13279105/access-container-view-controller-from-parent-ios
     */
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.identifier == searchSegueId
         {
@@ -95,7 +95,7 @@ class RootViewController: UIViewController, StateChangeObserver
         }
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool
     {
         if searchSegueId == identifier
         {
@@ -124,34 +124,34 @@ class RootViewController: UIViewController, StateChangeObserver
         return true
     }
     
-    private func showErrorAlert(title: String, msg : String)
+    fileprivate func showErrorAlert(_ title: String, msg : String)
     {
-        let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
-        let controller = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.Alert)
+        let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
+        let controller = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.alert)
         controller.addAction(action)
-        self.presentViewController(controller, animated: true, completion: nil)
+        self.present(controller, animated: true, completion: nil)
     }
     
-    func stateChanged(newState: Model.States)
+    func stateChanged(_ newState: Model.States)
     {
         //update UI on main thread
-        dispatch_async(dispatch_get_main_queue())
+        DispatchQueue.main.async
         {
             self.modelToView(newState)
         }
     }
-    private func modelToView(state : Model.States)
+    fileprivate func modelToView(_ state : Model.States)
     {
         switch state
         {
         case .uninitialized:
-            self.searchButton.enabled=false
+            self.searchButton.isEnabled=false
             let proFlag = self.model.isProMode
             self.title = proFlag ? "Anagram Solver Pro" : "Anagram Solver"
             self.searchButton.title = proFlag ? "Search+" : "Search"
             let resourceName = proFlag ? "pro" : "standard"
             //load dictionary on a worker thread
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
+            DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async
             {
                 //There are two word lists pro and standard
                 //pro contains all the words in standard
@@ -159,22 +159,22 @@ class RootViewController: UIViewController, StateChangeObserver
                 self.model.loadDictionary(resourceName)
             }
         case .loading:
-            self.searchButton.enabled=false
+            self.searchButton.isEnabled=false
         case .ready:
-            self.searchButton.enabled=true
+            self.searchButton.isEnabled=true
         case .searching:
-            self.searchButton.enabled=false
+            self.searchButton.isEnabled=false
         case .finished:
-            self.searchButton.enabled=true
+            self.searchButton.isEnabled=true
         }
     }
-    private func isQueryACommand(cmd : String) -> Bool
+    fileprivate func isQueryACommand(_ cmd : String) -> Bool
     {
         //Comment out this line to enable commands
         return false
 //        return cmd.hasPrefix("-cmd")
     }
-    private func executeCommand(cmd : String) -> String
+    fileprivate func executeCommand(_ cmd : String) -> String
     {
         if cmd == "-cmdpro"
         {

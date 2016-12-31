@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -315,6 +315,7 @@
 					4D45EFB31A9DFABA00C40BB4 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = ZYM8DA54T6;
+						LastSwiftMigration = 0820;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 1;
@@ -323,12 +324,13 @@
 					};
 					4D45EFC81A9DFABA00C40BB4 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 4D45EFB31A9DFABA00C40BB4;
 					};
 				};
 			};
 			buildConfigurationList = 4D45EFAF1A9DFABA00C40BB4 /* Build configuration list for PBXProject "AnagramSolver" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -657,6 +659,7 @@
 				PROVISIONING_PROFILE = "e2a71fa3-1600-4f63-b15e-012d34c664ec";
 				SWIFT_OBJC_BRIDGING_HEADER = "AnagramSolver/AnagramSolver-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -681,6 +684,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e2a71fa3-1600-4f63-b15e-012d34c664ec";
 				SWIFT_OBJC_BRIDGING_HEADER = "AnagramSolver/AnagramSolver-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -701,6 +705,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pigdogbay.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnagramSolver.app/AnagramSolver";
 			};
 			name = Debug;
@@ -718,6 +723,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pigdogbay.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnagramSolver.app/AnagramSolver";
 			};
 			name = Release;

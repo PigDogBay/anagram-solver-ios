@@ -10,33 +10,33 @@
 import StoreKit
 import SwiftUtils
 
-public class IAPHelper : NSObject, IAPInterface, SKProductsRequestDelegate, SKPaymentTransactionObserver
+open class IAPHelper : NSObject, IAPInterface, SKProductsRequestDelegate, SKPaymentTransactionObserver
 {
-    public var productIdentifiers = Set<String>()
+    open var productIdentifiers = Set<String>()
     
-    private var products : [SKProduct] = []
+    fileprivate var products : [SKProduct] = []
     
-    private let currencyFormatter : NSNumberFormatter
+    fileprivate let currencyFormatter : NumberFormatter
 
     public override init(){
         self.observable = IAPObservable()
-        currencyFormatter = NSNumberFormatter()
-        currencyFormatter.numberStyle = .CurrencyStyle
-        currencyFormatter.formatterBehavior = .Behavior10_4
+        currencyFormatter = NumberFormatter()
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.formatterBehavior = .behavior10_4
         
         super.init()
-        SKPaymentQueue.defaultQueue().addTransactionObserver(self)
+        SKPaymentQueue.default().add(self)
     }
     
-    private func createIAPProduct(product: SKProduct)->IAPProduct{
+    fileprivate func createIAPProduct(_ product: SKProduct)->IAPProduct{
         currencyFormatter.locale = product.priceLocale
         return IAPProduct(id: product.productIdentifier,
-                          price: currencyFormatter.stringFromNumber(product.price)!,
+                          price: currencyFormatter.string(from: product.price)!,
                           title: product.localizedTitle,
                           description: product.description)
         
     }
-    private func getSKProduct(productID:String)->SKProduct?{
+    fileprivate func getSKProduct(_ productID:String)->SKProduct?{
         for p in products {
             if p.productIdentifier == productID{
                 return p
@@ -46,28 +46,28 @@ public class IAPHelper : NSObject, IAPInterface, SKProductsRequestDelegate, SKPa
     }
 
     //MARK:- IAPInterface
-    public var observable : IAPObservable
+    open var observable : IAPObservable
     
-    public func canMakePayments() -> Bool {
+    open func canMakePayments() -> Bool {
         return SKPaymentQueue.canMakePayments()
     }
-    public func requestProducts(){
+    open func requestProducts(){
         let request = SKProductsRequest(productIdentifiers: self.productIdentifiers)
         request.delegate = self
         request.start()
     }
-    public func requestPurchase(productID : String){
+    open func requestPurchase(_ productID : String){
         if let skproduct = getSKProduct(productID)
         {
             let payment = SKPayment(product: skproduct)
-            SKPaymentQueue.defaultQueue().addPayment(payment)
+            SKPaymentQueue.default().add(payment)
         }
     }
-    public func restorePurchases(){
-        SKPaymentQueue.defaultQueue().restoreCompletedTransactions()
+    open func restorePurchases(){
+        SKPaymentQueue.default().restoreCompletedTransactions()
     }
     
-    public func getProduct(productID : String) -> IAPProduct?
+    open func getProduct(_ productID : String) -> IAPProduct?
     {
         for p in products
         {
@@ -79,56 +79,56 @@ public class IAPHelper : NSObject, IAPInterface, SKProductsRequestDelegate, SKPa
     }
 
     // MARK:- SKProductsRequestDelegate
-    public func productsRequest(request: SKProductsRequest, didReceiveResponse response: SKProductsResponse) {
+    open func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         self.products = response.products
         self.observable.onProductsRequestCompleted()
     }
     
     //MARK:- SKPaymentTransactionObserver
-    public func paymentQueue(queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+    open func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         
         for transaction in transactions {
             switch (transaction.transactionState){
-            case .Deferred:
+            case .deferred:
                 deferredTransaction(transaction)
                 break
-            case .Failed:
+            case .failed:
                 failedTransaction(transaction)
                 break
-            case .Purchased:
+            case .purchased:
                 purchasedTransaction(transaction)
                 break
-            case .Purchasing:
+            case .purchasing:
                 purchasingTransaction(transaction)
                 break
-            case .Restored:
+            case .restored:
                 restoredTransaction(transaction)
                 break
             }
         }
     }
     
-    private func deferredTransaction(transaction: SKPaymentTransaction){
+    fileprivate func deferredTransaction(_ transaction: SKPaymentTransaction){
         print("Transaction: deferred")
     }
-    private func failedTransaction(transaction: SKPaymentTransaction){
+    fileprivate func failedTransaction(_ transaction: SKPaymentTransaction){
         print("Transaction: failed")
-        SKPaymentQueue.defaultQueue().finishTransaction(transaction)
+        SKPaymentQueue.default().finishTransaction(transaction)
         let productID = transaction.payment.productIdentifier
         observable.onPurchaseRequestFailed(productID)
     }
-    private func purchasingTransaction(transaction: SKPaymentTransaction){
+    fileprivate func purchasingTransaction(_ transaction: SKPaymentTransaction){
         print("Transaction: purchasing")
     }
-    private func purchasedTransaction(transaction: SKPaymentTransaction){
+    fileprivate func purchasedTransaction(_ transaction: SKPaymentTransaction){
         print("Transaction: purchased")
-        SKPaymentQueue.defaultQueue().finishTransaction(transaction)
+        SKPaymentQueue.default().finishTransaction(transaction)
         let productID = transaction.payment.productIdentifier
         observable.onPurchaseRequestCompleted(productID)
     }
-    private func restoredTransaction(transaction: SKPaymentTransaction){
+    fileprivate func restoredTransaction(_ transaction: SKPaymentTransaction){
         print("Transaction: restored")
-        SKPaymentQueue.defaultQueue().finishTransaction(transaction)
+        SKPaymentQueue.default().finishTransaction(transaction)
         let productID = transaction.payment.productIdentifier
         observable.onRestorePurchaseCompleted(productID)
 

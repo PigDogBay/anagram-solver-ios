@@ -12,12 +12,12 @@ import SwiftUtils
 
 class HelpOutViewController : PageContentController, MFMailComposeViewControllerDelegate {
 
-    @IBAction func rateBtnPressed(sender: UIButton)
+    @IBAction func rateBtnPressed(_ sender: UIButton)
     {
         //TO DO - insert own url
-        UIApplication.sharedApplication().openURL(NSURL(string: Model.getAppUrl())!)
+        UIApplication.shared.openURL(URL(string: Model.getAppUrl())!)
     }
-    @IBAction func feedbackBtnPressed(sender: UIButton)
+    @IBAction func feedbackBtnPressed(_ sender: UIButton)
     {
         if !MFMailComposeViewController.canSendMail()
         {
@@ -29,11 +29,11 @@ class HelpOutViewController : PageContentController, MFMailComposeViewController
         mailVC.setSubject("Anagram Solver Feedback iOS")
         mailVC.setToRecipients(["pigdogbay@yahoo.co.uk"])
         mailVC.setMessageBody("Your feedback is most welcome\n *Report Bugs\n *Suggest new features\n *Ask for help\n\n\nHi Mark,\n\n[Enter you message here]", isHTML: false)
-        presentViewController(mailVC, animated: true, completion: nil)    }
+        present(mailVC, animated: true, completion: nil)    }
     
-    @IBAction func tellFriendsBtnPressed(sender: UIButton)
+    @IBAction func tellFriendsBtnPressed(_ sender: UIButton)
     {
-        if let rootVC = self.parentViewController?.parentViewController as! RootViewController!
+        if let rootVC = self.parent?.parent as! RootViewController!
         {
             rootVC.showGoPro()
         }
@@ -41,9 +41,9 @@ class HelpOutViewController : PageContentController, MFMailComposeViewController
     }
     
     // MARK:- MFMailComposeViewControllerDelegate
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?)
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
     {
         //dismiss on send
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }

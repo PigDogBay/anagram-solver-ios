@@ -12,15 +12,15 @@ import GoogleMobileAds
 class MatchesViewController: UIViewController, StateChangeObserver, WordSearchObserver, UITableViewDataSource
 {
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
-    private let cellIdentifier = "MatchesCell"
-    private var model : Model!
+    fileprivate let cellIdentifier = "MatchesCell"
+    fileprivate var model : Model!
 
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var matchesTable: UITableView!
     @IBOutlet weak var navBar: UINavigationItem!
     
-    @IBAction func shareButton(sender: UIBarButtonItem)
+    @IBAction func shareButton(_ sender: UIBarButtonItem)
     {
         let firstActivityItem = model.share()
         let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: nil)
@@ -29,7 +29,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
             ppc.barButtonItem = navBar.rightBarButtonItem
         }
         
-        self.presentViewController(activityViewController, animated: true, completion: nil)
+        self.present(activityViewController, animated: true, completion: nil)
     }
     override func viewDidLoad()
     {
@@ -45,20 +45,20 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         {
             bannerView.adUnitID = Ads.getBannerAdId()
             bannerView.rootViewController = self
-            bannerView.loadRequest(Ads.createRequest())
+            bannerView.load(Ads.createRequest())
         }
 
         self.stateChanged(model.state)
         model.addObserver("matches", observer: self)
         model.wordSearchObserver = self
     }
-    override func viewDidAppear(animated: Bool)
+    override func viewDidAppear(_ animated: Bool)
     {
         //Run worker thread here as if started in viewDidLoad
         //the ui may not be ready for when a match comes in
         if model.state == .ready
         {
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
+            DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async
             {
                 self.model.search()
             }
@@ -68,7 +68,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     // This function is called twice, first when child view is added to parent
     // then secondly when it is removed, in this case parent is nil
     //
-    override func willMoveToParentViewController(parent: UIViewController?)
+    override func willMove(toParentViewController parent: UIViewController?)
     {
         //Only do something when moving back to parent
         if parent == nil
@@ -76,7 +76,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
             model.stop()
             model.removeObserver("matches")
             model.wordSearchObserver = nil
-            model.ads.showInterstitial(self.parentViewController!)
+            model.ads.showInterstitial(self.parent!)
         }
     }
 
@@ -88,30 +88,30 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         model.wordSearchObserver = nil
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "definitionSegue"
         {
-            self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"Back", style:.Plain, target:nil, action:nil)
-            let definitionVC = segue.destinationViewController as! DefinitionViewController
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"Back", style:.plain, target:nil, action:nil)
+            let definitionVC = segue.destination as! DefinitionViewController
             let cell = sender as! UITableViewCell
             definitionVC.word = cell.textLabel?.text
         }
     }
     
     // MARK: - Table view data source
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    func numberOfSections(in tableView: UITableView) -> Int
     {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return model.matches.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as UITableViewCell
         
         cell.textLabel?.text = model.matches[indexPath.row]
         return cell
@@ -119,24 +119,24 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
 
     
     // MARK: - StateChangeObserver Conformance
-    func stateChanged(newState: Model.States)
+    func stateChanged(_ newState: Model.States)
     {
         //update UI on main thread
-        dispatch_async(dispatch_get_main_queue())
+        DispatchQueue.main.async
         {
             self.modelToView(newState)
         }
     }
     // MARK: - WordSearchObserver Conformance
-    func matchFound(match: String)
+    func matchFound(_ match: String)
     {
         //update UI on main thread
-        dispatch_sync(dispatch_get_main_queue())
+        DispatchQueue.main.sync
         {
             self.matchesTable.reloadData()
         }
     }
-    private func modelToView(state : Model.States)
+    fileprivate func modelToView(_ state : Model.States)
     {
         switch state
         {
@@ -149,11 +149,11 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
             fallthrough
         case .searching:
             statusLabel.text = "Searching..."
-            navBar.rightBarButtonItem?.enabled=false
+            navBar.rightBarButtonItem?.isEnabled=false
         case .finished:
             statusLabel.text = "Matches: \(model.matches.count)"
             matchesTable.reloadData()
-            navBar.rightBarButtonItem?.enabled=true
+            navBar.rightBarButtonItem?.isEnabled=true
         }
     }
  

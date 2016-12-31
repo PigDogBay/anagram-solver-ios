@@ -38,19 +38,19 @@ class Ads
     
     var count : Int {
         get{
-            let defaults = NSUserDefaults.standardUserDefaults()
-            let c = defaults.objectForKey(key) as? Int
+            let defaults = UserDefaults.standard
+            let c = defaults.object(forKey: key) as? Int
             if c == nil
             {
-                defaults.setInteger(0, forKey: key)
+                defaults.set(0, forKey: key)
                 defaults.synchronize()
                 return 0
             }
             return c!
         }
         set(value){
-            let defaults = NSUserDefaults.standardUserDefaults()
-            defaults.setInteger(value, forKey: key)
+            let defaults = UserDefaults.standard
+            defaults.set(value, forKey: key)
             defaults.synchronize()
         }
     }
@@ -59,7 +59,7 @@ class Ads
     {
         NSLog("Loading ad")
         interstitial = GADInterstitial(adUnitID: INTERSTITIAL_AD_UNIT_ID)
-        interstitial.loadRequest(Ads.createRequest())
+        interstitial.load(Ads.createRequest())
         state = .loading
     }
     
@@ -75,7 +75,7 @@ class Ads
         count = 0
     }
     
-    func showInterstitial(vc: UIViewController)
+    func showInterstitial(_ vc: UIViewController)
     {
         switch (state)
         {
@@ -88,7 +88,7 @@ class Ads
         case .loading:
             if (interstitial.isReady)
             {
-                interstitial.presentFromRootViewController(vc)
+                interstitial.present(fromRootViewController: vc)
                 state = .counting
                 count=0
             }

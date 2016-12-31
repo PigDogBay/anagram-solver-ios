@@ -16,23 +16,23 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var loadingLabel: UILabel!
     
     var word : String!
-    private var webView: WKWebView!
+    fileprivate var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         webView = WKWebView(frame: view.bounds)
         webView.navigationDelegate = self
-        view.insertSubview(webView, atIndex: 0)
+        view.insertSubview(webView, at: 0)
 
         let processedWord = stripUnusedChars(word)
         navigationBar.title=processedWord
-        let requestURL = NSURL(string:"https://www.google.com/search?q=define:\(processedWord)")
-        let request = NSURLRequest(URL: requestURL!)
-        webView.loadRequest(request)
+        let requestURL = URL(string:"https://www.google.com/search?q=define:\(processedWord)")
+        let request = URLRequest(url: requestURL!)
+        webView.load(request)
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         webView.stopLoading()
     }
 
@@ -42,12 +42,12 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
         webView.stopLoading()
     }
     
-    private func stripUnusedChars(word : String) -> String
+    fileprivate func stripUnusedChars(_ word : String) -> String
     {
         if word.mpdb_contains(" ")
         {
-            let index = word.rangeOfString(" ")?.startIndex
-            return word.substringToIndex(index!)
+            let index = word.range(of: " ")?.lowerBound
+            return word.substring(to: index!)
         }
         return word
     }
@@ -56,17 +56,17 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
     
     //MARK:- WKNavigationDelegate
     
-    func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         loadingIndicator.startAnimating()
-        loadingLabel.hidden=false
+        loadingLabel.isHidden=false
     }
-    func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         loadingIndicator.stopAnimating()
-        loadingLabel.hidden=true
+        loadingLabel.isHidden=true
     }
-    func webView(webView: WKWebView, didFailNavigation navigation: WKNavigation!, withError error: NSError) {
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         loadingIndicator.stopAnimating()
-        loadingLabel.hidden=true
+        loadingLabel.isHidden=true
     }
     
     

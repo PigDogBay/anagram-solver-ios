@@ -42,7 +42,7 @@ class TipViewController: PageContentController
     }
     
     //Had a nightmare with swift multidimensioanl arrays, so using switch!!
-    private func getTip(index : Int)->[String]
+    fileprivate func getTip(_ index : Int)->[String]
     {
         switch index
         {

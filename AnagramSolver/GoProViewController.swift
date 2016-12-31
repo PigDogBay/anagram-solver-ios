@@ -12,31 +12,31 @@ import SwiftUtils
 class GoProViewController: UIViewController, IAPDelegate {
     @IBOutlet weak var buyButton: UIButton!
 
-    @IBAction func buyBtnClicked(sender: UIButton) {
+    @IBAction func buyBtnClicked(_ sender: UIButton) {
         if model.iap.canMakePayments(){
-            buyButton.enabled=false
+            buyButton.isEnabled=false
             model.iap.requestPurchase(IAPFactory.getProductID())
         }
     }
-    @IBAction func restoreBtnClicked(sender: UIButton) {
+    @IBAction func restoreBtnClicked(_ sender: UIButton) {
         model.iap.restorePurchases()
     }
 
-    private var model : Model!
+    fileprivate var model : Model!
     let observerName = "GoProVC"
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.model = Model.sharedInstance
-        buyButton.enabled=false
+        buyButton.isEnabled=false
     }
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         if model.isProMode
         {
             //purchase already made
-            self.buyButton.enabled=false
-            self.buyButton.setTitle("Purchased",forState: .Normal)
+            self.buyButton.isEnabled=false
+            self.buyButton.setTitle("Purchased",for: UIControlState())
         }
         else if model.iap.canMakePayments()
         {
@@ -48,7 +48,7 @@ class GoProViewController: UIViewController, IAPDelegate {
     // This function is called twice, first when child view is added to parent
     // then secondly when it is removed, in this case parent is nil
     //
-    override func willMoveToParentViewController(parent: UIViewController?)
+    override func willMove(toParentViewController parent: UIViewController?)
     {
         //Only do something when moving back to parent
         if parent == nil
@@ -66,39 +66,39 @@ class GoProViewController: UIViewController, IAPDelegate {
     func productsRequest(){
         if let product = model.iap.getProduct(IAPFactory.getProductID())
         {
-            dispatch_async(dispatch_get_main_queue())
+            DispatchQueue.main.async
             {
-                self.buyButton.enabled=true
-                self.buyButton.setTitle("Buy \(product.price)",forState: .Normal)
+                self.buyButton.isEnabled=true
+                self.buyButton.setTitle("Buy \(product.price)",for: UIControlState())
             }
         }
     }
-    func purchaseRequest(productID : String){
+    func purchaseRequest(_ productID : String){
         if (productID == IAPFactory.getProductID()){
-            dispatch_async(dispatch_get_main_queue())
+            DispatchQueue.main.async
             {
-                self.buyButton.enabled=false
-                self.buyButton.setTitle("Purchased",forState: .Normal)
+                self.buyButton.isEnabled=false
+                self.buyButton.setTitle("Purchased",for: UIControlState())
                 //no need to show an alert, StoreKit will show a thank you
             }
         }
     }
-    func restoreRequest(productID : String){
+    func restoreRequest(_ productID : String){
         if (productID == IAPFactory.getProductID()){
-            dispatch_async(dispatch_get_main_queue())
+            DispatchQueue.main.async
             {
-                self.buyButton.enabled=false
-                self.buyButton.setTitle("Purchased",forState: .Normal)
+                self.buyButton.isEnabled=false
+                self.buyButton.setTitle("Purchased",for: UIControlState())
                 //Does StoreKit show an alert here?
                 self.mpdbShowAlert("Purchase Restored",msg: "Go Pro purchase has been restored, Pro features are now unlocked.")
             }
         }
         
     }
-    func purchaseFailed(productID : String){
-        dispatch_async(dispatch_get_main_queue())
+    func purchaseFailed(_ productID : String){
+        DispatchQueue.main.async
         {
-            self.buyButton.enabled=true
+            self.buyButton.isEnabled=true
             //Pressing cancel (causing a fail) will not show an alert
             self.mpdbShowAlert("Purchase Failed",msg: "Sorry, unable to complete the purchase. You have not been charged.")
         }

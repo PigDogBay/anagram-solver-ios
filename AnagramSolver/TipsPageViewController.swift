@@ -10,13 +10,13 @@ import UIKit
 
 class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSource {
 
-    private let tipsCount = 8
+    fileprivate let tipsCount = 8
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource=self
         let startView = viewControllerAtIndex(0)
-        self.setViewControllers([startView], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
+        self.setViewControllers([startView!], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +30,7 @@ class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSour
         
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         let pageContentVC = viewController as! PageContentController
         var index = pageContentVC.pageIndex
@@ -40,7 +40,7 @@ class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSour
         index -= 1
         return viewControllerAtIndex(index)
     }
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         let pageContentVC = viewController as! PageContentController
         var index = pageContentVC.pageIndex
         if index == NSNotFound{
@@ -54,7 +54,7 @@ class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSour
         return viewControllerAtIndex(index)
     }
     
-    private func viewControllerAtIndex(index: Int) -> PageContentController!
+    fileprivate func viewControllerAtIndex(_ index: Int) -> PageContentController!
     {
         if index >= tipsCount
         {
@@ -63,20 +63,20 @@ class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSour
         var pageContentVC : PageContentController!
         if !Model.sharedInstance.isProMode && index == (tipsCount-1)
         {
-            pageContentVC = self.storyboard?.instantiateViewControllerWithIdentifier("HelpOutViewController") as! PageContentController
+            pageContentVC = self.storyboard?.instantiateViewController(withIdentifier: "HelpOutViewController") as! PageContentController
         }
         else
         {
-            pageContentVC = self.storyboard?.instantiateViewControllerWithIdentifier("TipViewController") as! PageContentController
+            pageContentVC = self.storyboard?.instantiateViewController(withIdentifier: "TipViewController") as! PageContentController
         }
         pageContentVC.pageIndex = index
         return pageContentVC
     }
     
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return tipsCount
     }
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return 0
     }
 

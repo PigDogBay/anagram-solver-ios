@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUtils
 
-public class IAPFactory
+open class IAPFactory
 {
     class func createIAPInterface()->IAPInterface{
         //return createMock()
@@ -20,31 +20,31 @@ public class IAPFactory
         return getGoProId()
     }
 
-    private class func getGoProId()->String
+    fileprivate class func getGoProId()->String
     {
         return "com.mpdbailey.ios.anagramsolver.gopro"
     }
-    private class func getTestPurchaseId()->String
+    fileprivate class func getTestPurchaseId()->String
     {
         return "com.mpdbailey.ios.anagramsolver.testpurchase"
     }
 
-    private class func createGoProProduct() -> IAPProduct
+    fileprivate class func createGoProProduct() -> IAPProduct
     {
         return IAPProduct(id: IAPFactory.getGoProId(),price: "£2.99", title: "Go Pro", description: "Bigger word list, supergram searches and No ads!")
     }
-    private class func createTestProduct() -> IAPProduct
+    fileprivate class func createTestProduct() -> IAPProduct
     {
         return IAPProduct(id: IAPFactory.getTestPurchaseId(),price: "£0.69", title: "Test", description: "Consumable test purchase")
     }
-    private class func createMock()->IAPInterface{
+    fileprivate class func createMock()->IAPInterface{
         let mock = MockIAP()
         mock.delay=3
         mock.serverProducts.append(createGoProProduct())
         mock.serverProducts.append(createTestProduct())
         return mock
     }
-    private class func createReal()->IAPInterface{
+    fileprivate class func createReal()->IAPInterface{
         let real = IAPHelper()
         real.productIdentifiers.insert(getGoProId())
         real.productIdentifiers.insert(getTestPurchaseId())

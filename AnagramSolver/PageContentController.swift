@@ -11,10 +11,10 @@ import UIKit
 class PageContentController: UIViewController
 {
     var pageIndex : Int = 0
-    @IBAction func backgroundTap(sender: AnyObject)
+    @IBAction func backgroundTap(_ sender: AnyObject)
     {
         //dismiss the keyboard
-        UIApplication.sharedApplication().sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, forEvent: nil)
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 
 }
