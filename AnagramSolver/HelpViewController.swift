@@ -22,7 +22,7 @@ class HelpViewController: UIViewController {
         
         if let url = Bundle.main.url(forResource: "help", withExtension: "html") {
             if #available(iOS 9.0, *) {
-                webView?.loadFileURL(url,allowingReadAccessTo: url)
+                _ = webView?.loadFileURL(url,allowingReadAccessTo: url)
             } else {
                 // To Do: Fallback on earlier versions
                 self.mpdbShowErrorAlert("Not Supported", msg: "Help is only available for iOS 9 onwards")
