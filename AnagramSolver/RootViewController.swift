@@ -151,7 +151,7 @@ class RootViewController: UIViewController, StateChangeObserver
             self.searchButton.title = proFlag ? "Search+" : "Search"
             let resourceName = proFlag ? "pro" : "standard"
             //load dictionary on a worker thread
-            DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async
+            DispatchQueue.global(qos: .default).async
             {
                 //There are two word lists pro and standard
                 //pro contains all the words in standard

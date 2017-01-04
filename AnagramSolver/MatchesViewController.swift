@@ -58,7 +58,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         //the ui may not be ready for when a match comes in
         if model.state == .ready
         {
-            DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async
+            DispatchQueue.global(qos: .default).async
             {
                 self.model.search()
             }
