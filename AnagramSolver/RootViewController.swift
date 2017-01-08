@@ -147,6 +147,9 @@ class RootViewController: UIViewController, StateChangeObserver
         case .uninitialized:
             self.searchButton.isEnabled=false
             let proFlag = self.model.isProMode
+            if proFlag {
+                model.ads.noAds()
+            }
             self.title = proFlag ? "Anagram Solver Pro" : "Anagram Solver"
             self.searchButton.title = proFlag ? "Search+" : "Search"
             let resourceName = proFlag ? "pro" : "standard"
@@ -171,8 +174,8 @@ class RootViewController: UIViewController, StateChangeObserver
     fileprivate func isQueryACommand(_ cmd : String) -> Bool
     {
         //Comment out this line to enable commands
-        return false
-//        return cmd.hasPrefix("-cmd")
+//        return false
+        return cmd.hasPrefix("-cmd")
     }
     fileprivate func executeCommand(_ cmd : String) -> String
     {
