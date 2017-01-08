@@ -76,7 +76,10 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
             model.stop()
             model.removeObserver("matches")
             model.wordSearchObserver = nil
-            model.ads.showInterstitial(self.parent!)
+            if !model.isProMode
+            {
+                model.ads.showInterstitial(self.parent!)
+            }
         }
     }
 
