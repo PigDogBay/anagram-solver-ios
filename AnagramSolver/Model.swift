@@ -135,10 +135,6 @@ class Model : WordListCallback, IAPDelegate
         changeState(States.searching)
         resultsCount = 0
         var processedQuery = query;
-        if (!isProMode)
-        {
-            processedQuery = self.wordSearch.standardSearchesOnly(processedQuery)
-        }
         processedQuery = self.wordSearch.preProcessQuery(processedQuery)
         let searchType = self.wordSearch.getQueryType(processedQuery)
         processedQuery = self.wordSearch.postProcessQuery(processedQuery, type: searchType)
