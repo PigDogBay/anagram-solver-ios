@@ -36,6 +36,8 @@ class Model : WordListCallback, IAPDelegate
     }
     fileprivate let TABLE_MAX_COUNT_TO_RELOAD = 20
     fileprivate let isProKey = "isProFlag"
+    fileprivate var resultsCount = 0
+    open var resultsLimit = 500
 
     fileprivate(set) var isProMode : Bool{
         get{
@@ -131,6 +133,7 @@ class Model : WordListCallback, IAPDelegate
     func search()
     {
         changeState(States.searching)
+        resultsCount = 0
         var processedQuery = query;
         if (!isProMode)
         {
@@ -146,6 +149,11 @@ class Model : WordListCallback, IAPDelegate
     func update(_ result: String)
     {
         matches.append(result)
+        resultsCount = resultsCount + 1
+        if resultsCount == resultsLimit
+        {
+            self.wordList.stopSearch()
+        }
         //only update the table until we have enough items to fill the screen
         if self.matches.count<self.TABLE_MAX_COUNT_TO_RELOAD
             && self.wordSearchObserver != nil
