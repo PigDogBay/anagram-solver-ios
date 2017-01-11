@@ -60,15 +60,7 @@ class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSour
         {
             return nil
         }
-        var pageContentVC : PageContentController!
-        if !Model.sharedInstance.isProMode && index == (tipsCount-1)
-        {
-            pageContentVC = self.storyboard?.instantiateViewController(withIdentifier: "HelpOutViewController") as! PageContentController
-        }
-        else
-        {
-            pageContentVC = self.storyboard?.instantiateViewController(withIdentifier: "TipViewController") as! PageContentController
-        }
+        let pageContentVC : PageContentController! = self.storyboard?.instantiateViewController(withIdentifier: "TipViewController") as! PageContentController
         pageContentVC.pageIndex = index
         return pageContentVC
     }

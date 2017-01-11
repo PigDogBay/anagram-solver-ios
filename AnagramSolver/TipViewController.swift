@@ -10,15 +10,14 @@ import UIKit
 
 class TipViewController: PageContentController
 {
-    let tip0 : [String] = ["Anagrams","Find words from jumbled letters\n\nEnter persia\n\nTo find\n\naspire, praise...","persia"]
-    let tip1 : [String] = ["Crosswords","Use dots for missing letters\n\nEnter m.g..\n\nTo find\n\nmagic, megan, mcgeee...","m.g.."]
-    let tip2 = ["Sub Words","Find words within words\n\nEnter goldmine\n\nTo find\n\nmolding, golden, gnome...","goldmine"]
-    let tip3 = ["Wildcards","Use @ for 1 or more letters\n\nEnter @ace\n\nTo find\n\nembrace, cyberspace...","@ace"]
-    let tip4 = ["Two Words","Use a space to split the letters\n\nEnter james bond\n\nTo find\n\njabs demon and admen jobs","james bond"]
-    let tip5 = ["Shortcuts","Use numbers instead of dots\n\nEnter z9\n\nTo find\n\nzombielike, zookeepers","z9"]
-    let tip6 = ["Definitions","Touch the info icon\n\nTo the right of a word\n\nTo look up its meaning",""]
-    let tip6Pro = ["Supergrams I","Find larger words\n\nEnter kayleigh*\n\nTo find\n\nbreathtakingly, heartbreakingly","kayleigh*"]
-    let tip7Pro = ["Supergrams II","Use + to pad length\n\nEnter obama+++\n\nTo find\n\nbatwoman, catacomb...","obama+++"]
+    let tip0 = ["Anagrams","Find words from jumbled letters\n\nEnter moonstarer\n\nTo find\n\nastronomer","moonstarer"]
+    let tip1 = ["Blank Letters","Use + as a blank letter\n\nEnter scrabb++\n\nTo find\n\ncrabbers, scabbard...","scrabb++"]
+    let tip2 = ["Two Words","Use a space to split the letters\n\nEnter james bond\n\nTo find\n\njabs demon and admen jobs","james bond"]
+    let tip3 = ["Crosswords","Use dots for missing letters\n\nEnter m.g..\n\nTo find\n\nmagic, megan, mcgeee...","m.g.."]
+    let tip4 = ["Shortcuts","Use numbers instead of dots\n\nEnter z9\n\nTo find\n\nzombielike, zookeepers","z9"]
+    let tip5 = ["Definitions","Touch the info icon\n\nTo the right of a word\n\nTo look up its meaning",""]
+    let tip6 = ["Supergrams","Find larger words\n\nEnter kayleigh*\n\nTo find\n\nbreathtakingly, heartbreakingly","kayleigh*"]
+    let tip7 = ["Prefix@Suffix","Use @ for 1 or more letters\n\nEnter super@ted\n\nTo find\n\nsupersophisticated","super@ted"]
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -57,9 +56,9 @@ class TipViewController: PageContentController
         case 5:
             return tip5
         case 6:
-            return Model.sharedInstance.isProMode ? tip6Pro : tip6
+            return tip6
         case 7:
-            return Model.sharedInstance.isProMode ? tip7Pro : tip0
+            return tip7
         default:
             return tip0
         }
