@@ -115,8 +115,8 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as UITableViewCell
-        
-        cell.textLabel?.text = model.matches[indexPath.row]
+        let word = model.matches[indexPath.row]
+        model.wordFormatter.setLabelText(cell.textLabel, word)
         return cell
     }
 

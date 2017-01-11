@@ -60,6 +60,7 @@ class Model : WordListCallback, IAPDelegate
     }
     let wordList = WordList()
     let wordSearch : WordSearch
+    let wordFormatter = WordFormatter()
     var matches: [String] = []
     var state : States = States.uninitialized
     var query = ""
@@ -138,6 +139,7 @@ class Model : WordListCallback, IAPDelegate
         processedQuery = self.wordSearch.preProcessQuery(processedQuery)
         let searchType = self.wordSearch.getQueryType(processedQuery)
         processedQuery = self.wordSearch.postProcessQuery(processedQuery, type: searchType)
+        wordFormatter.newSearch(processedQuery, searchType)
         self.wordSearch.runQuery(processedQuery, type: searchType, callback: self)
         changeState(States.finished)
     }
