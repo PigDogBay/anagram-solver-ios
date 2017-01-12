@@ -80,6 +80,13 @@ class Model : WordListCallback, IAPDelegate
         self.iap.observable.addObserver("model", observer: self)
     }
     
+    func getWord(atIndex index : Int) -> String? {
+        if index>=0 && index < matches.count {
+            return matches[index]
+        }
+        return nil
+    }
+    
     func addObserver(_ name: String, observer : StateChangeObserver)
     {
         observersDictionary[name]=observer
