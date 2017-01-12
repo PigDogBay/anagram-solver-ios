@@ -78,7 +78,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
                                          handler: {action in self.showDefinition(word: word, url: WordSearch.getGoogleUrl(word: word))})
         let collinsAction = UIAlertAction(title: "Collins", style: .default,
                                              handler: {action in self.showDefinition(word: word, url: WordSearch.getCollinsUrl(word: word))})
-        let thesaurusAction = UIAlertAction(title: "Thesaurus.com", style: .default,
+        let thesaurusAction = UIAlertAction(title: "Thesaurus", style: .default,
                                              handler: {action in self.showDefinition(word: word, url: WordSearch.getThesaurusUrl(word: word))})
         let wikipediaAction = UIAlertAction(title: "Wikipedia", style: .default,
                                             handler: {action in self.showDefinition(word: word, url: WordSearch.getWikipediaUrl(word: word))})
@@ -87,18 +87,20 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
                                             handler: {action in self.showDefinition(word: word, url: WordSearch.getMerriamWebsterUrl(word: word))})
         let oxfordAction = UIAlertAction(title: "Oxford Dictionaries", style: .default,
                                             handler: {action in self.showDefinition(word: word, url: WordSearch.getOxfordDictionariesUrl(word: word))})
-
+        
+        let copyAction = UIAlertAction(title: "Copy", style: .default, handler: {action in UIPasteboard.general.string = word})
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        controller.addAction(googleAction)
         controller.addAction(merriamWebsterAction)
         controller.addAction(thesaurusAction)
         controller.addAction(collinsAction)
         controller.addAction(oxfordAction)
         controller.addAction(wikipediaAction)
-        controller.addAction(googleAction)
+        controller.addAction(copyAction)
         controller.addAction(cancelAction)
         
         present(controller, animated: true, completion: nil)
-        
     }
     
     func showDefinition(word : String, url : String){
