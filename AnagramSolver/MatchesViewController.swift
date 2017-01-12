@@ -8,13 +8,18 @@
 
 import UIKit
 import GoogleMobileAds
+import SwiftUtils
 
 class MatchesViewController: UIViewController, StateChangeObserver, WordSearchObserver, UITableViewDataSource
 {
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     fileprivate let cellIdentifier = "MatchesCell"
     fileprivate var model : Model!
-
+    fileprivate var selectedWord = ""
+    fileprivate var wordDefinitionUrl = ""
+    
+    let definitionSegueId = "definitionSegue"
+    
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var matchesTable: UITableView!
@@ -51,7 +56,57 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         self.stateChanged(model.state)
         model.addObserver("matches", observer: self)
         model.wordSearchObserver = self
+        
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(MatchesViewController.handleLongPress))
+        matchesTable.addGestureRecognizer(longPress)
     }
+    func handleLongPress(sender: UILongPressGestureRecognizer)
+    {
+        if sender.state == UIGestureRecognizerState.began {
+            let touchPoint = sender.location(in: self.matchesTable)
+            if let indexPath = matchesTable.indexPathForRow(at: touchPoint){
+                if let word = model.getWord(atIndex: indexPath.row){
+                    showLookUpDefinitionMenu(word: word)
+                }
+            }
+        }
+    }
+    
+    func showLookUpDefinitionMenu(word : String){
+        let controller = UIAlertController(title: "Look Up Word", message: nil, preferredStyle: .actionSheet)
+        let googleAction = UIAlertAction(title: "Google Definition", style: .default,
+                                         handler: {action in self.showDefinition(word: word, url: WordSearch.getGoogleUrl(word: word))})
+        let collinsAction = UIAlertAction(title: "Collins", style: .default,
+                                             handler: {action in self.showDefinition(word: word, url: WordSearch.getCollinsUrl(word: word))})
+        let thesaurusAction = UIAlertAction(title: "Thesaurus.com", style: .default,
+                                             handler: {action in self.showDefinition(word: word, url: WordSearch.getThesaurusUrl(word: word))})
+        let wikipediaAction = UIAlertAction(title: "Wikipedia", style: .default,
+                                            handler: {action in self.showDefinition(word: word, url: WordSearch.getWikipediaUrl(word: word))})
+       
+        let merriamWebsterAction = UIAlertAction(title: "Merriam-Webster", style: .default,
+                                            handler: {action in self.showDefinition(word: word, url: WordSearch.getMerriamWebsterUrl(word: word))})
+        let oxfordAction = UIAlertAction(title: "Oxford Dictionaries", style: .default,
+                                            handler: {action in self.showDefinition(word: word, url: WordSearch.getOxfordDictionariesUrl(word: word))})
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        controller.addAction(merriamWebsterAction)
+        controller.addAction(thesaurusAction)
+        controller.addAction(collinsAction)
+        controller.addAction(oxfordAction)
+        controller.addAction(wikipediaAction)
+        controller.addAction(googleAction)
+        controller.addAction(cancelAction)
+        
+        present(controller, animated: true, completion: nil)
+        
+    }
+    
+    func showDefinition(word : String, url : String){
+        self.selectedWord = word;
+        self.wordDefinitionUrl = url;
+        performSegue(withIdentifier: self.definitionSegueId, sender: self)
+    }
+    
     override func viewDidAppear(_ animated: Bool)
     {
         //Run worker thread here as if started in viewDidLoad
@@ -92,12 +147,25 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "definitionSegue"
+        if segue.identifier == self.definitionSegueId
         {
             self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"Back", style:.plain, target:nil, action:nil)
-            let definitionVC = segue.destination as! DefinitionViewController
-            let cell = sender as! UITableViewCell
-            definitionVC.word = cell.textLabel?.text
+            if let definitionVC = segue.destination as? DefinitionViewController {
+                if let cell = sender as? UITableViewCell {
+                    //Cell icon press
+                    if let indexPath = matchesTable.indexPath(for: cell) {
+                        if let word = model.getWord(atIndex: indexPath.row) {
+                            definitionVC.word = word
+                            //To Do - user setting for url
+                            definitionVC.definitionUrl = WordSearch.getGoogleUrl(word: definitionVC.word)
+                        }
+                    }
+                } else {
+                    //long press
+                    definitionVC.word = selectedWord
+                    definitionVC.definitionUrl = wordDefinitionUrl
+                }
+            }
         }
     }
     

@@ -16,6 +16,7 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var loadingLabel: UILabel!
     
     var word : String!
+    var definitionUrl : String!
     fileprivate var webView: WKWebView!
     
     override func viewDidLoad() {
@@ -27,7 +28,7 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
 
         let processedWord = stripUnusedChars(word)
         navigationBar.title=processedWord
-        let requestURL = URL(string:"https://www.google.com/search?q=define:\(processedWord)")
+        let requestURL = URL(string: definitionUrl)
         let request = URLRequest(url: requestURL!)
         webView.load(request)
     }
