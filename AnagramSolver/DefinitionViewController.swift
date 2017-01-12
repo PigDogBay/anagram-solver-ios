@@ -26,9 +26,10 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
         webView.navigationDelegate = self
         view.insertSubview(webView, at: 0)
 
-        let processedWord = stripUnusedChars(word)
-        navigationBar.title=processedWord
-        let requestURL = URL(string: definitionUrl)
+        navigationBar.title = word
+        //replace space in two word anagrams with +
+        let processedUrl = definitionUrl.replace(" ", withString: "+")
+        let requestURL = URL(string: processedUrl)
         let request = URLRequest(url: requestURL!)
         webView.load(request)
     }
@@ -42,18 +43,6 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
         super.didReceiveMemoryWarning()
         webView.stopLoading()
     }
-    
-    fileprivate func stripUnusedChars(_ word : String) -> String
-    {
-        if word.mpdb_contains(" ")
-        {
-            let index = word.range(of: " ")?.lowerBound
-            return word.substring(to: index!)
-        }
-        return word
-    }
-    
-    
     
     //MARK:- WKNavigationDelegate
     
