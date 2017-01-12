@@ -56,6 +56,14 @@ class RootViewController: UIViewController, StateChangeObserver
         performSegue(withIdentifier: goProSegueId, sender: self)
     }
     
+    func showMe(query : String){
+        textFieldQuery.text = query
+        if shouldPerformSegue(withIdentifier: searchSegueId, sender: self)
+        {
+            performSegue(withIdentifier: searchSegueId, sender: self)
+        }
+    }
+    
 
     @IBAction func backgroundTap(_ sender: UIControl) {
         //close the keyboard

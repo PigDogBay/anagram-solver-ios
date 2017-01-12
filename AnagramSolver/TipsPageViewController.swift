@@ -10,7 +10,7 @@ import UIKit
 
 class TipsPageViewController: UIPageViewController, UIPageViewControllerDataSource {
 
-    fileprivate let tipsCount = 8
+    fileprivate let tipsCount = 7
     
     override func viewDidLoad() {
         super.viewDidLoad()

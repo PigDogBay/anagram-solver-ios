@@ -15,15 +15,28 @@ class TipViewController: PageContentController
     let tip2 = ["Two Words","Use a space to split the letters\n\nEnter james bond\n\nTo find\n\njabs demon and admen jobs","james bond"]
     let tip3 = ["Crosswords","Use dots for missing letters\n\nEnter m.g..\n\nTo find\n\nmagic, megan, mcgeee...","m.g.."]
     let tip4 = ["Shortcuts","Use numbers instead of dots\n\nEnter z9\n\nTo find\n\nzombielike, zookeepers","z9"]
-    let tip5 = ["Definitions","Touch the info icon\n\nTo the right of a word\n\nTo look up its meaning",""]
-    let tip6 = ["Supergrams","Find larger words\n\nEnter kayleigh*\n\nTo find\n\nbreathtakingly, heartbreakingly","kayleigh*"]
-    let tip7 = ["Prefix@Suffix","Use @ for 1 or more letters\n\nEnter super@ted\n\nTo find\n\nsupersophisticated","super@ted"]
+    let tip5 = ["Supergrams","Find larger words\n\nEnter kayleigh*\n\nTo find\n\nbreathtakingly, heartbreakingly","kayleigh*"]
+    let tip6 = ["Prefix@Suffix","Use @ for 1 or more letters\n\nEnter super@ted\n\nTo find\n\nsupersophisticated","super@ted"]
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
 
     var query = "m.g.."
 
+    @IBAction func showMeBtnPressed(_ sender: UIButton){
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        {
+            if let navController = appDelegate.window?.rootViewController as? UINavigationController
+            {
+                if let viewController = navController.viewControllers[0] as? RootViewController
+                {
+                    viewController.showMe(query: query)
+                }
+            }
+        }
+    }
+
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -46,20 +59,25 @@ class TipViewController: PageContentController
         switch index
         {
         case 1:
+            query = tip1[2]
             return tip1
         case 2:
+            query = tip2[2]
             return tip2
         case 3:
+            query = tip3[2]
             return tip3
         case 4:
+            query = tip4[2]
             return tip4
         case 5:
+            query = tip5[2]
             return tip5
         case 6:
+            query = tip6[2]
             return tip6
-        case 7:
-            return tip7
         default:
+            query = tip0[2]
             return tip0
         }
     }
