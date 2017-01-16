@@ -165,7 +165,7 @@ class RootViewController: UIViewController, StateChangeObserver
         {
         case .uninitialized:
             self.searchButton.isEnabled=false
-            let proFlag = self.model.isProMode
+            let proFlag = self.model.settings.isProMode
             if proFlag {
                 model.ads.noAds()
             }
