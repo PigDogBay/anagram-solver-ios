@@ -97,6 +97,9 @@ class RootViewController: UIViewController, StateChangeObserver
     override func viewDidAppear(_ animated: Bool)
     {
         modelToView(model.state)
+        if (model.settings.showKeyboard){
+            textFieldQuery.becomeFirstResponder()
+        }
     }
     /*
     Recommended way to initialize child view controllers
