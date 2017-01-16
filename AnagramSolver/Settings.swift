@@ -37,6 +37,12 @@ class Settings
         }
     }
     
+    var showKeyboard : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: showKeyboardKey)
+        }
+    }
+    
     func getDefinitionUrl(word : String) -> String {
         if let website = UserDefaults.standard.string(forKey: definitionKey) {
             switch website {
