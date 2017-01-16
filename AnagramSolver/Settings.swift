@@ -15,11 +15,13 @@ class Settings
     fileprivate let highlightKey = "highlight"
     fileprivate let showKeyboardKey = "showKeyboard"
     fileprivate let longPressEnabledKey = "longPressEnabled"
+    
+    //Pro settings
     fileprivate let useProWordListKey = "useProWordList"
     fileprivate let resultsLimitKey = "resultsLimit"
     fileprivate let isProKey = "isProFlag"
     
-    
+    fileprivate let defaultResultLimit = 500
     let darkGreen = UIColor(colorLiteralRed: 0.0, green: 0.5, blue: 0.0, alpha: 1.0)
     
     var highlight : UIColor {
@@ -83,6 +85,15 @@ class Settings
         return WordSearch.getGoogleUrl(word: word)
     }
     
+    var resultsLimit : Int {
+        get {
+            if isProMode {
+                return UserDefaults.standard.integer(forKey: resultsLimitKey)
+            }
+            return defaultResultLimit
+        }
+    }
+    
     func registerDefaultSettings() {
         let defaultSettings : [ String : Any] = [definitionKey : "google",
                                highlightKey : "red",
@@ -90,7 +101,7 @@ class Settings
                                longPressEnabledKey : true,
                                useProWordListKey : true,
                                isProKey : false,
-                               resultsLimitKey : 500]
+                               resultsLimitKey : 5000]
         UserDefaults.standard.register(defaults: defaultSettings)
     }
     

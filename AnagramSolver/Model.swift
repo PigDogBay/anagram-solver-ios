@@ -185,6 +185,7 @@ class Model : WordListCallback, IAPDelegate
     
     func applySettings(){
         self.wordFormatter.highlightColor = self.settings.highlight
+        self.resultsLimit = self.settings.resultsLimit
     }
     
     //MARK:- IAPDelegate
