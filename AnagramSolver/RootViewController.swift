@@ -33,11 +33,13 @@ class RootViewController: UIViewController, StateChangeObserver
         let controller = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let helpAction = UIAlertAction(title: "Help", style: .default, handler: {action in self.showHelp()})
         let goProAction = UIAlertAction(title: "Go Pro", style: .default, handler: {action in self.showGoPro()})
+        let settingsAction = UIAlertAction(title: "Settings", style: .default, handler: {action in self.showSettings()})
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         if #available(iOS 9.0, *) {
             controller.addAction(helpAction)
         }
         controller.addAction(goProAction)
+        controller.addAction(settingsAction)
         controller.addAction(cancelAction)
         
         //Anchor popover to button for iPads
@@ -48,7 +50,13 @@ class RootViewController: UIViewController, StateChangeObserver
         present(controller, animated: true, completion: nil)
         
     }
-    
+    func showSettings(){
+        let application = UIApplication.shared
+        let url = URL(string: UIApplicationOpenSettingsURLString)! as URL
+        if application.canOpenURL(url){
+            application.openURL(url)
+        }
+    }
     func showHelp(){
         performSegue(withIdentifier: helpSegueId, sender: self)
     }
