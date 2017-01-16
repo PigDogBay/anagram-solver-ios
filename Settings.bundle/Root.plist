@@ -68,7 +68,7 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Show keyboard</string>
+			<string>Automatically Show keyboard</string>
 			<key>Key</key>
 			<string>showKeyboard</string>
 			<key>DefaultValue</key>
@@ -86,7 +86,7 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Available if you have made the Pro in app purchase</string>
+			<string>Available if you have made the Pro in app purchase. The standard word list has 130,000 words, the pro has 280,000 words.</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
