@@ -43,6 +43,12 @@ class Settings
         }
     }
     
+    var isLongPressEnabled : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: longPressEnabledKey)
+        }
+    }
+    
     func getDefinitionUrl(word : String) -> String {
         if let website = UserDefaults.standard.string(forKey: definitionKey) {
             switch website {

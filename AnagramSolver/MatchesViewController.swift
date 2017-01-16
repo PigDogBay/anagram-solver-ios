@@ -57,8 +57,10 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         model.addObserver("matches", observer: self)
         model.wordSearchObserver = self
         
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(MatchesViewController.handleLongPress))
-        matchesTable.addGestureRecognizer(longPress)
+        if model.settings.isLongPressEnabled {
+            let longPress = UILongPressGestureRecognizer(target: self, action: #selector(MatchesViewController.handleLongPress))
+            matchesTable.addGestureRecognizer(longPress)
+        }
     }
     func handleLongPress(sender: UILongPressGestureRecognizer)
     {
