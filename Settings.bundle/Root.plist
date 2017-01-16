@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>Root</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Anagram Solver Settings</string>
+		</dict>
+		<dict>
+			<key>Titles</key>
+			<array>
+				<string>Google Definition</string>
+				<string>Merriam-Webster</string>
+				<string>Meriam-Webster Thesaurus</string>
+				<string>Collins</string>
+				<string>Oxford Dictionaries</string>
+				<string>Wikipedia</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>google</string>
+				<string>merriam-webster</string>
+				<string>thesaurus</string>
+				<string>collins</string>
+				<string>oxford</string>
+				<string>wikipedia</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Dictionary Definition</string>
+			<key>Key</key>
+			<string>definition</string>
+			<key>DefaultValue</key>
+			<string>google</string>
+		</dict>
+		<dict>
+			<key>Values</key>
+			<array>
+				<string>black</string>
+				<string>red</string>
+				<string>green</string>
+				<string>blue</string>
+			</array>
+			<key>Titles</key>
+			<array>
+				<string>Black (none)</string>
+				<string>Red</string>
+				<string>Green</string>
+				<string>Blue</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Letter Highlighting</string>
+			<key>Key</key>
+			<string>highlight</string>
+			<key>DefaultValue</key>
+			<string>red</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Show keyboard</string>
+			<key>Key</key>
+			<string>showKeyboard</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Allow long press on results</string>
+			<key>Key</key>
+			<string>longPressEnabled</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Available if you have made the Pro in app purchase</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Pro Settings</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Use Pro word list</string>
+			<key>Key</key>
+			<string>useProWordList</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Titles</key>
+			<array>
+				<string>100 words</string>
+				<string>500 words</string>
+				<string>1000 words</string>
+				<string>5000 words</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>100</string>
+				<string>500</string>
+				<string>1000</string>
+				<string>5000</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Results Limit</string>
+			<key>Key</key>
+			<string>resultsLimit</string>
+			<key>DefaultValue</key>
+			<string>500</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Information</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
+			<key>Title</key>
+			<string>Version</string>
+			<key>Key</key>
+			<string>version</string>
+			<key>DefaultValue</key>
+			<string>1.02</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
+			<string>Acknowledgements</string>
+			<key>File</key>
+			<string>Acknowledgements</string>
+		</dict>
+	</array>
+</dict>
+</plist>
