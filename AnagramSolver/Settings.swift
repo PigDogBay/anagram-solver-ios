@@ -21,7 +21,7 @@ class Settings
     fileprivate let resultsLimitKey = "resultsLimit"
     fileprivate let isProKey = "isProFlag"
     
-    fileprivate let defaultResultLimit = 500
+    fileprivate let standardResultLimit = 500
     let darkGreen = UIColor(colorLiteralRed: 0.0, green: 0.5, blue: 0.0, alpha: 1.0)
     
     var highlight : UIColor {
@@ -90,7 +90,13 @@ class Settings
             if isProMode {
                 return UserDefaults.standard.integer(forKey: resultsLimitKey)
             }
-            return defaultResultLimit
+            return standardResultLimit
+        }
+    }
+    
+    var useProWordList : Bool {
+        get {
+            return isProMode && UserDefaults.standard.bool(forKey: useProWordListKey)
         }
     }
     

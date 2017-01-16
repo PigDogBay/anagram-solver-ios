@@ -101,6 +101,7 @@ class RootViewController: UIViewController, StateChangeObserver
             textFieldQuery.becomeFirstResponder()
         }
     }
+    
     /*
     Recommended way to initialize child view controllers
     is here in prepareForSegue
@@ -170,8 +171,9 @@ class RootViewController: UIViewController, StateChangeObserver
                 model.ads.noAds()
             }
             self.title = proFlag ? "Anagram Solver Pro" : "Anagram Solver"
-            self.searchButton.title = proFlag ? "Search+" : "Search"
-            let resourceName = proFlag ? "pro" : "standard"
+            let useProWordList = model.settings.useProWordList
+            self.searchButton.title = useProWordList ? "Search+" : "Search"
+            let resourceName = useProWordList ? "pro" : "standard"
             //load dictionary on a worker thread
             DispatchQueue.global(qos: .default).async
             {
