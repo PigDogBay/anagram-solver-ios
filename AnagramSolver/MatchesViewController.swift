@@ -158,8 +158,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
                     if let indexPath = matchesTable.indexPath(for: cell) {
                         if let word = model.getWord(atIndex: indexPath.row) {
                             definitionVC.word = word
-                            //To Do - user setting for url
-                            definitionVC.definitionUrl = WordSearch.getGoogleUrl(word: definitionVC.word)
+                            definitionVC.definitionUrl = model.settings.getDefinitionUrl(word: word)
                         }
                     }
                 } else {

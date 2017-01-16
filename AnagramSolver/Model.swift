@@ -64,6 +64,7 @@ class Model : WordListCallback, IAPDelegate
     var matches: [String] = []
     var state : States = States.uninitialized
     var query = ""
+    let settings = Settings()
     let ads = Ads()
     let iap : IAPInterface
     
@@ -142,6 +143,7 @@ class Model : WordListCallback, IAPDelegate
     {
         changeState(States.searching)
         resultsCount = 0
+        applySettings()
         var processedQuery = query;
         processedQuery = self.wordSearch.preProcessQuery(processedQuery)
         let searchType = self.wordSearch.getQueryType(processedQuery)
@@ -199,6 +201,10 @@ class Model : WordListCallback, IAPDelegate
         self.isProMode = true
         self.unloadDictionary()
         self.ads.noAds()
+    }
+    
+    func applySettings(){
+        self.wordFormatter.highlightColor = self.settings.highlight
     }
     
     //MARK:- IAPDelegate
