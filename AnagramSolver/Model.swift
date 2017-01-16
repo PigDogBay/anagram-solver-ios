@@ -36,6 +36,8 @@ class Model : WordListCallback, IAPDelegate
     }
     fileprivate let TABLE_MAX_COUNT_TO_RELOAD = 20
     fileprivate var resultsCount = 0
+    //Need to check if user changes the word list setting, so cache it here
+    fileprivate var useProWordList = false
     open var resultsLimit = 500
 
     let wordList = WordList()
@@ -59,6 +61,7 @@ class Model : WordListCallback, IAPDelegate
         self.wordSearch = WordSearch(wordList: self.wordList)
         self.iap = IAPFactory.createIAPInterface()
         self.iap.observable.addObserver("model", observer: self)
+        applySettings()
     }
     
     func getWord(atIndex index : Int) -> String? {
@@ -123,7 +126,6 @@ class Model : WordListCallback, IAPDelegate
     {
         changeState(States.searching)
         resultsCount = 0
-        applySettings()
         var processedQuery = query;
         processedQuery = self.wordSearch.preProcessQuery(processedQuery)
         let searchType = self.wordSearch.getQueryType(processedQuery)
@@ -186,6 +188,17 @@ class Model : WordListCallback, IAPDelegate
     func applySettings(){
         self.wordFormatter.highlightColor = self.settings.highlight
         self.resultsLimit = self.settings.resultsLimit
+        self.useProWordList = settings.useProWordList
+    }
+    func checkForSettingsChange(){
+        //do we need the synchronize?
+        UserDefaults.standard.synchronize()
+        let oldValue = useProWordList
+        applySettings()
+        if oldValue != useProWordList{
+            //Use Pro Word list setting has changed
+            changeState(Model.States.uninitialized)
+        }
     }
     
     //MARK:- IAPDelegate
