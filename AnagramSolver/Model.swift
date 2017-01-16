@@ -35,29 +35,9 @@ class Model : WordListCallback, IAPDelegate
         case uninitialized,loading, ready, searching, finished
     }
     fileprivate let TABLE_MAX_COUNT_TO_RELOAD = 20
-    fileprivate let isProKey = "isProFlag"
     fileprivate var resultsCount = 0
     open var resultsLimit = 500
 
-    fileprivate(set) var isProMode : Bool{
-        get{
-            let defaults = UserDefaults.standard
-            let flag = defaults.object(forKey: isProKey) as? Bool
-            if flag == nil
-            {
-                defaults.set(false, forKey: isProKey)
-                defaults.synchronize()
-                return false
-            }
-            return flag!
-        }
-        set(flag) {
-            let defaults = UserDefaults.standard
-            defaults.set(flag, forKey: isProKey)
-            defaults.synchronize()
-            
-        }
-    }
     let wordList = WordList()
     let wordSearch : WordSearch
     let wordFormatter = WordFormatter()
@@ -192,13 +172,13 @@ class Model : WordListCallback, IAPDelegate
     
     func stdMode()
     {
-        self.isProMode = false
+        settings.isProMode = false
         self.unloadDictionary()
         self.ads.reset()
     }
     func proMode()
     {
-        self.isProMode = true
+        settings.isProMode = true
         self.unloadDictionary()
         self.ads.noAds()
     }

@@ -11,12 +11,15 @@ import SwiftUtils
 
 class Settings
 {
-    let definitionKey = "definition"
-    let highlightKey = "highlight"
-    let showKeyboardKey = "showKeyboard"
-    let longPressEnabledKey = "longPressEnabled"
-    let useProWordListKey = "useProWordList"
-    let resultsLimitKey = "resultsLimit"
+    fileprivate let definitionKey = "definition"
+    fileprivate let highlightKey = "highlight"
+    fileprivate let showKeyboardKey = "showKeyboard"
+    fileprivate let longPressEnabledKey = "longPressEnabled"
+    fileprivate let useProWordListKey = "useProWordList"
+    fileprivate let resultsLimitKey = "resultsLimit"
+    fileprivate let isProKey = "isProFlag"
+    
+    
     let darkGreen = UIColor(colorLiteralRed: 0.0, green: 0.5, blue: 0.0, alpha: 1.0)
     
     var highlight : UIColor {
@@ -49,6 +52,17 @@ class Settings
         }
     }
     
+    var isProMode : Bool{
+        get{
+            return UserDefaults.standard.bool(forKey: isProKey)
+        }
+        set(flag) {
+            let defaults = UserDefaults.standard
+            defaults.set(flag, forKey: isProKey)
+            defaults.synchronize()
+        }
+    }
+    
     func getDefinitionUrl(word : String) -> String {
         if let website = UserDefaults.standard.string(forKey: definitionKey) {
             switch website {
@@ -75,6 +89,7 @@ class Settings
                                showKeyboardKey : false,
                                longPressEnabledKey : true,
                                useProWordListKey : true,
+                               isProKey : false,
                                resultsLimitKey : 500]
         UserDefaults.standard.register(defaults: defaultSettings)
     }

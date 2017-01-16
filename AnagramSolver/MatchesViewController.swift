@@ -41,7 +41,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         super.viewDidLoad()
         self.model = Model.sharedInstance
         
-        if model.isProMode
+        if model.settings.isProMode
         {
             bannerHeightConstraint.constant = 0
        
@@ -135,7 +135,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
             model.stop()
             model.removeObserver("matches")
             model.wordSearchObserver = nil
-            if !model.isProMode
+            if !model.settings.isProMode
             {
                 model.ads.showInterstitial(self.parent!)
             }
