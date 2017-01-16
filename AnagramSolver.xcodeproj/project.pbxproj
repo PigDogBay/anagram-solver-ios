@@ -20,6 +20,7 @@
 		4D3596481D018570008D2FAF /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3596471D018570008D2FAF /* HelpViewController.swift */; };
 		4D35964A1D044605008D2FAF /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D3596491D044605008D2FAF /* help.html */; };
 		4D45D7B01E2901BF00EC2D27 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D45D7AF1E2901BF00EC2D27 /* Settings.bundle */; };
+		4D45D7B31E2CF0C500EC2D27 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45D7B21E2CF0C500EC2D27 /* Settings.swift */; };
 		4D45EFBA1A9DFABA00C40BB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */; };
 		4D45EFBF1A9DFABA00C40BB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */; };
 		4D45EFC11A9DFABA00C40BB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */; };
@@ -95,6 +96,7 @@
 		4D3596471D018570008D2FAF /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		4D3596491D044605008D2FAF /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		4D45D7AF1E2901BF00EC2D27 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		4D45D7B21E2CF0C500EC2D27 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		4D45EFB41A9DFABA00C40BB4 /* AnagramSolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnagramSolver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D45EFB81A9DFABA00C40BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */,
 				4D3596401CFEEA50008D2FAF /* Ads.swift */,
 				4D45F0231A9E487A00C40BB4 /* Model.swift */,
+				4D45D7B21E2CF0C500EC2D27 /* Settings.swift */,
 				4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */,
 				4D9D30EA1D156D5D0088392C /* IAPHelper.swift */,
 				4DBAF09E1AA75BD900400AA4 /* iRate.h */,
@@ -524,6 +527,7 @@
 				4D3596461D01780A008D2FAF /* GoProViewController.swift in Sources */,
 				4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */,
 				4D2B35C31D33AAE30014ABF3 /* IAPFactory.swift in Sources */,
+				4D45D7B31E2CF0C500EC2D27 /* Settings.swift in Sources */,
 				4D45F01D1A9E03BE00C40BB4 /* TipsPageViewController.swift in Sources */,
 				4D45F01E1A9E03BE00C40BB4 /* TipViewController.swift in Sources */,
 				4D45F0161A9E03A400C40BB4 /* DefinitionViewController.swift in Sources */,
