@@ -83,6 +83,21 @@ class RootViewController: UIViewController, StateChangeObserver
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        let app = UIApplication.shared
+        NotificationCenter.default.addObserver(self, selector: #selector (appEnterForgeround), name: Notification.Name.UIApplicationWillEnterForeground, object: app)
+    }
+    //Only called when view re-appears from background
+    func appEnterForgeround() {
+        //check for any settings changes
+        model.checkForSettingsChange()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self)
+    }
     override func viewDidLoad()
     {
         super.viewDidLoad()
