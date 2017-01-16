@@ -8,8 +8,9 @@
 
 import UIKit
 import SwiftUtils
+import MessageUI
 
-class RootViewController: UIViewController, StateChangeObserver
+class RootViewController: UIViewController, StateChangeObserver, MFMailComposeViewControllerDelegate
 {
     fileprivate var model : Model!
     
@@ -31,13 +32,14 @@ class RootViewController: UIViewController, StateChangeObserver
 
     @IBAction func menuButtonPressed(_ sender: UIBarButtonItem) {
         let controller = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let helpAction = UIAlertAction(title: "Help", style: .default, handler: {action in self.showHelp()})
+        let rateAction = UIAlertAction(title: "Rate Anagram Solver", style: .default, handler: {action in self.rateApp()})
+        let sendFeedbackAction = UIAlertAction(title: "Send Feedback", style: .default, handler: {action in self.sendFeedback()})
         let goProAction = UIAlertAction(title: "Go Pro", style: .default, handler: {action in self.showGoPro()})
         let settingsAction = UIAlertAction(title: "Settings", style: .default, handler: {action in self.showSettings()})
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        if #available(iOS 9.0, *) {
-            controller.addAction(helpAction)
-        }
+
+        controller.addAction(rateAction)
+        controller.addAction(sendFeedbackAction)
         controller.addAction(goProAction)
         controller.addAction(settingsAction)
         controller.addAction(cancelAction)
@@ -50,6 +52,32 @@ class RootViewController: UIViewController, StateChangeObserver
         present(controller, animated: true, completion: nil)
         
     }
+    
+    func rateApp(){
+        UIApplication.shared.openURL(URL(string: Model.getAppUrl())!)
+    }
+    
+    func sendFeedback(){
+        if !MFMailComposeViewController.canSendMail()
+        {
+            self.mpdbShowErrorAlert("No Email", msg: "This device is not configured for sending emails.")
+            return
+        }
+        let mailVC = MFMailComposeViewController()
+        mailVC.mailComposeDelegate = self
+        mailVC.setSubject("Anagram Solver Feedback iOS v1.02")
+        mailVC.setToRecipients(["pigdogbay@yahoo.co.uk"])
+        mailVC.setMessageBody("Your feedback is most welcome\n *Report Bugs\n *Suggest new features\n *Ask for help\n\n\nHi Mark,\n\n[Enter you message here]", isHTML: false)
+        present(mailVC, animated: true, completion: nil)
+    }
+
+    // MARK:- MFMailComposeViewControllerDelegate
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
+    {
+        //dismiss on send
+        dismiss(animated: true, completion: nil)
+    }
+    
     func showSettings(){
         let application = UIApplication.shared
         let url = URL(string: UIApplicationOpenSettingsURLString)! as URL
