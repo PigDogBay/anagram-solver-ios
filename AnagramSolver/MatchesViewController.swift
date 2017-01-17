@@ -101,7 +101,11 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         controller.addAction(wikipediaAction)
         controller.addAction(copyAction)
         controller.addAction(cancelAction)
-        
+
+        //Anchor popover to button for iPads
+        if let ppc = controller.popoverPresentationController{
+            ppc.sourceView = matchesTable
+        }
         present(controller, animated: true, completion: nil)
     }
     
