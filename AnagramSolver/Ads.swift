@@ -21,7 +21,7 @@ class Ads
         let request = GADRequest()
         request.testDevices = [
             "Simulator",
-            "bc49124e40b1cdbc39e9be4bc9fa46b7", //iPad
+            "4ccb6d94e22bce9a7212f16cc927c429",//iPad
             "cc0b7644c90c4ab95e0150938951def3" //iPhone
         ]
         return request
