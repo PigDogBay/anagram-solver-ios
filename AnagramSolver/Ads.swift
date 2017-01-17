@@ -30,13 +30,13 @@ class Ads
         case counting, loading, noAds
     }
     
-    let INTERSTITIAL_AD_UNIT_ID = "ca-app-pub-3582986480189311/6308985582"
-    let MAX_COUNTS = 20
-    let key = "AdsInterstitialCount"
-    var interstitial : GADInterstitial!
-    var state = States.counting
+    fileprivate let INTERSTITIAL_AD_UNIT_ID = "ca-app-pub-3582986480189311/6308985582"
+    fileprivate let MAX_COUNTS = 20
+    fileprivate let key = "AdsInterstitialCount"
+    fileprivate var interstitial : GADInterstitial!
+    fileprivate var state = States.counting
     
-    var count : Int {
+    fileprivate var count : Int {
         get{
             let defaults = UserDefaults.standard
             let c = defaults.object(forKey: key) as? Int
@@ -55,7 +55,7 @@ class Ads
         }
     }
     
-    func loadInterstitial()
+    fileprivate func loadInterstitial()
     {
         NSLog("Loading ad")
         interstitial = GADInterstitial(adUnitID: INTERSTITIAL_AD_UNIT_ID)
