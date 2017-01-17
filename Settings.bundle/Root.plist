@@ -124,7 +124,7 @@
 			<key>Key</key>
 			<string>resultsLimit</string>
 			<key>DefaultValue</key>
-			<string>500</string>
+			<string>5000</string>
 		</dict>
 		<dict>
 			<key>Type</key>
