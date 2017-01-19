@@ -238,8 +238,8 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     fileprivate func isQueryACommand(_ cmd : String) -> Bool
     {
         //Comment out this line to enable commands
-//        return false
-        return cmd.hasPrefix("-cmd")
+        return false
+//        return cmd.hasPrefix("-cmd")
     }
     fileprivate func executeCommand(_ cmd : String) -> String
     {
