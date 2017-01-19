@@ -1,7 +1,7 @@
 //
 //  iRate.h
 //
-//  Version 1.11.3
+//  Version 1.11.7
 //
 //  Created by Nick Lockwood on 26/01/2011.
 //  Copyright 2011 Charcoal Design
@@ -30,7 +30,6 @@
 //  3. This notice may not be removed or altered from any source distribution.
 //
 
-
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-missing-property-synthesis"
 
@@ -54,6 +53,12 @@
 #define IRATE_EXTERN APPKIT_EXTERN
 #endif
 
+
+//! Project version number for iRate.
+FOUNDATION_EXPORT double iRateVersionNumber;
+
+//! Project version string for iRate.
+FOUNDATION_EXPORT const unsigned char iRateVersionString[];
 
 IRATE_EXTERN NSUInteger const iRateAppStoreGameGenreID;
 IRATE_EXTERN NSString *const iRateErrorDomain;
@@ -87,8 +92,8 @@ typedef NS_ENUM(NSUInteger, iRateErrorCode)
 
 
 @protocol iRateDelegate <NSObject>
-@optional
-
+    @optional
+    
 - (void)iRateCouldNotConnectToAppStore:(NSError *)error;
 - (void)iRateDidDetectAppUpdate;
 - (BOOL)iRateShouldPromptForRating;
@@ -98,72 +103,73 @@ typedef NS_ENUM(NSUInteger, iRateErrorCode)
 - (void)iRateUserDidRequestReminderToRateApp;
 - (BOOL)iRateShouldOpenAppStore;
 - (void)iRateDidOpenAppStore;
-
-@end
+    
+    @end
 
 
 @interface iRate : NSObject
-
-+ (iRate *)sharedInstance;
-
-//app store ID - this is only needed if your
-//bundle ID is not unique between iOS and Mac app stores
-@property (nonatomic, assign) NSUInteger appStoreID;
-
-//application details - these are set automatically
-@property (nonatomic, assign) NSUInteger appStoreGenreID;
-@property (nonatomic, copy) NSString *appStoreCountry;
-@property (nonatomic, copy) NSString *applicationName;
-@property (nonatomic, copy) NSString *applicationVersion;
-@property (nonatomic, copy) NSString *applicationBundleID;
-
-//usage settings - these have sensible defaults
-@property (nonatomic, assign) NSUInteger usesUntilPrompt;
-@property (nonatomic, assign) NSUInteger eventsUntilPrompt;
-@property (nonatomic, assign) float daysUntilPrompt;
-@property (nonatomic, assign) float usesPerWeekForPrompt;
-@property (nonatomic, assign) float remindPeriod;
-
-//message text, you may wish to customise these
-@property (nonatomic, copy) NSString *messageTitle;
-@property (nonatomic, copy) NSString *message;
-@property (nonatomic, copy) NSString *updateMessage;
-@property (nonatomic, copy) NSString *cancelButtonLabel;
-@property (nonatomic, copy) NSString *remindButtonLabel;
-@property (nonatomic, copy) NSString *rateButtonLabel;
-
-//debugging and prompt overrides
-@property (nonatomic, assign) BOOL useUIAlertControllerIfAvailable;
-@property (nonatomic, assign) BOOL useAllAvailableLanguages;
-@property (nonatomic, assign) BOOL promptForNewVersionIfUserRated;
-@property (nonatomic, assign) BOOL onlyPromptIfLatestVersion;
-@property (nonatomic, assign) BOOL onlyPromptIfMainWindowIsAvailable;
-@property (nonatomic, assign) BOOL promptAtLaunch;
-@property (nonatomic, assign) BOOL verboseLogging;
-@property (nonatomic, assign) BOOL previewMode;
-
-//advanced properties for implementing custom behaviour
-@property (nonatomic, strong) NSURL *ratingsURL;
-@property (nonatomic, strong) NSDate *firstUsed;
-@property (nonatomic, strong) NSDate *lastReminded;
-@property (nonatomic, assign) NSUInteger usesCount;
-@property (nonatomic, assign) NSUInteger eventCount;
-@property (nonatomic, readonly) float usesPerWeek;
-@property (nonatomic, assign) BOOL declinedThisVersion;
-@property (nonatomic, readonly) BOOL declinedAnyVersion;
-@property (nonatomic, assign) BOOL ratedThisVersion;
-@property (nonatomic, readonly) BOOL ratedAnyVersion;
-@property (nonatomic, weak_delegate) id<iRateDelegate> delegate;
-
-//manually control behaviour
+    
++ (instancetype)sharedInstance;
+    
+    //app store ID - this is only needed if your
+    //bundle ID is not unique between iOS and Mac app stores
+    @property (nonatomic, assign) NSUInteger appStoreID;
+    
+    //application details - these are set automatically
+    @property (nonatomic, assign) NSUInteger appStoreGenreID;
+    @property (nonatomic, copy) NSString *appStoreCountry;
+    @property (nonatomic, copy) NSString *applicationName;
+    @property (nonatomic, copy) NSString *applicationVersion;
+    @property (nonatomic, copy) NSString *applicationBundleID;
+    
+    //usage settings - these have sensible defaults
+    @property (nonatomic, assign) NSUInteger usesUntilPrompt;
+    @property (nonatomic, assign) NSUInteger eventsUntilPrompt;
+    @property (nonatomic, assign) float daysUntilPrompt;
+    @property (nonatomic, assign) float usesPerWeekForPrompt;
+    @property (nonatomic, assign) float remindPeriod;
+    
+    //message text, you may wish to customise these
+    @property (nonatomic, copy) NSString *messageTitle;
+    @property (nonatomic, copy) NSString *message;
+    @property (nonatomic, copy) NSString *updateMessage;
+    @property (nonatomic, copy) NSString *cancelButtonLabel;
+    @property (nonatomic, copy) NSString *remindButtonLabel;
+    @property (nonatomic, copy) NSString *rateButtonLabel;
+    
+    //debugging and prompt overrides
+    @property (nonatomic, assign) BOOL useUIAlertControllerIfAvailable;
+    @property (nonatomic, assign) BOOL useAllAvailableLanguages;
+    @property (nonatomic, assign) BOOL promptForNewVersionIfUserRated;
+    @property (nonatomic, assign) BOOL onlyPromptIfLatestVersion;
+    @property (nonatomic, assign) BOOL onlyPromptIfMainWindowIsAvailable;
+    @property (nonatomic, assign) BOOL promptAtLaunch;
+    @property (nonatomic, assign) BOOL verboseLogging;
+    @property (nonatomic, assign) BOOL previewMode;
+    
+    //advanced properties for implementing custom behaviour
+    @property (nonatomic, strong) NSURL *ratingsURL;
+    @property (nonatomic, strong) NSDate *firstUsed;
+    @property (nonatomic, strong) NSDate *lastReminded;
+    @property (nonatomic, assign) NSUInteger usesCount;
+    @property (nonatomic, assign) NSUInteger eventCount;
+    @property (nonatomic, readonly) float usesPerWeek;
+    @property (nonatomic, assign) BOOL declinedThisVersion;
+    @property (nonatomic, readonly) BOOL declinedAnyVersion;
+    @property (nonatomic, assign) BOOL ratedThisVersion;
+    @property (nonatomic, readonly) BOOL ratedAnyVersion;
+    @property (nonatomic, weak_delegate) id<iRateDelegate> delegate;
+    
+    //manually control behaviour
 - (BOOL)shouldPromptForRating;
 - (void)promptForRating;
 - (void)promptIfNetworkAvailable;
 - (void)promptIfAllCriteriaMet;
 - (void)openRatingsPageInAppStore;
 - (void)logEvent:(BOOL)deferPrompt;
-
-@end
+- (void)remindLater;
+    
+    @end
 
 
 #pragma clang diagnostic pop
