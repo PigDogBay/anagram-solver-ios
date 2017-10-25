@@ -78,7 +78,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         if word.length <= maxSize {
             return word
         }
-        return word.substring(to: word.index(word.startIndex, offsetBy: maxSize))+".."
+        return word[..<word.index(word.startIndex, offsetBy: maxSize)]+".."
     }
     
     func showLookUpDefinitionMenu(word : String, indexPath : IndexPath){
