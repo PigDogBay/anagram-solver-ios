@@ -22,7 +22,7 @@ class Settings
     fileprivate let isProKey = "isProFlag"
     
     fileprivate let standardResultLimit = 500
-    let darkGreen = UIColor(colorLiteralRed: 0.0, green: 0.5, blue: 0.0, alpha: 1.0)
+    let darkGreen = UIColor(red: 0.0, green: 0.5, blue: 0.0, alpha: 1.0)
     
     var highlight : UIColor {
         get {

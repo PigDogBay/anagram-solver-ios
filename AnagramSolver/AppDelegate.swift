@@ -15,23 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    override class func initialize() -> Void {
-        
-        //set the bundle ID. normally you wouldn't need to do this
-        //as it is picked up automatically from your Info.plist file
-        //but we want to test with an app that's actually on the store
-        //      iRate.sharedInstance().applicationBundleID = "com.charcoaldesign.rainbowblocks-free"
-        iRate.sharedInstance().onlyPromptIfLatestVersion = false
-        iRate.sharedInstance().daysUntilPrompt = 5
-        iRate.sharedInstance().usesUntilPrompt = 15
-        //iRate.sharedInstance().promptAtLaunch = false
-        
-        //enable preview mode
-        iRate.sharedInstance().previewMode = false
-    }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FIRApp.configure();
+        FirebaseApp.configure();
         Settings().registerDefaultSettings()
         return true
     }

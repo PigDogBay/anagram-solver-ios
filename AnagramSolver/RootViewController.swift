@@ -118,7 +118,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         NotificationCenter.default.addObserver(self, selector: #selector (appEnterForgeround), name: Notification.Name.UIApplicationWillEnterForeground, object: app)
     }
     //Only called when view re-appears from background
-    func appEnterForgeround() {
+    @objc func appEnterForgeround() {
         //check for any settings changes
         model.checkForSettingsChange()
     }
