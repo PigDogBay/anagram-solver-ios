@@ -34,7 +34,6 @@
 		4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0231A9E487A00C40BB4 /* Model.swift */; };
 		4D9D30EB1D156D5D0088392C /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D30EA1D156D5D0088392C /* IAPHelper.swift */; };
 		4DA729DD1C565E5000C7B85D /* pro.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DA729DC1C565E5000C7B85D /* pro.txt */; };
-		4DBAF0A11AA75BEA00400AA4 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAF0A01AA75BEA00400AA4 /* iRate.m */; };
 		4DF7B6D61D10419F00A26A20 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF7B6D51D10419F00A26A20 /* StoreKit.framework */; };
 		4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */; };
 /* End PBXBuildFile section */
@@ -114,9 +113,6 @@
 		4D45F0231A9E487A00C40BB4 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4D9D30EA1D156D5D0088392C /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		4DA729DC1C565E5000C7B85D /* pro.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pro.txt; sourceTree = "<group>"; };
-		4DBAF09E1AA75BD900400AA4 /* iRate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
-		4DBAF09F1AA75BEA00400AA4 /* AnagramSolver-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnagramSolver-Bridging-Header.h"; sourceTree = "<group>"; };
-		4DBAF0A01AA75BEA00400AA4 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		4DF7B6D51D10419F00A26A20 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		9F767D7B066CC063F11B0CB8 /* Pods-AnagramSolver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnagramSolver.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver.release.xcconfig"; sourceTree = "<group>"; };
@@ -226,8 +222,6 @@
 				4D45D7B21E2CF0C500EC2D27 /* Settings.swift */,
 				4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */,
 				4D9D30EA1D156D5D0088392C /* IAPHelper.swift */,
-				4DBAF09E1AA75BD900400AA4 /* iRate.h */,
-				4DBAF0A01AA75BEA00400AA4 /* iRate.m */,
 				4D45EFB71A9DFABA00C40BB4 /* Supporting Files */,
 			);
 			path = AnagramSolver;
@@ -237,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				4D33DEFF1CFDB86B00678B53 /* GoogleService-Info.plist */,
-				4DBAF09F1AA75BEA00400AA4 /* AnagramSolver-Bridging-Header.h */,
 				4D45EFB81A9DFABA00C40BB4 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -524,7 +517,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */,
-				4DBAF0A11AA75BEA00400AA4 /* iRate.m in Sources */,
 				4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */,
 				4D3596481D018570008D2FAF /* HelpViewController.swift in Sources */,
 				4D3367D01AA64A8D00EA824A /* PageContentController.swift in Sources */,
@@ -707,7 +699,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "AnagramSolver/AnagramSolver-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
@@ -732,7 +723,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "AnagramSolver/AnagramSolver-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
