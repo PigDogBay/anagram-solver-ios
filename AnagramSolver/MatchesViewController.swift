@@ -62,7 +62,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
             matchesTable.addGestureRecognizer(longPress)
         }
     }
-    func handleLongPress(sender: UILongPressGestureRecognizer)
+    @objc func handleLongPress(sender: UILongPressGestureRecognizer)
     {
         if sender.state == UIGestureRecognizerState.began {
             let touchPoint = sender.location(in: self.matchesTable)
