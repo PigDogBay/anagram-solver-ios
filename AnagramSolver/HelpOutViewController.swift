@@ -44,6 +44,6 @@ class HelpOutViewController : PageContentController, MFMailComposeViewController
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
     {
         //dismiss on send
-        dismiss(animated: true, completion: nil)
+        controller.dismiss(animated: true, completion: nil)
     }
 }
