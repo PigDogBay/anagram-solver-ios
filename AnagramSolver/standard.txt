@@ -14572,6 +14572,7 @@ manoeuvrable
 manoeuvrings
 manometrical
 manslaughter
+manspreading
 mantelpieces
 mantlepieces
 manufactured
@@ -89417,6 +89418,7 @@ covered
 coverts
 coverup
 coveted
+covfefe
 cowages
 cowards
 cowbane
