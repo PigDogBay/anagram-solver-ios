@@ -44122,6 +44122,7 @@ manoeuvrings
 manometrical
 manorialisms
 manslaughter
+manspreading
 mantellettas
 mantelpieces
 mantlepieces
@@ -102351,6 +102352,7 @@ nightlight
 nightmares
 nightpiece
 nightrider
+nightscape
 nightscope
 nightshade
 nightshirt
@@ -114701,6 +114703,7 @@ tremulated
 tremulates
 trenchancy
 trenchards
+trenchcoat
 trenchfoot
 trendiness
 trentonian
@@ -208850,6 +208853,7 @@ coverts
 coverup
 coveted
 coveter
+covfefe
 covings
 covynes
 cowages
@@ -219110,6 +219114,7 @@ leaming
 leander
 leaners
 leanest
+leangle
 leaning
 leapers
 leaping
@@ -228230,6 +228235,7 @@ rodsman
 rodsmen
 rodster
 roebuck
+roedean
 roemers
 roethke
 rogaine
@@ -244039,6 +244045,7 @@ ebcdic
 eblana
 ebolas
 ebooks
+ecarte
 ecbole
 eccles
 ecclus
