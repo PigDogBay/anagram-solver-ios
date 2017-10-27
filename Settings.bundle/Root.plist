@@ -140,7 +140,7 @@
 			<key>Key</key>
 			<string>version</string>
 			<key>DefaultValue</key>
-			<string>1.02</string>
+			<string>1.03</string>
 		</dict>
 		<dict>
 			<key>Type</key>
