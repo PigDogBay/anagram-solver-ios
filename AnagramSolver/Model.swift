@@ -177,14 +177,12 @@ class Model : WordListCallback, IAPDelegate
         settings.isProMode = false
         self.applySettings()
         self.unloadDictionary()
-        self.ads.reset()
     }
     func proMode()
     {
         settings.isProMode = true
         self.applySettings()
         self.unloadDictionary()
-        self.ads.noAds()
     }
     
     func applySettings(){
