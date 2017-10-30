@@ -210,9 +210,6 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         case .uninitialized:
             self.searchButton.isEnabled=false
             let proFlag = self.model.settings.isProMode
-            if proFlag {
-                model.ads.noAds()
-            }
             self.title = proFlag ? "Anagram Solver Pro" : "Anagram Solver"
             let useProWordList = model.settings.useProWordList
             self.searchButton.title = useProWordList ? "Search+" : "Search"
