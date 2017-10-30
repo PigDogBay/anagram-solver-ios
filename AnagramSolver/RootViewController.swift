@@ -136,8 +136,6 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         {
             mpdbShowAlert("Welcome",msg: "Thanks for trying Anagram Solver, enter your letters and search over 130,000 words!")
         }
-        //First time and only set up for ads
-        Ads.createBannerView(vc: self)
     }
     override func viewDidAppear(_ animated: Bool)
     {
@@ -212,6 +210,10 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         case .uninitialized:
             self.searchButton.isEnabled=false
             let proFlag = self.model.settings.isProMode
+            if !proFlag{
+                //First time and only set up for ads
+                Ads.createBannerView(vc: self)
+            }
             self.title = proFlag ? "Anagram Solver Pro" : "Anagram Solver"
             let useProWordList = model.settings.useProWordList
             self.searchButton.title = useProWordList ? "Search+" : "Search"
