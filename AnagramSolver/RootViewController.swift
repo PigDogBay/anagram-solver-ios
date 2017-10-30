@@ -13,11 +13,11 @@ import MessageUI
 class RootViewController: UIViewController, StateChangeObserver, MFMailComposeViewControllerDelegate
 {
     fileprivate var model : Model!
-    
+
     let searchSegueId = "searchSegue"
     let goProSegueId = "goProSegue"
     let helpSegueId = "helpSegue"
-    
+
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var textFieldQuery: UITextField!
@@ -136,6 +136,8 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         {
             mpdbShowAlert("Welcome",msg: "Thanks for trying Anagram Solver, enter your letters and search over 130,000 words!")
         }
+        //First time and only set up for ads
+        Ads.createBannerView(vc: self)
     }
     override func viewDidAppear(_ animated: Bool)
     {
