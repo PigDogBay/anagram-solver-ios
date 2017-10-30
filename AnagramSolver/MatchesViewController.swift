@@ -20,7 +20,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     
     let definitionSegueId = "definitionSegue"
     
-    @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var bannerView: UIView!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var matchesTable: UITableView!
     @IBOutlet weak var navBar: UINavigationItem!
@@ -36,22 +36,17 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         
         self.present(activityViewController, animated: true, completion: nil)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        if model.settings.isProMode {
+            bannerHeightConstraint.constant = 0
+        } else {
+            Ads.addAdView(container: bannerView)
+        }
+    }
     override func viewDidLoad()
     {
         super.viewDidLoad()
         self.model = Model.sharedInstance
-        
-        if model.settings.isProMode
-        {
-            bannerHeightConstraint.constant = 0
-       
-        }
-        else
-        {
-            bannerView.adUnitID = Ads.bannerAdId
-            bannerView.rootViewController = self
-            bannerView.load(Ads.createRequest())
-        }
 
         self.stateChanged(model.state)
         model.addObserver("matches", observer: self)
