@@ -48,7 +48,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         }
         else
         {
-            bannerView.adUnitID = Ads.getBannerAdId()
+            bannerView.adUnitID = Ads.bannerAdId
             bannerView.rootViewController = self
             bannerView.load(Ads.createRequest())
         }
