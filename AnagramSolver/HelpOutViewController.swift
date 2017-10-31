@@ -14,8 +14,7 @@ class HelpOutViewController : PageContentController, MFMailComposeViewController
 
     @IBAction func rateBtnPressed(_ sender: UIButton)
     {
-        //TO DO - insert own url
-        UIApplication.shared.openURL(URL(string: Model.getAppUrl())!)
+        Model.sharedInstance.ratings.viewOnAppStore()
     }
     @IBAction func feedbackBtnPressed(_ sender: UIButton)
     {
