@@ -54,7 +54,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     }
     
     func rateApp(){
-        UIApplication.shared.openURL(URL(string: Model.getAppUrl())!)
+        Model.sharedInstance.ratings.viewOnAppStore()
     }
     
     func sendFeedback(){

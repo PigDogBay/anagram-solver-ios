@@ -23,10 +23,6 @@ class Model : WordListCallback, IAPDelegate
     static let sharedInstance = Model()
     static let appId = "id973923699"
 
-    class func getAppUrl()->String
-    {
-        return "itms-apps://itunes.apple.com/app/id973923699"
-    }
     class func getAppWebUrl()->String
     {
         return "http://itunes.apple.com/app/id973923699"
