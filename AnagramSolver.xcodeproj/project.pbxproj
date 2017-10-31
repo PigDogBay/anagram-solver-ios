@@ -10,6 +10,7 @@
 		4D0543851CFDBE060084538A /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; };
 		4D0543861CFDBE060084538A /* SwiftUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D1D6E621FA0CE33008466F2 /* Pods_AnagramSolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */; };
+		4D1D6E671FA897FB008466F2 /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D6E661FA897FB008466F2 /* Ratings.swift */; };
 		4D2B35C31D33AAE30014ABF3 /* IAPFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */; };
 		4D3367D01AA64A8D00EA824A /* PageContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3367CF1AA64A8D00EA824A /* PageContentController.swift */; };
 		4D3367D21AA64CFA00EA824A /* HelpOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3367D11AA64CFA00EA824A /* HelpOutViewController.swift */; };
@@ -86,6 +87,7 @@
 /* Begin PBXFileReference section */
 		4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftUtils.xcodeproj; path = ../SwiftUtils/SwiftUtils.xcodeproj; sourceTree = "<group>"; };
 		4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AnagramSolver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D1D6E661FA897FB008466F2 /* Ratings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ratings.swift; sourceTree = "<group>"; };
 		4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPFactory.swift; sourceTree = "<group>"; };
 		4D3367CF1AA64A8D00EA824A /* PageContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentController.swift; sourceTree = "<group>"; };
 		4D3367D11AA64CFA00EA824A /* HelpOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpOutViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				4D1D62BB1E26674F00231DB3 /* ViewControllers */,
 				4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */,
 				4D3596401CFEEA50008D2FAF /* Ads.swift */,
+				4D1D6E661FA897FB008466F2 /* Ratings.swift */,
 				4D45F0231A9E487A00C40BB4 /* Model.swift */,
 				4D45D7B21E2CF0C500EC2D27 /* Settings.swift */,
 				4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */,
@@ -516,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1D6E671FA897FB008466F2 /* Ratings.swift in Sources */,
 				4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */,
 				4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */,
 				4D3596481D018570008D2FAF /* HelpViewController.swift in Sources */,

@@ -21,7 +21,8 @@ class Model : WordListCallback, IAPDelegate
 {
     //Singleton
     static let sharedInstance = Model()
-    
+    static let appId = "id973923699"
+
     class func getAppUrl()->String
     {
         return "itms-apps://itunes.apple.com/app/id973923699"
@@ -48,6 +49,7 @@ class Model : WordListCallback, IAPDelegate
     var query = ""
     let settings = Settings()
     let ads = Ads()
+    let ratings = Ratings(appId: appId)
     let iap : IAPInterface
     
     //Need to use a dictionary, so I can use the string key to search on

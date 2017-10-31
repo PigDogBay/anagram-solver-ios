@@ -142,12 +142,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
             model.stop()
             model.removeObserver("matches")
             model.wordSearchObserver = nil
-            //Interstitials are disabled - 17 Jan 2017
-            //Interstitials make £0.89 per day, banners make £9.33 per day
-//            if !model.settings.isProMode
-//            {
-//                model.ads.showInterstitial(self.parent!)
-//            }
+            Model.sharedInstance.ratings.requestRating()
         }
     }
 
