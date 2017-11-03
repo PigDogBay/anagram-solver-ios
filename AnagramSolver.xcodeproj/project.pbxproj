@@ -38,6 +38,7 @@
 		4D9E43AD1FAC84FC007007C8 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E43AC1FAC84FC007007C8 /* Filter.swift */; };
 		4D9E43B11FAC86EC007007C8 /* FilterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */; };
 		4DA729DD1C565E5000C7B85D /* pro.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DA729DC1C565E5000C7B85D /* pro.txt */; };
+		4DF2DE3A1FACBDBB00F44ADE /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2DE391FACBDBB00F44ADE /* FilterViewController.swift */; };
 		4DF7B6D61D10419F00A26A20 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF7B6D51D10419F00A26A20 /* StoreKit.framework */; };
 		4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */; };
 		B98A90515758048121BFEF80 /* Pods_AnagramSolverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7965FE98B3E9D2A1706D894 /* Pods_AnagramSolverTests.framework */; };
@@ -122,6 +123,7 @@
 		4D9E43AC1FAC84FC007007C8 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFactory.swift; sourceTree = "<group>"; usesTabs = 0; };
 		4DA729DC1C565E5000C7B85D /* pro.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pro.txt; sourceTree = "<group>"; };
+		4DF2DE391FACBDBB00F44ADE /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		4DF7B6D51D10419F00A26A20 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		9F767D7B066CC063F11B0CB8 /* Pods-AnagramSolver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnagramSolver.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				4D3596471D018570008D2FAF /* HelpViewController.swift */,
 				4D3367D11AA64CFA00EA824A /* HelpOutViewController.swift */,
 				4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */,
+				4DF2DE391FACBDBB00F44ADE /* FilterViewController.swift */,
 				4D3367CF1AA64A8D00EA824A /* PageContentController.swift */,
 				4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */,
 				4D45F0191A9E03BE00C40BB4 /* TipsPageViewController.swift */,
@@ -546,6 +549,7 @@
 				4D45D7B31E2CF0C500EC2D27 /* Settings.swift in Sources */,
 				4D9E43B11FAC86EC007007C8 /* FilterFactory.swift in Sources */,
 				4D45F01D1A9E03BE00C40BB4 /* TipsPageViewController.swift in Sources */,
+				4DF2DE3A1FACBDBB00F44ADE /* FilterViewController.swift in Sources */,
 				4D9E43AA1FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift in Sources */,
 				4D45F01E1A9E03BE00C40BB4 /* TipViewController.swift in Sources */,
 				4D45F0161A9E03A400C40BB4 /* DefinitionViewController.swift in Sources */,
