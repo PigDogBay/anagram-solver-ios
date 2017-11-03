@@ -47,6 +47,8 @@ class Model : WordListCallback, IAPDelegate
     let ads = Ads()
     let ratings = Ratings(appId: appId)
     let iap : IAPInterface
+    let filter : Filter
+    let filterFactory : WordListCallbackAbstractFactory
     
     //Need to use a dictionary, so I can use the string key to search on
     //Unable to search protocols due limitation in Swift, cannot use == on protocol!!!
@@ -56,6 +58,8 @@ class Model : WordListCallback, IAPDelegate
     
     fileprivate init()
     {
+        filter = Filter()
+        filterFactory = FilterFactory(filter: filter)
         self.wordSearch = WordSearch(wordList: self.wordList)
         self.iap = IAPFactory.createIAPInterface()
         self.iap.observable.addObserver("model", observer: self)
@@ -129,7 +133,8 @@ class Model : WordListCallback, IAPDelegate
         let searchType = self.wordSearch.getQueryType(processedQuery)
         processedQuery = self.wordSearch.postProcessQuery(processedQuery, type: searchType)
         wordFormatter.newSearch(processedQuery, searchType)
-        self.wordSearch.runQuery(processedQuery, type: searchType, callback: self)
+        let filterPipeline = filterFactory.createChainedCallback(lastCallback: self)
+        self.wordSearch.runQuery(processedQuery, type: searchType, callback: filterPipeline)
         changeState(States.finished)
     }
     
