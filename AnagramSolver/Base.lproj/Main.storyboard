@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mw5-Ah-dVR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mw5-Ah-dVR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -211,6 +211,7 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Anagram Solver" id="iTJ-cg-KFN">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="fZQ-bS-F4h"/>
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="nE8-C3-UlE">
                             <connections>
                                 <action selector="menuButtonPressed:" destination="ldH-pm-mdz" id="GZE-EX-hMF"/>
@@ -569,9 +570,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Matches" id="drl-D2-IA4">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="DYg-zH-Q7J">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="2DB-Hv-09g"/>
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="vI1-fa-mE5">
                             <connections>
-                                <action selector="shareButton:" destination="VQ0-Lb-tBU" id="9Go-eC-e0b"/>
+                                <segue destination="yAk-G0-x1F" kind="show" id="ZSZ-9U-bsS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -586,6 +588,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HpX-D7-Iyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1062" y="215"/>
+        </scene>
+        <!--Filter-->
+        <scene sceneID="k8v-gI-OX4">
+            <objects>
+                <viewController id="yAk-G0-x1F" customClass="FilterViewController" customModule="AnagramSolver" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F3V-Am-Ybu"/>
+                        <viewControllerLayoutGuide type="bottom" id="cy3-az-5We"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="z6L-JX-oWR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ci5-e3-OQq">
+                                <rect key="frame" x="27" y="617" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="By8-H3-gyM"/>
+                                    <constraint firstAttribute="height" constant="50" id="ySe-7J-ZuY"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="zzJ-05-qbs">
+                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="68B-NI-3gQ">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="68B-NI-3gQ" id="Fvr-cB-U9o">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="lEN-PY-L8u">
+                                        <rect key="frame" x="0.0" y="99.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lEN-PY-L8u" id="Me4-Pg-ZrN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ci5-e3-OQq" firstAttribute="centerX" secondItem="z6L-JX-oWR" secondAttribute="centerX" id="1gR-yY-wWJ"/>
+                            <constraint firstItem="zzJ-05-qbs" firstAttribute="top" secondItem="F3V-Am-Ybu" secondAttribute="bottom" id="3kP-It-p47"/>
+                            <constraint firstAttribute="trailing" secondItem="zzJ-05-qbs" secondAttribute="trailing" id="8Wg-gs-h6y"/>
+                            <constraint firstItem="cy3-az-5We" firstAttribute="top" secondItem="Ci5-e3-OQq" secondAttribute="bottom" id="HgP-Ik-xjR"/>
+                            <constraint firstItem="zzJ-05-qbs" firstAttribute="leading" secondItem="z6L-JX-oWR" secondAttribute="leading" id="V2d-M5-j16"/>
+                            <constraint firstItem="Ci5-e3-OQq" firstAttribute="top" secondItem="zzJ-05-qbs" secondAttribute="bottom" id="enW-eK-wpZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Filter" id="sGt-Pd-b7Y">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="YMc-Bz-gGR"/>
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="zDH-eR-3qQ">
+                            <connections>
+                                <action selector="searchClicked:" destination="yAk-G0-x1F" id="hT3-Jf-v4X"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bannerHeightConstraint" destination="ySe-7J-ZuY" id="PaJ-kz-IiW"/>
+                        <outlet property="bannerView" destination="Ci5-e3-OQq" id="ZDF-fb-TGZ"/>
+                        <outlet property="tableView" destination="zzJ-05-qbs" id="cqN-R1-oab"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dOQ-2p-Ws2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1927.2" y="207.34632683658174"/>
         </scene>
         <!--Definition-->
         <scene sceneID="WkY-aR-WMy">
@@ -627,7 +700,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzp-93-vMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1962" y="215"/>
+            <point key="canvasLocation" x="1914" y="-503"/>
         </scene>
     </scenes>
     <resources>
