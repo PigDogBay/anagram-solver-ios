@@ -650,6 +650,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="sYJ-8P-pun" kind="show" identifier="segueShowNumberList" id="AXj-5q-DRZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -682,6 +685,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dOQ-2p-Ws2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1927.2" y="207.34632683658174"/>
+        </scene>
+        <!--Equal To-->
+        <scene sceneID="IM2-Mz-4w7">
+            <objects>
+                <tableViewController id="sYJ-8P-pun" customClass="ListViewController" customModule="AnagramSolver" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IAi-lL-CAV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellListItem" textLabel="HxJ-Kj-eCo" style="IBUITableViewCellStyleDefault" id="cTX-G2-pIU">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cTX-G2-pIU" id="kCY-4O-Xo5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HxJ-Kj-eCo">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="X5k-IF-him" kind="unwind" unwindAction="unwindWithSelectedListItemWithSegue:" id="eSk-cs-EbO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sYJ-8P-pun" id="H6Z-UT-VFw"/>
+                            <outlet property="delegate" destination="sYJ-8P-pun" id="mXo-I1-hvR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Equal To" id="YPu-W9-5Tk">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Nju-MI-ABz"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nzP-Lm-xaj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="X5k-IF-him" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2692" y="209"/>
         </scene>
         <!--Definition-->
         <scene sceneID="WkY-aR-WMy">
