@@ -224,6 +224,8 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
             break
         case .ready:
             navBar.title = model.query
+            //clear matches when doing a filter search
+            self.matchesTable.reloadData()
             fallthrough
         case .searching:
             statusLabel.text = "Searching..."
