@@ -17,6 +17,8 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
         case startsWith, endsWith, contains, excludes
     }
     
+    var searchPressed : (() -> Void)?
+    
     fileprivate var filterType : FilterType?
     fileprivate var filter : Filter?
     
@@ -71,6 +73,13 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
                 filter?.excluding = lettersTextView.text!
             }
         }
-
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if let completion = searchPressed {
+            completion()
+        }
+        return true
     }
 }

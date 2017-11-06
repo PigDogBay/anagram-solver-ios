@@ -14,10 +14,7 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func searchClicked(_ sender: Any) {
-        if let navCtrl = self.navigationController {
-            model.prepareToFilterSearch()
-            navCtrl.popViewController(animated: true)
-        }
+        filterSearch()
     }
     
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
@@ -63,6 +60,14 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
             Ads.addAdView(container: bannerView)
         }
     }
+    
+    fileprivate func filterSearch() {
+        if let navCtrl = self.navigationController {
+            model.prepareToFilterSearch()
+            navCtrl.popViewController(animated: true)
+        }
+    }
+    
     /*
      Table layout
      
@@ -150,6 +155,7 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
     fileprivate func cellForLettersFilter(_ indexPath: IndexPath, _ filterType : LettersFilterTableViewCell.FilterType) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: letterCellId, for: indexPath) as! LettersFilterTableViewCell
         cell.bind(filter: model.filter, filterType: filterType)
+        cell.searchPressed = filterSearch
         return cell
     }
     fileprivate func cellForNumbersFilter(_ indexPath: IndexPath,_ value : Int,_ title : String) -> UITableViewCell {
