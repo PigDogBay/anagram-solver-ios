@@ -14,6 +14,10 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func searchClicked(_ sender: Any) {
+        if let navCtrl = self.navigationController {
+            model.prepareToFilterSearch()
+            navCtrl.popViewController(animated: true)
+        }
     }
     
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!

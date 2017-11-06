@@ -124,6 +124,11 @@ class Model : WordListCallback, IAPDelegate
     {
         matches.removeAll(keepingCapacity: true)
     }
+    func prepareToFilterSearch(){
+        prepareToSearch()
+        changeState(States.ready)
+    }
+    
     func search()
     {
         changeState(States.searching)
