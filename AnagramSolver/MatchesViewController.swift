@@ -231,7 +231,11 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
             statusLabel.text = "Searching..."
             navBar.rightBarButtonItem?.isEnabled=false
         case .finished:
-            statusLabel.text = "Matches: \(model.matches.count)"
+            if model.filter.filterCount>0{
+                statusLabel.text = "Matches: \(model.matches.count) Filters: \(model.filter.filterCount)"
+            } else {
+                statusLabel.text = "Matches: \(model.matches.count)"
+            }
             matchesTable.reloadData()
             navBar.rightBarButtonItem?.isEnabled=true
         }

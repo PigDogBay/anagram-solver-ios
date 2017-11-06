@@ -23,13 +23,13 @@ class Filter {
     var filterCount : Int {
         get {
             var count = 0
-            if biggerThan == 0 { count = count + 1}
-            if lessThan == 0 { count = count + 1}
-            if equalTo == 0 { count = count + 1}
-            if startingWith == "" { count = count + 1}
-            if endingWith == "" { count = count + 1}
-            if containing == "" { count = count + 1}
-            if excluding == "" { count = count + 1}
+            if biggerThan != 0 { count = count + 1}
+            if lessThan != 0 { count = count + 1}
+            if equalTo != 0 { count = count + 1}
+            if startingWith != "" { count = count + 1}
+            if endingWith != "" { count = count + 1}
+            if containing != "" { count = count + 1}
+            if excluding != "" { count = count + 1}
             return count
         }
     }
