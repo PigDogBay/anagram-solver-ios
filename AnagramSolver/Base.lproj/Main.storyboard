@@ -190,7 +190,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellBulb" id="u1r-9k-dV9">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellBulb" id="u1r-9k-dV9" customClass="TipCollectionViewCell" customModule="AnagramSolver" customModuleProvider="target">
                                         <rect key="frame" x="21" y="0.0" width="333" height="221"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -219,6 +219,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htv-3F-tWK">
                                                     <rect key="frame" x="222" y="128.66666666666666" width="71" height="30"/>
                                                     <state key="normal" title="SHOW ME"/>
+                                                    <connections>
+                                                        <action selector="showMeClicked:" destination="u1r-9k-dV9" eventType="touchUpInside" id="LFf-6L-Us2"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -233,6 +236,10 @@
                                             <constraint firstAttribute="trailing" secondItem="htv-3F-tWK" secondAttribute="trailing" constant="40" id="ymo-r9-mEi"/>
                                             <constraint firstItem="BoQ-YB-tG6" firstAttribute="centerX" secondItem="u1r-9k-dV9" secondAttribute="centerX" id="zL7-ol-2EH"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="BoQ-YB-tG6" id="3HM-MG-8Zb"/>
+                                            <outlet property="titleLabel" destination="GWU-aA-6Hu" id="TP6-QT-LDO"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -266,6 +273,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="NyA-1A-NhE" id="fCR-Nq-42Q"/>
                         <outlet property="menuButton" destination="nE8-C3-UlE" id="bcH-Wi-cQa"/>
                         <outlet property="searchButton" destination="a8L-df-lOj" id="QZ0-bu-JwH"/>
                         <outlet property="textFieldQuery" destination="a7i-Fj-C2n" id="230-eb-cbu"/>

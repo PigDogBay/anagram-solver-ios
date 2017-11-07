@@ -21,6 +21,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var textFieldQuery: UITextField!
+    @IBOutlet weak var collectionView: UICollectionView!
     
  
     @IBAction func queryFinished(_ sender: UITextField) {
