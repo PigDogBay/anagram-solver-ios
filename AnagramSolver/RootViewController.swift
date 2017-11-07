@@ -164,13 +164,13 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         {
             if !model.isReady()
             {
-                showErrorAlert("Loading...", msg: "Please wait, loading the wordlist")
+                mpdbShowErrorAlert("Loading...", msg: "Please wait, loading the wordlist")
                 return false
             }
             let query = textFieldQuery.text!
             if isQueryACommand(query)
             {
-                showErrorAlert("Command", msg: executeCommand(query))
+                mpdbShowErrorAlert("Command", msg: executeCommand(query))
                 return false
             }
             if model.setAndValidateQuery(query)
@@ -179,20 +179,12 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
             }
             else
             {
-                showErrorAlert("Search Error", msg: "Please enter letters a to z")
+                mpdbShowErrorAlert("Search Error", msg: "Please enter letters a to z")
                 return false
             }
         }
         
         return true
-    }
-    
-    fileprivate func showErrorAlert(_ title: String, msg : String)
-    {
-        let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
-        let controller = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.alert)
-        controller.addAction(action)
-        self.present(controller, animated: true, completion: nil)
     }
     
     func stateChanged(_ newState: Model.States)
