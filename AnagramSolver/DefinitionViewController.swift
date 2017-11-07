@@ -14,6 +14,9 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var navigationBar: UINavigationItem!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loadingLabel: UILabel!
+    @IBOutlet weak var webViewContainer: UIView!
+    @IBOutlet weak var bannerView: UIView!
+    @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     
     var word : String!
     var definitionUrl : String!
@@ -22,9 +25,9 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        webView = WKWebView(frame: view.bounds)
+        webView = WKWebView(frame: webViewContainer.bounds)
         webView.navigationDelegate = self
-        view.insertSubview(webView, at: 0)
+        webViewContainer.insertSubview(webView, at: 0)
 
         navigationBar.title = word
         //replace space in two word anagrams with +
@@ -33,7 +36,15 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
         let request = URLRequest(url: requestURL!)
         webView.load(request)
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        if Model.sharedInstance.settings.isProMode {
+            bannerHeightConstraint.constant = 0
+        } else {
+            Ads.addAdView(container: bannerView)
+        }
+    }
+
     override func viewWillDisappear(_ animated: Bool) {
         webView.stopLoading()
     }
