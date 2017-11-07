@@ -25,10 +25,11 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        webView = WKWebView(frame: webViewContainer.bounds)
+        webView = WKWebView(frame: webViewContainer.frame)
         webView.navigationDelegate = self
-        webViewContainer.insertSubview(webView, at: 0)
-
+        webViewContainer.addSubview(webView)
+        constrainView(view: webView, toView: webViewContainer)
+        
         navigationBar.title = word
         //replace space in two word anagrams with +
         let processedUrl = definitionUrl.replace(" ", withString: "+")
@@ -36,7 +37,14 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
         let request = URLRequest(url: requestURL!)
         webView.load(request)
     }
-
+    //https://stackoverflow.com/questions/40856112/how-to-create-a-sized-wkwebview-in-swift-3-ios-10
+    func constrainView(view:UIView, toView contentView:UIView) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        view.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+    }
     override func viewWillAppear(_ animated: Bool) {
         if Model.sharedInstance.settings.isProMode {
             bannerHeightConstraint.constant = 0
@@ -60,6 +68,8 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         loadingIndicator.startAnimating()
         loadingLabel.isHidden=false
+        //https://stackoverflow.com/questions/34983144/strange-margin-in-wkwebview
+        webView.scrollView.contentInset = .zero
     }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         loadingIndicator.stopAnimating()
