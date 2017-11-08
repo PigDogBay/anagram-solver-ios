@@ -132,9 +132,9 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         self.collectionView.dataSource = tipsDataSource
-        if let flowLayout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
-        }
+//        if let flowLayout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+//            flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
+//        }
         
         model = Model.sharedInstance
         model.addObserver("root", observer: self)
