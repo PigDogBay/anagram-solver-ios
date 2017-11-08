@@ -17,13 +17,13 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     let searchSegueId = "searchSegue"
     let goProSegueId = "goProSegue"
     let helpSegueId = "helpSegue"
+    let tipsDataSource = TipsDataSource()
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var textFieldQuery: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
     
- 
     @IBAction func queryFinished(_ sender: UITextField) {
         if shouldPerformSegue(withIdentifier: searchSegueId, sender: self)
         {
@@ -131,6 +131,11 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = UIColor.white
+        self.collectionView.dataSource = tipsDataSource
+        if let flowLayout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 16, bottom: 10, right: 16)
+        }
+        
         model = Model.sharedInstance
         model.addObserver("root", observer: self)
         if mpdbCheckIsFirstTime()
