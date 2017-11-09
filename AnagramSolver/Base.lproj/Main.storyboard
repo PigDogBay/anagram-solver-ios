@@ -246,8 +246,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htv-3F-tWK">
-                                                    <rect key="frame" x="177" y="216.66666666666666" width="71" height="30"/>
-                                                    <state key="normal" title="SHOW ME"/>
+                                                    <rect key="frame" x="194" y="216.66666666666666" width="74" height="30"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="SHOW ME">
+                                                        <color key="titleColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="deviceRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="showMeClicked:" destination="u1r-9k-dV9" eventType="touchUpInside" id="LFf-6L-Us2"/>
                                                     </connections>
@@ -262,7 +265,7 @@
                                             <constraint firstItem="htv-3F-tWK" firstAttribute="top" secondItem="BoQ-YB-tG6" secondAttribute="bottom" constant="16" id="YAa-Kd-HB6"/>
                                             <constraint firstItem="Abu-ep-efe" firstAttribute="leading" secondItem="u1r-9k-dV9" secondAttribute="leading" constant="20" id="d2m-4S-utX"/>
                                             <constraint firstItem="GWU-aA-6Hu" firstAttribute="centerY" secondItem="Abu-ep-efe" secondAttribute="centerY" id="nyG-IG-UrB"/>
-                                            <constraint firstAttribute="trailing" secondItem="htv-3F-tWK" secondAttribute="trailing" constant="40" id="ymo-r9-mEi"/>
+                                            <constraint firstAttribute="trailing" secondItem="htv-3F-tWK" secondAttribute="trailing" constant="20" id="ymo-r9-mEi"/>
                                             <constraint firstItem="BoQ-YB-tG6" firstAttribute="centerX" secondItem="u1r-9k-dV9" secondAttribute="centerX" id="zL7-ol-2EH"/>
                                         </constraints>
                                         <connections>
