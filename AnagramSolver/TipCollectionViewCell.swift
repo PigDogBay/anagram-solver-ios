@@ -13,8 +13,14 @@ class TipCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-       
+    
+    var query : String!
+    var showMeCallback : ((_ query : String) -> Void)?
+    
     @IBAction func showMeClicked(_ sender: UIButton) {
+        if let completion = showMeCallback {
+            completion(query)
+        }
     }
     
     func setDescription(string : String){

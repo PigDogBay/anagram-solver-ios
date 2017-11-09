@@ -20,6 +20,7 @@ class TipsDataSource : NSObject, UICollectionViewDataSource
     static let tips = [tip0,tip1,tip2,tip3,tip4,tip5,tip6]
     
     let tipCellId = "cellBulb"
+    var showMeCallback : ((_ query : String) -> Void)?
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 7
@@ -30,6 +31,8 @@ class TipsDataSource : NSObject, UICollectionViewDataSource
         if let tipCell = cell as? TipCollectionViewCell {
             tipCell.setDescription(string: TipsDataSource.tips[indexPath.row][1])
             tipCell.titleLabel.text = TipsDataSource.tips[indexPath.row][0]
+            tipCell.query = TipsDataSource.tips[indexPath.row][2]
+            tipCell.showMeCallback = self.showMeCallback
         }
         //https://stackoverflow.com/questions/18113872/uicollectionviewcell-with-rounded-corners-and-drop-shadow-not-working
         cell.layer.cornerRadius = 6.0
