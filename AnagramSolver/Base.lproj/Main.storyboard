@@ -174,10 +174,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRf-rd-9cX">
-                                <rect key="frame" x="8" y="8" width="359" height="60"/>
+                                <rect key="frame" x="8" y="8" width="359" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter letters" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="a7i-Fj-C2n">
-                                        <rect key="frame" x="8" y="10" width="343" height="40"/>
+                                        <rect key="frame" x="8" y="5" width="343" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="plt-OJ-fIO"/>
@@ -192,13 +192,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="a7i-Fj-C2n" secondAttribute="trailing" constant="8" id="1hd-J6-CSL"/>
-                                    <constraint firstAttribute="height" constant="60" id="OKM-Ck-mCc"/>
+                                    <constraint firstAttribute="height" constant="50" id="OKM-Ck-mCc"/>
                                     <constraint firstItem="a7i-Fj-C2n" firstAttribute="centerY" secondItem="FRf-rd-9cX" secondAttribute="centerY" id="jUE-4K-kxb"/>
                                     <constraint firstItem="a7i-Fj-C2n" firstAttribute="leading" secondItem="FRf-rd-9cX" secondAttribute="leading" constant="8" id="sba-nF-4q8"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NyA-1A-NhE">
-                                <rect key="frame" x="0.0" y="76" width="375" height="614"/>
+                                <rect key="frame" x="0.0" y="66" width="375" height="624"/>
                                 <color key="backgroundColor" red="0.82745098039215681" green="0.85882352941176465" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="scrollIndicatorInsets" minX="2" minY="2" maxX="2" maxY="2"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="XQw-nm-BGy">

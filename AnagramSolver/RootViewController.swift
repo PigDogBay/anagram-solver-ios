@@ -132,7 +132,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         super.viewDidLoad()
         tipsDataSource.showMeCallback = showMe
         self.collectionView.dataSource = tipsDataSource
-        self.collectionView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
+        self.collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 20, right: 0)
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
         model = Model.sharedInstance
