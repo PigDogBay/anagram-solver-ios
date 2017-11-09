@@ -16,4 +16,14 @@ class TipCollectionViewCell: UICollectionViewCell {
        
     @IBAction func showMeClicked(_ sender: UIButton) {
     }
+    
+    func setDescription(string : String){
+        let attrString = NSMutableAttributedString(string: string)
+        let paraStyle = NSMutableParagraphStyle()
+        paraStyle.lineSpacing = 0
+        paraStyle.lineHeightMultiple = 1.5
+        paraStyle.alignment = .left
+        attrString.addAttribute(NSAttributedStringKey.paragraphStyle, value:paraStyle, range:NSMakeRange(0, attrString.length))
+        descriptionLabel.attributedText = attrString
+    }
 }

@@ -181,21 +181,21 @@
                                 </connections>
                             </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NyA-1A-NhE">
-                                <rect key="frame" x="0.0" y="144" width="375" height="634"/>
+                                <rect key="frame" x="0.0" y="152" width="375" height="626"/>
                                 <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="deviceRGB"/>
                                 <inset key="scrollIndicatorInsets" minX="2" minY="2" maxX="2" maxY="2"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="XQw-nm-BGy">
-                                    <size key="itemSize" width="288" height="300"/>
+                                    <size key="itemSize" width="288" height="261"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellBulb" id="u1r-9k-dV9" customClass="TipCollectionViewCell" customModule="AnagramSolver" customModuleProvider="target">
-                                        <rect key="frame" x="43.666666666666664" y="0.0" width="288" height="300"/>
+                                        <rect key="frame" x="43.666666666666664" y="0.0" width="288" height="261"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="300"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="261"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightbulb_on" translatesAutoresizingMaskIntoConstraints="NO" id="Abu-ep-efe">
@@ -205,20 +205,26 @@
                                                         <constraint firstAttribute="height" constant="42" id="gUR-Z9-VmL"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crossword Clues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWU-aA-6Hu">
-                                                    <rect key="frame" x="70" y="28.333333333333336" width="176" height="26.333333333333336"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crosswords" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWU-aA-6Hu">
+                                                    <rect key="frame" x="82.333333333333314" y="28.333333333333336" width="124" height="26.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoQ-YB-tG6">
-                                                    <rect key="frame" x="123.33333333333333" y="99.666666666666671" width="41.666666666666671" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoQ-YB-tG6">
+                                                    <rect key="frame" x="23.666666666666657" y="78.666666666666686" width="241.99999999999997" height="122"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Find words from jumbled letters Enter moonstarer To find astronomer">
+                                                            <attributes>
+                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htv-3F-tWK">
-                                                    <rect key="frame" x="177" y="128.66666666666666" width="71" height="30"/>
+                                                    <rect key="frame" x="177" y="216.66666666666666" width="71" height="30"/>
                                                     <state key="normal" title="SHOW ME"/>
                                                     <connections>
                                                         <action selector="showMeClicked:" destination="u1r-9k-dV9" eventType="touchUpInside" id="LFf-6L-Us2"/>
@@ -228,10 +234,10 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="GWU-aA-6Hu" firstAttribute="leading" secondItem="Abu-ep-efe" secondAttribute="trailing" constant="8" id="1x5-I8-CYo"/>
-                                            <constraint firstItem="BoQ-YB-tG6" firstAttribute="top" secondItem="GWU-aA-6Hu" secondAttribute="bottom" constant="45" id="CbB-Fe-3Fk"/>
+                                            <constraint firstItem="BoQ-YB-tG6" firstAttribute="top" secondItem="GWU-aA-6Hu" secondAttribute="bottom" constant="24" id="CbB-Fe-3Fk"/>
                                             <constraint firstItem="Abu-ep-efe" firstAttribute="top" secondItem="u1r-9k-dV9" secondAttribute="top" constant="20" id="Lzh-9j-uud"/>
-                                            <constraint firstItem="htv-3F-tWK" firstAttribute="top" secondItem="BoQ-YB-tG6" secondAttribute="bottom" constant="8" id="YAa-Kd-HB6"/>
+                                            <constraint firstItem="GWU-aA-6Hu" firstAttribute="centerX" secondItem="u1r-9k-dV9" secondAttribute="centerX" id="OfR-Xm-YtK"/>
+                                            <constraint firstItem="htv-3F-tWK" firstAttribute="top" secondItem="BoQ-YB-tG6" secondAttribute="bottom" constant="16" id="YAa-Kd-HB6"/>
                                             <constraint firstItem="Abu-ep-efe" firstAttribute="leading" secondItem="u1r-9k-dV9" secondAttribute="leading" constant="20" id="d2m-4S-utX"/>
                                             <constraint firstItem="GWU-aA-6Hu" firstAttribute="centerY" secondItem="Abu-ep-efe" secondAttribute="centerY" id="nyG-IG-UrB"/>
                                             <constraint firstAttribute="trailing" secondItem="htv-3F-tWK" secondAttribute="trailing" constant="40" id="ymo-r9-mEi"/>
@@ -251,7 +257,7 @@
                             <constraint firstItem="a7i-Fj-C2n" firstAttribute="trailing" secondItem="86g-zU-DtL" secondAttribute="trailingMargin" id="IFR-oK-U5l"/>
                             <constraint firstItem="wdn-4e-A96" firstAttribute="trailing" secondItem="NyA-1A-NhE" secondAttribute="trailing" id="WDh-fE-bD2"/>
                             <constraint firstItem="a7i-Fj-C2n" firstAttribute="top" secondItem="wdn-4e-A96" secondAttribute="top" constant="8" id="i54-Rs-hK1"/>
-                            <constraint firstItem="NyA-1A-NhE" firstAttribute="top" secondItem="a7i-Fj-C2n" secondAttribute="bottom" constant="8" id="lFa-kx-XF7"/>
+                            <constraint firstItem="NyA-1A-NhE" firstAttribute="top" secondItem="a7i-Fj-C2n" secondAttribute="bottom" constant="16" id="lFa-kx-XF7"/>
                             <constraint firstItem="a7i-Fj-C2n" firstAttribute="leading" secondItem="86g-zU-DtL" secondAttribute="leadingMargin" id="q21-q7-bJ2"/>
                             <constraint firstItem="NyA-1A-NhE" firstAttribute="leading" secondItem="wdn-4e-A96" secondAttribute="leading" id="qcd-sT-2jj"/>
                         </constraints>
