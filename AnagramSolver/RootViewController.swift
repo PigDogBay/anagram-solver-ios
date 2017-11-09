@@ -134,7 +134,9 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         self.collectionView.dataSource = tipsDataSource
         self.collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 20, right: 0)
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        
+        //remove shadow line from underneath the nav bar
+        //https://stackoverflow.com/questions/19226965/how-to-hide-uinavigationbar-1px-bottom-line
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         model = Model.sharedInstance
         model.addObserver("root", observer: self)
         if mpdbCheckIsFirstTime()
