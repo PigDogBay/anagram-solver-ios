@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "lightbulb_on-1.png",
+      "filename" : "definition-s.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "lightbulb_on_2.png",
+      "filename" : "definition-m.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "lightbulb_on.png",
+      "filename" : "definitions.png",
       "scale" : "3x"
     }
   ],
