@@ -355,7 +355,7 @@
                                         </constraints>
                                         <size key="customSize" width="288" height="228"/>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellSettings" id="k88-rY-U35">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellSettings" id="k88-rY-U35" customClass="ActionCollectionViewCell" customModule="AnagramSolver" customModuleProvider="target">
                                         <rect key="frame" x="43.666666666666664" y="765" width="288" height="260"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -383,6 +383,9 @@
                                                     <state key="normal" title="SHOW SETTINGS">
                                                         <color key="titleColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="button1Clicked:" destination="k88-rY-U35" eventType="touchUpInside" id="ZCU-mf-S3T"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnD-jt-ZOO">
                                                     <rect key="frame" x="100" y="28" width="87" height="26.333333333333329"/>
@@ -405,7 +408,7 @@
                                         </constraints>
                                         <size key="customSize" width="288" height="260"/>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellPro" id="a9d-eJ-eI2">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellPro" id="a9d-eJ-eI2" customClass="ActionCollectionViewCell" customModule="AnagramSolver" customModuleProvider="target">
                                         <rect key="frame" x="43.666666666666664" y="1041" width="288" height="260"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -439,6 +442,9 @@
                                                     <state key="normal" title="GO PRO NOW">
                                                         <color key="titleColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="button1Clicked:" destination="a9d-eJ-eI2" eventType="touchUpInside" id="6f2-d2-NxH"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -455,7 +461,7 @@
                                         </constraints>
                                         <size key="customSize" width="288" height="260"/>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellUserGuide" id="4oI-ox-8IL">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellUserGuide" id="4oI-ox-8IL" customClass="ActionCollectionViewCell" customModule="AnagramSolver" customModuleProvider="target">
                                         <rect key="frame" x="43.666666666666664" y="1317" width="288" height="260"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -489,6 +495,9 @@
                                                     <state key="normal" title="VIEW GUIDE">
                                                         <color key="titleColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="button1Clicked:" destination="4oI-ox-8IL" eventType="touchUpInside" id="crf-a7-fWA"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -505,7 +514,7 @@
                                         </constraints>
                                         <size key="customSize" width="288" height="260"/>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellHelpOut" id="vOb-DU-7RQ">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellHelpOut" id="vOb-DU-7RQ" customClass="ActionCollectionViewCell" customModule="AnagramSolver" customModuleProvider="target">
                                         <rect key="frame" x="43.666666666666664" y="1593" width="288" height="260"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -539,6 +548,9 @@
                                                     <state key="normal" title="FEEDBACK">
                                                         <color key="titleColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="button1Clicked:" destination="vOb-DU-7RQ" eventType="touchUpInside" id="vit-zV-hpt"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffS-H6-FR5">
                                                     <rect key="frame" x="113" y="216.66666666666666" width="39" height="30"/>
@@ -546,6 +558,9 @@
                                                     <state key="normal" title="RATE">
                                                         <color key="titleColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="deviceRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="button2Clicked:" destination="vOb-DU-7RQ" eventType="touchUpInside" id="0NA-nl-d85"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
