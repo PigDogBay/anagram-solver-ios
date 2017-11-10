@@ -14,14 +14,12 @@ class ActionCollectionViewCell: UICollectionViewCell {
 
     
     @IBAction func button1Clicked(_ sender: UIButton) {
-        print("Button 1 clicked")
         if let callback = button1Callback {
             callback()
         }
     }
 
     @IBAction func button2Clicked(_ sender: UIButton) {
-        print("Button 2 clicked")
         if let callback = button2Callback {
             callback()
         }

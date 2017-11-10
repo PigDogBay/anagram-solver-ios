@@ -131,6 +131,11 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     {
         super.viewDidLoad()
         tipsDataSource.showMeCallback = showMe
+        tipsDataSource.settingsCallback = showSettings
+        tipsDataSource.goProCallback = showGoPro
+        tipsDataSource.viewGuideCallback = showHelp
+        tipsDataSource.rateCallback = rateApp
+        tipsDataSource.feedbackCallback = sendFeedback
         self.collectionView.dataSource = tipsDataSource
         self.collectionView.delegate = self
         self.collectionView.contentInset = UIEdgeInsets(top: 16, left: 8, bottom: 20, right: 8)
@@ -259,8 +264,8 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     fileprivate func isQueryACommand(_ cmd : String) -> Bool
     {
         //Comment out this line to enable commands
-//        return false
-        return cmd.hasPrefix("-cmd")
+        return false
+//        return cmd.hasPrefix("-cmd")
     }
     fileprivate func executeCommand(_ cmd : String) -> String
     {
