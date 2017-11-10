@@ -10,7 +10,7 @@ import UIKit
 import SwiftUtils
 import MessageUI
 
-class RootViewController: UIViewController, StateChangeObserver, MFMailComposeViewControllerDelegate
+class RootViewController: UIViewController, StateChangeObserver, MFMailComposeViewControllerDelegate, UICollectionViewDelegateFlowLayout
 {
     fileprivate var model : Model!
 
@@ -132,7 +132,8 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         super.viewDidLoad()
         tipsDataSource.showMeCallback = showMe
         self.collectionView.dataSource = tipsDataSource
-        self.collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 20, right: 0)
+        self.collectionView.delegate = self
+        self.collectionView.contentInset = UIEdgeInsets(top: 16, left: 8, bottom: 20, right: 8)
         self.navigationController?.navigationBar.tintColor = UIColor.white
         //remove shadow line from underneath the nav bar
         //https://stackoverflow.com/questions/19226965/how-to-hide-uinavigationbar-1px-bottom-line
@@ -150,6 +151,20 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         if (model.settings.showKeyboard){
             textFieldQuery.becomeFirstResponder()
         }
+    }
+    
+    //Recompute layout for the collection view on rotation
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return
+        }
+        flowLayout.invalidateLayout()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.bounds.width - 2*16.0
+        print("Width \(width)")
+        return CGSize(width: width, height: 260.0)
     }
     
     /*
