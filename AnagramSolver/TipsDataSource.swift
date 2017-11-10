@@ -23,30 +23,81 @@ class TipsDataSource : NSObject, UICollectionViewDataSource
     var showMeCallback : ((_ query : String) -> Void)?
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return 13
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: tipCellId, for: indexPath)
-        if let tipCell = cell as? TipCollectionViewCell {
-            tipCell.setDescription(string: TipsDataSource.tips[indexPath.row][1])
-            tipCell.titleLabel.text = TipsDataSource.tips[indexPath.row][0]
-            tipCell.query = TipsDataSource.tips[indexPath.row][2]
-            tipCell.showMeCallback = self.showMeCallback
+        var cell : UICollectionViewCell!
+        switch indexPath.row {
+        case 0:
+            //Anagrams
+            cell = getTipCell(tipIndex: 0, collectionView: collectionView, indexPath: indexPath)
+        case 1:
+            //Blank Letters
+            cell = getTipCell(tipIndex: 1, collectionView: collectionView, indexPath: indexPath)
+        case 2:
+            //Definitions
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellDefinitions", for: indexPath)
+        case 3:
+            //Two Words
+            cell = getTipCell(tipIndex: 2, collectionView: collectionView, indexPath: indexPath)
+        case 4:
+            //Definitions
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellFilters", for: indexPath)
+        case 5:
+            //Crosswords
+            cell = getTipCell(tipIndex: 3, collectionView: collectionView, indexPath: indexPath)
+        case 6:
+            //Settings
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellSettings", for: indexPath)
+        case 7:
+            //Short cuts
+            cell = getTipCell(tipIndex: 4, collectionView: collectionView, indexPath: indexPath)
+        case 8:
+            //User Guide
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellUserGuide", for: indexPath)
+        case 9:
+            //Supergrams
+            cell = getTipCell(tipIndex: 5, collectionView: collectionView, indexPath: indexPath)
+        case 10:
+            //Help Out
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellHelpOut", for: indexPath)
+        case 11:
+            //Prefix@Suffix
+            cell = getTipCell(tipIndex: 6, collectionView: collectionView, indexPath: indexPath)
+        case 12:
+            //Help Out
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellPro", for: indexPath)
+        default:
+            abort()
         }
-        //https://stackoverflow.com/questions/18113872/uicollectionviewcell-with-rounded-corners-and-drop-shadow-not-working
+        addShadowEffect(cell)
+        return cell
+    }
+    
+    //https://stackoverflow.com/questions/18113872/uicollectionviewcell-with-rounded-corners-and-drop-shadow-not-working
+    func addShadowEffect(_ cell : UICollectionViewCell){
         cell.layer.cornerRadius = 2.0
-//Shadow effect
-//        cell.contentView.layer.borderWidth = 1.0
-//        cell.contentView.layer.borderColor = UIColor.clear.cgColor
-//        cell.contentView.layer.masksToBounds = true
-
+        //Shadow effect
+        //        cell.contentView.layer.borderWidth = 1.0
+        //        cell.contentView.layer.borderColor = UIColor.clear.cgColor
+        //        cell.contentView.layer.masksToBounds = true
         cell.layer.shadowColor = UIColor.lightGray.cgColor
         cell.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         cell.layer.shadowRadius = 2.0
         cell.layer.shadowOpacity = 1.0
         cell.layer.masksToBounds = false
         cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+    }
+    
+    func getTipCell(tipIndex : Int, collectionView: UICollectionView, indexPath : IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: tipCellId, for: indexPath)
+        if let tipCell = cell as? TipCollectionViewCell {
+            tipCell.setDescription(string: TipsDataSource.tips[tipIndex][1])
+            tipCell.titleLabel.text = TipsDataSource.tips[tipIndex][0]
+            tipCell.query = TipsDataSource.tips[tipIndex][2]
+            tipCell.showMeCallback = self.showMeCallback
+        }
         return cell
     }
 
