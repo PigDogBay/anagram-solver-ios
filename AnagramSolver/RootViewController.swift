@@ -162,8 +162,14 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width - 2*16.0
-        print("Width \(width)")
+        //Min width 288 pixels, left and right margin 16 pixels each, for 2 columns 16 pixels between columns
+        var width = collectionView.bounds.width
+        if width > 623.0 {
+            width = (width - 3.0*16.0)/2.0
+        } else {
+            //single column, make space for the margins
+            width = width - 2.0*16.0
+        }
         return CGSize(width: width, height: 260.0)
     }
     
