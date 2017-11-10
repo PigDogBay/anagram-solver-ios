@@ -21,6 +21,11 @@ class TipsDataSource : NSObject, UICollectionViewDataSource
     
     let tipCellId = "cellBulb"
     var showMeCallback : ((_ query : String) -> Void)?
+    var rateCallback : (() -> Void)?
+    var feedbackCallback : (() -> Void)?
+    var viewGuideCallback : (() -> Void)?
+    var goProCallback : (() -> Void)?
+    var settingsCallback : (() -> Void)?
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 13
@@ -42,7 +47,7 @@ class TipsDataSource : NSObject, UICollectionViewDataSource
             //Two Words
             cell = getTipCell(tipIndex: 2, collectionView: collectionView, indexPath: indexPath)
         case 4:
-            //Definitions
+            //Filters
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellFilters", for: indexPath)
         case 5:
             //Crosswords
@@ -50,24 +55,37 @@ class TipsDataSource : NSObject, UICollectionViewDataSource
         case 6:
             //Settings
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellSettings", for: indexPath)
+            if let actionCell = cell as? ActionCollectionViewCell {
+                actionCell.button1Callback = self.settingsCallback
+            }
         case 7:
             //Short cuts
             cell = getTipCell(tipIndex: 4, collectionView: collectionView, indexPath: indexPath)
         case 8:
             //User Guide
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellUserGuide", for: indexPath)
+            if let actionCell = cell as? ActionCollectionViewCell {
+                actionCell.button1Callback = self.viewGuideCallback
+            }
         case 9:
             //Supergrams
             cell = getTipCell(tipIndex: 5, collectionView: collectionView, indexPath: indexPath)
         case 10:
             //Help Out
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellHelpOut", for: indexPath)
+            if let actionCell = cell as? ActionCollectionViewCell {
+                actionCell.button1Callback = self.feedbackCallback
+                actionCell.button2Callback = self.rateCallback
+            }
         case 11:
             //Prefix@Suffix
             cell = getTipCell(tipIndex: 6, collectionView: collectionView, indexPath: indexPath)
         case 12:
-            //Help Out
+            //Go Pro
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellPro", for: indexPath)
+            if let actionCell = cell as? ActionCollectionViewCell {
+                actionCell.button1Callback = self.goProCallback
+            }
         default:
             abort()
         }
