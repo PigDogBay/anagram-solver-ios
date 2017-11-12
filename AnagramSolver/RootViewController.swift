@@ -17,6 +17,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     let searchSegueId = "searchSegue"
     let goProSegueId = "goProSegue"
     let helpSegueId = "helpSegue"
+    let userGuideSegueId = "segueUserGuide"
     let tipsDataSource = TipsDataSource()
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
@@ -92,6 +93,11 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     func showGoPro(){
         performSegue(withIdentifier: goProSegueId, sender: self)
     }
+    func showUserGuide(){
+        performSegue(withIdentifier: userGuideSegueId, sender: self)
+    }
+    
+
     
     func showMe(query : String){
         textFieldQuery.text = query
@@ -133,7 +139,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         tipsDataSource.showMeCallback = showMe
         tipsDataSource.settingsCallback = showSettings
         tipsDataSource.goProCallback = showGoPro
-        tipsDataSource.viewGuideCallback = showHelp
+        tipsDataSource.viewGuideCallback = showUserGuide
         tipsDataSource.rateCallback = rateApp
         tipsDataSource.feedbackCallback = sendFeedback
         self.collectionView.dataSource = tipsDataSource
@@ -188,6 +194,11 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         if segue.identifier == searchSegueId
         {
             model.prepareToSearch()
+        } else if segue.identifier == userGuideSegueId {
+            if let definitionVC = segue.destination as? DefinitionViewController {
+                definitionVC.word = "User Guide"
+                definitionVC.definitionUrl = "https://pigdogbay.blogspot.co.uk/2017/11/anagram-solver-guide.html"
+            }
         }
     }
     
