@@ -157,7 +157,6 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == self.definitionSegueId
         {
-            self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"Back", style:.plain, target:nil, action:nil)
             if let definitionVC = segue.destination as? DefinitionViewController {
                 if let cell = sender as? UITableViewCell {
                     //Cell icon press
