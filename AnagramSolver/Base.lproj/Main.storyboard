@@ -619,6 +619,7 @@
                         <outlet property="textFieldQuery" destination="a7i-Fj-C2n" id="230-eb-cbu"/>
                         <segue destination="Ka6-c6-The" kind="show" identifier="goProSegue" id="zt4-Lf-rRH"/>
                         <segue destination="4Af-sq-xAG" kind="show" identifier="helpSegue" id="syy-GI-RWt"/>
+                        <segue destination="2tR-EW-1Aq" kind="show" identifier="segueUserGuide" id="D2K-XF-Zb6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1KR-DA-gfW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -941,4 +942,7 @@
         <image name="lightbulb_on" width="42" height="42"/>
         <image name="pro" width="42" height="42"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="D2K-XF-Zb6"/>
+    </inferredMetricsTieBreakers>
 </document>
