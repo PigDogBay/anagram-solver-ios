@@ -34,14 +34,12 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
 
     @IBAction func menuButtonPressed(_ sender: UIBarButtonItem) {
         let controller = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let rateAction = UIAlertAction(title: "Rate Anagram Solver", style: .default, handler: {action in self.rateApp()})
-        let sendFeedbackAction = UIAlertAction(title: "Send Feedback", style: .default, handler: {action in self.sendFeedback()})
-        let goProAction = UIAlertAction(title: "Go Pro", style: .default, handler: {action in self.showGoPro()})
+        let helpAction = UIAlertAction(title: "User Guide", style: .default, handler: {action in self.showUserGuide()})
+        let goProAction = UIAlertAction(title: "Upgrade To Pro", style: .default, handler: {action in self.showGoPro()})
         let settingsAction = UIAlertAction(title: "Settings", style: .default, handler: {action in self.showSettings()})
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
 
-        controller.addAction(rateAction)
-        controller.addAction(sendFeedbackAction)
+        controller.addAction(helpAction)
         controller.addAction(goProAction)
         controller.addAction(settingsAction)
         controller.addAction(cancelAction)
