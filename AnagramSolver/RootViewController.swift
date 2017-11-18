@@ -121,7 +121,11 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     }
     
     func fontSettingsCheck(){
-        textFieldQuery.font = Model.sharedInstance.settings.useMonospacedFont ? monospacedFont : systemFont
+        let font = Model.sharedInstance.settings.useMonospacedFont ? monospacedFont : systemFont
+        if font?.fontName != textFieldQuery.font?.fontName {
+            //font setting has changed
+            textFieldQuery.font = font
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
