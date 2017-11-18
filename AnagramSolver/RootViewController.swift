@@ -246,10 +246,6 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         case .uninitialized:
             self.searchButton.isEnabled=false
             let proFlag = self.model.settings.isProMode
-            if !proFlag{
-                //First time and only set up for ads
-                Ads.createBannerView(vc: self)
-            }
             self.title = proFlag ? "AS Pro" : "Anagram Solver"
             let useProWordList = model.settings.useProWordList
             self.searchButton.title = useProWordList ? "Search+" : "Search"
