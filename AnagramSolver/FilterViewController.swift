@@ -10,14 +10,11 @@ import UIKit
 
 class FilterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var bannerView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func searchClicked(_ sender: Any) {
         filterSearch()
     }
-    
-    @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     
 
     @IBAction func unwindWithSelectedListItem(segue:UIStoryboardSegue) {
@@ -53,14 +50,6 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
 
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        if model.settings.isProMode {
-            bannerHeightConstraint.constant = 0
-        } else {
-            Ads.addAdView(container: bannerView)
-        }
-    }
-    
     fileprivate func filterSearch() {
         if let navCtrl = self.navigationController {
             model.prepareToFilterSearch()
