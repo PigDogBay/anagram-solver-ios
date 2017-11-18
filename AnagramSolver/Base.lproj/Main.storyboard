@@ -670,7 +670,7 @@
                                     <outlet property="dataSource" destination="VQ0-Lb-tBU" id="jYX-5P-9Iy"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayg-FS-pz2">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayg-FS-pz2" customClass="GADBannerView">
                                 <rect key="frame" x="27.666666666666657" y="640" width="320" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -703,7 +703,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bannerHeightConstraint" destination="WGA-dx-snB" id="GBS-7f-0vh"/>
-                        <outlet property="bannerView" destination="ayg-FS-pz2" id="oZk-Bf-AIG"/>
+                        <outlet property="bannerView" destination="ayg-FS-pz2" id="3ob-Cg-pH2"/>
                         <outlet property="matchesTable" destination="8RR-Nh-2cY" id="MWx-Su-Tuy"/>
                         <outlet property="navBar" destination="drl-D2-IA4" id="kgb-G1-0b3"/>
                         <outlet property="statusLabel" destination="o39-YA-7GC" id="s3H-XR-zQ1"/>
@@ -919,6 +919,6 @@
         <image name="pro" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="D2K-XF-Zb6"/>
+        <segue reference="kV8-yp-vNU"/>
     </inferredMetricsTieBreakers>
 </document>
