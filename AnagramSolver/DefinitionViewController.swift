@@ -15,8 +15,6 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var loadingLabel: UILabel!
     @IBOutlet weak var webViewContainer: UIView!
-    @IBOutlet weak var bannerView: UIView!
-    @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     
     var word : String!
     var definitionUrl : String!
@@ -44,13 +42,6 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
         view.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        if Model.sharedInstance.settings.isProMode {
-            bannerHeightConstraint.constant = 0
-        } else {
-            Ads.addAdView(container: bannerView)
-        }
     }
 
     override func viewWillDisappear(_ animated: Bool) {

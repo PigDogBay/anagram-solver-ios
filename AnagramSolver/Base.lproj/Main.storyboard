@@ -881,16 +881,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7t-WH-hkQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="640"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uux-Gt-iyt">
-                                <rect key="frame" x="27" y="640" width="320" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="OB6-XA-0bv"/>
-                                    <constraint firstAttribute="width" constant="320" id="VIx-Sa-vW1"/>
-                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5b-GP-dTL">
                                 <rect key="frame" x="150" y="388.66666666666669" width="75" height="21"/>
@@ -908,11 +900,9 @@
                             <constraint firstItem="84u-PT-K9w" firstAttribute="centerX" secondItem="L5b-GP-dTL" secondAttribute="centerX" id="24C-rl-a9u"/>
                             <constraint firstItem="z7t-WH-hkQ" firstAttribute="leading" secondItem="84u-PT-K9w" secondAttribute="leading" id="7lj-Y3-ZxO"/>
                             <constraint firstItem="84u-PT-K9w" firstAttribute="trailing" secondItem="z7t-WH-hkQ" secondAttribute="trailing" id="BKc-HQ-U1w"/>
+                            <constraint firstItem="z7t-WH-hkQ" firstAttribute="bottom" secondItem="84u-PT-K9w" secondAttribute="bottom" id="GEo-Ck-UIs"/>
                             <constraint firstItem="84u-PT-K9w" firstAttribute="centerX" secondItem="utU-ey-tE8" secondAttribute="centerX" id="RvX-KF-dSa"/>
-                            <constraint firstItem="Uux-Gt-iyt" firstAttribute="top" secondItem="z7t-WH-hkQ" secondAttribute="bottom" id="S8o-qv-5gK"/>
                             <constraint firstItem="z7t-WH-hkQ" firstAttribute="top" secondItem="84u-PT-K9w" secondAttribute="top" id="Ufg-40-YAd"/>
-                            <constraint firstItem="Uux-Gt-iyt" firstAttribute="centerX" secondItem="Ow2-rk-wKX" secondAttribute="centerX" id="WI6-Iq-1pk"/>
-                            <constraint firstItem="Uux-Gt-iyt" firstAttribute="bottom" secondItem="84u-PT-K9w" secondAttribute="bottom" id="WWO-s1-3IN"/>
                             <constraint firstItem="L5b-GP-dTL" firstAttribute="top" secondItem="utU-ey-tE8" secondAttribute="bottom" constant="8" id="cOa-cB-lp6"/>
                             <constraint firstAttribute="centerY" secondItem="utU-ey-tE8" secondAttribute="centerY" id="yyj-eW-CSg"/>
                         </constraints>
@@ -920,8 +910,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Definition" id="DWD-wG-j73"/>
                     <connections>
-                        <outlet property="bannerHeightConstraint" destination="OB6-XA-0bv" id="b4z-O8-hEe"/>
-                        <outlet property="bannerView" destination="Uux-Gt-iyt" id="cp1-tJ-lfN"/>
                         <outlet property="loadingIndicator" destination="utU-ey-tE8" id="bvS-YX-YIE"/>
                         <outlet property="loadingLabel" destination="L5b-GP-dTL" id="ewe-sy-EOL"/>
                         <outlet property="navigationBar" destination="DWD-wG-j73" id="KUL-Nx-zAb"/>
