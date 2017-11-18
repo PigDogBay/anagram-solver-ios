@@ -35,6 +35,7 @@ class TipCollectionViewCell: UICollectionViewCell {
     
     //https://stackoverflow.com/questions/18113872/uicollectionviewcell-with-rounded-corners-and-drop-shadow-not-working
     override func layoutSubviews() {
+        super.layoutSubviews()
         self.layer.cornerRadius = 2.0
         //Shadow effect
         //        cell.contentView.layer.borderWidth = 1.0
