@@ -19,6 +19,9 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     let helpSegueId = "helpSegue"
     let userGuideSegueId = "segueUserGuide"
     let tipsDataSource = TipsDataSource()
+    
+    let monospacedFont = UIFont(name: "Menlo-Regular",size: 24.0)
+    let systemFont = UIFont.systemFont(ofSize: 24.0, weight: .regular)
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var searchButton: UIBarButtonItem!
@@ -117,6 +120,10 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         // Dispose of any resources that can be recreated.
     }
     
+    func fontSettingsCheck(){
+        textFieldQuery.font = Model.sharedInstance.settings.useMonospacedFont ? monospacedFont : systemFont
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         
         let app = UIApplication.shared
@@ -126,6 +133,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     @objc func appEnterForgeround() {
         //check for any settings changes
         model.checkForSettingsChange()
+        fontSettingsCheck()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -147,6 +155,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         //remove shadow line from underneath the nav bar
         //https://stackoverflow.com/questions/19226965/how-to-hide-uinavigationbar-1px-bottom-line
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        fontSettingsCheck()
         model = Model.sharedInstance
         model.addObserver("root", observer: self)
         if mpdbCheckIsFirstTime()
