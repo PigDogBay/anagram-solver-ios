@@ -19,6 +19,9 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     fileprivate var wordDefinitionUrl = ""
     
     let definitionSegueId = "definitionSegue"
+    static let monospacedFont = UIFont(name: "Menlo-Regular",size: 20.0)
+    static let systemFont = UIFont.systemFont(ofSize: 16.0, weight: .regular)
+
     
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var matchesTable: UITableView!
@@ -193,6 +196,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as UITableViewCell
+        cell.textLabel?.font = model.settings.useMonospacedFont ? MatchesViewController.monospacedFont : MatchesViewController.systemFont
         let word = model.matches[indexPath.row]
         model.wordFormatter.setLabelText(cell.textLabel, word)
         return cell
