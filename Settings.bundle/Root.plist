@@ -28,11 +28,39 @@
 			<key>Type</key>
 			<string>PSMultiValueSpecifier</string>
 			<key>Title</key>
-			<string>Dictionary Definition</string>
+			<string>Dictionary definition</string>
 			<key>Key</key>
 			<string>definition</string>
 			<key>DefaultValue</key>
 			<string>google</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Automatically show keyboard</string>
+			<key>Key</key>
+			<string>showKeyboard</string>
+			<key>DefaultValue</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Allow long press on results</string>
+			<key>Key</key>
+			<string>longPressEnabled</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>FooterText</key>
+			<string>Use a monospaced font for the query field and results</string>
+			<key>Title</key>
+			<string>Appearance</string>
 		</dict>
 		<dict>
 			<key>Values</key>
@@ -52,7 +80,7 @@
 			<key>Type</key>
 			<string>PSMultiValueSpecifier</string>
 			<key>Title</key>
-			<string>Letter Highlighting</string>
+			<string>Letter highlighting</string>
 			<key>Key</key>
 			<string>highlight</string>
 			<key>DefaultValue</key>
@@ -62,21 +90,11 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Automatically Show keyboard</string>
+			<string>Use monospaced font</string>
 			<key>Key</key>
-			<string>showKeyboard</string>
+			<string>useMonospacedFont</string>
 			<key>DefaultValue</key>
 			<false/>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Allow long press on results</string>
-			<key>Key</key>
-			<string>longPressEnabled</string>
-			<key>DefaultValue</key>
-			<true/>
 		</dict>
 		<dict>
 			<key>FooterText</key>
@@ -114,7 +132,7 @@
 			<key>Type</key>
 			<string>PSMultiValueSpecifier</string>
 			<key>Title</key>
-			<string>Results Limit</string>
+			<string>Results limit</string>
 			<key>Key</key>
 			<string>resultsLimit</string>
 			<key>DefaultValue</key>

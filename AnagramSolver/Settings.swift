@@ -15,7 +15,8 @@ class Settings
     fileprivate let highlightKey = "highlight"
     fileprivate let showKeyboardKey = "showKeyboard"
     fileprivate let longPressEnabledKey = "longPressEnabled"
-    
+    fileprivate let useMonospacedFontKey = "useMonospacedFont"
+
     //Pro settings
     fileprivate let useProWordListKey = "useProWordList"
     fileprivate let resultsLimitKey = "resultsLimit"
@@ -39,6 +40,12 @@ class Settings
                 }
             }
             return UIColor.red
+        }
+    }
+
+    var useMonospacedFont : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: useMonospacedFontKey)
         }
     }
     
