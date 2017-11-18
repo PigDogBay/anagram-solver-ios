@@ -65,9 +65,9 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         }
         let mailVC = MFMailComposeViewController()
         mailVC.mailComposeDelegate = self
-        mailVC.setSubject("Anagram Solver Feedback iOS v1.03")
+        mailVC.setSubject("Anagram Solver Feedback iOS v1.04")
         mailVC.setToRecipients(["pigdogbay@yahoo.co.uk"])
-        mailVC.setMessageBody("Your feedback is most welcome\n *Report Bugs\n *Suggest new features\n *Ask for help\n\n\nHi Mark,\n\n[Enter you message here]", isHTML: false)
+        mailVC.setMessageBody("Your feedback is most welcome\n *Report Bugs\n *Suggest new features\n *Ask for help\n\n\nHi Mark,\n\n", isHTML: false)
         present(mailVC, animated: true, completion: nil)
     }
 
