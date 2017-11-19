@@ -268,7 +268,7 @@
                                             <outlet property="titleLabel" destination="GWU-aA-6Hu" id="TP6-QT-LDO"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellDefinitions" id="B0y-7b-KBs">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellDefinitions" id="B0y-7b-KBs" customClass="ShadowCollectionViewCell" customModule="AnagramSolver" customModuleProvider="target">
                                         <rect key="frame" x="43.666666666666664" y="277" width="288" height="228"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -309,7 +309,7 @@
                                         </constraints>
                                         <size key="customSize" width="288" height="228"/>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellFilters" id="bA4-Jy-XCa">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellFilters" id="bA4-Jy-XCa" customClass="ShadowCollectionViewCell" customModule="AnagramSolver" customModuleProvider="target">
                                         <rect key="frame" x="43.666666666666664" y="521" width="288" height="228"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
