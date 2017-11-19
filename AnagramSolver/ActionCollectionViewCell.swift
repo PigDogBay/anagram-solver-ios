@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ActionCollectionViewCell: UICollectionViewCell {
+class ActionCollectionViewCell: ShadowCollectionViewCell {
     var button1Callback : (() -> Void)?
     var button2Callback : (() -> Void)?
 
