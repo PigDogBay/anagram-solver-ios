@@ -152,7 +152,7 @@
 			<key>Key</key>
 			<string>version</string>
 			<key>DefaultValue</key>
-			<string>1.04</string>
+			<string>1.05</string>
 		</dict>
 		<dict>
 			<key>Type</key>
