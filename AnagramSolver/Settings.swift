@@ -22,7 +22,6 @@ class Settings
     fileprivate let resultsLimitKey = "resultsLimit"
     fileprivate let isProKey = "isProFlag"
     
-    fileprivate let standardResultLimit = 500
     let darkGreen = UIColor(red: 0.0, green: 0.5, blue: 0.0, alpha: 1.0)
     
     var highlight : UIColor {
@@ -94,16 +93,13 @@ class Settings
     
     var resultsLimit : Int {
         get {
-            if isProMode {
-                return UserDefaults.standard.integer(forKey: resultsLimitKey)
-            }
-            return standardResultLimit
+            return UserDefaults.standard.integer(forKey: resultsLimitKey)
         }
     }
     
     var useProWordList : Bool {
         get {
-            return isProMode && UserDefaults.standard.bool(forKey: useProWordListKey)
+            return UserDefaults.standard.bool(forKey: useProWordListKey)
         }
     }
     
@@ -112,9 +108,9 @@ class Settings
                                highlightKey : "red",
                                showKeyboardKey : false,
                                longPressEnabledKey : true,
-                               useProWordListKey : true,
+                               useProWordListKey : false,
                                isProKey : false,
-                               resultsLimitKey : 5000]
+                               resultsLimitKey : 1000]
         UserDefaults.standard.register(defaults: defaultSettings)
     }
     

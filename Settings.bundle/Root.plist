@@ -98,21 +98,21 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Available if you have made the Pro in app purchase. The standard word list has 130,000 words, the pro has 280,000 words.</string>
+			<string>The standard word list has 130,000 words, the large has 290,000 words.</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Pro Settings</string>
+			<string>Advanced Settings</string>
 		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Use Pro word list</string>
+			<string>Use the large word list</string>
 			<key>Key</key>
 			<string>useProWordList</string>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Titles</key>
@@ -136,7 +136,7 @@
 			<key>Key</key>
 			<string>resultsLimit</string>
 			<key>DefaultValue</key>
-			<string>5000</string>
+			<string>1000</string>
 		</dict>
 		<dict>
 			<key>Type</key>
