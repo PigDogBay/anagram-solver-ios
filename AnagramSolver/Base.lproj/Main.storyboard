@@ -150,21 +150,6 @@
             </objects>
             <point key="canvasLocation" x="78" y="-475"/>
         </scene>
-        <!--Help-->
-        <scene sceneID="Lpb-vC-HE2">
-            <objects>
-                <viewController title="Help" id="4Af-sq-xAG" customClass="HelpViewController" customModule="AnagramSolver" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Rkg-jq-GHc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="rgf-3m-kqZ"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BiN-z6-GJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="867" y="-503"/>
-        </scene>
         <!--Anagram Solver-->
         <scene sceneID="duY-AS-EmT">
             <objects>
@@ -613,7 +598,6 @@
                         <outlet property="searchButton" destination="a8L-df-lOj" id="QZ0-bu-JwH"/>
                         <outlet property="textFieldQuery" destination="a7i-Fj-C2n" id="230-eb-cbu"/>
                         <segue destination="Ka6-c6-The" kind="show" identifier="goProSegue" id="zt4-Lf-rRH"/>
-                        <segue destination="4Af-sq-xAG" kind="show" identifier="helpSegue" id="syy-GI-RWt"/>
                         <segue destination="2tR-EW-1Aq" kind="show" identifier="segueUserGuide" id="D2K-XF-Zb6"/>
                     </connections>
                 </viewController>
@@ -901,7 +885,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vzp-93-vMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1912.8" y="-503.20197044334975"/>
+            <point key="canvasLocation" x="991" y="-497"/>
         </scene>
     </scenes>
     <resources>
