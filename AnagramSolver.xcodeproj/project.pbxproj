@@ -17,7 +17,6 @@
 		4D33DF011CFDB86B00678B53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D33DEFF1CFDB86B00678B53 /* GoogleService-Info.plist */; };
 		4D3596411CFEEA50008D2FAF /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3596401CFEEA50008D2FAF /* Ads.swift */; };
 		4D3596461D01780A008D2FAF /* GoProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3596451D01780A008D2FAF /* GoProViewController.swift */; };
-		4D3596481D018570008D2FAF /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3596471D018570008D2FAF /* HelpViewController.swift */; };
 		4D35964A1D044605008D2FAF /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D3596491D044605008D2FAF /* help.html */; };
 		4D45D7B01E2901BF00EC2D27 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D45D7AF1E2901BF00EC2D27 /* Settings.bundle */; };
 		4D45D7B31E2CF0C500EC2D27 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45D7B21E2CF0C500EC2D27 /* Settings.swift */; };
@@ -100,7 +99,6 @@
 		4D33DEFF1CFDB86B00678B53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4D3596401CFEEA50008D2FAF /* Ads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
 		4D3596451D01780A008D2FAF /* GoProViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoProViewController.swift; sourceTree = "<group>"; };
-		4D3596471D018570008D2FAF /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		4D3596491D044605008D2FAF /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		4D45D7AF1E2901BF00EC2D27 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		4D45D7B21E2CF0C500EC2D27 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 			children = (
 				4D45F0151A9E03A400C40BB4 /* DefinitionViewController.swift */,
 				4D3596451D01780A008D2FAF /* GoProViewController.swift */,
-				4D3596471D018570008D2FAF /* HelpViewController.swift */,
 				4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */,
 				4DF2DE391FACBDBB00F44ADE /* FilterViewController.swift */,
 				4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */,
@@ -554,7 +551,6 @@
 				4D09F28D1FC1B02300EFA535 /* ShadowCollectionViewCell.swift in Sources */,
 				4DF2DE451FB3200E00F44ADE /* TipsDataSource.swift in Sources */,
 				4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */,
-				4D3596481D018570008D2FAF /* HelpViewController.swift in Sources */,
 				4D3596411CFEEA50008D2FAF /* Ads.swift in Sources */,
 				4D9E43AD1FAC84FC007007C8 /* Filter.swift in Sources */,
 				4D3596461D01780A008D2FAF /* GoProViewController.swift in Sources */,
