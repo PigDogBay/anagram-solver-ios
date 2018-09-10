@@ -660,8 +660,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8RR-Nh-2cY" firstAttribute="leading" secondItem="FYA-nq-3Id" secondAttribute="leading" id="52g-hW-A59"/>
-                            <constraint firstItem="FYA-nq-3Id" firstAttribute="trailing" secondItem="8RR-Nh-2cY" secondAttribute="trailing" id="JYz-xk-1IV"/>
+                            <constraint firstItem="8RR-Nh-2cY" firstAttribute="leading" secondItem="8OF-kr-Jnp" secondAttribute="leading" id="52g-hW-A59"/>
+                            <constraint firstAttribute="trailing" secondItem="8RR-Nh-2cY" secondAttribute="trailing" id="JYz-xk-1IV"/>
                             <constraint firstItem="8RR-Nh-2cY" firstAttribute="top" secondItem="o39-YA-7GC" secondAttribute="bottom" constant="8" id="acX-4i-Zgg"/>
                             <constraint firstItem="FYA-nq-3Id" firstAttribute="centerX" secondItem="o39-YA-7GC" secondAttribute="centerX" id="bMg-ox-6f8"/>
                             <constraint firstItem="FYA-nq-3Id" firstAttribute="bottom" secondItem="ayg-FS-pz2" secondAttribute="bottom" id="c0X-xb-lgx"/>
@@ -898,6 +898,6 @@
         <image name="pro" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="D2K-XF-Zb6"/>
+        <segue reference="kV8-yp-vNU"/>
     </inferredMetricsTieBreakers>
 </document>
