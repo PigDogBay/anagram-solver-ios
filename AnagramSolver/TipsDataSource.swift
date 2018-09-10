@@ -17,7 +17,8 @@ class TipsDataSource : NSObject, UICollectionViewDataSource
     static let tip4 = ["Shortcuts","Use numbers instead of dots\nEnter z9\nTo find\nzombielike, zookeepers","z9"]
     static let tip5 = ["Supergrams","Find larger words\nEnter kayleigh*\nTo find\nbreathtakingly, heartbreakingly","kayleigh*"]
     static let tip6 = ["Prefix@Suffix","Use @ for 1 or more letters\nEnter super@ted\nTo find\nsupersophisticated","super@ted"]
-    static let tips = [tip0,tip1,tip2,tip3,tip4,tip5,tip6]
+    static let tip7 = ["Codewords","Use 1,2,3 to represent\nthe same letters.\nTry ..112332\nFor cassette, pallette...","..112332"]
+    static let tips = [tip0,tip1,tip2,tip3,tip4,tip5,tip6,tip7]
     
     let tipCellId = "cellBulb"
     var showMeCallback : ((_ query : String) -> Void)?
@@ -26,6 +27,7 @@ class TipsDataSource : NSObject, UICollectionViewDataSource
     var viewGuideCallback : (() -> Void)?
     var goProCallback : (() -> Void)?
     var settingsCallback : (() -> Void)?
+    fileprivate var isProMode : Bool { get {return Model.sharedInstance.settings.isProMode}}
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 13
@@ -82,9 +84,15 @@ class TipsDataSource : NSObject, UICollectionViewDataSource
             cell = getTipCell(tipIndex: 6, collectionView: collectionView, indexPath: indexPath)
         case 12:
             //Go Pro
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellPro", for: indexPath)
-            if let actionCell = cell as? ActionCollectionViewCell {
-                actionCell.button1Callback = self.goProCallback
+            if isProMode {
+                //codewords
+                cell = getTipCell(tipIndex: 7, collectionView: collectionView, indexPath: indexPath)
+            } else {
+                //show Go Pro Tip
+                cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellPro", for: indexPath)
+                if let actionCell = cell as? ActionCollectionViewCell {
+                    actionCell.button1Callback = self.goProCallback
+                }
             }
         default:
             abort()
