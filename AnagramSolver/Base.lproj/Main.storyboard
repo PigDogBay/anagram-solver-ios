@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mw5-Ah-dVR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mw5-Ah-dVR">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="2320" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upgrade" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcV-jy-IZU">
-                                <rect key="frame" x="168.66666666666666" y="27" width="89.333333333333343" height="27"/>
+                                <rect key="frame" x="168.66666666666666" y="27.333333333333329" width="89.333333333333343" height="26.333333333333329"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -198,7 +198,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NyA-1A-NhE">
-                                <rect key="frame" x="0.0" y="66" width="375" height="624"/>
+                                <rect key="frame" x="0.0" y="66" width="375" height="658"/>
                                 <color key="backgroundColor" red="0.82745098039215681" green="0.85882352941176465" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="scrollIndicatorInsets" minX="2" minY="2" maxX="2" maxY="2"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="XQw-nm-BGy">
@@ -361,7 +361,7 @@
                                                     <rect key="frame" x="20" y="20" width="42" height="42"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxQ-TC-kuc">
-                                                    <rect key="frame" x="43.666666666666657" y="78.666666666666686" width="201" height="122"/>
+                                                    <rect key="frame" x="43.999999999999986" y="78.666666666666686" width="200.66666666666663" height="122"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Choose: * Dictionary definition * Standard or Pro word list * Results limit and more">
                                                             <attributes>
@@ -473,7 +473,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qaf-KL-8mY">
-                                                    <rect key="frame" x="50" y="78.666666666666686" width="188" height="122"/>
+                                                    <rect key="frame" x="50.333333333333329" y="78.666666666666686" width="187.66666666666669" height="122"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Online User Guide  * In-depth help * Crack word games * Best ways to use filters">
                                                             <attributes>
@@ -526,7 +526,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k13-AS-8gX">
-                                                    <rect key="frame" x="53.666666666666657" y="78.666666666666686" width="181" height="122"/>
+                                                    <rect key="frame" x="54.000000000000014" y="78.666666666666686" width="180.33333333333337" height="122"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Keep updates coming * Rate the app * Send any suggestions * Tell your friends">
                                                             <attributes>
@@ -579,13 +579,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.22435467216022403" green="0.33736878876537241" blue="0.60241948341836737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NyA-1A-NhE" firstAttribute="bottom" secondItem="wdn-4e-A96" secondAttribute="bottom" id="1QM-eF-1AP"/>
                             <constraint firstItem="NyA-1A-NhE" firstAttribute="top" secondItem="FRf-rd-9cX" secondAttribute="bottom" constant="8" id="6dA-Kw-EhU"/>
                             <constraint firstItem="FRf-rd-9cX" firstAttribute="leading" secondItem="wdn-4e-A96" secondAttribute="leading" constant="8" id="LJ2-gZ-ouS"/>
                             <constraint firstItem="wdn-4e-A96" firstAttribute="trailing" secondItem="NyA-1A-NhE" secondAttribute="trailing" id="WDh-fE-bD2"/>
                             <constraint firstItem="FRf-rd-9cX" firstAttribute="top" secondItem="wdn-4e-A96" secondAttribute="top" constant="8" id="gtq-AN-aet"/>
                             <constraint firstItem="wdn-4e-A96" firstAttribute="trailing" secondItem="FRf-rd-9cX" secondAttribute="trailing" constant="8" id="h7T-Wd-EVa"/>
                             <constraint firstItem="NyA-1A-NhE" firstAttribute="leading" secondItem="wdn-4e-A96" secondAttribute="leading" id="qcd-sT-2jj"/>
+                            <constraint firstAttribute="bottom" secondItem="NyA-1A-NhE" secondAttribute="bottom" id="rjJ-za-4f3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wdn-4e-A96"/>
                         <connections>
@@ -721,7 +721,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellLettersFilter" id="68B-NI-3gQ" customClass="LettersFilterTableViewCell" customModule="AnagramSolver" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.333333333333336" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="68B-NI-3gQ" id="Fvr-cB-U9o">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
