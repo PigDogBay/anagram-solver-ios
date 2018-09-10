@@ -346,9 +346,9 @@
                                                     <rect key="frame" x="20" y="20" width="42" height="42"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxQ-TC-kuc">
-                                                    <rect key="frame" x="43.999999999999986" y="78.666666666666686" width="200.66666666666663" height="122"/>
+                                                    <rect key="frame" x="37.666666666666657" y="78.666666666666686" width="213" height="122"/>
                                                     <attributedString key="attributedText">
-                                                        <fragment content="Choose: * Dictionary definition * Standard or Pro word list * Results limit and more">
+                                                        <fragment content="Choose: * Dictionary definition * Standard or large word list * Results limit and more">
                                                             <attributes>
                                                                 <font key="NSFont" metaFont="system" size="17"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
