@@ -717,7 +717,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="zzJ-05-qbs">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellLettersFilter" id="68B-NI-3gQ" customClass="LettersFilterTableViewCell" customModule="AnagramSolver" customModuleProvider="target">
@@ -787,10 +787,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zzJ-05-qbs" firstAttribute="bottom" secondItem="DFz-WZ-CsQ" secondAttribute="bottom" id="100-1N-tnS"/>
                             <constraint firstItem="zzJ-05-qbs" firstAttribute="top" secondItem="DFz-WZ-CsQ" secondAttribute="top" id="3kP-It-p47"/>
-                            <constraint firstItem="DFz-WZ-CsQ" firstAttribute="trailing" secondItem="zzJ-05-qbs" secondAttribute="trailing" id="8Wg-gs-h6y"/>
-                            <constraint firstItem="zzJ-05-qbs" firstAttribute="leading" secondItem="DFz-WZ-CsQ" secondAttribute="leading" id="V2d-M5-j16"/>
+                            <constraint firstItem="zzJ-05-qbs" firstAttribute="leading" secondItem="z6L-JX-oWR" secondAttribute="leading" id="gmY-SM-A79"/>
+                            <constraint firstAttribute="bottom" secondItem="zzJ-05-qbs" secondAttribute="bottom" id="gyt-cz-HTU"/>
+                            <constraint firstItem="zzJ-05-qbs" firstAttribute="trailing" secondItem="z6L-JX-oWR" secondAttribute="trailing" id="ooD-hH-xja"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DFz-WZ-CsQ"/>
                     </view>
