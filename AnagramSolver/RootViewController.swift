@@ -164,7 +164,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         model.addObserver("root", observer: self)
         if mpdbCheckIsFirstTime()
         {
-            mpdbShowAlert("Welcome",msg: "Thanks for trying Anagram Solver, enter your letters and search over 130,000 words!")
+            mpdbShowAlert("Welcome",msg: "Thanks for trying Anagram Solver, enter your letters and search over 280,000 words!")
         }
     }
     override func viewDidAppear(_ animated: Bool)
@@ -290,11 +290,13 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         if cmd == "-cmdpro"
         {
             self.model.proMode()
+            self.title = "AS Pro"
             return "Pro Mode On"
         }
         else if cmd == "-cmdstd"
         {
             self.model.stdMode()
+            self.title = "Anagram Solver"
             return "Std Mode On"
         }
         return "Bad Command"

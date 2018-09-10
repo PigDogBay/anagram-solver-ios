@@ -185,19 +185,19 @@ class Model : WordListCallback, IAPDelegate
     {
         settings.isProMode = false
         self.applySettings()
-        self.unloadDictionary()
     }
     func proMode()
     {
         settings.isProMode = true
         self.applySettings()
-        self.unloadDictionary()
     }
     
     func applySettings(){
         self.wordFormatter.highlightColor = self.settings.highlight
         self.resultsLimit = self.settings.resultsLimit
         self.useProWordList = settings.useProWordList
+        self.wordSearch.findCodewords = settings.isProMode
+        self.wordSearch.findThreeWordAnagrams = settings.isProMode
     }
     func checkForSettingsChange(){
         //do we need the synchronize?
