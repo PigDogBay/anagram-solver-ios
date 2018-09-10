@@ -416,9 +416,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rB-8o-NdX">
-                                                    <rect key="frame" x="48.333333333333329" y="78.666666666666686" width="190.33333333333337" height="122"/>
+                                                    <rect key="frame" x="60.333333333333329" y="78.666666666666686" width="166.33333333333337" height="122"/>
                                                     <attributedString key="attributedText">
-                                                        <fragment content="Get the Pro Version * Over 280,000 words * Huge 5000 results limit * No Ads">
+                                                        <fragment content="Get the Pro Version * Codeword Searches * Pro Filters * No Ads">
                                                             <attributes>
                                                                 <font key="NSFont" metaFont="system" size="17"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
@@ -909,6 +909,6 @@
         <image name="pro" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kV8-yp-vNU"/>
+        <segue reference="D2K-XF-Zb6"/>
     </inferredMetricsTieBreakers>
 </document>
