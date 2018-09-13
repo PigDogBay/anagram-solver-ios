@@ -101,7 +101,9 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
                                             handler: {action in self.showDefinition(word: word, url: WordSearch.getOxfordDictionariesUrl(word: word))})
         
         let copyAction = UIAlertAction(title: "Copy", style: .default, handler: {action in UIPasteboard.general.string = word})
-        
+        let copyAllAction = UIAlertAction(title: "Copy All", style: .default, handler: {action in
+            UIPasteboard.general.string = self.model.copyAll()})
+
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         controller.addAction(googleAction)
         controller.addAction(merriamWebsterAction)
@@ -110,6 +112,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         controller.addAction(oxfordAction)
         controller.addAction(wikipediaAction)
         controller.addAction(copyAction)
+        controller.addAction(copyAllAction)
         controller.addAction(cancelAction)
 
         //Anchor popover to button for iPads

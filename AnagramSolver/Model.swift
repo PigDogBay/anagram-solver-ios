@@ -171,7 +171,14 @@ class Model : WordListCallback, IAPDelegate
         builder+=Model.getAppWebUrl()
         return builder
     }
-    
+
+    func copyAll()->String
+    {
+        return matches.reduce("", {result, next in
+            result+next+"\n"
+        })
+    }
+
     func isReady() -> Bool
     {
         if States.finished == self.state
