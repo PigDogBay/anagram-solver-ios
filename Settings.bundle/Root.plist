@@ -102,7 +102,7 @@
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
-			<string>Advanced Settings</string>
+			<string>Search Settings</string>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -114,6 +114,16 @@
 			<key>DefaultValue</key>
 			<false/>
 		</dict>
+        <dict>
+            <key>Type</key>
+            <string>PSToggleSwitchSpecifier</string>
+            <key>Title</key>
+            <string>Show Sub-anagrams</string>
+            <key>Key</key>
+            <string>showSubAnagrams</string>
+            <key>DefaultValue</key>
+            <true/>
+        </dict>
 		<dict>
 			<key>Titles</key>
 			<array>

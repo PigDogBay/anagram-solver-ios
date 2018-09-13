@@ -198,6 +198,7 @@ class Model : WordListCallback, IAPDelegate
         self.useProWordList = settings.useProWordList
         self.wordSearch.findCodewords = settings.isProMode
         self.wordSearch.findThreeWordAnagrams = settings.isProMode
+        self.wordSearch.findSubAnagrams = settings.showSubAnagrams
     }
     func checkForSettingsChange(){
         //do we need the synchronize?

@@ -16,9 +16,8 @@ class Settings
     fileprivate let showKeyboardKey = "showKeyboard"
     fileprivate let longPressEnabledKey = "longPressEnabled"
     fileprivate let useMonospacedFontKey = "useMonospacedFont"
-
-    //Pro settings
     fileprivate let useProWordListKey = "useProWordList"
+    fileprivate let showSubAnagramsKey = "showSubAnagrams"
     fileprivate let resultsLimitKey = "resultsLimit"
     fileprivate let isProKey = "isProFlag"
     
@@ -103,6 +102,12 @@ class Settings
         }
     }
     
+    var showSubAnagrams : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: showSubAnagramsKey)
+        }
+    }
+
     func registerDefaultSettings() {
         let defaultSettings : [ String : Any] = [definitionKey : "google",
                                highlightKey : "red",
@@ -110,6 +115,7 @@ class Settings
                                longPressEnabledKey : true,
                                useProWordListKey : false,
                                isProKey : false,
+                               showSubAnagramsKey : true,
                                resultsLimitKey : 1000]
         UserDefaults.standard.register(defaults: defaultSettings)
     }
