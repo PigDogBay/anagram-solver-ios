@@ -12,7 +12,8 @@
 				<string>Google Definition</string>
 				<string>Merriam-Webster</string>
 				<string>Meriam-Webster Thesaurus</string>
-				<string>Collins</string>
+                <string>Collins</string>
+                <string>Word Game Dictionary</string>
 				<string>Oxford Dictionaries</string>
 				<string>Wikipedia</string>
 			</array>
@@ -21,7 +22,8 @@
 				<string>google</string>
 				<string>merriam-webster</string>
 				<string>thesaurus</string>
-				<string>collins</string>
+                <string>collins</string>
+                <string>word game dictionary</string>
 				<string>oxford</string>
 				<string>wikipedia</string>
 			</array>

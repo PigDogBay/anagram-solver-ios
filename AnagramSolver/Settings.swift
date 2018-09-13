@@ -83,6 +83,8 @@ class Settings
                 return WordSearch.getOxfordDictionariesUrl(word: word)
             case "wikipedia":
                 return WordSearch.getWikipediaUrl(word: word)
+            case "word game dictionary":
+                return WordSearch.getWordGameDictionaryUrl(word:word)
             default:
                 break
             }
