@@ -97,6 +97,8 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
        
         let merriamWebsterAction = UIAlertAction(title: "Merriam-Webster", style: .default,
                                             handler: {action in self.showDefinition(word: word, url: WordSearch.getMerriamWebsterUrl(word: word))})
+        let wordGameAction = UIAlertAction(title: "Word Game Dictionary", style: .default,
+                                         handler: {action in self.showDefinition(word: word, url: WordSearch.getWordGameDictionaryUrl(word: word))})
         let oxfordAction = UIAlertAction(title: "Oxford Dictionaries", style: .default,
                                             handler: {action in self.showDefinition(word: word, url: WordSearch.getOxfordDictionariesUrl(word: word))})
         
@@ -109,6 +111,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         controller.addAction(merriamWebsterAction)
         controller.addAction(thesaurusAction)
         controller.addAction(collinsAction)
+        controller.addAction(wordGameAction)
         controller.addAction(oxfordAction)
         controller.addAction(wikipediaAction)
         controller.addAction(copyAction)
