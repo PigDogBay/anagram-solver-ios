@@ -174,9 +174,7 @@ class Model : WordListCallback, IAPDelegate
 
     func copyAll()->String
     {
-        return matches.reduce("", {result, next in
-            result+next+"\n"
-        })
+        return matches.reduce(""){result, next in result+next+"\n"}
     }
 
     func isReady() -> Bool
