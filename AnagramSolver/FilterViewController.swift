@@ -20,11 +20,11 @@ class FilterViewController: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 if let value = vc.selectedIndex {
                     switch indexPath {
-                    case [4,0]:
+                    case [3,0]:
                         model.filter.equalTo = value
-                    case [4,1]:
+                    case [3,1]:
                         model.filter.biggerThan = value
-                    case [4,2]:
+                    case [3,2]:
                         model.filter.lessThan = value
                     default:
                         break
@@ -71,17 +71,17 @@ class FilterViewController: UITableViewController {
      [Prefix |enter letters|]
      [Suffix |enter letters|]
      Find words starting or ending with your specified letters.
-     
-     Pro Filters
-     [Word Pattern | enter pattern]
-     [Regular Expression : Enter regex]
-     To create a pattern, use . to represent any letter and @ for 1 or more letters, eg s.r..b.e
 
      Filter By Word Size
      Equal to             5>
      Greater than   Not set>
      Less than      Not set>
      Press Search top right to perform a filter search
+     
+     Pro Filters
+     [Word Pattern | enter pattern]
+     [Regular Expression : Enter regex]
+     To create a pattern, use . to represent any letter and @ for 1 or more letters, eg s.r..b.e
 
      */
 
@@ -98,9 +98,9 @@ class FilterViewController: UITableViewController {
         case 2:
             return 2
         case 3:
-            return 2
-        case 4:
             return 3
+        case 4:
+            return 2
         default:
             return 0
         }
@@ -115,9 +115,9 @@ class FilterViewController: UITableViewController {
         case 2:
             return "Prefix / Suffix"
         case 3:
-            return "Pro Filters"
-        case 4:
             return "Filter By Word Size"
+        case 4:
+            return "Pro Filters"
         default:
             return ""
         }
@@ -132,9 +132,9 @@ class FilterViewController: UITableViewController {
         case 2:
             return "Find words starting or ending with your specified letters"
         case 3:
-            return "To create a pattern, use . to represent any letter and @ for 1 or more letters, eg s.r..b.e"
-        case 4:
             return "Press Search top right to perform a filter search"
+        case 4:
+            return "To create a pattern, use . to represent any letter and @ for 1 or more letters, eg s.r..b.e"
         default:
             return ""
         }
@@ -155,15 +155,15 @@ class FilterViewController: UITableViewController {
         case [2,1]:
             return cellForLettersFilter(indexPath, .endsWith)
         case [3,0]:
-            return cellForLettersFilter(indexPath, .crossword)
-        case [3,1]:
-            return cellForLettersFilter(indexPath, .regex)
-        case [4,0]:
             return cellForNumbersFilter(indexPath, model.filter.equalTo, "Equal To")
-        case [4,1]:
+        case [3,1]:
             return cellForNumbersFilter(indexPath, model.filter.biggerThan, "Greater Than")
-        case [4,2]:
+        case [3,2]:
             return cellForNumbersFilter(indexPath, model.filter.lessThan, "Less Than")
+        case [4,0]:
+            return cellForLettersFilter(indexPath, .crossword)
+        case [4,1]:
+            return cellForLettersFilter(indexPath, .regex)
         default:
             return tableView.dequeueReusableCell(withIdentifier: numberCellId, for: indexPath)
         }
@@ -195,13 +195,13 @@ class FilterViewController: UITableViewController {
                 if let selectedCell = sender as? UITableViewCell{
                     if let indexPath = tableView.indexPath(for: selectedCell) {
                         switch indexPath {
-                        case [4,0]:
+                        case [3,0]:
                             vc.title = "Equal To"
                             vc.selectedIndex = model.filter.equalTo
-                        case [4,1]:
+                        case [3,1]:
                             vc.title = "Greater Than"
                             vc.selectedIndex = model.filter.biggerThan
-                        case [4,2]:
+                        case [3,2]:
                             vc.title = "Less Than"
                             vc.selectedIndex = model.filter.lessThan
                         default:
