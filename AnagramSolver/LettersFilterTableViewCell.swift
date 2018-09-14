@@ -14,7 +14,7 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var lettersTextView: UITextField!
     
     enum FilterType {
-        case startsWith, endsWith, contains, excludes
+        case startsWith, endsWith, contains, excludes, containsWord, excludesWord, crossword, regex
     }
     
     var searchPressed : (() -> Void)?
@@ -47,15 +47,35 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
         case .startsWith:
             titleLabel.text = "Prefix"
             lettersTextView.text = filter.startingWith
+            lettersTextView.placeholder = "Enter prefix"
         case .endsWith:
             titleLabel.text = "Suffix"
             lettersTextView.text = filter.endingWith
+            lettersTextView.placeholder = "Enter suffix"
         case .contains:
             titleLabel.text = "Contains"
             lettersTextView.text = filter.containing
+            lettersTextView.placeholder = "Enter letters"
         case .excludes:
             titleLabel.text = "Excludes"
             lettersTextView.text = filter.excluding
+            lettersTextView.placeholder = "Enter letters"
+        case .containsWord:
+            titleLabel.text = "Contains Word"
+            lettersTextView.text = filter.containingWord
+            lettersTextView.placeholder = "Enter word"
+        case .excludesWord:
+            titleLabel.text = "Excludes Word"
+            lettersTextView.text = filter.excludingWord
+            lettersTextView.placeholder = "Enter word"
+        case .crossword:
+            titleLabel.text = "Pattern"
+            lettersTextView.text = filter.crossword
+            lettersTextView.placeholder = "Enter pattern"
+        case .regex:
+            titleLabel.text = "Reg Exp"
+            lettersTextView.text = filter.regex
+            lettersTextView.placeholder = "Enter regex"
         }
         lettersTextView.delegate = self
     }
@@ -71,6 +91,14 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
                 filter?.containing = lettersTextView.text!
             case .excludes:
                 filter?.excluding = lettersTextView.text!
+            case .containsWord:
+                filter?.containingWord = lettersTextView.text!
+            case .excludesWord:
+                filter?.excludingWord = lettersTextView.text!
+            case .crossword:
+                filter?.crossword = lettersTextView.text!
+            case .regex:
+                filter?.regex = lettersTextView.text!
             }
         }
     }

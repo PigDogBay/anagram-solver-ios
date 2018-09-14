@@ -18,6 +18,10 @@ class Filter {
     var endingWith = ""
     var containing = ""
     var excluding = ""
+    var containingWord = ""
+    var excludingWord = ""
+    var crossword = ""
+    var regex = ""
     
     
     var filterCount : Int {
@@ -30,6 +34,10 @@ class Filter {
             if endingWith != "" { count = count + 1}
             if containing != "" { count = count + 1}
             if excluding != "" { count = count + 1}
+            if containingWord != "" { count = count + 1}
+            if excludingWord != "" { count = count + 1}
+            if crossword != "" { count = count + 1}
+            if regex != "" { count = count + 1}
             return count
         }
     }
@@ -42,7 +50,9 @@ class Filter {
         endingWith = ""
         containing = ""
         excluding = ""
+        containingWord = ""
+        excludingWord = ""
+        crossword = ""
+        regex = ""
     }
-    
-    
 }

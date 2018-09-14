@@ -42,6 +42,18 @@ class FilterFactory : WordListCallbackAbstractFactory {
         if filter.excluding != "" {
             callback = ExcludesFilter(callback: callback, letters: filter.excluding)
         }
+        if filter.containingWord != "" {
+            callback = ContainsWordFilter(callback: callback, word: filter.containingWord)
+        }
+        if filter.excludingWord != "" {
+            callback = ExcludesWordFilter(callback: callback, word: filter.excludingWord)
+        }
+        if filter.crossword != "" {
+            callback =  RegexFilter.createCrosswordFilter(callback: callback, query: filter.crossword)
+        }
+        if filter.regex != "" {
+            callback =  RegexFilter(callback: callback, pattern: filter.regex)
+        }
 
         return callback
     }

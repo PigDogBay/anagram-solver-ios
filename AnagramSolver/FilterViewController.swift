@@ -22,11 +22,11 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
             if let indexPath = tableView.indexPathForSelectedRow {
                 if let value = vc.selectedIndex {
                     switch indexPath {
-                    case [2,0]:
+                    case [4,0]:
                         model.filter.equalTo = value
-                    case [2,1]:
+                    case [4,1]:
                         model.filter.biggerThan = value
-                    case [2,2]:
+                    case [4,2]:
                         model.filter.lessThan = value
                     default:
                         break
@@ -65,11 +65,20 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
      [Excludes |enter letters|]
      Letters can be in any order
 
+     Filter By Words
+     [Contains |enter words|]
+     [Excludes |enter words|]
+     
      Prefix / Suffix
      [Prefix |enter letters|]
      [Suffix |enter letters|]
      Find words starting or ending with your specified letters.
      
+     Pro Filters
+     [Word Pattern | enter pattern]
+     [Regular Expression : Enter regex]
+     To create a pattern, use . to represent any letter and @ for 1 or more letters, eg s.r..b.e
+
      Filter By Word Size
      Equal to             5>
      Greater than   Not set>
@@ -79,7 +88,7 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
      */
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 5
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -89,6 +98,10 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
         case 1:
             return 2
         case 2:
+            return 2
+        case 3:
+            return 2
+        case 4:
             return 3
         default:
             return 0
@@ -100,8 +113,12 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
         case 0:
             return "Filter By Letters"
         case 1:
-            return "Prefix / Suffix"
+            return "Filter By Words"
         case 2:
+            return "Prefix / Suffix"
+        case 3:
+            return "Pro Filters"
+        case 4:
             return "Filter By Word Size"
         default:
             return ""
@@ -113,8 +130,12 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
         case 0:
             return "Letters can be in any order here"
         case 1:
-            return "Find words starting or ending with your specified letters"
+            return "Find words that contain a word"
         case 2:
+            return "Find words starting or ending with your specified letters"
+        case 3:
+            return "To create a pattern, use . to represent any letter and @ for 1 or more letters, eg s.r..b.e"
+        case 4:
             return "Press Search top right to perform a filter search"
         default:
             return ""
@@ -128,14 +149,22 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
         case [0,1]:
             return cellForLettersFilter(indexPath, .excludes)
         case [1,0]:
-            return cellForLettersFilter(indexPath, .startsWith)
+            return cellForLettersFilter(indexPath, .containsWord)
         case [1,1]:
-            return cellForLettersFilter(indexPath, .endsWith)
+            return cellForLettersFilter(indexPath, .excludesWord)
         case [2,0]:
-            return cellForNumbersFilter(indexPath, model.filter.equalTo, "Equal To")
+            return cellForLettersFilter(indexPath, .startsWith)
         case [2,1]:
+            return cellForLettersFilter(indexPath, .endsWith)
+        case [3,0]:
+            return cellForLettersFilter(indexPath, .crossword)
+        case [3,1]:
+            return cellForLettersFilter(indexPath, .regex)
+        case [4,0]:
+            return cellForNumbersFilter(indexPath, model.filter.equalTo, "Equal To")
+        case [4,1]:
             return cellForNumbersFilter(indexPath, model.filter.biggerThan, "Greater Than")
-        case [2,2]:
+        case [4,2]:
             return cellForNumbersFilter(indexPath, model.filter.lessThan, "Less Than")
         default:
             return tableView.dequeueReusableCell(withIdentifier: numberCellId, for: indexPath)
@@ -168,13 +197,13 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
                 if let selectedCell = sender as? UITableViewCell{
                     if let indexPath = tableView.indexPath(for: selectedCell) {
                         switch indexPath {
-                        case [2,0]:
+                        case [4,0]:
                             vc.title = "Equal To"
                             vc.selectedIndex = model.filter.equalTo
-                        case [2,1]:
+                        case [4,1]:
                             vc.title = "Greater Than"
                             vc.selectedIndex = model.filter.biggerThan
-                        case [2,2]:
+                        case [4,2]:
                             vc.title = "Less Than"
                             vc.selectedIndex = model.filter.lessThan
                         default:
