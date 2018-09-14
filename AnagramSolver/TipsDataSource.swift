@@ -46,14 +46,14 @@ class TipsDataSource : NSObject, UICollectionViewDataSource
             //Definitions
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellDefinitions", for: indexPath)
         case 3:
-            //Two Words
-            cell = getTipCell(tipIndex: 2, collectionView: collectionView, indexPath: indexPath)
+            //Crosswords
+            cell = getTipCell(tipIndex: 3, collectionView: collectionView, indexPath: indexPath)
         case 4:
             //Filters
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellFilters", for: indexPath)
         case 5:
-            //Crosswords
-            cell = getTipCell(tipIndex: 3, collectionView: collectionView, indexPath: indexPath)
+            //Two Words
+            cell = getTipCell(tipIndex: 2, collectionView: collectionView, indexPath: indexPath)
         case 6:
             //Settings
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellSettings", for: indexPath)
