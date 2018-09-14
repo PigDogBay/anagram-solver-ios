@@ -8,10 +8,8 @@
 
 import UIKit
 
-class FilterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FilterViewController: UITableViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    
     @IBAction func searchClicked(_ sender: Any) {
         filterSearch()
     }
@@ -87,11 +85,11 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
 
      */
 
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 5
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
             return 2
@@ -108,7 +106,7 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
             return "Filter By Letters"
@@ -125,7 +123,7 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         switch section {
         case 0:
             return "Letters can be in any order here"
@@ -142,7 +140,7 @@ class FilterViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath {
         case [0,0]:
             return cellForLettersFilter(indexPath, .contains)
