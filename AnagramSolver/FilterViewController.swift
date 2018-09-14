@@ -86,7 +86,8 @@ class FilterViewController: UITableViewController {
      */
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        //show Pro filters if in Pro mode
+        return model.settings.isProMode ? 5 : 4
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
