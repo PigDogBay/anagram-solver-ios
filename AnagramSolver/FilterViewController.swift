@@ -129,7 +129,7 @@ class FilterViewController: UITableViewController {
         case 0:
             return "Letters can be in any order here"
         case 1:
-            return "Find words that contain a word"
+            return "Find words that contain or exclude a word"
         case 2:
             return "Find words starting or ending with your specified letters"
         case 3:
