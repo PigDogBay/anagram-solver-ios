@@ -553,11 +553,22 @@
                                                         <action selector="button2Clicked:" destination="vOb-DU-7RQ" eventType="touchUpInside" id="0NA-nl-d85"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhP-f8-Jmr">
+                                                    <rect key="frame" x="40" y="216.66666666666666" width="37" height="30"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="TELL">
+                                                        <color key="titleColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="deviceRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="button3Clicked:" destination="vOb-DU-7RQ" eventType="touchUpInside" id="TLI-oy-FKP"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="0eM-uM-Fmm" firstAttribute="leading" secondItem="vOb-DU-7RQ" secondAttribute="leading" constant="20" id="4t8-Cp-TcV"/>
+                                            <constraint firstItem="ffS-H6-FR5" firstAttribute="leading" secondItem="ZhP-f8-Jmr" secondAttribute="trailing" constant="36" id="9LC-59-EVV"/>
                                             <constraint firstItem="ffS-H6-FR5" firstAttribute="top" secondItem="k13-AS-8gX" secondAttribute="bottom" constant="16" id="Cz4-6Y-9mG"/>
                                             <constraint firstAttribute="trailing" secondItem="sPP-Rd-QAK" secondAttribute="trailing" constant="20" id="DgZ-9P-2ee"/>
                                             <constraint firstItem="Os7-uM-3El" firstAttribute="centerX" secondItem="vOb-DU-7RQ" secondAttribute="centerX" id="H4h-aK-ySH"/>
@@ -567,6 +578,7 @@
                                             <constraint firstItem="k13-AS-8gX" firstAttribute="top" secondItem="Os7-uM-3El" secondAttribute="bottom" constant="24" id="V5W-y0-Nev"/>
                                             <constraint firstItem="k13-AS-8gX" firstAttribute="centerX" secondItem="vOb-DU-7RQ" secondAttribute="centerX" id="XFT-ae-bnQ"/>
                                             <constraint firstItem="0eM-uM-Fmm" firstAttribute="top" secondItem="vOb-DU-7RQ" secondAttribute="top" constant="20" id="ach-5j-mUf"/>
+                                            <constraint firstItem="ZhP-f8-Jmr" firstAttribute="top" secondItem="k13-AS-8gX" secondAttribute="bottom" constant="16" id="mRm-Iq-bgP"/>
                                         </constraints>
                                         <size key="customSize" width="288" height="260"/>
                                     </collectionViewCell>
@@ -707,7 +719,7 @@
         <scene sceneID="EoA-tT-y96">
             <objects>
                 <tableViewController id="f1N-K0-6s2" customClass="FilterViewController" customModule="AnagramSolver" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Llf-cD-Q0Z">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Llf-cD-Q0Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -897,6 +909,6 @@
         <image name="pro" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kV8-yp-vNU"/>
+        <segue reference="D2K-XF-Zb6"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,6 +11,7 @@ import UIKit
 class ActionCollectionViewCell: ShadowCollectionViewCell {
     var button1Callback : (() -> Void)?
     var button2Callback : (() -> Void)?
+    var button3Callback : (() -> Void)?
 
     
     @IBAction func button1Clicked(_ sender: UIButton) {
@@ -25,4 +26,9 @@ class ActionCollectionViewCell: ShadowCollectionViewCell {
         }
     }
 
+    @IBAction func button3Clicked(_ sender: UIButton) {
+        if let callback = button3Callback {
+            callback()
+        }
+    }
 }

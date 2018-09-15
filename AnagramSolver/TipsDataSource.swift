@@ -24,6 +24,7 @@ class TipsDataSource : NSObject, UICollectionViewDataSource
     var showMeCallback : ((_ query : String) -> Void)?
     var rateCallback : (() -> Void)?
     var feedbackCallback : (() -> Void)?
+    var recommendCallback : (() -> Void)?
     var viewGuideCallback : (() -> Void)?
     var goProCallback : (() -> Void)?
     var settingsCallback : (() -> Void)?
@@ -78,6 +79,7 @@ class TipsDataSource : NSObject, UICollectionViewDataSource
             if let actionCell = cell as? ActionCollectionViewCell {
                 actionCell.button1Callback = self.feedbackCallback
                 actionCell.button2Callback = self.rateCallback
+                actionCell.button3Callback = self.recommendCallback
             }
         case 11:
             //Prefix@Suffix

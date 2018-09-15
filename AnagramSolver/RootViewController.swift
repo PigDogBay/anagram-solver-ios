@@ -60,17 +60,31 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         Model.sharedInstance.ratings.viewOnAppStore()
     }
     
-    func sendFeedback(){
+    private func mailCheck() -> Bool {
         if !MFMailComposeViewController.canSendMail()
         {
             self.mpdbShowErrorAlert("No Email", msg: "This device is not configured for sending emails.")
-            return
+            return false
         }
+        return true
+    }
+    
+    func sendFeedback(){
+        if !mailCheck() {return}
         let mailVC = MFMailComposeViewController()
         mailVC.mailComposeDelegate = self
         mailVC.setSubject("Anagram Solver Feedback iOS v1.05")
         mailVC.setToRecipients(["pigdogbay@yahoo.co.uk"])
         mailVC.setMessageBody("Your feedback is most welcome\n *Report Bugs\n *Suggest new features\n *Ask for help\n\n\nHi Mark,\n\n", isHTML: false)
+        present(mailVC, animated: true, completion: nil)
+    }
+    func recommend(){
+        if !mailCheck() {return}
+        let mailVC = MFMailComposeViewController()
+        mailVC.mailComposeDelegate = self
+        mailVC.setSubject("Take a look at Anagram Solver")
+//        mailVC.setToRecipients([""])
+        mailVC.setMessageBody(Model.getAppWebUrl(), isHTML: false)
         present(mailVC, animated: true, completion: nil)
     }
 
@@ -152,6 +166,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         tipsDataSource.viewGuideCallback = showUserGuide
         tipsDataSource.rateCallback = rateApp
         tipsDataSource.feedbackCallback = sendFeedback
+        tipsDataSource.recommendCallback = recommend
         self.collectionView.dataSource = tipsDataSource
         self.collectionView.delegate = self
         self.collectionView.contentInset = UIEdgeInsets(top: 16, left: 8, bottom: 20, right: 8)
