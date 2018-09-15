@@ -25,7 +25,7 @@ class Model : WordListCallback, IAPDelegate
 
     class func getAppWebUrl()->String
     {
-        return "http://itunes.apple.com/app/id973923699"
+        return "https://itunes.apple.com/app/id973923699"
     }
     enum States : Int
     {

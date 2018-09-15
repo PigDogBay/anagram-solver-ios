@@ -79,13 +79,13 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         present(mailVC, animated: true, completion: nil)
     }
     func recommend(){
-        if !mailCheck() {return}
-        let mailVC = MFMailComposeViewController()
-        mailVC.mailComposeDelegate = self
-        mailVC.setSubject("Take a look at Anagram Solver")
-//        mailVC.setToRecipients([""])
-        mailVC.setMessageBody(Model.getAppWebUrl(), isHTML: false)
-        present(mailVC, animated: true, completion: nil)
+        let firstActivityItem = "Take a look at Anagram Solver "+Model.getAppWebUrl()
+        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: nil)
+        //For iPads need to anchor the popover, crashes if not set
+        if let ppc = activityViewController.popoverPresentationController {
+            ppc.sourceView = self.view
+        }
+        self.present(activityViewController, animated: true, completion: nil)
     }
 
     // MARK:- MFMailComposeViewControllerDelegate
