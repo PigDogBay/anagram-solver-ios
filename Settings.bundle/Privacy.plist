@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>FooterText</key>
+			<string>
+Key points
+- The app does not store or request any personal information
+- The app uses Google Admob and Firebase analytics to show ads
+- The app does not track how you use the app
+- Feedback emails are stored temporarily, once the issue is resolved your email will be deleted.
+
+You can view the full privacy policy here:
+http://pigdogbay.blogspot.com/2018/05/privacy-policy.html
+
+For further information contact pigdogbay@yahoo.co.uk
+			</string>
+		</dict>
+	</array>
+</dict>
+</plist>
