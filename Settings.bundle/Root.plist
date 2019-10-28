@@ -12,8 +12,8 @@
 				<string>Google Definition</string>
 				<string>Merriam-Webster</string>
 				<string>Meriam-Webster Thesaurus</string>
-                <string>Collins</string>
-                <string>Word Game Dictionary</string>
+				<string>Collins</string>
+				<string>Word Game Dictionary</string>
 				<string>Oxford Dictionaries</string>
 				<string>Wikipedia</string>
 			</array>
@@ -22,8 +22,8 @@
 				<string>google</string>
 				<string>merriam-webster</string>
 				<string>thesaurus</string>
-                <string>collins</string>
-                <string>word game dictionary</string>
+				<string>collins</string>
+				<string>word game dictionary</string>
 				<string>oxford</string>
 				<string>wikipedia</string>
 			</array>
@@ -116,16 +116,16 @@
 			<key>DefaultValue</key>
 			<false/>
 		</dict>
-        <dict>
-            <key>Type</key>
-            <string>PSToggleSwitchSpecifier</string>
-            <key>Title</key>
-            <string>Show Sub-anagrams</string>
-            <key>Key</key>
-            <string>showSubAnagrams</string>
-            <key>DefaultValue</key>
-            <true/>
-        </dict>
+		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Show Sub-anagrams</string>
+			<key>Key</key>
+			<string>showSubAnagrams</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
 		<dict>
 			<key>Titles</key>
 			<array>
@@ -164,24 +164,24 @@
 			<key>Key</key>
 			<string>version</string>
 			<key>DefaultValue</key>
-			<string>1.05</string>
+			<string>1.06</string>
 		</dict>
-        <dict>
-            <key>Type</key>
-            <string>PSChildPaneSpecifier</string>
-            <key>Title</key>
-            <string>Acknowledgements</string>
-            <key>File</key>
-            <string>Acknowledgements</string>
-        </dict>
-        <dict>
-            <key>Type</key>
-            <string>PSChildPaneSpecifier</string>
-            <key>Title</key>
-            <string>Privacy Policy</string>
-            <key>File</key>
-            <string>Privacy</string>
-        </dict>
+		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
+			<string>Acknowledgements</string>
+			<key>File</key>
+			<string>Acknowledgements</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
+			<string>Privacy Policy</string>
+			<key>File</key>
+			<string>Privacy</string>
+		</dict>
 	</array>
 </dict>
 </plist>
