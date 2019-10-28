@@ -306,7 +306,6 @@
 				4D45EFB11A9DFABA00C40BB4 /* Frameworks */,
 				4D45EFB21A9DFABA00C40BB4 /* Resources */,
 				72BE4F180998AADA5422F363 /* [CP] Embed Pods Frameworks */,
-				BADA48CF2D1EACB058345DDD /* [CP] Copy Pods Resources */,
 				4D0543891CFDBE060084538A /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -327,8 +326,6 @@
 				4D45EFC51A9DFABA00C40BB4 /* Sources */,
 				4D45EFC61A9DFABA00C40BB4 /* Frameworks */,
 				4D45EFC71A9DFABA00C40BB4 /* Resources */,
-				FC1686911378DC0893F3E8E8 /* [CP] Embed Pods Frameworks */,
-				2FD67648D996D68F2BEA8C41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -439,21 +436,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2FD67648D996D68F2BEA8C41 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnagramSolverTests/Pods-AnagramSolverTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		64B75DAE61084E7DD7508C15 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -478,7 +460,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -489,7 +471,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AE6A03C175EDED863D07CFC7 /* [CP] Check Pods Manifest.lock */ = {
@@ -508,36 +490,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BADA48CF2D1EACB058345DDD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FC1686911378DC0893F3E8E8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnagramSolverTests/Pods-AnagramSolverTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

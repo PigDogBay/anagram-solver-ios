@@ -7,7 +7,7 @@ target 'AnagramSolver' do
   use_frameworks!
 
   # Pods for AnagramSolver
-  pod 'Firebase/Core'
+  pod 'Firebase/Analytics'
   pod 'Firebase/AdMob'
   
   target 'AnagramSolverTests' do

@@ -18,7 +18,7 @@ struct Ads
         let request = GADRequest()
         request.testDevices = [
             "Simulator",
-            "4ccb6d94e22bce9a7212f16cc927c429",//iPad
+            "1d0dd7e23d31eae8a3e9ad16a8c9b3b4",//iPad
             "cc0b7644c90c4ab95e0150938951def3" //iPhone
         ]
         return request
