@@ -28,7 +28,7 @@ class TipCollectionViewCell: ShadowCollectionViewCell {
         paraStyle.lineSpacing = 0
         paraStyle.lineHeightMultiple = 1.5
         paraStyle.alignment = .left
-        attrString.addAttribute(NSAttributedStringKey.paragraphStyle, value:paraStyle, range:NSMakeRange(0, attrString.length))
+        attrString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paraStyle, range:NSMakeRange(0, attrString.length))
         descriptionLabel.attributedText = attrString
     }
 }

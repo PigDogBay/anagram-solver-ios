@@ -97,7 +97,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     
     func showSettings(){
         let application = UIApplication.shared
-        let url = URL(string: UIApplicationOpenSettingsURLString)! as URL
+        let url = URL(string: UIApplication.openSettingsURLString)! as URL
         if application.canOpenURL(url){
             application.openURL(url)
         }
@@ -145,7 +145,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     override func viewWillAppear(_ animated: Bool) {
         
         let app = UIApplication.shared
-        NotificationCenter.default.addObserver(self, selector: #selector (appEnterForgeround), name: Notification.Name.UIApplicationWillEnterForeground, object: app)
+        NotificationCenter.default.addObserver(self, selector: #selector (appEnterForgeround), name: UIApplication.willEnterForegroundNotification, object: app)
     }
     //Only called when view re-appears from background
     @objc func appEnterForgeround() {

@@ -36,7 +36,7 @@ class GoProViewController: UIViewController, IAPDelegate {
         {
             //purchase already made
             self.buyButton.isEnabled=false
-            self.buyButton.setTitle("Purchased",for: UIControlState())
+            self.buyButton.setTitle("Purchased",for: UIControl.State())
         }
         else if model.iap.canMakePayments()
         {
@@ -48,7 +48,7 @@ class GoProViewController: UIViewController, IAPDelegate {
     // This function is called twice, first when child view is added to parent
     // then secondly when it is removed, in this case parent is nil
     //
-    override func willMove(toParentViewController parent: UIViewController?)
+    override func willMove(toParent parent: UIViewController?)
     {
         //Only do something when moving back to parent
         if parent == nil
@@ -69,7 +69,7 @@ class GoProViewController: UIViewController, IAPDelegate {
             DispatchQueue.main.async
             {
                 self.buyButton.isEnabled=true
-                self.buyButton.setTitle("Buy \(product.price)",for: UIControlState())
+                self.buyButton.setTitle("Buy \(product.price)",for: UIControl.State())
             }
         }
     }
@@ -78,7 +78,7 @@ class GoProViewController: UIViewController, IAPDelegate {
             DispatchQueue.main.async
             {
                 self.buyButton.isEnabled=false
-                self.buyButton.setTitle("Purchased",for: UIControlState())
+                self.buyButton.setTitle("Purchased",for: UIControl.State())
                 //no need to show an alert, StoreKit will show a thank you
             }
         }
@@ -88,7 +88,7 @@ class GoProViewController: UIViewController, IAPDelegate {
             DispatchQueue.main.async
             {
                 self.buyButton.isEnabled=false
-                self.buyButton.setTitle("Purchased",for: UIControlState())
+                self.buyButton.setTitle("Purchased",for: UIControl.State())
                 //Does StoreKit show an alert here?
                 self.mpdbShowAlert("Purchase Restored",msg: "Go Pro purchase has been restored, Pro features are now unlocked.")
             }

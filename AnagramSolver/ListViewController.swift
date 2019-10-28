@@ -16,7 +16,7 @@ class ListViewController: UITableViewController {
     var selectedItem : String? {
         didSet {
             if let item = selectedItem {
-                selectedIndex = listItems.index(of: item)
+                selectedIndex = listItems.firstIndex(of: item)
             }
         }
     }

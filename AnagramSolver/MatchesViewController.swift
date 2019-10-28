@@ -66,7 +66,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     }
     @objc func handleLongPress(sender: UILongPressGestureRecognizer)
     {
-        if sender.state == UIGestureRecognizerState.began {
+        if sender.state == UIGestureRecognizer.State.began {
             let touchPoint = sender.location(in: self.matchesTable)
             if let indexPath = matchesTable.indexPathForRow(at: touchPoint){
                 if let word = model.getWord(atIndex: indexPath.row){
@@ -147,7 +147,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
     // This function is called twice, first when child view is added to parent
     // then secondly when it is removed, in this case parent is nil
     //
-    override func willMove(toParentViewController parent: UIViewController?)
+    override func willMove(toParent parent: UIViewController?)
     {
         //Only do something when moving back to parent
         if parent == nil
