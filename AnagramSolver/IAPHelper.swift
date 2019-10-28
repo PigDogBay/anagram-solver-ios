@@ -104,6 +104,9 @@ open class IAPHelper : NSObject, IAPInterface, SKProductsRequestDelegate, SKPaym
             case .restored:
                 restoredTransaction(transaction)
                 break
+            @unknown default:
+                failedTransaction(transaction)
+                break
             }
         }
     }
