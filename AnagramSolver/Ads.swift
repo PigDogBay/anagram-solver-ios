@@ -13,14 +13,12 @@ struct Ads
 {
     static let bannerAdId = "ca-app-pub-3582986480189311/9351680384"
 
-    static func createRequest() -> GADRequest
-    {
-        let request = GADRequest()
-        request.testDevices = [
-            "Simulator",
-            "1d0dd7e23d31eae8a3e9ad16a8c9b3b4",//iPad
-            "cc0b7644c90c4ab95e0150938951def3" //iPhone
-        ]
-        return request
+    static func setup(){
+        let requestConfiguration = GADMobileAds.sharedInstance().requestConfiguration
+        requestConfiguration.testDeviceIdentifiers = [
+                   "1d0dd7e23d31eae8a3e9ad16a8c9b3b4",//iPad
+                   "cc0b7644c90c4ab95e0150938951def3" //iPhone
+               ]
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
     }
 }

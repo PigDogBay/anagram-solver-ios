@@ -52,7 +52,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         {
             bannerView.adUnitID = Ads.bannerAdId
             bannerView.rootViewController = self
-            bannerView.load(Ads.createRequest())
+            bannerView.load(GADRequest())
         }
 
         self.stateChanged(model.state)
