@@ -40,7 +40,7 @@ class Model : WordListCallback, IAPDelegate
     let wordList = WordList()
     let wordSearch : WordSearch
     let wordFormatter = WordFormatter()
-    var matches: [String] = []
+    let matches = Matches()
     var state : States = States.uninitialized
     var query = ""
     let settings = Settings()
@@ -123,10 +123,10 @@ class Model : WordListCallback, IAPDelegate
     func prepareToSearch()
     {
         filter.reset()
-        matches.removeAll(keepingCapacity: true)
+        matches.removeAll()
     }
     func prepareToFilterSearch(){
-        matches.removeAll(keepingCapacity: true)
+        matches.removeAll()
         changeState(States.ready)
     }
     
@@ -146,7 +146,7 @@ class Model : WordListCallback, IAPDelegate
     
     func update(_ result: String)
     {
-        matches.append(result)
+        matches.append(match: result)
         resultsCount = resultsCount + 1
         if resultsCount == resultsLimit
         {
@@ -163,10 +163,7 @@ class Model : WordListCallback, IAPDelegate
     func share()->String
     {
         var builder = "-Anagram Solver-\n\nQuery:\n\(self.query)\n\nMatches:\n"
-        for s in matches
-        {
-            builder = builder + s + "\n"
-        }
+        builder.append(matches.flatten())
         builder+="\nAvailable on the App Store\n"
         builder+=Model.getAppWebUrl()
         return builder
@@ -174,7 +171,7 @@ class Model : WordListCallback, IAPDelegate
 
     func copyAll()->String
     {
-        return matches.reduce(""){result, next in result+next+"\n"}
+        return matches.flatten()
     }
 
     func isReady() -> Bool
