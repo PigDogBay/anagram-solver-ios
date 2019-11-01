@@ -135,7 +135,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
     {
         //Run worker thread here as if started in viewDidLoad
         //the ui may not be ready for when a match comes in
-        if model.appState.isReady()
+        if model.appState.appState == .ready
         {
             DispatchQueue.global(qos: .default).async
             {
