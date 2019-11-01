@@ -10,7 +10,7 @@ import UIKit
 import GoogleMobileAds
 import SwiftUtils
 
-class MatchesViewController: UIViewController, StateChangeObserver, WordSearchObserver, UITableViewDataSource
+class MatchesViewController: UIViewController, StateChangeObserver, MatchFoundObserver, UITableViewDataSource
 {
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     fileprivate let cellIdentifier = "MatchesCell"
@@ -57,7 +57,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
 
         self.stateChanged(model.state)
         model.addObserver("matches", observer: self)
-        model.wordSearchObserver = self
+        model.matches.setMatchesObserver(observer: self)
         
         if model.settings.isLongPressEnabled {
             let longPress = UILongPressGestureRecognizer(target: self, action: #selector(MatchesViewController.handleLongPress))
@@ -154,7 +154,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         {
             model.stop()
             model.removeObserver("matches")
-            model.wordSearchObserver = nil
+            model.matches.removeMatchObserver()
             Model.sharedInstance.ratings.requestRating()
         }
     }
@@ -164,7 +164,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         model.stop()
-        model.wordSearchObserver = nil
+        model.matches.removeMatchObserver()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -218,8 +218,8 @@ class MatchesViewController: UIViewController, StateChangeObserver, WordSearchOb
             self.modelToView(newState)
         }
     }
-    // MARK: - WordSearchObserver Conformance
-    func matchFound(_ match: String)
+    // MARK: - MatchFoundObserver Conformance
+    func matchFound()
     {
         //update UI on main thread
         DispatchQueue.main.sync

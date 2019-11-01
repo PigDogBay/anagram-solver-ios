@@ -13,10 +13,6 @@ protocol StateChangeObserver
 {
     func stateChanged(_ newState : Model.States)
 }
-protocol WordSearchObserver : class
-{
-    func matchFound(_ match : String)
-}
 class Model : WordListCallback, IAPDelegate
 {
     //Singleton
@@ -31,7 +27,6 @@ class Model : WordListCallback, IAPDelegate
     {
         case uninitialized,loading, ready, searching, finished
     }
-    fileprivate let TABLE_MAX_COUNT_TO_RELOAD = 20
     fileprivate var resultsCount = 0
     //Need to check if user changes the word list setting, so cache it here
     fileprivate var useProWordList = false
@@ -54,7 +49,6 @@ class Model : WordListCallback, IAPDelegate
     //Unable to search protocols due limitation in Swift, cannot use == on protocol!!!
     //see http://stackoverflow.com/questions/24888560/usage-of-protocols-as-array-types-and-function-parameters-in-swift
     var observersDictionary : [String : StateChangeObserver] = [:]
-    weak var wordSearchObserver : WordSearchObserver!
     
     fileprivate init()
     {
@@ -146,17 +140,11 @@ class Model : WordListCallback, IAPDelegate
     
     func update(_ result: String)
     {
-        matches.append(match: result)
+        matches.matchFound(match: result)
         resultsCount = resultsCount + 1
         if resultsCount == resultsLimit
         {
             self.wordList.stopSearch()
-        }
-        //only update the table until we have enough items to fill the screen
-        if self.matches.count<self.TABLE_MAX_COUNT_TO_RELOAD
-            && self.wordSearchObserver != nil
-        {
-            self.wordSearchObserver.matchFound(result)
         }
     }
     
