@@ -25,33 +25,43 @@ class AppStateObservable {
 
     var appState : AppStates {
         get {
-            return state
+            return queue.sync {
+                return state
+            }
         }
         set {
-            if (state != newValue){
-                state = newValue
-                observers.forEach{$0.appStateChanged(newValue)}
+            queue.sync {
+                if (state != newValue){
+                    state = newValue
+                    observers.forEach{$0.appStateChanged(newValue)}
+                }
             }
         }
     }
     
     func addObserver(observer : AppStateChangeObserver){
-        if !observers.contains(where: {$0 === observer}){
-            observers.append(observer)
+        queue.sync {
+            if !observers.contains(where: {$0 === observer}){
+                observers.append(observer)
+            }
         }
     }
 
     func removeObserver(observer : AppStateChangeObserver){
-        if let index = observers.firstIndex(where: {$0 === observer}){
-            observers.remove(at: index)
+        queue.sync {
+            if let index = observers.firstIndex(where: {$0 === observer}){
+                observers.remove(at: index)
+            }
         }
     }
     
     func isReady() -> Bool {
-        if self.state == .finished
-        {
-            state = .ready
+        return queue.sync {
+            if self.state == .finished
+            {
+                state = .ready
+            }
+            return self.state == .ready
         }
-        return self.state == .ready
     }
 }
