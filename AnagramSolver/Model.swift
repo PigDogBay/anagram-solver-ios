@@ -9,10 +9,6 @@
 import Foundation
 import SwiftUtils
 
-protocol StateChangeObserver
-{
-    func stateChanged(_ newState : Model.States)
-}
 class Model : WordListCallback, IAPDelegate
 {
     //Singleton
@@ -23,20 +19,16 @@ class Model : WordListCallback, IAPDelegate
     {
         return "https://itunes.apple.com/app/id973923699"
     }
-    enum States : Int
-    {
-        case uninitialized,loading, ready, searching, finished
-    }
     fileprivate var resultsCount = 0
     //Need to check if user changes the word list setting, so cache it here
     fileprivate var useProWordList = false
     open var resultsLimit = 500
 
+    let appState = AppStateObservable()
     let wordList = WordList()
     let wordSearch : WordSearch
     let wordFormatter = WordFormatter()
     let matches = Matches()
-    var state : States = States.uninitialized
     var query = ""
     let settings = Settings()
     let ads = Ads()
@@ -44,11 +36,6 @@ class Model : WordListCallback, IAPDelegate
     let iap : IAPInterface
     let filter : Filter
     let filterFactory : WordListCallbackAbstractFactory
-    
-    //Need to use a dictionary, so I can use the string key to search on
-    //Unable to search protocols due limitation in Swift, cannot use == on protocol!!!
-    //see http://stackoverflow.com/questions/24888560/usage-of-protocols-as-array-types-and-function-parameters-in-swift
-    var observersDictionary : [String : StateChangeObserver] = [:]
     
     fileprivate init()
     {
@@ -67,25 +54,15 @@ class Model : WordListCallback, IAPDelegate
         return nil
     }
     
-    func addObserver(_ name: String, observer : StateChangeObserver)
-    {
-        observersDictionary[name]=observer
-    }
-    
-    func removeObserver(_ name: String)
-    {
-        observersDictionary.removeValue(forKey: name)
-    }
-
     func unloadDictionary()
     {
         self.wordList.wordlist = nil
-        changeState(States.uninitialized)
+        appState.appState = .uninitialized
     }
     
     func loadDictionary(_ resourceName: String)
     {
-        changeState(States.loading)
+        appState.appState = .loading
         let path = Bundle.main.path(forResource: resourceName, ofType: "txt")
         let possibleContent = try? String(contentsOfFile: path!, encoding: String.Encoding.utf8)
         
@@ -94,17 +71,9 @@ class Model : WordListCallback, IAPDelegate
             let words = content.components(separatedBy: "\n")
             self.wordList.wordlist = words
         }
-        changeState(States.ready)
+        appState.appState = .ready
     }
     
-    func changeState(_ newState: States)
-    {
-        self.state = newState
-        for (_,observer) in observersDictionary
-        {
-            observer.stateChanged(state)
-        }
-    }
     func setAndValidateQuery( _ raw : String) ->Bool
     {
         self.query = wordSearch.clean(raw)
@@ -121,12 +90,12 @@ class Model : WordListCallback, IAPDelegate
     }
     func prepareToFilterSearch(){
         matches.removeAll()
-        changeState(States.ready)
+        appState.appState = .ready
     }
     
     func search()
     {
-        changeState(States.searching)
+        appState.appState = .searching
         resultsCount = 0
         var processedQuery = query;
         processedQuery = self.wordSearch.preProcessQuery(processedQuery)
@@ -135,7 +104,7 @@ class Model : WordListCallback, IAPDelegate
         wordFormatter.newSearch(processedQuery, searchType)
         let filterPipeline = filterFactory.createChainedCallback(lastCallback: self)
         self.wordSearch.runQuery(processedQuery, type: searchType, callback: filterPipeline)
-        changeState(States.finished)
+        appState.appState = .finished
     }
     
     func update(_ result: String)
@@ -162,15 +131,6 @@ class Model : WordListCallback, IAPDelegate
         return matches.flatten()
     }
 
-    func isReady() -> Bool
-    {
-        if States.finished == self.state
-        {
-            state = States.ready
-        }
-        return States.ready == self.state
-    }
-    
     func stdMode()
     {
         settings.isProMode = false
@@ -197,7 +157,7 @@ class Model : WordListCallback, IAPDelegate
         applySettings()
         if oldValue != useProWordList{
             //Use Pro Word list setting has changed
-            changeState(Model.States.uninitialized)
+            appState.appState = .uninitialized
         }
     }
     

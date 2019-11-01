@@ -10,7 +10,7 @@ import UIKit
 import GoogleMobileAds
 import SwiftUtils
 
-class MatchesViewController: UIViewController, StateChangeObserver, MatchFoundObserver, UITableViewDataSource
+class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoundObserver, UITableViewDataSource
 {
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     fileprivate let cellIdentifier = "MatchesCell"
@@ -55,8 +55,8 @@ class MatchesViewController: UIViewController, StateChangeObserver, MatchFoundOb
             bannerView.load(GADRequest())
         }
 
-        self.stateChanged(model.state)
-        model.addObserver("matches", observer: self)
+        self.modelToView( model.appState.appState)
+        model.appState.addObserver(observer: self)
         model.matches.setMatchesObserver(observer: self)
         
         if model.settings.isLongPressEnabled {
@@ -135,7 +135,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, MatchFoundOb
     {
         //Run worker thread here as if started in viewDidLoad
         //the ui may not be ready for when a match comes in
-        if model.state == .ready
+        if model.appState.isReady()
         {
             DispatchQueue.global(qos: .default).async
             {
@@ -153,7 +153,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, MatchFoundOb
         if parent == nil
         {
             model.stop()
-            model.removeObserver("matches")
+            model.appState.removeObserver(observer: self)
             model.matches.removeMatchObserver()
             Model.sharedInstance.ratings.requestRating()
         }
@@ -210,7 +210,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, MatchFoundOb
 
     
     // MARK: - StateChangeObserver Conformance
-    func stateChanged(_ newState: Model.States)
+    func appStateChanged(_ newState: AppStates)
     {
         //update UI on main thread
         DispatchQueue.main.async
@@ -227,7 +227,7 @@ class MatchesViewController: UIViewController, StateChangeObserver, MatchFoundOb
             self.matchesTable.reloadData()
         }
     }
-    fileprivate func modelToView(_ state : Model.States)
+    fileprivate func modelToView(_ state : AppStates)
     {
         switch state
         {

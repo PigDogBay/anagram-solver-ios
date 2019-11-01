@@ -34,6 +34,7 @@
 		4D9E43AD1FAC84FC007007C8 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E43AC1FAC84FC007007C8 /* Filter.swift */; };
 		4D9E43B11FAC86EC007007C8 /* FilterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */; };
 		4DA0C3F7236B0FC800AF693B /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0C3F6236B0FC800AF693B /* Matches.swift */; };
+		4DA0C3FA236C761600AF693B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0C3F9236C761600AF693B /* AppState.swift */; };
 		4DA729DD1C565E5000C7B85D /* pro.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DA729DC1C565E5000C7B85D /* pro.txt */; };
 		4DDAB8831FB61139000EDB30 /* ActionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDAB8821FB61139000EDB30 /* ActionCollectionViewCell.swift */; };
 		4DF2DE3A1FACBDBB00F44ADE /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2DE391FACBDBB00F44ADE /* FilterViewController.swift */; };
@@ -121,6 +122,7 @@
 		4D9E43AC1FAC84FC007007C8 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFactory.swift; sourceTree = "<group>"; usesTabs = 0; };
 		4DA0C3F6236B0FC800AF693B /* Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
+		4DA0C3F9236C761600AF693B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		4DA729DC1C565E5000C7B85D /* pro.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pro.txt; sourceTree = "<group>"; };
 		4DDAB8821FB61139000EDB30 /* ActionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCollectionViewCell.swift; sourceTree = "<group>"; };
 		4DF2DE391FACBDBB00F44ADE /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */,
 				4D3596401CFEEA50008D2FAF /* Ads.swift */,
 				4D1D6E661FA897FB008466F2 /* Ratings.swift */,
+				4DA0C3F9236C761600AF693B /* AppState.swift */,
 				4DA0C3F6236B0FC800AF693B /* Matches.swift */,
 				4D45F0231A9E487A00C40BB4 /* Model.swift */,
 				4D45D7B21E2CF0C500EC2D27 /* Settings.swift */,
@@ -519,6 +522,7 @@
 				4D9E43B11FAC86EC007007C8 /* FilterFactory.swift in Sources */,
 				4DF2DE3A1FACBDBB00F44ADE /* FilterViewController.swift in Sources */,
 				4D9E43AA1FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift in Sources */,
+				4DA0C3FA236C761600AF693B /* AppState.swift in Sources */,
 				4DF2DE401FB0A82300F44ADE /* ListViewController.swift in Sources */,
 				4DF2DE3D1FACC4B300F44ADE /* LettersFilterTableViewCell.swift in Sources */,
 				4D45F0161A9E03A400C40BB4 /* DefinitionViewController.swift in Sources */,

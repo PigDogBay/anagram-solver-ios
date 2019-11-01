@@ -10,7 +10,7 @@ import UIKit
 import SwiftUtils
 import MessageUI
 
-class RootViewController: UIViewController, StateChangeObserver, MFMailComposeViewControllerDelegate, UICollectionViewDelegateFlowLayout
+class RootViewController: UIViewController, AppStateChangeObserver, MFMailComposeViewControllerDelegate, UICollectionViewDelegateFlowLayout
 {
     fileprivate var model : Model!
 
@@ -176,7 +176,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         fontSettingsCheck()
         model = Model.sharedInstance
-        model.addObserver("root", observer: self)
+        model.appState.addObserver(observer: self)
         if mpdbCheckIsFirstTime()
         {
             mpdbShowAlert("Welcome",msg: "Thanks for trying Anagram Solver, enter your letters and search over 280,000 words!")
@@ -184,7 +184,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     }
     override func viewDidAppear(_ animated: Bool)
     {
-        modelToView(model.state)
+        modelToView(model.appState.appState)
         if (model.settings.showKeyboard){
             textFieldQuery.becomeFirstResponder()
         }
@@ -232,7 +232,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
     {
         if searchSegueId == identifier
         {
-            if !model.isReady()
+            if !model.appState.isReady()
             {
                 mpdbShowErrorAlert("Loading...", msg: "Please wait, loading the wordlist")
                 return false
@@ -257,7 +257,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
         return true
     }
     
-    func stateChanged(_ newState: Model.States)
+    func appStateChanged(_ newState: AppStates)
     {
         //update UI on main thread
         DispatchQueue.main.async
@@ -265,7 +265,7 @@ class RootViewController: UIViewController, StateChangeObserver, MFMailComposeVi
             self.modelToView(newState)
         }
     }
-    fileprivate func modelToView(_ state : Model.States)
+    fileprivate func modelToView(_ state : AppStates)
     {
         switch state
         {
