@@ -55,15 +55,47 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
             bannerView.load(GADRequest())
         }
 
-        self.modelToView( model.appState.appState)
-        model.appState.addObserver(observer: self)
-        model.matches.setMatchesObserver(observer: self)
-        
         if model.settings.isLongPressEnabled {
             let longPress = UILongPressGestureRecognizer(target: self, action: #selector(MatchesViewController.handleLongPress))
             matchesTable.addGestureRecognizer(longPress)
         }
+
+        if model.appState.appState == .ready
+        {
+            DispatchQueue.global(qos: .default).async
+            {
+                self.model.search()
+            }
+        }
     }
+
+    override func viewDidAppear(_ animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        model.appState.addObserver(observer: self)
+        model.matches.setMatchesObserver(observer: self)
+        self.modelToView( model.appState.appState)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        model.stop()
+        model.appState.removeObserver(observer: self)
+        model.matches.removeMatchObserver()
+    }
+    //
+    // This function is called twice, first when child view is added to parent
+    // then secondly when it is removed, in this case parent is nil
+    //
+    override func willMove(toParent parent: UIViewController?)
+    {
+        //Only do something when moving back to parent
+        if parent == nil
+        {
+            Model.sharedInstance.ratings.requestRating()
+        }
+    }
+
+    
     @objc func handleLongPress(sender: UILongPressGestureRecognizer)
     {
         if sender.state == UIGestureRecognizer.State.began {
@@ -131,35 +163,6 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
         performSegue(withIdentifier: self.definitionSegueId, sender: self)
     }
     
-    override func viewDidAppear(_ animated: Bool)
-    {
-        super.viewDidAppear(animated)
-        //Run worker thread here as if started in viewDidLoad
-        //the ui may not be ready for when a match comes in
-        if model.appState.appState == .ready
-        {
-            DispatchQueue.global(qos: .default).async
-            {
-                self.model.search()
-            }
-        }
-    }
-    //
-    // This function is called twice, first when child view is added to parent
-    // then secondly when it is removed, in this case parent is nil
-    //
-    override func willMove(toParent parent: UIViewController?)
-    {
-        //Only do something when moving back to parent
-        if parent == nil
-        {
-            model.stop()
-            model.appState.removeObserver(observer: self)
-            model.matches.removeMatchObserver()
-            Model.sharedInstance.ratings.requestRating()
-        }
-    }
-
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
