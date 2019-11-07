@@ -59,7 +59,18 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
             let longPress = UILongPressGestureRecognizer(target: self, action: #selector(MatchesViewController.handleLongPress))
             matchesTable.addGestureRecognizer(longPress)
         }
+    }
 
+    override func viewWillAppear(_ animated: Bool) {
+        //show .ready state, needs to done here as pressing search on filter does not call viewDidLoad but will call this function.
+        self.modelToView( model.appState.appState)
+    }
+    override func viewDidAppear(_ animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        model.appState.addObserver(observer: self)
+        model.matches.setMatchesObserver(observer: self)
+        //expect to be in ready state when search has been pressed from main VC or filter VC
         if model.appState.appState == .ready
         {
             DispatchQueue.global(qos: .default).async
@@ -67,14 +78,6 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
                 self.model.search()
             }
         }
-    }
-
-    override func viewDidAppear(_ animated: Bool)
-    {
-        super.viewDidAppear(animated)
-        model.appState.addObserver(observer: self)
-        model.matches.setMatchesObserver(observer: self)
-        self.modelToView( model.appState.appState)
     }
     override func viewWillDisappear(_ animated: Bool) {
         model.stop()
