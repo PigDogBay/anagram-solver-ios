@@ -77,10 +77,10 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
         self.modelToView( model.appState.appState)
     }
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
         model.stop()
         model.appState.removeObserver(observer: self)
         model.matches.removeMatchObserver()
+        super.viewWillDisappear(animated)
     }
     //
     // This function is called twice, first when child view is added to parent

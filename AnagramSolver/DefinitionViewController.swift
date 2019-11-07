@@ -45,8 +45,8 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
     }
 
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
         webView.stopLoading()
+        super.viewWillDisappear(animated)
     }
 
     override func didReceiveMemoryWarning()

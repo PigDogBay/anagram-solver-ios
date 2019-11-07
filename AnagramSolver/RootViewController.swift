@@ -155,8 +155,8 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
         NotificationCenter.default.removeObserver(self)
+        super.viewDidDisappear(animated)
     }
     override func viewDidLoad()
     {
