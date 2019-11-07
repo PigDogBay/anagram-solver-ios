@@ -143,7 +143,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        super.viewWillAppear(animated)
         let app = UIApplication.shared
         NotificationCenter.default.addObserver(self, selector: #selector (appEnterForgeround), name: UIApplication.willEnterForegroundNotification, object: app)
     }
@@ -155,6 +155,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
     override func viewDidLoad()
@@ -184,6 +185,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     }
     override func viewDidAppear(_ animated: Bool)
     {
+        super.viewDidAppear(animated)
         modelToView(model.appState.appState)
         if (model.settings.showKeyboard){
             textFieldQuery.becomeFirstResponder()
@@ -192,6 +194,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     
     //Recompute layout for the collection view on rotation
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
         guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
             return
         }

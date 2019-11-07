@@ -32,6 +32,7 @@ class GoProViewController: UIViewController, IAPDelegate {
         buyButton.isEnabled=false
     }
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         if model.settings.isProMode
         {
             //purchase already made

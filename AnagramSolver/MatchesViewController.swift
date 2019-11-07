@@ -133,6 +133,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
     
     override func viewDidAppear(_ animated: Bool)
     {
+        super.viewDidAppear(animated)
         //Run worker thread here as if started in viewDidLoad
         //the ui may not be ready for when a match comes in
         if model.appState.appState == .ready

@@ -45,6 +45,7 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
     }
 
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         webView.stopLoading()
     }
 
@@ -70,6 +71,4 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
         loadingIndicator.stopAnimating()
         loadingLabel.isHidden=true
     }
-    
-    
 }
