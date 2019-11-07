@@ -55,7 +55,7 @@ class AppStateObservable {
         }
     }
     
-    func isReady() -> Bool {
+    func isReadyFinished() -> Bool {
         return queue.sync {
             if self.state == .finished
             {

@@ -235,7 +235,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     {
         if searchSegueId == identifier
         {
-            if !model.appState.isReady()
+            if !model.appState.isReadyFinished()
             {
                 mpdbShowErrorAlert("Loading...", msg: "Please wait, loading the wordlist")
                 return false
