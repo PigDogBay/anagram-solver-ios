@@ -34,7 +34,16 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
         let requestURL = URL(string: processedUrl)
         let request = URLRequest(url: requestURL!)
         webView.load(request)
+        //Stop loading if the app is moved to the background
+        NotificationCenter.default.addObserver(self, selector: #selector (appMovedToBackground), name: UIApplication.willResignActiveNotification, object: UIApplication.shared)
     }
+    
+    @objc func appMovedToBackground() {
+        webView.stopLoading()
+        loadingIndicator.stopAnimating()
+        loadingLabel.isHidden=true
+    }
+
     //https://stackoverflow.com/questions/40856112/how-to-create-a-sized-wkwebview-in-swift-3-ios-10
     func constrainView(view:UIView, toView contentView:UIView) {
         view.translatesAutoresizingMaskIntoConstraints = false
