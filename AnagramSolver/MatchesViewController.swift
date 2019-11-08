@@ -59,6 +59,9 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
             let longPress = UILongPressGestureRecognizer(target: self, action: #selector(MatchesViewController.handleLongPress))
             matchesTable.addGestureRecognizer(longPress)
         }
+        //Stop any search if the app is moved to the background
+        NotificationCenter.default.addObserver(self, selector: #selector (appMovedToBackground), name: UIApplication.willResignActiveNotification, object: UIApplication.shared)
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -96,6 +99,9 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
         {
             Model.sharedInstance.ratings.requestRating()
         }
+    }
+    @objc func appMovedToBackground() {
+        self.model.stop()
     }
 
     
