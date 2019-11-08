@@ -44,24 +44,11 @@ class GoProViewController: UIViewController, IAPDelegate {
             model.iap.observable.addObserver(observerName, observer: self)
             model.iap.requestProducts()
         }
-    }
-    //
-    // This function is called twice, first when child view is added to parent
-    // then secondly when it is removed, in this case parent is nil
-    //
-    override func willMove(toParent parent: UIViewController?)
-    {
-        //Only do something when moving back to parent
-        if parent == nil
-        {
-            model.iap.observable.removeObserver(observerName)
-        }
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        model.iap.observable.removeObserver(observerName)
+    }
     
     //MARK:- IAPDelegate
     func productsRequest(){
