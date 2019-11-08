@@ -142,22 +142,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        let app = UIApplication.shared
-        NotificationCenter.default.addObserver(self, selector: #selector (appEnterForgeround), name: UIApplication.willEnterForegroundNotification, object: app)
-    }
-    //Only called when view re-appears from background
-    @objc func appEnterForgeround() {
-        //check for any settings changes
-        model.checkForSettingsChange()
-        fontSettingsCheck()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        NotificationCenter.default.removeObserver(self)
-        super.viewDidDisappear(animated)
-    }
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -178,10 +162,18 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         fontSettingsCheck()
         model = Model.sharedInstance
         model.appState.addObserver(observer: self)
+        //Apply any setting changes when coming back from the settings screen
+        NotificationCenter.default.addObserver(self, selector: #selector (appEnterForgeround), name: UIApplication.willEnterForegroundNotification, object: UIApplication.shared)
         if mpdbCheckIsFirstTime()
         {
             mpdbShowAlert("Welcome",msg: "Thanks for trying Anagram Solver, enter your letters and search over 280,000 words!")
         }
+    }
+    //Only called when view re-appears from background
+    @objc func appEnterForgeround() {
+        //check for any settings changes
+        model.checkForSettingsChange()
+        fontSettingsCheck()
     }
     override func viewDidAppear(_ animated: Bool)
     {
