@@ -97,7 +97,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         let application = UIApplication.shared
         let url = URL(string: UIApplication.openSettingsURLString)! as URL
         if application.canOpenURL(url){
-            application.openURL(url)
+            application.open(url,options: [:],completionHandler: nil)
         }
     }
     func showHelp(){
