@@ -16,9 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
-        Ads.setup()
-        Settings().registerDefaultSettings()
+        let settings = Settings()
+        settings.registerDefaultSettings()
+        if !settings.isProMode {
+            FirebaseApp.configure()
+            Ads.setup()
+        }
         return true
     }
 
