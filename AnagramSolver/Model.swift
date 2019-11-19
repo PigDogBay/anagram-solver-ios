@@ -19,7 +19,6 @@ class Model : WordListCallback, IAPDelegate
     {
         return "https://itunes.apple.com/app/id973923699"
     }
-    fileprivate var resultsCount = 0
     //Need to check if user changes the word list setting, so cache it here
     fileprivate var useProWordList = false
     open var resultsLimit = 500
@@ -96,7 +95,6 @@ class Model : WordListCallback, IAPDelegate
     func search()
     {
         appState.appState = .searching
-        resultsCount = 0
         var processedQuery = query;
         processedQuery = self.wordSearch.preProcessQuery(processedQuery)
         let searchType = self.wordSearch.getQueryType(processedQuery)
@@ -110,8 +108,7 @@ class Model : WordListCallback, IAPDelegate
     func update(_ result: String)
     {
         matches.matchFound(match: result)
-        resultsCount = resultsCount + 1
-        if resultsCount == resultsLimit
+        if matches.count == resultsLimit
         {
             self.wordList.stopSearch()
         }
