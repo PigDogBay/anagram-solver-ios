@@ -60,23 +60,21 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         Model.sharedInstance.ratings.viewOnAppStore()
     }
     
-    private func mailCheck() -> Bool {
-        if !MFMailComposeViewController.canSendMail()
-        {
-            self.mpdbShowErrorAlert("No Email", msg: "This device is not configured for sending emails.")
-            return false
-        }
-        return true
-    }
-    
     func sendFeedback(){
-        if !mailCheck() {return}
-        let mailVC = MFMailComposeViewController()
-        mailVC.mailComposeDelegate = self
-        mailVC.setSubject("Anagram Solver Feedback iOS v1.06")
-        mailVC.setToRecipients(["pigdogbay@yahoo.co.uk"])
-        mailVC.setMessageBody("Your feedback is most welcome\n *Report Bugs\n *Suggest new features\n *Ask for help\n\n\nHi Mark,\n\n", isHTML: false)
-        present(mailVC, animated: true, completion: nil)
+        let emailAddress = "pigdogbay@yahoo.co.uk"
+        let subject = "Anagram Solver Feedback iOS v1.06"
+        let body = "Your feedback is most welcome\n *Report Bugs\n *Suggest new features\n *Ask for help\n\n\nHi Mark,\n\n"
+        	
+        if MFMailComposeViewController.canSendMail() {
+            let mailVC = MFMailComposeViewController()
+            mailVC.mailComposeDelegate = self
+            mailVC.setSubject(subject)
+            mailVC.setToRecipients([emailAddress])
+            mailVC.setMessageBody(body, isHTML: false)
+            present(mailVC, animated: true, completion: nil)
+        } else {
+            self.mpdbShowErrorAlert("No Email", msg: "This device is not configured for sending emails.")
+        }
     }
     func recommend(){
         let firstActivityItem = "Take a look at Anagram Solver "+Model.getAppWebUrl()
