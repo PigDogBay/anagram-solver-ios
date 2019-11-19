@@ -111,7 +111,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
             let touchPoint = sender.location(in: self.matchesTable)
             if let indexPath = matchesTable.indexPathForRow(at: touchPoint){
                 if let word = model.getWord(atIndex: indexPath.row){
-                    showLookUpDefinitionMenu(word: word, indexPath: indexPath)
+                    showLookUpDefinitionMenu(word: word, location : touchPoint)
                 }
             }
         }
@@ -124,7 +124,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
         return word[..<word.index(word.startIndex, offsetBy: maxSize)]+".."
     }
     
-    func showLookUpDefinitionMenu(word : String, indexPath : IndexPath){
+    func showLookUpDefinitionMenu(word : String, location : CGPoint){
         let shortenedWord = shortenWord(word: word, maxSize: 12)
         let controller = UIAlertController(title: "Look up "+shortenedWord, message: nil, preferredStyle: .actionSheet)
         let googleAction = UIAlertAction(title: "Google Definition", style: .default,
@@ -161,7 +161,8 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
 
         //Anchor popover to button for iPads
         if let ppc = controller.popoverPresentationController{
-            ppc.sourceView = self.tableView(matchesTable, cellForRowAt: indexPath)
+	        ppc.sourceView = matchesTable
+            ppc.sourceRect = CGRect(origin: location, size: CGSize(width: 1, height: 1))
         }
         present(controller, animated: true, completion: nil)
     }
