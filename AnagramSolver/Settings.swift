@@ -73,18 +73,32 @@ class Settings
     func getDefinitionUrl(word : String) -> String {
         if let website = UserDefaults.standard.string(forKey: definitionKey) {
             switch website {
-            case "merriam-webster":
-                return WordSearch.getMerriamWebsterUrl(word: word)
-            case "thesaurus":
-                return WordSearch.getThesaurusUrl(word: word)
-            case "collins":
-                return WordSearch.getCollinsUrl(word: word)
-            case "oxford":
-                return WordSearch.getOxfordDictionariesUrl(word: word)
-            case "wikipedia":
-                return WordSearch.getWikipediaUrl(word: word)
-            case "word game dictionary":
-                return WordSearch.getWordGameDictionaryUrl(word:word)
+                case "cambridge":
+                    return WordSearch.getCambridgeUrl(word: word)
+                case "chambers":
+                    return WordSearch.getChambersUrl(word: word)
+                case "collins":
+                    return WordSearch.getCollinsUrl(word: word)
+                case "dictionary.com":
+                    return WordSearch.getDictionaryComUrl(word: word)
+                case "google define":
+                    return WordSearch.getGoogleDefineUrl(word: word)
+                case "google":
+                    return WordSearch.getGoogleUrl(word: word)
+                case "lexico":
+                    return WordSearch.getLexicoUrl(word: word)
+                case "merriam-webster":
+                    return WordSearch.getMerriamWebsterUrl(word: word)
+                case "merriam-webster thesaurus":
+                    return WordSearch.getMWThesaurusUrl(word: word)
+                case "thesaurus.com":
+                    return WordSearch.getThesaurusComUrl(word: word)
+                case "wiktionary":
+                    return WordSearch.getWiktionaryUrl(word: word)
+                case "wikipedia":
+                    return WordSearch.getWikipediaUrl(word: word)
+                case "word game dictionary":
+                    return WordSearch.getWordGameDictionaryUrl(word: word)
             default:
                 break
             }
@@ -121,5 +135,4 @@ class Settings
                                resultsLimitKey : 1000]
         UserDefaults.standard.register(defaults: defaultSettings)
     }
-    
 }

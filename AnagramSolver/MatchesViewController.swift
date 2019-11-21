@@ -127,34 +127,43 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
     func showLookUpDefinitionMenu(word : String, location : CGPoint){
         let shortenedWord = shortenWord(word: word, maxSize: 12)
         let controller = UIAlertController(title: "Look up "+shortenedWord, message: nil, preferredStyle: .actionSheet)
-        let googleAction = UIAlertAction(title: "Google Definition", style: .default,
-                                         handler: {action in self.showDefinition(word: word, url: WordSearch.getGoogleUrl(word: word))})
+
         let collinsAction = UIAlertAction(title: "Collins", style: .default,
                                              handler: {action in self.showDefinition(word: word, url: WordSearch.getCollinsUrl(word: word))})
-        let thesaurusAction = UIAlertAction(title: "Thesaurus", style: .default,
-                                             handler: {action in self.showDefinition(word: word, url: WordSearch.getThesaurusUrl(word: word))})
-        let wikipediaAction = UIAlertAction(title: "Wikipedia", style: .default,
-                                            handler: {action in self.showDefinition(word: word, url: WordSearch.getWikipediaUrl(word: word))})
-       
+        let dictionaryComAction = UIAlertAction(title: "Dictionary.com", style: .default,
+                                         handler: {action in self.showDefinition(word: word, url: WordSearch.getDictionaryComUrl(word: word))})
+        let googleAction = UIAlertAction(title: "Google Definition", style: .default,
+                                         handler: {action in self.showDefinition(word: word, url: WordSearch.getGoogleDefineUrl(word: word))})
+        let lexicoAction = UIAlertAction(title: "Lexico", style: .default,
+                                            handler: {action in self.showDefinition(word: word, url: WordSearch.getLexicoUrl(word: word))})
         let merriamWebsterAction = UIAlertAction(title: "Merriam-Webster", style: .default,
                                             handler: {action in self.showDefinition(word: word, url: WordSearch.getMerriamWebsterUrl(word: word))})
+        let mwThesaurusAction = UIAlertAction(title: "M-W Thesaurus", style: .default,
+                                            handler: {action in self.showDefinition(word: word, url: WordSearch.getMWThesaurusUrl(word: word))})
+        let thesaurusAction = UIAlertAction(title: "Thesaurus.com", style: .default,
+                                             handler: {action in self.showDefinition(word: word, url: WordSearch.getThesaurusComUrl(word: word))})
+        let wiktionaryAction = UIAlertAction(title: "Wiktionary", style: .default,
+                                            handler: {action in self.showDefinition(word: word, url: WordSearch.getWiktionaryUrl(word: word))})
+        let wikipediaAction = UIAlertAction(title: "Wikipedia", style: .default,
+                                            handler: {action in self.showDefinition(word: word, url: WordSearch.getWikipediaUrl(word: word))})
         let wordGameAction = UIAlertAction(title: "Word Game Dictionary", style: .default,
                                          handler: {action in self.showDefinition(word: word, url: WordSearch.getWordGameDictionaryUrl(word: word))})
-        let oxfordAction = UIAlertAction(title: "Oxford Dictionaries", style: .default,
-                                            handler: {action in self.showDefinition(word: word, url: WordSearch.getOxfordDictionariesUrl(word: word))})
         
         let copyAction = UIAlertAction(title: "Copy", style: .default, handler: {action in UIPasteboard.general.string = word})
         let copyAllAction = UIAlertAction(title: "Copy All", style: .default, handler: {action in
             UIPasteboard.general.string = self.model.copyAll()})
 
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        controller.addAction(googleAction)
-        controller.addAction(merriamWebsterAction)
-        controller.addAction(thesaurusAction)
         controller.addAction(collinsAction)
-        controller.addAction(wordGameAction)
-        controller.addAction(oxfordAction)
+        controller.addAction(dictionaryComAction)
+        controller.addAction(googleAction)
+        controller.addAction(lexicoAction)
+        controller.addAction(merriamWebsterAction)
+        controller.addAction(mwThesaurusAction)
+        controller.addAction(thesaurusAction)
+        controller.addAction(wiktionaryAction)
         controller.addAction(wikipediaAction)
+        controller.addAction(wordGameAction)
         controller.addAction(copyAction)
         controller.addAction(copyAllAction)
         controller.addAction(cancelAction)
