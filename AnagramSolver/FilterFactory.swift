@@ -54,8 +54,11 @@ class FilterFactory : WordListCallbackAbstractFactory {
         if filter.regex != "" {
             callback =  RegexFilter(callback: callback, pattern: filter.regex)
         }
-        if filter.distinct != 0 {
+        if filter.distinct == 1 {
             callback = DistinctFilter(callback: callback)
+        }
+        if filter.distinct == 2 {
+            callback = NotDistinctFilter(callback: callback)
         }
         return callback
     }

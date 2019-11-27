@@ -188,7 +188,7 @@ class FilterViewController: UITableViewController {
         } else if indexPath == [0,2] && value == 1 {
             cell.detailTextLabel?.text = "All letters different"
         } else if indexPath == [0,2] && value == 2 {
-            cell.detailTextLabel?.text = "Some letters are the same"
+            cell.detailTextLabel?.text = "Some letters same"
         } else {
             cell.detailTextLabel?.text = "\(value) letters"
         }
