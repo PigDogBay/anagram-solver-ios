@@ -112,27 +112,39 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>The standard word list has 130,000 words, the large has 290,000 words.</string>
+			<string>The standard word list has 310,000 words, select TWL or SOWPODS word lists for Scrabble games.</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 			<key>Title</key>
 			<string>Search Settings</string>
 		</dict>
+        <dict>
+            <key>Titles</key>
+            <array>
+                <string>180k words - TWL (US Scrabble)</string>
+                <string>270k words - SOWPODS (World Scrabble)</string>
+                <string>310k words - SCOWL</string>
+            </array>
+            <key>Values</key>
+            <array>
+                <string>twl</string>
+                <string>sowpods</string>
+                <string>words</string>
+            </array>
+            <key>Type</key>
+            <string>PSMultiValueSpecifier</string>
+            <key>Title</key>
+            <string>Word list</string>
+            <key>Key</key>
+            <string>wordList</string>
+            <key>DefaultValue</key>
+            <string>words</string>
+        </dict>
 		<dict>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Use the large word list</string>
-			<key>Key</key>
-			<string>useProWordList</string>
-			<key>DefaultValue</key>
-			<false/>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Show Sub-anagrams</string>
+			<string>Show sub-anagrams</string>
 			<key>Key</key>
 			<string>showSubAnagrams</string>
 			<key>DefaultValue</key>
@@ -160,7 +172,7 @@
 			<key>Key</key>
 			<string>resultsLimit</string>
 			<key>DefaultValue</key>
-			<string>1000</string>
+			<string>5000</string>
 		</dict>
 		<dict>
 			<key>Type</key>

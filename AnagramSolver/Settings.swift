@@ -11,15 +11,17 @@ import SwiftUtils
 
 class Settings
 {
-    fileprivate let definitionKey = "definition"
-    fileprivate let highlightKey = "highlight"
-    fileprivate let showKeyboardKey = "showKeyboard"
-    fileprivate let longPressEnabledKey = "longPressEnabled"
-    fileprivate let useMonospacedFontKey = "useMonospacedFont"
-    fileprivate let useProWordListKey = "useProWordList"
-    fileprivate let showSubAnagramsKey = "showSubAnagrams"
-    fileprivate let resultsLimitKey = "resultsLimit"
-    fileprivate let isProKey = "isProFlag"
+    private let definitionKey = "definition"
+    private let highlightKey = "highlight"
+    private let showKeyboardKey = "showKeyboard"
+    private let longPressEnabledKey = "longPressEnabled"
+    private let useMonospacedFontKey = "useMonospacedFont"
+    private let wordListKey = "wordList"
+    private let showSubAnagramsKey = "showSubAnagrams"
+    private let resultsLimitKey = "resultsLimit"
+    private let isProKey = "isProFlag"
+    
+    private let defaultWordList = "words"
     
     let darkGreen = UIColor(red: 0.0, green: 0.5, blue: 0.0, alpha: 1.0)
     
@@ -111,11 +113,8 @@ class Settings
             return UserDefaults.standard.integer(forKey: resultsLimitKey)
         }
     }
-    
-    var useProWordList : Bool {
-        get {
-            return UserDefaults.standard.bool(forKey: useProWordListKey)
-        }
+    var wordList : String {
+        get { return UserDefaults.standard.string(forKey: wordListKey) ?? defaultWordList}
     }
     
     var showSubAnagrams : Bool {
@@ -129,7 +128,7 @@ class Settings
                                highlightKey : "red",
                                showKeyboardKey : false,
                                longPressEnabledKey : true,
-                               useProWordListKey : true,
+                               wordListKey : defaultWordList,
                                isProKey : false,
                                showSubAnagramsKey : true,
                                resultsLimitKey : 5000]

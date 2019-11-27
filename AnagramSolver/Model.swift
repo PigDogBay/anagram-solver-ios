@@ -20,8 +20,8 @@ class Model : WordListCallback, IAPDelegate
         return "https://itunes.apple.com/app/id973923699"
     }
     //Need to check if user changes the word list setting, so cache it here
-    fileprivate var useProWordList = false
-    open var resultsLimit = 500
+    var wordListName = ""
+    var resultsLimit = 5000
 
     let appState = AppStateObservable()
     let wordList = WordList()
@@ -59,18 +59,17 @@ class Model : WordListCallback, IAPDelegate
         appState.appState = .uninitialized
     }
     
-    func loadDictionary(_ resourceName: String)
+    func loadDictionary()
     {
         appState.appState = .loading
-        let path = Bundle.main.path(forResource: resourceName, ofType: "txt")
-        let possibleContent = try? String(contentsOfFile: path!, encoding: String.Encoding.utf8)
-        
-        if let content = possibleContent
-        {
-            let words = content.components(separatedBy: "\n")
-            self.wordList.wordlist = words
+        if let path = Bundle.main.path(forResource: wordListName, ofType: "txt") {
+            if let content = try? String(contentsOfFile: path, encoding: String.Encoding.utf8)
+            {
+                let words = content.components(separatedBy: "\n")
+                self.wordList.wordlist = words
+            }
+            appState.appState = .ready
         }
-        appState.appState = .ready
     }
     
     func setAndValidateQuery( _ raw : String) ->Bool
@@ -142,7 +141,7 @@ class Model : WordListCallback, IAPDelegate
     func applySettings(){
         self.wordFormatter.highlightColor = self.settings.highlight
         self.resultsLimit = self.settings.resultsLimit
-        self.useProWordList = settings.useProWordList
+        self.wordListName = settings.wordList
         self.wordSearch.findCodewords = settings.isProMode
         self.wordSearch.findThreeWordAnagrams = settings.isProMode
         self.wordSearch.findSubAnagrams = settings.showSubAnagrams
@@ -150,9 +149,9 @@ class Model : WordListCallback, IAPDelegate
     func checkForSettingsChange(){
         //do we need the synchronize?
         UserDefaults.standard.synchronize()
-        let oldValue = useProWordList
+        let oldValue = wordListName
         applySettings()
-        if oldValue != useProWordList{
+        if oldValue != wordListName{
             //Use Pro Word list setting has changed
             appState.appState = .uninitialized
         }
