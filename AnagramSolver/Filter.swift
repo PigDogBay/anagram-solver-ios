@@ -22,6 +22,7 @@ class Filter {
     var excludingWord = ""
     var crossword = ""
     var regex = ""
+    var isDistinctEnabled = false
     
     
     var filterCount : Int {
@@ -38,6 +39,7 @@ class Filter {
             if excludingWord != "" { count = count + 1}
             if crossword != "" { count = count + 1}
             if regex != "" { count = count + 1}
+            if isDistinctEnabled { count = count + 1}
             return count
         }
     }
@@ -54,5 +56,6 @@ class Filter {
         excludingWord = ""
         crossword = ""
         regex = ""
+        isDistinctEnabled = false
     }
 }
