@@ -129,10 +129,10 @@ class Settings
                                highlightKey : "red",
                                showKeyboardKey : false,
                                longPressEnabledKey : true,
-                               useProWordListKey : false,
+                               useProWordListKey : true,
                                isProKey : false,
                                showSubAnagramsKey : true,
-                               resultsLimitKey : 1000]
+                               resultsLimitKey : 5000]
         UserDefaults.standard.register(defaults: defaultSettings)
     }
 }
