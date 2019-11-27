@@ -13,7 +13,8 @@ class Filter {
     var biggerThan = 0
     var lessThan = 0
     var equalTo = 0
-    
+    var distinct = 0
+
     var startingWith = ""
     var endingWith = ""
     var containing = ""
@@ -22,7 +23,6 @@ class Filter {
     var excludingWord = ""
     var crossword = ""
     var regex = ""
-    var isDistinctEnabled = false
     
     
     var filterCount : Int {
@@ -31,6 +31,7 @@ class Filter {
             if biggerThan != 0 { count = count + 1}
             if lessThan != 0 { count = count + 1}
             if equalTo != 0 { count = count + 1}
+            if distinct != 0 { count = count + 1}
             if startingWith != "" { count = count + 1}
             if endingWith != "" { count = count + 1}
             if containing != "" { count = count + 1}
@@ -39,7 +40,6 @@ class Filter {
             if excludingWord != "" { count = count + 1}
             if crossword != "" { count = count + 1}
             if regex != "" { count = count + 1}
-            if isDistinctEnabled { count = count + 1}
             return count
         }
     }
@@ -48,6 +48,7 @@ class Filter {
         biggerThan = 0
         lessThan = 0
         equalTo = 0
+        distinct = 0
         startingWith = ""
         endingWith = ""
         containing = ""
@@ -56,6 +57,5 @@ class Filter {
         excludingWord = ""
         crossword = ""
         regex = ""
-        isDistinctEnabled = false
     }
 }

@@ -20,6 +20,8 @@ class FilterViewController: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 if let value = vc.selectedIndex {
                     switch indexPath {
+                    case [0,2]:
+                        model.filter.distinct = value
                     case [3,0]:
                         model.filter.equalTo = value
                     case [3,1]:
@@ -61,6 +63,7 @@ class FilterViewController: UITableViewController {
      Filter By Letters
      [Contains |enter letters|]
      [Excludes |enter letters|]
+     [Distinct        Not set>]
      Letters can be in any order
 
      Filter By Words
@@ -93,7 +96,7 @@ class FilterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 2
+            return 3
         case 1:
             return 2
         case 2:
@@ -147,6 +150,8 @@ class FilterViewController: UITableViewController {
             return cellForLettersFilter(indexPath, .contains)
         case [0,1]:
             return cellForLettersFilter(indexPath, .excludes)
+        case [0,2]:
+            return cellForNumbersFilter(indexPath, model.filter.distinct, "Distinct")
         case [1,0]:
             return cellForLettersFilter(indexPath, .containsWord)
         case [1,1]:
@@ -180,6 +185,10 @@ class FilterViewController: UITableViewController {
         cell.textLabel?.text = title;
         if value == 0 {
             cell.detailTextLabel?.text = "Not set"
+        } else if indexPath == [0,2] && value == 1 {
+            cell.detailTextLabel?.text = "All letters different"
+        } else if indexPath == [0,2] && value == 2 {
+            cell.detailTextLabel?.text = "Some letters are the same"
         } else {
             cell.detailTextLabel?.text = "\(value) letters"
         }
@@ -196,6 +205,10 @@ class FilterViewController: UITableViewController {
                 if let selectedCell = sender as? UITableViewCell{
                     if let indexPath = tableView.indexPath(for: selectedCell) {
                         switch indexPath {
+                        case [0,2]:
+                            vc.title = "Distinct"
+                            vc.listItems = ["No filter", "All letters are different", "Some letters are the same"]
+                            vc.selectedIndex = model.filter.distinct
                         case [3,0]:
                             vc.title = "Equal To"
                             vc.selectedIndex = model.filter.equalTo
