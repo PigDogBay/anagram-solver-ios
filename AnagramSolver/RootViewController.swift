@@ -267,7 +267,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
             let proFlag = self.model.settings.isProMode
             self.title = proFlag ? "AS Pro" : "Anagram Solver"
             let useProWordList = model.settings.useProWordList
-            let resourceName = useProWordList ? "pro" : "standard"
+            let resourceName = useProWordList ? "words" : "twl"
             //load dictionary on a worker thread
             DispatchQueue.global(qos: .default).async
             {
