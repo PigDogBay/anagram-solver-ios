@@ -25,26 +25,27 @@ class Filter {
     var regex = ""
     
     
-    var filterCount : Int {
-        get {
-            var count = 0
-            if biggerThan != 0 { count = count + 1}
-            if lessThan != 0 { count = count + 1}
-            if equalTo != 0 { count = count + 1}
-            if distinct != 0 { count = count + 1}
-            if startingWith != "" { count = count + 1}
-            if endingWith != "" { count = count + 1}
-            if containing != "" { count = count + 1}
-            if excluding != "" { count = count + 1}
-            if containingWord != "" { count = count + 1}
-            if excludingWord != "" { count = count + 1}
-            if crossword != "" { count = count + 1}
-            if regex != "" { count = count + 1}
-            return count
-        }
+    private(set) var filterCount : Int = 0
+    
+    func updateFilterCount() {
+        var count = 0
+        if biggerThan != 0 { count = count + 1}
+        if lessThan != 0 { count = count + 1}
+        if equalTo != 0 { count = count + 1}
+        if distinct != 0 { count = count + 1}
+        if startingWith != "" { count = count + 1}
+        if endingWith != "" { count = count + 1}
+        if containing != "" { count = count + 1}
+        if excluding != "" { count = count + 1}
+        if containingWord != "" { count = count + 1}
+        if excludingWord != "" { count = count + 1}
+        if crossword != "" { count = count + 1}
+        if regex != "" { count = count + 1}
+        self.filterCount = count
     }
     
     func reset() {
+        filterCount = 0
         biggerThan = 0
         lessThan = 0
         equalTo = 0

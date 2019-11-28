@@ -88,6 +88,7 @@ class Model : WordListCallback, IAPDelegate
     }
     func prepareToFilterSearch(){
         matches.removeAll()
+        filter.updateFilterCount()
         appState.appState = .ready
     }
     
