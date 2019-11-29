@@ -363,6 +363,10 @@ www.mpdbailey.co.uk
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="definition" translatesAutoresizingMaskIntoConstraints="NO" id="NXu-Zl-ses">
                                                     <rect key="frame" x="20" y="20" width="42" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="4nL-vv-eYc"/>
+                                                        <constraint firstAttribute="height" constant="42" id="QiJ-xh-EAE"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Definitions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hts-hU-1Ib">
                                                     <rect key="frame" x="88" y="28" width="112.33333333333331" height="26.333333333333329"/>
@@ -404,6 +408,10 @@ www.mpdbailey.co.uk
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="funnel" translatesAutoresizingMaskIntoConstraints="NO" id="Gv8-62-zB7">
                                                     <rect key="frame" x="20" y="20" width="42" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="42" id="mRe-in-ZSy"/>
+                                                        <constraint firstAttribute="width" constant="42" id="pbK-BB-XZS"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpv-Bd-DSk">
                                                     <rect key="frame" x="112" y="28" width="64.333333333333314" height="26.333333333333329"/>
@@ -445,6 +453,10 @@ www.mpdbailey.co.uk
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gear" translatesAutoresizingMaskIntoConstraints="NO" id="V5z-SS-VmI">
                                                     <rect key="frame" x="20" y="20" width="42" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="Ma0-1X-GL8"/>
+                                                        <constraint firstAttribute="height" constant="42" id="xpq-O9-GdG"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxQ-TC-kuc">
                                                     <rect key="frame" x="37.666666666666657" y="78.333333333333314" width="213" height="122"/>
@@ -499,6 +511,10 @@ www.mpdbailey.co.uk
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pro" translatesAutoresizingMaskIntoConstraints="NO" id="LxQ-D8-eT3">
                                                     <rect key="frame" x="20" y="20" width="42" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="9op-YE-Agm"/>
+                                                        <constraint firstAttribute="height" constant="42" id="OZv-F4-amG"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upgrade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuD-xo-Fw7">
                                                     <rect key="frame" x="99.333333333333343" y="28" width="89.333333333333343" height="26.333333333333329"/>
@@ -553,6 +569,10 @@ www.mpdbailey.co.uk
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help" translatesAutoresizingMaskIntoConstraints="NO" id="msS-fi-rez">
                                                     <rect key="frame" x="20" y="20" width="42" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="Um6-lx-SDV"/>
+                                                        <constraint firstAttribute="height" constant="42" id="qAQ-56-TuB"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Guide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdk-Gg-OWu">
                                                     <rect key="frame" x="87" y="28" width="114.33333333333331" height="26.333333333333329"/>
@@ -607,6 +627,10 @@ www.mpdbailey.co.uk
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="0eM-uM-Fmm">
                                                     <rect key="frame" x="20" y="20" width="42" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="InQ-p8-lX1"/>
+                                                        <constraint firstAttribute="height" constant="42" id="c7g-r6-gl1"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Os7-uM-3El">
                                                     <rect key="frame" x="98.666666666666686" y="28" width="91" height="26.333333333333329"/>
@@ -1003,6 +1027,6 @@ www.mpdbailey.co.uk
         <image name="pro" width="42.666667938232422" height="42.666667938232422"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="D2K-XF-Zb6"/>
+        <segue reference="kV8-yp-vNU"/>
     </inferredMetricsTieBreakers>
 </document>
