@@ -9,6 +9,25 @@
 import UIKit
 
 class AboutViewController: UIViewController {
+    @IBOutlet weak var buyButton: UIButton!
+    @IBOutlet weak var relevantAdsLabel: UILabel!
+    @IBOutlet weak var relevantAdsSwitch: UISwitch!
+    @IBAction func buyBtnClicked(_ sender: UIButton) {
+        print("buy clicked")
+    }
+    @IBAction func restoreBtnClicked(_ sender: UIButton) {
+        print("restore clicked")
+    }
+    @IBAction func privacyPolicyBtnClicked(_ sender: UIButton) {
+        print("privacy policy clicked")
+    }
+    @IBAction func findOutMoreBtnClicked(_ sender: UIButton) {
+        print("find out more clicked")
+    }
+    @IBAction func relevantAdsSwitchClicked(_ sender: UISwitch) {
+        print("relevant ads clicked")
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
