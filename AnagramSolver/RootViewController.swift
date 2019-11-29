@@ -16,6 +16,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
 
     let searchSegueId = "searchSegue"
     let goProSegueId = "goProSegue"
+    let aboutSegueId = "aboutSegue"
     let helpSegueId = "helpSegue"
     let userGuideSegueId = "segueUserGuide"
     let tipsDataSource = TipsDataSource()
@@ -39,11 +40,13 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         let controller = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let helpAction = UIAlertAction(title: "User Guide", style: .default, handler: {action in self.showUserGuide()})
         let goProAction = UIAlertAction(title: "Upgrade To Pro", style: .default, handler: {action in self.showGoPro()})
+        let aboutAction = UIAlertAction(title: "About & Privacy", style: .default, handler: {action in self.showAbout()})
         let settingsAction = UIAlertAction(title: "Settings", style: .default, handler: {action in self.showSettings()})
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
 
         controller.addAction(helpAction)
         controller.addAction(goProAction)
+        controller.addAction(aboutAction)
         controller.addAction(settingsAction)
         controller.addAction(cancelAction)
         
@@ -105,6 +108,9 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     }
     func showGoPro(){
         performSegue(withIdentifier: goProSegueId, sender: self)
+    }
+    func showAbout(){
+        performSegue(withIdentifier: aboutSegueId, sender: self)
     }
     func showUserGuide(){
         performSegue(withIdentifier: userGuideSegueId, sender: self)
