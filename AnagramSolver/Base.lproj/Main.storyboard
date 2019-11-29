@@ -36,7 +36,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="912"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSQ-CM-hAt">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSQ-CM-hAt">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="912"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEo-VN-V2F" userLabel="ContentView">
@@ -83,8 +83,6 @@
                                     <constraint firstAttribute="trailing" secondItem="fEo-VN-V2F" secondAttribute="trailing" id="dpN-X1-VS0"/>
                                     <constraint firstItem="fEo-VN-V2F" firstAttribute="top" secondItem="VSQ-CM-hAt" secondAttribute="top" id="rR9-tS-RK4"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="zgG-F4-Pv8"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="Ura-hy-Ode"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
