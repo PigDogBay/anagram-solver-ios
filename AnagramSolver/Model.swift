@@ -127,17 +127,6 @@ class Model : WordListCallback, IAPDelegate
     {
         return matches.flatten()
     }
-
-    func stdMode()
-    {
-        settings.isProMode = false
-        self.applySettings()
-    }
-    func proMode()
-    {
-        settings.isProMode = true
-        self.applySettings()
-    }
     
     func applySettings(){
         self.wordFormatter.highlightColor = self.settings.highlight
@@ -167,12 +156,12 @@ class Model : WordListCallback, IAPDelegate
     func purchaseRequest(_ productID : String){
         //purchase successful, store in NSDefaults
         //print("Model-IAPDelegate-purchaseRequest \(productID)")
-        proMode()
+        settings.isProMode = true
     }
     func restoreRequest(_ productID : String){
         //purchase successful, store in NSDefaults
         //print("Model-IAPDelegate-restore request \(productID)")
-        proMode()
+        settings.isProMode = true
     }
     func purchaseFailed(_ productID : String){
         //purchase failed - do nothing here

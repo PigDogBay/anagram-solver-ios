@@ -229,13 +229,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
                 mpdbShowErrorAlert("Loading...", msg: "Please wait, loading the wordlist")
                 return false
             }
-            let query = textFieldQuery.text!
-            if isQueryACommand(query)
-            {
-                mpdbShowErrorAlert("Command", msg: executeCommand(query))
-                return false
-            }
-            if model.setAndValidateQuery(query)
+            if let query = textFieldQuery.text, model.setAndValidateQuery(query)
             {
                 return true
             }
@@ -279,27 +273,5 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         case .finished:
             self.searchButton.isEnabled=true
         }
-    }
-    fileprivate func isQueryACommand(_ cmd : String) -> Bool
-    {
-        //Comment out this line to enable commands
-        return false
-//        return cmd.hasPrefix("-cmd")
-    }
-    fileprivate func executeCommand(_ cmd : String) -> String
-    {
-        if cmd == "-cmdpro"
-        {
-            self.model.proMode()
-            self.title = "AS Pro"
-            return "Pro Mode On"
-        }
-        else if cmd == "-cmdstd"
-        {
-            self.model.stdMode()
-            self.title = "Anagram Solver"
-            return "Std Mode On"
-        }
-        return "Bad Command"
     }
 }
