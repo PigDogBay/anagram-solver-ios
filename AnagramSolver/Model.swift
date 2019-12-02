@@ -143,8 +143,9 @@ class Model : WordListCallback, IAPDelegate
         self.wordFormatter.highlightColor = self.settings.highlight
         self.resultsLimit = self.settings.resultsLimit
         self.wordListName = settings.wordList
-        self.wordSearch.findCodewords = settings.isProMode
-        self.wordSearch.findThreeWordAnagrams = settings.isProMode
+        //Enabled now for standard and pro versions of the app
+        self.wordSearch.findCodewords = true
+        self.wordSearch.findThreeWordAnagrams = true
         self.wordSearch.findSubAnagrams = settings.showSubAnagrams
     }
     func checkForSettingsChange(){
