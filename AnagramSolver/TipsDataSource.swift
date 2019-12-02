@@ -26,9 +26,7 @@ class TipsDataSource : NSObject, UICollectionViewDataSource
     var feedbackCallback : (() -> Void)?
     var recommendCallback : (() -> Void)?
     var viewGuideCallback : (() -> Void)?
-    var goProCallback : (() -> Void)?
     var settingsCallback : (() -> Void)?
-    fileprivate var isProMode : Bool { get {return Model.sharedInstance.settings.isProMode}}
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 13
@@ -85,17 +83,7 @@ class TipsDataSource : NSObject, UICollectionViewDataSource
             //Prefix@Suffix
             cell = getTipCell(tipIndex: 6, collectionView: collectionView, indexPath: indexPath)
         case 12:
-            //Go Pro
-            if isProMode {
-                //codewords
-                cell = getTipCell(tipIndex: 7, collectionView: collectionView, indexPath: indexPath)
-            } else {
-                //show Go Pro Tip
-                cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellPro", for: indexPath)
-                if let actionCell = cell as? ActionCollectionViewCell {
-                    actionCell.button1Callback = self.goProCallback
-                }
-            }
+            cell = getTipCell(tipIndex: 7, collectionView: collectionView, indexPath: indexPath)
         default:
             abort()
         }
