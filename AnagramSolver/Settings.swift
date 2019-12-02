@@ -20,6 +20,7 @@ class Settings
     private let showSubAnagramsKey = "showSubAnagrams"
     private let resultsLimitKey = "resultsLimit"
     private let isProKey = "isProFlag"
+    private let useNonPersonalizedAdsKey = "useNonPersonalizedAds"
     
     private let defaultWordList = "words"
     
@@ -113,6 +114,7 @@ class Settings
             return UserDefaults.standard.integer(forKey: resultsLimitKey)
         }
     }
+    
     var wordList : String {
         get { return UserDefaults.standard.string(forKey: wordListKey) ?? defaultWordList}
     }
@@ -120,6 +122,19 @@ class Settings
     var showSubAnagrams : Bool {
         get {
             return UserDefaults.standard.bool(forKey: showSubAnagramsKey)
+        }
+    }
+    
+    var useNonPersonalizedAds : Bool {
+        get{
+            return UserDefaults.standard.bool(forKey: useNonPersonalizedAdsKey)
+        }
+        set(flag) {
+            if flag != useNonPersonalizedAds {
+                let defaults = UserDefaults.standard
+                defaults.set(flag, forKey: useNonPersonalizedAdsKey)
+                defaults.synchronize()
+            }
         }
     }
 
@@ -131,7 +146,8 @@ class Settings
                                wordListKey : defaultWordList,
                                isProKey : false,
                                showSubAnagramsKey : true,
-                               resultsLimitKey : 5000]
+                               resultsLimitKey : 5000,
+                               useNonPersonalizedAdsKey : false]
         UserDefaults.standard.register(defaults: defaultSettings)
     }
 }

@@ -29,7 +29,8 @@ class AboutViewController: UIViewController, IAPDelegate {
         UIApplication.shared.open(URL(string: "https://www.google.com/policies/technologies/partner-sites/")!, options: [:])
     }
     @IBAction func relevantAdsSwitchClicked(_ sender: UISwitch) {
-        print("relevant ads clicked")
+        model.settings.useNonPersonalizedAds = !relevantAdsSwitch.isOn
+        modelToView()
     }
     
     fileprivate var model : Model!
@@ -40,6 +41,7 @@ class AboutViewController: UIViewController, IAPDelegate {
         super.viewDidLoad()
         self.model = Model.sharedInstance
         buyButton.isEnabled=false
+        modelToView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,7 +57,6 @@ class AboutViewController: UIViewController, IAPDelegate {
             model.iap.observable.addObserver(observerName, observer: self)
             model.iap.requestProducts()
         }
-
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -102,6 +103,12 @@ class AboutViewController: UIViewController, IAPDelegate {
             //Pressing cancel (causing a fail) will not show an alert
             self.mpdbShowAlert("Purchase Failed",msg: "Sorry, unable to complete the purchase. You have not been charged.")
         }
+    }
+    
+    private func modelToView(){
+        let useNpa = model.settings.useNonPersonalizedAds
+        relevantAdsLabel?.text = useNpa ? "Show me ads that are less relevant" : "Show me relevant ads"
+        relevantAdsSwitch.isOn = !useNpa
     }
 
 }

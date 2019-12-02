@@ -52,7 +52,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
         {
             bannerView.adUnitID = Ads.bannerAdId
             bannerView.rootViewController = self
-            bannerView.load(GADRequest())
+            bannerView.load(Ads.createRequest(useNpa: model.settings.useNonPersonalizedAds))
         }
 
         if model.settings.isLongPressEnabled {
