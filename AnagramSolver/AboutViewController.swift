@@ -7,16 +7,20 @@
 //
 
 import UIKit
+import SwiftUtils
 
-class AboutViewController: UIViewController {
+class AboutViewController: UIViewController, IAPDelegate {
     @IBOutlet weak var buyButton: UIButton!
     @IBOutlet weak var relevantAdsLabel: UILabel!
     @IBOutlet weak var relevantAdsSwitch: UISwitch!
     @IBAction func buyBtnClicked(_ sender: UIButton) {
-        print("buy clicked")
+        if model.iap.canMakePayments(){
+            buyButton.isEnabled=false
+            model.iap.requestPurchase(IAPFactory.getProductID())
+        }
     }
     @IBAction func restoreBtnClicked(_ sender: UIButton) {
-        print("restore clicked")
+        model.iap.restorePurchases()
     }
     @IBAction func privacyPolicyBtnClicked(_ sender: UIButton) {
         print("privacy policy clicked")
@@ -27,23 +31,77 @@ class AboutViewController: UIViewController {
     @IBAction func relevantAdsSwitchClicked(_ sender: UISwitch) {
         print("relevant ads clicked")
     }
+    
+    fileprivate var model : Model!
+    let observerName = "AboutVC"
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.model = Model.sharedInstance
+        buyButton.isEnabled=false
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if model.settings.isProMode
+        {
+            //purchase already made
+            self.buyButton.isEnabled=false
+            self.buyButton.setTitle("Purchased",for: UIControl.State())
+        }
+        else if model.iap.canMakePayments()
+        {
+            model.iap.observable.addObserver(observerName, observer: self)
+            model.iap.requestProducts()
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        model.iap.observable.removeObserver(observerName)
+    }
+    
+    //MARK:- IAPDelegate
+    func productsRequest(){
+        if let product = model.iap.getProduct(IAPFactory.getProductID())
+        {
+            DispatchQueue.main.async
+            {
+                self.buyButton.isEnabled=true
+                self.buyButton.setTitle("Buy \(product.price)",for: UIControl.State())
+            }
+        }
+    }
+    func purchaseRequest(_ productID : String){
+        if (productID == IAPFactory.getProductID()){
+            DispatchQueue.main.async
+            {
+                self.buyButton.isEnabled=false
+                self.buyButton.setTitle("Purchased",for: UIControl.State())
+                //no need to show an alert, StoreKit will show a thank you
+            }
+        }
+    }
+    func restoreRequest(_ productID : String){
+        if (productID == IAPFactory.getProductID()){
+            DispatchQueue.main.async
+            {
+                self.buyButton.isEnabled=false
+                self.buyButton.setTitle("Purchased",for: UIControl.State())
+                //Does StoreKit show an alert here?
+                self.mpdbShowAlert("Purchase Restored",msg: "Go Pro purchase has been restored, Pro features are now unlocked.")
+            }
+        }
+        
+    }
+    func purchaseFailed(_ productID : String){
+        DispatchQueue.main.async
+        {
+            self.buyButton.isEnabled=true
+            //Pressing cancel (causing a fail) will not show an alert
+            self.mpdbShowAlert("Purchase Failed",msg: "Sorry, unable to complete the purchase. You have not been charged.")
+        }
+    }
 
 }
