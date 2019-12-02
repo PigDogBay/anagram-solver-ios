@@ -227,48 +227,7 @@ www.mpdbailey.co.uk
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyL-Jh-0Qj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-817" y="-933"/>
-        </scene>
-        <!--Go Pro-->
-        <scene sceneID="UQV-oN-hGh">
-            <objects>
-                <viewController title="Go Pro" id="Ka6-c6-The" customClass="GoProViewController" customModule="AnagramSolver" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NGr-GJ-3Si">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msL-QM-hiI">
-                                <rect key="frame" x="172.66666666666666" y="32" width="30" height="30"/>
-                                <state key="normal" title="Buy"/>
-                                <connections>
-                                    <action selector="buyBtnClicked:" destination="Ka6-c6-The" eventType="touchUpInside" id="pku-Lb-ODB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiJ-KV-KlY">
-                                <rect key="frame" x="123" y="94" width="129" height="30"/>
-                                <state key="normal" title="Restore Purchases"/>
-                                <connections>
-                                    <action selector="restoreBtnClicked:" destination="Ka6-c6-The" eventType="touchUpInside" id="YJh-Ei-Dln"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="IiJ-KV-KlY" firstAttribute="top" secondItem="msL-QM-hiI" secondAttribute="bottom" constant="32" id="2YU-8z-mNB"/>
-                            <constraint firstItem="msL-QM-hiI" firstAttribute="top" secondItem="DcM-2I-D19" secondAttribute="top" constant="32" id="2h3-bg-YGA"/>
-                            <constraint firstItem="msL-QM-hiI" firstAttribute="centerX" secondItem="NGr-GJ-3Si" secondAttribute="centerX" id="kgP-kP-vYM"/>
-                            <constraint firstItem="IiJ-KV-KlY" firstAttribute="centerX" secondItem="DcM-2I-D19" secondAttribute="centerX" id="kzF-ri-neJ"/>
-                            <constraint firstItem="IiJ-KV-KlY" firstAttribute="centerX" secondItem="NGr-GJ-3Si" secondAttribute="centerX" id="ml0-3q-psU"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="DcM-2I-D19"/>
-                    </view>
-                    <connections>
-                        <outlet property="buyButton" destination="msL-QM-hiI" id="zIm-lI-Ed2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mfb-og-jtM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="78" y="-475"/>
+            <point key="canvasLocation" x="146" y="-596"/>
         </scene>
         <!--Anagram Solver-->
         <scene sceneID="duY-AS-EmT">
@@ -700,7 +659,6 @@ www.mpdbailey.co.uk
                         <outlet property="menuButton" destination="nE8-C3-UlE" id="bcH-Wi-cQa"/>
                         <outlet property="searchButton" destination="a8L-df-lOj" id="QZ0-bu-JwH"/>
                         <outlet property="textFieldQuery" destination="a7i-Fj-C2n" id="230-eb-cbu"/>
-                        <segue destination="Ka6-c6-The" kind="show" identifier="goProSegue" id="zt4-Lf-rRH"/>
                         <segue destination="2tR-EW-1Aq" kind="show" identifier="segueUserGuide" id="D2K-XF-Zb6"/>
                         <segue destination="q58-HK-0Kl" kind="show" identifier="aboutSegue" id="QpT-n9-DZr"/>
                     </connections>
