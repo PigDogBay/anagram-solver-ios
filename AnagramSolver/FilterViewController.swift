@@ -89,8 +89,7 @@ class FilterViewController: UITableViewController {
      */
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        //show Pro filters if in Pro mode
-        return model.settings.isProMode ? 5 : 4
+        return 5
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -121,7 +120,7 @@ class FilterViewController: UITableViewController {
         case 3:
             return "Filter By Word Size"
         case 4:
-            return "Pro Filters"
+            return "Expert Filters"
         default:
             return ""
         }
