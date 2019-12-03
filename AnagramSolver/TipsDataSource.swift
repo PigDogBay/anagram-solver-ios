@@ -11,9 +11,9 @@ import UIKit
 class TipsDataSource : NSObject, UICollectionViewDataSource
 {
     static let tip0 = ["Anagrams","Find words from jumbled letters\nEnter moonstarer\nTo find\nastronomer","moonstarer"]
-    static let tip1 = ["Blank Letters","Use + as a blank letter\nEnter scrabb++\nTo find\ncrabbers, scabbard...","scrabb++"]
+    static let tip1 = ["Crossw.rds","Use dots for unknown letters\nEnter m.g..\nTo find\nmagic, megan, mcgeee...","m.g.."]
     static let tip2 = ["Two Words","Use a space to split the letters\nEnter james bond\nTo find\njabs demon and admen jobs","james bond"]
-    static let tip3 = ["Crosswords","Use dots for missing letters\nEnter m.g..\nTo find\nmagic, megan, mcgeee...","m.g.."]
+    static let tip3 = ["Blank Letters","Use + as a blank letter\nEnter scrabb++\nTo find\ncrabbers, scabbard...","scrabb++"]
     static let tip4 = ["Shortcuts","Use numbers instead of dots\nEnter z9\nTo find\nzombielike, zookeepers","z9"]
     static let tip5 = ["Supergrams","Find larger words\nEnter kayleigh*\nTo find\nbreathtakingly, heartbreakingly","kayleigh*"]
     static let tip6 = ["Prefix@Suffix","Use @ for 1 or more letters\nEnter super@ted\nTo find\nsupersophisticated","super@ted"]
