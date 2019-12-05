@@ -1,15 +1,14 @@
 source 'https://github.com/CocoaPods/Specs.git'
 # Uncomment this line to define a global platform for your project
-platform :ios, '9.0'
+platform :ios, '10.3'
 
 target 'AnagramSolver' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for AnagramSolver
-  pod 'Firebase/Analytics'
-  pod 'Firebase/AdMob'
-  
+  pod 'Google-Mobile-Ads-SDK'
+    
   target 'AnagramSolverTests' do
     inherit! :search_paths
     # Pods for testing

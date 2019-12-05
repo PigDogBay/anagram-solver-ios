@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let settings = Settings()
         settings.registerDefaultSettings()
         if !settings.isProMode {
-            FirebaseApp.configure()
             Ads.setup()
         }
         return true
