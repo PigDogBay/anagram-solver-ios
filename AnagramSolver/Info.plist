@@ -48,5 +48,14 @@
 	</array>
     <key>GADApplicationIdentifier</key>
     <string>ca-app-pub-3582986480189311~7874947183</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+        <key>NSAllowsArbitraryLoadsForMedia</key>
+        <true/>
+        <key>NSAllowsArbitraryLoadsInWebContent</key>
+        <true/>
+    </dict>
 </dict>
 </plist>
