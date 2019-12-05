@@ -14,7 +14,6 @@
 		4D1D6E671FA897FB008466F2 /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D6E661FA897FB008466F2 /* Ratings.swift */; };
 		4D2B35C31D33AAE30014ABF3 /* IAPFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */; };
 		4D3596411CFEEA50008D2FAF /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3596401CFEEA50008D2FAF /* Ads.swift */; };
-		4D35964A1D044605008D2FAF /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D3596491D044605008D2FAF /* help.html */; };
 		4D45D7B01E2901BF00EC2D27 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D45D7AF1E2901BF00EC2D27 /* Settings.bundle */; };
 		4D45D7B31E2CF0C500EC2D27 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45D7B21E2CF0C500EC2D27 /* Settings.swift */; };
 		4D45EFBA1A9DFABA00C40BB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */; };
@@ -98,7 +97,6 @@
 		4D1D6E661FA897FB008466F2 /* Ratings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ratings.swift; sourceTree = "<group>"; };
 		4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPFactory.swift; sourceTree = "<group>"; };
 		4D3596401CFEEA50008D2FAF /* Ads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
-		4D3596491D044605008D2FAF /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
 		4D45D7AF1E2901BF00EC2D27 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		4D45D7B21E2CF0C500EC2D27 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		4D45EFB41A9DFABA00C40BB4 /* AnagramSolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnagramSolver.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,20 +192,6 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		4D1D62BC1E26682000231DB3 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				4DE5CA89238EB6170013D3F5 /* words.txt */,
-				4DE5CA8C238EB6250013D3F5 /* sowpods.txt */,
-				4DE5CA8E238EB6330013D3F5 /* twl.txt */,
-				4D3596491D044605008D2FAF /* help.html */,
-				4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */,
-				4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */,
-				4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */,
-			);
-			name = Assets;
-			sourceTree = "<group>";
-		};
 		4D45EFAB1A9DFABA00C40BB4 = {
 			isa = PBXGroup;
 			children = (
@@ -232,11 +216,11 @@
 		4D45EFB61A9DFABA00C40BB4 /* AnagramSolver */ = {
 			isa = PBXGroup;
 			children = (
-				4D1D62BC1E26682000231DB3 /* Assets */,
+				4D45EFB71A9DFABA00C40BB4 /* Supporting Files */,
 				4DF2DE411FB22A4000F44ADE /* Cells */,
 				4D1D62BB1E26674F00231DB3 /* ViewControllers */,
-				4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */,
 				4D3596401CFEEA50008D2FAF /* Ads.swift */,
+				4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */,
 				4D1D6E661FA897FB008466F2 /* Ratings.swift */,
 				4DA0C3F9236C761600AF693B /* AppState.swift */,
 				4DA0C3F6236B0FC800AF693B /* Matches.swift */,
@@ -247,7 +231,6 @@
 				4D9E43AC1FAC84FC007007C8 /* Filter.swift */,
 				4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */,
 				4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */,
-				4D45EFB71A9DFABA00C40BB4 /* Supporting Files */,
 			);
 			path = AnagramSolver;
 			sourceTree = "<group>";
@@ -255,7 +238,13 @@
 		4D45EFB71A9DFABA00C40BB4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */,
 				4D45EFB81A9DFABA00C40BB4 /* Info.plist */,
+				4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */,
+				4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */,
+				4DE5CA8C238EB6250013D3F5 /* sowpods.txt */,
+				4DE5CA8E238EB6330013D3F5 /* twl.txt */,
+				4DE5CA89238EB6170013D3F5 /* words.txt */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -420,7 +409,6 @@
 			files = (
 				4D45D7B01E2901BF00EC2D27 /* Settings.bundle in Resources */,
 				4DE5CA8F238EB6330013D3F5 /* twl.txt in Resources */,
-				4D35964A1D044605008D2FAF /* help.html in Resources */,
 				4D45EFBF1A9DFABA00C40BB4 /* Main.storyboard in Resources */,
 				4DE5CA8B238EB6170013D3F5 /* words.txt in Resources */,
 				4D45EFC41A9DFABA00C40BB4 /* LaunchScreen.xib in Resources */,
