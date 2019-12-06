@@ -40,7 +40,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="992"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEo-VN-V2F" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="992"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1006.3333333333334"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INFO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJT-nH-pv5">
                                                 <rect key="frame" x="20.000000000000004" y="20" width="56.333333333333343" height="28.666666666666671"/>
@@ -49,101 +49,96 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIVACY POLICY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVS-rn-LJp">
-                                                <rect key="frame" x="20" y="173.66666666666669" width="193.33333333333334" height="28.666666666666657"/>
+                                                <rect key="frame" x="20" y="188" width="193.33333333333334" height="28.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADVERTISEMENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcf-TA-Wch">
-                                                <rect key="frame" x="20" y="357.33333333333331" width="214.33333333333334" height="28.666666666666686"/>
+                                                <rect key="frame" x="20" y="371.66666666666669" width="214.33333333333334" height="28.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLo-P0-vMx">
-                                                <rect key="frame" x="20.000000000000014" y="64.666666666666657" width="236.33333333333337" height="77"/>
+                                                <rect key="frame" x="20.000000000000014" y="64.666666666666657" width="236.33333333333337" height="91.333333333333343"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
                                                         <string key="content">Version 1.06.00
 www.mpdbailey.co.uk
 ©2019 MPD Bailey Technology</string>
                                                         <attributes>
-                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For information about how this app uses your data press the button below to review the Privacy Policy in full." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oK0-XG-l6x">
-                                                <rect key="frame" x="20" y="218.33333333333331" width="335" height="61"/>
+                                                <rect key="frame" x="20" y="232.66666666666669" width="335" height="61"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfc-QH-WXc">
-                                                <rect key="frame" x="20" y="402" width="335" height="101.66666666666669"/>
+                                                <rect key="frame" x="20" y="416.33333333333331" width="335" height="101.66666666666669"/>
                                                 <string key="text">This app uses Google's Admob and Firebase analytics to deliver relevant ads to you. To find out more about how Google uses information from this app click on the link below.</string>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You may remove advertisements and disable firebase analytics by making a one off in app purchase." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIR-Gq-0a5">
-                                                <rect key="frame" x="20" y="565.66666666666663" width="335" height="61"/>
+                                                <rect key="frame" x="20" y="580" width="335" height="61"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKG-gs-WIc">
-                                                <rect key="frame" x="237" y="295.33333333333331" width="118" height="30"/>
+                                                <rect key="frame" x="237" y="309.66666666666669" width="118" height="30"/>
                                                 <state key="normal" title="PRIVACY POLICY"/>
                                                 <connections>
                                                     <action selector="privacyPolicyBtnClicked:" destination="q58-HK-0Kl" eventType="touchUpInside" id="6Uy-0M-DJ5"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqu-Pc-Mzy">
-                                                <rect key="frame" x="239" y="519.66666666666663" width="116" height="30"/>
+                                                <rect key="frame" x="239" y="534" width="116" height="30"/>
                                                 <state key="normal" title="FIND OUT MORE"/>
                                                 <connections>
                                                     <action selector="findOutMoreBtnClicked:" destination="q58-HK-0Kl" eventType="touchUpInside" id="4t5-79-OWi"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Y9-hr-Kva">
-                                                <rect key="frame" x="324" y="642.66666666666663" width="31" height="30"/>
+                                                <rect key="frame" x="324" y="657" width="31" height="30"/>
                                                 <state key="normal" title="BUY"/>
                                                 <connections>
                                                     <action selector="buyBtnClicked:" destination="q58-HK-0Kl" eventType="touchUpInside" id="lJE-Ao-8Dr"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUo-HO-haV">
-                                                <rect key="frame" x="205" y="765.66666666666663" width="150" height="30"/>
+                                                <rect key="frame" x="205" y="780" width="150" height="30"/>
                                                 <state key="normal" title="RESTORE PURCHASE"/>
                                                 <connections>
                                                     <action selector="restoreBtnClicked:" destination="q58-HK-0Kl" eventType="touchUpInside" id="g3e-rk-54g"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you have already purchased the option to remove ads, press the restore button below to retrieve your purchase details." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaM-h6-4PJ">
-                                                <rect key="frame" x="20" y="688.66666666666663" width="335" height="61"/>
+                                                <rect key="frame" x="20" y="703" width="335" height="61"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoQ-Kw-req">
-                                                <rect key="frame" x="20" y="811.66666666666663" width="335" height="101.66666666666663"/>
+                                                <rect key="frame" x="20" y="826" width="335" height="101.66666666666663"/>
                                                 <string key="text">This app will use your data to tailor ads to you. Our partners will collect data and use an unique identifier on your device to show you ads. You can select here to show tailored ads ors less relevant ads.</string>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kz9-iY-AtH">
-                                                <rect key="frame" x="306" y="929.33333333333337" width="51" height="31"/>
+                                                <rect key="frame" x="306" y="943.66666666666674" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="relevantAdsSwitchClicked:" destination="q58-HK-0Kl" eventType="touchUpInside" id="k8t-fF-bNn"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show me relevant ads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mz-e8-V9X">
-                                                <rect key="frame" x="103" y="934.33333333333337" width="168" height="21"/>
+                                                <rect key="frame" x="103" y="948.66666666666674" width="168" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -242,7 +237,7 @@ www.mpdbailey.co.uk
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter letters" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="a7i-Fj-C2n">
                                         <rect key="frame" x="8" y="5" width="343" height="40"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="plt-OJ-fIO"/>
                                         </constraints>
@@ -253,7 +248,7 @@ www.mpdbailey.co.uk
                                         </connections>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="a7i-Fj-C2n" secondAttribute="trailing" constant="8" id="1hd-J6-CSL"/>
                                     <constraint firstAttribute="height" constant="50" id="OKM-Ck-mCc"/>
@@ -297,7 +292,7 @@ www.mpdbailey.co.uk
                                                     <attributedString key="attributedText">
                                                         <fragment content="Find words from jumbled letters Enter moonstarer To find astronomer">
                                                             <attributes>
-                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
@@ -316,7 +311,7 @@ www.mpdbailey.co.uk
                                                 </button>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="BoQ-YB-tG6" firstAttribute="top" secondItem="GWU-aA-6Hu" secondAttribute="bottom" constant="24" id="CbB-Fe-3Fk"/>
                                             <constraint firstItem="Abu-ep-efe" firstAttribute="top" secondItem="u1r-9k-dV9" secondAttribute="top" constant="20" id="Lzh-9j-uud"/>
@@ -367,7 +362,7 @@ www.mpdbailey.co.uk
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="CWj-Bb-B0U" firstAttribute="centerX" secondItem="B0y-7b-KBs" secondAttribute="centerX" id="TFY-y8-UB7"/>
                                             <constraint firstItem="CWj-Bb-B0U" firstAttribute="top" secondItem="Hts-hU-1Ib" secondAttribute="bottom" constant="24" id="WHR-DO-3ee"/>
@@ -412,7 +407,7 @@ www.mpdbailey.co.uk
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="Gv8-62-zB7" firstAttribute="leading" secondItem="bA4-Jy-XCa" secondAttribute="leading" constant="20" id="Vao-YS-hya"/>
                                             <constraint firstItem="GlZ-c7-vAu" firstAttribute="centerX" secondItem="bA4-Jy-XCa" secondAttribute="centerX" id="ciU-Zl-aTO"/>
@@ -442,8 +437,8 @@ www.mpdbailey.co.uk
                                                     <attributedString key="attributedText">
                                                         <fragment content="Choose: * Word list * Dictionary definition * Results limit and more">
                                                             <attributes>
-                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
@@ -468,7 +463,7 @@ www.mpdbailey.co.uk
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="vxQ-TC-kuc" firstAttribute="centerX" secondItem="k88-rY-U35" secondAttribute="centerX" id="757-BA-aAp"/>
                                             <constraint firstItem="V5z-SS-VmI" firstAttribute="leading" secondItem="k88-rY-U35" secondAttribute="leading" constant="20" id="Bi3-dz-lbj"/>
@@ -526,7 +521,7 @@ www.mpdbailey.co.uk
                                                 </button>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="Qaf-KL-8mY" firstAttribute="centerX" secondItem="4oI-ox-8IL" secondAttribute="centerX" id="2Cg-mw-8e7"/>
                                             <constraint firstAttribute="trailing" secondItem="0Nd-5l-dyr" secondAttribute="trailing" constant="20" id="6i7-kh-cQU"/>
@@ -547,20 +542,20 @@ www.mpdbailey.co.uk
                                             <rect key="frame" x="0.0" y="0.0" width="288" height="260"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="0eM-uM-Fmm">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="0eM-uM-Fmm">
                                                     <rect key="frame" x="20" y="20" width="42" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="42" id="InQ-p8-lX1"/>
                                                         <constraint firstAttribute="height" constant="42" id="c7g-r6-gl1"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Help Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Os7-uM-3El">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help Out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Os7-uM-3El">
                                                     <rect key="frame" x="98.666666666666686" y="28" width="91" height="26.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k13-AS-8gX">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k13-AS-8gX">
                                                     <rect key="frame" x="54.000000000000014" y="78.333333333333314" width="180.33333333333337" height="122"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Keep updates coming * Rate the app * Send any suggestions * Tell your friends">
@@ -572,7 +567,7 @@ www.mpdbailey.co.uk
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPP-Rd-QAK">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPP-Rd-QAK">
                                                     <rect key="frame" x="188" y="216.33333333333334" width="80" height="30"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="FEEDBACK">
@@ -582,7 +577,7 @@ www.mpdbailey.co.uk
                                                         <action selector="button1Clicked:" destination="vOb-DU-7RQ" eventType="touchUpInside" id="vit-zV-hpt"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffS-H6-FR5">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffS-H6-FR5">
                                                     <rect key="frame" x="113" y="216.33333333333334" width="39" height="30"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="RATE">
@@ -592,7 +587,7 @@ www.mpdbailey.co.uk
                                                         <action selector="button2Clicked:" destination="vOb-DU-7RQ" eventType="touchUpInside" id="0NA-nl-d85"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhP-f8-Jmr">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhP-f8-Jmr">
                                                     <rect key="frame" x="40" y="216.33333333333334" width="37" height="30"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="TELL">
@@ -604,7 +599,7 @@ www.mpdbailey.co.uk
                                                 </button>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="ffS-H6-FR5" firstAttribute="leading" secondItem="ZhP-f8-Jmr" secondAttribute="trailing" constant="36" id="9LC-59-EVV"/>
                                             <constraint firstItem="0eM-uM-Fmm" firstAttribute="leading" secondItem="vOb-DU-7RQ" secondAttribute="leading" constant="20" id="ChP-Wa-giN"/>
@@ -679,12 +674,11 @@ www.mpdbailey.co.uk
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o39-YA-7GC">
                                 <rect key="frame" x="166.66666666666666" y="8" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8RR-Nh-2cY">
                                 <rect key="frame" x="0.0" y="37" width="375" height="603"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="MatchesCell" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="MatchesCell" textLabel="sVz-Cd-ldF" style="IBUITableViewCellStyleDefault" id="t0m-df-1iP">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -697,7 +691,6 @@ www.mpdbailey.co.uk
                                                     <rect key="frame" x="15" y="0.0" width="313" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -714,14 +707,14 @@ www.mpdbailey.co.uk
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayg-FS-pz2" customClass="GADBannerView">
                                 <rect key="frame" x="27.666666666666657" y="640" width="320" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="TDJ-jW-lip"/>
                                     <constraint firstAttribute="height" constant="50" id="WGA-dx-snB"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="8RR-Nh-2cY" firstAttribute="leading" secondItem="8OF-kr-Jnp" secondAttribute="leading" id="52g-hW-A59"/>
                             <constraint firstAttribute="trailing" secondItem="8RR-Nh-2cY" secondAttribute="trailing" id="JYz-xk-1IV"/>
@@ -899,12 +892,12 @@ www.mpdbailey.co.uk
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7t-WH-hkQ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5b-GP-dTL">
                                 <rect key="frame" x="150" y="388.66666666666669" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="utU-ey-tE8">
@@ -947,6 +940,6 @@ www.mpdbailey.co.uk
         <image name="lightbulb_on" width="42.666667938232422" height="42.666667938232422"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="D2K-XF-Zb6"/>
+        <segue reference="kV8-yp-vNU"/>
     </inferredMetricsTieBreakers>
 </document>
