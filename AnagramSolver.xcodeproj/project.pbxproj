@@ -30,6 +30,7 @@
 		4D9E43B11FAC86EC007007C8 /* FilterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */; };
 		4DA0C3F7236B0FC800AF693B /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0C3F6236B0FC800AF693B /* Matches.swift */; };
 		4DA0C3FA236C761600AF693B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0C3F9236C761600AF693B /* AppState.swift */; };
+		4DBBEEA9239A7C3800ADCA41 /* colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBBEEA8239A7C3800ADCA41 /* colors.xcassets */; };
 		4DBFEA3F23914347009423E2 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBFEA3E23914347009423E2 /* AboutViewController.swift */; };
 		4DDAB8831FB61139000EDB30 /* ActionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDAB8821FB61139000EDB30 /* ActionCollectionViewCell.swift */; };
 		4DE5CA8B238EB6170013D3F5 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5CA89238EB6170013D3F5 /* words.txt */; };
@@ -117,6 +118,7 @@
 		4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFactory.swift; sourceTree = "<group>"; usesTabs = 0; };
 		4DA0C3F6236B0FC800AF693B /* Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
 		4DA0C3F9236C761600AF693B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		4DBBEEA8239A7C3800ADCA41 /* colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = colors.xcassets; sourceTree = "<group>"; };
 		4DBFEA3E23914347009423E2 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		4DDAB8821FB61139000EDB30 /* ActionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCollectionViewCell.swift; sourceTree = "<group>"; };
 		4DE5CA89238EB6170013D3F5 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 		4D45EFB71A9DFABA00C40BB4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4DBBEEA8239A7C3800ADCA41 /* colors.xcassets */,
 				4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */,
 				4D45EFB81A9DFABA00C40BB4 /* Info.plist */,
 				4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */,
@@ -412,6 +415,7 @@
 				4D45EFBF1A9DFABA00C40BB4 /* Main.storyboard in Resources */,
 				4DE5CA8B238EB6170013D3F5 /* words.txt in Resources */,
 				4D45EFC41A9DFABA00C40BB4 /* LaunchScreen.xib in Resources */,
+				4DBBEEA9239A7C3800ADCA41 /* colors.xcassets in Resources */,
 				4DE5CA8D238EB6250013D3F5 /* sowpods.txt in Resources */,
 				4D45EFC11A9DFABA00C40BB4 /* Images.xcassets in Resources */,
 			);
@@ -682,7 +686,7 @@
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AnagramSolver/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.06.00;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pigdogbay.$(PRODUCT_NAME:rfc1034identifier)";
@@ -709,7 +713,7 @@
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AnagramSolver/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.06.00;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pigdogbay.$(PRODUCT_NAME:rfc1034identifier)";
