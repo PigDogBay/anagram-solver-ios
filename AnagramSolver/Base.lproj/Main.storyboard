@@ -126,7 +126,7 @@ www.mpdbailey.co.uk
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoQ-Kw-req">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoQ-Kw-req">
                                                 <rect key="frame" x="20" y="826" width="335" height="101.66666666666663"/>
                                                 <string key="text">This app will use your data to tailor ads to you. Our partners will collect data and use an unique identifier on your device to show you ads. You can select here to show tailored ads ors less relevant ads.</string>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
@@ -940,7 +940,7 @@ www.mpdbailey.co.uk
         <image name="help" width="42.666667938232422" height="42.666667938232422"/>
         <image name="lightbulb_on" width="42.666667938232422" height="42.666667938232422"/>
         <namedColor name="tipsBackground">
-            <color red="0.82745098039215681" green="0.85882352941176465" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.82700002193450928" green="0.85900002717971802" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
