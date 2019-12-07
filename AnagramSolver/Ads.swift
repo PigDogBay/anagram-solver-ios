@@ -18,8 +18,7 @@ struct Ads
         requestConfiguration.testDeviceIdentifiers = [
             (kGADSimulatorID as! String),
             "1d0dd7e23d31eae8a3e9ad16a8c9b3b4",//iPad
-            "a4b042150b6cace14cc182d6bf254d09",//iPod Touch
-            "cc0b7644c90c4ab95e0150938951def3" //iPhone
+            "a4b042150b6cace14cc182d6bf254d09"//iPod Touch
            ]
         GADMobileAds.sharedInstance().start(completionHandler: nil)
     }
