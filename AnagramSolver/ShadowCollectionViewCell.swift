@@ -18,7 +18,7 @@ class ShadowCollectionViewCell: UICollectionViewCell {
         //        cell.contentView.layer.borderWidth = 1.0
         //        cell.contentView.layer.borderColor = UIColor.clear.cgColor
         //        cell.contentView.layer.masksToBounds = true
-        self.layer.shadowColor = UIColor.lightGray.cgColor
+        self.layer.shadowColor = UIColor(named: "tipsDropShadow")?.cgColor
         self.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
         self.layer.shadowRadius = 2.0
         self.layer.shadowOpacity = 1.0
