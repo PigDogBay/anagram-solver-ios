@@ -88,8 +88,8 @@ www.mpdbailey.co.uk
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You may remove advertisements and disable firebase analytics by making a one off in app purchase." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIR-Gq-0a5">
-                                                <rect key="frame" x="20" y="580" width="335" height="61"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You may remove advertisements by making a one off in app purchase." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIR-Gq-0a5">
+                                                <rect key="frame" x="20" y="580" width="335" height="40.666666666666629"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -108,27 +108,27 @@ www.mpdbailey.co.uk
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Y9-hr-Kva">
-                                                <rect key="frame" x="324" y="657" width="31" height="30"/>
+                                                <rect key="frame" x="324" y="636.66666666666663" width="31" height="30"/>
                                                 <state key="normal" title="BUY"/>
                                                 <connections>
                                                     <action selector="buyBtnClicked:" destination="q58-HK-0Kl" eventType="touchUpInside" id="lJE-Ao-8Dr"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUo-HO-haV">
-                                                <rect key="frame" x="205" y="780" width="150" height="30"/>
+                                                <rect key="frame" x="205" y="759.66666666666663" width="150" height="30"/>
                                                 <state key="normal" title="RESTORE PURCHASE"/>
                                                 <connections>
                                                     <action selector="restoreBtnClicked:" destination="q58-HK-0Kl" eventType="touchUpInside" id="g3e-rk-54g"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you have already purchased the option to remove ads, press the restore button below to retrieve your purchase details." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaM-h6-4PJ">
-                                                <rect key="frame" x="20" y="703" width="335" height="61"/>
+                                                <rect key="frame" x="20" y="682.66666666666663" width="335" height="61"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yoQ-Kw-req">
-                                                <rect key="frame" x="20" y="826" width="335" height="101.66666666666663"/>
-                                                <string key="text">This app will use your data to tailor ads to you. Our partners will collect data and use an unique identifier on your device to show you ads. You can select here to show tailored ads ors less relevant ads.</string>
+                                                <rect key="frame" x="20" y="805.66666666666663" width="335" height="122"/>
+                                                <string key="text">This app will use your data to tailor ads to you. Our partners will collect data and use an unique identifier on your device to show you ads. You can select here if we can continue to use your data to tailor ads for you.</string>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
