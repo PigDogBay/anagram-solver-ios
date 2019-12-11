@@ -11,9 +11,9 @@
 			<string>
 Key points
 - The app does not store or request any personal information
-- The app uses Google Admob and Firebase analytics to show ads
-- The app does not track how you use the app
-- Feedback emails are stored temporarily, once the issue is resolved your email will be deleted.
+- Feedback emails are stored temporarily, once the issue is resolved your email will be deleted
+- Our partners will collect data and use an unique identifier on your device to show you relevant ads
+- In the About &amp; Privacy menu you can select if you we can continue to use your data to tailor ads for you
 
 You can view the full privacy policy here:
 http://pigdogbay.blogspot.com/2018/05/privacy-policy.html
