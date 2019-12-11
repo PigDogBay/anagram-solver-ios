@@ -88,7 +88,6 @@ class Model : WordListCallback, IAPDelegate
     }
     func prepareToFilterSearch(){
         matches.removeAll()
-        filter.updateFilterCount()
         appState.appState = .ready
     }
     
@@ -101,6 +100,7 @@ class Model : WordListCallback, IAPDelegate
         processedQuery = self.wordSearch.postProcessQuery(processedQuery, type: searchType)
         wordFormatter.newSearch(processedQuery, searchType)
         let filterPipeline = filterFactory.createChainedCallback(lastCallback: self)
+        filter.updateFilterCount()
         self.wordSearch.runQuery(processedQuery, type: searchType, callback: filterPipeline)
         appState.appState = .finished
     }
