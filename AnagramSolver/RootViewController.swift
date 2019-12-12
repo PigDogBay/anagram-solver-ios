@@ -163,7 +163,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         NotificationCenter.default.addObserver(self, selector: #selector (appEnterForgeround), name: UIApplication.willEnterForegroundNotification, object: UIApplication.shared)
         if mpdbCheckIsFirstTime()
         {
-            mpdbShowAlert("Welcome",msg: "Thanks for trying Anagram Solver, enter your letters and search over 280,000 words!")
+            mpdbShowAlert("Welcome",msg: "Thanks for trying Anagram Solver, enter your letters and search over 310,000 words!")
         }
     }
     //Only called when view re-appears from background
