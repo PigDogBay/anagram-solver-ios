@@ -46,7 +46,7 @@
 			<key>Key</key>
 			<string>definition</string>
 			<key>DefaultValue</key>
-			<string>google</string>
+			<string>google define</string>
 		</dict>
 		<dict>
 			<key>Type</key>

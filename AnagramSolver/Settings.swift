@@ -139,7 +139,7 @@ class Settings
     }
 
     func registerDefaultSettings() {
-        let defaultSettings : [ String : Any] = [definitionKey : "google",
+        let defaultSettings : [ String : Any] = [definitionKey : "google define",
                                highlightKey : "red",
                                showKeyboardKey : false,
                                longPressEnabledKey : true,
