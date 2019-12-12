@@ -15,6 +15,8 @@ struct Ads
 
     static func setup(){
         let requestConfiguration = GADMobileAds.sharedInstance().requestConfiguration
+        //app is rated 17+, so may as well allow mature ads
+        requestConfiguration.maxAdContentRating = .matureAudience
         requestConfiguration.testDeviceIdentifiers = [
             (kGADSimulatorID as! String),
             "1d0dd7e23d31eae8a3e9ad16a8c9b3b4",//iPad
