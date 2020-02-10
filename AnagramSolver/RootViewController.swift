@@ -62,7 +62,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     
     func sendFeedback(){
         let emailAddress = "pigdogbay@yahoo.co.uk"
-        let subject = "Anagram Solver Feedback iOS v1.06"
+        let subject = "Anagram Solver Feedback iOS v1.07"
         let body = "Your feedback is most welcome\n *Report Bugs\n *Suggest new features\n *Ask for help\n\n\nHi Mark,\n\n"
         	
         if MFMailComposeViewController.canSendMail() {

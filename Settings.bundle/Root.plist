@@ -9,35 +9,35 @@
 		<dict>
 			<key>Titles</key>
 			<array>
-                <string>Cambridge</string>
-                <string>Chambers</string>
-                <string>Collins</string>
-                <string>Dictionary.com</string>
-                <string>Google Define</string>
-                <string>Google Dictionary</string>
-                <string>Lexico</string>
-                <string>Merriam-Webster</string>
-                <string>Merriam-Webster Thesaurus</string>
-                <string>Thesaurus.com</string>
-                <string>Wiktionary</string>
-                <string>Wikipedia</string>
-                <string>Word Game Dictionary</string>
+				<string>Cambridge</string>
+				<string>Chambers</string>
+				<string>Collins</string>
+				<string>Dictionary.com</string>
+				<string>Google Define</string>
+				<string>Google Dictionary</string>
+				<string>Lexico</string>
+				<string>Merriam-Webster</string>
+				<string>Merriam-Webster Thesaurus</string>
+				<string>Thesaurus.com</string>
+				<string>Wiktionary</string>
+				<string>Wikipedia</string>
+				<string>Word Game Dictionary</string>
 			</array>
 			<key>Values</key>
 			<array>
-                <string>cambridge</string>
-                <string>chambers</string>
-                <string>collins</string>
-                <string>dictionary.com</string>
-                <string>google define</string>
-                <string>google</string>
-                <string>lexico</string>
-                <string>merriam-webster</string>
-                <string>merriam-webster thesaurus</string>
-                <string>thesaurus.com</string>
-                <string>wiktionary</string>
-                <string>wikipedia</string>
-                <string>word game dictionary</string>
+				<string>cambridge</string>
+				<string>chambers</string>
+				<string>collins</string>
+				<string>dictionary.com</string>
+				<string>google define</string>
+				<string>google</string>
+				<string>lexico</string>
+				<string>merriam-webster</string>
+				<string>merriam-webster thesaurus</string>
+				<string>thesaurus.com</string>
+				<string>wiktionary</string>
+				<string>wikipedia</string>
+				<string>word game dictionary</string>
 			</array>
 			<key>Type</key>
 			<string>PSMultiValueSpecifier</string>
@@ -118,28 +118,28 @@
 			<key>Title</key>
 			<string>Search Settings</string>
 		</dict>
-        <dict>
-            <key>Titles</key>
-            <array>
-                <string>180k words - TWL (US Scrabble)</string>
-                <string>270k words - SOWPODS (World Scrabble)</string>
-                <string>310k words - SCOWL</string>
-            </array>
-            <key>Values</key>
-            <array>
-                <string>twl</string>
-                <string>sowpods</string>
-                <string>words</string>
-            </array>
-            <key>Type</key>
-            <string>PSMultiValueSpecifier</string>
-            <key>Title</key>
-            <string>Word list</string>
-            <key>Key</key>
-            <string>wordList</string>
-            <key>DefaultValue</key>
-            <string>words</string>
-        </dict>
+		<dict>
+			<key>Titles</key>
+			<array>
+				<string>180k words - TWL (US Scrabble)</string>
+				<string>270k words - SOWPODS (World Scrabble)</string>
+				<string>310k words - SCOWL</string>
+			</array>
+			<key>Values</key>
+			<array>
+				<string>twl</string>
+				<string>sowpods</string>
+				<string>words</string>
+			</array>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>Word list</string>
+			<key>Key</key>
+			<string>wordList</string>
+			<key>DefaultValue</key>
+			<string>words</string>
+		</dict>
 		<dict>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
@@ -188,7 +188,7 @@
 			<key>Key</key>
 			<string>version</string>
 			<key>DefaultValue</key>
-			<string>1.06</string>
+			<string>1.07</string>
 		</dict>
 		<dict>
 			<key>Type</key>
