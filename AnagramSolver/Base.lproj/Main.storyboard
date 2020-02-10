@@ -707,10 +707,9 @@ www.mpdbailey.co.uk
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayg-FS-pz2" customClass="GADBannerView">
-                                <rect key="frame" x="27.666666666666657" y="640" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="640" width="375" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="TDJ-jW-lip"/>
                                     <constraint firstAttribute="height" constant="50" id="WGA-dx-snB"/>
                                 </constraints>
                             </view>
@@ -719,12 +718,13 @@ www.mpdbailey.co.uk
                         <constraints>
                             <constraint firstItem="8RR-Nh-2cY" firstAttribute="leading" secondItem="8OF-kr-Jnp" secondAttribute="leading" id="52g-hW-A59"/>
                             <constraint firstAttribute="trailing" secondItem="8RR-Nh-2cY" secondAttribute="trailing" id="JYz-xk-1IV"/>
+                            <constraint firstItem="FYA-nq-3Id" firstAttribute="trailing" secondItem="ayg-FS-pz2" secondAttribute="trailing" id="T3h-Us-B8D"/>
                             <constraint firstItem="8RR-Nh-2cY" firstAttribute="top" secondItem="o39-YA-7GC" secondAttribute="bottom" constant="8" id="acX-4i-Zgg"/>
                             <constraint firstItem="FYA-nq-3Id" firstAttribute="centerX" secondItem="o39-YA-7GC" secondAttribute="centerX" id="bMg-ox-6f8"/>
                             <constraint firstItem="FYA-nq-3Id" firstAttribute="bottom" secondItem="ayg-FS-pz2" secondAttribute="bottom" id="c0X-xb-lgx"/>
+                            <constraint firstItem="ayg-FS-pz2" firstAttribute="leading" secondItem="FYA-nq-3Id" secondAttribute="leading" id="cmT-FI-TkB"/>
                             <constraint firstItem="o39-YA-7GC" firstAttribute="top" secondItem="FYA-nq-3Id" secondAttribute="top" constant="8" id="e9Z-BD-xB2"/>
                             <constraint firstItem="ayg-FS-pz2" firstAttribute="top" secondItem="8RR-Nh-2cY" secondAttribute="bottom" id="q4h-2V-wYc"/>
-                            <constraint firstItem="ayg-FS-pz2" firstAttribute="centerX" secondItem="FYA-nq-3Id" secondAttribute="centerX" id="u89-9o-I6M"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FYA-nq-3Id"/>
                     </view>
@@ -947,6 +947,6 @@ www.mpdbailey.co.uk
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="D2K-XF-Zb6"/>
+        <segue reference="kV8-yp-vNU"/>
     </inferredMetricsTieBreakers>
 </document>

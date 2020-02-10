@@ -22,6 +22,9 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
     static let monospacedFont = UIFont(name: "Menlo-Regular",size: 20.0)
     static let systemFont = UIFont.systemFont(ofSize: 16.0, weight: .regular)
 
+    private var screenWidth : CGFloat {
+        return view.frame.inset(by: view.safeAreaInsets).size.width
+    }
     
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var matchesTable: UITableView!
@@ -50,6 +53,12 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
         }
         else
         {
+            //Set up bannerView height for the device
+            //Another method is to set the bannerHeightConstraint relation to be greater than or equal to 0
+            //but IB complains about ambiguous constraints
+            let adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(screenWidth)
+            bannerHeightConstraint.constant = adSize.size.height
+            bannerView.adSize = adSize
             bannerView.adUnitID = Ads.bannerAdId
             bannerView.rootViewController = self
             bannerView.load(Ads.createRequest(useNpa: model.settings.useNonPersonalizedAds))
@@ -276,5 +285,5 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
             navBar.rightBarButtonItem?.isEnabled=true
         }
     }
- 
+    
 }
