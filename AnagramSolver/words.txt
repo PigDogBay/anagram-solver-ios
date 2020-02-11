@@ -2879,6 +2879,7 @@ overproportioning
 oversensitiveness
 oversensitivities
 oversophisticated
+overspecification
 oversubscriptions
 overzealousnesses
 ovoviviparousness
@@ -3564,6 +3565,7 @@ androgenizations
 anemographically
 anesthesiologies
 anesthesiologist
+anesthetisations
 anesthetizations
 anglocatholicism
 answerablenesses
@@ -10497,6 +10499,8 @@ paralinguistics
 parallactically
 parallelepipeda
 parallelepipeds
+parallelisation
+parallelization
 parallelopipeda
 parallelopipeds
 parametrisation
@@ -17929,6 +17933,7 @@ modernisations
 modernizations
 modifiableness
 modulabilities
+modularisation
 modularization
 mohammedanised
 mohammedanises
@@ -18810,6 +18815,7 @@ oversimplistic
 oversolicitous
 overspecialise
 overspecialize
+overspecifying
 overspeculated
 overspeculates
 overstatements
@@ -19451,6 +19457,7 @@ polydaemonisms
 polydispersity
 polyembryonate
 polyembryonies
+polygonization
 polyhistorians
 polymerisation
 polymerization
@@ -32059,6 +32066,8 @@ overshadowing
 overshowering
 overskeptical
 overslaughing
+overspecified
+overspecifies
 overspeculate
 overspreading
 overstability
@@ -33918,6 +33927,7 @@ rapprochement
 rapturousness
 rarefactional
 rarefications
+rasterization
 ratablenesses
 rateabilities
 ratifications
@@ -51880,6 +51890,7 @@ overskipping
 overslaughed
 oversleeping
 overslipping
+overspecific
 overspenders
 overspending
 overspilling
@@ -54449,6 +54460,7 @@ reacclaiming
 reaccomodate
 reaccredited
 reaccustomed
+reachability
 reacquainted
 reactionisms
 reactionists
@@ -56054,6 +56066,8 @@ serenenesses
 sergeantcies
 sergeantfish
 sergeantship
+serialisable
+serializable
 sericultural
 sericultures
 serigraphers
@@ -78994,6 +79008,7 @@ optimalised
 optimalises
 optimalized
 optimalizes
+optimizable
 optionality
 optokinetic
 optologists
@@ -79698,6 +79713,7 @@ oversleeves
 overslipped
 oversmoking
 oversoaking
+overspecify
 overspender
 overspicing
 overspilled
@@ -95101,6 +95117,7 @@ bichromate
 bickerings
 bicoloured
 bicornuate
+bicorporal
 bicultural
 bicyclical
 bicyclists
@@ -109557,6 +109574,7 @@ intrigants
 intriguant
 intriguers
 intriguing
+intrinsics
 introduced
 introducer
 introduces
@@ -118567,7 +118585,6 @@ postfixing
 postflight
 postformed
 postfreeze
-postgresql
 posthastes
 postholder
 posthorses
@@ -131204,6 +131221,7 @@ whitesboro
 whitesburg
 whiteslave
 whitesmith
+whitespace
 whitestone
 whitestown
 whitetails
@@ -147727,6 +147745,7 @@ frichting
 frictions
 friedcake
 friedheim
+friedmann
 friedrich
 friending
 friesians
@@ -178125,6 +178144,7 @@ accepter
 acceptor
 accessed
 accesses
+accessor
 accident
 accidias
 accidies
@@ -183544,6 +183564,7 @@ byrlakin
 byronism
 byssuses
 bystreet
+bytecode
 bywoners
 caatinga
 cabalism
@@ -186735,7 +186756,6 @@ cosmical
 cosmines
 cosmisms
 cosmists
-cosmosdb
 cosmoses
 cosplays
 cossacks
@@ -188442,6 +188462,8 @@ deputies
 deputing
 deputise
 deputize
+dequeued
+dequeues
 deracine
 deraigns
 derailed
@@ -190034,7 +190056,6 @@ dynamism
 dynamist
 dynamite
 dynamize
-dynamodb
 dynastic
 dynatron
 dyschroa
@@ -190890,6 +190911,8 @@ enounces
 enplaned
 enplanes
 enprints
+enqueued
+enqueues
 enquired
 enquirer
 enquires
@@ -198326,6 +198349,7 @@ itemises
 itemized
 itemizer
 itemizes
+iterable
 iterance
 iterated
 iterates
@@ -221710,6 +221734,7 @@ vareuses
 vargueno
 variable
 variably
+variadic
 variance
 variants
 variated
@@ -224290,7 +224315,6 @@ actinic
 actinon
 actions
 actives
-activex
 activin
 actorly
 actress
@@ -232369,6 +232393,7 @@ dataria
 dataset
 datchas
 datedly
+dateset
 datings
 datival
 datives
@@ -232855,6 +232880,7 @@ depside
 deputed
 deputes
 dequeen
+dequeue
 deraign
 derails
 derange
@@ -244195,7 +244221,6 @@ margery
 margins
 margosa
 margret
-mariadb
 mariana
 mariano
 marians
@@ -245467,7 +245492,6 @@ moneyed
 moneyer
 mongers
 mongery
-mongodb
 mongoes
 mongols
 mongrel
@@ -246232,6 +246256,7 @@ naughts
 naughty
 nauplii
 nauruan
+nauseam
 nauseas
 nautics
 nautili
@@ -249964,7 +249989,6 @@ poverty
 powders
 powdery
 powered
-powerpc
 powhiri
 pownded
 powneys
@@ -272209,6 +272233,7 @@ gilroy
 gilson
 gilsum
 gimbal
+gimble
 gimels
 gimlet
 gimmal
@@ -274261,6 +274286,7 @@ inhoop
 inhume
 inions
 inisle
+initio
 inject
 injera
 injure
@@ -298777,7 +298803,6 @@ myron
 myrrh
 mysia
 mysid
-mysql
 mythi
 myths
 mythy
@@ -299615,6 +299640,7 @@ palay
 palco
 palea
 paled
+paleo
 paler
 pales
 palet
@@ -305523,6 +305549,7 @@ amah
 amas
 ambo
 amen
+ames
 amex
 amia
 amid
@@ -310515,6 +310542,7 @@ sita
 site
 sith
 sits
+situ
 sitz
 sium
 siva
@@ -311386,7 +311414,6 @@ voar
 voca
 voes
 void
-voip
 vola
 vole
 volk
@@ -312619,7 +312646,6 @@ lux
 luz
 lye
 lym
-lyx
 maa
 mab
 mac
