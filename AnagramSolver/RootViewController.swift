@@ -149,6 +149,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         tipsDataSource.rateCallback = rateApp
         tipsDataSource.feedbackCallback = sendFeedback
         tipsDataSource.recommendCallback = recommend
+        tipsDataSource.privacyCallback = showAbout
         self.collectionView.dataSource = tipsDataSource
         self.collectionView.delegate = self
         self.collectionView.contentInset = UIEdgeInsets(top: 16, left: 8, bottom: 20, right: 8)

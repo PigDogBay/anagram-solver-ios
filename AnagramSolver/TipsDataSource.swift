@@ -27,9 +27,10 @@ class TipsDataSource : NSObject, UICollectionViewDataSource
     var recommendCallback : (() -> Void)?
     var viewGuideCallback : (() -> Void)?
     var settingsCallback : (() -> Void)?
+    var privacyCallback : (() -> Void)?
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 13
+        return 14
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -84,6 +85,12 @@ class TipsDataSource : NSObject, UICollectionViewDataSource
             cell = getTipCell(tipIndex: 6, collectionView: collectionView, indexPath: indexPath)
         case 12:
             cell = getTipCell(tipIndex: 7, collectionView: collectionView, indexPath: indexPath)
+        case 13:
+            //About & Privacy
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellAboutPrivacy", for: indexPath)
+            if let actionCell = cell as? ActionCollectionViewCell {
+                actionCell.button1Callback = self.privacyCallback
+            }
         default:
             abort()
         }
