@@ -112,25 +112,25 @@ open class IAPHelper : NSObject, IAPInterface, SKProductsRequestDelegate, SKPaym
     }
     
     fileprivate func deferredTransaction(_ transaction: SKPaymentTransaction){
-        print("Transaction: deferred")
+//        print("Transaction: deferred")
     }
     fileprivate func failedTransaction(_ transaction: SKPaymentTransaction){
-        print("Transaction: failed")
+//        print("Transaction: failed")
         SKPaymentQueue.default().finishTransaction(transaction)
         let productID = transaction.payment.productIdentifier
         observable.onPurchaseRequestFailed(productID)
     }
     fileprivate func purchasingTransaction(_ transaction: SKPaymentTransaction){
-        print("Transaction: purchasing")
+//        print("Transaction: purchasing")
     }
     fileprivate func purchasedTransaction(_ transaction: SKPaymentTransaction){
-        print("Transaction: purchased")
+//        print("Transaction: purchased")
         SKPaymentQueue.default().finishTransaction(transaction)
         let productID = transaction.payment.productIdentifier
         observable.onPurchaseRequestCompleted(productID)
     }
     fileprivate func restoredTransaction(_ transaction: SKPaymentTransaction){
-        print("Transaction: restored")
+//        print("Transaction: restored")
         SKPaymentQueue.default().finishTransaction(transaction)
         let productID = transaction.payment.productIdentifier
         observable.onRestorePurchaseCompleted(productID)
