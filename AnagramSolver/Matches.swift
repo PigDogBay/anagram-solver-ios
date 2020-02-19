@@ -64,20 +64,12 @@ class Matches {
         }
     }
     func matchFound(match : String){
-        let observer : MatchFoundObserver? = queue.sync{
+        queue.sync{
             matches.append(match)
             if let obs = matchFoundObserver, matches.count<self.TABLE_MAX_COUNT_TO_RELOAD
             {
-                return obs
+                obs.matchFound()
             }
-            return nil
-        }
-        //This functional is called by a worker thread and the observer is a ViewController that updates on the main queue.
-        //Do not sync on main queue as it will deadlock
-        if let obs = observer
-        {
-            obs.matchFound()
         }
     }
-
 }

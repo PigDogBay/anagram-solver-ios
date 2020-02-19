@@ -254,7 +254,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
     func matchFound()
     {
         //update UI on main thread
-        DispatchQueue.main.sync
+        DispatchQueue.main.async
         {
             self.matchesTable.reloadData()
         }
