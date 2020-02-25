@@ -12,16 +12,10 @@ class SwitchTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var switchControl : UISwitch!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBAction func switchClicked(_ sender: UISwitch) {
+        if let callback = switchClickedCallback{
+            callback(switchControl.isOn)
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    var switchClickedCallback : ((_ isOn : Bool) -> Void)?
 }

@@ -58,6 +58,10 @@ class FilterViewController: UITableViewController {
         }
     }
     
+    fileprivate func saveFiltersPressed(isOn : Bool){
+        model.keepFilters = isOn
+    }
+    
     /*
      Table layout
      
@@ -209,6 +213,8 @@ class FilterViewController: UITableViewController {
     fileprivate func cellForSaveFilters(_ indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: saveFiltersCellId, for: indexPath) as! SwitchTableViewCell
         cell.titleLabel?.text = "Keep Filters Active"
+        cell.switchClickedCallback = saveFiltersPressed
+        cell.switchControl.isOn = model.keepFilters
         return cell
     }
 

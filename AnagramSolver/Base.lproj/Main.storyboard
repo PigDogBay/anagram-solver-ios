@@ -894,6 +894,9 @@ www.mpdbailey.co.uk
                                         </label>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uHn-B0-ab8">
                                             <rect key="frame" x="310" y="8.6666666666666643" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="switchClicked:" destination="Gub-xv-DIq" eventType="touchUpInside" id="SdB-V7-SWh"/>
+                                            </connections>
                                         </switch>
                                     </subviews>
                                     <constraints>

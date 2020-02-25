@@ -35,6 +35,7 @@ class Model : WordListCallback, IAPDelegate
     let iap : IAPInterface
     let filter : Filter
     let filterFactory : WordListCallbackAbstractFactory
+    var keepFilters = false
     
     fileprivate init()
     {
@@ -83,7 +84,9 @@ class Model : WordListCallback, IAPDelegate
     }
     func prepareToSearch()
     {
-        filter.reset()
+        if !keepFilters {
+            filter.reset()
+        }
         matches.removeAll()
     }
     func prepareToFilterSearch(){
