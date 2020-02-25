@@ -40,6 +40,7 @@ class FilterViewController: UITableViewController {
     fileprivate var model : Model!
     fileprivate let numberCellId = "cellNumbersFilter"
     fileprivate let letterCellId = "cellLettersFilter"
+    fileprivate let saveFiltersCellId = "cellSaveFilters"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,11 +86,15 @@ class FilterViewController: UITableViewController {
      [Word Pattern | enter pattern]
      [Regular Expression : Enter regex]
      To create a pattern, use . to represent any letter and @ for 1 or more letters, eg s.r..b.e
+     
+     Save Filters
+     [Keep filters active   |    *]
+     Filters are automatically reset, check to keep filters for new searches
 
      */
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return 6
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -104,6 +109,8 @@ class FilterViewController: UITableViewController {
             return 3
         case 4:
             return 2
+        case 5:
+            return 1
         default:
             return 0
         }
@@ -121,6 +128,8 @@ class FilterViewController: UITableViewController {
             return "Filter By Word Size"
         case 4:
             return "Expert Filters"
+        case 5:
+            return "Save Filters"
         default:
             return ""
         }
@@ -138,6 +147,8 @@ class FilterViewController: UITableViewController {
             return "Press Search top right to perform a filter search"
         case 4:
             return "To create a pattern, use . to represent any letter and @ for 1 or more letters, eg s.r..b.e"
+        case 5:
+            return "Filters are automatically reset for new searches, check to keep filters"
         default:
             return ""
         }
@@ -169,6 +180,8 @@ class FilterViewController: UITableViewController {
             return cellForLettersFilter(indexPath, .crossword)
         case [4,1]:
             return cellForLettersFilter(indexPath, .regex)
+        case [5,0]:
+            return cellForSaveFilters(indexPath)
         default:
             return tableView.dequeueReusableCell(withIdentifier: numberCellId, for: indexPath)
         }
@@ -191,6 +204,11 @@ class FilterViewController: UITableViewController {
         } else {
             cell.detailTextLabel?.text = "\(value) letters"
         }
+        return cell
+    }
+    fileprivate func cellForSaveFilters(_ indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: saveFiltersCellId, for: indexPath) as! SwitchTableViewCell
+        cell.titleLabel?.text = "Keep Filters Active"
         return cell
     }
 

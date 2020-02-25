@@ -24,6 +24,7 @@
 		4D45F0161A9E03A400C40BB4 /* DefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0151A9E03A400C40BB4 /* DefinitionViewController.swift */; };
 		4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */; };
 		4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0231A9E487A00C40BB4 /* Model.swift */; };
+		4D7BF23D2405444B00879E06 /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7BF23C2405444B00879E06 /* SwitchTableViewCell.swift */; };
 		4D9D30EB1D156D5D0088392C /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D30EA1D156D5D0088392C /* IAPHelper.swift */; };
 		4D9E43AA1FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */; };
 		4D9E43AD1FAC84FC007007C8 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E43AC1FAC84FC007007C8 /* Filter.swift */; };
@@ -112,6 +113,7 @@
 		4D45F0151A9E03A400C40BB4 /* DefinitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionViewController.swift; sourceTree = "<group>"; };
 		4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		4D45F0231A9E487A00C40BB4 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4D7BF23C2405444B00879E06 /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
 		4D9D30EA1D156D5D0088392C /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListCallbackAbstractFactory.swift; sourceTree = "<group>"; };
 		4D9E43AC1FAC84FC007007C8 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				4DF2DE421FB22A8000F44ADE /* TipCollectionViewCell.swift */,
 				4DDAB8821FB61139000EDB30 /* ActionCollectionViewCell.swift */,
 				4D09F28C1FC1B02300EFA535 /* ShadowCollectionViewCell.swift */,
+				4D7BF23C2405444B00879E06 /* SwitchTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				4D9E43B11FAC86EC007007C8 /* FilterFactory.swift in Sources */,
 				4DF2DE3A1FACBDBB00F44ADE /* FilterViewController.swift in Sources */,
 				4D9E43AA1FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift in Sources */,
+				4D7BF23D2405444B00879E06 /* SwitchTableViewCell.swift in Sources */,
 				4DA0C3FA236C761600AF693B /* AppState.swift in Sources */,
 				4DF2DE401FB0A82300F44ADE /* ListViewController.swift in Sources */,
 				4DF2DE3D1FACC4B300F44ADE /* LettersFilterTableViewCell.swift in Sources */,
