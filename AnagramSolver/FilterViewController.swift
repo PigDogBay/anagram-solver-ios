@@ -14,33 +14,29 @@ class FilterViewController: UITableViewController {
         filterSearch()
     }
     
-
     @IBAction func unwindWithSelectedListItem(segue:UIStoryboardSegue) {
-        if let vc = segue.source as? ListViewController {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                if let value = vc.selectedIndex {
-                    switch indexPath {
-                    case [0,2]:
-                        model.filter.distinct = value
-                    case [3,0]:
-                        model.filter.equalTo = value
-                    case [3,1]:
-                        model.filter.biggerThan = value
-                    case [3,2]:
-                        model.filter.lessThan = value
-                    default:
-                        break
-                    }
-                    tableView.reloadData()
+        if  let vc = segue.source as? ListViewController,
+            let indexPath = tableView.indexPathForSelectedRow,
+            let value = vc.selectedIndex {
+                switch indexPath {
+                case [0,2]:
+                    model.filter.distinct = value
+                case [3,0]:
+                    model.filter.equalTo = value
+                case [3,1]:
+                    model.filter.biggerThan = value
+                case [3,2]:
+                    model.filter.lessThan = value
+                default:
+                    break
                 }
-            }
+                tableView.reloadData()
         }
     }
     
     fileprivate var model : Model!
     fileprivate let numberCellId = "cellNumbersFilter"
     fileprivate let letterCellId = "cellLettersFilter"
-    fileprivate let saveFiltersCellId = "cellSaveFilters"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,10 +52,6 @@ class FilterViewController: UITableViewController {
             model.prepareToFilterSearch()
             navCtrl.popViewController(animated: true)
         }
-    }
-    
-    fileprivate func saveFiltersPressed(isOn : Bool){
-        model.keepFilters = isOn
     }
     
     /*
@@ -91,17 +83,13 @@ class FilterViewController: UITableViewController {
      [Regular Expression : Enter regex]
      To create a pattern, use . to represent any letter and @ for 1 or more letters, eg s.r..b.e
 
-     Save Filters
-     [Keep filters active   |    *]
-     Filters are automatically reset, check to keep filters for new searches
-
      Search Query
      [Query | moonstarer]
-     This is a shortcut for editting the main search query
+     Edit the main search query
      */
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 7
+        return 6
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -117,8 +105,6 @@ class FilterViewController: UITableViewController {
         case 4:
             return 2
         case 5:
-            return 1
-        case 6:
             return 1
         default:
             return 0
@@ -138,8 +124,6 @@ class FilterViewController: UITableViewController {
         case 4:
             return "Expert Filters"
         case 5:
-            return "Save Filters"
-        case 6:
             return "Search Query"
         default:
             return ""
@@ -159,8 +143,6 @@ class FilterViewController: UITableViewController {
         case 4:
             return "To create a pattern, use . to represent any letter and @ for 1 or more letters, eg s.r..b.e"
         case 5:
-            return "Filters are automatically reset for new searches, check to keep filters"
-        case 6:
             return "Edit the main search query"
         default:
             return ""
@@ -194,8 +176,6 @@ class FilterViewController: UITableViewController {
         case [4,1]:
             return cellForLettersFilter(indexPath, .regex)
         case [5,0]:
-            return cellForSaveFilters(indexPath)
-        case [6,0]:
             return cellForLettersFilter(indexPath, .query)
         default:
             return tableView.dequeueReusableCell(withIdentifier: numberCellId, for: indexPath)
@@ -221,14 +201,6 @@ class FilterViewController: UITableViewController {
         }
         return cell
     }
-    fileprivate func cellForSaveFilters(_ indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: saveFiltersCellId, for: indexPath) as! SwitchTableViewCell
-        cell.titleLabel?.text = "Keep Filters Active"
-        cell.switchClickedCallback = saveFiltersPressed
-        cell.switchControl.isOn = model.keepFilters
-        return cell
-    }
-
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
