@@ -90,15 +90,18 @@ class FilterViewController: UITableViewController {
      [Word Pattern | enter pattern]
      [Regular Expression : Enter regex]
      To create a pattern, use . to represent any letter and @ for 1 or more letters, eg s.r..b.e
-     
+
      Save Filters
      [Keep filters active   |    *]
      Filters are automatically reset, check to keep filters for new searches
 
+     Search Query
+     [Query | moonstarer]
+     This is a shortcut for editting the main search query
      */
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return 7
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -114,6 +117,8 @@ class FilterViewController: UITableViewController {
         case 4:
             return 2
         case 5:
+            return 1
+        case 6:
             return 1
         default:
             return 0
@@ -134,6 +139,8 @@ class FilterViewController: UITableViewController {
             return "Expert Filters"
         case 5:
             return "Save Filters"
+        case 6:
+            return "Search Query"
         default:
             return ""
         }
@@ -153,6 +160,8 @@ class FilterViewController: UITableViewController {
             return "To create a pattern, use . to represent any letter and @ for 1 or more letters, eg s.r..b.e"
         case 5:
             return "Filters are automatically reset for new searches, check to keep filters"
+        case 6:
+            return "Edit the main search query"
         default:
             return ""
         }
@@ -186,6 +195,8 @@ class FilterViewController: UITableViewController {
             return cellForLettersFilter(indexPath, .regex)
         case [5,0]:
             return cellForSaveFilters(indexPath)
+        case [6,0]:
+            return cellForLettersFilter(indexPath, .query)
         default:
             return tableView.dequeueReusableCell(withIdentifier: numberCellId, for: indexPath)
         }

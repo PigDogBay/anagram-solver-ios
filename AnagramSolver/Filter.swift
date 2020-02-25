@@ -24,6 +24,8 @@ class Filter {
     var crossword = ""
     var regex = ""
     
+    //This is not a filter, the user can edit the main query from the filter screen
+    var query = ""
     
     private(set) var filterCount : Int = 0
     

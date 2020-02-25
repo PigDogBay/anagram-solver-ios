@@ -75,6 +75,7 @@ class Model : WordListCallback, IAPDelegate
     
     func setAndValidateQuery( _ raw : String) ->Bool
     {
+        filter.query = raw
         self.query = wordSearch.clean(raw)
         return self.query.length>0
     }
@@ -90,6 +91,13 @@ class Model : WordListCallback, IAPDelegate
         matches.removeAll()
     }
     func prepareToFilterSearch(){
+        let validated = wordSearch.clean(filter.query)
+        if validated.length>0 {
+            self.query = validated
+        } else {
+            //reset the filter query
+            filter.query = query
+        }
         matches.removeAll()
         appState.appState = .ready
     }

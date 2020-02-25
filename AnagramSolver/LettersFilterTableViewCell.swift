@@ -14,7 +14,7 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
     @IBOutlet weak var lettersTextView: UITextField!
     
     enum FilterType {
-        case startsWith, endsWith, contains, excludes, containsWord, excludesWord, crossword, regex
+        case startsWith, endsWith, contains, excludes, containsWord, excludesWord, crossword, regex, query
     }
     
     var searchPressed : (() -> Void)?
@@ -76,6 +76,10 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
             titleLabel.text = "Reg Exp"
             lettersTextView.text = filter.regex
             lettersTextView.placeholder = "Enter regex"
+        case .query:
+            titleLabel.text = "Query"
+            lettersTextView.text = filter.query
+            lettersTextView.placeholder = "Enter letters"
         }
         lettersTextView.delegate = self
     }
@@ -99,6 +103,8 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
                 filter?.crossword = lettersTextView.text!
             case .regex:
                 filter?.regex = lettersTextView.text!
+            case .query:
+                filter?.query = lettersTextView.text!
             }
         }
     }
