@@ -80,10 +80,16 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
             titleLabel.text = "Query"
             lettersTextView.text = filter.query
             lettersTextView.placeholder = "Enter letters"
+            lettersTextView.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         }
         lettersTextView.delegate = self
     }
-
+    //Nasty cludge, whilst editing the query if the user presses menu search, textFieldDidEndEditing is not called
+    //before the search is started
+    @objc func textFieldDidChange(_ textField : UITextField){
+        filter?.query = lettersTextView.text!
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let ft = filterType {
             switch ft {
