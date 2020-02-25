@@ -69,7 +69,7 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
             lettersTextView.text = filter.excludingWord
             lettersTextView.placeholder = "Enter word"
         case .crossword:
-            titleLabel.text = "Pattern"
+            titleLabel.text = "Pattern "
             lettersTextView.text = filter.crossword
             lettersTextView.placeholder = "Enter pattern"
         case .regex:

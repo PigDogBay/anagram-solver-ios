@@ -813,12 +813,12 @@ www.mpdbailey.co.uk
         <scene sceneID="EoA-tT-y96">
             <objects>
                 <tableViewController id="f1N-K0-6s2" customClass="FilterViewController" customModule="AnagramSolver" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Llf-cD-Q0Z">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="48" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Llf-cD-Q0Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellLettersFilter" id="PaP-6r-7Ht" customClass="LettersFilterTableViewCell" customModule="AnagramSolver" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellLettersFilter" rowHeight="48" id="PaP-6r-7Ht" customClass="LettersFilterTableViewCell" customModule="AnagramSolver" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.333332061767578" width="375" height="48"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PaP-6r-7Ht" id="K0F-zq-i50">
@@ -826,19 +826,19 @@ www.mpdbailey.co.uk
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter letters" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KEF-if-J9v">
-                                            <rect key="frame" x="58.333333333333343" y="7" width="301.66666666666663" height="34.666666666666664"/>
+                                            <rect key="frame" x="66.333333333333343" y="7" width="293.66666666666663" height="34.666666666666664"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="search" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGp-8J-Bgc">
-                                            <rect key="frame" x="8" y="11.000000000000002" width="33.666666666666664" height="25.666666666666671"/>
+                                            <rect key="frame" x="15.999999999999996" y="11.000000000000002" width="33.666666666666657" height="25.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="WGp-8J-Bgc" firstAttribute="leading" secondItem="K0F-zq-i50" secondAttribute="leading" constant="8" id="B8Q-OF-o87"/>
+                                        <constraint firstItem="WGp-8J-Bgc" firstAttribute="leading" secondItem="K0F-zq-i50" secondAttribute="leading" constant="16" id="B8Q-OF-o87"/>
                                         <constraint firstItem="WGp-8J-Bgc" firstAttribute="top" secondItem="K0F-zq-i50" secondAttribute="top" constant="11" id="S40-uH-vKG"/>
                                         <constraint firstItem="KEF-if-J9v" firstAttribute="leading" secondItem="WGp-8J-Bgc" secondAttribute="trailing" constant="16.5" id="SNm-gg-ft7"/>
                                         <constraint firstItem="KEF-if-J9v" firstAttribute="top" secondItem="K0F-zq-i50" secondAttribute="top" constant="7" id="Wh7-bd-DU3"/>
@@ -852,22 +852,22 @@ www.mpdbailey.co.uk
                                     <outlet property="titleLabel" destination="WGp-8J-Bgc" id="0aq-O8-6J8"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellNumbersFilter" textLabel="kQ9-8k-YOE" detailTextLabel="NIp-Wa-rDN" style="IBUITableViewCellStyleValue1" id="2ek-Dy-N0K">
-                                <rect key="frame" x="0.0" y="103.33333206176758" width="375" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellNumbersFilter" textLabel="kQ9-8k-YOE" detailTextLabel="NIp-Wa-rDN" rowHeight="48" style="IBUITableViewCellStyleValue1" id="2ek-Dy-N0K">
+                                <rect key="frame" x="0.0" y="103.33333206176758" width="375" height="48"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2ek-Dy-N0K" id="mwC-Ep-6Xk">
-                                    <rect key="frame" x="0.0" y="0.0" width="348" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="48"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kQ9-8k-YOE">
-                                            <rect key="frame" x="16.000000000000004" y="11.999999999999998" width="33.333333333333336" height="20.333333333333332"/>
+                                            <rect key="frame" x="16.000000000000004" y="13.999999999999998" width="33.333333333333336" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NIp-Wa-rDN">
-                                            <rect key="frame" x="296" y="11.999999999999998" width="44" height="20.333333333333332"/>
+                                            <rect key="frame" x="296" y="13.999999999999998" width="44" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -880,7 +880,7 @@ www.mpdbailey.co.uk
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellSaveFilters" rowHeight="48" id="Gub-xv-DIq" customClass="SwitchTableViewCell" customModule="AnagramSolver" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="147" width="375" height="48"/>
+                                <rect key="frame" x="0.0" y="151.33333206176758" width="375" height="48"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gub-xv-DIq" id="pS5-M2-IGJ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
