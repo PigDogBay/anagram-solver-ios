@@ -24,19 +24,12 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        lettersTextView.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
     /*
         Data binding is handled in this class as it seems the most convenient for now, similar to
         Android's ViewHolder.
-        Ideally I would like to get rid of the enum and use reflection to pass in the field name
     */
     func bind(filter : Filter, filterType : FilterType){
         self.filter = filter
@@ -80,17 +73,12 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
             titleLabel.text = "Query"
             lettersTextView.text = filter.query
             lettersTextView.placeholder = "Enter letters"
-            lettersTextView.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         }
         lettersTextView.delegate = self
     }
-    //Nasty cludge, whilst editing the query if the user presses menu search, textFieldDidEndEditing is not called
-    //before the search is started
-    @objc func textFieldDidChange(_ textField : UITextField){
-        filter?.query = lettersTextView.text!
-    }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    //Update the filter immediately, textFieldDidEndEditing is called after model.prepareToFilterSearch
+    @objc func textFieldDidChange(_ textField : UITextField){
         if let ft = filterType {
             switch ft {
             case .startsWith:
