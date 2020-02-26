@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FilterViewController: UITableViewController {
+class FilterViewController: UITableViewController, LettersCellCallback {
 
     @IBAction func searchClicked(_ sender: Any) {
         filterSearch()
@@ -53,7 +53,11 @@ class FilterViewController: UITableViewController {
             navCtrl.popViewController(animated: true)
         }
     }
-    
+
+    func lettersCellReturnPressed() {
+        filterSearch()
+    }
+
     /*
      Table layout
      
@@ -184,7 +188,7 @@ class FilterViewController: UITableViewController {
     fileprivate func cellForLettersFilter(_ indexPath: IndexPath, _ filterType : LettersFilterTableViewCell.FilterType) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: letterCellId, for: indexPath) as! LettersFilterTableViewCell
         cell.bind(filter: model.filter, filterType: filterType)
-        cell.searchPressed = filterSearch
+        cell.callback = self
         return cell
     }
     fileprivate func cellForNumbersFilter(_ indexPath: IndexPath,_ value : Int,_ title : String) -> UITableViewCell {

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol LettersCellCallback : class{
+    func lettersCellReturnPressed();
+}
+
 class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -17,7 +21,7 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
         case startsWith, endsWith, contains, excludes, containsWord, excludesWord, crossword, regex, query
     }
     
-    var searchPressed : (() -> Void)?
+    weak var callback : LettersCellCallback?
     
     fileprivate var filterType : FilterType?
     fileprivate var filter : Filter?
@@ -105,8 +109,8 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        if let completion = searchPressed {
-            completion()
+        if let completion = callback {
+            completion.lettersCellReturnPressed()
         }
         return true
     }
