@@ -31,17 +31,6 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
     @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var bannerView: GADBannerView!
     
-    @IBAction func shareButton(_ sender: UIBarButtonItem)
-    {
-        let firstActivityItem = model.share()
-        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: nil)
-        //For iPads need to anchor the popover to the right bar button, crashes if not set
-        if let ppc = activityViewController.popoverPresentationController {
-            ppc.barButtonItem = navBar.rightBarButtonItem
-        }
-        
-        self.present(activityViewController, animated: true, completion: nil)
-    }
     override func viewDidLoad()
     {
         super.viewDidLoad()
