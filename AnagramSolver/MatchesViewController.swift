@@ -233,7 +233,8 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
+        cell.accessoryType = .detailButton
         cell.textLabel?.font = model.settings.useMonospacedFont ? MatchesViewController.monospacedFont : MatchesViewController.systemFont
         let word = model.matches[indexPath.row]
         model.wordFormatter.setLabelText(cell.textLabel, word)
