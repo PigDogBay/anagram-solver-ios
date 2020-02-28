@@ -20,7 +20,7 @@ class Settings
     private let showSubAnagramsKey = "showSubAnagrams"
     private let resultsLimitKey = "resultsLimit"
     private let isProKey = "isProFlag"
-    private let useNonPersonalizedAdsKey = "useNonPersonalizedAds"
+    private let useNonPersonalizedAdsKey = "useNonPersonalisedAds"
     
     private let defaultWordList = "words"
     
