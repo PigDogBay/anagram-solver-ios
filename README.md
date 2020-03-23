@@ -1,1 +1,1 @@
-# anagram-solver-ios
+Copyright MPD Bailey Technology
