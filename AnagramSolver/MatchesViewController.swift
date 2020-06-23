@@ -141,6 +141,8 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
         let shortenedWord = shortenWord(word: word, maxSize: 12)
         let controller = UIAlertController(title: "Look up "+shortenedWord, message: nil, preferredStyle: .actionSheet)
 
+        let speakAction = UIAlertAction(title: "Speak", style: .default,
+                                        handler: {action in utilsSpeak(text: word)})
         let collinsAction = UIAlertAction(title: "Collins", style: .default,
                                              handler: {action in self.showDefinition(word: word, url: WordSearch.getCollinsUrl(word: word))})
         let dictionaryComAction = UIAlertAction(title: "Dictionary.com", style: .default,
@@ -167,6 +169,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
             UIPasteboard.general.string = self.model.copyAll()})
 
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        controller.addAction(speakAction)
         controller.addAction(collinsAction)
         controller.addAction(dictionaryComAction)
         controller.addAction(googleAction)
