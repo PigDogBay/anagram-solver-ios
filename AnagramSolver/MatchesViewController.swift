@@ -124,7 +124,6 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
             //Another method is to set the bannerHeightConstraint relation to be greater than or equal to 0
             //but IB complains about ambiguous constraints
             let adSize = Ads.createAdsize(screenWidth: screenWidth)
-            print("Adsize \(adSize.size.width) x \(adSize.size.height)")
             bannerHeightConstraint.constant = adSize.size.height
             bannerView.adSize = adSize
             bannerView.load(Ads.createRequest(useNpa: model.settings.useNonPersonalizedAds))
