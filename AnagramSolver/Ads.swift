@@ -34,4 +34,13 @@ struct Ads
         }
         return request
     }
+    
+    static func createAdsize(screenWidth : CGFloat) -> GADAdSize {
+        //GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth does not work for landscape
+        if (UIDevice.current.orientation.isLandscape){
+            return GADLandscapeAnchoredAdaptiveBannerAdSizeWithWidth(screenWidth)
+        } else {
+            return GADPortraitAnchoredAdaptiveBannerAdSizeWithWidth(screenWidth)
+        }
+    }
 }

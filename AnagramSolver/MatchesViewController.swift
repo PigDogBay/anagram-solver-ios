@@ -42,15 +42,8 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
         }
         else
         {
-            //Set up bannerView height for the device
-            //Another method is to set the bannerHeightConstraint relation to be greater than or equal to 0
-            //but IB complains about ambiguous constraints
-            let adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(screenWidth)
-            bannerHeightConstraint.constant = adSize.size.height
-            bannerView.adSize = adSize
             bannerView.adUnitID = Ads.bannerAdId
             bannerView.rootViewController = self
-            bannerView.load(Ads.createRequest(useNpa: model.settings.useNonPersonalizedAds))
         }
 
         if model.settings.isLongPressEnabled {
@@ -61,7 +54,12 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
         NotificationCenter.default.addObserver(self, selector: #selector (appMovedToBackground), name: UIApplication.willResignActiveNotification, object: UIApplication.shared)
 
     }
-
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to:size, with:coordinator)
+        coordinator.animate(alongsideTransition: { _ in
+          self.loadAd()
+        })
+    }
     override func viewWillAppear(_ animated: Bool) {
         //show .ready state, needs to done here as pressing search on filter does not call viewDidLoad but will call this function.
         self.modelToView( model.appState.appState)
@@ -69,6 +67,10 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
     override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
+        // Note loadBannerAd is called in viewDidAppear as this is the first time that
+        // the safe area is known. If safe area is not a concern (e.g., your app is
+        // locked in portrait mode), the banner can be loaded in viewWillAppear.
+        loadAd()
         model.appState.addObserver(observer: self)
         model.matches.setMatchesObserver(observer: self)
         //expect to be in ready state when search has been pressed from main VC or filter VC
@@ -112,6 +114,20 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
                     showLookUpDefinitionMenu(word: word, location : touchPoint)
                 }
             }
+        }
+    }
+    
+    private func loadAd(){
+        if !model.settings.isProMode
+        {
+            //Set up bannerView height for the device
+            //Another method is to set the bannerHeightConstraint relation to be greater than or equal to 0
+            //but IB complains about ambiguous constraints
+            let adSize = Ads.createAdsize(screenWidth: screenWidth)
+            print("Adsize \(adSize.size.width) x \(adSize.size.height)")
+            bannerHeightConstraint.constant = adSize.size.height
+            bannerView.adSize = adSize
+            bannerView.load(Ads.createRequest(useNpa: model.settings.useNonPersonalizedAds))
         }
     }
     
