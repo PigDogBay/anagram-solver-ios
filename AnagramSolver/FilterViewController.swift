@@ -143,7 +143,7 @@ class FilterViewController: UITableViewController, LettersCellCallback {
         case 2:
             return "Find words starting or ending with your specified letters"
         case 3:
-            return "Press Search top right to perform a filter search"
+            return ""
         case 4:
             return "To create a pattern, use . to represent any letter and @ for 1 or more letters, eg s.r..b.e"
         case 5:
