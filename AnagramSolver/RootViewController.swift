@@ -19,7 +19,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     let helpSegueId = "helpSegue"
     let userGuideSegueId = "segueUserGuide"
     let tipsDataSource = TipsDataSource()
-    var euConsent : EUConsent?
+//    var euConsent : EUConsent?
     
     let monospacedFont = UIFont(name: "Menlo-Regular",size: 24.0)
     let systemFont = UIFont.systemFont(ofSize: 24.0, weight: .regular)
@@ -163,8 +163,8 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         model.appState.addObserver(observer: self)
         //Apply any setting changes when coming back from the settings screen
         NotificationCenter.default.addObserver(self, selector: #selector (appEnterForgeround), name: UIApplication.willEnterForegroundNotification, object: UIApplication.shared)
-        euConsent = EUConsent(viewController: self)
-        euConsent?.checkEUConsent()
+        let euConsent = EUConsent(viewController: self)
+        euConsent.checkEUConsent()
     }
     //Only called when view re-appears from background
     @objc func appEnterForgeround() {
