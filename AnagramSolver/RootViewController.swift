@@ -19,7 +19,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     let helpSegueId = "helpSegue"
     let userGuideSegueId = "segueUserGuide"
     let tipsDataSource = TipsDataSource()
-//    var euConsent : EUConsent?
     
     let monospacedFont = UIFont(name: "Menlo-Regular",size: 24.0)
     let systemFont = UIFont.systemFont(ofSize: 24.0, weight: .regular)
