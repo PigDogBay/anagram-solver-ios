@@ -162,8 +162,10 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         model.appState.addObserver(observer: self)
         //Apply any setting changes when coming back from the settings screen
         NotificationCenter.default.addObserver(self, selector: #selector (appEnterForgeround), name: UIApplication.willEnterForegroundNotification, object: UIApplication.shared)
-        let euConsent = EUConsent(viewController: self)
-        euConsent.checkEUConsent()
+        if !model.settings.isProMode {
+            let euConsent = EUConsent(viewController: self)
+            euConsent.checkEUConsent()
+        }
     }
     //Only called when view re-appears from background
     @objc func appEnterForgeround() {
