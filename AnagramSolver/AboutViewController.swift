@@ -23,7 +23,7 @@ class AboutViewController: UIViewController, IAPDelegate {
         model.iap.restorePurchases()
     }
     @IBAction func privacyPolicyBtnClicked(_ sender: UIButton) {
-        UIApplication.shared.open(URL(string: "https://pigdogbay.blogspot.co.uk/2018/05/privacy-policy.html")!, options: [:])
+        UIApplication.shared.open(URL(string: Model.privacyURL)!, options: [:])
     }
     @IBAction func findOutMoreBtnClicked(_ sender: UIButton) {
         UIApplication.shared.open(URL(string: "https://www.google.com/policies/technologies/partner-sites/")!, options: [:])

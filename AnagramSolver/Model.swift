@@ -19,6 +19,8 @@ class Model : WordListCallback, IAPDelegate
     {
         return "https://itunes.apple.com/app/id973923699"
     }
+    static let privacyURL = "https://pigdogbay.blogspot.co.uk/2018/05/privacy-policy.html"
+    
     //Need to check if user changes the word list setting, so cache it here
     var wordListName = ""
     var resultsLimit = 5000

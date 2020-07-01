@@ -11,6 +11,10 @@ import PersonalizedAdConsent
 /*
 Based on
 https://developers.google.com/admob/ios/eu-consent
+By default personalized ads are shown, this code will do the following
+ -Check consent status
+ -If consent is unknown and the user is in the EU then show the consent form
+ -The consent form will take the user to the about screen or set useNonPersonalizedAds to true or false
  */
 class EUConsent {
     let viewController : UIViewController
@@ -19,82 +23,48 @@ class EUConsent {
     init(viewController : UIViewController){
         self.viewController = viewController
     }
+    
+    func reset() {
+        PACConsentInformation.sharedInstance.reset()
+    }
 
-func checkEUConsent(){
-//TESTING - reset here
-//    PACConsentInformation.sharedInstance.reset()
-    print("Checking EU Consent")
-    PACConsentInformation.sharedInstance.requestConsentInfoUpdate(
-    forPublisherIdentifiers: ["pub-3582986480189311"])
-    {(_ error: Error?) -> Void in
-      if let error = error {
-        // Consent info update failed.
-        print("EU Consent update failed \(error)")
-      } else {
-        // Consent info update succeeded. The shared PACConsentInformation
-        // instance has been updated.
-        let status = PACConsentInformation.sharedInstance.consentStatus
-        switch status {
-        case .unknown:
-            print("Consent status is unknown")
-            if PACConsentInformation.sharedInstance.isRequestLocationInEEAOrUnknown {
-                print("User is in the EU")
+    func checkEUConsent(){
+        PACConsentInformation.sharedInstance.requestConsentInfoUpdate(
+        forPublisherIdentifiers: ["pub-3582986480189311"])
+        {(_ error: Error?) -> Void in
+            if error == nil &&
+                PACConsentInformation.sharedInstance.consentStatus == .unknown  &&
+                PACConsentInformation.sharedInstance.isRequestLocationInEEAOrUnknown {
                 self.showEUConsentForm()
-            } else {
-                print("User is not in the EU")
-            }
-        case .nonPersonalized:
-            print("Show non personalized ads")
-        case .personalized:
-            print("Show personalized ads")
-        @unknown default:
-            print("Unexpected status value")
-        }
-      }
-    }
-}
-func showEUConsentForm(){
-    let privacyUrl = URL(string: "https://pigdogbay.blogspot.co.uk/2018/05/privacy-policy.html")!
-    euConsentForm = PACConsentForm(applicationPrivacyPolicyURL: privacyUrl)
-    euConsentForm?.shouldOfferPersonalizedAds = true
-    euConsentForm?.shouldOfferNonPersonalizedAds = true
-    euConsentForm?.shouldOfferAdFree = true
-    euConsentForm?.load {(_ error: Error?) -> Void in
-      print("Load complete.")
-      if let error = error {
-        // Handle error.
-        print("Error loading form: \(error.localizedDescription)")
-      } else {
-        // Load successful.
-        self.presentEUConsent()
-      }
-    }
-}
-
-func presentEUConsent(){
-    euConsentForm?.present(from: viewController) { (error, userPrefersAdFree) in
-        if let error = error {
-            print("Consent Form Response: Error \(error)")
-            // Handle error.
-        } else if userPrefersAdFree {
-            print("Consent Form Response: Use prefers ad free")
-            // User prefers to use a paid version of the app.
-        } else {
-            // Check the user's consent choice.
-            let status = PACConsentInformation.sharedInstance.consentStatus
-            switch status {
-            case .unknown:
-                print("Consent Form Response chose: unknown")
-            case .nonPersonalized:
-                print("Consent Form Response chose: non-personalized")
-            case .personalized:
-                print("Consent Form Response chose: personalized")
-            @unknown default:
-                print("Consent Form Response chose: invalid")
             }
         }
-        self.euConsentForm = nil
     }
     
-}
+    func showEUConsentForm(){
+        let privacyUrl = URL(string: Model.privacyURL)!
+        euConsentForm = PACConsentForm(applicationPrivacyPolicyURL: privacyUrl)
+        euConsentForm?.shouldOfferPersonalizedAds = true
+        euConsentForm?.shouldOfferNonPersonalizedAds = true
+        euConsentForm?.shouldOfferAdFree = true
+        euConsentForm?.load {(_ error: Error?) -> Void in
+            if error == nil {
+                self.presentEUConsent()
+            }
+        }
+    }
+
+    func presentEUConsent(){
+        euConsentForm?.present(from: viewController) { (error, userPrefersAdFree) in
+            self.euConsentForm = nil
+            if error == nil {
+                if userPrefersAdFree {
+                    self.viewController.performSegue(withIdentifier: "aboutSegue", sender: self.viewController)
+                } else if PACConsentInformation.sharedInstance.consentStatus == .personalized {
+                    Settings().useNonPersonalizedAds = false
+                } else {
+                    Settings().useNonPersonalizedAds = true
+                }
+            }
+        }
+    }
 }
