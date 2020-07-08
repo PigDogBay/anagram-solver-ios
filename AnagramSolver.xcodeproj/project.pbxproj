@@ -13,7 +13,6 @@
 		4D0543861CFDBE060084538A /* SwiftUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D09F28D1FC1B02300EFA535 /* ShadowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D09F28C1FC1B02300EFA535 /* ShadowCollectionViewCell.swift */; };
 		4D1D6E621FA0CE33008466F2 /* Pods_AnagramSolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */; };
-		4D1D6E671FA897FB008466F2 /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1D6E661FA897FB008466F2 /* Ratings.swift */; };
 		4D2B35C31D33AAE30014ABF3 /* IAPFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */; };
 		4D3596411CFEEA50008D2FAF /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3596401CFEEA50008D2FAF /* Ads.swift */; };
 		4D45D7B01E2901BF00EC2D27 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D45D7AF1E2901BF00EC2D27 /* Settings.bundle */; };
@@ -100,7 +99,6 @@
 		4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftUtils.xcodeproj; path = ../SwiftUtils/SwiftUtils.xcodeproj; sourceTree = "<group>"; };
 		4D09F28C1FC1B02300EFA535 /* ShadowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AnagramSolver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D1D6E661FA897FB008466F2 /* Ratings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ratings.swift; sourceTree = "<group>"; };
 		4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPFactory.swift; sourceTree = "<group>"; };
 		4D3596401CFEEA50008D2FAF /* Ads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
 		4D45D7AF1E2901BF00EC2D27 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 				4D3596401CFEEA50008D2FAF /* Ads.swift */,
 				0047E17024A4DDFC00B40DD7 /* EUConsent.swift */,
 				4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */,
-				4D1D6E661FA897FB008466F2 /* Ratings.swift */,
 				4DA0C3F9236C761600AF693B /* AppState.swift */,
 				4DA0C3F6236B0FC800AF693B /* Matches.swift */,
 				4D45F0231A9E487A00C40BB4 /* Model.swift */,
@@ -505,7 +502,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D1D6E671FA897FB008466F2 /* Ratings.swift in Sources */,
 				4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */,
 				4D09F28D1FC1B02300EFA535 /* ShadowCollectionViewCell.swift in Sources */,
 				4DF2DE451FB3200E00F44ADE /* TipsDataSource.swift in Sources */,
