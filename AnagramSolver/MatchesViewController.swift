@@ -142,7 +142,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
         let controller = UIAlertController(title: "Look up "+shortenedWord, message: nil, preferredStyle: .actionSheet)
 
         let speakAction = UIAlertAction(title: "Speak", style: .default,
-                                        handler: {action in utilsSpeak(text: word)})
+                                        handler: {action in mpdbSpeak(text: word)})
         let collinsAction = UIAlertAction(title: "Collins", style: .default,
                                              handler: {action in self.showDefinition(word: word, url: WordSearch.getCollinsUrl(word: word))})
         let dictionaryComAction = UIAlertAction(title: "Dictionary.com", style: .default,
