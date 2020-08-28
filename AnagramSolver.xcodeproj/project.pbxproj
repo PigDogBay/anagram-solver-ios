@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0047E17124A4DDFC00B40DD7 /* EUConsent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0047E17024A4DDFC00B40DD7 /* EUConsent.swift */; };
 		4D0543851CFDBE060084538A /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; };
 		4D0543861CFDBE060084538A /* SwiftUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D09F28D1FC1B02300EFA535 /* ShadowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D09F28C1FC1B02300EFA535 /* ShadowCollectionViewCell.swift */; };
@@ -93,7 +92,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0047E17024A4DDFC00B40DD7 /* EUConsent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EUConsent.swift; sourceTree = "<group>"; };
 		4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftUtils.xcodeproj; path = ../SwiftUtils/SwiftUtils.xcodeproj; sourceTree = "<group>"; };
 		4D09F28C1FC1B02300EFA535 /* ShadowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AnagramSolver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,7 +222,6 @@
 				4DF2DE411FB22A4000F44ADE /* Cells */,
 				4D1D62BB1E26674F00231DB3 /* ViewControllers */,
 				4D3596401CFEEA50008D2FAF /* Ads.swift */,
-				0047E17024A4DDFC00B40DD7 /* EUConsent.swift */,
 				4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */,
 				4DA0C3F9236C761600AF693B /* AppState.swift */,
 				4DA0C3F6236B0FC800AF693B /* Matches.swift */,
@@ -502,7 +499,6 @@
 				4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */,
 				4D09F28D1FC1B02300EFA535 /* ShadowCollectionViewCell.swift in Sources */,
 				4DF2DE451FB3200E00F44ADE /* TipsDataSource.swift in Sources */,
-				0047E17124A4DDFC00B40DD7 /* EUConsent.swift in Sources */,
 				4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */,
 				4D3596411CFEEA50008D2FAF /* Ads.swift in Sources */,
 				4DBFEA3F23914347009423E2 /* AboutViewController.swift in Sources */,
