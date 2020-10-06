@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mw5-Ah-dVR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mw5-Ah-dVR">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="4352" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,32 +46,32 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1006.3333333333334"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INFO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJT-nH-pv5">
-                                                <rect key="frame" x="20.000000000000004" y="20" width="56.333333333333343" height="28.666666666666671"/>
+                                                <rect key="frame" x="20" y="20" width="56" height="28.666666666666671"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIVACY POLICY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVS-rn-LJp">
-                                                <rect key="frame" x="20" y="188" width="193.33333333333334" height="28.666666666666657"/>
+                                                <rect key="frame" x="20" y="188" width="192.33333333333334" height="28.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADVERTISEMENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcf-TA-Wch">
-                                                <rect key="frame" x="20" y="371.66666666666669" width="214.33333333333334" height="28.666666666666686"/>
+                                                <rect key="frame" x="20" y="371.66666666666669" width="213.33333333333334" height="28.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLo-P0-vMx">
-                                                <rect key="frame" x="20" y="64.666666666666657" width="284" height="91.333333333333343"/>
+                                                <rect key="frame" x="20" y="64.666666666666657" width="283.33333333333331" height="91.333333333333343"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
                                                         <string key="content">Version 1.07.00
 www.mpdbailey.co.uk
 ©2015-2020 MPD Bailey Technology</string>
                                                         <attributes>
-                                                            <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="NSColor" systemColor="labelColor"/>
                                                             <font key="NSFont" metaFont="system" size="17"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
@@ -94,29 +95,29 @@ www.mpdbailey.co.uk
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKG-gs-WIc">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKG-gs-WIc">
                                                 <rect key="frame" x="237" y="309.66666666666669" width="118" height="30"/>
                                                 <state key="normal" title="PRIVACY POLICY"/>
                                                 <connections>
                                                     <action selector="privacyPolicyBtnClicked:" destination="q58-HK-0Kl" eventType="touchUpInside" id="6Uy-0M-DJ5"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqu-Pc-Mzy">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqu-Pc-Mzy">
                                                 <rect key="frame" x="239" y="534" width="116" height="30"/>
                                                 <state key="normal" title="FIND OUT MORE"/>
                                                 <connections>
                                                     <action selector="findOutMoreBtnClicked:" destination="q58-HK-0Kl" eventType="touchUpInside" id="4t5-79-OWi"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Y9-hr-Kva">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Y9-hr-Kva">
                                                 <rect key="frame" x="324" y="636.66666666666663" width="31" height="30"/>
                                                 <state key="normal" title="BUY"/>
                                                 <connections>
                                                     <action selector="buyBtnClicked:" destination="q58-HK-0Kl" eventType="touchUpInside" id="lJE-Ao-8Dr"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUo-HO-haV">
-                                                <rect key="frame" x="205" y="759.66666666666663" width="150" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUo-HO-haV">
+                                                <rect key="frame" x="206" y="759.66666666666663" width="149" height="30"/>
                                                 <state key="normal" title="RESTORE PURCHASE"/>
                                                 <connections>
                                                     <action selector="restoreBtnClicked:" destination="q58-HK-0Kl" eventType="touchUpInside" id="g3e-rk-54g"/>
@@ -140,13 +141,13 @@ www.mpdbailey.co.uk
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show me relevant ads" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mz-e8-V9X">
-                                                <rect key="frame" x="103" y="948.66666666666674" width="168" height="21"/>
+                                                <rect key="frame" x="104" y="948.66666666666674" width="167" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="uJT-nH-pv5" firstAttribute="top" secondItem="fEo-VN-V2F" secondAttribute="top" constant="20" id="1YA-hN-jsw"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tVS-rn-LJp" secondAttribute="trailing" constant="20" symbolic="YES" id="711-DX-KhA"/>
@@ -206,14 +207,14 @@ www.mpdbailey.co.uk
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="CVY-lB-4SJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="VSQ-CM-hAt" firstAttribute="leading" secondItem="CVY-lB-4SJ" secondAttribute="leading" id="6rI-O3-Vbz"/>
                             <constraint firstItem="VSQ-CM-hAt" firstAttribute="top" secondItem="CVY-lB-4SJ" secondAttribute="top" id="Gbz-0Y-xNH"/>
                             <constraint firstAttribute="bottom" secondItem="VSQ-CM-hAt" secondAttribute="bottom" id="O5d-eh-mqj"/>
                             <constraint firstItem="VSQ-CM-hAt" firstAttribute="trailing" secondItem="CVY-lB-4SJ" secondAttribute="trailing" id="SXO-TC-8sG"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="CVY-lB-4SJ"/>
                     </view>
                     <size key="freeformSize" width="375" height="1080"/>
                     <connections>
@@ -239,7 +240,7 @@ www.mpdbailey.co.uk
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter letters" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="a7i-Fj-C2n">
                                         <rect key="frame" x="8" y="5" width="343" height="40"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="plt-OJ-fIO"/>
                                         </constraints>
@@ -250,7 +251,7 @@ www.mpdbailey.co.uk
                                         </connections>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="a7i-Fj-C2n" secondAttribute="trailing" constant="8" id="1hd-J6-CSL"/>
                                     <constraint firstAttribute="height" constant="50" id="OKM-Ck-mCc"/>
@@ -290,7 +291,7 @@ www.mpdbailey.co.uk
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoQ-YB-tG6">
-                                                    <rect key="frame" x="23" y="78.333333333333314" width="242" height="122"/>
+                                                    <rect key="frame" x="23.666666666666671" y="78.333333333333314" width="240.66666666666663" height="122"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Find words from jumbled letters Enter moonstarer To find astronomer">
                                                             <attributes>
@@ -301,7 +302,7 @@ www.mpdbailey.co.uk
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htv-3F-tWK">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htv-3F-tWK">
                                                     <rect key="frame" x="194" y="216.33333333333334" width="74" height="30"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="SHOW ME">
@@ -313,7 +314,7 @@ www.mpdbailey.co.uk
                                                 </button>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="BoQ-YB-tG6" firstAttribute="top" secondItem="GWU-aA-6Hu" secondAttribute="bottom" constant="24" id="CbB-Fe-3Fk"/>
                                             <constraint firstItem="Abu-ep-efe" firstAttribute="top" secondItem="u1r-9k-dV9" secondAttribute="top" constant="20" id="Lzh-9j-uud"/>
@@ -351,7 +352,7 @@ www.mpdbailey.co.uk
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWj-Bb-B0U">
-                                                    <rect key="frame" x="31.666666666666657" y="78.333333333333314" width="224.99999999999997" height="122"/>
+                                                    <rect key="frame" x="32.333333333333329" y="78.333333333333314" width="223.66666666666669" height="122"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Press the info icon to look up a word on the web. Hold down on a word to bring up more look up options.">
                                                             <attributes>
@@ -364,7 +365,7 @@ www.mpdbailey.co.uk
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="CWj-Bb-B0U" firstAttribute="centerX" secondItem="B0y-7b-KBs" secondAttribute="centerX" id="TFY-y8-UB7"/>
                                             <constraint firstItem="CWj-Bb-B0U" firstAttribute="top" secondItem="Hts-hU-1Ib" secondAttribute="bottom" constant="24" id="WHR-DO-3ee"/>
@@ -390,13 +391,13 @@ www.mpdbailey.co.uk
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpv-Bd-DSk">
-                                                    <rect key="frame" x="112" y="28" width="64.333333333333314" height="26.333333333333329"/>
+                                                    <rect key="frame" x="112" y="28" width="64" height="26.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GlZ-c7-vAu">
-                                                    <rect key="frame" x="39.666666666666657" y="78.333333333333314" width="209" height="122"/>
+                                                    <rect key="frame" x="40.333333333333329" y="78.333333333333314" width="207.66666666666669" height="122"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Too many matches? Refine your search, filter by * Word size * Letters in the word">
                                                             <attributes>
@@ -409,7 +410,7 @@ www.mpdbailey.co.uk
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="Gv8-62-zB7" firstAttribute="leading" secondItem="bA4-Jy-XCa" secondAttribute="leading" constant="20" id="Vao-YS-hya"/>
                                             <constraint firstItem="GlZ-c7-vAu" firstAttribute="centerX" secondItem="bA4-Jy-XCa" secondAttribute="centerX" id="ciU-Zl-aTO"/>
@@ -439,7 +440,7 @@ www.mpdbailey.co.uk
                                                     <attributedString key="attributedText">
                                                         <fragment content="Choose: * Word list * Dictionary definition * Results limit and more">
                                                             <attributes>
-                                                                <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <color key="NSColor" systemColor="labelColor"/>
                                                                 <font key="NSFont" metaFont="system" size="17"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
@@ -447,7 +448,7 @@ www.mpdbailey.co.uk
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTu-Vd-F6a">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTu-Vd-F6a">
                                                     <rect key="frame" x="141" y="216.33333333333334" width="127" height="30"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="SHOW SETTINGS">
@@ -465,7 +466,7 @@ www.mpdbailey.co.uk
                                                 </label>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="vxQ-TC-kuc" firstAttribute="centerX" secondItem="k88-rY-U35" secondAttribute="centerX" id="757-BA-aAp"/>
                                             <constraint firstItem="V5z-SS-VmI" firstAttribute="leading" secondItem="k88-rY-U35" secondAttribute="leading" constant="20" id="Bi3-dz-lbj"/>
@@ -511,7 +512,7 @@ www.mpdbailey.co.uk
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nd-5l-dyr">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nd-5l-dyr">
                                                     <rect key="frame" x="178" y="216.33333333333334" width="90" height="30"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="VIEW GUIDE">
@@ -523,7 +524,7 @@ www.mpdbailey.co.uk
                                                 </button>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="Qaf-KL-8mY" firstAttribute="centerX" secondItem="4oI-ox-8IL" secondAttribute="centerX" id="2Cg-mw-8e7"/>
                                             <constraint firstAttribute="trailing" secondItem="0Nd-5l-dyr" secondAttribute="trailing" constant="20" id="6i7-kh-cQU"/>
@@ -569,7 +570,7 @@ www.mpdbailey.co.uk
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPP-Rd-QAK">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPP-Rd-QAK">
                                                     <rect key="frame" x="188" y="216.33333333333334" width="80" height="30"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="FEEDBACK">
@@ -579,7 +580,7 @@ www.mpdbailey.co.uk
                                                         <action selector="button1Clicked:" destination="vOb-DU-7RQ" eventType="touchUpInside" id="vit-zV-hpt"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffS-H6-FR5">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffS-H6-FR5">
                                                     <rect key="frame" x="113" y="216.33333333333334" width="39" height="30"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="RATE">
@@ -589,7 +590,7 @@ www.mpdbailey.co.uk
                                                         <action selector="button2Clicked:" destination="vOb-DU-7RQ" eventType="touchUpInside" id="0NA-nl-d85"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhP-f8-Jmr">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZhP-f8-Jmr">
                                                     <rect key="frame" x="40" y="216.33333333333334" width="37" height="30"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="TELL">
@@ -601,7 +602,7 @@ www.mpdbailey.co.uk
                                                 </button>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="ffS-H6-FR5" firstAttribute="leading" secondItem="ZhP-f8-Jmr" secondAttribute="trailing" constant="36" id="9LC-59-EVV"/>
                                             <constraint firstItem="0eM-uM-Fmm" firstAttribute="leading" secondItem="vOb-DU-7RQ" secondAttribute="leading" constant="20" id="ChP-Wa-giN"/>
@@ -646,7 +647,7 @@ www.mpdbailey.co.uk
                                                             <string key="content">Review your privacy
 * Remove Ads * Set your Ad preferences * Review the privacy policy</string>
                                                             <attributes>
-                                                                <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <color key="NSColor" systemColor="labelColor"/>
                                                                 <font key="NSFont" metaFont="system" size="17"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
@@ -654,7 +655,7 @@ www.mpdbailey.co.uk
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3s-pc-UoI">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3s-pc-UoI">
                                                     <rect key="frame" x="130" y="216" width="138" height="30"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="ABOUT &amp; PRIVACY">
@@ -676,11 +677,12 @@ www.mpdbailey.co.uk
                                                 <constraint firstItem="7Fu-1Z-ckn" firstAttribute="leading" secondItem="VIS-h2-h3r" secondAttribute="leading" constant="20" id="yMY-d4-xhT"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="wdn-4e-A96"/>
                         <color key="backgroundColor" red="0.22435467216022403" green="0.33736878876537241" blue="0.60241948341836737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NyA-1A-NhE" firstAttribute="top" secondItem="FRf-rd-9cX" secondAttribute="bottom" constant="8" id="6dA-Kw-EhU"/>
@@ -691,7 +693,6 @@ www.mpdbailey.co.uk
                             <constraint firstItem="NyA-1A-NhE" firstAttribute="leading" secondItem="wdn-4e-A96" secondAttribute="leading" id="qcd-sT-2jj"/>
                             <constraint firstAttribute="bottom" secondItem="NyA-1A-NhE" secondAttribute="bottom" id="rjJ-za-4f3"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="wdn-4e-A96"/>
                         <connections>
                             <action selector="backgroundTap:" destination="ldH-pm-mdz" eventType="touchDown" id="o1n-DW-yI0"/>
                         </connections>
@@ -739,7 +740,7 @@ www.mpdbailey.co.uk
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8RR-Nh-2cY">
                                 <rect key="frame" x="0.0" y="37" width="375" height="603"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="MatchesCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="MatchesCell" textLabel="sVz-Cd-ldF" style="IBUITableViewCellStyleDefault" id="t0m-df-1iP">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -749,7 +750,7 @@ www.mpdbailey.co.uk
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sVz-Cd-ldF">
-                                                    <rect key="frame" x="15" y="0.0" width="345" height="44"/>
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="highlightedColor"/>
@@ -768,13 +769,14 @@ www.mpdbailey.co.uk
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayg-FS-pz2" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="640" width="375" height="50"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="WGA-dx-snB"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="FYA-nq-3Id"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8RR-Nh-2cY" firstAttribute="leading" secondItem="8OF-kr-Jnp" secondAttribute="leading" id="52g-hW-A59"/>
                             <constraint firstAttribute="trailing" secondItem="8RR-Nh-2cY" secondAttribute="trailing" id="JYz-xk-1IV"/>
@@ -786,7 +788,6 @@ www.mpdbailey.co.uk
                             <constraint firstItem="o39-YA-7GC" firstAttribute="top" secondItem="FYA-nq-3Id" secondAttribute="top" constant="8" id="e9Z-BD-xB2"/>
                             <constraint firstItem="ayg-FS-pz2" firstAttribute="top" secondItem="8RR-Nh-2cY" secondAttribute="bottom" id="q4h-2V-wYc"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="FYA-nq-3Id"/>
                     </view>
                     <navigationItem key="navigationItem" title="Matches" id="drl-D2-IA4">
                         <barButtonItem key="backBarButtonItem" title="Back" id="2DB-Hv-09g"/>
@@ -816,7 +817,7 @@ www.mpdbailey.co.uk
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="48" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Llf-cD-Q0Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellLettersFilter" rowHeight="48" id="PaP-6r-7Ht" customClass="LettersFilterTableViewCell" customModule="AnagramSolver" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.333332061767578" width="375" height="48"/>
@@ -826,12 +827,12 @@ www.mpdbailey.co.uk
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter letters" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KEF-if-J9v">
-                                            <rect key="frame" x="66.333333333333343" y="7" width="293.66666666666663" height="34.666666666666664"/>
+                                            <rect key="frame" x="65.666666666666657" y="7" width="294.33333333333337" height="34.666666666666664"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="search" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGp-8J-Bgc">
-                                            <rect key="frame" x="15.999999999999996" y="11.000000000000002" width="33.666666666666657" height="25.666666666666671"/>
+                                            <rect key="frame" x="16" y="11.000000000000002" width="33" height="25.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -856,18 +857,18 @@ www.mpdbailey.co.uk
                                 <rect key="frame" x="0.0" y="103.33333206176758" width="375" height="48"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2ek-Dy-N0K" id="mwC-Ep-6Xk">
-                                    <rect key="frame" x="0.0" y="0.0" width="348" height="48"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="347.66666666666669" height="48"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kQ9-8k-YOE">
-                                            <rect key="frame" x="16.000000000000004" y="13.999999999999998" width="33.333333333333336" height="20.333333333333332"/>
+                                            <rect key="frame" x="16" y="13.999999999999998" width="33" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NIp-Wa-rDN">
-                                            <rect key="frame" x="296" y="13.999999999999998" width="44" height="20.333333333333332"/>
+                                            <rect key="frame" x="296" y="13.999999999999998" width="43.666666666666664" height="20.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -887,7 +888,7 @@ www.mpdbailey.co.uk
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkF-Zc-2nd">
-                                            <rect key="frame" x="15.999999999999996" y="13.999999999999998" width="33.666666666666657" height="20.333333333333329"/>
+                                            <rect key="frame" x="16" y="13.999999999999998" width="33" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -1000,6 +1001,7 @@ www.mpdbailey.co.uk
                                 <color key="color" red="0.2901960784" green="0.43529411759999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="84u-PT-K9w"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="84u-PT-K9w" firstAttribute="centerX" secondItem="L5b-GP-dTL" secondAttribute="centerX" id="24C-rl-a9u"/>
@@ -1011,7 +1013,6 @@ www.mpdbailey.co.uk
                             <constraint firstItem="L5b-GP-dTL" firstAttribute="top" secondItem="utU-ey-tE8" secondAttribute="bottom" constant="8" id="cOa-cB-lp6"/>
                             <constraint firstAttribute="centerY" secondItem="utU-ey-tE8" secondAttribute="centerY" id="yyj-eW-CSg"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="84u-PT-K9w"/>
                     </view>
                     <navigationItem key="navigationItem" title="Definition" id="DWD-wG-j73"/>
                     <connections>
@@ -1043,5 +1044,14 @@ www.mpdbailey.co.uk
         <namedColor name="tipsBackground">
             <color red="0.82700002193450928" green="0.85900002717971802" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
