@@ -124,12 +124,14 @@
 				<string>180k words - TWL (US Scrabble)</string>
 				<string>270k words - SOWPODS (World Scrabble)</string>
 				<string>310k words - SCOWL</string>
+                <string>355k wörter - Deutsch</string>
 			</array>
 			<key>Values</key>
 			<array>
 				<string>twl</string>
 				<string>sowpods</string>
 				<string>words</string>
+                <string>german</string>
 			</array>
 			<key>Type</key>
 			<string>PSMultiValueSpecifier</string>
