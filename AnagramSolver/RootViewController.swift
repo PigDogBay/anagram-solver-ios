@@ -39,7 +39,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         let controller = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let helpAction = UIAlertAction(title: "User Guide", style: .default, handler: {action in self.showUserGuide()})
         let aboutAction = UIAlertAction(title: "About & Privacy", style: .default, handler: {action in self.showAbout()})
-        let settingsAction = UIAlertAction(title: "Settings", style: .default, handler: {action in self.showSettings()})
+        let settingsAction = UIAlertAction(title: "Settings", style: .default, handler: {action in mpdbShowSettings()})
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
 
         controller.addAction(helpAction)
@@ -90,14 +90,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         //dismiss on send
         dismiss(animated: true, completion: nil)
     }
-    
-    func showSettings(){
-        let application = UIApplication.shared
-        let url = URL(string: UIApplication.openSettingsURLString)! as URL
-        if application.canOpenURL(url){
-            application.open(url,options: [:],completionHandler: nil)
-        }
-    }
+
     func showHelp(){
         performSegue(withIdentifier: helpSegueId, sender: self)
     }
@@ -142,7 +135,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     {
         super.viewDidLoad()
         tipsDataSource.showMeCallback = showMe
-        tipsDataSource.settingsCallback = showSettings
+        tipsDataSource.settingsCallback = mpdbShowSettings
         tipsDataSource.viewGuideCallback = showUserGuide
         tipsDataSource.rateCallback = rateApp
         tipsDataSource.feedbackCallback = sendFeedback
