@@ -61,17 +61,15 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     }
     
     func sendFeedback(){
-        let emailAddress = "pigdogbay@yahoo.co.uk"
-        let subject = "Anagram Solver Feedback iOS v1.07"
-        let body = "Your feedback is most welcome\n *Report Bugs\n *Suggest new features\n *Ask for help\n\n\nHi Mark,\n\n"
-        	
         if MFMailComposeViewController.canSendMail() {
             let mailVC = MFMailComposeViewController()
             mailVC.mailComposeDelegate = self
-            mailVC.setSubject(subject)
-            mailVC.setToRecipients([emailAddress])
-            mailVC.setMessageBody(body, isHTML: false)
+            mailVC.setSubject(Strings.feedbackSubject)
+            mailVC.setToRecipients([Strings.emailAddress])
+            mailVC.setMessageBody("", isHTML: false)
             present(mailVC, animated: true, completion: nil)
+        } else if let emailUrl = mpdbCreateEmailUrl(to: Strings.emailAddress, subject: Strings.feedbackSubject, body: "")  {
+            UIApplication.shared.open(emailUrl)
         } else {
             self.mpdbShowErrorAlert("No Email", msg: "This device is not configured for sending emails.")
         }
