@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0029A03025306EBC002E96D1 /* german.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0029A02E25306EBC002E96D1 /* german.txt */; };
+		0029A03525307170002E96D1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029A03425307170002E96D1 /* Strings.swift */; };
 		4D0543851CFDBE060084538A /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; };
 		4D0543861CFDBE060084538A /* SwiftUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D09F28D1FC1B02300EFA535 /* ShadowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D09F28C1FC1B02300EFA535 /* ShadowCollectionViewCell.swift */; };
@@ -94,6 +95,7 @@
 
 /* Begin PBXFileReference section */
 		0029A02E25306EBC002E96D1 /* german.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = german.txt; sourceTree = "<group>"; };
+		0029A03425307170002E96D1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftUtils.xcodeproj; path = ../SwiftUtils/SwiftUtils.xcodeproj; sourceTree = "<group>"; };
 		4D09F28C1FC1B02300EFA535 /* ShadowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AnagramSolver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +164,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0029A03325307126002E96D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0029A03425307170002E96D1 /* Strings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1E9D5EE9EB3E676642812536 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +230,7 @@
 		4D45EFB61A9DFABA00C40BB4 /* AnagramSolver */ = {
 			isa = PBXGroup;
 			children = (
+				0029A03325307126002E96D1 /* Model */,
 				4D45EFB71A9DFABA00C40BB4 /* Supporting Files */,
 				4DF2DE411FB22A4000F44ADE /* Cells */,
 				4D1D62BB1E26674F00231DB3 /* ViewControllers */,
@@ -510,6 +521,7 @@
 				4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */,
 				4DF2DE431FB22A8000F44ADE /* TipCollectionViewCell.swift in Sources */,
 				4DDAB8831FB61139000EDB30 /* ActionCollectionViewCell.swift in Sources */,
+				0029A03525307170002E96D1 /* Strings.swift in Sources */,
 				4D2B35C31D33AAE30014ABF3 /* IAPFactory.swift in Sources */,
 				4D45D7B31E2CF0C500EC2D27 /* Settings.swift in Sources */,
 				4DA0C3F7236B0FC800AF693B /* Matches.swift in Sources */,

@@ -77,7 +77,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         }
     }
     func recommend(){
-        let firstActivityItem = "Take a look at Anagram Solver "+Model.getAppWebUrl()
+        let firstActivityItem = "Take a look at Anagram Solver "+Strings.itunesAppURL
         let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: nil)
         //For iPads need to anchor the popover, crashes if not set
         if let ppc = activityViewController.popoverPresentationController {

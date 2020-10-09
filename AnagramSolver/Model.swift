@@ -13,13 +13,6 @@ class Model : WordListCallback, IAPDelegate
 {
     //Singleton
     static let sharedInstance = Model()
-    static let appId = "id973923699"
-
-    class func getAppWebUrl()->String
-    {
-        return "https://itunes.apple.com/app/id973923699"
-    }
-    static let privacyURL = "https://pigdogbay.blogspot.co.uk/2018/05/privacy-policy.html"
     
     //Need to check if user changes the word list setting, so cache it here
     var wordListName = ""
@@ -33,7 +26,7 @@ class Model : WordListCallback, IAPDelegate
     var query = ""
     let settings = Settings()
     let ads = Ads()
-    let ratings = Ratings(appId: appId)
+    let ratings = Ratings(appId: Strings.appId)
     let iap : IAPInterface
     let filter : Filter
     let filterFactory : WordListCallbackAbstractFactory
@@ -129,7 +122,7 @@ class Model : WordListCallback, IAPDelegate
         var builder = "-Anagram Solver-\n\nQuery:\n\(self.query)\n\nMatches:\n"
         builder.append(matches.flatten())
         builder+="\nAvailable on the App Store\n"
-        builder+=Model.getAppWebUrl()
+        builder+=Strings.itunesAppURL
         return builder
     }
 
