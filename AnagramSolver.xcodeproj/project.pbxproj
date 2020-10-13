@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0029A03025306EBC002E96D1 /* german.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0029A02E25306EBC002E96D1 /* german.txt */; };
 		0029A03525307170002E96D1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029A03425307170002E96D1 /* Strings.swift */; };
+		0091BC052535E5A000BE7A43 /* AutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091BC042535E5A000BE7A43 /* AutoTest.swift */; };
 		4D0543851CFDBE060084538A /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; };
 		4D0543861CFDBE060084538A /* SwiftUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D09F28D1FC1B02300EFA535 /* ShadowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D09F28C1FC1B02300EFA535 /* ShadowCollectionViewCell.swift */; };
@@ -96,6 +97,7 @@
 /* Begin PBXFileReference section */
 		0029A02E25306EBC002E96D1 /* german.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = german.txt; sourceTree = "<group>"; };
 		0029A03425307170002E96D1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		0091BC042535E5A000BE7A43 /* AutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTest.swift; sourceTree = "<group>"; };
 		4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftUtils.xcodeproj; path = ../SwiftUtils/SwiftUtils.xcodeproj; sourceTree = "<group>"; };
 		4D09F28C1FC1B02300EFA535 /* ShadowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AnagramSolver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,6 +247,7 @@
 				4D9E43AC1FAC84FC007007C8 /* Filter.swift */,
 				4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */,
 				4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */,
+				0091BC042535E5A000BE7A43 /* AutoTest.swift */,
 			);
 			path = AnagramSolver;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				4D9E43AD1FAC84FC007007C8 /* Filter.swift in Sources */,
 				4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */,
 				4DF2DE431FB22A8000F44ADE /* TipCollectionViewCell.swift in Sources */,
+				0091BC052535E5A000BE7A43 /* AutoTest.swift in Sources */,
 				4DDAB8831FB61139000EDB30 /* ActionCollectionViewCell.swift in Sources */,
 				0029A03525307170002E96D1 /* Strings.swift in Sources */,
 				4D2B35C31D33AAE30014ABF3 /* IAPFactory.swift in Sources */,
