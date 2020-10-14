@@ -59,7 +59,14 @@ class AutoTest : AppStateChangeObserver {
                     search()
                 }
             }
-
+        }
+    }
+    
+    static func goBack(vc : UIViewController){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+            if let navCtrl = vc.navigationController {
+                navCtrl.popViewController(animated: true)
+            }
         }
     }
 }
