@@ -18,12 +18,14 @@ class DefinitionViewController: UIViewController, WKNavigationDelegate {
     
     var word : String!
     var definitionUrl : String!
+    //Does not need to weak - will be deallocated
     fileprivate var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         webView = WKWebView(frame: webViewContainer.frame)
+        //Weak reference to self here
         webView.navigationDelegate = self
         webViewContainer.addSubview(webView)
         constrainView(view: webView, toView: webViewContainer)
