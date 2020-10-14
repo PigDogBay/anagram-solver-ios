@@ -202,8 +202,10 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        model.stop()
-        model.matches.removeMatchObserver()
+        if model != nil {
+            model.stop()
+            model.matches.removeMatchObserver()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
