@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0029A03025306EBC002E96D1 /* german.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0029A02E25306EBC002E96D1 /* german.txt */; };
 		0029A03525307170002E96D1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029A03425307170002E96D1 /* Strings.swift */; };
 		003E10EB253EF72400AE8155 /* wordlist-fr.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10E7253EF72400AE8155 /* wordlist-fr.txt */; };
 		003E10EC253EF72400AE8155 /* wordlist-de.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10E9253EF72400AE8155 /* wordlist-de.txt */; };
@@ -97,7 +96,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0029A02E25306EBC002E96D1 /* german.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = german.txt; sourceTree = "<group>"; };
 		0029A03425307170002E96D1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		003E10E7253EF72400AE8155 /* wordlist-fr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-fr.txt"; sourceTree = "<group>"; };
 		003E10E9253EF72400AE8155 /* wordlist-de.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-de.txt"; sourceTree = "<group>"; };
@@ -268,7 +266,6 @@
 				4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */,
 				4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */,
 				4DE5CA8C238EB6250013D3F5 /* sowpods.txt */,
-				0029A02E25306EBC002E96D1 /* german.txt */,
 				4DE5CA8E238EB6330013D3F5 /* twl.txt */,
 				4DE5CA89238EB6170013D3F5 /* words.txt */,
 			);
@@ -435,7 +432,6 @@
 			files = (
 				003E10EC253EF72400AE8155 /* wordlist-de.txt in Resources */,
 				003E10EB253EF72400AE8155 /* wordlist-fr.txt in Resources */,
-				0029A03025306EBC002E96D1 /* german.txt in Resources */,
 				4D45D7B01E2901BF00EC2D27 /* Settings.bundle in Resources */,
 				4DE5CA8F238EB6330013D3F5 /* twl.txt in Resources */,
 				4D45EFBF1A9DFABA00C40BB4 /* Main.storyboard in Resources */,
