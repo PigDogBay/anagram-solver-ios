@@ -67,7 +67,7 @@
                                                 <rect key="frame" x="20" y="64.666666666666657" width="283.33333333333331" height="91.333333333333343"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
-                                                        <string key="content">Version 1.07.00
+                                                        <string key="content">Version 1.08.01
 www.mpdbailey.co.uk
 ©2015-2020 MPD Bailey Technology</string>
                                                         <attributes>
@@ -829,7 +829,7 @@ www.mpdbailey.co.uk
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter letters" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KEF-if-J9v">
                                             <rect key="frame" x="65.666666666666657" y="7" width="294.33333333333337" height="34.666666666666664"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="search" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="webSearch" returnKeyType="go" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGp-8J-Bgc">
                                             <rect key="frame" x="16" y="11.000000000000002" width="33" height="25.666666666666671"/>
