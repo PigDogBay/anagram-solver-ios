@@ -67,11 +67,11 @@
                                                 <rect key="frame" x="20" y="64.666666666666657" width="283.33333333333331" height="91.333333333333343"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
-                                                        <string key="content">Version 1.08.01
+                                                        <string key="content">Version 1.08.02
 www.mpdbailey.co.uk
 ©2015-2020 MPD Bailey Technology</string>
                                                         <attributes>
-                                                            <color key="NSColor" systemColor="labelColor"/>
+                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <font key="NSFont" metaFont="system" size="17"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
