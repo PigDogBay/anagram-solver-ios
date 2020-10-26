@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -319,6 +319,7 @@
 			buildConfigurationList = 4D45EFD31A9DFABA00C40BB4 /* Build configuration list for PBXNativeTarget "AnagramSolver" */;
 			buildPhases = (
 				64B75DAE61084E7DD7508C15 /* [CP] Check Pods Manifest.lock */,
+				49509626E8BB3475D650FCE2 /* [CP] Prepare Artifacts */,
 				4D45EFB01A9DFABA00C40BB4 /* Sources */,
 				4D45EFB11A9DFABA00C40BB4 /* Frameworks */,
 				4D45EFB21A9DFABA00C40BB4 /* Resources */,
@@ -378,13 +379,14 @@
 					};
 					4D45EFC81A9DFABA00C40BB4 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = ZYM8DA54T6;
 						LastSwiftMigration = 1110;
 						TestTargetID = 4D45EFB31A9DFABA00C40BB4;
 					};
 				};
 			};
 			buildConfigurationList = 4D45EFAF1A9DFABA00C40BB4 /* Build configuration list for PBXProject "AnagramSolver" */;
-			compatibilityVersion = "Xcode 12.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -454,6 +456,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		49509626E8BB3475D650FCE2 /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		64B75DAE61084E7DD7508C15 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -477,17 +496,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
