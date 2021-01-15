@@ -127,6 +127,8 @@
                 <string>Deutsch (198k wörter)</string>
                 <string>Español (381k palabras)</string>
                 <string>Français (268k mots)</string>
+                <string>Italiano (250k parole)</string>
+                <string>Português (210k palavras)</string>
 			</array>
 			<key>Values</key>
 			<array>
@@ -136,6 +138,8 @@
                 <string>wordlist-de</string>
                 <string>wordlist-es</string>
                 <string>wordlist-fr</string>
+                <string>wordlist-it</string>
+                <string>wordlist-pt</string>
 			</array>
 			<key>Type</key>
 			<string>PSMultiValueSpecifier</string>
