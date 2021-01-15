@@ -69,7 +69,6 @@ class Settings
         set(flag) {
             let defaults = UserDefaults.standard
             defaults.set(flag, forKey: isProKey)
-            defaults.synchronize()
         }
     }
     
@@ -133,7 +132,6 @@ class Settings
             if flag != useNonPersonalizedAds {
                 let defaults = UserDefaults.standard
                 defaults.set(flag, forKey: useNonPersonalizedAdsKey)
-                defaults.synchronize()
             }
         }
     }

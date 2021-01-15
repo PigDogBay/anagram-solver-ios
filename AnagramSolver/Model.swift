@@ -141,8 +141,6 @@ class Model : WordListCallback, IAPDelegate
         self.wordSearch.findSubAnagrams = settings.showSubAnagrams
     }
     func checkForSettingsChange(){
-        //do we need the synchronize?
-        UserDefaults.standard.synchronize()
         let oldValue = wordListName
         applySettings()
         if oldValue != wordListName{
