@@ -683,7 +683,7 @@ www.mpdbailey.co.uk
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wdn-4e-A96"/>
-                        <color key="backgroundColor" red="0.22435467216022403" green="0.33736878876537241" blue="0.60241948341836737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="navBackground"/>
                         <constraints>
                             <constraint firstItem="NyA-1A-NhE" firstAttribute="top" secondItem="FRf-rd-9cX" secondAttribute="bottom" constant="8" id="6dA-Kw-EhU"/>
                             <constraint firstItem="FRf-rd-9cX" firstAttribute="leading" secondItem="wdn-4e-A96" secondAttribute="leading" constant="8" id="LJ2-gZ-ouS"/>
@@ -1028,7 +1028,7 @@ www.mpdbailey.co.uk
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kV8-yp-vNU"/>
+        <segue reference="D2K-XF-Zb6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="definition" width="42.666667938232422" height="42.666667938232422"/>
@@ -1040,6 +1040,9 @@ www.mpdbailey.co.uk
         <image name="shield" width="42.666667938232422" height="42.666667938232422"/>
         <namedColor name="buttonColor">
             <color red="0.23100000619888306" green="0.34900000691413879" blue="0.59600001573562622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="navBackground">
+            <color red="0.22745098039215686" green="0.34509803921568627" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tipsBackground">
             <color red="0.82700002193450928" green="0.85900002717971802" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

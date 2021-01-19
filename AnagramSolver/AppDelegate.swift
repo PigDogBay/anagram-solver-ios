@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 13.0, *) {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = UIColor(named: "blueBackground")
+            appearance.backgroundColor = UIColor(named: "navBackground")
             appearance.titleTextAttributes = [
                 NSAttributedString.Key.foregroundColor: UIColor.white
             ]
