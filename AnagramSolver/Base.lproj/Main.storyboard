@@ -71,7 +71,7 @@
 www.mpdbailey.co.uk
 ©2015-2021 MPD Bailey Technology</string>
                                                         <attributes>
-                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="NSColor" systemColor="labelColor"/>
                                                             <font key="NSFont" metaFont="system" size="17"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
@@ -1028,7 +1028,7 @@ www.mpdbailey.co.uk
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="D2K-XF-Zb6"/>
+        <segue reference="kV8-yp-vNU"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="definition" width="42.666667938232422" height="42.666667938232422"/>
