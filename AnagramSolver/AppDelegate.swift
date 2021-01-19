@@ -25,7 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             appearance.titleTextAttributes = [
                 NSAttributedString.Key.foregroundColor: UIColor.white
             ]
-            
+            appearance.shadowImage = UIImage()
+            appearance.shadowColor = .clear
+
             UINavigationBar.appearance().standardAppearance = appearance
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
             UINavigationBar.appearance().compactAppearance = appearance
