@@ -24,23 +24,23 @@ class Settings
     
     private let defaultWordList = "words"
     
-    let darkGreen = UIColor(red: 0.0, green: 0.5, blue: 0.0, alpha: 1.0)
-    
     var highlight : UIColor {
         get {
             if let colorString = UserDefaults.standard.string(forKey: highlightKey){
                 switch colorString {
                 case "black":
-                    return UIColor.black
+                    return UIColor.label
                 case "blue":
-                    return UIColor.blue
+                    return UIColor.systemBlue
                 case "green":
-                    return self.darkGreen
+                    return UIColor(named: "highlightGreen") ?? UIColor.systemGreen
+                case "yellow":
+                    return UIColor(named: "highlightYellow") ?? UIColor.systemYellow
                 default:
                     break
                 }
             }
-            return UIColor.red
+            return UIColor.systemRed
         }
     }
 

@@ -82,14 +82,16 @@
 				<string>black</string>
 				<string>red</string>
 				<string>green</string>
-				<string>blue</string>
+                <string>blue</string>
+                <string>yellow</string>
 			</array>
 			<key>Titles</key>
 			<array>
-				<string>Black (none)</string>
+				<string>None</string>
 				<string>Red</string>
 				<string>Green</string>
-				<string>Blue</string>
+                <string>Blue</string>
+                <string>Yellow</string>
 			</array>
 			<key>Type</key>
 			<string>PSMultiValueSpecifier</string>
