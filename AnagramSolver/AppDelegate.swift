@@ -18,22 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //New in 13.4, see
         //https://stackoverflow.com/questions/60848786/xcode-11-4-navigations-title-color-gone-black-from-storyboard
-        if #available(iOS 13.0, *) {
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = UIColor(named: "navBackground")
-            appearance.titleTextAttributes = [
-                NSAttributedString.Key.foregroundColor: UIColor.white
-            ]
-            appearance.shadowImage = UIImage()
-            appearance.shadowColor = .clear
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor(named: "navBackground")
+        appearance.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.white
+        ]
+        appearance.shadowImage = UIImage()
+        appearance.shadowColor = .clear
 
-            UINavigationBar.appearance().standardAppearance = appearance
-            UINavigationBar.appearance().scrollEdgeAppearance = appearance
-            UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
 
-            UIBarButtonItem.appearance().tintColor = UIColor.white
-        }
+        UIBarButtonItem.appearance().tintColor = UIColor.white
         
         let settings = Settings()
         settings.registerDefaultSettings()
