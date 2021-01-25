@@ -160,6 +160,8 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         model.appState.addObserver(observer: self)
         //Apply any setting changes when coming back from the settings screen
         NotificationCenter.default.addObserver(self, selector: #selector (appEnterForgeround), name: UIApplication.willEnterForegroundNotification, object: UIApplication.shared)
+        //prevent email autocomplete showing on the keyboard
+        textFieldQuery.textContentType = UITextContentType(rawValue: "")
     }
     //Only called when view re-appears from background
     @objc func appEnterForgeround() {
