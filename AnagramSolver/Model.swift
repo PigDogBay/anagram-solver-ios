@@ -41,13 +41,6 @@ class Model : WordListCallback, IAPDelegate
         applySettings()
     }
     
-    func getWord(atIndex index : Int) -> String? {
-        if index>=0 && index < matches.count {
-            return matches[index]
-        }
-        return nil
-    }
-    
     func unloadDictionary()
     {
         self.wordList.wordlist = nil

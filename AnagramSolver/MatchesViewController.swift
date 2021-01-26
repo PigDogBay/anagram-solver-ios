@@ -10,7 +10,7 @@ import UIKit
 import GoogleMobileAds
 import SwiftUtils
 
-class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoundObserver, UITableViewDataSource
+class MatchesViewController: UIViewController, AppStateChangeObserver, UITableViewDataSource
 {
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     fileprivate let cellIdentifier = "MatchesCell"
@@ -72,7 +72,6 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
         // locked in portrait mode), the banner can be loaded in viewWillAppear.
         loadAd()
         model.appState.addObserver(observer: self)
-        model.matches.setMatchesObserver(observer: self)
         //expect to be in ready state when search has been pressed from main VC or filter VC
         if model.appState.appState == .ready
         {
@@ -85,7 +84,6 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
     override func viewWillDisappear(_ animated: Bool) {
         model.stop()
         model.appState.removeObserver(observer: self)
-        model.matches.removeMatchObserver()
         super.viewWillDisappear(animated)
     }
     //
@@ -110,7 +108,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
         if sender.state == UIGestureRecognizer.State.began {
             let touchPoint = sender.location(in: self.matchesTable)
             if let indexPath = matchesTable.indexPathForRow(at: touchPoint){
-                if let word = model.getWord(atIndex: indexPath.row){
+                if let word = model.matches.getMatch(section: indexPath.section, row: indexPath.row){
                     showLookUpDefinitionMenu(word: word, location : touchPoint)
                 }
             }
@@ -204,7 +202,6 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
         // Dispose of any resources that can be recreated.
         if model != nil {
             model.stop()
-            model.matches.removeMatchObserver()
         }
     }
     
@@ -215,7 +212,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
                 if let cell = sender as? UITableViewCell {
                     //Cell icon press
                     if let indexPath = matchesTable.indexPath(for: cell) {
-                        if let word = model.getWord(atIndex: indexPath.row) {
+                        if let word = model.matches.getMatch(section: indexPath.section, row: indexPath.row) {
                             definitionVC.word = word
                             definitionVC.definitionUrl = model.settings.getDefinitionUrl(word: word)
                         }
@@ -232,12 +229,12 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
     // MARK: - Table view data source
     func numberOfSections(in tableView: UITableView) -> Int
     {
-        return 1
+        return model.matches.sections
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return model.matches.count
+        return model.matches.getNumberOfRows(section: section)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -245,11 +242,14 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
         cell.accessoryType = .detailButton
         cell.textLabel?.font = model.settings.useMonospacedFont ? MatchesViewController.monospacedFont : MatchesViewController.systemFont
-        let word = model.matches[indexPath.row]
+        let word = model.matches.getMatch(section: indexPath.section, row: indexPath.row) ?? ""
         model.wordFormatter.setLabelText(cell.textLabel, word)
         return cell
     }
-
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "\(model.matches.getNumberOfLetters(section: section)) letters"
+    }
     
     // MARK: - StateChangeObserver Conformance
     func appStateChanged(_ newState: AppStates)
@@ -260,15 +260,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
             self.modelToView(newState)
         }
     }
-    // MARK: - MatchFoundObserver Conformance
-    func matchFound()
-    {
-        //update UI on main thread
-        DispatchQueue.main.async
-        {
-            self.matchesTable.reloadData()
-        }
-    }
+
     fileprivate func modelToView(_ state : AppStates)
     {
         switch state
@@ -291,6 +283,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, MatchFoun
             } else {
                 statusLabel.text = "Matches: \(model.matches.count)"
             }
+            model.matches.groupBySize()
             matchesTable.reloadData()
             navBar.rightBarButtonItem?.isEnabled=true
         }

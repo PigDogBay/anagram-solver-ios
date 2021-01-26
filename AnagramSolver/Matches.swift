@@ -8,68 +8,51 @@
 
 import Foundation
 
-protocol MatchFoundObserver : class
-{
-    func matchFound()
-}
-
 class Matches {
-    fileprivate let TABLE_MAX_COUNT_TO_RELOAD = 100
     private var matches : [String] = []
-    private let queue  = DispatchQueue(label: "com.pigdogbay.anagramsolver.matches.queue")
-    private weak var matchFoundObserver : MatchFoundObserver?
+    private var grouped : [[String]]?
 
-    subscript(index : Int) -> String{
-        get {
-            return queue.sync {
-                return matches[index]
-            }
-        }
-        set {
-            queue.sync{
-                matches[index] = newValue
-            }
-        }
+    var count : Int {
+        return matches.count
     }
     
-    var count : Int {
-        return queue.sync{
-            return matches.count
-        }
+    var sections : Int {
+       return grouped?.count ?? 0
     }
+    
+    func getNumberOfRows(section : Int) -> Int {
+        return grouped?[section].count ?? 0
+    }
+    
+    func getMatch(section : Int, row : Int) -> String?{
+        return grouped?[section][row]
+    }
+    
+    func getNumberOfLetters(section : Int) -> Int{
+        return grouped?[section][0].length ?? 0
+    }
+    
     func removeAll(){
-        queue.sync{
-            matches.removeAll(keepingCapacity: true)
-        }
-    }
-    func append(match : String){
-        queue.sync{
-            matches.append(match)
-        }
-    }
-    func flatten()->String {
-        return queue.sync{
-            return matches.reduce(""){result, next in result+next+"\n"}
-        }
+        grouped?.removeAll()
+        grouped = nil
+        matches.removeAll(keepingCapacity: true)
     }
 
-    func setMatchesObserver(observer : MatchFoundObserver){
-        queue.sync{
-            self.matchFoundObserver = observer
-        }
+    func append(match : String){
+        matches.append(match)
     }
-    func removeMatchObserver(){
-        queue.sync {
-            self.matchFoundObserver = nil
-        }
+
+    func flatten()->String {
+        return matches.reduce(""){result, next in result+next+"\n"}
     }
+
     func matchFound(match : String){
-        queue.sync{
-            matches.append(match)
-            if let obs = matchFoundObserver, matches.count<self.TABLE_MAX_COUNT_TO_RELOAD
-            {
-                obs.matchFound()
-            }
-        }
+        matches.append(match)
+    }
+    
+    func groupBySize() {
+        self.grouped = Dictionary(grouping: matches, by: {$0.length})
+            .sorted (by: {$0.0 > $1.0})
+            .map{$0.value}
     }
 }
