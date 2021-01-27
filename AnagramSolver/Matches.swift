@@ -9,6 +9,7 @@
 import Foundation
 
 class Matches {
+    private let minimumMatchesForLegend = 100
     private var matches : [String] = []
     private var grouped : [[String]]?
 
@@ -18,6 +19,13 @@ class Matches {
     
     var sections : Int {
        return grouped?.count ?? 0
+    }
+    
+    var sectionTitles : [String]? {
+        if let g = grouped, g.count > 1, matches.count > minimumMatchesForLegend {
+            return g.map{"\($0[0].length)"}
+        }
+        return nil
     }
     
     func getNumberOfRows(section : Int) -> Int {

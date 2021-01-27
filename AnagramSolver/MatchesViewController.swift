@@ -251,6 +251,10 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
         return "\(model.matches.getNumberOfLetters(section: section)) letters"
     }
     
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return model.matches.sectionTitles
+    }
+    
     // MARK: - StateChangeObserver Conformance
     func appStateChanged(_ newState: AppStates)
     {
