@@ -19,7 +19,6 @@ class Model : WordListCallback, IAPDelegate
     var resultsLimit = 5000
 
     let appState = AppStateObservable()
-    let wordList = WordList()
     let wordSearch : WordSearch
     let wordFormatter = WordFormatter()
     let matches = Matches()
@@ -31,11 +30,11 @@ class Model : WordListCallback, IAPDelegate
     let filter : Filter
     let filterFactory : WordListCallbackAbstractFactory
     
-    fileprivate init()
+    private init()
     {
         filter = Filter()
         filterFactory = FilterFactory(filter: filter)
-        self.wordSearch = WordSearch(wordList: self.wordList)
+        self.wordSearch = WordSearch()
         self.iap = IAPFactory.createIAPInterface()
         self.iap.observable.addObserver("model", observer: self)
         applySettings()
@@ -43,7 +42,7 @@ class Model : WordListCallback, IAPDelegate
     
     func unloadDictionary()
     {
-        self.wordList.wordlist = nil
+        wordSearch.clearWords()
         appState.appState = .uninitialized
     }
     
@@ -54,7 +53,7 @@ class Model : WordListCallback, IAPDelegate
             if let content = try? String(contentsOfFile: path, encoding: String.Encoding.utf8)
             {
                 let words = content.components(separatedBy: "\n")
-                self.wordList.wordlist = words
+                wordSearch.set(words: words)
             }
             appState.appState = .ready
         }
@@ -68,7 +67,7 @@ class Model : WordListCallback, IAPDelegate
     }
     func stop()
     {
-        self.wordList.stopSearch()
+        wordSearch.stop()
     }
     func prepareToSearch()
     {
@@ -90,7 +89,7 @@ class Model : WordListCallback, IAPDelegate
     func search()
     {
         appState.appState = .searching
-        var processedQuery = query;
+        var processedQuery = query
         processedQuery = self.wordSearch.preProcessQuery(processedQuery)
         let searchType = self.wordSearch.getQueryType(processedQuery)
         processedQuery = self.wordSearch.postProcessQuery(processedQuery, type: searchType)
@@ -106,7 +105,7 @@ class Model : WordListCallback, IAPDelegate
         matches.matchFound(match: result)
         if matches.count == resultsLimit
         {
-            self.wordList.stopSearch()
+            wordSearch.stop()
         }
     }
     
