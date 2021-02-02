@@ -17,4 +17,6 @@ struct Strings {
     static let webAddress = "www.mpdbailey.co.uk"
     static let feedbackSubject = "AS iOS v\(Strings.version)"
     static let tellFriends = "Take a look at Anagram Solver "+Strings.itunesAppURL
+    static let errorTitle = "Don't Panic!"
+    static let errorMessage = "Something went wrong so let's fix this.\n\n1-Restart the app\n2-Close other apps\n3-Power off/on"
 }

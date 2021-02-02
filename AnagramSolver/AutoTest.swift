@@ -59,6 +59,8 @@ class AutoTest : AppStateChangeObserver {
                     search()
                 }
             }
+        case .error:
+            break
         }
     }
     

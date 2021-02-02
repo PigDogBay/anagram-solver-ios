@@ -53,7 +53,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         }
         
         present(controller, animated: true, completion: nil)
-        
     }
     
     func rateApp(){
@@ -108,8 +107,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         performSegue(withIdentifier: userGuideSegueId, sender: self)
     }
     
-
-    
     func showMe(query : String){
         textFieldQuery.text = query
         if shouldPerformSegue(withIdentifier: searchSegueId, sender: self)
@@ -117,7 +114,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
             performSegue(withIdentifier: searchSegueId, sender: self)
         }
     }
-    
 
     @IBAction func backgroundTap(_ sender: UIControl) {
         //close the keyboard
@@ -248,6 +244,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
             self.modelToView(newState)
         }
     }
+    
     fileprivate func modelToView(_ state : AppStates)
     {
         switch state
@@ -269,6 +266,8 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
             self.searchButton.isEnabled=false
         case .finished:
             self.searchButton.isEnabled=true
+        case .error:
+            mpdbShowAlert(Strings.errorTitle, msg: Strings.errorMessage)
         }
     }
 }

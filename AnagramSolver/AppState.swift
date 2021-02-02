@@ -15,7 +15,7 @@ protocol AppStateChangeObserver : class
 
 enum AppStates
 {
-    case uninitialized,loading, ready, searching, finished
+    case uninitialized, loading, ready, searching, finished, error
 }
 
 class AppStateObservable {

@@ -49,13 +49,13 @@ class Model : WordListCallback, IAPDelegate
     func loadDictionary()
     {
         appState.appState = .loading
-        if let path = Bundle.main.path(forResource: wordListName, ofType: "txt") {
-            if let content = try? String(contentsOfFile: path, encoding: String.Encoding.utf8)
-            {
-                let words = content.components(separatedBy: "\n")
-                wordSearch.set(words: words)
-            }
+        if let path = Bundle.main.path(forResource: wordListName, ofType: "txt"),
+           let content = try? String(contentsOfFile: path, encoding: String.Encoding.utf8) {
+            let words = content.components(separatedBy: "\n")
+            wordSearch.set(words: words)
             appState.appState = .ready
+        } else {
+            appState.appState = .error
         }
     }
     

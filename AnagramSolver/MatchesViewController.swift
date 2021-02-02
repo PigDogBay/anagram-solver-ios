@@ -290,6 +290,8 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
             model.matches.groupBySize()
             matchesTable.reloadData()
             navBar.rightBarButtonItem?.isEnabled=true
+        case .error:
+            mpdbShowAlert(Strings.errorTitle, msg: Strings.errorMessage)
         }
     }
     
