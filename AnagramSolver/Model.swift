@@ -42,21 +42,14 @@ class Model : WordListCallback, IAPDelegate
     
     func unloadDictionary()
     {
-        wordSearch.clearWords()
+        wordSearch.unloadDictionary()
         appState.appState = .uninitialized
     }
     
     func loadDictionary()
     {
         appState.appState = .loading
-        if let path = Bundle.main.path(forResource: wordListName, ofType: "txt"),
-           let content = try? String(contentsOfFile: path, encoding: String.Encoding.utf8) {
-            let words = content.components(separatedBy: "\n")
-            wordSearch.set(words: words)
-            appState.appState = .ready
-        } else {
-            appState.appState = .error
-        }
+        appState.appState = wordSearch.loadDictionary(resource: wordListName) ? .ready : .error
     }
     
     func setAndValidateQuery( _ raw : String) ->Bool
