@@ -35,7 +35,7 @@ struct AboutView: View {
                 .font(.body)
             Text(Strings.webAddress)
                 .font(.body)
-            Button(action: viewModel.feedback){
+            Button(action: coordinator.sendFeedback){
                 Text(Strings.emailAddress)
                     .font(.body)
                     .underline()
@@ -43,10 +43,6 @@ struct AboutView: View {
 
             Text("©MPD Bailey Technology 2015")
                 .font(.body)
-        }
-        .sheet(isPresented: $viewModel.isMailVCPressented, content: {MailView(recipient: Strings.emailAddress, subject: Strings.feedbackSubject, result: self.$viewModel.result)})
-        .alert(isPresented: $viewModel.showNoEmailAlert){
-            Alert(title: Text("Email Not Supported"), message: Text("Please email me at: \(Strings.emailAddress)"), dismissButton: .default(Text("OK")))
         }
     }
     
