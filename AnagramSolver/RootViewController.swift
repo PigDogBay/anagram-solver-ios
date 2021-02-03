@@ -74,7 +74,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         } else if let emailUrl = mpdbCreateEmailUrl(to: Strings.emailAddress, subject: Strings.feedbackSubject, body: "")  {
             UIApplication.shared.open(emailUrl)
         } else {
-            self.mpdbShowErrorAlert("No Email", msg: "This device is not configured for sending emails.")
+            self.mpdbShowErrorAlert("Email Not Supported", msg: "Please email me at: \(Strings.emailAddress)")
         }
     }
     func recommend(){
@@ -101,12 +101,10 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         dismiss(animated: true, completion: nil)
     }
 
-    func showHelp(){
-        performSegue(withIdentifier: helpSegueId, sender: self)
-    }
     func showAbout(){
         performSegue(withIdentifier: aboutSegueId, sender: self)
     }
+
     func showUserGuide(){
         performSegue(withIdentifier: userGuideSegueId, sender: self)
     }

@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct FeedbackRow: View {
-    @ObservedObject private var viewModel = AboutViewModel()
+    @EnvironmentObject var coordinator : Coordinator
     
     var body: some View {
-        Button(action: viewModel.feedback){
+        Button(action: coordinator.sendFeedback){
             HStack {
                 Image(systemName: "envelope")
                     .font(Font.system(.largeTitle))
@@ -24,10 +24,6 @@ struct FeedbackRow: View {
                 }
                 Spacer()
             }
-        }
-        .sheet(isPresented: $viewModel.isMailVCPressented, content: {MailView(recipient: Strings.emailAddress, subject: Strings.feedbackSubject, result: self.$viewModel.result)})
-        .alert(isPresented: $viewModel.showNoEmailAlert){
-            Alert(title: Text("Email Not Supported"), message: Text("Please email me at: \(Strings.emailAddress)"), dismissButton: .default(Text("OK")))
         }
     }
 }

@@ -24,6 +24,10 @@ class Coordinator : ObservableObject {
     func showHelpExample(example : String){
         rootVC.showMe(query: example)
     }
+    
+    func sendFeedback(){
+        rootVC.sendFeedback()
+    }
 
 }
 
