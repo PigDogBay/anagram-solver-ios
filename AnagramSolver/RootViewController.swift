@@ -9,8 +9,9 @@
 import UIKit
 import SwiftUtils
 import MessageUI
+import SwiftUI
 
-class RootViewController: UIViewController, AppStateChangeObserver, MFMailComposeViewControllerDelegate, UICollectionViewDelegateFlowLayout
+class RootViewController: UIViewController, AppStateChangeObserver, MFMailComposeViewControllerDelegate
 {
     fileprivate var model : Model!
 
@@ -26,7 +27,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var textFieldQuery: UITextField!
-    @IBOutlet weak var collectionView: UICollectionView!
     
     @IBAction func queryFinished(_ sender: UITextField) {
         if shouldPerformSegue(withIdentifier: searchSegueId, sender: self)
@@ -35,6 +35,10 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         }
     }
 
+    @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
+        let coordinator = Coordinator(rootVC: self)
+        return UIHostingController(coder: coder, rootView: TipsView().environmentObject(coordinator))
+    }
     @IBAction func menuButtonPressed(_ sender: UIBarButtonItem) {
         let controller = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let helpAction = UIAlertAction(title: "User Guide", style: .default, handler: {action in self.showUserGuide()})
@@ -144,9 +148,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         tipsDataSource.feedbackCallback = sendFeedback
         tipsDataSource.recommendCallback = recommend
         tipsDataSource.privacyCallback = showAbout
-        self.collectionView.dataSource = tipsDataSource
-        self.collectionView.delegate = self
-        self.collectionView.contentInset = UIEdgeInsets(top: 16, left: 8, bottom: 20, right: 8)
         self.navigationController?.navigationBar.tintColor = UIColor.white
         //remove shadow line from underneath the nav bar
         //https://stackoverflow.com/questions/19226965/how-to-hide-uinavigationbar-1px-bottom-line
@@ -172,27 +173,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         if (model.settings.showKeyboard){
             textFieldQuery.becomeFirstResponder()
         }
-    }
-    
-    //Recompute layout for the collection view on rotation
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
-            return
-        }
-        flowLayout.invalidateLayout()
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //Min width 288 pixels, left and right margin 16 pixels each, for 2 columns 16 pixels between columns
-        var width = collectionView.bounds.width
-        if width > 623.0 {
-            width = (width - 3.0*16.0)/2.0
-        } else {
-            //single column, make space for the margins
-            width = width - 2.0*16.0
-        }
-        return CGSize(width: width, height: 260.0)
     }
     
     /*
