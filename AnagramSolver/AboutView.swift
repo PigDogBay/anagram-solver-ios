@@ -15,10 +15,10 @@ struct AboutView: View {
     
     private var title : some View {
         HStack {
-            Image("EUConsentIcon")
+            Image("AboutIcon")
                 .resizable()
                 .frame(width: 30, height: 30)
-                .clipShape(Circle())
+                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                 .shadow(radius: 5)
             Text(Strings.appName)
                 .font(.headline)
@@ -41,7 +41,7 @@ struct AboutView: View {
                     .underline()
             }.buttonStyle(BorderlessButtonStyle())
 
-            Text("©MPD Bailey Technology 2020")
+            Text("©MPD Bailey Technology 2015")
                 .font(.body)
         }
         .sheet(isPresented: $viewModel.isMailVCPressented, content: {MailView(recipient: Strings.emailAddress, subject: Strings.feedbackSubject, result: self.$viewModel.result)})
