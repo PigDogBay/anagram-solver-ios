@@ -14,7 +14,6 @@ import Combine
 class Coordinator : ObservableObject {
 
     let rootVC : RootViewController
-    @Published var showMeRelevantAds = true
 
     init(rootVC : RootViewController)
     {

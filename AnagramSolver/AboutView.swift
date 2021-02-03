@@ -79,8 +79,8 @@ struct AboutView: View {
             }
             Text("This app will use your data to tailor ads to you. Our partners will collect data and use an unique identifier on your device to show you ads. You select here if we can continue to use your data to tailor ads for you.")
                 .font(.body)
-            Toggle(isOn: $coordinator.showMeRelevantAds) {
-                if coordinator.showMeRelevantAds {
+            Toggle(isOn: $viewModel.showMeRelevantAds) {
+                if viewModel.showMeRelevantAds {
                     Text("Show me relevant ads")
                 } else {
                     Text("Show me ads that are less relevant")
@@ -114,7 +114,8 @@ struct AboutView: View {
                 adsSection
                 helpOutSection
             }.padding(.top, 16)
-        }.navigationBarTitle(Text("About"), displayMode: .inline)
+        }.onDisappear{viewModel.onDisappear()}
+        .navigationBarTitle(Text("About"), displayMode: .inline)
     }
 }
 

@@ -12,7 +12,18 @@ import MessageUI
 import SwiftUtils
 
 class AboutViewModel : ObservableObject {
+    @Published var showMeRelevantAds = true
     
+    init(){
+        let settings = Settings()
+        showMeRelevantAds = !settings.useNonPersonalizedAds
+    }
+    
+    func onDisappear(){
+        let settings = Settings()
+        settings.useNonPersonalizedAds = !showMeRelevantAds
+    }
+
     func showPrivacyPolicy(){
         UIApplication.shared.open(URL(string: Strings.privacyURL)!, options: [:])
     }
