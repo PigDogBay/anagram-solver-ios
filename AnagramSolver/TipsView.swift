@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct TipsView: View {
+    @EnvironmentObject var coordinator : Coordinator
 
     var body: some View {
         List {
@@ -21,7 +22,7 @@ struct TipsView: View {
             NavigationLink(destination: DefintionHelpView()){
                 DefinitionRow()
             }
-            NavigationLink(destination: AboutView()){
+            NavigationLink(destination: AboutView().environmentObject(coordinator)){
                 AboutRow()
             }
             SettingsRow()
