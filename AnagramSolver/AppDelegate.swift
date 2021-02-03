@@ -31,8 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance
 
-        UIBarButtonItem.appearance().tintColor = UIColor.white
-        
         let settings = Settings()
         settings.registerDefaultSettings()
         if !settings.isProMode {
