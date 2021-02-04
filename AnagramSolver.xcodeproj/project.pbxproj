@@ -38,7 +38,6 @@
 		00EEA72F25CACB430017F6A4 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72E25CACB430017F6A4 /* AboutView.swift */; };
 		4D0543851CFDBE060084538A /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; };
 		4D0543861CFDBE060084538A /* SwiftUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4D09F28D1FC1B02300EFA535 /* ShadowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D09F28C1FC1B02300EFA535 /* ShadowCollectionViewCell.swift */; };
 		4D1D6E621FA0CE33008466F2 /* Pods_AnagramSolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */; };
 		4D2B35C31D33AAE30014ABF3 /* IAPFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */; };
 		4D3596411CFEEA50008D2FAF /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3596401CFEEA50008D2FAF /* Ads.swift */; };
@@ -59,14 +58,12 @@
 		4DA0C3F7236B0FC800AF693B /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0C3F6236B0FC800AF693B /* Matches.swift */; };
 		4DA0C3FA236C761600AF693B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0C3F9236C761600AF693B /* AppState.swift */; };
 		4DBBEEA9239A7C3800ADCA41 /* colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBBEEA8239A7C3800ADCA41 /* colors.xcassets */; };
-		4DDAB8831FB61139000EDB30 /* ActionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDAB8821FB61139000EDB30 /* ActionCollectionViewCell.swift */; };
 		4DE5CA8B238EB6170013D3F5 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5CA89238EB6170013D3F5 /* words.txt */; };
 		4DE5CA8D238EB6250013D3F5 /* sowpods.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5CA8C238EB6250013D3F5 /* sowpods.txt */; };
 		4DE5CA8F238EB6330013D3F5 /* twl.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5CA8E238EB6330013D3F5 /* twl.txt */; };
 		4DF2DE3A1FACBDBB00F44ADE /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2DE391FACBDBB00F44ADE /* FilterViewController.swift */; };
 		4DF2DE3D1FACC4B300F44ADE /* LettersFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2DE3C1FACC4B300F44ADE /* LettersFilterTableViewCell.swift */; };
 		4DF2DE401FB0A82300F44ADE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2DE3F1FB0A82300F44ADE /* ListViewController.swift */; };
-		4DF2DE431FB22A8000F44ADE /* TipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2DE421FB22A8000F44ADE /* TipCollectionViewCell.swift */; };
 		4DF7B6D61D10419F00A26A20 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF7B6D51D10419F00A26A20 /* StoreKit.framework */; };
 		4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */; };
 		B98A90515758048121BFEF80 /* Pods_AnagramSolverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7965FE98B3E9D2A1706D894 /* Pods_AnagramSolverTests.framework */; };
@@ -148,7 +145,6 @@
 		00EEA72B25CAC8B50017F6A4 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		00EEA72E25CACB430017F6A4 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftUtils.xcodeproj; path = ../SwiftUtils/SwiftUtils.xcodeproj; sourceTree = "<group>"; };
-		4D09F28C1FC1B02300EFA535 /* ShadowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AnagramSolver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPFactory.swift; sourceTree = "<group>"; };
 		4D3596401CFEEA50008D2FAF /* Ads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
@@ -173,14 +169,12 @@
 		4DA0C3F6236B0FC800AF693B /* Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
 		4DA0C3F9236C761600AF693B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		4DBBEEA8239A7C3800ADCA41 /* colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = colors.xcassets; sourceTree = "<group>"; };
-		4DDAB8821FB61139000EDB30 /* ActionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCollectionViewCell.swift; sourceTree = "<group>"; };
 		4DE5CA89238EB6170013D3F5 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		4DE5CA8C238EB6250013D3F5 /* sowpods.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sowpods.txt; sourceTree = "<group>"; };
 		4DE5CA8E238EB6330013D3F5 /* twl.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = twl.txt; sourceTree = "<group>"; };
 		4DF2DE391FACBDBB00F44ADE /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		4DF2DE3C1FACC4B300F44ADE /* LettersFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersFilterTableViewCell.swift; sourceTree = "<group>"; };
 		4DF2DE3F1FB0A82300F44ADE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		4DF2DE421FB22A8000F44ADE /* TipCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCollectionViewCell.swift; sourceTree = "<group>"; };
 		4DF7B6D51D10419F00A26A20 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		9F767D7B066CC063F11B0CB8 /* Pods-AnagramSolver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnagramSolver.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver.release.xcconfig"; sourceTree = "<group>"; };
@@ -280,6 +274,7 @@
 			children = (
 				4D45F0151A9E03A400C40BB4 /* DefinitionViewController.swift */,
 				4DF2DE391FACBDBB00F44ADE /* FilterViewController.swift */,
+				4DF2DE3C1FACC4B300F44ADE /* LettersFilterTableViewCell.swift */,
 				4DF2DE3F1FB0A82300F44ADE /* ListViewController.swift */,
 				4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */,
 				4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */,
@@ -311,7 +306,6 @@
 		4D45EFB61A9DFABA00C40BB4 /* AnagramSolver */ = {
 			isa = PBXGroup;
 			children = (
-				4DF2DE411FB22A4000F44ADE /* Cells */,
 				0029A03325307126002E96D1 /* Model */,
 				4D45EFB71A9DFABA00C40BB4 /* Supporting Files */,
 				00EEA6F825CABBD60017F6A4 /* Supporting Views */,
@@ -369,17 +363,6 @@
 				4D45EFCE1A9DFABA00C40BB4 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4DF2DE411FB22A4000F44ADE /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				4DF2DE3C1FACC4B300F44ADE /* LettersFilterTableViewCell.swift */,
-				4DF2DE421FB22A8000F44ADE /* TipCollectionViewCell.swift */,
-				4DDAB8821FB61139000EDB30 /* ActionCollectionViewCell.swift */,
-				4D09F28C1FC1B02300EFA535 /* ShadowCollectionViewCell.swift */,
-			);
-			name = Cells;
 			sourceTree = "<group>";
 		};
 		7FB7BD6A460C0022C46DE682 /* Pods */ = {
@@ -619,7 +602,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */,
-				4D09F28D1FC1B02300EFA535 /* ShadowCollectionViewCell.swift in Sources */,
 				00EEA71D25CAC5050017F6A4 /* AboutViewModel.swift in Sources */,
 				00EEA70E25CABFE50017F6A4 /* FilterRow.swift in Sources */,
 				4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */,
@@ -628,10 +610,8 @@
 				00EEA70325CABF7D0017F6A4 /* HelpViewModel.swift in Sources */,
 				00EEA71725CAC02D0017F6A4 /* AutomatedTestRow.swift in Sources */,
 				4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */,
-				4DF2DE431FB22A8000F44ADE /* TipCollectionViewCell.swift in Sources */,
 				0091BC052535E5A000BE7A43 /* AutoTest.swift in Sources */,
 				00EEA71225CABFE50017F6A4 /* AboutRow.swift in Sources */,
-				4DDAB8831FB61139000EDB30 /* ActionCollectionViewCell.swift in Sources */,
 				00EEA71A25CAC2A40017F6A4 /* Coordinator.swift in Sources */,
 				00EEA71025CABFE50017F6A4 /* FeedbackRow.swift in Sources */,
 				0029A03525307170002E96D1 /* Strings.swift in Sources */,
