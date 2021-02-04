@@ -51,22 +51,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
             self.mpdbShowErrorAlert("Email Not Supported", msg: "Please email me at: \(Strings.emailAddress)")
         }
     }
-    func recommend(){
-        let firstActivityItem = "Take a look at Anagram Solver "+Strings.itunesAppURL
-        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: nil)
-        
-        activityViewController.excludedActivityTypes=[.airDrop]
-        
-        //For iPads need to anchor the popover, crashes if not set
-        //https://stackoverflow.com/questions/25644054/uiactivityviewcontroller-crashing-on-ios-8-ipads
-        if let ppc = activityViewController.popoverPresentationController {
-            ppc.sourceRect = CGRect(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2, width: 0, height: 0)
-            ppc.sourceView = self.view
-            //Show no arrow so that activityVC is centred.
-            ppc.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
-        }
-        self.present(activityViewController, animated: true, completion: nil)
-    }
 
     // MARK:- MFMailComposeViewControllerDelegate
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
