@@ -83,10 +83,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        //remove shadow line from underneath the nav bar
-        //https://stackoverflow.com/questions/19226965/how-to-hide-uinavigationbar-1px-bottom-line
-        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         fontSettingsCheck()
         model = Model.sharedInstance
         model.appState.addObserver(observer: self)

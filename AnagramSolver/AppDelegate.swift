@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = UIColor(named: "navBackground")
         appearance.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.white
+            NSAttributedString.Key.foregroundColor: UIColor.white,
         ]
         appearance.shadowImage = UIImage()
         appearance.shadowColor = .clear
@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().tintColor = .white
 
         let settings = Settings()
         settings.registerDefaultSettings()
