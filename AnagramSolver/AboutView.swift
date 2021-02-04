@@ -77,6 +77,23 @@ struct AboutView: View {
                         .modifier(AboutButtonMod())
                 }.buttonStyle(BorderlessButtonStyle())
             }
+            Text("You may remove advertisements by making a one off in app purchase.")
+            HStack {
+                Spacer()
+                Button(action: viewModel.buy){
+                    Text(viewModel.buyButtonText)
+                        .modifier(AboutButtonMod())
+                }.buttonStyle(BorderlessButtonStyle())
+                .disabled(!viewModel.buyButtonEnabled)
+            }
+            Text("If you have already purchased the option to remove ads, press the restore button below to retrieve your purchase details.")
+            HStack {
+                Spacer()
+                Button(action: viewModel.restorePurchase){
+                    Text("RESTORE PURCHASE")
+                        .modifier(AboutButtonMod())
+                }.buttonStyle(BorderlessButtonStyle())
+            }
             Text("This app will use your data to tailor ads to you. Our partners will collect data and use an unique identifier on your device to show you ads. You select here if we can continue to use your data to tailor ads for you.")
                 .font(.body)
             Toggle(isOn: $viewModel.showMeRelevantAds) {
@@ -114,7 +131,15 @@ struct AboutView: View {
                 adsSection
                 helpOutSection
             }.padding(.top, 16)
-        }.onDisappear{viewModel.onDisappear()}
+            .alert(isPresented: $viewModel.showAlertRestored){
+                Alert(title: Text("Purchase Restored"), message: Text("Your purchase has been restored, Ads have now been removed"), dismissButton: .default(Text("OK")))
+            }
+            .alert(isPresented: $viewModel.showAlertFailed){
+                Alert(title: Text("Purchase Failed"), message: Text("Sorry, unable to complete the purchase. You have not been charged."), dismissButton: .default(Text("OK")))
+            }
+        }
+        .onAppear{viewModel.onAppear()}
+        .onDisappear{viewModel.onDisappear()}
         .navigationBarTitle(Text("About"), displayMode: .inline)
     }
 }
