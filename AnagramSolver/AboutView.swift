@@ -113,7 +113,7 @@ struct AboutView: View {
                 .font(.body)
             HStack {
                 Spacer()
-                Button(action: viewModel.rate){
+                Button(action: AboutViewModel.rate){
                     Text("RATE")
                         .modifier(AboutButtonMod())
                 }.buttonStyle(BorderlessButtonStyle())

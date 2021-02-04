@@ -52,7 +52,7 @@ class AboutViewModel : ObservableObject, IAPDelegate {
         UIApplication.shared.open(URL(string: "https://www.google.com/policies/technologies/partner-sites/")!, options: [:])
     }
     
-    func rate(){
+    class func rate(){
         UIApplication.shared.open(URL(string: Strings.itunesAppURL)!, options: [:])
     }
     

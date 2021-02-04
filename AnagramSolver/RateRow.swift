@@ -11,7 +11,7 @@ import SwiftUtils
 
 struct RateRow: View {
     var body: some View {
-        Button(action: AboutViewModel().rate){
+        Button(action: AboutViewModel.rate){
             HStack {
                 Image(systemName: "star")
                     .font(Font.system(.largeTitle))

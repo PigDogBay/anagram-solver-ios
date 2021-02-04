@@ -33,10 +33,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         return UIHostingController(coder: coder, rootView: TipsView().environmentObject(coordinator))
     }
     
-    func rateApp(){
-        Model.sharedInstance.ratings.viewOnAppStore()
-    }
-    
     func sendFeedback(){
         if MFMailComposeViewController.canSendMail() {
             let mailVC = MFMailComposeViewController()
