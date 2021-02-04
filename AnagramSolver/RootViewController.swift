@@ -13,18 +13,11 @@ import SwiftUI
 
 class RootViewController: UIViewController, AppStateChangeObserver, MFMailComposeViewControllerDelegate
 {
-    fileprivate var model : Model!
+    private var model : Model!
+    private let searchSegueId = "searchSegue"
+    private let monospacedFont = UIFont(name: "Menlo-Regular",size: 24.0)
+    private let systemFont = UIFont.systemFont(ofSize: 24.0, weight: .regular)
 
-    let searchSegueId = "searchSegue"
-    let aboutSegueId = "aboutSegue"
-    let helpSegueId = "helpSegue"
-    let userGuideSegueId = "segueUserGuide"
-    let tipsDataSource = TipsDataSource()
-    
-    let monospacedFont = UIFont(name: "Menlo-Regular",size: 24.0)
-    let systemFont = UIFont.systemFont(ofSize: 24.0, weight: .regular)
-
-    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var textFieldQuery: UITextField!
     
@@ -38,25 +31,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
         let coordinator = Coordinator(rootVC: self)
         return UIHostingController(coder: coder, rootView: TipsView().environmentObject(coordinator))
-    }
-    @IBAction func menuButtonPressed(_ sender: UIBarButtonItem) {
-        let controller = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let helpAction = UIAlertAction(title: "User Guide", style: .default, handler: {action in self.showUserGuide()})
-        let aboutAction = UIAlertAction(title: "About & Privacy", style: .default, handler: {action in self.showAbout()})
-        let settingsAction = UIAlertAction(title: "Settings", style: .default, handler: {action in mpdbShowSettings()})
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-
-        controller.addAction(helpAction)
-        controller.addAction(aboutAction)
-        controller.addAction(settingsAction)
-        controller.addAction(cancelAction)
-        
-        //Anchor popover to button for iPads
-        if let ppc = controller.popoverPresentationController{
-            ppc.barButtonItem = menuButton
-        }
-        
-        present(controller, animated: true, completion: nil)
     }
     
     func rateApp(){
@@ -101,14 +75,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         dismiss(animated: true, completion: nil)
     }
 
-    func showAbout(){
-        performSegue(withIdentifier: aboutSegueId, sender: self)
-    }
-
-    func showUserGuide(){
-        performSegue(withIdentifier: userGuideSegueId, sender: self)
-    }
-    
     func showMe(query : String){
         textFieldQuery.text = query
         if shouldPerformSegue(withIdentifier: searchSegueId, sender: self)
@@ -122,12 +88,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         textFieldQuery.resignFirstResponder();
     }
 
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func fontSettingsCheck(){
         let font = Model.sharedInstance.settings.useMonospacedFont ? monospacedFont : systemFont
         if font?.fontName != textFieldQuery.font?.fontName {
@@ -139,13 +99,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        tipsDataSource.showMeCallback = showMe
-        tipsDataSource.settingsCallback = mpdbShowSettings
-        tipsDataSource.viewGuideCallback = showUserGuide
-        tipsDataSource.rateCallback = rateApp
-        tipsDataSource.feedbackCallback = sendFeedback
-        tipsDataSource.recommendCallback = recommend
-        tipsDataSource.privacyCallback = showAbout
         self.navigationController?.navigationBar.tintColor = UIColor.white
         //remove shadow line from underneath the nav bar
         //https://stackoverflow.com/questions/19226965/how-to-hide-uinavigationbar-1px-bottom-line
@@ -183,11 +136,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         if segue.identifier == searchSegueId
         {
             model.prepareToSearch()
-        } else if segue.identifier == userGuideSegueId {
-            if let definitionVC = segue.destination as? DefinitionViewController {
-                definitionVC.word = "User Guide"
-                definitionVC.definitionUrl = "https://pigdogbay.blogspot.co.uk/2017/11/anagram-solver-guide.html"
-            }
         }
     }
     
