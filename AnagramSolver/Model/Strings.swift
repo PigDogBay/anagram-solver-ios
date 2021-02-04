@@ -13,6 +13,7 @@ struct Strings {
     static let appId = "id973923699"
     static let privacyURL = "https://pigdogbay.blogspot.co.uk/2018/05/privacy-policy.html"
     static let itunesAppURL = "https://itunes.apple.com/app/"+Strings.appId
+    static let userGuideURL = "https://pigdogbay.blogspot.co.uk/2017/11/anagram-solver-guide.html"
     static let emailAddress = "mpdbailey@yahoo.co.uk"
     static let webAddress = "www.mpdbailey.co.uk"
     static let feedbackSubject = "AS iOS v\(Strings.version)"

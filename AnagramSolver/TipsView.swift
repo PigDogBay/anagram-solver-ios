@@ -22,6 +22,7 @@ struct TipsView: View {
             NavigationLink(destination: DefintionHelpView()){
                 DefinitionRow()
             }
+            UserGuideRow()
             NavigationLink(destination: AboutView().environmentObject(coordinator)){
                 AboutRow()
             }
