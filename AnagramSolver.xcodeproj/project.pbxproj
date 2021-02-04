@@ -210,10 +210,21 @@
 			isa = PBXGroup;
 			children = (
 				00EEA71C25CAC5050017F6A4 /* AboutViewModel.swift */,
+				4D3596401CFEEA50008D2FAF /* Ads.swift */,
+				4DA0C3F9236C761600AF693B /* AppState.swift */,
+				0091BC042535E5A000BE7A43 /* AutoTest.swift */,
+				00EEA71925CAC2A40017F6A4 /* Coordinator.swift */,
+				4D9E43AC1FAC84FC007007C8 /* Filter.swift */,
+				4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */,
 				00EEA70225CABF7D0017F6A4 /* HelpViewModel.swift */,
+				4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */,
+				4D9D30EA1D156D5D0088392C /* IAPHelper.swift */,
+				4DA0C3F6236B0FC800AF693B /* Matches.swift */,
+				4D45F0231A9E487A00C40BB4 /* Model.swift */,
+				4D45D7B21E2CF0C500EC2D27 /* Settings.swift */,
 				0029A03425307170002E96D1 /* Strings.swift */,
 				00EEA6FC25CABDB10017F6A4 /* TipsData.swift */,
-				00EEA71925CAC2A40017F6A4 /* Coordinator.swift */,
+				4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,18 +322,7 @@
 				00EEA6F825CABBD60017F6A4 /* Supporting Views */,
 				4D1D62BB1E26674F00231DB3 /* ViewControllers */,
 				00EEA6F625CABBB40017F6A4 /* Views */,
-				4D3596401CFEEA50008D2FAF /* Ads.swift */,
 				4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */,
-				4DA0C3F9236C761600AF693B /* AppState.swift */,
-				4DA0C3F6236B0FC800AF693B /* Matches.swift */,
-				4D45F0231A9E487A00C40BB4 /* Model.swift */,
-				4D45D7B21E2CF0C500EC2D27 /* Settings.swift */,
-				4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */,
-				4D9D30EA1D156D5D0088392C /* IAPHelper.swift */,
-				4D9E43AC1FAC84FC007007C8 /* Filter.swift */,
-				4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */,
-				4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */,
-				0091BC042535E5A000BE7A43 /* AutoTest.swift */,
 			);
 			path = AnagramSolver;
 			sourceTree = "<group>";
