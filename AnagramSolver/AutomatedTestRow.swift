@@ -11,7 +11,7 @@ import SwiftUI
 struct AutomatedTestRow: View {
     @ObservedObject var coordinator : Coordinator
     var body: some View {
-        Button(action: {print("Fix Me")}){ //AutoTest.start(coordinator: self.coordinator)}){
+        Button(action: {AutoTest.start(model: Model.sharedInstance, rootVC: self.coordinator.rootVC)}){
             HStack {
                 Image(systemName: "wand.and.stars")
                     .font(Font.system(.largeTitle))

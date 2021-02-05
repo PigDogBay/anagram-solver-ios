@@ -26,6 +26,7 @@ class AutoTest : AppStateChangeObserver {
         if instance == nil {
             instance = AutoTest(model: model, rootVC: rootVC)
         }
+        instance?.appStateChanged(model.appState.appState)
     }
 
     init(model : Model, rootVC : RootViewController){

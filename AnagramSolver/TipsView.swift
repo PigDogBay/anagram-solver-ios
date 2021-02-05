@@ -30,7 +30,9 @@ struct TipsView: View {
             FeedbackRow(coordinator: coordinator)
             RateRow()
             TellFriendRow()
-//            AutomatedTestRow()
+            #if DEBUG
+            AutomatedTestRow(coordinator: coordinator)
+            #endif
         }.gesture(DragGesture().onChanged { _ in
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
         })
