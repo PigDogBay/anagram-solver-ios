@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct HelpView: View {
-    @EnvironmentObject var coordinator : Coordinator
+    @ObservedObject var coordinator : Coordinator
     @ObservedObject var viewModel : HelpViewModel
     
     var body: some View {
@@ -64,6 +64,6 @@ struct HelpView: View {
 
 struct HelpView_Previews: PreviewProvider {
     static var previews: some View {
-        HelpView(viewModel: HelpViewModel(tip: tipsData[0]))
+        HelpView(coordinator: Coordinator(rootVC: RootViewController()), viewModel: HelpViewModel(tip: tipsData[0]))
     }
 }

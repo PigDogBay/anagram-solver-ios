@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct AutomatedTestRow: View {
-    @EnvironmentObject var coordinator : Coordinator
+    @ObservedObject var coordinator : Coordinator
     var body: some View {
         Button(action: {print("Fix Me")}){ //AutoTest.start(coordinator: self.coordinator)}){
             HStack {
@@ -24,11 +24,5 @@ struct AutomatedTestRow: View {
                 Spacer()
             }
         }
-    }
-}
-
-struct AutomatedTestRow_Previews: PreviewProvider {
-    static var previews: some View {
-        AutomatedTestRow()
     }
 }

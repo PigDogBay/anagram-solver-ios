@@ -9,12 +9,12 @@
 import SwiftUI
 
 struct TipsView: View {
-    @EnvironmentObject var coordinator : Coordinator
+    @ObservedObject var coordinator : Coordinator
 
     var body: some View {
         List {
             ForEach(tipsData) { tip in
-                LinkedTipRow(viewModel: HelpViewModel(tip: tip))
+                LinkedTipRow(coordinator: coordinator, viewModel: HelpViewModel(tip: tip))
             }
             NavigationLink(destination: FilterHelpView()){
                 FilterRow()
@@ -23,11 +23,11 @@ struct TipsView: View {
                 DefinitionRow()
             }
             UserGuideRow()
-            NavigationLink(destination: AboutView().environmentObject(coordinator)){
+            NavigationLink(destination: AboutView(coordinator: coordinator)){
                 AboutRow()
             }
             SettingsRow()
-            FeedbackRow()
+            FeedbackRow(coordinator: coordinator)
             RateRow()
             TellFriendRow()
 //            AutomatedTestRow()
@@ -42,9 +42,10 @@ struct TipsView: View {
  which allows TipRow to pop the view when the show me button is pressed.
  */
 struct LinkedTipRow : View {
+    let coordinator : Coordinator
     @ObservedObject var viewModel : HelpViewModel
     var body : some View {
-        NavigationLink(destination: HelpView(viewModel: viewModel), isActive: $viewModel.showTip){
+        NavigationLink(destination: HelpView(coordinator: coordinator, viewModel: viewModel), isActive: $viewModel.showTip){
             TipRow(tip: viewModel.tip)
         }
     }
@@ -52,6 +53,6 @@ struct LinkedTipRow : View {
 
 struct TipsView_Previews: PreviewProvider {
     static var previews: some View {
-        TipsView().environmentObject(Coordinator(rootVC: RootViewController()))
+        TipsView(coordinator: Coordinator(rootVC: RootViewController()))
     }
 }

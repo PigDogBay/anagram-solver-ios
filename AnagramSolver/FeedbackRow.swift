@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct FeedbackRow: View {
-    @EnvironmentObject var coordinator : Coordinator
+    @ObservedObject var coordinator : Coordinator
     
     var body: some View {
         Button(action: coordinator.sendFeedback){
@@ -31,9 +31,9 @@ struct FeedbackRow: View {
 struct FeedbackRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            FeedbackRow()
-            FeedbackRow()
-            FeedbackRow()
+            FeedbackRow(coordinator: Coordinator(rootVC: RootViewController()))
+            FeedbackRow(coordinator: Coordinator(rootVC: RootViewController()))
+            FeedbackRow(coordinator: Coordinator(rootVC: RootViewController()))
         }
         .previewLayout(.fixed(width: 300, height: 70))
     }
