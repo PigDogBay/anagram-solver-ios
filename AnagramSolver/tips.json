@@ -3,7 +3,7 @@
         "id" : 1001,
         "title" : "Anagrams",
         "subtitle" : "Enter your jumbled letters",
-        "description" : "Just enter the letters and the app will then search for any words that are composed of those letters. The app will first find complete anagrams that use all of the letters and then sub-anagrams which use some of the letters, any unused letters will appear in brackets.",
+        "description" : "Enter your letters and the app will then search for any words that are composed of those letters. The app will first find complete anagrams that use all of the letters and then sub-anagrams which use some of the letters, any unused letters will appear in brackets.",
         "example" : "astronomer, maestro (onr)",
         "advanced" : "Scrabble players can use the Pattern filter to fit their letters on the board.",
         "showMe" : "moonstarer"
