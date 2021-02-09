@@ -33,7 +33,11 @@ struct TipsView: View {
             #if DEBUG
             AutomatedTestRow(coordinator: coordinator)
             #endif
-        }.gesture(DragGesture().onChanged { _ in
+        }
+        .padding(.leading,8)
+        .padding(.trailing,8)
+        .background(Color.init("navBackground"))
+        .gesture(DragGesture().onChanged { _ in
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
         })
     }
