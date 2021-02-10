@@ -177,7 +177,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Matches" id="drl-D2-IA4">
                         <barButtonItem key="backBarButtonItem" title="Back" id="2DB-Hv-09g"/>
-                        <barButtonItem key="rightBarButtonItem" title="Filter" id="vI1-fa-mE5">
+                        <barButtonItem key="rightBarButtonItem" title="Filters" id="vI1-fa-mE5">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="f1N-K0-6s2" kind="show" id="aSd-6d-ThY"/>
@@ -196,7 +196,7 @@
             </objects>
             <point key="canvasLocation" x="1062" y="215"/>
         </scene>
-        <!--Filter-->
+        <!--Filters-->
         <scene sceneID="EoA-tT-y96">
             <objects>
                 <tableViewController id="f1N-K0-6s2" customClass="FilterViewController" customModule="AnagramSolver" customModuleProvider="target" sceneMemberID="viewController">
@@ -306,7 +306,7 @@
                             <outlet property="delegate" destination="f1N-K0-6s2" id="obF-Am-hF9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Filter" id="FUm-ZJ-Qux">
+                    <navigationItem key="navigationItem" title="Filters" id="FUm-ZJ-Qux">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Mgz-wq-4nk"/>
                         <barButtonItem key="rightBarButtonItem" title="Search" id="tGV-xw-CIa">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -414,7 +414,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="D2K-XF-Zb6"/>
+        <segue reference="kV8-yp-vNU"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="navBackground">
