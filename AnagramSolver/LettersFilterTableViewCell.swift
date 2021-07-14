@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LettersCellCallback : class{
+protocol LettersCellCallback : AnyObject {
     func lettersCellReturnPressed();
 }
 

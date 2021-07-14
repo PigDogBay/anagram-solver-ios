@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AppStateChangeObserver : class
+protocol AppStateChangeObserver : AnyObject
 {
     func appStateChanged(_ newState : AppStates)
 }
