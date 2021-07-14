@@ -8,12 +8,39 @@
 
 import UIKit
 import GoogleMobileAds
+import AppTrackingTransparency
+import AdSupport
+import SwiftUtils
 
-struct Ads
+class Ads
 {
     static let bannerAdId = "ca-app-pub-3582986480189311/9351680384"
+    var isAdsSetupFinished = false
 
-    static func setup(){
+    func setUp()
+    {
+        if !isAdsSetupFinished {
+            self.isAdsSetupFinished = true
+            requestIDFA()
+        }
+    }
+    /**
+     For testing: delete the app to show dialog
+     Dialog appears only once, on queue, com.apple.root.default-qos
+     Otherwise .authorized or .denied is return on main-thread
+     */
+    private func requestIDFA() {
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                self.initializeAds()
+            })
+        } else {
+            // Fallback on earlier versions
+            self.initializeAds()
+        }
+    }
+    
+    private func initializeAds(){
         let requestConfiguration = GADMobileAds.sharedInstance().requestConfiguration
         //app is rated 17+, so may as well allow mature ads
         requestConfiguration.maxAdContentRating = .matureAudience

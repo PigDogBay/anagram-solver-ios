@@ -38,6 +38,10 @@ class Model : WordListCallback, IAPDelegate
         self.iap = IAPFactory.createIAPInterface()
         self.iap.observable.addObserver("model", observer: self)
         applySettings()
+        
+        if !settings.isProMode {
+            ads.setUp()
+        }
     }
     
     func unloadDictionary()

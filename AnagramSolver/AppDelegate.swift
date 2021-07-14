@@ -34,9 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let settings = Settings()
         settings.registerDefaultSettings()
-        if !settings.isProMode {
-            Ads.setup()
-        }
         return true
     }
 
