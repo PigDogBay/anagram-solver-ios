@@ -47,7 +47,7 @@ class Ads
         //Admob SDK guide recommends removing this code for release builds
         #if DEBUG
         requestConfiguration.testDeviceIdentifiers = [
-            (kGADSimulatorID as! String),
+            (kGADSimulatorID),
             "0200fa505875358d7e2d07bc993bd27f",//iPad
             "a4b042150b6cace14cc182d6bf254d09"//iPod Touch
            ]
