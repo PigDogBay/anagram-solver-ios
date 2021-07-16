@@ -19,7 +19,8 @@ struct TipCard: View {
     private var title : some View {
         HStack {
             Image("lightbulb_on")
-                .padding(8)
+                .scaleEffect(CGSize(width: 1.25,height: 1.25))
+                .padding(16)
             Spacer()
             Text(tip.title).font(.title)
             Spacer()

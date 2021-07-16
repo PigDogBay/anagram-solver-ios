@@ -30,7 +30,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
 
     @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
         let coordinator = Coordinator(rootVC: self)
-        return UIHostingController(coder: coder, rootView: TipsView(coordinator: coordinator))
+        return UIHostingController(coder: coder, rootView: CardTips(coordinator: coordinator))
     }
     
     func sendFeedback(){
