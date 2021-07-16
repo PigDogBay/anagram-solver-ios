@@ -10,11 +10,8 @@ import SwiftUI
 
 struct TipCard: View {
     let tip : Tip
-    
-    
-    private func buttonPressed(){
-        
-    }
+    @ObservedObject var coordinator : Coordinator
+    @State var selection : Int? = nil
     
     private var title : some View {
         HStack {
@@ -47,12 +44,12 @@ struct TipCard: View {
     
     private var buttons : some View {
         HStack(){
-            Button(action: buttonPressed){
+            Button(action:{self.selection = 1}){
                 Text("MORE INFO")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
             Spacer()
-            Button(action: buttonPressed){
+            Button(action: {coordinator.showHelpExample(example: tip.showMe)}){
                 Text("SHOW ME")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
@@ -67,6 +64,9 @@ struct TipCard: View {
                 .padding(.top,2)
             buttons
                 .padding(16)
+            NavigationLink(destination: HelpView(coordinator: coordinator, viewModel: HelpViewModel(tip: tip)), tag: 1, selection: $selection){
+                EmptyView()
+            }
         }
     }
 }
@@ -82,10 +82,10 @@ struct TipButtonMod : ViewModifier {
 struct TipCard_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TipCard(tip: tipsData[0])
+            TipCard(tip: tipsData[0],coordinator: Coordinator(rootVC: RootViewController()))
                 .preferredColorScheme(.dark)
-            TipCard(tip: tipsData[1])
-            TipCard(tip: tipsData[2])
+            TipCard(tip: tipsData[1],coordinator: Coordinator(rootVC: RootViewController()))
+            TipCard(tip: tipsData[2],coordinator: Coordinator(rootVC: RootViewController()))
         }
         .previewLayout(.fixed(width: 300, height: 210))
     }

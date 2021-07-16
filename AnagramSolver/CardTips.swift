@@ -14,7 +14,7 @@ struct CardTips: View {
     var body: some View {
         List {
             ForEach(tipsData) { tip in
-                TipCard(tip: tip)
+                TipCard(tip: tip, coordinator: coordinator)
                     .background(Color.white)
                     .cornerRadius(5.0)
                     .shadow(radius: 2)
