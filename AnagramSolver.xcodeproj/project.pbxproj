@@ -12,6 +12,7 @@
 		003E10EC253EF72400AE8155 /* wordlist-de.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10E9253EF72400AE8155 /* wordlist-de.txt */; };
 		003E10ED253EF72400AE8155 /* wordlist-es.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10EA253EF72400AE8155 /* wordlist-es.txt */; };
 		0051B66225CC194300AB8B9D /* UserGuideRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0051B66125CC194300AB8B9D /* UserGuideRow.swift */; };
+		006D010226A1936600DA083D /* TipCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D010126A1936600DA083D /* TipCard.swift */; };
 		0081F01525B1BB6C00792552 /* wordlist-it.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01325B1BB6C00792552 /* wordlist-it.txt */; };
 		0081F01625B1BB6C00792552 /* wordlist-pt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01425B1BB6C00792552 /* wordlist-pt.txt */; };
 		0091BC052535E5A000BE7A43 /* AutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091BC042535E5A000BE7A43 /* AutoTest.swift */; };
@@ -120,6 +121,7 @@
 		003E10E9253EF72400AE8155 /* wordlist-de.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-de.txt"; sourceTree = "<group>"; };
 		003E10EA253EF72400AE8155 /* wordlist-es.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-es.txt"; sourceTree = "<group>"; };
 		0051B66125CC194300AB8B9D /* UserGuideRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuideRow.swift; sourceTree = "<group>"; };
+		006D010126A1936600DA083D /* TipCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCard.swift; sourceTree = "<group>"; };
 		0081F01325B1BB6C00792552 /* wordlist-it.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-it.txt"; sourceTree = "<group>"; };
 		0081F01425B1BB6C00792552 /* wordlist-pt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-pt.txt"; sourceTree = "<group>"; };
 		0091BC042535E5A000BE7A43 /* AutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTest.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				00EEA70C25CABFE50017F6A4 /* TellFriendRow.swift */,
 				00EEA70525CABFE50017F6A4 /* TipRow.swift */,
 				0051B66125CC194300AB8B9D /* UserGuideRow.swift */,
+				006D010126A1936600DA083D /* TipCard.swift */,
 			);
 			name = "Supporting Views";
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				4DA0C3F7236B0FC800AF693B /* Matches.swift in Sources */,
 				00EEA6FA25CABCA60017F6A4 /* TipsView.swift in Sources */,
 				00EEA72F25CACB430017F6A4 /* AboutView.swift in Sources */,
+				006D010226A1936600DA083D /* TipCard.swift in Sources */,
 				4D9E43B11FAC86EC007007C8 /* FilterFactory.swift in Sources */,
 				00EEA70F25CABFE50017F6A4 /* DefinitionRow.swift in Sources */,
 				00EEA71325CABFE50017F6A4 /* RateRow.swift in Sources */,
