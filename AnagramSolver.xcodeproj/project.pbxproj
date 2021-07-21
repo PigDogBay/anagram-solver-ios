@@ -38,6 +38,7 @@
 		00EEA72825CAC85A0017F6A4 /* DefintionHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72725CAC85A0017F6A4 /* DefintionHelpView.swift */; };
 		00EEA72C25CAC8B50017F6A4 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72B25CAC8B50017F6A4 /* ActivityViewController.swift */; };
 		00EEA72F25CACB430017F6A4 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72E25CACB430017F6A4 /* AboutView.swift */; };
+		00F17DCD26A8463400452020 /* small.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00F17DCB26A8463400452020 /* small.txt */; };
 		4D0543851CFDBE060084538A /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; };
 		4D0543861CFDBE060084538A /* SwiftUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D1D6E621FA0CE33008466F2 /* Pods_AnagramSolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */; };
@@ -148,6 +149,7 @@
 		00EEA72725CAC85A0017F6A4 /* DefintionHelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefintionHelpView.swift; sourceTree = "<group>"; };
 		00EEA72B25CAC8B50017F6A4 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		00EEA72E25CACB430017F6A4 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		00F17DCB26A8463400452020 /* small.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = small.txt; sourceTree = "<group>"; };
 		4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftUtils.xcodeproj; path = ../SwiftUtils/SwiftUtils.xcodeproj; sourceTree = "<group>"; };
 		4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AnagramSolver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPFactory.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 		4D45EFB71A9DFABA00C40BB4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				00F17DCB26A8463400452020 /* small.txt */,
 				00EEA6FF25CABE8D0017F6A4 /* tips.json */,
 				0081F01325B1BB6C00792552 /* wordlist-it.txt */,
 				0081F01425B1BB6C00792552 /* wordlist-pt.txt */,
@@ -512,6 +515,7 @@
 				4D45EFBF1A9DFABA00C40BB4 /* Main.storyboard in Resources */,
 				003E10ED253EF72400AE8155 /* wordlist-es.txt in Resources */,
 				4DE5CA8B238EB6170013D3F5 /* words.txt in Resources */,
+				00F17DCD26A8463400452020 /* small.txt in Resources */,
 				4D45EFC41A9DFABA00C40BB4 /* LaunchScreen.xib in Resources */,
 				4DBBEEA9239A7C3800ADCA41 /* colors.xcassets in Resources */,
 				4DE5CA8D238EB6250013D3F5 /* sowpods.txt in Resources */,

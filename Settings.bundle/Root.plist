@@ -123,6 +123,7 @@
 		<dict>
 			<key>Titles</key>
 			<array>
+                <string>Essential (90k words)</string>
 				<string>US Scrabble (180k words)</string>
 				<string>World Scrabble (270k words)</string>
 				<string>English (310k words)</string>
@@ -134,7 +135,8 @@
 			</array>
 			<key>Values</key>
 			<array>
-				<string>twl</string>
+                <string>small</string>
+                <string>twl</string>
 				<string>sowpods</string>
 				<string>words</string>
                 <string>wordlist-de</string>
