@@ -8,25 +8,29 @@
 
 import SwiftUI
 
+@available(iOS 14.0, *)
 struct CardTips: View {
     @ObservedObject var coordinator : Coordinator
     
     var body: some View {
-        List {
-            ForEach(tipsData) { tip in
-                TipCard(tip: tip, coordinator: coordinator)
-                    .background(Color.white)
-                    .cornerRadius(5.0)
-                    .shadow(radius: 2)
-                    .listRowBackground(Color("tipsBackground"))
-            }
-        }
+        ScrollView {
+            LazyVStack {
+                ForEach(tipsData) { tip in
+                    TipCard(tip: tip, coordinator: coordinator)
+                        .background(Color("cardBackground"))
+                        .cornerRadius(5.0)
+                        .shadow(radius: 1.5)
+                        .padding(.init(top: 8, leading: 16, bottom: 8, trailing: 16))
+                }
+            }.padding(.top, 16)
+        }.background(Color("tipsBackground"))
         .gesture(DragGesture().onChanged { _ in
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
         })
     }
 }
 
+@available(iOS 14.0, *)
 struct CardTips_Previews: PreviewProvider {
     static var previews: some View {
         CardTips(coordinator: Coordinator())

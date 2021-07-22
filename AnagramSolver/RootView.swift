@@ -11,7 +11,7 @@ import SwiftUI
 struct RootView: View {
     @ObservedObject var coordinator : Coordinator
     var body: some View {
-        if coordinator.showCards {
+        if coordinator.showCards, #available(iOS 14.0, *) {
             CardTips(coordinator: coordinator)
         } else {
             TipsView(coordinator: coordinator)
