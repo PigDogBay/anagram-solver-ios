@@ -17,6 +17,8 @@ struct CardTips: View {
             LazyVStack {
                 SettingsCard()
                     .modifier(CardMod())
+                DefinitionsCard()
+                    .modifier(CardMod())
                 ForEach(tipsData) { tip in
                     TipCard(tip: tip, coordinator: coordinator)
                         .modifier(CardMod())

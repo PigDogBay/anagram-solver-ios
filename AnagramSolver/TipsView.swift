@@ -19,7 +19,7 @@ struct TipsView: View {
             NavigationLink(destination: FilterHelpView()){
                 FilterRow()
             }
-            NavigationLink(destination: DefintionHelpView()){
+            NavigationLink(destination: DefinitionHelpView()){
                 DefinitionRow()
             }
             UserGuideRow()

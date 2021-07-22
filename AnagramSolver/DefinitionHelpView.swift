@@ -32,7 +32,7 @@ struct HelpSectionView: View {
     }
 }
 
-struct DefintionHelpView: View {
+struct DefinitionHelpView: View {
     var body: some View {
         Form {
             HStack {
@@ -58,6 +58,6 @@ struct DefintionHelpView: View {
 
 struct DefintionHelpView_Previews: PreviewProvider {
     static var previews: some View {
-        DefintionHelpView()
+        DefinitionHelpView()
     }
 }

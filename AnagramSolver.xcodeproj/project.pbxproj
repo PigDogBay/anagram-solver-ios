@@ -35,13 +35,14 @@
 		00EEA72025CAC59D0017F6A4 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA71F25CAC59D0017F6A4 /* MailView.swift */; };
 		00EEA72425CAC81A0017F6A4 /* FilterHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72225CAC8190017F6A4 /* FilterHelpView.swift */; };
 		00EEA72525CAC81A0017F6A4 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72325CAC8190017F6A4 /* HelpView.swift */; };
-		00EEA72825CAC85A0017F6A4 /* DefintionHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72725CAC85A0017F6A4 /* DefintionHelpView.swift */; };
+		00EEA72825CAC85A0017F6A4 /* DefinitionHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72725CAC85A0017F6A4 /* DefinitionHelpView.swift */; };
 		00EEA72C25CAC8B50017F6A4 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72B25CAC8B50017F6A4 /* ActivityViewController.swift */; };
 		00EEA72F25CACB430017F6A4 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72E25CACB430017F6A4 /* AboutView.swift */; };
 		00F17DCD26A8463400452020 /* small.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00F17DCB26A8463400452020 /* small.txt */; };
 		00F17DD426A9ABD000452020 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DD326A9ABD000452020 /* RootView.swift */; };
 		00F17DD726A9CC3500452020 /* SettingsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DD626A9CC3500452020 /* SettingsCard.swift */; };
 		00F17DD926A9D00700452020 /* SettingsHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DD826A9D00700452020 /* SettingsHelpView.swift */; };
+		00F17DDB26A9DD4000452020 /* DefinitionsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DDA26A9DD4000452020 /* DefinitionsCard.swift */; };
 		4D0543851CFDBE060084538A /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; };
 		4D0543861CFDBE060084538A /* SwiftUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D1D6E621FA0CE33008466F2 /* Pods_AnagramSolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */; };
@@ -149,13 +150,14 @@
 		00EEA71F25CAC59D0017F6A4 /* MailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		00EEA72225CAC8190017F6A4 /* FilterHelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterHelpView.swift; sourceTree = "<group>"; };
 		00EEA72325CAC8190017F6A4 /* HelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
-		00EEA72725CAC85A0017F6A4 /* DefintionHelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefintionHelpView.swift; sourceTree = "<group>"; };
+		00EEA72725CAC85A0017F6A4 /* DefinitionHelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionHelpView.swift; sourceTree = "<group>"; };
 		00EEA72B25CAC8B50017F6A4 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		00EEA72E25CACB430017F6A4 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		00F17DCB26A8463400452020 /* small.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = small.txt; sourceTree = "<group>"; };
 		00F17DD326A9ABD000452020 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		00F17DD626A9CC3500452020 /* SettingsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCard.swift; sourceTree = "<group>"; };
 		00F17DD826A9D00700452020 /* SettingsHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelpView.swift; sourceTree = "<group>"; };
+		00F17DDA26A9DD4000452020 /* DefinitionsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionsCard.swift; sourceTree = "<group>"; };
 		4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftUtils.xcodeproj; path = ../SwiftUtils/SwiftUtils.xcodeproj; sourceTree = "<group>"; };
 		4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AnagramSolver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPFactory.swift; sourceTree = "<group>"; };
@@ -245,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				00EEA72E25CACB430017F6A4 /* AboutView.swift */,
-				00EEA72725CAC85A0017F6A4 /* DefintionHelpView.swift */,
+				00EEA72725CAC85A0017F6A4 /* DefinitionHelpView.swift */,
 				00EEA72225CAC8190017F6A4 /* FilterHelpView.swift */,
 				00EEA72325CAC8190017F6A4 /* HelpView.swift */,
 				00F17DD826A9D00700452020 /* SettingsHelpView.swift */,
@@ -273,6 +275,7 @@
 				00EEA70525CABFE50017F6A4 /* TipRow.swift */,
 				0051B66125CC194300AB8B9D /* UserGuideRow.swift */,
 				006D010126A1936600DA083D /* TipCard.swift */,
+				00F17DDA26A9DD4000452020 /* DefinitionsCard.swift */,
 			);
 			name = "Supporting Views";
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 			files = (
 				4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */,
 				00EEA71D25CAC5050017F6A4 /* AboutViewModel.swift in Sources */,
+				00F17DDB26A9DD4000452020 /* DefinitionsCard.swift in Sources */,
 				00EEA70E25CABFE50017F6A4 /* FilterRow.swift in Sources */,
 				4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */,
 				4D3596411CFEEA50008D2FAF /* Ads.swift in Sources */,
@@ -631,7 +635,7 @@
 				00EEA71325CABFE50017F6A4 /* RateRow.swift in Sources */,
 				0051B66225CC194300AB8B9D /* UserGuideRow.swift in Sources */,
 				00EEA72525CAC81A0017F6A4 /* HelpView.swift in Sources */,
-				00EEA72825CAC85A0017F6A4 /* DefintionHelpView.swift in Sources */,
+				00EEA72825CAC85A0017F6A4 /* DefinitionHelpView.swift in Sources */,
 				00EEA71125CABFE50017F6A4 /* SettingsRow.swift in Sources */,
 				4DF2DE3A1FACBDBB00F44ADE /* FilterViewController.swift in Sources */,
 				4D9E43AA1FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift in Sources */,
