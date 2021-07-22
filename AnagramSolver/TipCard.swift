@@ -13,18 +13,6 @@ struct TipCard: View {
     @ObservedObject var coordinator : Coordinator
     @State var selection : Int? = nil
     
-    private var title : some View {
-        HStack {
-            Image("lightbulb_on")
-                .scaleEffect(CGSize(width: 1.25,height: 1.25))
-                .padding(16)
-            Spacer()
-            Text(tip.title).font(.title)
-            Spacer()
-            Spacer()
-        }
-    }
-    
     private var description : some View {
         VStack(alignment: .leading, spacing: 5){
             Text(tip.subtitle)
@@ -58,7 +46,7 @@ struct TipCard: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            title
+            CardTitle(title: tip.title, icon: "lightbulb_on")
                 .padding(.top,16)
             description
                 .padding(.top,2)
@@ -67,6 +55,24 @@ struct TipCard: View {
             NavigationLink(destination: HelpView(coordinator: coordinator, viewModel: HelpViewModel(tip: tip)), tag: 1, selection: $selection){
                 EmptyView()
             }
+        }
+    }
+}
+
+
+struct CardTitle : View {
+    let title : String
+    let icon : String
+
+    var body: some View {
+        HStack {
+            Image(icon)
+                .scaleEffect(CGSize(width: 1.25,height: 1.25))
+                .padding(16)
+            Spacer()
+            Text(title).font(.title)
+            Spacer()
+            Spacer()
         }
     }
 }

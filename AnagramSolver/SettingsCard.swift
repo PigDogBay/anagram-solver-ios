@@ -12,18 +12,6 @@ import SwiftUtils
 struct SettingsCard: View {
     @State var selection : Int? = nil
 
-    private var title : some View {
-        HStack {
-            Image("gear")
-                .scaleEffect(CGSize(width: 1.25,height: 1.25))
-                .padding(16)
-            Spacer()
-            Text("Settings").font(.title)
-            Spacer()
-            Spacer()
-        }
-    }
-    
     private var description : some View {
         VStack(alignment: .leading, spacing: 5){
             Text("Select the word list")
@@ -48,7 +36,7 @@ struct SettingsCard: View {
 
     var body: some View {
         VStack(alignment: .center) {
-            title
+            CardTitle(title: "Settings", icon: "gear")
                 .padding(.top,16)
             description
                 .padding(.top,2)
