@@ -19,7 +19,7 @@ struct CardTips: View {
                     TipCard(tip: tip, coordinator: coordinator)
                         .background(Color("cardBackground"))
                         .cornerRadius(5.0)
-                        .shadow(radius: 1.5)
+                        .shadow(radius: 2)
                         .padding(.init(top: 4, leading: 8, bottom: 4, trailing: 8))
                 }
             }.padding(.top, 8)
