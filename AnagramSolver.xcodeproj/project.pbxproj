@@ -43,6 +43,7 @@
 		00F17DD726A9CC3500452020 /* SettingsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DD626A9CC3500452020 /* SettingsCard.swift */; };
 		00F17DD926A9D00700452020 /* SettingsHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DD826A9D00700452020 /* SettingsHelpView.swift */; };
 		00F17DDB26A9DD4000452020 /* DefinitionsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DDA26A9DD4000452020 /* DefinitionsCard.swift */; };
+		00F17DDD26A9E17300452020 /* FilterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DDC26A9E17300452020 /* FilterCard.swift */; };
 		4D0543851CFDBE060084538A /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; };
 		4D0543861CFDBE060084538A /* SwiftUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D1D6E621FA0CE33008466F2 /* Pods_AnagramSolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */; };
@@ -158,6 +159,7 @@
 		00F17DD626A9CC3500452020 /* SettingsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCard.swift; sourceTree = "<group>"; };
 		00F17DD826A9D00700452020 /* SettingsHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelpView.swift; sourceTree = "<group>"; };
 		00F17DDA26A9DD4000452020 /* DefinitionsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionsCard.swift; sourceTree = "<group>"; };
+		00F17DDC26A9E17300452020 /* FilterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCard.swift; sourceTree = "<group>"; };
 		4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftUtils.xcodeproj; path = ../SwiftUtils/SwiftUtils.xcodeproj; sourceTree = "<group>"; };
 		4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AnagramSolver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPFactory.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				0051B66125CC194300AB8B9D /* UserGuideRow.swift */,
 				006D010126A1936600DA083D /* TipCard.swift */,
 				00F17DDA26A9DD4000452020 /* DefinitionsCard.swift */,
+				00F17DDC26A9E17300452020 /* FilterCard.swift */,
 			);
 			name = "Supporting Views";
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 				00EEA72025CAC59D0017F6A4 /* MailView.swift in Sources */,
 				4D45EFBA1A9DFABA00C40BB4 /* AppDelegate.swift in Sources */,
 				006D010526A1B89000DA083D /* CardTips.swift in Sources */,
+				00F17DDD26A9E17300452020 /* FilterCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
