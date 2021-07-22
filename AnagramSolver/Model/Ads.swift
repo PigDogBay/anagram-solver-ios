@@ -48,6 +48,7 @@ class Ads
         #if DEBUG
         requestConfiguration.testDeviceIdentifiers = [
             (kGADSimulatorID),
+            "dd7094a5b568e8b751d05661330cceae", //iPhone
             "6af877373ece0e06c9fc7007cc41edf2",//iPad
             "a4b042150b6cace14cc182d6bf254d09"//iPod Touch
            ]
