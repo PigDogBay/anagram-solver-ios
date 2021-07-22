@@ -20,9 +20,9 @@ struct CardTips: View {
                         .background(Color("cardBackground"))
                         .cornerRadius(5.0)
                         .shadow(radius: 1.5)
-                        .padding(.init(top: 8, leading: 16, bottom: 8, trailing: 16))
+                        .padding(.init(top: 4, leading: 8, bottom: 4, trailing: 8))
                 }
-            }.padding(.top, 16)
+            }.padding(.top, 8)
         }.background(Color("tipsBackground"))
         .gesture(DragGesture().onChanged { _ in
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)

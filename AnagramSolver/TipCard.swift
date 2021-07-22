@@ -74,7 +74,7 @@ struct TipCard: View {
 struct TipButtonMod : ViewModifier {
     func body(content: Content) -> some View {
         content
-            .font(.footnote)
+            .font(.footnote.bold())
             .foregroundColor(Color("materialButton"))
     }
 }
