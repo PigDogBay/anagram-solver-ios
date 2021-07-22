@@ -40,6 +40,8 @@
 		00EEA72F25CACB430017F6A4 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72E25CACB430017F6A4 /* AboutView.swift */; };
 		00F17DCD26A8463400452020 /* small.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00F17DCB26A8463400452020 /* small.txt */; };
 		00F17DD426A9ABD000452020 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DD326A9ABD000452020 /* RootView.swift */; };
+		00F17DD726A9CC3500452020 /* SettingsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DD626A9CC3500452020 /* SettingsCard.swift */; };
+		00F17DD926A9D00700452020 /* SettingsHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DD826A9D00700452020 /* SettingsHelpView.swift */; };
 		4D0543851CFDBE060084538A /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; };
 		4D0543861CFDBE060084538A /* SwiftUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D1D6E621FA0CE33008466F2 /* Pods_AnagramSolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */; };
@@ -152,6 +154,8 @@
 		00EEA72E25CACB430017F6A4 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		00F17DCB26A8463400452020 /* small.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = small.txt; sourceTree = "<group>"; };
 		00F17DD326A9ABD000452020 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		00F17DD626A9CC3500452020 /* SettingsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCard.swift; sourceTree = "<group>"; };
+		00F17DD826A9D00700452020 /* SettingsHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelpView.swift; sourceTree = "<group>"; };
 		4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftUtils.xcodeproj; path = ../SwiftUtils/SwiftUtils.xcodeproj; sourceTree = "<group>"; };
 		4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AnagramSolver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPFactory.swift; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 				00EEA72725CAC85A0017F6A4 /* DefintionHelpView.swift */,
 				00EEA72225CAC8190017F6A4 /* FilterHelpView.swift */,
 				00EEA72325CAC8190017F6A4 /* HelpView.swift */,
+				00F17DD826A9D00700452020 /* SettingsHelpView.swift */,
 				00EEA6F925CABCA60017F6A4 /* TipsView.swift */,
 				006D010426A1B89000DA083D /* CardTips.swift */,
 				00F17DD326A9ABD000452020 /* RootView.swift */,
@@ -262,6 +267,7 @@
 				00EEA70825CABFE50017F6A4 /* FeedbackRow.swift */,
 				00EEA70625CABFE50017F6A4 /* FilterRow.swift */,
 				00EEA70B25CABFE50017F6A4 /* RateRow.swift */,
+				00F17DD626A9CC3500452020 /* SettingsCard.swift */,
 				00EEA70925CABFE50017F6A4 /* SettingsRow.swift */,
 				00EEA70C25CABFE50017F6A4 /* TellFriendRow.swift */,
 				00EEA70525CABFE50017F6A4 /* TipRow.swift */,
@@ -604,6 +610,7 @@
 				4D9E43AD1FAC84FC007007C8 /* Filter.swift in Sources */,
 				00EEA70325CABF7D0017F6A4 /* HelpViewModel.swift in Sources */,
 				00EEA71725CAC02D0017F6A4 /* AutomatedTestRow.swift in Sources */,
+				00F17DD726A9CC3500452020 /* SettingsCard.swift in Sources */,
 				4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */,
 				0091BC052535E5A000BE7A43 /* AutoTest.swift in Sources */,
 				00EEA71225CABFE50017F6A4 /* AboutRow.swift in Sources */,
@@ -611,6 +618,7 @@
 				00EEA71025CABFE50017F6A4 /* FeedbackRow.swift in Sources */,
 				0029A03525307170002E96D1 /* Strings.swift in Sources */,
 				4D2B35C31D33AAE30014ABF3 /* IAPFactory.swift in Sources */,
+				00F17DD926A9D00700452020 /* SettingsHelpView.swift in Sources */,
 				00EEA71425CABFE50017F6A4 /* TellFriendRow.swift in Sources */,
 				00F17DD426A9ABD000452020 /* RootView.swift in Sources */,
 				4D45D7B31E2CF0C500EC2D27 /* Settings.swift in Sources */,

@@ -15,18 +15,27 @@ struct CardTips: View {
     var body: some View {
         ScrollView {
             LazyVStack {
+                SettingsCard()
+                    .modifier(CardMod())
                 ForEach(tipsData) { tip in
                     TipCard(tip: tip, coordinator: coordinator)
-                        .background(Color("cardBackground"))
-                        .cornerRadius(5.0)
-                        .shadow(radius: 2)
-                        .padding(.init(top: 4, leading: 8, bottom: 4, trailing: 8))
+                        .modifier(CardMod())
                 }
             }.padding(.top, 8)
         }.background(Color("tipsBackground"))
         .gesture(DragGesture().onChanged { _ in
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
         })
+    }
+}
+
+struct CardMod : ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .background(Color("cardBackground"))
+            .cornerRadius(5.0)
+            .shadow(radius: 2)
+            .padding(.init(top: 4, leading: 8, bottom: 4, trailing: 8))
     }
 }
 
