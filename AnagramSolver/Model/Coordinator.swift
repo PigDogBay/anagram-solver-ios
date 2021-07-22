@@ -13,19 +13,15 @@ import Combine
 ///Deals with interactions between views and holds shared observed variables
 class Coordinator : ObservableObject {
 
-    let rootVC : RootViewController
+    var rootVC : RootViewController?
+    @Published var showCards = true
 
-    init(rootVC : RootViewController)
-    {
-        self.rootVC = rootVC
-    }
-    
     func showHelpExample(example : String){
-        rootVC.showMe(query: example)
+        rootVC?.showMe(query: example)
     }
     
     func sendFeedback(){
-        rootVC.sendFeedback()
+        rootVC?.sendFeedback()
     }
 
 }

@@ -21,6 +21,7 @@ class Settings
     private let resultsLimitKey = "resultsLimit"
     private let isProKey = "isProFlag"
     private let useNonPersonalizedAdsKey = "useNonPersonalisedAds"
+    private let showCardTipsKey = "showCardTips"
     
     private let defaultWordList = "words"
     
@@ -124,6 +125,12 @@ class Settings
         }
     }
     
+    var showCardTips : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: showCardTipsKey)
+        }
+    }
+    
     var useNonPersonalizedAds : Bool {
         get{
             return UserDefaults.standard.bool(forKey: useNonPersonalizedAdsKey)
@@ -144,6 +151,7 @@ class Settings
                                wordListKey : defaultWordList,
                                isProKey : false,
                                showSubAnagramsKey : true,
+                               showCardTipsKey : true,
                                resultsLimitKey : 5000,
                                useNonPersonalizedAdsKey : false]
         UserDefaults.standard.register(defaults: defaultSettings)

@@ -29,6 +29,6 @@ struct CardTips: View {
 
 struct CardTips_Previews: PreviewProvider {
     static var previews: some View {
-        CardTips(coordinator: Coordinator(rootVC: RootViewController()))
+        CardTips(coordinator: Coordinator())
     }
 }

@@ -39,6 +39,7 @@
 		00EEA72C25CAC8B50017F6A4 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72B25CAC8B50017F6A4 /* ActivityViewController.swift */; };
 		00EEA72F25CACB430017F6A4 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72E25CACB430017F6A4 /* AboutView.swift */; };
 		00F17DCD26A8463400452020 /* small.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00F17DCB26A8463400452020 /* small.txt */; };
+		00F17DD426A9ABD000452020 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DD326A9ABD000452020 /* RootView.swift */; };
 		4D0543851CFDBE060084538A /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; };
 		4D0543861CFDBE060084538A /* SwiftUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D1D6E621FA0CE33008466F2 /* Pods_AnagramSolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */; };
@@ -150,6 +151,7 @@
 		00EEA72B25CAC8B50017F6A4 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		00EEA72E25CACB430017F6A4 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		00F17DCB26A8463400452020 /* small.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = small.txt; sourceTree = "<group>"; };
+		00F17DD326A9ABD000452020 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftUtils.xcodeproj; path = ../SwiftUtils/SwiftUtils.xcodeproj; sourceTree = "<group>"; };
 		4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AnagramSolver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2B35C21D33AAE30014ABF3 /* IAPFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPFactory.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				00EEA72325CAC8190017F6A4 /* HelpView.swift */,
 				00EEA6F925CABCA60017F6A4 /* TipsView.swift */,
 				006D010426A1B89000DA083D /* CardTips.swift */,
+				00F17DD326A9ABD000452020 /* RootView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				0029A03525307170002E96D1 /* Strings.swift in Sources */,
 				4D2B35C31D33AAE30014ABF3 /* IAPFactory.swift in Sources */,
 				00EEA71425CABFE50017F6A4 /* TellFriendRow.swift in Sources */,
+				00F17DD426A9ABD000452020 /* RootView.swift in Sources */,
 				4D45D7B31E2CF0C500EC2D27 /* Settings.swift in Sources */,
 				4DA0C3F7236B0FC800AF693B /* Matches.swift in Sources */,
 				00EEA6FA25CABCA60017F6A4 /* TipsView.swift in Sources */,

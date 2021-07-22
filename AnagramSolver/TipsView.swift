@@ -59,6 +59,6 @@ struct LinkedTipRow : View {
 
 struct TipsView_Previews: PreviewProvider {
     static var previews: some View {
-        TipsView(coordinator: Coordinator(rootVC: RootViewController()))
+        TipsView(coordinator: Coordinator())
     }
 }

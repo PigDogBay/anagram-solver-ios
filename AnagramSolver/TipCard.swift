@@ -82,10 +82,10 @@ struct TipButtonMod : ViewModifier {
 struct TipCard_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TipCard(tip: tipsData[0],coordinator: Coordinator(rootVC: RootViewController()))
+            TipCard(tip: tipsData[0],coordinator: Coordinator())
                 .preferredColorScheme(.dark)
-            TipCard(tip: tipsData[1],coordinator: Coordinator(rootVC: RootViewController()))
-            TipCard(tip: tipsData[2],coordinator: Coordinator(rootVC: RootViewController()))
+            TipCard(tip: tipsData[1],coordinator: Coordinator())
+            TipCard(tip: tipsData[2],coordinator: Coordinator())
         }
         .previewLayout(.fixed(width: 300, height: 210))
     }

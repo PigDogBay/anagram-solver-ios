@@ -64,6 +64,6 @@ struct HelpView: View {
 
 struct HelpView_Previews: PreviewProvider {
     static var previews: some View {
-        HelpView(coordinator: Coordinator(rootVC: RootViewController()), viewModel: HelpViewModel(tip: tipsData[0]))
+        HelpView(coordinator: Coordinator(), viewModel: HelpViewModel(tip: tipsData[0]))
     }
 }

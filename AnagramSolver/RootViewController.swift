@@ -17,6 +17,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     private let searchSegueId = "searchSegue"
     private let monospacedFont = UIFont(name: "Menlo-Regular",size: 24.0)
     private let systemFont = UIFont.systemFont(ofSize: 24.0, weight: .regular)
+    private var coordinator = Coordinator()
 
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var textFieldQuery: UITextField!
@@ -29,8 +30,9 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     }
 
     @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
-        let coordinator = Coordinator(rootVC: self)
-        return UIHostingController(coder: coder, rootView: TipsView(coordinator: coordinator))
+        coordinator.rootVC = self
+        coordinator.showCards = Model.sharedInstance.settings.showCardTips
+        return UIHostingController(coder: coder, rootView: RootView(coordinator: coordinator))
     }
     
     func sendFeedback(){
@@ -92,6 +94,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         //check for any settings changes
         model.checkForSettingsChange()
         fontSettingsCheck()
+        coordinator.showCards = Model.sharedInstance.settings.showCardTips
     }
     override func viewDidAppear(_ animated: Bool)
     {

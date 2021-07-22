@@ -31,9 +31,9 @@ struct FeedbackRow: View {
 struct FeedbackRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            FeedbackRow(coordinator: Coordinator(rootVC: RootViewController()))
-            FeedbackRow(coordinator: Coordinator(rootVC: RootViewController()))
-            FeedbackRow(coordinator: Coordinator(rootVC: RootViewController()))
+            FeedbackRow(coordinator: Coordinator())
+            FeedbackRow(coordinator: Coordinator())
+            FeedbackRow(coordinator: Coordinator())
         }
         .previewLayout(.fixed(width: 300, height: 70))
     }

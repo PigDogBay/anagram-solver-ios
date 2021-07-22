@@ -102,6 +102,16 @@
 			<key>DefaultValue</key>
 			<string>red</string>
 		</dict>
+        <dict>
+            <key>Type</key>
+            <string>PSToggleSwitchSpecifier</string>
+            <key>Title</key>
+            <string>Show tips as cards</string>
+            <key>Key</key>
+            <string>showCardTips</string>
+            <key>DefaultValue</key>
+            <true/>
+        </dict>
 		<dict>
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>

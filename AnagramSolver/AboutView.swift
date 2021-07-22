@@ -154,6 +154,6 @@ struct AboutButtonMod : ViewModifier {
 
 struct AboutView_Previews: PreviewProvider {
     static var previews: some View {
-        AboutView(coordinator: Coordinator(rootVC: RootViewController()))
+        AboutView(coordinator: Coordinator())
     }
 }
