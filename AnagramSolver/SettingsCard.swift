@@ -14,9 +14,9 @@ struct SettingsCard: View {
 
     private var description : some View {
         VStack(alignment: .leading, spacing: 5){
-            Text("Select the word list")
-            Text("Choose dictionary definition")
-            Text("Change the appearance")
+            Text("* Select the word list")
+            Text("* Choose dictionary definition")
+            Text("* Change the appearance")
         }
     }
 

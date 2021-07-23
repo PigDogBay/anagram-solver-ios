@@ -13,9 +13,9 @@ struct DefinitionsCard: View {
 
     private var description : some View {
         VStack(alignment: .leading, spacing: 5){
-            Text("Tap on a result's info icon")
+            Text("* Tap on a result's info icon")
             Text("to look up the word on the web.")
-            Text("Touch and hold a result to")
+            Text("* Touch and hold a result to")
             Text("to bring up a menu of options.")
         }
     }
