@@ -58,6 +58,7 @@ struct CardTips: View {
             }
             .padding(.horizontal)
             .padding(.top, 16)
+            .padding(.bottom, 48)
         }
         .background(Color("tipsBackground"))
         .gesture(DragGesture().onChanged { _ in
