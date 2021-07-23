@@ -11,10 +11,11 @@ import SwiftUI
 @available(iOS 14.0, *)
 struct CardTips: View {
     @ObservedObject var coordinator : Coordinator
+    let columns = [GridItem(.adaptive(minimum: 320))]
     
     var body: some View {
         ScrollView {
-            LazyVStack {
+            LazyVGrid(columns: columns, spacing: 20) {
                 AboutCard(coordinator: coordinator)
                     .modifier(CardMod())
                 SettingsCard()
