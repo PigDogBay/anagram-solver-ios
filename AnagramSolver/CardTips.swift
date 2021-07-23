@@ -15,6 +15,8 @@ struct CardTips: View {
     var body: some View {
         ScrollView {
             LazyVStack {
+                AboutCard()
+                    .modifier(CardMod())
                 SettingsCard()
                     .modifier(CardMod())
                 FilterCard()
