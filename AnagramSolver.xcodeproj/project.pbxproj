@@ -13,6 +13,7 @@
 		003E10ED253EF72400AE8155 /* wordlist-es.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10EA253EF72400AE8155 /* wordlist-es.txt */; };
 		0051B66225CC194300AB8B9D /* UserGuideRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0051B66125CC194300AB8B9D /* UserGuideRow.swift */; };
 		005BCB3226AAC69700DF44CE /* UserGuideCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BCB3126AAC69700DF44CE /* UserGuideCard.swift */; };
+		005BCB3526AACA2400DF44CE /* HelpOutCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BCB3426AACA2400DF44CE /* HelpOutCard.swift */; };
 		006D010226A1936600DA083D /* TipCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D010126A1936600DA083D /* TipCard.swift */; };
 		006D010526A1B89000DA083D /* CardTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D010426A1B89000DA083D /* CardTips.swift */; };
 		0081F01525B1BB6C00792552 /* wordlist-it.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01325B1BB6C00792552 /* wordlist-it.txt */; };
@@ -131,6 +132,7 @@
 		003E10EA253EF72400AE8155 /* wordlist-es.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-es.txt"; sourceTree = "<group>"; };
 		0051B66125CC194300AB8B9D /* UserGuideRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuideRow.swift; sourceTree = "<group>"; };
 		005BCB3126AAC69700DF44CE /* UserGuideCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuideCard.swift; sourceTree = "<group>"; };
+		005BCB3426AACA2400DF44CE /* HelpOutCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpOutCard.swift; sourceTree = "<group>"; };
 		006D010126A1936600DA083D /* TipCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCard.swift; sourceTree = "<group>"; };
 		006D010426A1B89000DA083D /* CardTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTips.swift; sourceTree = "<group>"; };
 		0081F01325B1BB6C00792552 /* wordlist-it.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-it.txt"; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				00EEA70825CABFE50017F6A4 /* FeedbackRow.swift */,
 				00F17DDC26A9E17300452020 /* FilterCard.swift */,
 				00EEA70625CABFE50017F6A4 /* FilterRow.swift */,
+				005BCB3426AACA2400DF44CE /* HelpOutCard.swift */,
 				00EEA71F25CAC59D0017F6A4 /* MailView.swift */,
 				00EEA70B25CABFE50017F6A4 /* RateRow.swift */,
 				00F17DD626A9CC3500452020 /* SettingsCard.swift */,
@@ -651,6 +654,7 @@
 				4DF2DE3A1FACBDBB00F44ADE /* FilterViewController.swift in Sources */,
 				4D9E43AA1FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift in Sources */,
 				00EEA70D25CABFE50017F6A4 /* TipRow.swift in Sources */,
+				005BCB3526AACA2400DF44CE /* HelpOutCard.swift in Sources */,
 				4DA0C3FA236C761600AF693B /* AppState.swift in Sources */,
 				4DF2DE401FB0A82300F44ADE /* ListViewController.swift in Sources */,
 				00EEA72425CAC81A0017F6A4 /* FilterHelpView.swift in Sources */,
