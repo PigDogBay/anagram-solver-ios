@@ -20,7 +20,7 @@ struct AutoTestCard: View {
     private var buttons : some View {
         HStack(){
             Spacer()
-            Button(action:{AutoTest.start(model: Model.sharedInstance, rootVC: self.coordinator.rootVC!)}){
+            Button(action:coordinator.autoTest){
                 Text("START")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())

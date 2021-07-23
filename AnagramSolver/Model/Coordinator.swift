@@ -23,6 +23,10 @@ class Coordinator : ObservableObject {
     func sendFeedback(){
         rootVC?.sendFeedback()
     }
+    
+    func autoTest(){
+        AutoTest.start(model: Model.sharedInstance, rootVC: rootVC!)
+    }
 
 }
 
