@@ -52,7 +52,8 @@ struct HelpOutCard: View {
             buttons
                 .padding(16)
         }
-    }}
+    }
+}
 
 struct HelpOutCard_Previews: PreviewProvider {
     static var previews: some View {

@@ -32,6 +32,8 @@ struct CardTips: View {
                     TipCard(tip: tip, coordinator: coordinator)
                         .modifier(CardMod())
                 }
+                AutoTestCard(coordinator: coordinator)
+                    .modifier(CardMod())
             }.padding(.top, 8)
         }.background(Color("tipsBackground"))
         .gesture(DragGesture().onChanged { _ in

@@ -14,6 +14,7 @@
 		0051B66225CC194300AB8B9D /* UserGuideRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0051B66125CC194300AB8B9D /* UserGuideRow.swift */; };
 		005BCB3226AAC69700DF44CE /* UserGuideCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BCB3126AAC69700DF44CE /* UserGuideCard.swift */; };
 		005BCB3526AACA2400DF44CE /* HelpOutCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BCB3426AACA2400DF44CE /* HelpOutCard.swift */; };
+		005BCB3726AACED400DF44CE /* AutoTestCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BCB3626AACED400DF44CE /* AutoTestCard.swift */; };
 		006D010226A1936600DA083D /* TipCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D010126A1936600DA083D /* TipCard.swift */; };
 		006D010526A1B89000DA083D /* CardTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D010426A1B89000DA083D /* CardTips.swift */; };
 		0081F01525B1BB6C00792552 /* wordlist-it.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01325B1BB6C00792552 /* wordlist-it.txt */; };
@@ -133,6 +134,7 @@
 		0051B66125CC194300AB8B9D /* UserGuideRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuideRow.swift; sourceTree = "<group>"; };
 		005BCB3126AAC69700DF44CE /* UserGuideCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuideCard.swift; sourceTree = "<group>"; };
 		005BCB3426AACA2400DF44CE /* HelpOutCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpOutCard.swift; sourceTree = "<group>"; };
+		005BCB3626AACED400DF44CE /* AutoTestCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTestCard.swift; sourceTree = "<group>"; };
 		006D010126A1936600DA083D /* TipCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCard.swift; sourceTree = "<group>"; };
 		006D010426A1B89000DA083D /* CardTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTips.swift; sourceTree = "<group>"; };
 		0081F01325B1BB6C00792552 /* wordlist-it.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-it.txt"; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				00EEA70525CABFE50017F6A4 /* TipRow.swift */,
 				005BCB3126AAC69700DF44CE /* UserGuideCard.swift */,
 				0051B66125CC194300AB8B9D /* UserGuideRow.swift */,
+				005BCB3626AACED400DF44CE /* AutoTestCard.swift */,
 			);
 			name = "Supporting Views";
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				4D9E43AD1FAC84FC007007C8 /* Filter.swift in Sources */,
 				00EEA70325CABF7D0017F6A4 /* HelpViewModel.swift in Sources */,
 				00EEA71725CAC02D0017F6A4 /* AutomatedTestRow.swift in Sources */,
+				005BCB3726AACED400DF44CE /* AutoTestCard.swift in Sources */,
 				00F17DD726A9CC3500452020 /* SettingsCard.swift in Sources */,
 				4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */,
 				0091BC052535E5A000BE7A43 /* AutoTest.swift in Sources */,
