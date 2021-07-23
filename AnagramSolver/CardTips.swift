@@ -11,11 +11,11 @@ import SwiftUI
 @available(iOS 14.0, *)
 struct CardTips: View {
     @ObservedObject var coordinator : Coordinator
-    let columns = [GridItem(.adaptive(minimum: 320))]
+    let columns = [GridItem(.adaptive(minimum: 350))]
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: columns, spacing: 20) {
+            LazyVGrid(columns: columns, spacing: 16) {
                 
                 Group {
                     TipCard(tip: anagramTip, coordinator: coordinator)
@@ -55,11 +55,15 @@ struct CardTips: View {
                         .modifier(CardMod())
                     #endif
                 }
-            }.padding(.top, 8)
-        }.background(Color("tipsBackground"))
+            }
+            .padding(.horizontal)
+            .padding(.top, 16)
+        }
+        .background(Color("tipsBackground"))
         .gesture(DragGesture().onChanged { _ in
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
         })
+        .ignoresSafeArea()
     }
 }
 
@@ -69,7 +73,6 @@ struct CardMod : ViewModifier {
             .background(Color("cardBackground"))
             .cornerRadius(5.0)
             .shadow(radius: 2)
-            .padding(.init(top: 4, leading: 8, bottom: 4, trailing: 8))
     }
 }
 
