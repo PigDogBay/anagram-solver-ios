@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct AboutCard: View {
+    @ObservedObject var coordinator : Coordinator
     @State var selection : Int? = nil
 
     private var description : some View {
@@ -38,7 +39,7 @@ struct AboutCard: View {
                 .padding(.top,2)
             buttons
                 .padding(16)
-            NavigationLink(destination: FilterHelpView(), tag: 1, selection: $selection){
+            NavigationLink(destination: AboutView(coordinator: coordinator), tag: 1, selection: $selection){
                     EmptyView()
             }
             
@@ -49,8 +50,8 @@ struct AboutCard: View {
 struct AboutCard_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            AboutCard()
-            AboutCard()
+            AboutCard(coordinator: Coordinator())
+            AboutCard(coordinator: Coordinator())
                 .preferredColorScheme(.dark)
             
         }.previewLayout(.fixed(width: 300, height: 240))
