@@ -16,24 +16,45 @@ struct CardTips: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20) {
-                HelpOutCard(coordinator: coordinator)
-                    .modifier(CardMod())
-                UserGuideCard()
-                    .modifier(CardMod())
-                AboutCard(coordinator: coordinator)
-                    .modifier(CardMod())
-                SettingsCard()
-                    .modifier(CardMod())
-                FilterCard()
-                    .modifier(CardMod())
-                DefinitionsCard()
-                    .modifier(CardMod())
-                ForEach(tipsData) { tip in
-                    TipCard(tip: tip, coordinator: coordinator)
+                
+                Group {
+                    TipCard(tip: anagramTip, coordinator: coordinator)
+                        .modifier(CardMod())
+                    TipCard(tip: blankLettersTip, coordinator: coordinator)
+                        .modifier(CardMod())
+                    DefinitionsCard()
+                        .modifier(CardMod())
+                    FilterCard()
+                        .modifier(CardMod())
+                    TipCard(tip: twoWordAnagramTip, coordinator: coordinator)
+                        .modifier(CardMod())
+                    SettingsCard()
+                        .modifier(CardMod())
+                    TipCard(tip: crosswordTip, coordinator: coordinator)
+                        .modifier(CardMod())
+                    TipCard(tip: shortcutsTip, coordinator: coordinator)
+                        .modifier(CardMod())
+                    TipCard(tip: supergramsTip, coordinator: coordinator)
                         .modifier(CardMod())
                 }
-                AutoTestCard(coordinator: coordinator)
-                    .modifier(CardMod())
+                Group {
+                    TipCard(tip: codewordsTip, coordinator: coordinator)
+                        .modifier(CardMod())
+                    TipCard(tip: prefixSuffixTip, coordinator: coordinator)
+                        .modifier(CardMod())
+                    AboutCard(coordinator: coordinator)
+                        .modifier(CardMod())
+                    UserGuideCard()
+                        .modifier(CardMod())
+                    HelpOutCard(coordinator: coordinator)
+                        .modifier(CardMod())
+                    UpgradeCard(coordinator: coordinator)
+                        .modifier(CardMod())
+                    #if DEBUG
+                    AutoTestCard(coordinator: coordinator)
+                        .modifier(CardMod())
+                    #endif
+                }
             }.padding(.top, 8)
         }.background(Color("tipsBackground"))
         .gesture(DragGesture().onChanged { _ in

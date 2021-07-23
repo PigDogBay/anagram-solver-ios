@@ -9,6 +9,14 @@
 import Foundation
 
 let tipsData : [Tip] = load("tips.json")
+let anagramTip = tipsData[0]
+let crosswordTip = tipsData[1]
+let blankLettersTip = tipsData[2]
+let twoWordAnagramTip = tipsData[3]
+let shortcutsTip = tipsData[4]
+let supergramsTip = tipsData[5]
+let prefixSuffixTip = tipsData[6]
+let codewordsTip = tipsData[7]
 
 struct Tip : Identifiable, Codable{
     var id : Int
