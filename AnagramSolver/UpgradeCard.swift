@@ -10,6 +10,7 @@ import SwiftUI
 
 struct UpgradeCard: View {
     @ObservedObject var coordinator : Coordinator
+    @ObservedObject var viewModel = AboutViewModel()
 
     private var description : some View {
         VStack(alignment: .leading, spacing: 5){
@@ -21,11 +22,16 @@ struct UpgradeCard: View {
 
     private var buttons : some View {
         HStack(){
-            Spacer()
-            Button(action:{}){
-                Text("BUY")
+            Button(action:viewModel.restorePurchase){
+                Text("RESTORE PURCHASE")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
+            Spacer()
+            Button(action:viewModel.buy){
+                Text(viewModel.buyButtonText)
+                    .modifier(TipButtonMod())
+            }.buttonStyle(BorderlessButtonStyle())
+            .disabled(!viewModel.buyButtonEnabled)
         }
     }
 
@@ -38,6 +44,14 @@ struct UpgradeCard: View {
             buttons
                 .padding(16)
         }
+        .alert(isPresented: $viewModel.showAlertRestored){
+            Alert(title: Text("Purchase Restored"), message: Text("Your purchase has been restored, Ads have now been removed"), dismissButton: .default(Text("OK")))
+        }
+        .alert(isPresented: $viewModel.showAlertFailed){
+            Alert(title: Text("Purchase Failed"), message: Text("Sorry, unable to complete the purchase. You have not been charged."), dismissButton: .default(Text("OK")))
+        }
+        .onAppear{viewModel.onAppear()}
+        .onDisappear{viewModel.onDisappear()}
     }
 }
 

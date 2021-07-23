@@ -23,7 +23,7 @@ class AboutViewModel : ObservableObject, IAPDelegate {
     init(){
         model = Model.sharedInstance
     }
-    
+
     func onAppear(){
         showMeRelevantAds = !model.settings.useNonPersonalizedAds
         if model.settings.isProMode
