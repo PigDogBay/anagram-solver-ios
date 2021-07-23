@@ -22,11 +22,11 @@ struct AboutCard: View {
 
     private var buttons : some View {
         HStack(){
+            Spacer()
             Button(action:{self.selection = 1}){
-                Text("MORE INFO")
+                Text("SHOW ABOUT")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
-            Spacer()
         }
     }
 
