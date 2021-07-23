@@ -17,7 +17,6 @@ struct AboutCard: View {
             Text("Information about the app")
             Text("Set your Ad preferences")
             Text("View the privacy policy")
-            Text("")
         }
     }
 
