@@ -16,6 +16,8 @@ struct CardTips: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20) {
+                UserGuideCard()
+                    .modifier(CardMod())
                 AboutCard(coordinator: coordinator)
                     .modifier(CardMod())
                 SettingsCard()
