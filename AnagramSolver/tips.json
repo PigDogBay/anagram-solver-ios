@@ -2,7 +2,7 @@
     {
         "id" : 1001,
         "title" : "Anagrams",
-        "subtitle" : "Enter your jumbled letters",
+        "subtitle" : "Find words from jumbled letters",
         "description" : "Enter your letters and the app will then search for any words that are composed of those letters. The app will first find complete anagrams that use all of the letters and then sub-anagrams which use some of the letters, any unused letters will appear in brackets.",
         "example" : "astronomer, maestro (onr)",
         "advanced" : "Scrabble players can use the Pattern filter to fit their letters on the board.",
@@ -20,7 +20,7 @@
     {
         "id" : 1003,
         "title" : "Blank Letters+",
-        "subtitle" : "For anagrams use + as any letter",
+        "subtitle" : "Use + as a blank letter",
         "description" : "For anagrams you can specify a wildcard letter using + which can be any letter. This is useful for Scrabble (use + for the blank tile) and cases where you know most of the letters in a jumbled word.",
         "example" : "scabbard, absorbs (c)",
         "advanced" : "You can use + more than once, eg +++ for 3 blank letters, be careful though as the app will find lots of matches - up to 5000! Use filters to reduce the number of results found, the Pattern filter is useful if you can fix the position of certain letters. Use the Equal To filter to find words of a certain length.",
