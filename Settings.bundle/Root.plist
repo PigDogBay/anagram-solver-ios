@@ -6,6 +6,26 @@
 	<string>Root</string>
 	<key>PreferenceSpecifiers</key>
 	<array>
+        <dict>
+            <key>Type</key>
+            <string>PSToggleSwitchSpecifier</string>
+            <key>Title</key>
+            <string>Automatically show keyboard</string>
+            <key>Key</key>
+            <string>showKeyboard</string>
+            <key>DefaultValue</key>
+            <false/>
+        </dict>
+        <dict>
+            <key>Type</key>
+            <string>PSToggleSwitchSpecifier</string>
+            <key>Title</key>
+            <string>Allow long press on results</string>
+            <key>Key</key>
+            <string>longPressEnabled</string>
+            <key>DefaultValue</key>
+            <true/>
+        </dict>
 		<dict>
 			<key>FooterText</key>
 			<string>There are 9 built-in word lists to choose from including Spanish, French and lists for Scrabble</string>
@@ -177,32 +197,6 @@
             <string>useMonospacedFont</string>
             <key>DefaultValue</key>
             <false/>
-        </dict>
-        <dict>
-            <key>Type</key>
-            <string>PSGroupSpecifier</string>
-            <key>Title</key>
-            <string>Keyboard</string>
-        </dict>
-        <dict>
-            <key>Type</key>
-            <string>PSToggleSwitchSpecifier</string>
-            <key>Title</key>
-            <string>Automatically show keyboard</string>
-            <key>Key</key>
-            <string>showKeyboard</string>
-            <key>DefaultValue</key>
-            <false/>
-        </dict>
-        <dict>
-            <key>Type</key>
-            <string>PSToggleSwitchSpecifier</string>
-            <key>Title</key>
-            <string>Allow long press on results</string>
-            <key>Key</key>
-            <string>longPressEnabled</string>
-            <key>DefaultValue</key>
-            <true/>
         </dict>
 		<dict>
 			<key>Type</key>
