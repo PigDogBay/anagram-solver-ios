@@ -471,7 +471,6 @@
 				TargetAttributes = {
 					4D45EFB31A9DFABA00C40BB4 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = ZYM8DA54T6;
 						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -844,7 +843,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.11.00;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZYM8DA54T6;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AnagramSolver/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -875,7 +874,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.11.00;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ZYM8DA54T6;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AnagramSolver/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
