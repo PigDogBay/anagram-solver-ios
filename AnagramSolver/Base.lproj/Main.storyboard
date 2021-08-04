@@ -102,7 +102,6 @@
                     <connections>
                         <outlet property="searchButton" destination="a8L-df-lOj" id="QZ0-bu-JwH"/>
                         <outlet property="textFieldQuery" destination="a7i-Fj-C2n" id="230-eb-cbu"/>
-                        <segue destination="2tR-EW-1Aq" kind="show" identifier="segueUserGuide" id="D2K-XF-Zb6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1KR-DA-gfW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -149,14 +148,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="2tR-EW-1Aq" kind="show" identifier="definitionSegue" trigger="accessoryAction" id="kV8-yp-vNU"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="VQ0-Lb-tBU" id="jYX-5P-9Iy"/>
+                                    <outlet property="delegate" destination="VQ0-Lb-tBU" id="kVe-JE-CVc"/>
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayg-FS-pz2" customClass="GADBannerView">
@@ -375,21 +372,21 @@
             <objects>
                 <viewController id="2tR-EW-1Aq" customClass="DefinitionViewController" customModule="AnagramSolver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ow2-rk-wKX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7t-WH-hkQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5b-GP-dTL">
-                                <rect key="frame" x="150" y="388.66666666666669" width="75" height="21"/>
+                                <rect key="frame" x="150" y="432.66666666666669" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="utU-ey-tE8">
-                                <rect key="frame" x="169" y="343.66666666666669" width="37" height="37"/>
+                                <rect key="frame" x="169" y="387.66666666666669" width="37" height="37"/>
                                 <color key="color" red="0.2901960784" green="0.43529411759999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -419,9 +416,6 @@
             <point key="canvasLocation" x="991" y="-497"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="D2K-XF-Zb6"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
         <namedColor name="navBackground">

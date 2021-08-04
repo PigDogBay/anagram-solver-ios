@@ -10,7 +10,7 @@ import UIKit
 import GoogleMobileAds
 import SwiftUtils
 
-class MatchesViewController: UIViewController, AppStateChangeObserver, UITableViewDataSource
+class MatchesViewController: UIViewController, AppStateChangeObserver, UITableViewDataSource, UITableViewDelegate
 {
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     fileprivate let cellIdentifier = "MatchesCell"
@@ -191,9 +191,13 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     }
     
     func showDefinition(word : String, url : String){
-        self.selectedWord = word;
-        self.wordDefinitionUrl = url;
-        performSegue(withIdentifier: self.definitionSegueId, sender: self)
+        showWebPage(address: url)
+    }
+    
+    private func showWebPage(address : String) {
+        if let url = URL(string: address) {
+            UIApplication.shared.open(url, options: [:])
+        }
     }
     
     override func didReceiveMemoryWarning()
@@ -247,6 +251,13 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
         return cell
     }
     
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        if let word = model.matches.getMatch(section: indexPath.section, row: indexPath.row) {
+           let url = model.settings.getDefinitionUrl(word: word)
+           showWebPage(address: url)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "\(model.matches.getNumberOfLetters(section: section)) letters"
     }
@@ -254,6 +265,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return model.matches.sectionTitles
     }
+    
     
     // MARK: - StateChangeObserver Conformance
     func appStateChanged(_ newState: AppStates)
