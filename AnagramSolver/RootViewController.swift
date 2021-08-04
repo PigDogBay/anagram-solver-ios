@@ -29,6 +29,10 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         }
     }
 
+    @IBAction func settingsClicked(_ sender: Any) {
+        mpdbShowSettings()
+    }
+    
     @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
         coordinator.rootVC = self
         coordinator.showCards = Model.sharedInstance.settings.showCardTips
