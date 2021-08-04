@@ -42,8 +42,8 @@ class Ads
     
     private func initializeAds(){
         let requestConfiguration = GADMobileAds.sharedInstance().requestConfiguration
-        //app is rated 17+, so may as well allow mature ads
-        requestConfiguration.maxAdContentRating = .matureAudience
+        //app will be rated 4+, so can only show general ads
+        requestConfiguration.maxAdContentRating = .general
         //Admob SDK guide recommends removing this code for release builds
         #if DEBUG
         requestConfiguration.testDeviceIdentifiers = [
