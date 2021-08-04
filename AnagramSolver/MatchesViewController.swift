@@ -15,10 +15,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     fileprivate let cellIdentifier = "MatchesCell"
     fileprivate var model : Model!
-    fileprivate var selectedWord = ""
-    fileprivate var wordDefinitionUrl = ""
     
-    let definitionSegueId = "definitionSegue"
     static let monospacedFont = UIFont(name: "Menlo-Regular",size: 20.0)
     static let systemFont = UIFont.systemFont(ofSize: 16.0, weight: .regular)
 
@@ -142,25 +139,25 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
         let speakAction = UIAlertAction(title: "Speak", style: .default,
                                         handler: {action in mpdbSpeak(text: word)})
         let collinsAction = UIAlertAction(title: "Collins", style: .default,
-                                             handler: {action in self.showDefinition(word: word, url: WordSearch.getCollinsUrl(word: word))})
+                                             handler: {action in self.showWebPage(WordSearch.getCollinsUrl(word: word))})
         let dictionaryComAction = UIAlertAction(title: "Dictionary.com", style: .default,
-                                         handler: {action in self.showDefinition(word: word, url: WordSearch.getDictionaryComUrl(word: word))})
+                                         handler: {action in self.showWebPage(WordSearch.getDictionaryComUrl(word: word))})
         let googleAction = UIAlertAction(title: "Google Definition", style: .default,
-                                         handler: {action in self.showDefinition(word: word, url: WordSearch.getGoogleDefineUrl(word: word))})
+                                         handler: {action in self.showWebPage(WordSearch.getGoogleDefineUrl(word: word))})
         let lexicoAction = UIAlertAction(title: "Lexico", style: .default,
-                                            handler: {action in self.showDefinition(word: word, url: WordSearch.getLexicoUrl(word: word))})
+                                            handler: {action in self.showWebPage(WordSearch.getLexicoUrl(word: word))})
         let merriamWebsterAction = UIAlertAction(title: "Merriam-Webster", style: .default,
-                                            handler: {action in self.showDefinition(word: word, url: WordSearch.getMerriamWebsterUrl(word: word))})
+                                            handler: {action in self.showWebPage(WordSearch.getMerriamWebsterUrl(word: word))})
         let mwThesaurusAction = UIAlertAction(title: "M-W Thesaurus", style: .default,
-                                            handler: {action in self.showDefinition(word: word, url: WordSearch.getMWThesaurusUrl(word: word))})
+                                            handler: {action in self.showWebPage(WordSearch.getMWThesaurusUrl(word: word))})
         let thesaurusAction = UIAlertAction(title: "Thesaurus.com", style: .default,
-                                             handler: {action in self.showDefinition(word: word, url: WordSearch.getThesaurusComUrl(word: word))})
+                                             handler: {action in self.showWebPage(WordSearch.getThesaurusComUrl(word: word))})
         let wiktionaryAction = UIAlertAction(title: "Wiktionary", style: .default,
-                                            handler: {action in self.showDefinition(word: word, url: WordSearch.getWiktionaryUrl(word: word))})
+                                            handler: {action in self.showWebPage(WordSearch.getWiktionaryUrl(word: word))})
         let wikipediaAction = UIAlertAction(title: "Wikipedia", style: .default,
-                                            handler: {action in self.showDefinition(word: word, url: WordSearch.getWikipediaUrl(word: word))})
+                                            handler: {action in self.showWebPage(WordSearch.getWikipediaUrl(word: word))})
         let wordGameAction = UIAlertAction(title: "Word Game Dictionary", style: .default,
-                                         handler: {action in self.showDefinition(word: word, url: WordSearch.getWordGameDictionaryUrl(word: word))})
+                                         handler: {action in self.showWebPage(WordSearch.getWordGameDictionaryUrl(word: word))})
         
         let copyAction = UIAlertAction(title: "Copy", style: .default, handler: {action in UIPasteboard.general.string = word})
         let copyAllAction = UIAlertAction(title: "Copy All", style: .default, handler: {action in
@@ -190,11 +187,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
         present(controller, animated: true, completion: nil)
     }
     
-    func showDefinition(word : String, url : String){
-        showWebPage(address: url)
-    }
-    
-    private func showWebPage(address : String) {
+    private func showWebPage(_ address : String) {
         if let url = URL(string: address) {
             UIApplication.shared.open(url, options: [:])
         }
@@ -206,27 +199,6 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
         // Dispose of any resources that can be recreated.
         if model != nil {
             model.stop()
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == self.definitionSegueId
-        {
-            if let definitionVC = segue.destination as? DefinitionViewController {
-                if let cell = sender as? UITableViewCell {
-                    //Cell icon press
-                    if let indexPath = matchesTable.indexPath(for: cell) {
-                        if let word = model.matches.getMatch(section: indexPath.section, row: indexPath.row) {
-                            definitionVC.word = word
-                            definitionVC.definitionUrl = model.settings.getDefinitionUrl(word: word)
-                        }
-                    }
-                } else {
-                    //long press
-                    definitionVC.word = selectedWord
-                    definitionVC.definitionUrl = wordDefinitionUrl
-                }
-            }
         }
     }
     
@@ -254,7 +226,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         if let word = model.matches.getMatch(section: indexPath.section, row: indexPath.row) {
            let url = model.settings.getDefinitionUrl(word: word)
-           showWebPage(address: url)
+           showWebPage(url)
         }
     }
     
