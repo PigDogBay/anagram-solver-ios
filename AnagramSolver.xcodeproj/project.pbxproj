@@ -61,7 +61,6 @@
 		4D45EFC11A9DFABA00C40BB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */; };
 		4D45EFC41A9DFABA00C40BB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */; };
 		4D45EFD01A9DFABA00C40BB4 /* AnagramSolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45EFCF1A9DFABA00C40BB4 /* AnagramSolverTests.swift */; };
-		4D45F0161A9E03A400C40BB4 /* DefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0151A9E03A400C40BB4 /* DefinitionViewController.swift */; };
 		4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */; };
 		4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0231A9E487A00C40BB4 /* Model.swift */; };
 		4D9D30EB1D156D5D0088392C /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D30EA1D156D5D0088392C /* IAPHelper.swift */; };
@@ -185,7 +184,6 @@
 		4D45EFC91A9DFABA00C40BB4 /* AnagramSolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnagramSolverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D45EFCE1A9DFABA00C40BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D45EFCF1A9DFABA00C40BB4 /* AnagramSolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolverTests.swift; sourceTree = "<group>"; };
-		4D45F0151A9E03A400C40BB4 /* DefinitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionViewController.swift; sourceTree = "<group>"; };
 		4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		4D45F0231A9E487A00C40BB4 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4D9D30EA1D156D5D0088392C /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
@@ -321,7 +319,6 @@
 		4D1D62BB1E26674F00231DB3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4D45F0151A9E03A400C40BB4 /* DefinitionViewController.swift */,
 				4DF2DE391FACBDBB00F44ADE /* FilterViewController.swift */,
 				4DF2DE3C1FACC4B300F44ADE /* LettersFilterTableViewCell.swift */,
 				4DF2DE3F1FB0A82300F44ADE /* ListViewController.swift */,
@@ -668,7 +665,6 @@
 				00EEA6FD25CABDB10017F6A4 /* TipsData.swift in Sources */,
 				00EEA72C25CAC8B50017F6A4 /* ActivityViewController.swift in Sources */,
 				4DF2DE3D1FACC4B300F44ADE /* LettersFilterTableViewCell.swift in Sources */,
-				4D45F0161A9E03A400C40BB4 /* DefinitionViewController.swift in Sources */,
 				4D9D30EB1D156D5D0088392C /* IAPHelper.swift in Sources */,
 				00EEA72025CAC59D0017F6A4 /* MailView.swift in Sources */,
 				4D45EFBA1A9DFABA00C40BB4 /* AppDelegate.swift in Sources */,

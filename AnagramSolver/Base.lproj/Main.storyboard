@@ -367,54 +367,6 @@
             </objects>
             <point key="canvasLocation" x="2692" y="209"/>
         </scene>
-        <!--Definition-->
-        <scene sceneID="WkY-aR-WMy">
-            <objects>
-                <viewController id="2tR-EW-1Aq" customClass="DefinitionViewController" customModule="AnagramSolver" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ow2-rk-wKX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7t-WH-hkQ">
-                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5b-GP-dTL">
-                                <rect key="frame" x="150" y="432.66666666666669" width="75" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="utU-ey-tE8">
-                                <rect key="frame" x="169" y="387.66666666666669" width="37" height="37"/>
-                                <color key="color" red="0.2901960784" green="0.43529411759999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </activityIndicatorView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="84u-PT-K9w"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="84u-PT-K9w" firstAttribute="centerX" secondItem="L5b-GP-dTL" secondAttribute="centerX" id="24C-rl-a9u"/>
-                            <constraint firstItem="z7t-WH-hkQ" firstAttribute="leading" secondItem="84u-PT-K9w" secondAttribute="leading" id="7lj-Y3-ZxO"/>
-                            <constraint firstItem="84u-PT-K9w" firstAttribute="trailing" secondItem="z7t-WH-hkQ" secondAttribute="trailing" id="BKc-HQ-U1w"/>
-                            <constraint firstAttribute="bottom" secondItem="z7t-WH-hkQ" secondAttribute="bottom" id="Gn0-Rr-8E5"/>
-                            <constraint firstItem="84u-PT-K9w" firstAttribute="centerX" secondItem="utU-ey-tE8" secondAttribute="centerX" id="RvX-KF-dSa"/>
-                            <constraint firstItem="z7t-WH-hkQ" firstAttribute="top" secondItem="84u-PT-K9w" secondAttribute="top" id="Ufg-40-YAd"/>
-                            <constraint firstItem="L5b-GP-dTL" firstAttribute="top" secondItem="utU-ey-tE8" secondAttribute="bottom" constant="8" id="cOa-cB-lp6"/>
-                            <constraint firstAttribute="centerY" secondItem="utU-ey-tE8" secondAttribute="centerY" id="yyj-eW-CSg"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Definition" id="DWD-wG-j73"/>
-                    <connections>
-                        <outlet property="loadingIndicator" destination="utU-ey-tE8" id="bvS-YX-YIE"/>
-                        <outlet property="loadingLabel" destination="L5b-GP-dTL" id="ewe-sy-EOL"/>
-                        <outlet property="navigationBar" destination="DWD-wG-j73" id="KUL-Nx-zAb"/>
-                        <outlet property="webViewContainer" destination="z7t-WH-hkQ" id="2td-cq-4hg"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vzp-93-vMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="991" y="-497"/>
-        </scene>
     </scenes>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
