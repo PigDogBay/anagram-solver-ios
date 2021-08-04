@@ -113,12 +113,17 @@ struct AboutView: View {
                 .font(.body)
             HStack {
                 Spacer()
+                Button(action: coordinator.sendFeedback){
+                    Text("FEEDBACK")
+                        .modifier(AboutButtonMod())
+                }.buttonStyle(BorderlessButtonStyle())
+                .padding(.leading, 16)
                 Button(action: AboutViewModel.rate){
                     Text("RATE")
                         .modifier(AboutButtonMod())
                 }.buttonStyle(BorderlessButtonStyle())
                 .padding(.leading, 16)
-            }
+            }.padding(.bottom, 16)
         }
     }
 
