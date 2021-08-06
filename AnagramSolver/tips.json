@@ -46,7 +46,7 @@
     },
     {
         "id" : 1006,
-        "title" : "Supergrams",
+        "title" : "Supergrams*",
         "subtitle" : "Use * as one or more blank letters",
         "description" : "Supergrams will find words that contain all of your letters. Type * after your letters, to tell the app to do a supergram search",
         "example" : "breathtakingly, heartbreakingly",
