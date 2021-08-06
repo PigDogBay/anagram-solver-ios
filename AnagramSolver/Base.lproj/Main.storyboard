@@ -132,6 +132,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="8RR-Nh-2cY">
                                 <rect key="frame" x="0.0" y="37" width="375" height="603"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" name="accentColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="MatchesCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="MatchesCell" textLabel="sVz-Cd-ldF" style="IBUITableViewCellStyleDefault" id="t0m-df-1iP">
                                         <rect key="frame" x="0.0" y="49" width="375" height="44"/>
@@ -148,6 +149,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" name="accentColor"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -370,6 +372,9 @@
     </scenes>
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
+        <namedColor name="accentColor">
+            <color red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="navBackground">
             <color red="0.22745098039215686" green="0.34509803921568627" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
