@@ -64,6 +64,16 @@ struct AboutView: View {
         }
     }
     
+    private var adPersonalizeButton : some View {
+        Toggle(isOn: $viewModel.showMeRelevantAds) {
+            if viewModel.showMeRelevantAds {
+                Text("Show me relevant ads")
+            } else {
+                Text("Show me ads that are less relevant")
+            }
+        }
+    }
+    
     private var adsSection : some View {
         VStack(alignment: .leading, spacing: 16){
             Text("ADVERTISEMENTS")
@@ -97,15 +107,14 @@ struct AboutView: View {
             }
             Text("This app will use your data to tailor ads to you. Our partners will collect data and use an unique identifier on your device to show you ads. You select here if we can continue to use your data to tailor ads for you.")
                 .font(.body)
-            Toggle(isOn: $viewModel.showMeRelevantAds) {
-                if viewModel.showMeRelevantAds {
-                    Text("Show me relevant ads")
-                } else {
-                    Text("Show me ads that are less relevant")
-                }
+            if #available(iOS 14.0, *) {
+                adPersonalizeButton.toggleStyle(SwitchToggleStyle(tint: Color("accentColor")))
+            } else {
+                adPersonalizeButton
             }
         }
     }
+    
     private var helpOutSection : some View {
         VStack(alignment: .leading, spacing: 16){
             Text("HELP OUT")
