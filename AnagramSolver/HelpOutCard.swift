@@ -13,7 +13,7 @@ struct HelpOutCard: View {
     @State private var isPresented: Bool = false
 
     private var description : some View {
-        VStack(alignment: .leading, spacing: 5){
+        VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
             Text("Keep updates coming")
             Text("* Rate the app")
             Text("* Send any suggestions")

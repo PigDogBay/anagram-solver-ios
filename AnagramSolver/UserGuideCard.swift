@@ -11,7 +11,7 @@ import SwiftUI
 struct UserGuideCard: View {
 
     private var description : some View {
-        VStack(alignment: .leading, spacing: 5){
+        VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
             Text("Online User Guide")
             Text("* In-depth help")
             Text("* Crack word games")

@@ -13,7 +13,7 @@ struct UpgradeCard: View {
     @ObservedObject var viewModel = AboutViewModel()
 
     private var description : some View {
-        VStack(alignment: .leading, spacing: 5){
+        VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
             Text("* Remove Ads")
             Text("* One time purchase")
             Text("* More screen space")

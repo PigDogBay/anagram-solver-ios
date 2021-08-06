@@ -13,7 +13,7 @@ struct SettingsCard: View {
     @State var selection : Int? = nil
 
     private var description : some View {
-        VStack(alignment: .leading, spacing: 5){
+        VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
             Text("* Select the word list")
             Text("* Choose dictionary definition")
             Text("* Change the appearance")

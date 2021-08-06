@@ -12,7 +12,7 @@ struct FilterCard: View {
     @State var selection : Int? = nil
 
     private var description : some View {
-        VStack(alignment: .leading, spacing: 5){
+        VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
             Text("Too many matches?")
             Text("Refine your search, filter by")
             Text("* Word size")

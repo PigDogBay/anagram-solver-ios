@@ -8,13 +8,15 @@
 
 import SwiftUI
 
+let TIP_TEXT_SPACING = CGFloat(10.0)
+
 struct TipCard: View {
     let tip : Tip
     @ObservedObject var coordinator : Coordinator
     @State var selection : Int? = nil
     
     private var description : some View {
-        VStack(alignment: .leading, spacing: 5){
+        VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
             Text(tip.subtitle)
             showMeExample
             Text(tip.example)
@@ -70,7 +72,11 @@ struct CardTitle : View {
                 .scaleEffect(CGSize(width: 1.25,height: 1.25))
                 .padding(16)
             Spacer()
-            Text(title).font(.title)
+            if #available(iOS 14.0, *) {
+                Text(title).font(.title2.bold())
+            } else {
+                Text(title).font(.title)
+            }
             Spacer()
             Spacer()
         }

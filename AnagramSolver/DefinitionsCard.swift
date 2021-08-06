@@ -12,7 +12,7 @@ struct DefinitionsCard: View {
     @State var selection : Int? = nil
 
     private var description : some View {
-        VStack(alignment: .leading, spacing: 5){
+        VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
             Text("* Tap on a result's info icon")
             Text("to look up the word on the web.")
             Text("* Touch and hold a result to")

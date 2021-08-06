@@ -12,7 +12,7 @@ struct AutoTestCard: View {
     @ObservedObject var coordinator : Coordinator
 
     private var description : some View {
-        VStack(alignment: .leading, spacing: 5){
+        VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
             Text("Generates random queries")
         }
     }
