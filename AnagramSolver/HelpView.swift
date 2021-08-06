@@ -11,7 +11,7 @@ import SwiftUI
 struct HelpView: View {
     @ObservedObject var coordinator : Coordinator
     @ObservedObject var viewModel : HelpViewModel
-    
+
     var body: some View {
         Form {
             HStack {
@@ -32,15 +32,16 @@ struct HelpView: View {
                     .underline()
                     .padding(.top, 8)
                     .padding(.bottom, 16)
-                Text("Try ")+Text(viewModel.tip.showMe).foregroundColor(.blue) + Text(" to find:")
+                Text("Try ")+Text(viewModel.tip.showMe).foregroundColor(Color("exampleQuery")) + Text(" to find:")
                 Text(viewModel.tip.example)
-                    .foregroundColor(.red)
+                    .foregroundColor(Color("exampleResult"))
                     .padding(.top, 8)
                     .padding(.bottom, 8)
                 HStack {
                     Spacer()
                     Button(action: {self.viewModel.showMe(coordinator: self.coordinator)}){
-                        Text("Show Me")
+                        Text("SHOW ME")
+                            .modifier(TipButtonMod())
                     }.buttonStyle(BorderlessButtonStyle())
                 }
             }
