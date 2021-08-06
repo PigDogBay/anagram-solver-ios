@@ -56,7 +56,7 @@ struct CardTips: View {
                     #endif
                 }
             }
-            .padding(.horizontal)
+            .padding(.horizontal,8)
             .padding(.top, 16)
             .padding(.bottom, 48)
         }
