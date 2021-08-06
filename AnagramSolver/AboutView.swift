@@ -38,6 +38,7 @@ struct AboutView: View {
             Button(action: coordinator.sendFeedback){
                 Text(Strings.emailAddress)
                     .font(.body)
+                    .foregroundColor(Color("materialButton"))
                     .underline()
             }.buttonStyle(BorderlessButtonStyle())
 
@@ -152,8 +153,8 @@ struct AboutView: View {
 struct AboutButtonMod : ViewModifier {
     func body(content: Content) -> some View {
         content
-            .font(.footnote)
-            .foregroundColor(.accentColor)
+            .font(.footnote.bold())
+            .foregroundColor(Color("materialButton"))
     }
 }
 
