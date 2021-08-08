@@ -32,7 +32,7 @@ class Settings
                 case "black":
                     return UIColor.label
                 case "blue":
-                    return UIColor.systemBlue
+                    return UIColor(named: "exampleQuery") ?? UIColor.systemBlue
                 case "green":
                     return UIColor(named: "highlightGreen") ?? UIColor.systemGreen
                 case "yellow":
@@ -41,7 +41,7 @@ class Settings
                     break
                 }
             }
-            return UIColor.systemRed
+            return UIColor(named: "exampleResult") ?? UIColor.systemRed
         }
     }
 
