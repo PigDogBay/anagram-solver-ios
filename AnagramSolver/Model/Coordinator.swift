@@ -17,7 +17,12 @@ class Coordinator : ObservableObject {
     @Published var showCards = true
     @Published var selection : Int? = nil
     
-    static let SHOW_SETTINGS = 1
+    let SHOW_ABOUT = 1
+    let SHOW_DEFINITION_HELP = 2
+    let SHOW_FILTER_HELP = 3
+    let SHOW_HELP = 4
+    let SHOW_SETTINGS = 5
+    let SHOW_SETTINGS_HELP = 6
 
     func showHelpExample(example : String){
         rootVC?.showMe(query: example)
@@ -31,8 +36,8 @@ class Coordinator : ObservableObject {
         AutoTest.start(model: Model.sharedInstance, rootVC: rootVC!)
     }
     
-    func showSettings(){
-        selection = Coordinator.SHOW_SETTINGS
+    func show(_ viewId : Int){
+        selection = viewId
     }
 
     func updateSettings(){

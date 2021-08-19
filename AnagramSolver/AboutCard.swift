@@ -10,7 +10,6 @@ import SwiftUI
 
 struct AboutCard: View {
     @ObservedObject var coordinator : Coordinator
-    @State var selection : Int? = nil
 
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
@@ -23,7 +22,7 @@ struct AboutCard: View {
     private var buttons : some View {
         HStack(){
             Spacer()
-            Button(action:{self.selection = 1}){
+            Button(action:{coordinator.show(coordinator.SHOW_ABOUT)}){
                 Text("SHOW ABOUT")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
@@ -38,10 +37,6 @@ struct AboutCard: View {
                 .padding(.top,2)
             buttons
                 .padding(16)
-            NavigationLink(destination: AboutView(coordinator: coordinator), tag: 1, selection: $selection){
-                    EmptyView()
-            }
-            
         }
     }
 }
