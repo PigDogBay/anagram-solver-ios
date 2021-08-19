@@ -26,6 +26,11 @@ struct RootView: View {
                        selection: $coordinator.selection){
             EmptyView()
         }
+        NavigationLink(destination: HelpView(coordinator: coordinator, viewModel: HelpViewModel(tip: coordinator.tip)),
+                       tag: coordinator.SHOW_HELP,
+                       selection: $coordinator.selection){
+            EmptyView()
+        }
         NavigationLink(destination: SettingsHelpView(),
                        tag: coordinator.SHOW_SETTINGS_HELP,
                        selection: $coordinator.selection){

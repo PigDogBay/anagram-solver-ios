@@ -17,6 +17,8 @@ class Coordinator : ObservableObject {
     @Published var showCards = true
     @Published var selection : Int? = nil
     
+    var tip : Tip = anagramTip
+    
     let SHOW_ABOUT = 1
     let SHOW_DEFINITION_HELP = 2
     let SHOW_FILTER_HELP = 3
@@ -39,9 +41,15 @@ class Coordinator : ObservableObject {
     func show(_ viewId : Int){
         selection = viewId
     }
+    
+    func show(_ tip : Tip){
+        self.tip = tip
+        selection = SHOW_HELP
+    }
 
     func updateSettings(){
         rootVC?.appEnterForgeround()
     }
+    
 }
 

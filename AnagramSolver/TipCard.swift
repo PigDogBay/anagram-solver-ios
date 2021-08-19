@@ -13,7 +13,6 @@ let TIP_TEXT_SPACING = CGFloat(10.0)
 struct TipCard: View {
     let tip : Tip
     @ObservedObject var coordinator : Coordinator
-    @State var selection : Int? = nil
     
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
@@ -34,7 +33,7 @@ struct TipCard: View {
     
     private var buttons : some View {
         HStack(){
-            Button(action:{self.selection = 1}){
+            Button(action:{coordinator.show(tip)}){
                 Text("MORE INFO")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
@@ -54,9 +53,6 @@ struct TipCard: View {
                 .padding(.top,2)
             buttons
                 .padding(16)
-            NavigationLink(destination: HelpView(coordinator: coordinator, viewModel: HelpViewModel(tip: tip)), tag: 1, selection: $selection){
-                EmptyView()
-            }
         }
     }
 }
