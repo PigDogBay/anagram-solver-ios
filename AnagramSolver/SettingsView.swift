@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    @ObservedObject var coordinator : Coordinator
+    private let coordinator = Coordinator.sharedInstance
     @ObservedObject var viewModel = SettingsViewModel()
     
     private var tipsToggle : some View {
@@ -42,6 +42,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(coordinator: Coordinator())
+        SettingsView()
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 
 @available(iOS 14.0, *)
 struct CardTips: View {
-    @ObservedObject var coordinator : Coordinator
+    private let coordinator = Coordinator.sharedInstance
     let columns = [GridItem(.adaptive(minimum: 350))]
     
     var body: some View {
@@ -18,40 +18,40 @@ struct CardTips: View {
             LazyVGrid(columns: columns, spacing: 16) {
                 
                 Group {
-                    TipCard(tip: anagramTip, coordinator: coordinator)
+                    TipCard(tip: anagramTip)
                         .modifier(CardMod())
-                    TipCard(tip: blankLettersTip, coordinator: coordinator)
+                    TipCard(tip: blankLettersTip)
                         .modifier(CardMod())
                     DefinitionsCard()
                         .modifier(CardMod())
                     FilterCard()
                         .modifier(CardMod())
-                    TipCard(tip: twoWordAnagramTip, coordinator: coordinator)
+                    TipCard(tip: twoWordAnagramTip)
                         .modifier(CardMod())
-                    SettingsCard(coordinator: coordinator)
+                    SettingsCard()
                         .modifier(CardMod())
-                    TipCard(tip: crosswordTip, coordinator: coordinator)
+                    TipCard(tip: crosswordTip)
                         .modifier(CardMod())
-                    TipCard(tip: shortcutsTip, coordinator: coordinator)
+                    TipCard(tip: shortcutsTip)
                         .modifier(CardMod())
-                    TipCard(tip: supergramsTip, coordinator: coordinator)
+                    TipCard(tip: supergramsTip)
                         .modifier(CardMod())
                 }
                 Group {
-                    TipCard(tip: codewordsTip, coordinator: coordinator)
+                    TipCard(tip: codewordsTip)
                         .modifier(CardMod())
-                    TipCard(tip: prefixSuffixTip, coordinator: coordinator)
+                    TipCard(tip: prefixSuffixTip)
                         .modifier(CardMod())
-                    AboutCard(coordinator: coordinator)
+                    AboutCard()
                         .modifier(CardMod())
                     UserGuideCard()
                         .modifier(CardMod())
-                    HelpOutCard(coordinator: coordinator)
+                    HelpOutCard()
                         .modifier(CardMod())
-                    UpgradeCard(coordinator: coordinator)
+                    UpgradeCard()
                         .modifier(CardMod())
                     #if DEBUG
-                    AutoTestCard(coordinator: coordinator)
+                    AutoTestCard()
                         .modifier(CardMod())
                     #endif
                 }
@@ -80,6 +80,6 @@ struct CardMod : ViewModifier {
 @available(iOS 14.0, *)
 struct CardTips_Previews: PreviewProvider {
     static var previews: some View {
-        CardTips(coordinator: Coordinator())
+        CardTips()
     }
 }

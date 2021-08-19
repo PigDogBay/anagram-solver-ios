@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct AboutCard: View {
-    @ObservedObject var coordinator : Coordinator
+    private let coordinator = Coordinator.sharedInstance
 
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
@@ -44,8 +44,8 @@ struct AboutCard: View {
 struct AboutCard_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            AboutCard(coordinator: Coordinator())
-            AboutCard(coordinator: Coordinator())
+            AboutCard()
+            AboutCard()
                 .preferredColorScheme(.dark)
             
         }.previewLayout(.fixed(width: 300, height: 240))

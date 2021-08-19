@@ -12,7 +12,7 @@ let TIP_TEXT_SPACING = CGFloat(10.0)
 
 struct TipCard: View {
     let tip : Tip
-    @ObservedObject var coordinator : Coordinator
+    private let coordinator = Coordinator.sharedInstance
     
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
@@ -90,10 +90,10 @@ struct TipButtonMod : ViewModifier {
 struct TipCard_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            TipCard(tip: tipsData[0],coordinator: Coordinator())
+            TipCard(tip: tipsData[0])
                 .preferredColorScheme(.dark)
-            TipCard(tip: tipsData[1],coordinator: Coordinator())
-            TipCard(tip: tipsData[2],coordinator: Coordinator())
+            TipCard(tip: tipsData[1])
+            TipCard(tip: tipsData[2])
         }
         .previewLayout(.fixed(width: 300, height: 210))
     }

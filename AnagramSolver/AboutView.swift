@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AboutView: View {
     
-    @ObservedObject var coordinator : Coordinator
+    private let coordinator = Coordinator.sharedInstance
     @ObservedObject var viewModel = AboutViewModel()
     
     private var title : some View {
@@ -169,6 +169,6 @@ struct AboutButtonMod : ViewModifier {
 
 struct AboutView_Previews: PreviewProvider {
     static var previews: some View {
-        AboutView(coordinator: Coordinator())
+        AboutView()
     }
 }

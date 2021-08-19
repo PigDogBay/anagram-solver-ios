@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct HelpOutCard: View {
-    @ObservedObject var coordinator : Coordinator
+    private let coordinator = Coordinator.sharedInstance
     @State private var isPresented: Bool = false
 
     private var description : some View {
@@ -58,8 +58,8 @@ struct HelpOutCard: View {
 struct HelpOutCard_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            HelpOutCard(coordinator: Coordinator())
-            HelpOutCard(coordinator: Coordinator())
+            HelpOutCard()
+            HelpOutCard()
                 .preferredColorScheme(.dark)
             
         }.previewLayout(.fixed(width: 300, height: 240))

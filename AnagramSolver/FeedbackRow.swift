@@ -9,10 +9,8 @@
 import SwiftUI
 
 struct FeedbackRow: View {
-    @ObservedObject var coordinator : Coordinator
-    
     var body: some View {
-        Button(action: coordinator.sendFeedback){
+        Button(action: Coordinator.sharedInstance.sendFeedback){
             HStack {
                 Image(systemName: "envelope")
                     .font(Font.system(.largeTitle))
@@ -31,9 +29,9 @@ struct FeedbackRow: View {
 struct FeedbackRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            FeedbackRow(coordinator: Coordinator())
-            FeedbackRow(coordinator: Coordinator())
-            FeedbackRow(coordinator: Coordinator())
+            FeedbackRow()
+            FeedbackRow()
+            FeedbackRow()
         }
         .previewLayout(.fixed(width: 300, height: 70))
     }

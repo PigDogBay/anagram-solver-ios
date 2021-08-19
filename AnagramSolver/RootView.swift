@@ -9,19 +9,19 @@
 import SwiftUI
 
 struct RootView: View {
-    @ObservedObject var coordinator : Coordinator
+    @ObservedObject var coordinator = Coordinator.sharedInstance
     var body: some View {
         if #available(iOS 14.0, *) {
             if coordinator.showCards {
-                CardTips(coordinator: coordinator)
+                CardTips()
             } else {
-                TipsView(coordinator: coordinator)
+                TipsView()
                     .ignoresSafeArea()
             }
         } else {
-            TipsView(coordinator: coordinator)
+            TipsView()
         }
-        NavigationLink(destination: AboutView(coordinator: coordinator),
+        NavigationLink(destination: AboutView(),
                        tag: coordinator.SHOW_ABOUT,
                        selection: $coordinator.selection){
             EmptyView()
@@ -36,7 +36,7 @@ struct RootView: View {
                        selection: $coordinator.selection){
             EmptyView()
         }
-        NavigationLink(destination: HelpView(coordinator: coordinator, viewModel: HelpViewModel(tip: coordinator.tip)),
+        NavigationLink(destination: HelpView(viewModel: HelpViewModel(tip: coordinator.tip)),
                        tag: coordinator.SHOW_HELP,
                        selection: $coordinator.selection){
             EmptyView()
@@ -46,7 +46,7 @@ struct RootView: View {
                        selection: $coordinator.selection){
             EmptyView()
         }
-        NavigationLink(destination: SettingsView(coordinator: coordinator),
+        NavigationLink(destination: SettingsView(),
                        tag: coordinator.SHOW_SETTINGS,
                        selection: $coordinator.selection){
             EmptyView()
@@ -56,6 +56,6 @@ struct RootView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView(coordinator: Coordinator())
+        RootView()
     }
 }

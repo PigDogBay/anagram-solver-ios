@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftUtils
 
 struct SettingsCard: View {
-    @ObservedObject var coordinator : Coordinator
+    private let coordinator = Coordinator.sharedInstance
 
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
@@ -49,8 +49,8 @@ struct SettingsCard: View {
 struct SettingsCard_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SettingsCard(coordinator: Coordinator())
-            SettingsCard(coordinator: Coordinator())
+            SettingsCard()
+            SettingsCard()
                 .preferredColorScheme(.dark)
             
         }.previewLayout(.fixed(width: 300, height: 220))

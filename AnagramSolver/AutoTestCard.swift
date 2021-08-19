@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct AutoTestCard: View {
-    @ObservedObject var coordinator : Coordinator
+    private let coordinator = Coordinator.sharedInstance
 
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
@@ -42,8 +42,8 @@ struct AutoTestCard: View {
 struct AutoTestCard_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            AutoTestCard(coordinator: Coordinator())
-            AutoTestCard(coordinator: Coordinator())
+            AutoTestCard()
+            AutoTestCard()
                 .preferredColorScheme(.dark)
             
         }.previewLayout(.fixed(width: 300, height: 240))

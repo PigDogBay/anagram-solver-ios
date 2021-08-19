@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct UpgradeCard: View {
-    @ObservedObject var coordinator : Coordinator
+    private let coordinator = Coordinator.sharedInstance
     @ObservedObject var viewModel = AboutViewModel()
 
     private var description : some View {
@@ -58,8 +58,8 @@ struct UpgradeCard: View {
 struct UpgradeCard_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            UpgradeCard(coordinator: Coordinator())
-            UpgradeCard(coordinator: Coordinator())
+            UpgradeCard()
+            UpgradeCard()
                 .preferredColorScheme(.dark)
             
         }.previewLayout(.fixed(width: 300, height: 240))

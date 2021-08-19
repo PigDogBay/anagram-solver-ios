@@ -9,12 +9,12 @@
 import SwiftUI
 
 struct TipsView: View {
-    @ObservedObject var coordinator : Coordinator
+    private let coordinator = Coordinator.sharedInstance
 
     var body: some View {
         List {
             ForEach(tipsData) { tip in
-                LinkedTipRow(coordinator: coordinator, viewModel: HelpViewModel(tip: tip))
+                LinkedTipRow(viewModel: HelpViewModel(tip: tip))
             }
             NavigationLink(destination: FilterHelpView()){
                 FilterRow()
@@ -23,17 +23,17 @@ struct TipsView: View {
                 DefinitionRow()
             }
             UserGuideRow()
-            NavigationLink(destination: AboutView(coordinator: coordinator)){
+            NavigationLink(destination: AboutView()){
                 AboutRow()
             }
-            NavigationLink(destination: SettingsView(coordinator: coordinator)){
+            NavigationLink(destination: SettingsView()){
                 SettingsRow()
             }
-            FeedbackRow(coordinator: coordinator)
+            FeedbackRow()
             RateRow()
             TellFriendRow()
             #if DEBUG
-            AutomatedTestRow(coordinator: coordinator)
+            AutomatedTestRow()
             #endif
         }
         .padding(.leading,8)
@@ -50,10 +50,9 @@ struct TipsView: View {
  which allows TipRow to pop the view when the show me button is pressed.
  */
 struct LinkedTipRow : View {
-    let coordinator : Coordinator
     @ObservedObject var viewModel : HelpViewModel
     var body : some View {
-        NavigationLink(destination: HelpView(coordinator: coordinator, viewModel: viewModel), isActive: $viewModel.showTip){
+        NavigationLink(destination: HelpView(viewModel: viewModel), isActive: $viewModel.showTip){
             TipRow(tip: viewModel.tip)
         }
     }
@@ -61,6 +60,6 @@ struct LinkedTipRow : View {
 
 struct TipsView_Previews: PreviewProvider {
     static var previews: some View {
-        TipsView(coordinator: Coordinator())
+        TipsView()
     }
 }

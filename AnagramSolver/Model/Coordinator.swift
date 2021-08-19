@@ -13,8 +13,9 @@ import Combine
 ///Deals with interactions between views and holds shared observed variables
 class Coordinator : ObservableObject {
 
-    //Singleton
+    //Singleton, occasionally get null pointer crashes if try to use it as Environment variable
     static let sharedInstance = Coordinator()
+    private init(){}
 
     var rootVC : RootViewController?
     @Published var showCards = true
@@ -28,7 +29,7 @@ class Coordinator : ObservableObject {
     let SHOW_HELP = 4
     let SHOW_SETTINGS = 5
     let SHOW_SETTINGS_HELP = 6
-
+    
     func showHelpExample(example : String){
         rootVC?.showMe(query: example)
     }
