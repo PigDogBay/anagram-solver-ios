@@ -26,7 +26,9 @@ struct TipsView: View {
             NavigationLink(destination: AboutView(coordinator: coordinator)){
                 AboutRow()
             }
-            SettingsRow()
+            NavigationLink(destination: SettingsView(coordinator: coordinator)){
+                SettingsRow()
+            }
             FeedbackRow(coordinator: coordinator)
             RateRow()
             TellFriendRow()

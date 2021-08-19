@@ -28,5 +28,8 @@ class Coordinator : ObservableObject {
         AutoTest.start(model: Model.sharedInstance, rootVC: rootVC!)
     }
 
+    func updateSettings(){
+        rootVC?.appEnterForgeround()
+    }
 }
 

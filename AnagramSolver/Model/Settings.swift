@@ -129,6 +129,12 @@ class Settings
         get {
             return UserDefaults.standard.bool(forKey: showCardTipsKey)
         }
+        set(flag) {
+            if flag != showCardTips {
+                let defaults = UserDefaults.standard
+                defaults.set(flag, forKey: showCardTipsKey)
+            }
+        }
     }
     
     var useNonPersonalizedAds : Bool {

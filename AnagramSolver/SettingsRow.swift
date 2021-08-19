@@ -11,18 +11,16 @@ import SwiftUtils
 
 struct SettingsRow: View {
     var body: some View {
-        Button(action: mpdbShowSettings){
-            HStack {
-                Image(systemName: "gear")
-                    .font(Font.system(.largeTitle))
-                    .foregroundColor(Color.blue)
-                    .padding(8)
-                VStack(alignment: .leading){
-                    Text("Settings").font(.title)
-                    Text("Change the word list and more").font(.footnote)
-                }
-                Spacer()
+        HStack {
+            Image(systemName: "gear")
+                .font(Font.system(.largeTitle))
+                .foregroundColor(Color.blue)
+                .padding(8)
+            VStack(alignment: .leading){
+                Text("Settings").font(.title)
+                Text("Change the word list and more").font(.footnote)
             }
+            Spacer()
         }
     }
 }

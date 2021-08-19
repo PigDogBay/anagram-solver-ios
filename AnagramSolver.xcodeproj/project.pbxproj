@@ -11,6 +11,8 @@
 		003E10EB253EF72400AE8155 /* wordlist-fr.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10E7253EF72400AE8155 /* wordlist-fr.txt */; };
 		003E10EC253EF72400AE8155 /* wordlist-de.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10E9253EF72400AE8155 /* wordlist-de.txt */; };
 		003E10ED253EF72400AE8155 /* wordlist-es.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10EA253EF72400AE8155 /* wordlist-es.txt */; };
+		004AA91C26CD306D00A63C47 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA91B26CD306D00A63C47 /* SettingsView.swift */; };
+		004AA91F26CE565F00A63C47 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA91E26CE565F00A63C47 /* SettingsViewModel.swift */; };
 		0051B66225CC194300AB8B9D /* UserGuideRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0051B66125CC194300AB8B9D /* UserGuideRow.swift */; };
 		005BCB3226AAC69700DF44CE /* UserGuideCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BCB3126AAC69700DF44CE /* UserGuideCard.swift */; };
 		005BCB3526AACA2400DF44CE /* HelpOutCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BCB3426AACA2400DF44CE /* HelpOutCard.swift */; };
@@ -131,6 +133,8 @@
 		003E10E7253EF72400AE8155 /* wordlist-fr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-fr.txt"; sourceTree = "<group>"; };
 		003E10E9253EF72400AE8155 /* wordlist-de.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-de.txt"; sourceTree = "<group>"; };
 		003E10EA253EF72400AE8155 /* wordlist-es.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-es.txt"; sourceTree = "<group>"; };
+		004AA91B26CD306D00A63C47 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		004AA91E26CE565F00A63C47 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		0051B66125CC194300AB8B9D /* UserGuideRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuideRow.swift; sourceTree = "<group>"; };
 		005BCB3126AAC69700DF44CE /* UserGuideCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuideCard.swift; sourceTree = "<group>"; };
 		005BCB3426AACA2400DF44CE /* HelpOutCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpOutCard.swift; sourceTree = "<group>"; };
@@ -246,6 +250,7 @@
 				4DA0C3F6236B0FC800AF693B /* Matches.swift */,
 				4D45F0231A9E487A00C40BB4 /* Model.swift */,
 				4D45D7B21E2CF0C500EC2D27 /* Settings.swift */,
+				004AA91E26CE565F00A63C47 /* SettingsViewModel.swift */,
 				0029A03425307170002E96D1 /* Strings.swift */,
 				00EEA6FC25CABDB10017F6A4 /* TipsData.swift */,
 				4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */,
@@ -264,6 +269,7 @@
 				00EEA6F925CABCA60017F6A4 /* TipsView.swift */,
 				006D010426A1B89000DA083D /* CardTips.swift */,
 				00F17DD326A9ABD000452020 /* RootView.swift */,
+				004AA91B26CD306D00A63C47 /* SettingsView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -644,6 +650,7 @@
 				00F17DD426A9ABD000452020 /* RootView.swift in Sources */,
 				4D45D7B31E2CF0C500EC2D27 /* Settings.swift in Sources */,
 				4DA0C3F7236B0FC800AF693B /* Matches.swift in Sources */,
+				004AA91C26CD306D00A63C47 /* SettingsView.swift in Sources */,
 				00EEA6FA25CABCA60017F6A4 /* TipsView.swift in Sources */,
 				00EEA72F25CACB430017F6A4 /* AboutView.swift in Sources */,
 				006D010226A1936600DA083D /* TipCard.swift in Sources */,
@@ -656,6 +663,7 @@
 				00F17DDF26AAB8EB00452020 /* AboutCard.swift in Sources */,
 				00EEA71125CABFE50017F6A4 /* SettingsRow.swift in Sources */,
 				4DF2DE3A1FACBDBB00F44ADE /* FilterViewController.swift in Sources */,
+				004AA91F26CE565F00A63C47 /* SettingsViewModel.swift in Sources */,
 				4D9E43AA1FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift in Sources */,
 				00EEA70D25CABFE50017F6A4 /* TipRow.swift in Sources */,
 				005BCB3526AACA2400DF44CE /* HelpOutCard.swift in Sources */,

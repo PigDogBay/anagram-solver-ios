@@ -28,7 +28,7 @@ struct CardTips: View {
                         .modifier(CardMod())
                     TipCard(tip: twoWordAnagramTip, coordinator: coordinator)
                         .modifier(CardMod())
-                    SettingsCard()
+                    SettingsCard(coordinator: coordinator)
                         .modifier(CardMod())
                     TipCard(tip: crosswordTip, coordinator: coordinator)
                         .modifier(CardMod())
