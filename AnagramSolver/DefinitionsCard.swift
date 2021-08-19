@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct DefinitionsCard: View {
-    @State var selection : Int? = nil
 
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
@@ -22,7 +21,7 @@ struct DefinitionsCard: View {
 
     private var buttons : some View {
         HStack(){
-            Button(action:{self.selection = 1}){
+            Button(action:{Coordinator.sharedInstance.show(Coordinator.sharedInstance.SHOW_DEFINITION_HELP)}){
                 Text("MORE INFO")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
@@ -38,10 +37,6 @@ struct DefinitionsCard: View {
                 .padding(.top,2)
             buttons
                 .padding(16)
-            NavigationLink(destination: DefinitionHelpView(), tag: 1, selection: $selection){
-                    EmptyView()
-            }
-            
         }
     }
 }

@@ -13,6 +13,9 @@ import Combine
 ///Deals with interactions between views and holds shared observed variables
 class Coordinator : ObservableObject {
 
+    //Singleton
+    static let sharedInstance = Coordinator()
+
     var rootVC : RootViewController?
     @Published var showCards = true
     @Published var selection : Int? = nil

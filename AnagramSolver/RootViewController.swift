@@ -17,7 +17,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     private let searchSegueId = "searchSegue"
     private let monospacedFont = UIFont(name: "Menlo-Regular",size: 24.0)
     private let systemFont = UIFont.systemFont(ofSize: 24.0, weight: .regular)
-    private var coordinator = Coordinator()
+    private var coordinator = Coordinator.sharedInstance
 
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var textFieldQuery: UITextField!
