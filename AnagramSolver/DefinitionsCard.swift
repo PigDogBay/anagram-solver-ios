@@ -10,6 +10,10 @@ import SwiftUI
 
 struct DefinitionsCard: View {
 
+    private func showHelp(){
+        Coordinator.sharedInstance.show(Coordinator.sharedInstance.SHOW_DEFINITION_HELP)
+    }
+
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
             Text("* Tap on a result's info icon")
@@ -21,7 +25,7 @@ struct DefinitionsCard: View {
 
     private var buttons : some View {
         HStack(){
-            Button(action:{Coordinator.sharedInstance.show(Coordinator.sharedInstance.SHOW_DEFINITION_HELP)}){
+            Button(action:showHelp){
                 Text("MORE INFO")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())

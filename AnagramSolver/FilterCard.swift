@@ -9,8 +9,11 @@
 import SwiftUI
 
 struct FilterCard: View {
-    @State var selection : Int? = nil
 
+    private func showHelp(){
+        Coordinator.sharedInstance.show(Coordinator.sharedInstance.SHOW_FILTER_HELP)
+    }
+    
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
             Text("Too many matches?")
@@ -22,7 +25,7 @@ struct FilterCard: View {
 
     private var buttons : some View {
         HStack(){
-            Button(action:{self.selection = 1}){
+            Button(action:showHelp){
                 Text("MORE INFO")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
@@ -38,10 +41,6 @@ struct FilterCard: View {
                 .padding(.top,2)
             buttons
                 .padding(16)
-            NavigationLink(destination: FilterHelpView(), tag: 1, selection: $selection){
-                    EmptyView()
-            }
-            
         }
     }
 }
