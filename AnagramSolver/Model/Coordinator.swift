@@ -48,7 +48,7 @@ class Coordinator : ObservableObject {
     }
 
     func updateSettings(){
-        rootVC?.appEnterForgeround()
+        rootVC?.updateSettings()
     }
     
 }
