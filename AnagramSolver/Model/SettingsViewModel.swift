@@ -22,6 +22,18 @@ class SettingsViewModel : ObservableObject {
             settings.definition = definition
         }
     }
+    
+    @Published var resultsLimit : String{
+        didSet {
+            settings.resultsLimitValue = resultsLimit
+        }
+    }
+    
+    @Published var highlight : String{
+        didSet {
+            settings.highlightValue = highlight
+        }
+    }
 
     @Published var showCardTips = false {
         didSet {
@@ -33,5 +45,7 @@ class SettingsViewModel : ObservableObject {
         showCardTips = settings.showCardTips
         wordList = settings.wordList
         definition = settings.definition
+        resultsLimit = settings.resultsLimitValue
+        highlight = settings.highlightValue
     }
 }

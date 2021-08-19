@@ -62,7 +62,32 @@ class Settings
         "wiktionary",
         "wikipedia",
         "word game dictionary"]
+    
+    static let resultsLimitTitles = [
+        "100 words",
+        "500 words",
+        "1000 words",
+        "5000 words"]
 
+    static let resultsLimitValues = [
+        "100",
+        "500",
+        "1000",
+        "5000"]
+    
+    static let highlightTitles = [
+        "None",
+        "Red",
+        "Green",
+        "Blue",
+        "Yellow"]
+
+    static let highlightValues = [
+        "black",
+        "red",
+        "green",
+        "blue",
+        "yellow"]
 
     private let definitionKey = "definition"
     private let highlightKey = "highlight"
@@ -78,6 +103,8 @@ class Settings
     
     private let defaultWordList = "words"
     private let defaultDefinition = "google"
+    private let defaultResultsLimit = "5000"
+    private let defaultHighlight = "red"
 
     var highlight : UIColor {
         get {
@@ -96,6 +123,16 @@ class Settings
                 }
             }
             return UIColor(named: "exampleResult") ?? UIColor.systemRed
+        }
+    }
+    
+    var highlightValue : String {
+        get { return UserDefaults.standard.string(forKey: highlightKey) ?? defaultHighlight}
+        set(value) {
+            if value != highlightValue {
+                let defaults = UserDefaults.standard
+                defaults.set(value, forKey: highlightKey)
+            }
         }
     }
 
@@ -178,6 +215,17 @@ class Settings
             return UserDefaults.standard.integer(forKey: resultsLimitKey)
         }
     }
+
+    var resultsLimitValue : String {
+        get { return UserDefaults.standard.string(forKey: resultsLimitKey) ?? defaultResultsLimit}
+        set(value) {
+            if value != resultsLimitValue {
+                let defaults = UserDefaults.standard
+                defaults.set(value, forKey: resultsLimitKey)
+            }
+        }
+    }
+
     
     var wordList : String {
         get { return UserDefaults.standard.string(forKey: wordListKey) ?? defaultWordList}

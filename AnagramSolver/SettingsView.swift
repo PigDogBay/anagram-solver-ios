@@ -39,6 +39,14 @@ struct SettingsView: View {
                                titles: Settings.definitionTitles,
                                values: Settings.definitionValues,
                                selection: $viewModel.definition)
+                SettingsPicker(label: "Results limit",
+                               titles: Settings.resultsLimitTitles,
+                               values: Settings.resultsLimitValues,
+                               selection: $viewModel.resultsLimit)
+                SettingsPicker(label: "Letter highlighting",
+                               titles: Settings.highlightTitles,
+                               values: Settings.highlightValues,
+                               selection: $viewModel.highlight)
             }
         }.navigationBarTitle(Text("Settings"), displayMode: .inline)
         .onDisappear(){
