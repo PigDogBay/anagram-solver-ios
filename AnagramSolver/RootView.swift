@@ -26,6 +26,11 @@ struct RootView: View {
                        selection: $coordinator.selection){
             EmptyView()
         }
+        NavigationLink(destination: SettingsHelpView(),
+                       tag: coordinator.SHOW_SETTINGS_HELP,
+                       selection: $coordinator.selection){
+            EmptyView()
+        }
         NavigationLink(destination: SettingsView(coordinator: coordinator),
                        tag: coordinator.SHOW_SETTINGS,
                        selection: $coordinator.selection){

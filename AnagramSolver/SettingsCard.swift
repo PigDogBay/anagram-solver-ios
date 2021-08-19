@@ -11,7 +11,6 @@ import SwiftUtils
 
 struct SettingsCard: View {
     @ObservedObject var coordinator : Coordinator
-    @State var selection : Int? = nil
 
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
@@ -23,12 +22,12 @@ struct SettingsCard: View {
 
     private var buttons : some View {
         HStack(){
-            Button(action:{self.selection = 1}){
+            Button(action:{coordinator.show(coordinator.SHOW_SETTINGS_HELP)}){
                 Text("MORE INFO")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
             Spacer()
-            Button(action: {self.selection = 2}){
+            Button(action: {coordinator.show(coordinator.SHOW_SETTINGS)}){
                 Text("SHOW SETTINGS")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
@@ -43,13 +42,6 @@ struct SettingsCard: View {
                 .padding(.top,2)
             buttons
                 .padding(16)
-            NavigationLink(destination: SettingsHelpView(), tag: 1, selection: $selection){
-                    EmptyView()
-            }
-            NavigationLink(destination: SettingsView(coordinator: coordinator), tag: 2, selection: $selection){
-                    EmptyView()
-            }
-
         }
     }
 }
