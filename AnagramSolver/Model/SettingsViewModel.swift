@@ -35,17 +35,45 @@ class SettingsViewModel : ObservableObject {
         }
     }
 
-    @Published var showCardTips = false {
+    @Published var showCardTips : Bool {
         didSet {
             settings.showCardTips = showCardTips
         }
     }
+
+    @Published var showKeyboard : Bool {
+        didSet {
+            settings.showKeyboard = showKeyboard
+        }
+    }
     
+    @Published var isLongPressEnabled : Bool {
+        didSet {
+            settings.isLongPressEnabled = isLongPressEnabled
+        }
+    }
+    
+    @Published var showSubAnagrams : Bool {
+        didSet {
+            settings.showSubAnagrams = showSubAnagrams
+        }
+    }
+    
+    @Published var useMonospacedFont : Bool {
+        didSet {
+            settings.useMonospacedFont = useMonospacedFont
+        }
+    }
+
     init(){
-        showCardTips = settings.showCardTips
         wordList = settings.wordList
         definition = settings.definition
         resultsLimit = settings.resultsLimitValue
         highlight = settings.highlightValue
+        showKeyboard = settings.showKeyboard
+        isLongPressEnabled = settings.isLongPressEnabled
+        showSubAnagrams = settings.showSubAnagrams
+        showCardTips = settings.showCardTips
+        useMonospacedFont = settings.useMonospacedFont
     }
 }

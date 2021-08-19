@@ -140,17 +140,35 @@ class Settings
         get {
             return UserDefaults.standard.bool(forKey: useMonospacedFontKey)
         }
+        set(flag) {
+            if flag != useMonospacedFont {
+                let defaults = UserDefaults.standard
+                defaults.set(flag, forKey: useMonospacedFontKey)
+            }
+        }
     }
     
     var showKeyboard : Bool {
         get {
             return UserDefaults.standard.bool(forKey: showKeyboardKey)
         }
+        set(flag) {
+            if flag != showKeyboard {
+                let defaults = UserDefaults.standard
+                defaults.set(flag, forKey: showKeyboardKey)
+            }
+        }
     }
     
     var isLongPressEnabled : Bool {
         get {
             return UserDefaults.standard.bool(forKey: longPressEnabledKey)
+        }
+        set(flag) {
+            if flag != isLongPressEnabled {
+                let defaults = UserDefaults.standard
+                defaults.set(flag, forKey: longPressEnabledKey)
+            }
         }
     }
     
@@ -240,6 +258,12 @@ class Settings
     var showSubAnagrams : Bool {
         get {
             return UserDefaults.standard.bool(forKey: showSubAnagramsKey)
+        }
+        set(flag) {
+            if flag != showSubAnagrams {
+                let defaults = UserDefaults.standard
+                defaults.set(flag, forKey: showSubAnagramsKey)
+            }
         }
     }
     
