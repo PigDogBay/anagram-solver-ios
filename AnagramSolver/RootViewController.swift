@@ -30,7 +30,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     }
 
     @IBAction func settingsClicked(_ sender: Any) {
-        mpdbShowSettings()
+        coordinator.showSettings()
     }
     
     @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {

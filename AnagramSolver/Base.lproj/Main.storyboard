@@ -373,7 +373,7 @@
     <resources>
         <image name="gear" catalog="system" width="128" height="119"/>
         <namedColor name="accentColor">
-            <color red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.31764705882352939" green="0.49019607843137253" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="navBackground">
             <color red="0.22745098039215686" green="0.34509803921568627" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

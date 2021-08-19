@@ -21,6 +21,11 @@ struct RootView: View {
         } else {
             TipsView(coordinator: coordinator)
         }
+        NavigationLink(destination: SettingsView(coordinator: coordinator),
+                       tag: Coordinator.SHOW_SETTINGS,
+                       selection: $coordinator.selection){
+            EmptyView()
+        }
     }
 }
 
