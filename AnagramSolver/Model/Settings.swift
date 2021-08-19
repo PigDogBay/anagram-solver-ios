@@ -11,6 +11,28 @@ import SwiftUtils
 
 class Settings
 {
+    static let wordListTitles = [
+        "Essential (90k words)",
+        "US Scrabble (180k words)",
+        "World Scrabble (270k words)",
+        "English (310k words)",
+        "Deutsch (198k wörter)",
+        "Español (381k palabras)",
+        "Français (268k mots)",
+        "Italiano (250k parole)",
+        "Português (210k palavras)"]
+    
+    static let wordListValues = [
+        "small",
+        "twl",
+        "sowpods",
+        "words",
+        "wordlist-de",
+        "wordlist-es",
+        "wordlist-fr",
+        "wordlist-it",
+        "wordlist-pt"]
+
     private let definitionKey = "definition"
     private let highlightKey = "highlight"
     private let showKeyboardKey = "showKeyboard"
@@ -117,6 +139,12 @@ class Settings
     
     var wordList : String {
         get { return UserDefaults.standard.string(forKey: wordListKey) ?? defaultWordList}
+        set(newList) {
+            if newList != wordList {
+                let defaults = UserDefaults.standard
+                defaults.set(newList, forKey: wordListKey)
+            }
+        }
     }
     
     var showSubAnagrams : Bool {

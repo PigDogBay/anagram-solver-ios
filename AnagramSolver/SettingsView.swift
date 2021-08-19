@@ -10,9 +10,8 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    private let coordinator = Coordinator.sharedInstance
     @ObservedObject var viewModel = SettingsViewModel()
-    
+
     private var tipsToggle : some View {
         Toggle(isOn: $viewModel.showCardTips) {
             if viewModel.showCardTips {
@@ -32,10 +31,14 @@ struct SettingsView: View {
                 } else {
                     tipsToggle
                 }
+                SettingsPicker(label: "Word list",
+                               titles: Settings.wordListTitles,
+                               values: Settings.wordListValues,
+                               selection: $viewModel.wordList)
             }
         }.navigationBarTitle(Text("Settings"), displayMode: .inline)
         .onDisappear(){
-            coordinator.updateSettings()
+            Coordinator.sharedInstance.updateSettings()
         }
     }
 }

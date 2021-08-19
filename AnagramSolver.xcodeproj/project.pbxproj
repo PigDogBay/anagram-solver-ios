@@ -13,6 +13,7 @@
 		003E10ED253EF72400AE8155 /* wordlist-es.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10EA253EF72400AE8155 /* wordlist-es.txt */; };
 		004AA91C26CD306D00A63C47 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA91B26CD306D00A63C47 /* SettingsView.swift */; };
 		004AA91F26CE565F00A63C47 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA91E26CE565F00A63C47 /* SettingsViewModel.swift */; };
+		004AA92126CEB1CB00A63C47 /* SettingsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA92026CEB1CB00A63C47 /* SettingsPicker.swift */; };
 		0051B66225CC194300AB8B9D /* UserGuideRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0051B66125CC194300AB8B9D /* UserGuideRow.swift */; };
 		005BCB3226AAC69700DF44CE /* UserGuideCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BCB3126AAC69700DF44CE /* UserGuideCard.swift */; };
 		005BCB3526AACA2400DF44CE /* HelpOutCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BCB3426AACA2400DF44CE /* HelpOutCard.swift */; };
@@ -135,6 +136,7 @@
 		003E10EA253EF72400AE8155 /* wordlist-es.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-es.txt"; sourceTree = "<group>"; };
 		004AA91B26CD306D00A63C47 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		004AA91E26CE565F00A63C47 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		004AA92026CEB1CB00A63C47 /* SettingsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPicker.swift; sourceTree = "<group>"; };
 		0051B66125CC194300AB8B9D /* UserGuideRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuideRow.swift; sourceTree = "<group>"; };
 		005BCB3126AAC69700DF44CE /* UserGuideCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGuideCard.swift; sourceTree = "<group>"; };
 		005BCB3426AACA2400DF44CE /* HelpOutCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpOutCard.swift; sourceTree = "<group>"; };
@@ -262,14 +264,14 @@
 			isa = PBXGroup;
 			children = (
 				00EEA72E25CACB430017F6A4 /* AboutView.swift */,
+				006D010426A1B89000DA083D /* CardTips.swift */,
 				00EEA72725CAC85A0017F6A4 /* DefinitionHelpView.swift */,
 				00EEA72225CAC8190017F6A4 /* FilterHelpView.swift */,
 				00EEA72325CAC8190017F6A4 /* HelpView.swift */,
-				00F17DD826A9D00700452020 /* SettingsHelpView.swift */,
-				00EEA6F925CABCA60017F6A4 /* TipsView.swift */,
-				006D010426A1B89000DA083D /* CardTips.swift */,
 				00F17DD326A9ABD000452020 /* RootView.swift */,
+				00F17DD826A9D00700452020 /* SettingsHelpView.swift */,
 				004AA91B26CD306D00A63C47 /* SettingsView.swift */,
+				00EEA6F925CABCA60017F6A4 /* TipsView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -281,6 +283,7 @@
 				00EEA70A25CABFE50017F6A4 /* AboutRow.swift */,
 				00EEA72B25CAC8B50017F6A4 /* ActivityViewController.swift */,
 				00EEA71625CAC02D0017F6A4 /* AutomatedTestRow.swift */,
+				005BCB3626AACED400DF44CE /* AutoTestCard.swift */,
 				00EEA70725CABFE50017F6A4 /* DefinitionRow.swift */,
 				00F17DDA26A9DD4000452020 /* DefinitionsCard.swift */,
 				00EEA70825CABFE50017F6A4 /* FeedbackRow.swift */,
@@ -290,14 +293,14 @@
 				00EEA71F25CAC59D0017F6A4 /* MailView.swift */,
 				00EEA70B25CABFE50017F6A4 /* RateRow.swift */,
 				00F17DD626A9CC3500452020 /* SettingsCard.swift */,
+				004AA92026CEB1CB00A63C47 /* SettingsPicker.swift */,
 				00EEA70925CABFE50017F6A4 /* SettingsRow.swift */,
 				00EEA70C25CABFE50017F6A4 /* TellFriendRow.swift */,
 				006D010126A1936600DA083D /* TipCard.swift */,
 				00EEA70525CABFE50017F6A4 /* TipRow.swift */,
+				005BCB3826AAD23900DF44CE /* UpgradeCard.swift */,
 				005BCB3126AAC69700DF44CE /* UserGuideCard.swift */,
 				0051B66125CC194300AB8B9D /* UserGuideRow.swift */,
-				005BCB3626AACED400DF44CE /* AutoTestCard.swift */,
-				005BCB3826AAD23900DF44CE /* UpgradeCard.swift */,
 			);
 			name = "Supporting Views";
 			sourceTree = "<group>";
@@ -666,6 +669,7 @@
 				004AA91F26CE565F00A63C47 /* SettingsViewModel.swift in Sources */,
 				4D9E43AA1FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift in Sources */,
 				00EEA70D25CABFE50017F6A4 /* TipRow.swift in Sources */,
+				004AA92126CEB1CB00A63C47 /* SettingsPicker.swift in Sources */,
 				005BCB3526AACA2400DF44CE /* HelpOutCard.swift in Sources */,
 				4DA0C3FA236C761600AF693B /* AppState.swift in Sources */,
 				4DF2DE401FB0A82300F44ADE /* ListViewController.swift in Sources */,

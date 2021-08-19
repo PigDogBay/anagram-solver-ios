@@ -10,6 +10,13 @@ import Combine
 
 class SettingsViewModel : ObservableObject {
     let settings = Settings()
+    
+    @Published var wordList : String{
+        didSet {
+            settings.wordList = wordList
+        }
+    }
+    
     @Published var showCardTips = false {
         didSet {
             settings.showCardTips = showCardTips
@@ -18,5 +25,6 @@ class SettingsViewModel : ObservableObject {
     
     init(){
         showCardTips = settings.showCardTips
+        wordList = settings.wordList
     }
 }
