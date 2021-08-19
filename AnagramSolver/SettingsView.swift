@@ -35,6 +35,10 @@ struct SettingsView: View {
                                titles: Settings.wordListTitles,
                                values: Settings.wordListValues,
                                selection: $viewModel.wordList)
+                SettingsPicker(label: "Dictionary definition",
+                               titles: Settings.definitionTitles,
+                               values: Settings.definitionValues,
+                               selection: $viewModel.definition)
             }
         }.navigationBarTitle(Text("Settings"), displayMode: .inline)
         .onDisappear(){

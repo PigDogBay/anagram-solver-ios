@@ -32,6 +32,37 @@ class Settings
         "wordlist-fr",
         "wordlist-it",
         "wordlist-pt"]
+    
+    static let definitionTitles = [
+        "Cambridge",
+        "Chambers",
+        "Collins",
+        "Dictionary.com",
+        "Google Define",
+        "Google Dictionary",
+        "Lexico",
+        "Merriam-Webster",
+        "Merriam-Webster Thesaurus",
+        "Thesaurus.com",
+        "Wiktionary",
+        "Wikipedia",
+        "Word Game Dictionary"]
+
+    static let definitionValues = [
+        "cambridge",
+        "chambers",
+        "collins",
+        "dictionary.com",
+        "google define",
+        "google",
+        "lexico",
+        "merriam-webster",
+        "merriam-webster thesaurus",
+        "thesaurus.com",
+        "wiktionary",
+        "wikipedia",
+        "word game dictionary"]
+
 
     private let definitionKey = "definition"
     private let highlightKey = "highlight"
@@ -46,7 +77,8 @@ class Settings
     private let showCardTipsKey = "showCardTips"
     
     private let defaultWordList = "words"
-    
+    private let defaultDefinition = "google"
+
     var highlight : UIColor {
         get {
             if let colorString = UserDefaults.standard.string(forKey: highlightKey){
@@ -130,7 +162,17 @@ class Settings
         }
         return WordSearch.getGoogleUrl(word: word)
     }
-    
+
+    var definition : String {
+        get { return UserDefaults.standard.string(forKey: definitionKey) ?? defaultDefinition}
+        set(value) {
+            if value != definition {
+                let defaults = UserDefaults.standard
+                defaults.set(value, forKey: definitionKey)
+            }
+        }
+    }
+
     var resultsLimit : Int {
         get {
             return UserDefaults.standard.integer(forKey: resultsLimitKey)

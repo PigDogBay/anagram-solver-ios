@@ -16,7 +16,13 @@ class SettingsViewModel : ObservableObject {
             settings.wordList = wordList
         }
     }
-    
+
+    @Published var definition : String{
+        didSet {
+            settings.definition = definition
+        }
+    }
+
     @Published var showCardTips = false {
         didSet {
             settings.showCardTips = showCardTips
@@ -26,5 +32,6 @@ class SettingsViewModel : ObservableObject {
     init(){
         showCardTips = settings.showCardTips
         wordList = settings.wordList
+        definition = settings.definition
     }
 }
