@@ -97,7 +97,7 @@ struct ToggleMod : ViewModifier {
             content
                 .toggleStyle(SwitchToggleStyle(tint: Color("toggle")))
         } else {
-            // Fallback on earlier versions
+            content
         }
     }
 }
