@@ -77,7 +77,9 @@ struct SettingsView: View {
                                values: Settings.highlightValues,
                                selection: $viewModel.highlight)
 
-                tipsToggle
+                if #available(iOS 14.0, *) {
+                    tipsToggle
+                }
                 monospacedToggle
             }
 
