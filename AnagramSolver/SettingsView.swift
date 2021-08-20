@@ -15,19 +15,19 @@ struct SettingsView: View {
     private var showKeyboardToggle : some View {
         Toggle(isOn: $viewModel.showKeyboard) {
             Text("Automatically show keyboard")
-        }
+        }.modifier(ToggleMod())
     }
 
     private var longPressToggle : some View {
         Toggle(isOn: $viewModel.isLongPressEnabled) {
             Text("Allow long press on results")
-        }
+        }.modifier(ToggleMod())
     }
     
     private var subAnagramsToggle : some View {
         Toggle(isOn: $viewModel.showSubAnagrams) {
             Text("Show sub-anagrams")
-        }
+        }.modifier(ToggleMod())
     }
 
     private var tipsToggle : some View {
@@ -37,13 +37,13 @@ struct SettingsView: View {
             } else {
                 Text("Show tips as a list")
             }
-        }
+        }.modifier(ToggleMod())
     }
 
     private var monospacedToggle : some View {
         Toggle(isOn: $viewModel.useMonospacedFont) {
             Text("Use monospaced font")
-        }
+        }.modifier(ToggleMod())
     }
 
     var body: some View {
@@ -66,12 +66,7 @@ struct SettingsView: View {
                                values: Settings.resultsLimitValues,
                                selection: $viewModel.resultsLimit)
 
-                if #available(iOS 14.0, *) {
-                    subAnagramsToggle
-                        .toggleStyle(SwitchToggleStyle(tint: Color("materialButton")))
-                } else {
-                    subAnagramsToggle
-                }
+                subAnagramsToggle
             }
 
             Section(header: Text("APPEARANCE"),
@@ -82,35 +77,13 @@ struct SettingsView: View {
                                values: Settings.highlightValues,
                                selection: $viewModel.highlight)
 
-                if #available(iOS 14.0, *) {
-                    tipsToggle
-                        .toggleStyle(SwitchToggleStyle(tint: Color("materialButton")))
-                } else {
-                    tipsToggle
-                }
-
-                if #available(iOS 14.0, *) {
-                    monospacedToggle
-                        .toggleStyle(SwitchToggleStyle(tint: Color("materialButton")))
-                } else {
-                    monospacedToggle
-                }
+                tipsToggle
+                monospacedToggle
             }
 
             Section(header: Text("OTHER")){
-                if #available(iOS 14.0, *) {
-                    showKeyboardToggle
-                        .toggleStyle(SwitchToggleStyle(tint: Color("materialButton")))
-                } else {
-                    showKeyboardToggle
-                }
-
-                if #available(iOS 14.0, *) {
-                    longPressToggle
-                        .toggleStyle(SwitchToggleStyle(tint: Color("materialButton")))
-                } else {
-                    longPressToggle
-                }
+                showKeyboardToggle
+                longPressToggle
             }
         }.navigationBarTitle(Text("Settings"), displayMode: .inline)
         .onDisappear(){
@@ -118,7 +91,16 @@ struct SettingsView: View {
         }
     }
 }
-
+struct ToggleMod : ViewModifier {
+    func body(content: Content) -> some View {
+        if #available(iOS 14.0, *) {
+            content
+                .toggleStyle(SwitchToggleStyle(tint: Color("toggle")))
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+}
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()

@@ -71,7 +71,7 @@ struct AboutView: View {
             } else {
                 Text("Show me ads that are less relevant")
             }
-        }
+        }.modifier(ToggleMod())
     }
     
     private var adsSection : some View {
@@ -107,11 +107,7 @@ struct AboutView: View {
             }
             Text("This app will use your data to tailor ads to you. Our partners will collect data and use an unique identifier on your device to show you ads. You select here if we can continue to use your data to tailor ads for you.")
                 .font(.body)
-            if #available(iOS 14.0, *) {
-                adPersonalizeButton.toggleStyle(SwitchToggleStyle(tint: Color("accentColor")))
-            } else {
-                adPersonalizeButton
-            }
+            adPersonalizeButton
         }
     }
     
