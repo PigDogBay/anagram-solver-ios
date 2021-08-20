@@ -301,6 +301,7 @@ class Settings
                                showSubAnagramsKey : true,
                                showCardTipsKey : true,
                                resultsLimitKey : 5000,
+                               useMonospacedFontKey : true,
                                useNonPersonalizedAdsKey : false]
         UserDefaults.standard.register(defaults: defaultSettings)
     }
