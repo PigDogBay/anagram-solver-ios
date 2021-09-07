@@ -71,4 +71,13 @@
         "advanced" : "As you find letters you can use the Excluding filter and enter the letters you have already found. So in the above example, if we already have p and m then we can rule out pallette and commesse.\n\nIf you have no letters that are used more than once, then set the Distinct filter to All letters are different.\n\nTip! When starting a Codeword, first try the largest word in the grid.",
         "showMe" : "..112332"
     },
+    {
+        "id" : 1009,
+        "title" : "$pelling Bee Puzzles",
+        "subtitle" : "Type $, middle letter and outer letters",
+        "description" : "Spelling Bee puzzles are where you only use the letters provided, but as many times as you like.\n\nFirst enter $, then the middle letter and then the surrounding letters.",
+        "example" : "quinquina, aquanaut, queenie",
+        "advanced" : "The middle letter must be included in every word found.\n\nWords must be 4 or more letters long.",
+        "showMe" : "$qntuaei"
+    },
 ]

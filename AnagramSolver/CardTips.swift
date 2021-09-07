@@ -48,6 +48,8 @@ struct CardTips: View {
                         .modifier(CardMod())
                     HelpOutCard()
                         .modifier(CardMod())
+                    TipCard(tip: spellingBeeTip)
+                        .modifier(CardMod())
                     UpgradeCard()
                         .modifier(CardMod())
                     #if DEBUG
