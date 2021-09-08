@@ -20,6 +20,7 @@ class Model : WordListCallback, IAPDelegate
 
     let appState = AppStateObservable()
     let wordSearch : WordSearch
+    let searchParser = SearchParser()
     let wordFormatter = WordFormatter()
     let matches = Matches()
     var query = ""
@@ -59,7 +60,7 @@ class Model : WordListCallback, IAPDelegate
     func setAndValidateQuery( _ raw : String) ->Bool
     {
         filter.query = raw
-        self.query = wordSearch.clean(raw)
+        self.query = searchParser.clean(raw)
         return self.query.length>0
     }
     func stop()
@@ -72,7 +73,7 @@ class Model : WordListCallback, IAPDelegate
         matches.removeAll()
     }
     func prepareToFilterSearch(){
-        let validated = wordSearch.clean(filter.query)
+        let validated = searchParser.clean(filter.query)
         if validated.length>0 {
             self.query = validated
         } else {
@@ -86,14 +87,11 @@ class Model : WordListCallback, IAPDelegate
     func search()
     {
         appState.appState = .searching
-        var processedQuery = query
-        processedQuery = self.wordSearch.preProcessQuery(processedQuery)
-        let searchType = self.wordSearch.getQueryType(processedQuery)
-        processedQuery = self.wordSearch.postProcessQuery(processedQuery, type: searchType)
-        wordFormatter.newSearch(processedQuery, searchType)
+        let searchQuery = searchParser.parse(query: query)
+        wordFormatter.newSearch(searchQuery)
         let filterPipeline = filterFactory.createChainedCallback(lastCallback: self)
         filter.updateFilterCount()
-        self.wordSearch.runQuery(processedQuery, type: searchType, callback: filterPipeline)
+        self.wordSearch.runQuery(searchQuery, callback: filterPipeline)
         appState.appState = .finished
     }
     
@@ -124,9 +122,6 @@ class Model : WordListCallback, IAPDelegate
         self.wordFormatter.highlightColor = self.settings.highlight
         self.resultsLimit = self.settings.resultsLimit
         self.wordListName = settings.wordList
-        //Enabled now for standard and pro versions of the app
-        self.wordSearch.findCodewords = true
-        self.wordSearch.findThreeWordAnagrams = true
         self.wordSearch.findSubAnagrams = settings.showSubAnagrams
     }
     func checkForSettingsChange(){
