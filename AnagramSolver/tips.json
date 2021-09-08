@@ -73,7 +73,7 @@
     },
     {
         "id" : 1009,
-        "title" : "$pelling Bee Puzzles",
+        "title" : "$pelling Bee",
         "subtitle" : "Type $, middle letter and outer letters",
         "description" : "Spelling Bee puzzles are where you only use the letters provided, but as many times as you like.\n\nFirst enter $, then the middle letter and then the surrounding letters.",
         "example" : "quinquina, aquanaut, queenie",
