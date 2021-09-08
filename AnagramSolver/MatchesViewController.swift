@@ -134,30 +134,31 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     
     func showLookUpDefinitionMenu(word : String, location : CGPoint){
         let shortenedWord = shortenWord(word: word, maxSize: 12)
+        let lookUp = LookUpUrl(word: word)
         let controller = UIAlertController(title: "Look up "+shortenedWord, message: nil, preferredStyle: .actionSheet)
-
+        
         let speakAction = UIAlertAction(title: "Speak", style: .default,
                                         handler: {action in mpdbSpeak(text: word)})
         let collinsAction = UIAlertAction(title: "Collins", style: .default,
-                                             handler: {action in self.showWebPage(WordSearch.getCollinsUrl(word: word))})
+                                          handler: {action in self.showWebPage(lookUp.collins)})
         let dictionaryComAction = UIAlertAction(title: "Dictionary.com", style: .default,
-                                         handler: {action in self.showWebPage(WordSearch.getDictionaryComUrl(word: word))})
-        let googleAction = UIAlertAction(title: "Google Definition", style: .default,
-                                         handler: {action in self.showWebPage(WordSearch.getGoogleDefineUrl(word: word))})
+                                                handler: {action in self.showWebPage(lookUp.dictionaryCom)})
+        let googleAction = UIAlertAction(title: "Google Dictionary", style: .default,
+                                         handler: {action in self.showWebPage(lookUp.googleDictionary)})
         let lexicoAction = UIAlertAction(title: "Lexico", style: .default,
-                                            handler: {action in self.showWebPage(WordSearch.getLexicoUrl(word: word))})
+                                         handler: {action in self.showWebPage(lookUp.lexico)})
         let merriamWebsterAction = UIAlertAction(title: "Merriam-Webster", style: .default,
-                                            handler: {action in self.showWebPage(WordSearch.getMerriamWebsterUrl(word: word))})
+                                                 handler: {action in self.showWebPage(lookUp.merriamWebster)})
         let mwThesaurusAction = UIAlertAction(title: "M-W Thesaurus", style: .default,
-                                            handler: {action in self.showWebPage(WordSearch.getMWThesaurusUrl(word: word))})
+                                              handler: {action in self.showWebPage(lookUp.merriamWebsterThesaurus)})
         let thesaurusAction = UIAlertAction(title: "Thesaurus.com", style: .default,
-                                             handler: {action in self.showWebPage(WordSearch.getThesaurusComUrl(word: word))})
+                                            handler: {action in self.showWebPage(lookUp.thesaurusCom)})
         let wiktionaryAction = UIAlertAction(title: "Wiktionary", style: .default,
-                                            handler: {action in self.showWebPage(WordSearch.getWiktionaryUrl(word: word))})
+                                             handler: {action in self.showWebPage(lookUp.wikionary)})
         let wikipediaAction = UIAlertAction(title: "Wikipedia", style: .default,
-                                            handler: {action in self.showWebPage(WordSearch.getWikipediaUrl(word: word))})
+                                            handler: {action in self.showWebPage(lookUp.wikipedia)})
         let wordGameAction = UIAlertAction(title: "Word Game Dictionary", style: .default,
-                                         handler: {action in self.showWebPage(WordSearch.getWordGameDictionaryUrl(word: word))})
+                                           handler: {action in self.showWebPage(lookUp.wordGameDictionary)})
         
         let copyAction = UIAlertAction(title: "Copy", style: .default, handler: {action in UIPasteboard.general.string = word})
         let copyAllAction = UIAlertAction(title: "Copy All", style: .default, handler: {action in
@@ -186,7 +187,6 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
         }
         present(controller, animated: true, completion: nil)
     }
-    
     private func showWebPage(_ address : String) {
         if let url = URL(string: address) {
             UIApplication.shared.open(url, options: [:])
