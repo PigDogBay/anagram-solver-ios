@@ -13,11 +13,12 @@ let anagramTip = tipsData[0]
 let crosswordTip = tipsData[1]
 let blankLettersTip = tipsData[2]
 let twoWordAnagramTip = tipsData[3]
-let shortcutsTip = tipsData[4]
-let supergramsTip = tipsData[5]
-let prefixSuffixTip = tipsData[6]
-let codewordsTip = tipsData[7]
-let spellingBeeTip = tipsData[8]
+let phraseTip = tipsData[4]
+let shortcutsTip = tipsData[5]
+let supergramsTip = tipsData[6]
+let prefixSuffixTip = tipsData[7]
+let codewordsTip = tipsData[8]
+let spellingBeeTip = tipsData[9]
 
 struct Tip : Identifiable, Codable{
     var id : Int

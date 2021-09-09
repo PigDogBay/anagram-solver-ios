@@ -37,15 +37,24 @@
     },
     {
         "id" : 1005,
-        "title" : "Shortcuts",
-        "subtitle" : "Use numbers for multiple unknowns",
-        "description" : "For crossword answers with lots of unknown letters, you can use numbers to save on typing, eg type z9 instead of z.........",
-        "example" : "zombielike, zookeepers",
-        "advanced" : "To avoid confusion with Codeword searches, do not use 1 instead of .",
-        "showMe" : "z9"
+        "title" : "Cr.ssw.rd Phrase",
+        "subtitle" : "Use . for unknown letters",
+        "description" : "The app contains 100,000 common sayings and famous names. Use a space to separate the words and dots(.) for unknown letters",
+        "example" : "amazing grace",
+        "advanced" : "You only need one or two letters for the app to find only a few possible answers, a great way to start your crossword off.",
+        "showMe" : "a....n. ..a.."
     },
     {
         "id" : 1006,
+        "title" : "Crossword Shortcuts",
+        "subtitle" : "Use numbers for multiple unknowns",
+        "description" : "For crossword answers with lots of unknown letters, you can use numbers to save on typing, eg type z9 instead of z.........",
+        "example" : "motte and bailey, miles per gallon",
+        "advanced" : "Shortcuts are particularly useful when searching for multi-word crossword answers.\nTo avoid confusion with Codeword searches, do not use 1 instead of .",
+        "showMe" : "m4 3 6"
+    },
+    {
+        "id" : 1007,
         "title" : "Supergrams*",
         "subtitle" : "Use * as one or more blank letters",
         "description" : "Supergrams will find words that contain all of your letters. Type * after your letters, to tell the app to do a supergram search",
@@ -54,7 +63,7 @@
         "showMe" : "kayleigh*"
     },
     {
-        "id" : 1007,
+        "id" : 1008,
         "title" : "Prefix@Suffix",
         "subtitle" : "Use @ for 1 or more unknown letters",
         "description" : "A pattern search similar to crosswords where @ represents 1 or more unknown letters",
@@ -63,7 +72,7 @@
         "showMe" : "super@ted"
     },
     {
-        "id" : 1008,
+        "id" : 1009,
         "title" : "Codewords",
         "subtitle" : "Use 1,2,3 to represent the same letters",
         "description" : "Codewords (aka Cryptoquotes) are puzzles where you have to work out the letter for each number 1 to 26.\n\nFor example 23 18 15 15 9 2 2 9. We can see that 15, 9 and 2 are used more than once which we can make good use of, the app just needs to know which letters are used more than once.\n\nLets say we know 23 = c, so we enter c.112332, where 1,2,3 represent the unknown letters that are used more than once.",
@@ -72,7 +81,7 @@
         "showMe" : "..112332"
     },
     {
-        "id" : 1009,
+        "id" : 1010,
         "title" : "$pelling Bee",
         "subtitle" : "Type $, middle letter and outer letters",
         "description" : "Spelling Bee puzzles are where you only use the letters provided, but as many times as you like.\n\nFirst enter $, then the middle letter and then the surrounding letters.",
