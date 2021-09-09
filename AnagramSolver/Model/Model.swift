@@ -17,6 +17,8 @@ class Model : WordListCallback, IAPDelegate
     //Need to check if user changes the word list setting, so cache it here
     var wordListName = ""
     var resultsLimit = 5000
+    //Flag for one time load of the phrases word list
+    private var loadPhrases = true
 
     let appState = AppStateObservable()
     let wordSearch : WordSearch
@@ -54,7 +56,14 @@ class Model : WordListCallback, IAPDelegate
     func loadDictionary()
     {
         appState.appState = .loading
-        appState.appState = wordSearch.loadDictionary(resource: wordListName) ? .ready : .error
+        var didLoad = wordSearch.loadDictionary(resource: wordListName)
+        if (self.loadPhrases && didLoad){
+            didLoad = self.wordSearch.loadPhrases(resource: "phrases")
+            if (didLoad){
+                self.loadPhrases = false
+            }
+        }
+        appState.appState = didLoad ? .ready : .error
     }
     
     func setAndValidateQuery( _ raw : String) ->Bool
