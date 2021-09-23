@@ -36,6 +36,7 @@ struct TipsView: View {
             AutomatedTestRow()
             #endif
         }
+        .listStyle(.plain)
         .padding(.leading,8)
         .padding(.trailing,8)
         .background(Color.init("navBackground"))
