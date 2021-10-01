@@ -50,7 +50,7 @@
         "subtitle" : "Use numbers for multiple unknowns",
         "description" : "For crossword answers with lots of unknown letters, you can use numbers to save on typing, eg type z9 instead of z.........",
         "example" : "motte and bailey, miles per gallon",
-        "advanced" : "Shortcuts are particularly useful when searching for multi-word crossword answers.\nTo avoid confusion with Codeword searches, do not use 1 instead of .",
+        "advanced" : "Shortcuts are particularly useful when searching for multi-word crossword answers.\n\nTo avoid confusion with Codeword searches, do not use 1 instead of .",
         "showMe" : "m4 3 6"
     },
     {
