@@ -26,6 +26,8 @@ struct HelpSectionView: View {
             }
 
             Text(description)
+                .lineLimit(nil)
+                .frame(maxHeight: .infinity)
                 .font(.body)
         }
         .padding(8)

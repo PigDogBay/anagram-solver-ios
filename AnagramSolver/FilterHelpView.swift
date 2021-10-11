@@ -20,6 +20,8 @@ struct FilterSectionView: View {
                 .padding(.bottom, 8)
 
             Text(description)
+                .lineLimit(nil)
+                .frame(maxHeight: .infinity)
                 .font(.body)
         }
         .padding(8)

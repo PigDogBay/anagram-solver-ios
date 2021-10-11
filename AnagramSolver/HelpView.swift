@@ -21,6 +21,7 @@ struct HelpView: View {
                     .foregroundColor(Color.yellow)
                     .padding(8)
                 Text(viewModel.tip.title)
+                    .multilineTextAlignment(.center)
                     .font(.largeTitle)
                 Spacer()
             }
@@ -55,6 +56,8 @@ struct HelpView: View {
                     .padding(.bottom, 16)
 
                 Text(viewModel.tip.advanced)
+                    .lineLimit(nil)
+                    .frame(maxHeight: .infinity)
                     .font(.body)
             }
             .padding()
