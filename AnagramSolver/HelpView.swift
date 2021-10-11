@@ -17,16 +17,15 @@ struct HelpView: View {
             HStack {
                 Spacer()
                 Image(systemName: "lightbulb")
-                    .font(Font.system(.largeTitle))
+                    .font(Font.system(.title))
                     .foregroundColor(Color.yellow)
-                    .padding(8)
                 Text(viewModel.tip.title)
                     .multilineTextAlignment(.center)
-                    .font(.largeTitle)
+                    .font(.title)
                 Spacer()
-            }
+            }.padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
             Text(viewModel.tip.description)
-                .padding(8)
+                .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
             VStack(alignment: .leading) {
                 Text("Example")
                     .font(.headline)
