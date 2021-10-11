@@ -41,7 +41,9 @@ class Model : WordListCallback, IAPDelegate
         self.iap = IAPFactory.createIAPInterface()
         self.iap.observable.addObserver("model", observer: self)
         applySettings()
-        
+    }
+    
+    func setUpAds(){
         if !settings.isProMode {
             ads.setUp()
         }
