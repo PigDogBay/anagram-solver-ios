@@ -38,6 +38,16 @@
                ReferencedContainer = "container:AnagramSolver.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "00CD12CF27CE326C008191B2"
+               BuildableName = "AnagramSolverUITests.xctest"
+               BlueprintName = "AnagramSolverUITests"
+               ReferencedContainer = "container:AnagramSolver.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -25,6 +25,9 @@
 		0081F01525B1BB6C00792552 /* wordlist-it.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01325B1BB6C00792552 /* wordlist-it.txt */; };
 		0081F01625B1BB6C00792552 /* wordlist-pt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01425B1BB6C00792552 /* wordlist-pt.txt */; };
 		0091BC052535E5A000BE7A43 /* AutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091BC042535E5A000BE7A43 /* AutoTest.swift */; };
+		00CD12D327CE326C008191B2 /* AnagramSolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12D227CE326C008191B2 /* AnagramSolverUITests.swift */; };
+		00CD12D527CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */; };
+		00CD12DD27CE3CAD008191B2 /* UITestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */; };
 		00EEA6FA25CABCA60017F6A4 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA6F925CABCA60017F6A4 /* TipsView.swift */; };
 		00EEA6FD25CABDB10017F6A4 /* TipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA6FC25CABDB10017F6A4 /* TipsData.swift */; };
 		00EEA70025CABE8D0017F6A4 /* tips.json in Resources */ = {isa = PBXBuildFile; fileRef = 00EEA6FF25CABE8D0017F6A4 /* tips.json */; };
@@ -86,6 +89,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		00CD12D627CE326C008191B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D45EFAC1A9DFABA00C40BB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D45EFB31A9DFABA00C40BB4;
+			remoteInfo = AnagramSolver;
+		};
 		4D0543801CFDBC530084538A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */;
@@ -149,6 +159,10 @@
 		0081F01325B1BB6C00792552 /* wordlist-it.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-it.txt"; sourceTree = "<group>"; };
 		0081F01425B1BB6C00792552 /* wordlist-pt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-pt.txt"; sourceTree = "<group>"; };
 		0091BC042535E5A000BE7A43 /* AutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTest.swift; sourceTree = "<group>"; };
+		00CD12D027CE326C008191B2 /* AnagramSolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnagramSolverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00CD12D227CE326C008191B2 /* AnagramSolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolverUITests.swift; sourceTree = "<group>"; };
+		00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolverUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestUtils.swift; sourceTree = "<group>"; };
 		00EEA6F925CABCA60017F6A4 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		00EEA6FC25CABDB10017F6A4 /* TipsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsData.swift; sourceTree = "<group>"; };
 		00EEA6FF25CABE8D0017F6A4 /* tips.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tips.json; sourceTree = "<group>"; };
@@ -217,6 +231,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		00CD12CD27CE326C008191B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D45EFB11A9DFABA00C40BB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -260,6 +281,16 @@
 				4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		00CD12D127CE326C008191B2 /* AnagramSolverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				00CD12D227CE326C008191B2 /* AnagramSolverUITests.swift */,
+				00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */,
+				00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */,
+			);
+			path = AnagramSolverUITests;
 			sourceTree = "<group>";
 		};
 		00EEA6F625CABBB40017F6A4 /* Views */ = {
@@ -345,6 +376,7 @@
 				4D45D7AF1E2901BF00EC2D27 /* Settings.bundle */,
 				4D45EFB61A9DFABA00C40BB4 /* AnagramSolver */,
 				4D45EFCC1A9DFABA00C40BB4 /* AnagramSolverTests */,
+				00CD12D127CE326C008191B2 /* AnagramSolverUITests */,
 				4D45EFB51A9DFABA00C40BB4 /* Products */,
 				7FB7BD6A460C0022C46DE682 /* Pods */,
 				1E9D5EE9EB3E676642812536 /* Frameworks */,
@@ -356,6 +388,7 @@
 			children = (
 				4D45EFB41A9DFABA00C40BB4 /* AnagramSolver.app */,
 				4D45EFC91A9DFABA00C40BB4 /* AnagramSolverTests.xctest */,
+				00CD12D027CE326C008191B2 /* AnagramSolverUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -427,6 +460,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		00CD12CF27CE326C008191B2 /* AnagramSolverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00CD12DB27CE326C008191B2 /* Build configuration list for PBXNativeTarget "AnagramSolverUITests" */;
+			buildPhases = (
+				00CD12CC27CE326C008191B2 /* Sources */,
+				00CD12CD27CE326C008191B2 /* Frameworks */,
+				00CD12CE27CE326C008191B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00CD12D727CE326C008191B2 /* PBXTargetDependency */,
+			);
+			name = AnagramSolverUITests;
+			productName = AnagramSolverUITests;
+			productReference = 00CD12D027CE326C008191B2 /* AnagramSolverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		4D45EFB31A9DFABA00C40BB4 /* AnagramSolver */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D45EFD31A9DFABA00C40BB4 /* Build configuration list for PBXNativeTarget "AnagramSolver" */;
@@ -474,10 +525,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "MPD Bailey Technology";
 				TargetAttributes = {
+					00CD12CF27CE326C008191B2 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 4D45EFB31A9DFABA00C40BB4;
+					};
 					4D45EFB31A9DFABA00C40BB4 = {
 						CreatedOnToolsVersion = 6.1.1;
 						LastSwiftMigration = 1110;
@@ -517,6 +572,7 @@
 			targets = (
 				4D45EFB31A9DFABA00C40BB4 /* AnagramSolver */,
 				4D45EFC81A9DFABA00C40BB4 /* AnagramSolverTests */,
+				00CD12CF27CE326C008191B2 /* AnagramSolverUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -539,6 +595,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		00CD12CE27CE326C008191B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D45EFB21A9DFABA00C40BB4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -628,6 +691,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		00CD12CC27CE326C008191B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00CD12DD27CE3CAD008191B2 /* UITestUtils.swift in Sources */,
+				00CD12D327CE326C008191B2 /* AnagramSolverUITests.swift in Sources */,
+				00CD12D527CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D45EFB01A9DFABA00C40BB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -700,6 +773,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		00CD12D727CE326C008191B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D45EFB31A9DFABA00C40BB4 /* AnagramSolver */;
+			targetProxy = 00CD12D627CE326C008191B2 /* PBXContainerItemProxy */;
+		};
 		4D0543881CFDBE060084538A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftUtils;
@@ -732,6 +810,63 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		00CD12D827CE326C008191B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = ZYM8DA54T6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mpdbailey.AnagramSolverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnagramSolver;
+			};
+			name = Debug;
+		};
+		00CD12D927CE326C008191B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = ZYM8DA54T6;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mpdbailey.AnagramSolverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnagramSolver;
+			};
+			name = Release;
+		};
 		4D45EFD11A9DFABA00C40BB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -951,6 +1086,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		00CD12DB27CE326C008191B2 /* Build configuration list for PBXNativeTarget "AnagramSolverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00CD12D827CE326C008191B2 /* Debug */,
+				00CD12D927CE326C008191B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4D45EFAF1A9DFABA00C40BB4 /* Build configuration list for PBXProject "AnagramSolver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
