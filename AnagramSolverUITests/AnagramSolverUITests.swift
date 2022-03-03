@@ -15,6 +15,7 @@ import XCTest
  https://www.hackingwithswift.com/articles/83/how-to-test-your-user-interface-using-xcode
  Cheat Sheet
  https://www.hackingwithswift.com/articles/148/xcode-ui-testing-cheat-sheet
+ If you didn’t see the on-screen keyboard when the text field was selected, you should go to the Hardware menu and uncheck Keyboard > Connect Hardware Keyboard.
  */
 class AnagramSolverUITests: XCTestCase {
 
