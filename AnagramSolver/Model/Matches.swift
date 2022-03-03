@@ -46,10 +46,6 @@ class Matches {
         matches.removeAll(keepingCapacity: true)
     }
 
-    func append(match : String){
-        matches.append(match)
-    }
-
     func flatten()->String {
         return matches.reduce(""){result, next in result+next+"\n"}
     }
