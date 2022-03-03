@@ -26,6 +26,7 @@ class Model : WordListCallback, IAPDelegate
     let wordFormatter = WordFormatter()
     let matches = Matches()
     var query = ""
+    var distinctMatchesOnly = false
     let settings = Settings()
     let ads = Ads()
     let ratings = Ratings(appId: Strings.appId)
@@ -33,7 +34,7 @@ class Model : WordListCallback, IAPDelegate
     let filter : Filter
     let filterFactory : WordListCallbackAbstractFactory
     
-    private init()
+    init()
     {
         filter = Filter()
         filterFactory = FilterFactory(filter: filter)
@@ -99,6 +100,8 @@ class Model : WordListCallback, IAPDelegate
     {
         appState.appState = .searching
         let searchQuery = searchParser.parse(query: query)
+        //Need to remove any duplicate matches for two-word anagrams
+        distinctMatchesOnly = searchQuery.searchType == .twoWordAnagram
         wordFormatter.newSearch(searchQuery)
         let filterPipeline = filterFactory.createChainedCallback(lastCallback: self)
         filter.updateFilterCount()
@@ -108,7 +111,7 @@ class Model : WordListCallback, IAPDelegate
     
     func update(_ result: String)
     {
-        matches.matchFound(match: result)
+        matches.matchFound(match: result, distinct: distinctMatchesOnly)
         if matches.count == resultsLimit
         {
             wordSearch.stop()

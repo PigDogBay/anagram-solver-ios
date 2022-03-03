@@ -50,8 +50,16 @@ class Matches {
         return matches.reduce(""){result, next in result+next+"\n"}
     }
 
-    func matchFound(match : String){
-        matches.append(match)
+    /// Adds the match to an array
+    /// - Parameters:
+    ///   - match: match to add
+    ///   - distinct: if true, the match will not be added if it already is in the array. If false the match will always be added, this method has better performance as no checks need to be made.
+    func matchFound(match : String, distinct : Bool = false){
+        if !distinct {
+            matches.append(match)
+        } else if !matches.contains(match) {
+            matches.append(match)
+        }
     }
     
     func groupBySize() {
