@@ -29,6 +29,8 @@
 		00CD12D527CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */; };
 		00CD12DD27CE3CAD008191B2 /* UITestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */; };
 		00E4B60527D0E388002ACEF8 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B60427D0E388002ACEF8 /* ModelTests.swift */; };
+		00E4B60827D20FD3002ACEF8 /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B60727D20FD3002ACEF8 /* SettingsTests.swift */; };
+		00E4B60A27D21000002ACEF8 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B60927D21000002ACEF8 /* SearchTests.swift */; };
 		00EEA6FA25CABCA60017F6A4 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA6F925CABCA60017F6A4 /* TipsView.swift */; };
 		00EEA6FD25CABDB10017F6A4 /* TipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA6FC25CABDB10017F6A4 /* TipsData.swift */; };
 		00EEA70025CABE8D0017F6A4 /* tips.json in Resources */ = {isa = PBXBuildFile; fileRef = 00EEA6FF25CABE8D0017F6A4 /* tips.json */; };
@@ -164,6 +166,8 @@
 		00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolverUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestUtils.swift; sourceTree = "<group>"; };
 		00E4B60427D0E388002ACEF8 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		00E4B60727D20FD3002ACEF8 /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
+		00E4B60927D21000002ACEF8 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
 		00EEA6F925CABCA60017F6A4 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		00EEA6FC25CABDB10017F6A4 /* TipsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsData.swift; sourceTree = "<group>"; };
 		00EEA6FF25CABE8D0017F6A4 /* tips.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tips.json; sourceTree = "<group>"; };
@@ -288,6 +292,8 @@
 			children = (
 				00CD12D227CE326C008191B2 /* AnagramSolverUITests.swift */,
 				00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */,
+				00E4B60927D21000002ACEF8 /* SearchTests.swift */,
+				00E4B60727D20FD3002ACEF8 /* SettingsTests.swift */,
 				00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */,
 			);
 			path = AnagramSolverUITests;
@@ -697,6 +703,8 @@
 			files = (
 				00CD12DD27CE3CAD008191B2 /* UITestUtils.swift in Sources */,
 				00CD12D327CE326C008191B2 /* AnagramSolverUITests.swift in Sources */,
+				00E4B60A27D21000002ACEF8 /* SearchTests.swift in Sources */,
+				00E4B60827D20FD3002ACEF8 /* SettingsTests.swift in Sources */,
 				00CD12D527CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

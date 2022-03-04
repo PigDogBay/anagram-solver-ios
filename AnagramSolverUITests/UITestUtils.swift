@@ -8,6 +8,8 @@
 
 import XCTest
 
+let SEARCH_TIMEOUT : TimeInterval = 10.0
+
 extension XCUIApplication {
     /**
      Amazing this is not already included
@@ -18,5 +20,6 @@ extension XCUIApplication {
             self.keys[String($0)].tap()
         }
     }
+    
 }
 
