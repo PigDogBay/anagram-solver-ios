@@ -52,4 +52,40 @@ class SearchTests: XCTestCase {
         app.buttons["Search"].tap()
         XCTAssertTrue(app.staticTexts["Matches: 3 Filters: 1"].waitForExistence(timeout: SEARCH_TIMEOUT))
     }
+    
+    func testCrosswordVowel1(){
+        let app = XCUIApplication()
+        app.textFields.element.tap()
+        app.typeText("gr!!.")
+        app.buttons["Search"].tap()
+        XCTAssertTrue(app.staticTexts["Matches: 27"].waitForExistence(timeout: SEARCH_TIMEOUT))
+
+    }
+
+    func testCrosswordVowel2(){
+        let app = XCUIApplication()
+        app.textFields.element.tap()
+        app.typeText("t!!ter@")
+        app.buttons["Search"].tap()
+        XCTAssertTrue(app.staticTexts["Matches: 9"].waitForExistence(timeout: SEARCH_TIMEOUT))
+        XCTAssertTrue(app.tables.element.staticTexts["teeterboards"].waitForExistence(timeout: SEARCH_TIMEOUT))
+    }
+
+    func testCrosswordVowel3(){
+        let app = XCUIApplication()
+        app.textFields.element.tap()
+        app.typeText("moonstarer")
+        app.buttons["Search"].tap()
+        XCTAssertTrue(app.tables.element.staticTexts["astronomer"].waitForExistence(timeout: SEARCH_TIMEOUT))
+
+        //Set up filter
+        app.buttons["Filters"].tap()
+        //Prefix filter is 7th textField (index 6)
+        app.textFields.element(boundBy: 6).tap()
+        app.typeText(".!!.!!.")
+        app.buttons["Search"].tap()
+        XCTAssertTrue(app.staticTexts["Matches: 2 Filters: 1"].waitForExistence(timeout: SEARCH_TIMEOUT))
+        XCTAssertTrue(app.tables.element.staticTexts["searoom (ntr)"].waitForExistence(timeout: SEARCH_TIMEOUT))
+        XCTAssertTrue(app.tables.element.staticTexts["tearoom (nsr)"].waitForExistence(timeout: SEARCH_TIMEOUT))
+    }
 }
