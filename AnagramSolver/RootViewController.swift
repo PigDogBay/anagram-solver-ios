@@ -93,11 +93,6 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         //prevent email autocomplete showing on the keyboard
         textFieldQuery.textContentType = UITextContentType(rawValue: "")
     }
-    
-    /// Called from the co-ordinator when the user exits the settings screen
-    func updateSettings() {
-        fontSettingsCheck()
-    }
 
     ///Called when the app becomes active
     ///ATT Dialog will only be shown when the app is active
