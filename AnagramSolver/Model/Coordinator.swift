@@ -51,9 +51,11 @@ class Coordinator : ObservableObject {
         selection = SHOW_HELP
     }
 
+    /// Call when the user exits the Settings screen and apply any setting changes
     func updateSettings(){
+        Model.sharedInstance.checkForSettingsChange()
+        showCards = Model.sharedInstance.settings.showCardTips
         rootVC?.updateSettings()
     }
-    
 }
 

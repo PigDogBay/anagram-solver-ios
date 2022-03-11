@@ -88,19 +88,17 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         fontSettingsCheck()
         model = Model.sharedInstance
         model.appState.addObserver(observer: self)
-        //Apply any setting changes when coming back from the settings screen
-        NotificationCenter.default.addObserver(self, selector: #selector (updateSettings), name: UIApplication.willEnterForegroundNotification, object: UIApplication.shared)
+        //ATT prompt can only be shown when the app becomes active, so need to listen for this event.
         NotificationCenter.default.addObserver(self, selector: #selector (appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
         //prevent email autocomplete showing on the keyboard
         textFieldQuery.textContentType = UITextContentType(rawValue: "")
     }
-    //Only called when view re-appears from background
-    @objc func updateSettings() {
-        //check for any settings changes
-        model.checkForSettingsChange()
+    
+    /// Called from the co-ordinator when the user exits the settings screen
+    func updateSettings() {
         fontSettingsCheck()
-        coordinator.showCards = Model.sharedInstance.settings.showCardTips
     }
+
     ///Called when the app becomes active
     ///ATT Dialog will only be shown when the app is active
     ///requestTrackingAuthorization will return status undetermined if called before app is active
