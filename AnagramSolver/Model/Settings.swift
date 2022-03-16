@@ -93,12 +93,14 @@ class Settings
         "System",
         "Dark",
         "Light"]
-
-    //Raw enum values of UIUserInterfaceStyle
+    
+    static let darkModeValueSystem = "system"
+    static let darkModeValueDark = "dark"
+    static let darkModeValueLight = "light"
     static let darkModeValues = [
-        "0",
-        "2",
-        "1"]
+        darkModeValueSystem,
+        darkModeValueDark,
+        darkModeValueLight]
 
     private let definitionKey = "definition"
     private let highlightKey = "highlight"
@@ -117,7 +119,7 @@ class Settings
     private let defaultDefinition = "google"
     private let defaultResultsLimit = "5000"
     private let defaultHighlight = "red"
-    private let defaultDarkMode = "0"
+    private let defaultDarkMode = darkModeValueSystem
 
     var highlight : UIColor {
         get {
