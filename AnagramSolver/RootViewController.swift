@@ -82,10 +82,17 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         }
     }
     
+    func applyDarkModeSetting(){
+        let darkModeRaw = Int(Model.sharedInstance.settings.darkModeOverride) ?? 0
+        let uiStyle = UIUserInterfaceStyle(rawValue: darkModeRaw) ?? .unspecified
+        UIApplication.shared.windows.first?.overrideUserInterfaceStyle = uiStyle
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         fontSettingsCheck()
+        applyDarkModeSetting()
         model = Model.sharedInstance
         model.appState.addObserver(observer: self)
         //ATT prompt can only be shown when the app becomes active, so need to listen for this event.

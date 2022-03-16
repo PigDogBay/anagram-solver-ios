@@ -77,6 +77,11 @@ struct SettingsView: View {
                                values: Settings.highlightValues,
                                selection: $viewModel.highlight)
 
+                SettingsPicker(label: "Dark Mode",
+                               titles: Settings.darkModeTitles,
+                               values: Settings.darkModeValues,
+                               selection: $viewModel.darkModeOverride)
+
                 if #available(iOS 14.0, *) {
                     tipsToggle
                 }

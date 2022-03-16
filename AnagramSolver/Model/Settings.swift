@@ -89,6 +89,17 @@ class Settings
         "blue",
         "yellow"]
 
+    static let darkModeTitles = [
+        "System",
+        "Dark",
+        "Light"]
+
+    //Raw enum values of UIUserInterfaceStyle
+    static let darkModeValues = [
+        "0",
+        "2",
+        "1"]
+
     private let definitionKey = "definition"
     private let highlightKey = "highlight"
     private let showKeyboardKey = "showKeyboard"
@@ -100,11 +111,13 @@ class Settings
     private let isProKey = "isProFlag"
     private let useNonPersonalizedAdsKey = "useNonPersonalisedAds"
     private let showCardTipsKey = "showCardTips"
-    
+    private let darkModeOverrideKey = "darkModeOverride"
+
     private let defaultWordList = "words"
     private let defaultDefinition = "google"
     private let defaultResultsLimit = "5000"
     private let defaultHighlight = "red"
+    private let defaultDarkMode = "0"
 
     var highlight : UIColor {
         get {
@@ -263,6 +276,17 @@ class Settings
         }
     }
 
+    var darkModeOverride : String {
+        get {
+            return UserDefaults.standard.string(forKey: darkModeOverrideKey) ?? defaultDarkMode
+        }
+        set(value){
+            if value != darkModeOverride {
+                UserDefaults.standard.set(value, forKey: darkModeOverrideKey)
+            }
+        }
+    }
+
     func registerDefaultSettings() {
         let defaultSettings : [ String : Any] = [definitionKey : "google define",
                                highlightKey : "red",
@@ -273,6 +297,7 @@ class Settings
                                showSubAnagramsKey : true,
                                showCardTipsKey : true,
                                resultsLimitKey : 5000,
+                               darkModeOverrideKey: defaultDarkMode,
                                useMonospacedFontKey : false,
                                useNonPersonalizedAdsKey : false]
         UserDefaults.standard.register(defaults: defaultSettings)

@@ -65,6 +65,14 @@ class SettingsViewModel : ObservableObject {
         }
     }
 
+    @Published var darkModeOverride : String {
+        didSet {
+            settings.darkModeOverride = darkModeOverride
+            //Update this setting immediately
+            Coordinator.sharedInstance.rootVC?.applyDarkModeSetting()
+        }
+    }
+    
     init(){
         wordList = settings.wordList
         definition = settings.definition
@@ -75,5 +83,6 @@ class SettingsViewModel : ObservableObject {
         showSubAnagrams = settings.showSubAnagrams
         showCardTips = settings.showCardTips
         useMonospacedFont = settings.useMonospacedFont
+        darkModeOverride = settings.darkModeOverride
     }
 }
