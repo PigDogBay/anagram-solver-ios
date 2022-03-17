@@ -47,6 +47,12 @@ class SettingsViewModel : ObservableObject {
         }
     }
     
+    @Published var allowDictation : Bool {
+        didSet {
+            settings.keyboardType = allowDictation ? Settings.keyboardWebSearch : Settings.keyboardEmail
+        }
+    }
+    
     @Published var isLongPressEnabled : Bool {
         didSet {
             settings.isLongPressEnabled = isLongPressEnabled
@@ -84,5 +90,6 @@ class SettingsViewModel : ObservableObject {
         showCardTips = settings.showCardTips
         useMonospacedFont = settings.useMonospacedFont
         darkModeOverride = settings.darkModeOverride
+        allowDictation = settings.keyboardType == Settings.keyboardWebSearch
     }
 }

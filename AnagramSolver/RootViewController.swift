@@ -74,11 +74,18 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         textFieldQuery.resignFirstResponder();
     }
 
-    func fontSettingsCheck(){
-        let font = Model.sharedInstance.settings.useMonospacedFont ? monospacedFont : systemFont
+    func updateSettings(){
+        let settings = Model.sharedInstance.settings
+        let font = settings.useMonospacedFont ? monospacedFont : systemFont
         if font?.fontName != textFieldQuery.font?.fontName {
             //font setting has changed
             textFieldQuery.font = font
+        }
+        switch settings.keyboardType {
+        case Settings.keyboardWebSearch:
+            textFieldQuery.keyboardType = .webSearch
+        default:
+            textFieldQuery.keyboardType = .emailAddress
         }
     }
     
@@ -98,7 +105,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        fontSettingsCheck()
+        updateSettings()
         applyDarkModeSetting()
         model = Model.sharedInstance
         model.appState.addObserver(observer: self)

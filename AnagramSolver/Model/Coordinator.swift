@@ -55,7 +55,7 @@ class Coordinator : ObservableObject {
     func updateSettings(){
         Model.sharedInstance.checkForSettingsChange()
         showCards = Model.sharedInstance.settings.showCardTips
-        rootVC?.fontSettingsCheck()
+        rootVC?.updateSettings()
     }
 }
 

@@ -46,6 +46,12 @@ struct SettingsView: View {
         }.modifier(ToggleMod())
     }
 
+    private var dictationToggle : some View {
+        Toggle(isOn: $viewModel.allowDictation) {
+            Text("Allow dictation")
+        }.modifier(ToggleMod())
+    }
+
     var body: some View {
         Form {
             Section(header: Text("SEARCH"),
@@ -88,8 +94,12 @@ struct SettingsView: View {
                 monospacedToggle
             }
 
-            Section(header: Text("OTHER")){
+            Section(header: Text("KEYBOARD")){
                 showKeyboardToggle
+                dictationToggle
+            }
+
+            Section(header: Text("OTHER")){
                 longPressToggle
             }
         }.navigationBarTitle(Text("Settings"), displayMode: .inline)

@@ -101,6 +101,9 @@ class Settings
         darkModeValueSystem,
         darkModeValueDark,
         darkModeValueLight]
+    
+    static let keyboardEmail = "email"
+    static let keyboardWebSearch = "webSearch"
 
     private let definitionKey = "definition"
     private let highlightKey = "highlight"
@@ -114,12 +117,14 @@ class Settings
     private let useNonPersonalizedAdsKey = "useNonPersonalisedAds"
     private let showCardTipsKey = "showCardTips"
     private let darkModeOverrideKey = "darkModeOverride"
+    private let keyboardTypeKey = "keyboardType"
 
     private let defaultWordList = "words"
     private let defaultDefinition = "google"
     private let defaultResultsLimit = "5000"
     private let defaultHighlight = "red"
     private let defaultDarkMode = darkModeValueSystem
+    private let defaultKeyboardType = keyboardEmail
 
     var highlight : UIColor {
         get {
@@ -141,6 +146,16 @@ class Settings
         }
     }
     
+    var keyboardType : String {
+        get { return UserDefaults.standard.string(forKey: keyboardTypeKey) ?? defaultKeyboardType}
+        set(value) {
+            if value != keyboardType {
+                let defaults = UserDefaults.standard
+                defaults.set(value, forKey: keyboardTypeKey)
+            }
+        }
+    }
+
     var highlightValue : String {
         get { return UserDefaults.standard.string(forKey: highlightKey) ?? defaultHighlight}
         set(value) {
@@ -299,6 +314,7 @@ class Settings
                                showSubAnagramsKey : true,
                                showCardTipsKey : true,
                                resultsLimitKey : 5000,
+                               keyboardTypeKey : defaultKeyboardType,
                                darkModeOverrideKey: defaultDarkMode,
                                useMonospacedFontKey : false,
                                useNonPersonalizedAdsKey : false]
