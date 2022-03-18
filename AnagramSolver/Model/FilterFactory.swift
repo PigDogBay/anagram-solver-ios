@@ -31,28 +31,28 @@ class FilterFactory : WordListCallbackAbstractFactory {
             callback = BiggerThanFilter(callback: callback, size: filter.biggerThan)
         }
         if filter.startingWith != "" {
-            callback = StartsWithFilter(callback: callback, letters: filter.startingWith)
+            callback = StartsWithFilter(callback: callback, letters: filter.startingWith.lowercased())
         }
         if filter.endingWith != "" {
-            callback = EndsWithFilter(callback: callback, letters: filter.endingWith)
+            callback = EndsWithFilter(callback: callback, letters: filter.endingWith.lowercased())
         }
         if filter.containing != "" {
-            callback = ContainsFilter(callback: callback, letters: filter.containing)
+            callback = ContainsFilter(callback: callback, letters: filter.containing.lowercased())
         }
         if filter.excluding != "" {
-            callback = ExcludesFilter(callback: callback, letters: filter.excluding)
+            callback = ExcludesFilter(callback: callback, letters: filter.excluding.lowercased())
         }
         if filter.containingWord != "" {
-            callback = ContainsWordFilter(callback: callback, word: filter.containingWord)
+            callback = ContainsWordFilter(callback: callback, word: filter.containingWord.lowercased())
         }
         if filter.excludingWord != "" {
-            callback = ExcludesWordFilter(callback: callback, word: filter.excludingWord)
+            callback = ExcludesWordFilter(callback: callback, word: filter.excludingWord.lowercased())
         }
         if filter.crossword != "" {
-            callback =  RegexFilter.createCrosswordFilter(callback: callback, query: filter.crossword)
+            callback =  RegexFilter.createCrosswordFilter(callback: callback, query: filter.crossword.lowercased())
         }
         if filter.regex != "" {
-            callback =  RegexFilter(callback: callback, pattern: filter.regex)
+            callback =  RegexFilter(callback: callback, pattern: filter.regex.lowercased())
         }
         if filter.distinct == 1 {
             callback = DistinctFilter(callback: callback)

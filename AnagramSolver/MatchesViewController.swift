@@ -258,7 +258,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
         case .loading:
             break
         case .ready:
-            navBar.title = model.query
+            navBar.title = model.casedQuery
             //clear matches when doing a filter search
             self.matchesTable.reloadData()
             fallthrough

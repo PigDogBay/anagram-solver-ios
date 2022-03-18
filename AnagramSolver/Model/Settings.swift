@@ -118,6 +118,7 @@ class Settings
     private let showCardTipsKey = "showCardTips"
     private let darkModeOverrideKey = "darkModeOverride"
     private let keyboardTypeKey = "keyboardType"
+    private let useUpperCaseKey = "useUpperCase"
 
     private let defaultWordList = "words"
     private let defaultDefinition = "google"
@@ -304,20 +305,33 @@ class Settings
         }
     }
 
+    var useUpperCase : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: useUpperCaseKey)
+        }
+        set(flag) {
+            if flag != useUpperCase {
+                let defaults = UserDefaults.standard
+                defaults.set(flag, forKey: useUpperCaseKey)
+            }
+        }
+    }
+    
     func registerDefaultSettings() {
         let defaultSettings : [ String : Any] = [definitionKey : "google define",
-                               highlightKey : "red",
-                               showKeyboardKey : false,
-                               longPressEnabledKey : true,
-                               wordListKey : defaultWordList,
-                               isProKey : false,
-                               showSubAnagramsKey : true,
-                               showCardTipsKey : true,
-                               resultsLimitKey : 5000,
-                               keyboardTypeKey : defaultKeyboardType,
-                               darkModeOverrideKey: defaultDarkMode,
-                               useMonospacedFontKey : false,
-                               useNonPersonalizedAdsKey : false]
+                                                  highlightKey : "red",
+                                               showKeyboardKey : false,
+                                           longPressEnabledKey : true,
+                                                   wordListKey : defaultWordList,
+                                                      isProKey : false,
+                                            showSubAnagramsKey : true,
+                                               showCardTipsKey : true,
+                                               resultsLimitKey : 5000,
+                                               keyboardTypeKey : defaultKeyboardType,
+                                            darkModeOverrideKey: defaultDarkMode,
+                                               useUpperCaseKey : false,
+                                          useMonospacedFontKey : false,
+                                      useNonPersonalizedAdsKey : false]
         UserDefaults.standard.register(defaults: defaultSettings)
     }
 }

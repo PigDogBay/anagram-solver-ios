@@ -26,6 +26,9 @@ class Model : WordListCallback, IAPDelegate
     let wordFormatter = WordFormatter()
     let matches = Matches()
     var query = ""
+    var casedQuery : String {
+        return settings.useUpperCase ? query.uppercased() : query
+    }
     var distinctMatchesOnly = false
     let settings = Settings()
     let ads = Ads()
@@ -134,6 +137,7 @@ class Model : WordListCallback, IAPDelegate
     
     func applySettings(){
         self.wordFormatter.highlightColor = self.settings.highlight
+        self.wordFormatter.isUpperCased = self.settings.useUpperCase
         self.resultsLimit = self.settings.resultsLimit
         self.wordListName = settings.wordList
         self.wordSearch.findSubAnagrams = settings.showSubAnagrams

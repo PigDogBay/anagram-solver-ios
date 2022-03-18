@@ -46,6 +46,16 @@ struct SettingsView: View {
         }.modifier(ToggleMod())
     }
 
+    private var useUpperCaseToggle : some View {
+        Toggle(isOn: $viewModel.useUpperCase) {
+            if viewModel.useUpperCase {
+                Text("Uppercase letters")
+            } else {
+                Text("Lowercase letters")
+            }
+        }.modifier(ToggleMod())
+    }
+
     private var dictationToggle : some View {
         Toggle(isOn: $viewModel.allowDictation) {
             Text("Allow dictation")
@@ -91,6 +101,7 @@ struct SettingsView: View {
                 if #available(iOS 14.0, *) {
                     tipsToggle
                 }
+                useUpperCaseToggle
                 monospacedToggle
             }
 

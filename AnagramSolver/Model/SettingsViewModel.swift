@@ -70,6 +70,12 @@ class SettingsViewModel : ObservableObject {
             settings.useMonospacedFont = useMonospacedFont
         }
     }
+    
+    @Published var useUpperCase : Bool {
+        didSet {
+            settings.useUpperCase = useUpperCase
+        }
+    }
 
     @Published var darkModeOverride : String {
         didSet {
@@ -91,5 +97,6 @@ class SettingsViewModel : ObservableObject {
         useMonospacedFont = settings.useMonospacedFont
         darkModeOverride = settings.darkModeOverride
         allowDictation = settings.keyboardType == Settings.keyboardWebSearch
+        useUpperCase = settings.useUpperCase
     }
 }

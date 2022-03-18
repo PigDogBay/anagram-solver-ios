@@ -35,10 +35,11 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
         Data binding is handled in this class as it seems the most convenient for now, similar to
         Android's ViewHolder.
     */
-    func bind(filter : Filter, filterType : FilterType){
+    func bind(filter : Filter, filterType : FilterType, isUpperCase : Bool = false){
         self.filter = filter
         self.filterType = filterType
         lettersTextView.delegate = nil
+        lettersTextView.autocapitalizationType = isUpperCase ? .allCharacters : .none
 
         switch filterType {
         case .startsWith:

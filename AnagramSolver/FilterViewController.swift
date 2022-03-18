@@ -37,14 +37,14 @@ class FilterViewController: UITableViewController, LettersCellCallback {
     fileprivate var model : Model!
     fileprivate let numberCellId = "cellNumbersFilter"
     fileprivate let letterCellId = "cellLettersFilter"
+    fileprivate var useUpperCase = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.model = Model.sharedInstance
         tableView.dataSource = self
         tableView.delegate = self
-
-
+        useUpperCase = model.settings.useUpperCase
     }
 
     fileprivate func filterSearch() {
@@ -187,7 +187,7 @@ class FilterViewController: UITableViewController, LettersCellCallback {
     }
     fileprivate func cellForLettersFilter(_ indexPath: IndexPath, _ filterType : LettersFilterTableViewCell.FilterType) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: letterCellId, for: indexPath) as! LettersFilterTableViewCell
-        cell.bind(filter: model.filter, filterType: filterType)
+        cell.bind(filter: model.filter, filterType: filterType, isUpperCase: useUpperCase)
         cell.callback = self
         return cell
     }

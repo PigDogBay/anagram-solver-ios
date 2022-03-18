@@ -62,7 +62,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     }
 
     func showMe(query : String){
-        textFieldQuery.text = query
+        textFieldQuery.text = model.settings.useUpperCase ? query.uppercased() : query
         if shouldPerformSegue(withIdentifier: searchSegueId, sender: self)
         {
             performSegue(withIdentifier: searchSegueId, sender: self)
@@ -87,6 +87,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         default:
             textFieldQuery.keyboardType = .emailAddress
         }
+        textFieldQuery.autocapitalizationType = settings.useUpperCase ? .allCharacters : .none
     }
     
     func applyDarkModeSetting(){
