@@ -100,8 +100,11 @@ struct SettingsView: View {
 
                 if #available(iOS 14.0, *) {
                     tipsToggle
+                    //Set identifier for UI testing
+                    useUpperCaseToggle.accessibilityIdentifier("caseToggle")
+                } else {
+                    useUpperCaseToggle
                 }
-                useUpperCaseToggle
                 monospacedToggle
             }
 
