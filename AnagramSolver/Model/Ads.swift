@@ -30,14 +30,9 @@ class Ads
      Otherwise .authorized or .denied is return on main-thread
      */
     private func requestIDFA() {
-        if #available(iOS 14, *) {
-            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-                self.initializeAds()
-            })
-        } else {
-            // Fallback on earlier versions
+        ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
             self.initializeAds()
-        }
+        })
     }
     
     private func initializeAds(){

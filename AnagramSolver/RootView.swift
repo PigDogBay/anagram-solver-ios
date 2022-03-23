@@ -11,15 +11,11 @@ import SwiftUI
 struct RootView: View {
     @ObservedObject var coordinator = Coordinator.sharedInstance
     var body: some View {
-        if #available(iOS 14.0, *) {
-            if coordinator.showCards {
-                CardTips()
-            } else {
-                TipsView()
-                    .ignoresSafeArea()
-            }
+        if coordinator.showCards {
+            CardTips()
         } else {
             TipsView()
+                .ignoresSafeArea()
         }
         NavigationLink(destination: AboutView(),
                        tag: coordinator.SHOW_ABOUT,

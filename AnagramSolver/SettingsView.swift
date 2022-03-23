@@ -98,13 +98,9 @@ struct SettingsView: View {
                                values: Settings.darkModeValues,
                                selection: $viewModel.darkModeOverride)
 
-                if #available(iOS 14.0, *) {
-                    tipsToggle
-                    //Set identifier for UI testing
-                    useUpperCaseToggle.accessibilityIdentifier("caseToggle")
-                } else {
-                    useUpperCaseToggle
-                }
+                tipsToggle
+                //Set identifier for UI testing
+                useUpperCaseToggle.accessibilityIdentifier("caseToggle")
                 monospacedToggle
             }
 
@@ -124,12 +120,8 @@ struct SettingsView: View {
 }
 struct ToggleMod : ViewModifier {
     func body(content: Content) -> some View {
-        if #available(iOS 14.0, *) {
-            content
-                .toggleStyle(SwitchToggleStyle(tint: Color("toggle")))
-        } else {
-            content
-        }
+        content
+            .toggleStyle(SwitchToggleStyle(tint: Color("toggle")))
     }
 }
 struct SettingsView_Previews: PreviewProvider {

@@ -68,11 +68,7 @@ struct CardTitle : View {
                 .scaleEffect(CGSize(width: 1.25,height: 1.25))
                 .padding(16)
             Spacer()
-            if #available(iOS 14.0, *) {
-                Text(title).font(.title2.bold())
-            } else {
-                Text(title).font(.title)
-            }
+            Text(title).font(.title2.bold())
             Spacer()
             Spacer()
         }
