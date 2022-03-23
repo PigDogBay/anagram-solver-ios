@@ -8,7 +8,7 @@
 
 import XCTest
 
-let SEARCH_TIMEOUT : TimeInterval = 10.0
+let SEARCH_TIMEOUT : TimeInterval = 15.0
 
 extension XCUIApplication {
     /**
