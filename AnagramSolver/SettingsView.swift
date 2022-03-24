@@ -11,6 +11,7 @@ import SwiftUI
 struct SettingsView: View {
     
     @ObservedObject var viewModel = SettingsViewModel()
+    @State private var showDefaultSettingsAlert = false
 
     private var showKeyboardToggle : some View {
         Toggle(isOn: $viewModel.showKeyboard) {
@@ -61,8 +62,8 @@ struct SettingsView: View {
             Text("Allow dictation")
         }.modifier(ToggleMod())
     }
-
-    var body: some View {
+    
+    private var settingsForm : some View {
         Form {
             Section(header: Text("SEARCH"),
                     footer: Text("There are 9 built-in word lists to choose from including Spanish, French and lists for Scrabble")){
@@ -112,9 +113,24 @@ struct SettingsView: View {
             Section(header: Text("OTHER")){
                 longPressToggle
             }
-        }.navigationBarTitle(Text("Settings"), displayMode: .inline)
-        .onDisappear(){
+        }.onDisappear(){
             Coordinator.sharedInstance.updateSettings()
+        }
+        .navigationBarTitle(Text("Settings"), displayMode: .inline)
+    }
+
+    var body: some View {
+        if #available(iOS 15.0, *) {
+            settingsForm
+                .navigationBarItems(trailing: Button("Reset"){showDefaultSettingsAlert = true})
+                .tint(Color.white)
+                .alert("Use Default Settings", isPresented: $showDefaultSettingsAlert){
+                    Button("Default settings", role: .destructive){viewModel.resetToDefaultSettings()}
+                    Button("Cancel", role: .cancel){}
+                }
+        } else {
+            //No reset button for iOS 14
+            settingsForm
         }
     }
 }

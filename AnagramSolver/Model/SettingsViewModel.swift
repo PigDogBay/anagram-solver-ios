@@ -99,4 +99,7 @@ class SettingsViewModel : ObservableObject {
         allowDictation = settings.keyboardType == Settings.keyboardWebSearch
         useUpperCase = settings.useUpperCase
     }
+ 
+    func resetToDefaultSettings(){
+    }
 }
