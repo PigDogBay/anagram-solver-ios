@@ -126,6 +126,7 @@ struct SettingsView: View {
                 .tint(Color.white)
                 .alert("Use Default Settings", isPresented: $showDefaultSettingsAlert){
                     Button("Default settings", role: .destructive){viewModel.resetToDefaultSettings()}
+                        .accessibilityIdentifier("dialogResetSettings")
                     Button("Cancel", role: .cancel){}
                 }
         } else {

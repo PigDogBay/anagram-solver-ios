@@ -27,12 +27,14 @@ class SettingsTests: XCTestCase {
 
     
     /// Tests the Letter Case setting
-    /// Before the test, ensure the letter case setting is toggle off to lower case
     /// Run on the iPod, as requires keyboard
     func testLetterCase1() throws {
         let app = XCUIApplication()
         //press settings button
         app.navigationBars.buttons.element(boundBy: 0).tap()
+        //press Reset button to ensure settings are in a known state
+        app.buttons["Reset"].tap()
+        app.buttons["dialogResetSettings"].tap()
         app.descendants(matching: .switch).matching(identifier: "caseToggle").element.tap()
         //press back button
         app.navigationBars.buttons.element(boundBy: 0).tap()
