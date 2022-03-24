@@ -101,5 +101,17 @@ class SettingsViewModel : ObservableObject {
     }
  
     func resetToDefaultSettings(){
+        wordList = settings.defaultWordList
+        definition = settings.defaultDefinition
+        resultsLimit = settings.defaultResultsLimit
+        highlight = settings.defaultHighlight
+        showKeyboard = settings.defaultShowKeyboard
+        isLongPressEnabled = settings.defaultLongPressEnabled
+        showSubAnagrams = settings.defaultShowSubAnagrams
+        showCardTips = settings.defaultShowCardTips
+        useMonospacedFont = settings.defaultMonospacedFont
+        allowDictation = false
+        useUpperCase = settings.defaultUseUppercase
+        darkModeOverride = settings.defaultDarkMode
     }
 }

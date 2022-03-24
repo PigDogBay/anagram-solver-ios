@@ -120,12 +120,18 @@ class Settings
     private let keyboardTypeKey = "keyboardType"
     private let useUpperCaseKey = "useUpperCase"
 
-    private let defaultWordList = "words"
-    private let defaultDefinition = "google"
-    private let defaultResultsLimit = "5000"
-    private let defaultHighlight = "red"
-    private let defaultDarkMode = darkModeValueSystem
-    private let defaultKeyboardType = keyboardEmail
+    let defaultWordList = "words"
+    let defaultDefinition = "google define"
+    let defaultResultsLimit = "5000"
+    let defaultHighlight = "red"
+    let defaultDarkMode = darkModeValueSystem
+    let defaultKeyboardType = keyboardEmail
+    let defaultShowKeyboard = false
+    let defaultLongPressEnabled = true
+    let defaultShowSubAnagrams = true
+    let defaultShowCardTips = true
+    let defaultUseUppercase = false
+    let defaultMonospacedFont = false
 
     var highlight : UIColor {
         get {
@@ -318,19 +324,19 @@ class Settings
     }
     
     func registerDefaultSettings() {
-        let defaultSettings : [ String : Any] = [definitionKey : "google define",
-                                                  highlightKey : "red",
-                                               showKeyboardKey : false,
-                                           longPressEnabledKey : true,
+        let defaultSettings : [ String : Any] = [definitionKey : defaultDefinition,
+                                                  highlightKey : defaultHighlight,
+                                               showKeyboardKey : defaultShowKeyboard,
+                                           longPressEnabledKey : defaultLongPressEnabled,
                                                    wordListKey : defaultWordList,
                                                       isProKey : false,
-                                            showSubAnagramsKey : true,
-                                               showCardTipsKey : true,
+                                            showSubAnagramsKey : defaultShowSubAnagrams,
+                                               showCardTipsKey : defaultShowCardTips,
                                                resultsLimitKey : 5000,
                                                keyboardTypeKey : defaultKeyboardType,
                                             darkModeOverrideKey: defaultDarkMode,
-                                               useUpperCaseKey : false,
-                                          useMonospacedFontKey : false,
+                                               useUpperCaseKey : defaultUseUppercase,
+                                          useMonospacedFontKey : defaultMonospacedFont,
                                       useNonPersonalizedAdsKey : false]
         UserDefaults.standard.register(defaults: defaultSettings)
     }
