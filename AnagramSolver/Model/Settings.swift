@@ -119,6 +119,8 @@ class Settings
     private let darkModeOverrideKey = "darkModeOverride"
     private let keyboardTypeKey = "keyboardType"
     private let useUpperCaseKey = "useUpperCase"
+    private let fullStopToQuestionMarkKey = "fullStopToQuestionMark"
+    private let spaceToQuestionMarkKey = "spaceToQuestionMark"
 
     let defaultWordList = "words"
     let defaultDefinition = "google define"
@@ -132,6 +134,8 @@ class Settings
     let defaultShowCardTips = true
     let defaultUseUppercase = false
     let defaultMonospacedFont = false
+    let defaultFullStopToQuestionMark = false
+    let defaultSpaceToQuestionMark = false
 
     var highlight : UIColor {
         get {
@@ -196,7 +200,31 @@ class Settings
             }
         }
     }
-    
+
+    var spaceToQuestionMark : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: spaceToQuestionMarkKey)
+        }
+        set(flag) {
+            if flag != spaceToQuestionMark {
+                let defaults = UserDefaults.standard
+                defaults.set(flag, forKey: spaceToQuestionMarkKey)
+            }
+        }
+    }
+
+    var fullStopToQuestionMark : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: fullStopToQuestionMarkKey)
+        }
+        set(flag) {
+            if flag != fullStopToQuestionMark {
+                let defaults = UserDefaults.standard
+                defaults.set(flag, forKey: fullStopToQuestionMarkKey)
+            }
+        }
+    }
+
     var isLongPressEnabled : Bool {
         get {
             return UserDefaults.standard.bool(forKey: longPressEnabledKey)
@@ -334,6 +362,8 @@ class Settings
                                                showCardTipsKey : defaultShowCardTips,
                                                resultsLimitKey : 5000,
                                                keyboardTypeKey : defaultKeyboardType,
+                                        spaceToQuestionMarkKey : defaultSpaceToQuestionMark,
+                                     fullStopToQuestionMarkKey : defaultFullStopToQuestionMark,
                                             darkModeOverrideKey: defaultDarkMode,
                                                useUpperCaseKey : defaultUseUppercase,
                                           useMonospacedFontKey : defaultMonospacedFont,
