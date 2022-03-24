@@ -84,7 +84,19 @@ class SettingsViewModel : ObservableObject {
             Coordinator.sharedInstance.rootVC?.applyDarkModeSetting()
         }
     }
-    
+
+    @Published var spaceToQuestionMark : Bool {
+        didSet {
+            settings.spaceToQuestionMark = spaceToQuestionMark
+        }
+    }
+
+    @Published var fullStopToQuestionMark : Bool {
+        didSet {
+            settings.fullStopToQuestionMark = fullStopToQuestionMark
+        }
+    }
+
     init(){
         wordList = settings.wordList
         definition = settings.definition
@@ -98,6 +110,8 @@ class SettingsViewModel : ObservableObject {
         darkModeOverride = settings.darkModeOverride
         allowDictation = settings.keyboardType == Settings.keyboardWebSearch
         useUpperCase = settings.useUpperCase
+        spaceToQuestionMark = settings.spaceToQuestionMark
+        fullStopToQuestionMark = settings.fullStopToQuestionMark
     }
  
     func resetToDefaultSettings(){
@@ -112,6 +126,8 @@ class SettingsViewModel : ObservableObject {
         useMonospacedFont = settings.defaultMonospacedFont
         allowDictation = false
         useUpperCase = settings.defaultUseUppercase
+        spaceToQuestionMark = settings.defaultSpaceToQuestionMark
+        fullStopToQuestionMark = settings.defaultFullStopToQuestionMark
         darkModeOverride = settings.defaultDarkMode
     }
 }
