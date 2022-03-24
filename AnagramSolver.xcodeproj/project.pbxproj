@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		001AAC2326EA9093000CC6B6 /* phrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = 001AAC2126EA9093000CC6B6 /* phrases.txt */; };
 		0029A03525307170002E96D1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029A03425307170002E96D1 /* Strings.swift */; };
+		002E8E7A27ECDA3C002BFC3E /* QueryTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E8E7927ECDA3C002BFC3E /* QueryTextFieldDelegate.swift */; };
 		003E10EB253EF72400AE8155 /* wordlist-fr.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10E7253EF72400AE8155 /* wordlist-fr.txt */; };
 		003E10EC253EF72400AE8155 /* wordlist-de.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10E9253EF72400AE8155 /* wordlist-de.txt */; };
 		003E10ED253EF72400AE8155 /* wordlist-es.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10EA253EF72400AE8155 /* wordlist-es.txt */; };
@@ -145,6 +146,7 @@
 /* Begin PBXFileReference section */
 		001AAC2126EA9093000CC6B6 /* phrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phrases.txt; sourceTree = "<group>"; };
 		0029A03425307170002E96D1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		002E8E7927ECDA3C002BFC3E /* QueryTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryTextFieldDelegate.swift; sourceTree = "<group>"; };
 		003E10E7253EF72400AE8155 /* wordlist-fr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-fr.txt"; sourceTree = "<group>"; };
 		003E10E9253EF72400AE8155 /* wordlist-de.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-de.txt"; sourceTree = "<group>"; };
 		003E10EA253EF72400AE8155 /* wordlist-es.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-es.txt"; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 				4DF2DE3F1FB0A82300F44ADE /* ListViewController.swift */,
 				4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */,
 				4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */,
+				002E8E7927ECDA3C002BFC3E /* QueryTextFieldDelegate.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -731,6 +734,7 @@
 				00EEA71225CABFE50017F6A4 /* AboutRow.swift in Sources */,
 				00EEA71A25CAC2A40017F6A4 /* Coordinator.swift in Sources */,
 				00EEA71025CABFE50017F6A4 /* FeedbackRow.swift in Sources */,
+				002E8E7A27ECDA3C002BFC3E /* QueryTextFieldDelegate.swift in Sources */,
 				0029A03525307170002E96D1 /* Strings.swift in Sources */,
 				4D2B35C31D33AAE30014ABF3 /* IAPFactory.swift in Sources */,
 				00F17DD926A9D00700452020 /* SettingsHelpView.swift in Sources */,

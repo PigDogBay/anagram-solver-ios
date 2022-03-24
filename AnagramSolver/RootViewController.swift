@@ -18,6 +18,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     private let monospacedFont = UIFont(name: "Menlo-Regular",size: 24.0)
     private let systemFont = UIFont.systemFont(ofSize: 24.0, weight: .regular)
     private var coordinator = Coordinator.sharedInstance
+    private let queryTextFieldDelegate = QueryTextFieldDelegate()
 
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var textFieldQuery: UITextField!
@@ -88,6 +89,8 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
             textFieldQuery.keyboardType = .emailAddress
         }
         textFieldQuery.autocapitalizationType = settings.useUpperCase ? .allCharacters : .none
+        queryTextFieldDelegate.convertFullStopToQuestionMark = settings.fullStopToQuestionMark
+        queryTextFieldDelegate.convertSpaceToQuestionMark = settings.spaceToQuestionMark
     }
     
     func applyDarkModeSetting(){
@@ -114,6 +117,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         NotificationCenter.default.addObserver(self, selector: #selector (appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
         //prevent email autocomplete showing on the keyboard
         textFieldQuery.textContentType = UITextContentType(rawValue: "")
+        textFieldQuery.delegate = queryTextFieldDelegate
     }
 
     ///Called when the app becomes active
