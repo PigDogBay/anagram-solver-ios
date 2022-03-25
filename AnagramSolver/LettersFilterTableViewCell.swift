@@ -16,7 +16,11 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var lettersTextView: UITextField!
-    
+
+    //Settings for the crossword pattern and query fields
+    var convertSpaceToQuestionMark = false
+    var convertFullStopToQuestionMark = false
+
     enum FilterType {
         case startsWith, endsWith, contains, excludes, containsWord, excludesWord, crossword, regex, query
     }
@@ -99,12 +103,24 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
             case .excludesWord:
                 filter?.excludingWord = lettersTextView.text!
             case .crossword:
+                convertSpacesFullStopsToQuestionMarks()
                 filter?.crossword = lettersTextView.text!
             case .regex:
                 filter?.regex = lettersTextView.text!
             case .query:
+                convertSpacesFullStopsToQuestionMarks()
                 filter?.query = lettersTextView.text!
             }
+        }
+    }
+        
+    /// Depending on user settings, convert spaces to ?, convert . to ?
+    private func convertSpacesFullStopsToQuestionMarks() {
+        if convertSpaceToQuestionMark {
+            lettersTextView.text = lettersTextView.text?.replacingOccurrences(of: " ", with: "?")
+        }
+        if convertFullStopToQuestionMark {
+            lettersTextView.text = lettersTextView.text?.replacingOccurrences(of: ".", with: "?")
         }
     }
     

@@ -189,6 +189,8 @@ class FilterViewController: UITableViewController, LettersCellCallback {
         let cell = tableView.dequeueReusableCell(withIdentifier: letterCellId, for: indexPath) as! LettersFilterTableViewCell
         cell.bind(filter: model.filter, filterType: filterType, isUpperCase: useUpperCase)
         cell.callback = self
+        cell.convertSpaceToQuestionMark = model.settings.spaceToQuestionMark
+        cell.convertFullStopToQuestionMark = model.settings.fullStopToQuestionMark
         return cell
     }
     fileprivate func cellForNumbersFilter(_ indexPath: IndexPath,_ value : Int,_ title : String) -> UITableViewCell {
