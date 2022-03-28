@@ -108,12 +108,16 @@ struct SettingsView: View {
             Section(header: Text("KEYBOARD")){
                 showKeyboardToggle
                 dictationToggle
+
                 Toggle(isOn: $viewModel.spaceToQuestionMark) {
                     Text("Convert Space to ?")
                 }.modifier(ToggleMod())
+                .accessibilityIdentifier("convertSpaceToggle")
+
                 Toggle(isOn: $viewModel.fullStopToQuestionMark) {
                     Text("Convert . to ?")
                 }.modifier(ToggleMod())
+                .accessibilityIdentifier("convertFullStopToggle")
             }
 
             Section(header: Text("OTHER")){

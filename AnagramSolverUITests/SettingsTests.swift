@@ -19,6 +19,14 @@ class SettingsTests: XCTestCase {
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+
+        let app = XCUIApplication()
+        //press settings button
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        //press Reset button to ensure settings are in a known state
+        app.buttons["Reset"].tap()
+        app.buttons["dialogResetSettings"].tap()
+
     }
 
     override func tearDownWithError() throws {
@@ -30,11 +38,6 @@ class SettingsTests: XCTestCase {
     /// Run on the iPod, as requires keyboard
     func testLetterCase1() throws {
         let app = XCUIApplication()
-        //press settings button
-        app.navigationBars.buttons.element(boundBy: 0).tap()
-        //press Reset button to ensure settings are in a known state
-        app.buttons["Reset"].tap()
-        app.buttons["dialogResetSettings"].tap()
         app.descendants(matching: .switch).matching(identifier: "caseToggle").element.tap()
         //press back button
         app.navigationBars.buttons.element(boundBy: 0).tap()
@@ -44,14 +47,33 @@ class SettingsTests: XCTestCase {
         app.mpdbUIType(msg: "MOONSTARER")
         app.buttons["Search"].tap()
         XCTAssertTrue(app.tables.element.staticTexts["ASTRONOMER"].waitForExistence(timeout: SEARCH_TIMEOUT))
+    }
+    
+    func testConvertSpaceToQuestionMark1(){
+        let app = XCUIApplication()
 
-        
+        app.descendants(matching: .switch).matching(identifier: "convertSpaceToggle").element.tap()
         //press back button
         app.navigationBars.buttons.element(boundBy: 0).tap()
-        //press settings button
-        app.navigationBars.buttons.element(boundBy: 0).tap()
-        //revert setting
-        app.descendants(matching: .switch).matching(identifier: "caseToggle").element.tap()
+
+        app.textFields.element.tap()
+        app.keys["o"].tap()
+        app.keys["k"].tap()
+        app.keys["space"].tap()
+        XCTAssertEqual(app.textFields.element.value as! String, "ok?")
     }
 
+    func testConvertFullStopToQuestionMark1(){
+        let app = XCUIApplication()
+
+        app.descendants(matching: .switch).matching(identifier: "convertFullStopToggle").element.tap()
+        //press back button
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+
+        app.textFields.element.tap()
+        app.keys["o"].tap()
+        app.keys["k"].tap()
+        app.keys["."].tap()
+        XCTAssertEqual(app.textFields.element.value as! String, "ok?")
+    }
 }
