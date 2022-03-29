@@ -110,7 +110,7 @@ struct SettingsView: View {
                 dictationToggle
 
                 Toggle(isOn: $viewModel.spaceToQuestionMark) {
-                    Text("Convert Space to ?")
+                    Text("Convert space to ?")
                 }.modifier(ToggleMod())
                 .accessibilityIdentifier("convertSpaceToggle")
 
