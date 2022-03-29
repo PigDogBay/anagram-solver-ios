@@ -27947,6 +27947,7 @@ jeannette rankin
 jeepers creepers
 jehovahs witness
 jemaah islamiyah
+jenny greenteeth
 jerusalem cherry
 jewish orthodoxy
 jewish rye bread
@@ -48145,6 +48146,7 @@ bordeaux wine
 border collie
 border patrol
 boris godunov
+boris johnson
 boris karloff
 boris spassky
 boron chamber
@@ -49405,6 +49407,7 @@ data highways
 dating agency
 daucus carota
 daughter cell
+david cameron
 david garrick
 david hartley
 david hilbert
@@ -54344,6 +54347,7 @@ rally-driving
 ralph ellison
 rambutan tree
 ramon y cajal
+ramshaw rocks
 rana cascadae
 random access
 random memory
@@ -57725,6 +57729,7 @@ bar mitsvahs
 bar mitzvahs
 bar-parlours
 bar sinister
+barack obama
 barbados leg
 barbara ward
 barbary apes
@@ -59656,6 +59661,7 @@ domestic cat
 domestic dog
 dominion day
 don giovanni
+donald trump
 doner kebabs
 donets basin
 donkey derby
@@ -61204,6 +61210,7 @@ goose-winged
 gopher snake
 gopher state
 gordian knot
+gordon brown
 gospel truth
 gouda cheese
 gourd family
@@ -77058,12 +77065,14 @@ the boonies
 the dansant
 the jet set
 the rainbow
+the roaches
 the seagull
 the tempest
 the tempter
 the thinker
 theme parks
 theme tunes
+theresa may
 thick-grown
 thick-skull
 thief-taker
@@ -79622,6 +79631,7 @@ chop sueys
 choral ode
 chota pegs
 chow-chows
+chris rock
 chrome red
 chuang-tzu
 chub-faced
@@ -80392,6 +80402,7 @@ down-throw
 down tools
 down-train
 down under
+doxey pool
 draft beer
 draft copy
 drag-chain
@@ -86955,6 +86966,7 @@ wild wheat
 wiley post
 wilhelm ii
 will power
+will smith
 william ii
 william iv
 willow oak
@@ -89816,6 +89828,7 @@ help desk
 helps out
 hemp-palm
 hemp-seed
+hen cloud
 hen-coops
 hen-house
 hen-hussy
@@ -90192,6 +90205,7 @@ joan miro
 job clubs
 job share
 jock itch
+joe biden
 joe clark
 joe louis
 jog pants
