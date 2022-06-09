@@ -21,6 +21,9 @@ class Matches {
        return grouped?.count ?? 0
     }
     
+    ///Titles for the legend which is displayed down the right hand side of the list
+    ///If less than 100 matches, then don't display the legend as the list can be quickly
+    ///scrolled through
     var sectionTitles : [String]? {
         if let g = grouped, g.count > 1, matches.count > minimumMatchesForLegend {
             return g.map{"\($0[0].length)"}
