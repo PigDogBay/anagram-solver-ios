@@ -30,9 +30,9 @@
         "id" : 1004,
         "title" : "Two Word Anagrams",
         "subtitle" : "Use a space to split the letters",
-        "description" : "The app has a built in list of 100,000 phrases, it will search this list first trying to match all of your letters to a phrase. Next the app will search it's word list and try to match your letters to a group of random words.\n\nIn the example james bond, the space splits the letters into two words of length 4 and 5 letters. The app will find 4 and 5 letter words whose combined letters make up jamesbond.\n\nFurther more the app will search for other size combinations, eg 3-6, 2-7\n\nSince 'james bond' is in the phrase list, this result will be shown first",
+        "description" : "The app has a built in list of 100,000 phrases, it will search this list first trying to match all of your letters to a phrase. Next the app will search it's word list and try to match your letters to a group of random words.\n\nIn the example james bond, the space splits the letters into two words of length 4 and 5 letters. The app will find 4 and 5 letter words whose combined letters make up jamesbond.\n\nFurther more the app will search for other size combinations, eg 3-6, 2-7\n\nSince 'james bond' is in the phrase list, this result will be shown first.",
         "example" : "jabs demon, admen jobs",
-        "advanced" : "The app will also perform 3 word anagram searches but generally these will return huge number of matches.",
+        "advanced" : "The app will also perform 3 word anagram searches but generally these will return a huge number of matches.",
         "showMe" : "james bond"
     },
     {
