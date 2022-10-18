@@ -114788,6 +114788,7 @@ northlands
 northwards
 northwests
 norwegians
+norwesters
 nosebanded
 nosebleeds
 nosediving
@@ -124688,6 +124689,7 @@ southwards
 southwests
 souvenired
 souvlakias
+souwesters
 sovenances
 sovereigns
 sovietdoms
@@ -158411,6 +158413,7 @@ northward
 northwest
 northwich
 norwegian
+norwester
 nosebands
 nosebleed
 nosecones
@@ -164241,6 +164244,7 @@ rainmaker
 rainproof
 rainspout
 rainstorm
+rainswept
 raintight
 rainwater
 rainwears
@@ -169686,6 +169690,7 @@ soutpiels
 souvenirs
 souvlakia
 souvlakis
+souwester
 sovenance
 sovereign
 sovietdom
@@ -204530,6 +204535,7 @@ nunataks
 nunchaku
 nuncheck
 nuncheon
+nunchuck
 nundinal
 nundines
 nuneaton
@@ -212505,6 +212511,7 @@ sandhill
 sandhogs
 sandiest
 sandings
+sanditon
 sandiver
 sandless
 sandlike
@@ -225684,6 +225691,7 @@ ardebil
 ardeche
 ardelle
 ardency
+ardente
 ardmore
 ardours
 ardrigh
@@ -244192,7 +244200,6 @@ mandoms
 mandora
 mandrel
 mandril
-maneged
 maneges
 manfred
 mangaby
@@ -244834,7 +244841,6 @@ menaced
 menacer
 menaces
 menadic
-menaged
 menages
 menahga
 menasha
@@ -247002,6 +247008,7 @@ nummary
 numnahs
 nunatak
 nunavut
+nunchuk
 nuncios
 nuncles
 nundine
@@ -249027,6 +249034,7 @@ pezants
 pfeifer
 pfenigs
 pfennig
+phablet
 phacoid
 phaedra
 phaeism
@@ -254579,6 +254587,7 @@ sharias
 shariat
 sharifs
 sharing
+sharjah
 sharked
 sharker
 sharped
@@ -263055,6 +263064,7 @@ abadan
 abakas
 abamps
 abands
+abarth
 abased
 abaser
 abases
@@ -263964,6 +263974,7 @@ anuric
 anuses
 anvers
 anvils
+anyhoo
 anyhow
 anyone
 anyons
@@ -271690,6 +271701,7 @@ fraser
 fratch
 frater
 fratry
+fratty
 frauds
 frauen
 frayed
@@ -274364,6 +274376,7 @@ indene
 indent
 indews
 indian
+indica
 indics
 indict
 indies
@@ -278879,6 +278892,7 @@ nidors
 nieces
 nielli
 niello
+niente
 nieves
 nievre
 niffed
@@ -280333,6 +280347,7 @@ peoria
 peosta
 pepful
 pepino
+pepita
 peplos
 peplum
 peplus
@@ -282966,6 +282981,7 @@ rotgut
 rother
 rothko
 roting
+rotini
 rotolo
 rotons
 rotors
@@ -289598,6 +289614,7 @@ woodsy
 wooers
 woofed
 woofer
+woohoo
 wooing
 woolds
 wooled
@@ -289907,6 +289924,7 @@ yomped
 yonder
 yonker
 yonnie
+yoohoo
 yooper
 yopper
 yorick
@@ -294500,6 +294518,7 @@ farls
 farms
 faroe
 faros
+farro
 farse
 farsi
 farts
@@ -296556,6 +296575,7 @@ inlay
 inlet
 inned
 inner
+innie
 innis
 innit
 innus
@@ -309480,6 +309500,7 @@ nona
 none
 nong
 noni
+noob
 nook
 noon
 noop
@@ -309754,6 +309775,7 @@ oyez
 ozan
 ozes
 paal
+paan
 paar
 paca
 pace
@@ -311384,6 +311406,7 @@ tyte
 tyty
 tyyn
 tzar
+uber
 ubly
 ucon
 udal

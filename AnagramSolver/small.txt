@@ -24368,6 +24368,7 @@ northerner
 northwards
 northwests
 norwegians
+norwesters
 nosebleeds
 nosediving
 notability
@@ -26921,6 +26922,7 @@ southeasts
 southerner
 southwards
 southwests
+souwesters
 sovereigns
 spacecraft
 spaceports
@@ -36491,6 +36493,7 @@ northerly
 northward
 northwest
 norwegian
+norwester
 nosebleed
 nosecones
 nosedived
@@ -38055,6 +38058,7 @@ rainfalls
 rainmaker
 rainproof
 rainstorm
+rainswept
 rainwater
 ramanujan
 ramblings
@@ -39678,6 +39682,7 @@ southpaws
 southward
 southwest
 souvenirs
+souwester
 sovereign
 spaceport
 spaceship
@@ -50417,6 +50422,7 @@ numerate
 numerous
 numinous
 numskull
+nunchuck
 nuptials
 nursling
 nurtured
@@ -52789,6 +52795,7 @@ sandbars
 sandburg
 sandhogs
 sandiest
+sanditon
 sandlots
 sandoval
 sandpits
@@ -56881,6 +56888,7 @@ arcking
 arctics
 ardabil
 ardebil
+ardente
 ardours
 arduino
 arduous
@@ -64597,6 +64605,7 @@ numbing
 numeral
 numeric
 nunavut
+nunchuk
 nuncios
 nunnery
 nuptial
@@ -65247,6 +65256,7 @@ petunia
 peugeot
 pewters
 pfennig
+phablet
 phaedra
 phaeton
 phalanx
@@ -67303,6 +67313,7 @@ shapiro
 sharers
 shariah
 sharing
+sharjah
 sharked
 sharped
 sharpen
@@ -70262,6 +70273,7 @@ zygotic
 zymurgy
 aachen
 abacus
+abarth
 abased
 abases
 abated
@@ -70589,6 +70601,7 @@ antwan
 anubis
 anuses
 anvils
+anyhoo
 anyhow
 anyone
 anyway
@@ -73729,6 +73742,7 @@ franks
 franny
 frappe
 fraser
+fratty
 frauds
 frauen
 frayed
@@ -74804,6 +74818,7 @@ incurs
 indeed
 indent
 indian
+indica
 indict
 indies
 indigo
@@ -76485,6 +76500,7 @@ nicker
 nicola
 nicole
 nieces
+niente
 nieves
 niggas
 niggaz
@@ -76963,6 +76979,7 @@ pentax
 penury
 people
 peoria
+pepita
 pepped
 pepper
 pepsin
@@ -78028,6 +78045,7 @@ rotary
 rotate
 rotgut
 rothko
+rotini
 rotors
 rotted
 rotten
@@ -80586,6 +80604,7 @@ woodsy
 wooers
 woofed
 woofer
+woohoo
 wooing
 woolen
 woolie
@@ -80677,6 +80696,7 @@ yokels
 yoking
 yolked
 yonder
+yoohoo
 yorkie
 yoruba
 youths
@@ -82189,6 +82209,7 @@ deign
 deism
 deist
 deity
+deked
 delay
 delft
 delhi
@@ -82680,6 +82701,7 @@ fared
 fares
 fargo
 farms
+farro
 farsi
 farts
 fasts
@@ -83606,6 +83628,7 @@ inked
 inlay
 inlet
 inner
+innie
 innit
 inonu
 input
@@ -89401,6 +89424,7 @@ nome
 nona
 none
 nong
+noob
 nook
 noon
 nope
@@ -89513,6 +89537,7 @@ owls
 owns
 oxen
 oxus
+paan
 paar
 pace
 pack
@@ -90387,6 +90412,7 @@ typo
 tyre
 tyro
 tzar
+uber
 ugly
 ulna
 umps

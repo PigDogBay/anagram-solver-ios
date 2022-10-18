@@ -604,6 +604,7 @@ what you dont know cant hurt you
 when in rome do as the romans do
 where theres a will theres a way
 william edward burghardt du bois
+william henry cavendish-bentinck
 a penny saved is a penny earned
 a rolling stone gathers no moss
 acrylonitrile-butadiene-styrene
@@ -2351,6 +2352,7 @@ apocynum androsaemifolium
 appearances are deceptive
 aquarius the water bearer
 archibald percival wavell
+archibald philip primrose
 architectural engineering
 arctostaphylos andersonii
 ardennes counteroffensive
@@ -2900,6 +2902,8 @@ william claude dukenfield
 william cuthbert faulkner
 william jefferson clinton
 william penn adair rogers
+william petty-fitzmaurice
+william wyndham grenville
 world council of churches
 world health organization
 yellow mountain saxifrage
@@ -3297,6 +3301,7 @@ helianthus angustifolius
 hemitripterus americanus
 hendrik frensch verwoerd
 henriette rosine bernard
+henry campbell-bannerman
 henry engelhard steinway
 hepatocellular carcinoma
 herbert marshall mcluhan
@@ -3372,6 +3377,7 @@ joseph emerson worcester
 junior combination rooms
 just one of those things
 karl gustav jacob jacobi
+katerina sakellaropoulou
 keep up with the joneses
 kendall rank correlation
 kennelly-heaviside layer
@@ -3769,6 +3775,7 @@ william averell harriman
 william claire menninger
 william harrison dempsey
 william henry fox talbot
+william pitt the younger
 william seward burroughs
 william somerset maugham
 william tecumseh sherman
@@ -3943,6 +3950,7 @@ case-to-infection ratio
 casemaking clothes moth
 cassegrainian telescope
 castilleja sessiliflora
+catalina sandino moreno
 catatonic schizophrenia
 catholic reaction force
 celery-leaved buttercup
@@ -4094,6 +4102,7 @@ echinochloa frumentacea
 ecuadoran monetary unit
 educational institution
 edward benjamin britten
+edward geoffrey stanley
 edward james muggeridge
 edward vincent sullivan
 electric-discharge lamp
@@ -4221,8 +4230,10 @@ fractional distillation
 frances hodgson burnett
 francis turner palgrave
 frank morrison spillane
+frank-walter steinmeier
 fraud in the inducement
 frederick childe hassam
+frederick john robinson
 french ultramarine blue
 friedrich august kekule
 front-porch campaigning
@@ -4435,11 +4446,14 @@ male reproductive gland
 malopterurus electricus
 manduca quinquemaculata
 mantled ground squirrel
+marcelo rebelo de sousa
 margaret higgins sanger
 margaret hilda thatcher
 margarete gertrud zelle
 marie-strumpell disease
+mark peter david bailey
 marriage of convenience
+mary elizabeth winstead
 mass-energy equivalence
 maternal-infant bonding
 matthew calbraith perry
@@ -5056,6 +5070,7 @@ auditory communication
 auditory hallucination
 auditory hyperesthesia
 augustin eugene scribe
+augustus henry fitzroy
 aureolaria pedicularia
 australian coral snake
 australian honeysuckle
@@ -5568,6 +5583,7 @@ geometrical regularity
 georg friedrich handel
 georg philipp telemann
 george frideric handel
+george hamilton-gordon
 george william russell
 georges henri lemaitre
 georges jacques danton
@@ -5725,6 +5741,7 @@ japanese monetary unit
 japanese morning glory
 japanese umbrella pine
 jean-baptiste poquelin
+jean-louis trintignant
 johannes van der waals
 john addington symonds
 john augustus roebling
@@ -6015,6 +6032,7 @@ phase i clinical trial
 phase of cell division
 phellodendron amurense
 philip dormer stanhope
+philip seymour hoffman
 philip warren anderson
 philosophical doctrine
 phlegmasia alba dolens
@@ -6181,6 +6199,7 @@ richard erskine leakey
 richard jordan gatling
 richmondena cardinalis
 riot control operation
+robert banks jenkinson
 robert charles venturi
 robert e lees birthday
 robert louis stevenson
@@ -6503,6 +6522,7 @@ william jennings bryan
 william le baron jenny
 william lloyd garrison
 william maxwell aitken
+william pitt the elder
 william richard morris
 william rowan hamilton
 william stanley jevons
@@ -6642,6 +6662,7 @@ ariocarpus fissuratus
 army of the righteous
 arna wendell bontemps
 arnold joseph toynbee
+arnold schwarzenegger
 arrhenatherum elatius
 ars longa vita brevis
 artemisia californica
@@ -7627,6 +7648,7 @@ japanese lacquer tree
 japanese stranglehold
 japanese varnish tree
 jarndyce and jarndyce
+jean-claude van damme
 jean edouard vuillard
 jean honore fragonard
 jean-jacques rousseau
@@ -7824,7 +7846,9 @@ metropolitan district
 mexican beaded lizard
 mexican monetary unit
 mexican swamp cypress
+michael clarke duncan
 michael philip jagger
+michelle trachtenberg
 mickey charles mantle
 micropterus salmoides
 microsorium punctatum
@@ -8113,6 +8137,7 @@ prince-of-wales plume
 principia mathematica
 printed circuit board
 private investigators
+priyanka chopra jonas
 processus coronoideus
 professional baseball
 professional football
@@ -8245,6 +8270,7 @@ sanvitalia procumbens
 sao bernardo do campo
 sao tome and principe
 saponaria officinalis
+sarah michelle gellar
 satellite transmitter
 saving your reverence
 savings account trust
@@ -8655,6 +8681,7 @@ a night at the opera
 a tale of two cities
 a truant disposition
 a turn for the worse
+aaron taylor-johnson
 abel janszoon tasman
 able-bodied seawoman
 able-bodied seawomen
@@ -8891,6 +8918,7 @@ begonia tuberhybrida
 belamcanda chinensis
 bell book and candle
 benedetto odescalchi
+benedict cumberbatch
 benefit of the doubt
 benzene hexachloride
 bering standard time
@@ -9050,6 +9078,7 @@ castilleja sulphurea
 catalytic converters
 catastrophic illness
 catherine de medicis
+catherine zeta-jones
 cavalleria rusticana
 cecil blount demille
 cecil scott forester
@@ -9746,6 +9775,7 @@ fourth cranial nerve
 fourth international
 fragrant shield fern
 francis ford coppola
+franklin d roosevelt
 franz peter schubert
 fraxinus caroliniana
 frederick barbarossa
@@ -9951,6 +9981,7 @@ heat of vaporization
 heat-seeking missile
 heavy whipping cream
 hedysarum coronarium
+helena bonham carter
 helianthus giganteus
 helianthus tuberosus
 helipterum manglesii
@@ -10114,6 +10145,8 @@ jean-claude duvalier
 jean francois millet
 jean-frederic joliot
 jean-philippe rameau
+jennifer jason leigh
+jennifer love hewitt
 jerez de la frontera
 jessica lucy mitford
 job-control language
@@ -10131,9 +10164,11 @@ john pierpont morgan
 johnnies-come-lately
 johnny-come-latelies
 joint european torus
+jonathan rhys meyers
 jons jakob berzelius
 jose clemente orozco
 jose ortega y gasset
+joseph gordon-levitt
 joseph paul dimaggio
 josiah willard gibbs
 judgement by default
@@ -10157,6 +10192,7 @@ karman vortex street
 katmai national park
 keep a straight face
 keep ones mouth shut
+keisha castle-hughes
 keith rupert murdoch
 kenneth david kaunda
 kentucky coffee tree
@@ -10172,6 +10208,7 @@ kingdom of swaziland
 kingston upon thames
 klinefelter syndrome
 korsakoffs psychosis
+kristin scott thomas
 krzysztof kieslowski
 kurdistan labor pary
 laburnum anagyroides
@@ -10301,6 +10338,7 @@ mandarin orange tree
 mandatory injunction
 maranta arundinaceae
 marble bones disease
+marcello mastroianni
 marcus junius brutus
 marianne craig moore
 marie goeppert mayer
@@ -10341,6 +10379,7 @@ mental defectiveness
 mentzelia livicaulis
 menziesia ferruginea
 mercators projection
+mercedes mccambridge
 mercurialis perennis
 mercury-contaminated
 mercury vapour lamps
@@ -10782,6 +10821,7 @@ rain steam and speed
 ralph johnson bunche
 ramsay hunt syndrome
 random access memory
+ranil wickremesinghe
 ranunculus aquatilis
 rapture of the depth
 raptus hemorrhagicus
@@ -10792,6 +10832,7 @@ rauwolfia serpentina
 ray douglas bradbury
 real-estate business
 real-time processing
+recep tayyip erdogan
 reciprocating engine
 reconnaissance plane
 recreational vehicle
@@ -10861,6 +10902,7 @@ rhetorical questions
 rheumatoid arthritis
 rhinoceros unicornis
 rhodesian ridgebacks
+richard attenborough
 richard henry tawney
 richard john roberts
 richardsons geranium
@@ -10917,6 +10959,7 @@ santa maria de belem
 santa maria del tule
 sao thome e principe
 saprophytic organism
+sarah jessica parker
 sarah kemble siddons
 sarcochilus falcatus
 sarcoscypha coccinea
@@ -11219,6 +11262,7 @@ third-dimensionality
 thirst for knowledge
 thirty-nine articles
 thomas clayton wolfe
+thomas pelham-holles
 thomas stearns eliot
 thomas wright waller
 thought transference
@@ -11498,6 +11542,7 @@ alderleaf juneberry
 aleksandr pavlovich
 aleksandr prokhorov
 aleurites moluccana
+alexander skarsgard
 alexander technique
 alexander the great
 alexander woollcott
@@ -11618,6 +11663,7 @@ arizona wild cotton
 ark of the covenant
 armed islamic group
 armillaria caligata
+armin mueller-stahl
 armoracia rusticana
 army national guard
 arrowleaf groundsel
@@ -11997,8 +12043,10 @@ choloepus hoffmanni
 choriotis australis
 christian schonbein
 christian scientist
+christina applegate
 christmas stockings
 christopher marlowe
+christopher plummer
 chrome-nickel steel
 chromosomal anomaly
 chrysobalanus icaco
@@ -12698,6 +12746,7 @@ feeling of movement
 female circumcision
 ferdinand of aragon
 ferdinand the great
+fernanda montenegro
 festival of britain
 few and far between
 fictional character
@@ -13343,6 +13392,7 @@ judicial proceeding
 judicial separation
 juglans californica
 julia evelina smith
+julia louis-dreyfus
 julian the apostate
 jump to conclusions
 jumping bristletail
@@ -13390,6 +13440,7 @@ kolkwitzia amabilis
 korean velvet grass
 korsakoffs syndrome
 korsakovs psychosis
+kyriakos mitsotakis
 la clemenza di tito
 labyrinthine artery
 lachrymal secretion
@@ -13529,6 +13580,7 @@ macrozamia communis
 macrozamia spiralis
 mad as a march hare
 madame de maintenon
+magdelena andersson
 magnesium carbonate
 magnesium hydroxide
 magnetic attraction
@@ -13574,6 +13626,7 @@ mathematical symbol
 mathematics teacher
 matricaria inodorum
 matricaria recutita
+matthew mcconaughey
 matthew walker knot
 maurice de vlaminck
 measure for measure
@@ -13720,6 +13773,7 @@ negative chemotaxis
 negative income tax
 negative reinforcer
 neighbourhood watch
+neil patrick harris
 nemophila menziesii
 neon induction lamp
 nephelium lappaceum
@@ -13802,6 +13856,7 @@ old world porcupine
 old world scops owl
 olfactory sensation
 oliver hazard perry
+olivia de havilland
 omani monetary unit
 omar nelson bradley
 omphalotus illudens
@@ -14688,6 +14743,7 @@ third cranial nerve
 third international
 third law of motion
 thomas gainsborough
+thomas haden church
 thomas henry huxley
 thoroughbred racing
 threadneedle street
@@ -14865,6 +14921,7 @@ vocational training
 voice communication
 voice of conscience
 voiceless consonant
+volodymyr zelenskyy
 volumetric analysis
 von neumann machine
 voyage of discovery
@@ -15075,9 +15132,11 @@ alessandro farnese
 alessandro manzoni
 alexander hamilton
 alexander selcraig
+alexandra daddario
 alexandrian laurel
 alfred eisenstaedt
 algebraic language
+alicia silverstone
 alicyclic compound
 aliphatic compound
 all in a days work
@@ -15152,6 +15211,7 @@ anaphylactic shock
 anas platyrhynchos
 anathema maranatha
 anatolian language
+andrea riseborough
 andrei voznesenski
 androgenic hormone
 anemone canadensis
@@ -15383,6 +15443,7 @@ biauriculate heart
 bilateral contract
 bilateral symmetry
 bill of indictment
+billy bob thornton
 biological control
 biological defence
 biological defense
@@ -15458,6 +15519,7 @@ brittle maidenhair
 broad buckler-fern
 broadcasting house
 brocas convolution
+broderick crawford
 brown rot gummosis
 brugmansia arborea
 bubble jet printer
@@ -15636,6 +15698,7 @@ charge of quarters
 charles baudelaire
 charles cornwallis
 charles percy snow
+charlotte rampling
 chartered engineer
 chartered surveyor
 chartres cathedral
@@ -15672,6 +15735,7 @@ chinese silk plant
 chinese water deer
 chino-japanese war
 chlamydia psittaci
+chloe grace moretz
 chocolate-coloured
 chretien de troyes
 christiaan eijkman
@@ -15683,6 +15747,7 @@ christmas presents
 christmas puddings
 christmas stocking
 christopher carson
+christopher walken
 chromosome mapping
 chronic bronchitis
 chrysopsis mariana
@@ -15987,6 +16052,7 @@ danish blue cheese
 dasyatis centroura
 dasyurid marsupial
 data communication
+david lloyd george
 david roland smith
 davy joness locker
 day in and day out
@@ -16053,6 +16119,7 @@ digital audio tape
 digital recordings
 digitalis purpurea
 digitigrade mammal
+dinesh gunawardena
 dining compartment
 dino paul crocetti
 dinornis giganteus
@@ -16139,6 +16206,7 @@ eddie rickenbacker
 edgar albert guest
 edinburgh festival
 edmond de goncourt
+edward james olmos
 edwin herbert land
 egg-and-spoon race
 egregiously an ass
@@ -16579,6 +16647,7 @@ future progressive
 fyodor dostoyevsky
 gabriele fallopius
 gabriello fallopio
+gael garcia bernal
 galega officinalis
 galeocerdo cuvieri
 galeopsis tetrahit
@@ -17002,6 +17071,7 @@ hashimotos disease
 have a screw loose
 have by the throat
 have what it takes
+hayden christensen
 head and shoulders
 head cabbage plant
 head for the hills
@@ -17237,10 +17307,12 @@ ixodes persulcatus
 ixodes spinipalpis
 jack-in-the-pulpit
 jack of all trades
+jackie earle haley
 jacobite rebellion
 jacqueline cochran
 jacques tatischeff
 jacquinia keyensis
+jada pinkett smith
 jaffar umar thalib
 jakob hermandszoon
 jamaica caper tree
@@ -17252,6 +17324,7 @@ james riddle hoffa
 japanese andromeda
 japanese persimmon
 jawless vertebrate
+jean-paul belmondo
 jehovahs witnesses
 jerusalem warriors
 jewelled headdress
@@ -17272,6 +17345,7 @@ john thomas scopes
 johnny-come-lately
 joroslav heyrovsky
 joseph banks rhine
+joseph schildkraut
 josephson junction
 juan domingo peron
 juan ponce de leon
@@ -17354,7 +17428,9 @@ lathyrus splendens
 lathyrus tuberosus
 laugh out of court
 laughing jackasses
+laurence fishburne
 laurentian plateau
+laurentino cortizo
 lavandula stoechas
 law of common fate
 law of equal areas
@@ -17567,6 +17643,7 @@ master of divinity
 master of theology
 materials handling
 maternity hospital
+mateusz morawiecki
 mathematical group
 mathematical logic
 mathematical proof
@@ -17617,7 +17694,9 @@ metric weight unit
 meurthe-et-moselle
 mexican fire plant
 mexican revolution
+michael fassbender
 michaelmas daisies
+michelle rodriguez
 microcytic anaemia
 micromeria juliana
 micrometer caliper
@@ -17647,6 +17726,7 @@ miniature pinscher
 ministers of state
 minor tranquilizer
 mirabilis uniflora
+miranda richardson
 misplaced modifier
 mission impossible
 missionary station
@@ -17709,6 +17789,7 @@ mushroom poisoning
 musical instrument
 musical perception
 muskogean language
+mustafa al-kadhimi
 mutual resemblance
 mutually exclusive
 mycteria americana
@@ -17851,6 +17932,7 @@ oleoresin capiscum
 olfactory modality
 olfactory property
 olive-drab uniform
+olivia newton-john
 olympic salamander
 on a regular basis
 on second thoughts
@@ -18067,6 +18149,7 @@ personnel casualty
 petasites fragrans
 petasites hybridus
 petasites vulgaris
+pete postlethwaite
 peter and the wolf
 peter carl faberge
 petit mal epilepsy
@@ -18445,6 +18528,7 @@ rhodes scholarship
 rhodymenia palmata
 ribbon development
 ribbon microphones
+richard farnsworth
 richard trevithick
 richea dracophylla
 right gastric vein
@@ -18490,6 +18574,7 @@ russian mayonnaise
 russian revolution
 russian tumbleweed
 russo-japanese war
+rutherford b hayes
 ruvettus pretiosus
 rydbergs penstemon
 sabbatia angularis
@@ -18540,6 +18625,7 @@ savings bank trust
 saxifraga aizoides
 scarlet fritillary
 scarlet strawberry
+scarlett johansson
 scartella cristata
 scentless camomile
 schleswig-holstein
@@ -18633,6 +18719,7 @@ shetland sheep dog
 ship of the desert
 shipping pneumonia
 shipwreck survivor
+shohreh aghdashloo
 shoot from the hip
 shooting-galleries
 shopping precincts
@@ -18911,6 +18998,7 @@ swim with the tide
 swiss cheese plant
 sydney opera house
 syllable structure
+sylvester stallone
 sympathetic strike
 symphony orchestra
 synaptomys cooperi
@@ -19440,6 +19528,7 @@ albrights disease
 alcohol addiction
 alcohol-dependent
 aleatory contract
+alec douglas-home
 aleksandr borodin
 alexander fleming
 alexander pushkin
@@ -19754,6 +19843,7 @@ battle of sempach
 bauhinia monandra
 be that as it may
 bean-caper family
+beatrice straight
 beauty consultant
 bed and breakfast
 bed-sitting-rooms
@@ -20068,6 +20158,7 @@ catalytic cracker
 catch ones breath
 caterpillar track
 caterpillar tread
+catherine deneuve
 catholic epistles
 caudal anesthesia
 cecil john rhodes
@@ -20167,6 +20258,9 @@ christmas begonia
 christmas disease
 christmas present
 christmas pudding
+christopher guest
+christopher lloyd
+christopher reeve
 chromatin granule
 chromosome number
 chronic gastritis
@@ -20226,6 +20320,8 @@ class zygomycetes
 classical revival
 classical scholar
 classroom project
+claudette colbert
+claudia cardinale
 clear liquid diet
 clear-sightedness
 clematis texensis
@@ -20554,6 +20650,7 @@ dendroica tigrina
 denisonia superba
 dental technician
 dentaria diphylla
+denzel washington
 deo optimo maximo
 department stores
 departure lounges
@@ -20644,6 +20741,7 @@ dolichos lignosus
 domestic violence
 domine dirige nos
 domingo de guzman
+donald sutherland
 dont get me wrong
 doppler principle
 doris may lessing
@@ -20717,6 +20815,7 @@ edible sea urchin
 edmund cartwright
 edsel bryant ford
 edward fitzgerald
+edward g robinson
 edward the martyr
 efficiency expert
 egg-laying mammal
@@ -21167,6 +21266,7 @@ fra filippo lippi
 fragaria ananassa
 fragrant agrimony
 fragrant bedstraw
+frances mcdormand
 francis ferdinand
 francis hopkinson
 francis of assisi
@@ -21782,6 +21882,7 @@ hairline fracture
 hairy darling pea
 hairy honeysuckle
 hakea lissosperma
+haley joel osment
 half cross stitch
 halibut-liver oil
 hall of residence
@@ -21800,6 +21901,7 @@ harvey wallbanger
 haste makes waste
 hatiora gaertneri
 hawksbill turtles
+hayden panettiere
 head of household
 head of the river
 health profession
@@ -21822,6 +21924,7 @@ hellenic republic
 hemorrhagic fever
 hemorrhoidal vein
 henry bolingbroke
+henry john temple
 henry louis aaron
 hens-and-chickens
 hepatitis a virus
@@ -22105,8 +22208,12 @@ japanese red pine
 japanese snowbell
 japanese-speaking
 japanese wistaria
+jason schwartzman
 jelly roll morton
 jemima puddleduck
+jennifer connelly
+jennifer coolidge
+jennifer lawrence
 jerome david kern
 jerusalem cricket
 jesus of nazareth
@@ -22152,6 +22259,7 @@ keratosis pilaris
 kerguelen cabbage
 kick in the pants
 kick in the teeth
+kiefer sutherland
 kinetic sculpture
 king camp gilette
 king william pine
@@ -22232,6 +22340,7 @@ lentiform nucleus
 lentinus lepideus
 leonard bernstein
 leonardo da vinci
+leonardo dicaprio
 leonotis leonurus
 leonurus cardiaca
 leopold kronecker
@@ -22365,6 +22474,7 @@ madagascar pepper
 madonna and child
 madriporian coral
 magellanic clouds
+maggie gyllenhaal
 magistrates court
 magnesium nitride
 magnesium sulfate
@@ -22416,6 +22526,7 @@ maraschino cherry
 marasmius oreades
 marattia salicina
 marcello malpighi
+marcia gay harden
 marco polos sheep
 mareva injunction
 margaret mitchell
@@ -22451,8 +22562,11 @@ material resource
 maternal language
 matrons of honour
 matter of opinion
+matthew broderick
+maureen stapleton
 maurice barrymore
 maurice chevalier
+maximilian schell
 meadow cranesbill
 meadow spittlebug
 mealy-mouthedness
@@ -22513,6 +22627,9 @@ mexican flameleaf
 mexican standoffs
 mexican sunflower
 mezzanine finance
+michelle monaghan
+michelle pfeiffer
+michelle williams
 micro-meteorology
 microcytic anemia
 microscopic field
@@ -22525,6 +22642,7 @@ mies van der rohe
 mignonette family
 miguel jose serra
 mikhail gorbachev
+mikhail mishustin
 militant tendency
 military blockade
 military campaign
@@ -22963,6 +23081,8 @@ passive transport
 patagonian desert
 pate de foie gras
 patriarchal cross
+patricia arquette
+patricia clarkson
 patterned advance
 paulo-post-future
 paymaster general
@@ -23427,6 +23547,7 @@ reed canary grass
 reed meadow grass
 reef squirrelfish
 reentrant polygon
+reese witherspoon
 reference library
 refining industry
 reflection factor
@@ -23538,6 +23659,7 @@ rough green snake
 rough-legged hawk
 round-headed leek
 round-trip ticket
+royal albert dock
 royal albert hall
 royal opera house
 royal prerogative
@@ -23558,6 +23680,7 @@ russian dandelion
 russian wolfhound
 rwandese republic
 sabinea carinalis
+sacha baron cohen
 sacrificial anode
 safety in numbers
 saint christopher
@@ -23705,6 +23828,7 @@ septicemic plague
 sequential access
 sergeants at arms
 sergei eisenstein
+sergio mattarella
 serial processing
 sericea lespedeza
 seriphidium canum
@@ -23953,6 +24077,7 @@ steamship company
 steel arch bridge
 stegosaur stenops
 steinerts disease
+stellan skarsgard
 stellar evolution
 stellers sea lion
 stephane mallarme
@@ -23964,6 +24089,7 @@ sticking-plasters
 sting in the tail
 stock certificate
 stock-gillyflower
+stockard channing
 stocking stuffers
 stonewall jackson
 storage warehouse
@@ -24498,8 +24624,10 @@ wild service tree
 will keith kellog
 willem de kooning
 william burroughs
+william cavendish
 william fulbright
 william gladstone
+william j clinton
 william menninger
 william of ockham
 william of orange
@@ -24570,6 +24698,7 @@ yucca carnerosana
 yucca filamentosa
 yugoslavian dinar
 yukon white birch
+zach galifianakis
 zea mays amylacea
 zea mays indurata
 zero-coupon bonds
@@ -24654,6 +24783,7 @@ adiantum tenerum
 adjutant general
 admiralty island
 admission charge
+adrianne palicki
 advanced degrees
 advent calendars
 advisory service
@@ -24726,6 +24856,7 @@ alignment charts
 alimentary canal
 alimentary paste
 alimentary tract
+alistair darling
 aliterate person
 alizarin carmine
 alizarin crimson
@@ -24846,6 +24977,7 @@ anovulatory drug
 antarctic circle
 anthemis nobilis
 antheraea pernyi
+anthony albanese
 anthony comstock
 anthony of padua
 anthony trollope
@@ -24857,6 +24989,7 @@ antiaircraft gun
 antianxiety drug
 antifungal agent
 anton rubenstein
+antonio banderas
 anxiety disorder
 anxiety hysteria
 anxiety neurosis
@@ -25072,6 +25205,7 @@ banner headlines
 banqueting house
 bantoid language
 barbara hepworth
+barbara stanwyck
 barbarea praecox
 barbra streisand
 bargain-basement
@@ -25082,6 +25216,7 @@ barnabys thistle
 baron munchausen
 barrage balloons
 barrister-at-law
+barry fitzgerald
 bartholins gland
 bartholomeu dias
 bartholomeu diaz
@@ -25145,6 +25280,7 @@ bellbottom pants
 belle isle cress
 bells of ireland
 benefactive role
+benicio del toro
 benito mussolini
 benjamin britten
 benthic division
@@ -25496,6 +25632,7 @@ carpenters level
 carpenters plane
 carpet-bag steak
 carpinus betulus
+carrie-anne moss
 carrot-and-stick
 carrying through
 carson mccullers
@@ -25523,6 +25660,7 @@ catalpa speciosa
 cataract surgery
 catchment-basins
 catherine howard
+catherine keener
 catherine wheels
 cathode-ray tube
 cattleya citrina
@@ -25555,6 +25693,7 @@ certified cheque
 cesarean section
 cesarian section
 chabad-lubavitch
+chadwick boseman
 chain of command
 chains of office
 chamaea fasciata
@@ -25585,6 +25724,7 @@ charlotte corday
 chatsworth house
 chattel mortgage
 chaulmoogra tree
+chazz palminteri
 chechen republic
 checking account
 checking program
@@ -25638,6 +25778,7 @@ chinese wistaria
 chinese wood oil
 chinless wonders
 chipping sparrow
+chiwetel ejiofor
 chloride of lime
 chlorinated lime
 chlorine dioxide
@@ -25657,6 +25798,7 @@ choroidal artery
 chrisom children
 christ-cross-row
 christian church
+christine taylor
 christmas beetle
 christmas cactus
 christmas carols
@@ -26014,6 +26156,7 @@ crypto-christian
 crystal detector
 crystalline lens
 ctenophore genus
+cuba gooding jr 
 cuban revolution
 cubic centimeter
 cubic centimetre
@@ -26060,6 +26203,8 @@ danaus plexippus
 dandelion clocks
 dangerous corner
 daniel bernoulli
+daniel day-lewis
+daniel radcliffe
 darius the great
 darning mushroom
 dashiell hammett
@@ -26068,6 +26213,7 @@ data multiplexer
 datura sanguinea
 daughters-in-law
 david ben gurion
+david strathairn
 day-care centres
 day of atonement
 day of judgement
@@ -26334,6 +26480,7 @@ embryonic tissue
 emily price post
 eminences grises
 emotional person
+emperor naruhito
 emperor penguins
 employment agent
 encelia farinosa
@@ -26430,6 +26577,8 @@ european wildcat
 euterpe oleracea
 eutherian mammal
 eva le gallienne
+evan rachel wood
+evangeline lilly
 evening grosbeak
 evening primrose
 evergreen cherry
@@ -26470,6 +26619,7 @@ extra-illustrate
 extra-judicially
 extra-provincial
 extramarital sex
+f murray abraham
 face recognition
 facial profiling
 factor of safety
@@ -26686,6 +26836,7 @@ federalist party
 federico fellini
 feedback circuit
 feel the draught
+felicity huffman
 felis domesticus
 felis silvestris
 fellow-creatures
@@ -26837,6 +26988,7 @@ franking machine
 frasera speciosa
 fraternity house
 fraxinus oregona
+freddie highmore
 frederick delius
 frederick sanger
 free association
@@ -26884,6 +27036,7 @@ futures exchange
 gabriel lippmann
 gaff-headed sail
 gaius octavianus
+gale sondergaard
 galvanic battery
 galveston island
 gambusia affinis
@@ -27413,6 +27566,7 @@ geometric series
 geometrical mean
 geometry teacher
 geomys bursarius
+george grenville
 george vancouver
 georgia home boy
 gerard depardieu
@@ -27433,8 +27587,10 @@ giant star grass
 giant stock bean
 giant willowherb
 gibberellic acid
+gillian anderson
 gillie-whitefoot
 ginglymoid joint
+ginnifer goodwin
 gioacchino pecci
 giovanni cimabue
 giscard destaing
@@ -27562,6 +27718,7 @@ gymnosperm genus
 gyromitra infula
 habenaria lacera
 hackney carriage
+hailee steinfeld
 hair-tailed mole
 hairy willowherb
 hakea leucoptera
@@ -27582,6 +27739,7 @@ hard-boiled eggs
 hard-heartedness
 hardstem bulrush
 harmonic pencils
+harold macmillan
 harvest-festival
 have a good time
 have intercourse
@@ -27905,6 +28063,7 @@ iron perchloride
 ironmongers shop
 irrigation ditch
 isaac mayer wise
+isabelle huppert
 isatis tinctoria
 ischaemic stroke
 ischemic hypoxia
@@ -27934,7 +28093,9 @@ jamaica bayberry
 jamaican capital
 james byron dean
 james clark ross
+james gandolfini
 james hargreaves
+jamie lee curtis
 jan hendrix oort
 jan van der meer
 japanese apricot
@@ -27947,8 +28108,10 @@ jeannette rankin
 jeepers creepers
 jehovahs witness
 jemaah islamiyah
+jennifer aniston
 jenny greenteeth
 jerusalem cherry
+jessica chastain
 jewish orthodoxy
 jewish rye bread
 job descriptions
@@ -27961,6 +28124,7 @@ john berry hobbs
 john duns scotus
 john henry ohara
 john jacob astor
+john rhys-davies
 john stuart mill
 john the baptist
 john tuzo wilson
@@ -27978,6 +28142,7 @@ judgement in rem
 judicial torture
 juice extractors
 juilliard school
+juliette binoche
 junction barrier
 juniperus sabina
 juvenile hormone
@@ -27993,10 +28158,12 @@ karaoke machines
 karelian isthmus
 karl alex muller
 karl landsteiner
+kathleen quinlan
 kawasaki disease
 kazimir malevich
 keep in suspense
 keep under wraps
+kerry washington
 khoisan language
 kick in the butt
 kilogram calorie
@@ -28115,6 +28282,7 @@ leguminous plant
 leicester square
 leichtlins camas
 leighton buzzard
+leighton meester
 lepidium sativum
 lepiota rhacodes
 lepomis gibbosus
@@ -28169,6 +28337,7 @@ limited monarchy
 linaria vulgaris
 lincoln memorial
 lincoln steffens
+linda fiorentino
 line of business
 line of latitude
 line of products
@@ -28235,6 +28404,7 @@ lose ones temper
 lotario di segni
 lotus americanus
 louis burt mayer
+louis gossett jr
 louis the german
 louis untermeyer
 love-in-idleness
@@ -28268,6 +28438,7 @@ lymphatic system
 lymphatic tissue
 lymphatic vessel
 lymphoblast-like
+lyndon b johnson
 machine language
 machine readable
 machine-washable
@@ -28303,6 +28474,7 @@ make unnecessary
 malaria mosquito
 malaria parasite
 malaxis-unifolia
+malcolm mcdowell
 male chauvinists
 maleic hydrazide
 malicious gossip
@@ -28350,10 +28522,12 @@ margin of safety
 marginal utility
 marguerite daisy
 mari complaisant
+maria falconetti
 maria montesorri
 marie antoinette
 marine insurance
 mariners compass
+marion cotillard
 mark wayne clark
 market-gardeners
 market gardening
@@ -28377,6 +28551,8 @@ martin van buren
 martyr operation
 marxism-leninism
 marxist-leninist
+mary steenburgen
+mary tyler moore
 marya sklodowska
 maryland chicken
 masculine ending
@@ -28425,7 +28601,9 @@ medulla spinalis
 medullary sheath
 meeting of minds
 melagueta pepper
+melanie griffith
 melicocca bijuga
+melissa mccarthy
 melursus ursinus
 membrane-forming
 memoria technica
@@ -28468,6 +28646,8 @@ mexican nut pine
 mexican standoff
 meyer guggenheim
 mezzanine floors
+michael b jordan
+michael lonsdale
 michael ondaatje
 michaelmas daisy
 michel montaigne
@@ -28547,6 +28727,7 @@ monophonic music
 monozygotic twin
 montagus harrier
 monterey cypress
+montgomery clift
 month of sundays
 montia chamissoi
 moog synthesizer
@@ -28621,6 +28802,7 @@ narrowhead morel
 nasalis larvatus
 nash equilibrium
 nasofrontal vein
+nastassja kinski
 nathaniel bailey
 national capital
 national gallery
@@ -29427,6 +29609,7 @@ quilting-parties
 quotient verdict
 qwerty keyboards
 rabbit bandicoot
+rachel griffiths
 racial profiling
 racing certainty
 radcliffe camera
@@ -29454,6 +29637,7 @@ rainbow lorikeet
 rainbow seaperch
 raise an eyebrow
 ralph richardson
+ramsay macdonald
 ramses the great
 rana catesbeiana
 rana tarahumarae
@@ -29590,6 +29774,7 @@ ribes sanguineum
 ribes uva-crispa
 ribonucleic acid
 ribwort plantain
+richard dreyfuss
 richard lovelace
 ricinus communis
 right-handedness
@@ -29614,9 +29799,11 @@ riveting machine
 road to damascus
 roaring twenties
 roast beef plant
+robert downey jr
 robert e lee day
 robert lee frost
 robert macgregor
+robert pattinson
 robert the bruce
 robes-de-chambre
 robin goodfellow
@@ -29641,6 +29828,7 @@ room temperature
 root-mean-square
 rooting compound
 rorippa amphibia
+rosalind russell
 roseola infantum
 rotary converter
 rough-and-tumble
@@ -29710,6 +29898,7 @@ salvia verbenaca
 sam browne belts
 sampling station
 samson agonistes
+samuel l jackson
 sand devils claw
 sandwich courses
 sandwich islands
@@ -29910,6 +30099,7 @@ shabby-gentility
 shadow-pantomime
 shagbark hickory
 shaggy dog story
+shailene woodley
 shanghai dialect
 sharecrop farmer
 shared ownership
@@ -29926,6 +30116,7 @@ shining clubmoss
 ship of the line
 shipboard system
 shipping company
+shirley maclaine
 shoestring catch
 shoot the breeze
 shooting gallery
@@ -29950,6 +30141,7 @@ siege of orleans
 sieur de lasalle
 signal detection
 signaling device
+sigourney weaver
 silene latifolia
 silene virginica
 silent treatment
@@ -30127,6 +30319,7 @@ speech community
 speech therapist
 spelling checker
 spelling contest
+spencer perceval
 sphincter muscle
 spike microphone
 spike suppressor
@@ -30495,6 +30688,7 @@ tightrope walker
 tilapia nilotica
 tilletia foetida
 time out of mind
+timothy olyphant
 tinnevelly senna
 titanium dioxide
 title of respect
@@ -30670,6 +30864,7 @@ valley white oak
 value judgements
 vancouver island
 vanessa atalanta
+vanessa redgrave
 variae lectiones
 variola vaccinia
 variorum edition
@@ -30851,6 +31046,7 @@ wilhelm von opel
 wilkins micawber
 will-o-the-wisps
 willamette river
+willem-alexander
 willem de sitter
 willem einthoven
 william and mary
@@ -30965,6 +31161,7 @@ abdominal aorta
 abducens muscle
 abductor muscle
 abies bracteata
+abigail breslin
 above-mentioned
 above suspicion
 abraham lincoln
@@ -31036,6 +31233,7 @@ admission price
 adoptive parent
 adrenal medulla
 adrenergic drug
+adriana barraza
 adult education
 adult male body
 advanced degree
@@ -31098,6 +31296,7 @@ alectoris ruffa
 alexandre dumas
 alfred tennyson
 algorithm error
+alicia vikander
 alien absconder
 alignment chart
 alizarin yellow
@@ -31135,6 +31334,7 @@ alte pinakothek
 aluminium oxide
 aluminum bronze
 alveolar artery
+amanda seyfried
 amaranth family
 ambulant plague
 amedeo avogadro
@@ -31173,8 +31373,10 @@ andrea palladio
 andrei sakharov
 andres martinez
 andrew carnegie
+andrew garfield
 anemone riparia
 angel food cake
+angela lansbury
 angina pectoris
 angle of attack
 anglepoise lamp
@@ -31191,6 +31393,8 @@ anhinga anhinga
 animal charcoal
 animal material
 animal righters
+anjelica huston
+annasophia robb
 anne bradstreet
 anne hutchinson
 anni horribiles
@@ -31206,6 +31410,7 @@ antarctic ocean
 anthemis cotula
 anthony burgess
 anthony hopkins
+anthony perkins
 anthony vandyke
 anthracite coal
 anthropoid apes
@@ -31442,6 +31647,7 @@ baseball clinic
 baseball league
 baseball player
 baseball season
+bashar al-assad
 bashi-bazoukery
 basic principle
 basil the great
@@ -31654,6 +31860,7 @@ bologna sausage
 bombina bombina
 bon gre mal gre
 bonasa umbellus
+bongbong marcos
 book of account
 book of ezekiel
 book of genesis
@@ -31710,6 +31917,7 @@ breathing spell
 breech delivery
 breeder reactor
 breeding ground
+brendan gleeson
 bridge of sighs
 brief encounter
 brights disease
@@ -32019,13 +32227,17 @@ character actor
 charcoal burner
 charge-accounts
 charge per unit
+charles bronson
+charles chaplin
 charles dickens
 charles dodgson
 charles fourier
 charles lenfant
 charley-pitcher
 charlie chaplin
+charlize theron
 charlotte russe
+charlton heston
 charter flights
 chateau bottled
 chateau-thierry
@@ -32092,8 +32304,10 @@ chop and change
 chopping boards
 chorale prelude
 chordate family
+chris hemsworth
 christian bible
 christian names
+christina ricci
 christmas bells
 christmas berry
 christmas-boxes
@@ -32102,7 +32316,9 @@ christmas carol
 christmas green
 christmas holly
 christmas-trees
+christoph waltz
 christopher fry
+christopher lee
 chromatic color
 chromatic scale
 chrysemys picta
@@ -32196,9 +32412,11 @@ clematis viorna
 clementine tree
 clerical collar
 cliff penstemon
+cliff robertson
 climbing frames
 clitocybe irina
 clitter-clatter
+cloris leachman
 close encounter
 closed couplets
 closed-end fund
@@ -32578,6 +32796,7 @@ cylinder blocks
 cynara scolymus
 cyperus papyrus
 cyprinus carpio
+cyril ramaphosa
 cyrus mccormick
 cyrus the elder
 cyrus the great
@@ -32632,6 +32851,7 @@ dead-end street
 dead-letter box
 dead-mans float
 dean of faculty
+debbie reynolds
 debt instrument
 deceased person
 deciduous holly
@@ -32763,6 +32983,7 @@ domestic flight
 domestic pigeon
 dominant allele
 dominican order
+donald rumsfeld
 donato bramante
 dormant account
 dormitory towns
@@ -32883,6 +33104,7 @@ editio princeps
 editor in chief
 edmund ironside
 edward appleton
+edward neumeier
 eelgrass family
 efferent neuron
 efficient cause
@@ -32926,6 +33148,9 @@ elephas maximus
 eleusine indica
 elie metchnikov
 elijah muhammad
+elisabeth borne
+elizabeth banks
+elizabeth olsen
 elizabeth river
 elizabeth seton
 elizabethan age
@@ -32942,6 +33167,8 @@ emilia javanica
 emiliano zapata
 emily dickinson
 emission theory
+emmanuel macron
+emmanuelle riva
 emotional state
 emperor of rome
 emperor penguin
@@ -32989,6 +33216,7 @@ equus burchelli
 erectile tissue
 erica perspicua
 erigeron annuus
+ernest borgnine
 ernesto guevara
 erodium texanum
 erysimum cheiri
@@ -33001,6 +33229,7 @@ espionage agent
 esprit de corps
 estate for life
 estates general
+estelle parsons
 estradiol patch
 ethacrynic acid
 ethel barrymore
@@ -33031,6 +33260,7 @@ european russia
 european shrike
 eustachian tube
 eutectoid steel
+eva marie saint
 evaporated milk
 evariste galois
 even-handedness
@@ -33403,6 +33633,7 @@ foreign affairs
 foreign country
 foreign mission
 foreign service
+forest whitaker
 fork-lift truck
 form of address
 formation dance
@@ -33488,6 +33719,7 @@ furniture maker
 furor scribendi
 fusion reactors
 futtock-shrouds
+gabourey sidibe
 gadus merlangus
 gaelic football
 gaelic-speaking
@@ -33512,6 +33744,7 @@ garboard strake
 garden angelica
 garnet-coloured
 garnishee order
+garrett hedlund
 gas and gaiters
 gas thermometer
 gasoline engine
@@ -34112,7 +34345,9 @@ geographic area
 geological time
 georg simon ohm
 george berkeley
+george chakiris
 george gershwin
+george h w bush
 george harrison
 george marshall
 george meredith
@@ -34152,6 +34387,7 @@ gingerbread man
 gingerbread men
 giosue carducci
 giovanni cabato
+giovanni ribisi
 give it a whirl
 give the bounce
 glacial boulder
@@ -34277,6 +34513,7 @@ gun emplacement
 gustatory organ
 gustave courbet
 guy of burgundy
+gwyneth paltrow
 gymnastic horse
 gyromitra gigas
 habenaria nivea
@@ -34322,6 +34559,7 @@ harmonic pencil
 harold harefoot
 harold nicolson
 hatteras island
+hattie mcdaniel
 haute-normandie
 hautes-pyrenees
 have a go at it
@@ -34373,6 +34611,7 @@ hemel hempstead
 hemizygous vein
 henri becquerel
 henri labrouste
+henry addington
 henry beauclerc
 henry cavendish
 henry kissinger
@@ -34556,6 +34795,7 @@ ille-et-vilaine
 image orthicons
 imaginary being
 imaginary place
+imelda staunton
 imitation pearl
 immelmann turns
 immigrant class
@@ -34654,6 +34894,7 @@ iron chancellor
 iroquois league
 irrawaddy river
 irving langmuir
+isabelle adjani
 ischemic anoxia
 ischemic stroke
 island universe
@@ -34684,6 +34925,7 @@ jacques charles
 jacques costeau
 jacques derrida
 jaculus jaculus
+jake gyllenhaal
 jakob bernoulli
 jalapeno pepper
 jamaat ul-fuqra
@@ -34692,6 +34934,7 @@ jamaica quassia
 jamaican cherry
 jamaican dollar
 james bernoulli
+james callaghan
 james knox polk
 james parkinson
 japanese banana
@@ -34715,12 +34958,15 @@ jean luc godard
 jean paul marat
 jefferson davis
 jekyll and hyde
+jennifer garner
+jennifer hudson
 jequirity beans
 jerboa kangaroo
 jerry lee lewis
 jersey knapweed
 jerusalem cross
 jerusalem thorn
+jesse eisenberg
 jessica mitford
 jewellers rouge
 jewish calendar
@@ -34731,6 +34977,8 @@ jewish religion
 jimmy doolittle
 jingling johnny
 joan sutherland
+joanne woodward
+joaquin phoenix
 job application
 job description
 jogging bottoms
@@ -34785,12 +35033,17 @@ karaoke machine
 karl-marx-stadt
 karl von frisch
 katar peninsula
+kate beckinsale
+katherine heigl
+kathleen turner
 keen as mustard
 keep open house
 keep to oneself
 kegel exercises
+keira knightley
 kelmscott manor
 ken elton kesey
+kenneth branagh
 kenneth grahame
 kenneth roberts
 kentucky wonder
@@ -34845,6 +35098,7 @@ kogia breviceps
 kong the master
 konrad adenauer
 kreutzer sonata
+kristen stewart
 kronecker delta
 kuchean dialect
 kyrgyz republic
@@ -34873,6 +35127,7 @@ lake trasimenus
 lambda particle
 laminated glass
 lance-corporals
+lance henriksen
 lance sergeants
 lanceolate leaf
 land of lincoln
@@ -34954,6 +35209,7 @@ lepiota naucina
 lepiota procera
 lepus europaeus
 lepus townsendi
+lesley manville
 lesser anteater
 lesser antilles
 lesser bullrush
@@ -35090,6 +35346,7 @@ louis armstrong
 louis doutremer
 louis the great
 louis the pious
+louise fletcher
 louise nevelson
 lounging jacket
 lounging pajama
@@ -35127,6 +35384,7 @@ lysiloma sabicu
 lytham st annes
 lytton strachey
 macaroni cheese
+macaulay culkin
 machine gunners
 machine-gunning
 machine pistols
@@ -35239,6 +35497,7 @@ marsupial mouse
 martello towers
 martes pennanti
 martial artists
+martin lawrence
 martin scorsese
 marvels-of-peru
 mary baker eddy
@@ -35293,6 +35552,7 @@ meibomian gland
 meissner effect
 meister eckhart
 melampsora lini
+melanie laurent
 melanitta nigra
 melia azedarach
 melia azederach
@@ -35342,8 +35602,10 @@ mexican cypress
 mexican juniper
 mexican spanish
 mezzanine floor
+michael douglas
 michael faraday
 michael jackson
+michael shannon
 michaelmas term
 mickey spillane
 micro-breweries
@@ -35400,6 +35662,7 @@ moccasin flower
 mock-heroically
 modal auxiliary
 moderate breeze
+mohammed gadafi
 mola lanceolata
 molar pregnancy
 molasses cookie
@@ -35505,6 +35768,7 @@ naproxen sodium
 narcotics agent
 narrow-mindedly
 nasal consonant
+natalie portman
 nathan birnbaum
 nation of islam
 national anthem
@@ -35565,6 +35829,7 @@ next to nothing
 nickel-and-dime
 nicolas poussin
 nicotiana alata
+nigel hawthorne
 night blindness
 night-flowering
 night-foundered
@@ -35671,6 +35936,7 @@ occluded fronts
 ocean greyhound
 ochna serrulata
 ochroma lagopus
+octavia spencer
 oculus sinister
 odd-leg caliper
 oedipal complex
@@ -35702,6 +35968,7 @@ olfactory nerve
 olfactory organ
 oligocene epoch
 oliver cromwell
+olympia dukakis
 omnium-gatherum
 on a knife edge
 on a shoestring
@@ -35860,6 +36127,7 @@ packing-needles
 padda oryzivora
 paddington bear
 paddle-steamers
+paddy considine
 pain in the ass
 paint a picture
 painter-stainer
@@ -35946,10 +36214,12 @@ patent medicine
 paternity leave
 paternity suits
 patersons curse
+patrick stewart
 patrilineal kin
 patrilineal sib
 pattypan squash
 paul john flory
+pauline collins
 pavement artist
 paving material
 pavor nocturnus
@@ -36029,6 +36299,7 @@ peruvian cotton
 pestis ambulans
 pestis bubonica
 peter principle
+peter sarsgaard
 peter the great
 petit bourgeois
 petrol stations
@@ -36617,6 +36888,7 @@ removal company
 renaissance man
 renal corpuscle
 renal lithiasis
+renee zellweger
 rent-collectors
 reported speech
 repulsive force
@@ -36660,8 +36932,10 @@ rhus dermatitis
 ribbon-building
 rice-polishings
 richard burbage
+richard e grant
 richard feynman
 richard haldane
+richard jenkins
 richard neville
 richard rodgers
 richard smalley
@@ -36704,6 +36978,7 @@ robert browning
 robert robinson
 robert schumann
 robert woodward
+roberto benigni
 robin redbreast
 robinia hispida
 robinia viscosa
@@ -36840,6 +37115,8 @@ salt and pepper
 salt reed grass
 saltwort family
 sam browne belt
+sam worthington
+samantha morton
 sambucus ebulus
 sambucus pubens
 san luis potosi
@@ -37061,6 +37338,7 @@ session singers
 set by the ears
 setaria italica
 setaria viridis
+seth macfarlane
 setting against
 seven-year itch
 seven years war
@@ -37095,6 +37373,7 @@ shell companies
 shell-limestone
 shell-parrakeet
 shellac varnish
+shelley winters
 shepherds check
 shepherds clock
 shepherds crook
@@ -37169,6 +37448,7 @@ silver standard
 silver weddings
 simarouba amara
 simeon stylites
+simone signoret
 simple fraction
 simple fracture
 simple interest
@@ -37357,6 +37637,7 @@ speech spectrum
 speed indicator
 speed merchants
 speeding ticket
+spencer compton
 spherical angle
 sphyrna zygaena
 spiccato bowing
@@ -37673,6 +37954,7 @@ tactical voting
 tactile agnosia
 tagging program
 tailless tenrec
+takashi shimura
 take a breather
 take for a ride
 take lying down
@@ -37703,6 +37985,7 @@ tapioca pudding
 tapirus indicus
 tar-and-feather
 tarahumara frog
+taraji p henson
 tareekh e kasas
 target language
 target practice
@@ -37766,6 +38049,7 @@ terra incognita
 terra sigillata
 terraced houses
 terracotta army
+terrence howard
 terror-stricken
 terrorist group
 tertiary period
@@ -37777,6 +38061,7 @@ texas snowbells
 text processing
 textile machine
 textus receptus
+thandiwe newton
 thats as may be
 the die is cast
 the entertainer
@@ -37819,6 +38104,7 @@ thomas a becket
 thomas a kempis
 thomas crawford
 thomas hastings
+thomas mitchell
 thomas sydenham
 thomomys bottae
 thoracic cavity
@@ -37859,6 +38145,7 @@ tightly fitting
 tilia americana
 tilia tomentosa
 tilletia caries
+tim berners-lee
 time after time
 time and a half
 time immemorial
@@ -37882,6 +38169,7 @@ toilet training
 tolmetin sodium
 tomato hornworm
 tombigbee river
+tommy lee jones
 tonegawa susumu
 tongue-in-cheek
 tongue-twisters
@@ -38047,6 +38335,7 @@ typewriter font
 typha latifolia
 ulmus americana
 ultra-neptunian
+ulysses s grant
 umbrella plants
 umbrella-shaped
 umbrella-stands
@@ -38116,6 +38405,7 @@ value statement
 van allen belts
 van wyck brooks
 vandyke collars
+vanessa hudgens
 vanessa stephen
 vanilla extract
 vanilla pudding
@@ -38193,6 +38483,7 @@ vice-consulship
 vice-presidency
 vice presidents
 vice-principals
+victor mclaglen
 victoria nyanza
 victoria sponge
 vicugna vicugna
@@ -38202,6 +38493,7 @@ video-on-demand
 video recorders
 video recording
 vigesimo-quarto
+viggo mortensen
 vigna angularis
 vigna caracalla
 viktor korchnoi
@@ -38221,6 +38513,7 @@ violin concerto
 viral hepatitis
 viral infection
 viral pneumonia
+virginia madsen
 virginia mallow
 virginia mcmath
 virginia oyster
@@ -38379,10 +38672,12 @@ white-pine rust
 white snakeroot
 white supremacy
 whitley council
+whitney houston
 whitsun tuesday
 whole-heartedly
 wholesale house
 whoopee cushion
+whoopi goldberg
 whooping cranes
 whorled caraway
 wide-angle lens
@@ -38403,6 +38698,7 @@ william golding
 william hazlitt
 william hogarth
 william saroyan
+william shatner
 william tindale
 william tyndale
 willing-hearted
@@ -38451,6 +38747,7 @@ wood-nightshade
 wood strawberry
 wooden overcoat
 woodwind family
+woody harrelson
 worcester china
 worcester sauce
 word processing
@@ -38517,6 +38814,7 @@ zenos paradoxes
 zinc deficiency
 zirconium oxide
 ziziphus jujuba
+zooey deschanel
 zoysia japonica
 zoysia matrella
 zygodactyl foot
@@ -38677,6 +38975,7 @@ allhallows eve
 alligator clip
 alligator pear
 alligator weed
+allison janney
 allium cernuum
 allium sativum
 allium ursinum
@@ -38751,11 +39050,15 @@ andre eglevsky
 andre le notre
 andrei gromyko
 andres segovia
+andrew holness
 andrew jackson
 andrew johnson
+andrew lincoln
 andrew marvell
 anemic hypoxia
+angela bassett
 angelic doctor
+angelina jolie
 angels trumpet
 angiotensin ii
 anglo-american
@@ -38778,12 +39081,14 @@ animal trainer
 animal-worship
 ankle bracelet
 anne of cleves
+annette bening
 anni mirabiles
 annual reports
 anomic aphasia
 ansar al islam
 antarctic zone
 anterior naris
+anthony mackie
 anthropoid ape
 anti-marketeer
 anti-personnel
@@ -38876,6 +39181,7 @@ as you like it
 asbat al-ansar
 ascending node
 ashley montagu
+ashton kutcher
 asian american
 asian elephant
 asiatic beetle
@@ -38929,6 +39235,7 @@ auditory canal
 auditory image
 auditory nerve
 auditory sense
+audrey hepburn
 augean stables
 auld lang syne
 auricula atrii
@@ -39114,6 +39421,7 @@ below the salt
 belvoir castle
 bemisia tabaci
 benday process
+benjamin bratt
 benjamin shahn
 benjamin spock
 benthonic zone
@@ -39344,6 +39652,7 @@ boy-meets-girl
 boykinia elata
 boys-and-girls
 bracket fungus
+bradley cooper
 bradley method
 brain disorder
 brain mushroom
@@ -39384,6 +39693,9 @@ brecon beacons
 breech-loading
 breeches-buoys
 breeze through
+brenda blethyn
+brenda fricker
+brendan fraser
 brewers spruce
 bridge-builder
 bridge circuit
@@ -39435,6 +39747,7 @@ brownish-black
 brownish-green
 brunswick stew
 brush kangaroo
+bryan cranston
 bryonia dioica
 bubble chamber
 bubonic plague
@@ -39471,6 +39784,7 @@ burial grounds
 burkes peerage
 burning-mirror
 burnt offering
+burt lancaster
 burying beetle
 burying ground
 bus conductors
@@ -39588,10 +39902,13 @@ carduus nutans
 care attendant
 careers master
 carex arenaria
+carey mulligan
 cargo cultists
 carl van doren
 carl von linne
 carlos fuentes
+carmen miranda
+carole lombard
 carotid artery
 carotid plexus
 carpenters kit
@@ -39641,6 +39958,7 @@ catabatic wind
 catalog buying
 catapult fruit
 catchment area
+cate blanchett
 cater-cornered
 cathartes aura
 catherine parr
@@ -39711,6 +40029,7 @@ change surface
 changing-rooms
 channel island
 channel tunnel
+channing tatum
 chantilly lace
 chaparral cock
 chaparral sage
@@ -39722,6 +40041,7 @@ charge account
 charge-capping
 charina bottae
 charity-school
+charles coburn
 charles darwin
 charles liston
 charles peirce
@@ -39730,6 +40050,7 @@ charles stuart
 charles townes
 charles wesley
 charles wilkes
+charlie hunnam
 charlie parker
 charm campaign
 charter flight
@@ -39760,6 +40081,7 @@ cherry-picking
 chesapeake bay
 chest of viols
 chest register
+chester arthur
 chester nimitz
 chestnut-brown
 cheval-glasses
@@ -39816,7 +40138,9 @@ chordate genus
 choreic abasia
 choroid plexus
 choropleth map
+chris odonnell
 chrissie evert
+christian bale
 christian dior
 christian name
 christian year
@@ -39851,6 +40175,7 @@ cigarette card
 cigarette case
 cigarette ends
 ciliary artery
+cillian murphy
 cimarron river
 cine projector
 cinnabar moths
@@ -39929,6 +40254,7 @@ climbing perch
 climbing walls
 clincher-built
 clinical trial
+clint eastwood
 clitocybe nuda
 clive sinclair
 clock pendulum
@@ -39969,6 +40295,7 @@ coast live oak
 coast polypody
 coast-to-coast
 coaxial cables
+cobie smulders
 cocaine addict
 cochon de lait
 cock-throppled
@@ -40236,6 +40563,8 @@ crack the whip
 cracker-barrel
 cracker bonbon
 cracker crumbs
+craig robinson
+craig t nelson
 cranberry bush
 cranberry tree
 cranial cavity
@@ -40379,6 +40708,8 @@ czech republic
 dahlia pinnata
 dairy products
 daisy fleabane
+dakota fanning
+dakota johnson
 dalmatian iris
 damage control
 damage-feasant
@@ -40426,6 +40757,7 @@ dead sea apple
 dead sea fruit
 deae cellulose
 deaf as a post
+dean stockwell
 death instinct
 debenture bond
 debt of honour
@@ -40552,6 +40884,7 @@ division signs
 divorce lawyer
 dizygotic twin
 djibouti franc
+djimon hounsou
 dna polymerase
 do-it-yourself
 do-nothingness
@@ -40573,6 +40906,7 @@ dombey and son
 domestic llama
 domestic sheep
 dominican peso
+donald j trump
 donkey-jackets
 doom merchants
 door furniture
@@ -40583,6 +40917,7 @@ dormitory room
 dormitory town
 doroteo arango
 dorothea lange
+dorothy malone
 dorothy parker
 dorothy sayers
 dotheboys hall
@@ -40656,6 +40991,7 @@ dressing-cases
 dressing-gowns
 dressing-rooms
 dressing table
+drew barrymore
 drill-sergeant
 drilling fluid
 drimys winteri
@@ -40672,6 +41008,7 @@ driving-wheels
 drooping brome
 drop-down menu
 drophead coupe
+droupadi murmu
 drowned valley
 drug addiction
 drum majorette
@@ -40700,6 +41037,7 @@ dwarf bilberry
 dwarf chestnut
 dwarf mulberry
 dwarf pipefish
+dwayne johnson
 dwelling house
 dwelling-place
 dwindling away
@@ -40727,6 +41065,7 @@ echium vulgare
 echo-soundings
 economic value
 ecstatic state
+eddie redmayne
 edible-pod pea
 edinburgh rock
 editor program
@@ -40752,6 +41091,7 @@ egyptian pound
 eight-membered
 eightsome reel
 eileen farrell
+eileen heckart
 eitchen midden
 ejection seats
 ekbom syndrome
@@ -40795,6 +41135,8 @@ eleuthera bark
 elevator shaft
 eliel saarinen
 eliezer wiesel
+elisabeth moss
+elisabeth shue
 elixir of life
 ellesmere port
 ellice islands
@@ -40811,6 +41153,8 @@ emile gaboriau
 emilia flammea
 emilia-romagna
 emilia sagitta
+emilio estevez
+emily browning
 eminence grise
 eminent domain
 empire-builder
@@ -41030,6 +41374,7 @@ farm-labourers
 farmer-general
 farmers cheese
 farmers market
+farrah fawcett
 fashion houses
 fashion plates
 fashion victim
@@ -41053,6 +41398,7 @@ federal agency
 federal office
 feeding bottle
 feel the pinch
+felicity jones
 felis concolor
 felis pardalis
 fellow-citizen
@@ -41288,8 +41634,10 @@ francisco goya
 franco-russian
 francoa ramosa
 francois jacob
+frank langella
 frank stockton
 frank-tenement
+franka potente
 franz schubert
 fraternal twin
 fraxinus nigra
@@ -41429,6 +41777,7 @@ geiger counter
 geissler tubes
 gelechiid moth
 gemini program
+gemma arterton
 gender benders
 gene frequency
 general custer
@@ -42008,13 +42357,19 @@ geometric pace
 geometrid moth
 geomys pinetis
 georg meissner
+george c scott
+george canning
+george clooney
 george eastman
+george kennedy
+george sanders
 george stevens
 georges braque
 georges cuvier
 georges enesco
 georges seurat
 georgie porgie
+geraldine page
 geranium molle
 gerhard kremer
 german capital
@@ -42064,6 +42419,7 @@ global warming
 globe amaranth
 globe-trotters
 globe-trotting
+gloria grahame
 gloria steinem
 gloria swanson
 glottis spuria
@@ -42283,6 +42639,7 @@ harlequin opal
 harlow shapley
 harmonic waves
 harness racing
+harold russell
 harpia harpyja
 harriet tubman
 harriet wilson
@@ -42556,6 +42913,7 @@ identity theft
 idiots savants
 iditarod trail
 idol worshiper
+ignazio cassis
 iguanid lizard
 ii corinthians
 ileocolic vein
@@ -42700,8 +43058,12 @@ ivan the great
 ivory-nut palm
 ixodes dammini
 ixodes ricinus
+jacinda ardern
 jack-a-lantern
+jack albertson
+jack davenport
 jack-in-office
+jack nicholson
 jack-o-lantern
 jackfruit tree
 jackknife clam
@@ -42709,18 +43071,21 @@ jackknife-fish
 jacopo robusti
 jacquard looms
 jaguarundi cat
+jair bolsonaro
 jam sandwiches
 jamaica pepper
 jamaica shorts
 jamaica sorrel
 james buchanan
 james crichton
+james cromwell
 james garfield
 james meredith
 james michener
 james naismith
 jamestown weed
 jan swammerdam
+jane alexander
 janizary music
 japan allspice
 japanese beech
@@ -42733,12 +43098,16 @@ japanese maple
 japanese sumac
 japanese tosas
 jaroslav hasek
+jason sudeikis
 jatropha urens
 jean bernoulli
 jean giraudoux
 jefferson city
+jeffrey wright
 jejunal artery
 jelly doughnut
+jennifer jones
+jennifer lopez
 jequirity bean
 jeremy bentham
 jerome robbins
@@ -42753,6 +43122,7 @@ jewelry dealer
 jewels-of-opar
 jiggery-pokery
 jigsaw puzzles
+jill clayburgh
 jimmy-ogoblins
 jimmy woodsers
 jingling match
@@ -42764,7 +43134,11 @@ john barrymore
 john bernoulli
 john churchill
 john constable
+john f kennedy
 john galbraith
+john krasinski
+john leguizamo
+john malkovich
 john masefield
 john mccormick
 john roy major
@@ -42775,6 +43149,7 @@ john wickliffe
 johnny-jump-up
 joint ventures
 jointing plane
+jonathan pryce
 jonathan swift
 josef hoffmann
 joseph joachim
@@ -42783,6 +43158,10 @@ journey-weight
 judas iscariot
 judge advocate
 judith jamison
+julianne hough
+julianne moore
+julie christie
+juliette lewis
 julio iglesias
 jump the queue
 jumping orchid
@@ -42801,6 +43180,7 @@ jupiter tonans
 jupiters beard
 juridical days
 just like that
+justin trudeau
 justinian code
 juvenile court
 kadai language
@@ -42877,6 +43257,7 @@ komodo dragons
 komodo lizards
 krigia bulbosa
 kukenaam falls
+kurtwood smith
 kussmauls coma
 kuwaiti dirham
 labor contract
@@ -43011,6 +43392,7 @@ leotia lubrica
 leporid mammal
 lepus arcticus
 les miserables
+leslie nielsen
 lesser burdock
 lesser hemlock
 lesser omentum
@@ -43026,6 +43408,7 @@ letters patent
 levant morocco
 level crossing
 leyte invasion
+liam hemsworth
 liam oflaherty
 liberty bodice
 liberty horses
@@ -43033,6 +43416,7 @@ liberty island
 license number
 license plates
 licorice stick
+liev schreiber
 life-and-death
 life assurance
 life histories
@@ -43065,6 +43449,7 @@ lillie langtry
 limestone fern
 limited review
 lincoln center
+linda hamilton
 line engraving
 line of battle
 line of credit
@@ -43208,6 +43593,7 @@ madagascar cat
 madame tussaud
 madeira sponge
 madison avenue
+mads mikkelsen
 magic mushroom
 maginot-minded
 magnetic disks
@@ -43219,6 +43605,7 @@ magnetic storm
 magneto-optics
 magnolia state
 mahatma gandhi
+mahershala ali
 maid of honour
 maine-et-loire
 mainland china
@@ -43281,6 +43668,7 @@ marginal seats
 maria mitchell
 mariages blanc
 marianne moore
+marie dressler
 marilyn monroe
 mariposa tulip
 marital status
@@ -43315,6 +43703,7 @@ marumi kumquat
 marvel-of-peru
 mary ann evans
 mary magdalene
+mary mcdonnell
 mashie niblick
 mass-producing
 massage parlor
@@ -43385,6 +43774,7 @@ melilotus alba
 melodic phrase
 melting-points
 melton mowbray
+melvyn douglas
 membrum virile
 memory picture
 men about town
@@ -43410,6 +43800,7 @@ mentha citrata
 mentha spicata
 mercalli scale
 mercantile law
+mercedes ruehl
 merchant banks
 mercury switch
 mercy killings
@@ -43436,6 +43827,12 @@ metrical psalm
 mexican hyssop
 mexican valium
 mezzo-sopranos
+mia wasikowska
+michael c hall
+michael keaton
+michael lerner
+michael martin
+michael rooker
 michaelmas day
 micro-organism
 microwave bomb
@@ -43475,6 +43872,7 @@ milk and honey
 milk-and-water
 milk chocolate
 milking stools
+milla jovovich
 millennium bug
 milling cutter
 mills and boon
@@ -43522,6 +43920,7 @@ molasses taffy
 moldboard plow
 mollusk family
 molly maguires
+molly ringwald
 molokai island
 monarda didyma
 monastic habit
@@ -43553,6 +43952,7 @@ morale booster
 morale builder
 morality plays
 morbid anatomy
+morgan freeman
 mormon cricket
 morning prayer
 morris-dancers
@@ -43686,6 +44086,7 @@ namby-pambyism
 narco-analysis
 narrow-mouthed
 narrow squeaks
+natalie dormer
 national guard
 national trust
 native alaskan
@@ -43758,6 +44159,7 @@ new zealanders
 newtons cradle
 newtown wonder
 ni-resist iron
+nicholas hoult
 nickel-plating
 nicotinic acid
 nigella sativa
@@ -43909,6 +44311,7 @@ old world chat
 old world coot
 olfactory bulb
 olive-coloured
+olivia thirlby
 olympian games
 omega centauri
 omnibus clause
@@ -44167,8 +44570,11 @@ pate feuillete
 patent leather
 paternity suit
 paternity test
+patrick swayze
+patrick wilson
 paul hindemith
 paul mccartney
+paul verhoeven
 pavement light
 paving machine
 pavo cristatus
@@ -44192,6 +44598,7 @@ pebble-grained
 pectoral cross
 pedestal desks
 pedestal table
+peggy ashcroft
 pelican-flower
 peltier effect
 pelvic girdles
@@ -44239,6 +44646,7 @@ persian violet
 persian walnut
 persimmon tree
 personal check
+peter dinklage
 peter goldmark
 peter minnewit
 petit dejeuner
@@ -44286,6 +44694,7 @@ piece of music
 piece of paper
 piece together
 piecrust table
+pierce brosnan
 pierian spring
 pierre abelard
 pierre terrail
@@ -44764,6 +45173,7 @@ rabble-rousers
 rabble-rousing
 race relations
 racetrack tout
+rachel mcadams
 racing circuit
 racket presses
 radclyffe hall
@@ -44941,6 +45351,7 @@ rhus copallina
 rhus trilobata
 rhythm section
 richard burton
+richard harris
 richard hooker
 richard leakey
 richard upjohn
@@ -44984,6 +45395,7 @@ roald amundsen
 roald hoffmann
 robber council
 robert de niro
+robert forster
 robert herrick
 robert indiana
 robert joffrey
@@ -44992,6 +45404,7 @@ robert redford
 robert southey
 robert venturi
 robert walpole
+robin williams
 robusta coffee
 rocco marciano
 rochelle salts
@@ -45039,6 +45452,7 @@ rosa chinensis
 rosa damascena
 rosa laevigata
 rosa pendulina
+rosario dawson
 rose and crown
 rose of sharon
 rosebud cherry
@@ -45098,6 +45512,7 @@ rust inhibitor
 rust-resistant
 rusty-coloured
 rutabaga plant
+ryan phillippe
 ryukyu islands
 sabal palmetto
 sabbath school
@@ -45166,6 +45581,7 @@ salix purpurea
 salix triandra
 salix uva-ursi
 sallal berries
+sally kirkland
 sallying forth
 salman rushdie
 salmon-disease
@@ -45192,6 +45608,7 @@ san pedro sula
 sand-fly fever
 sand stargazer
 sandor kellner
+sandra bullock
 sandwich board
 sandwich plate
 sandy mushroom
@@ -45504,6 +45921,7 @@ seyfert galaxy
 shabby-genteel
 shadow cabinet
 shaft of light
+shah rukh khan
 shalwar-kameez
 shammy leather
 share-croppers
@@ -45518,6 +45936,7 @@ sheep-stealing
 sheepskin coat
 sheet lighting
 sheet of paper
+shehbaz sharif
 shell parakeet
 shepherds bush
 shepherds pipe
@@ -45786,6 +46205,8 @@ son of a bitch
 song and dance
 sonoran desert
 soothing syrup
+sophie marceau
+sophie okonedo
 sorex cinereus
 soul-searching
 sound alphabet
@@ -46192,6 +46613,7 @@ surinam cherry
 suriname river
 surround sound
 survivor guilt
+susan sarandon
 suspender belt
 sussex spaniel
 swaddling-band
@@ -46476,6 +46898,7 @@ time-exposures
 time of origin
 time signature
 time will tell
+timothy hutton
 tinea corporis
 tip the scales
 tippling-house
@@ -46497,6 +46920,7 @@ toga praetexta
 toilet-service
 toilet-trained
 toll collector
+tom hiddleston
 tomato ketchup
 tomato yellows
 tonal language
@@ -46519,6 +46943,7 @@ torque spanner
 tortoise plant
 tortoise-shell
 tortricid moth
+toshiro mifune
 total darkness
 totidem verbis
 toties quoties
@@ -46701,6 +47126,7 @@ tyndall effect
 typical jerboa
 tyrrhenian sea
 uberrima fides
+uhuru kenyatta
 uilleann pipes
 ulex europaeus
 ulmus serotina
@@ -46858,6 +47284,7 @@ vienna sausage
 vigna sinensis
 village greens
 village idiots
+vincent cassel
 vinifera grape
 vinyl chloride
 viola arvensis
@@ -46924,7 +47351,9 @@ wall germander
 wall-paintings
 wall pellitory
 wall streeters
+walter brennan
 walter gropius
+walter matthau
 walter raleigh
 waltham forest
 waltzing mouse
@@ -47105,9 +47534,13 @@ wilkie collins
 william caxton
 william cowper
 william curtis
+william h macy
+william h taft
 william harvey
+william holden
 william hoover
 william morris
+william powell
 william stubbs
 william styron
 william tindal
@@ -47272,7 +47705,9 @@ a motley fool
 a pretty pass
 a votre sante
 aaron copland
+aaron eckhart
 abbey-counter
+abbie cornish
 abelian group
 abide with me
 abies fraseri
@@ -47394,7 +47829,9 @@ aladdins lamp
 aland islands
 alaska native
 alben barkley
+albert brooks
 albert edward
+albert finney
 albizia saman
 albula vulpes
 album graecum
@@ -47409,6 +47846,8 @@ aletris aurea
 aletta jacobs
 alexander iii
 alexis carrel
+alexis thorpe
+alfred molina
 alice springs
 alicia alonso
 aliquant part
@@ -47491,6 +47930,7 @@ andrew huxley
 andrew mellon
 andrzej wajda
 anemic anoxia
+angela merkel
 angelica tree
 angelo correr
 angiotensin i
@@ -47511,6 +47951,8 @@ animate thing
 anise-scented
 aniseed balls
 anna karenina
+anna kendrick
+anne bancroft
 anne hathaway
 anne sullivan
 annona glabra
@@ -47520,6 +47962,7 @@ anoxic anoxia
 ante meridiem
 anterior horn
 anterior root
+anthony quinn
 anthony wayne
 anti-abortion
 anti-aircraft
@@ -47535,6 +47978,7 @@ anti-vitamins
 antitrust law
 anton chekhov
 antonine wall
+antonio costa
 antonio gaudi
 antonius pius
 any questions
@@ -47661,6 +48105,7 @@ auction pitch
 audit program
 auditory area
 auditory tube
+audrey tautou
 auguste comte
 auguste rodin
 aulic council
@@ -47905,6 +48350,7 @@ benny goodman
 benzene rings
 benzoyl group
 berbice chair
+berenice bejo
 bergamot mint
 bering strait
 bermuda cedar
@@ -47960,6 +48406,7 @@ billiard cues
 billiard hall
 billiard room
 billy buttons
+billy crystal
 billy the kid
 binary digits
 binary number
@@ -48269,6 +48716,7 @@ british crown
 british isles
 british pound
 british warms
+brittany snow
 brittle-stars
 broad-brimmed
 broad hatchet
@@ -48296,6 +48744,7 @@ brownie guide
 brownie point
 brownish-gray
 brownish-grey
+bruce davison
 brunei dollar
 bruno of toul
 brussels lace
@@ -48362,6 +48811,7 @@ burning-glass
 burning-point
 burnt almonds
 burr marigold
+burt reynolds
 burundi franc
 burying-place
 bus conductor
@@ -48550,6 +49000,7 @@ carnal-minded
 carnauba palm
 carnegie hall
 carniolan bee
+carol burnett
 carol singers
 carol singing
 carolina wren
@@ -48564,6 +49015,7 @@ carriage-free
 carriage line
 carriage-paid
 carrick bends
+carrie fisher
 carrion-crows
 carrot family
 carry forward
@@ -48583,6 +49035,7 @@ cascade range
 cascades frog
 case-hardened
 case in point
+casey affleck
 casey stengel
 cash machines
 cash register
@@ -48692,6 +49145,7 @@ charles river
 charless wain
 charley horse
 charleys aunt
+charlie sheen
 charnel house
 chart-toppers
 chart-topping
@@ -48775,6 +49229,7 @@ chinese walls
 chinese white
 ching dynasty
 chinkapin oak
+chloe sevigny
 chlorophyll a
 chlorophyll b
 chlorophyll c
@@ -48862,6 +49317,7 @@ civilian garb
 claiming race
 clair de lune
 clair-obscure
+claire trevor
 clammy locust
 clap together
 clapper valve
@@ -49001,6 +49457,7 @@ cold moulding
 cold shoulder
 cole-titmouse
 coleus blumei
+colin farrell
 collar blight
 collared dove
 collared pika
@@ -49214,6 +49671,7 @@ course credit
 court-martial
 court-ordered
 court plaster
+courteney cox
 courts of law
 cousin-german
 covalent bond
@@ -49234,6 +49692,7 @@ crack of doom
 cracked wheat
 crackle china
 cradle-scythe
+craig charles
 craig ventner
 cranial index
 cranial nerve
@@ -49371,6 +49830,7 @@ cyclosporin a
 cygnus cygnus
 cylinder head
 cylinder lock
+cynthia erivo
 cypress sedge
 cyprinid fish
 cypriot pound
@@ -49392,6 +49852,7 @@ daniel morgan
 daniel ortega
 daniell cells
 danish pastry
+danny mcbride
 danse macabre
 danseur noble
 daphne family
@@ -49411,9 +49872,11 @@ david cameron
 david garrick
 david hartley
 david hilbert
+david oyelowo
 david ricardo
 david riesman
 david sarnoff
+david thewlis
 davy crockett
 day after day
 day-and-night
@@ -49464,6 +49927,7 @@ demi-mondaine
 deng xiaoping
 denis diderot
 denmark vesey
+dennis hopper
 dental caries
 dental plaque
 dental school
@@ -49509,6 +49973,7 @@ diamond state
 diamond-wheel
 diapason stop
 diceros simus
+dick van dyke
 did away with
 dien bien phu
 diesel engine
@@ -49797,6 +50262,7 @@ edible mussel
 edith wharton
 edmond halley
 edmond malone
+edmond obrien
 edmund halley
 edmund malone
 edmund wilson
@@ -49804,9 +50270,11 @@ edouard manet
 edward gibbon
 edward jenner
 edward morley
+edward norton
 edward teller
 edward thatch
 edward weston
+edwina currie
 eero saarinen
 egadi islands
 egg-apparatus
@@ -49852,12 +50320,16 @@ eleventh hour
 elgin marbles
 elias canetti
 elihu thomson
+ellen burstyn
 elliptic leaf
 elongate leaf
 elvis presley
 elysee palace
 emerald green
+emil jannings
+emilia clarke
 emissary vein
+emma thompson
 emperor moths
 empty-bellied
 empty-nesters
@@ -49947,6 +50419,7 @@ evil-favoured
 evil-mindedly
 evil-speaking
 evil-tempered
+ewan mcgregor
 ewings tumour
 ex post facto
 ex-serviceman
@@ -50053,6 +50526,7 @@ family jewels
 family palmae
 family suidae
 family zeidae
+famke janssen
 famous person
 fanjet engine
 fannie farmer
@@ -50261,6 +50735,7 @@ floating mine
 floating-moss
 flodden field
 flood control
+florence pugh
 flow diagrams
 flower garden
 flower people
@@ -50363,6 +50838,7 @@ frank sinatra
 frank whittle
 franz josef i
 fraud in fact
+fredric march
 free-and-easy
 free climbing
 free electron
@@ -50515,6 +50991,7 @@ gauze bandage
 gazelle hound
 gefullte fish
 geissler tube
+gena rowlands
 gender bender
 gene mutation
 gene-splicing
@@ -51038,12 +51515,15 @@ genus zostera
 genus zygnema
 geodesic dome
 geodesic line
+geoffrey rush
 geologic time
 george beadle
 george enescu
 george orwell
+george w bush
 georges bizet
 georgi zhukov
+gerard butler
 gerard kuiper
 german lesson
 german millet
@@ -51112,6 +51592,7 @@ globe theatre
 globe thistle
 globe-trotted
 globe-trotter
+gloria stuart
 glossing over
 glossy-coated
 glossy-furred
@@ -51415,8 +51896,10 @@ harmonic wave
 harness horse
 harness-maker
 harold pinter
+harold wilson
 harpers ferry
 harrier eagle
+harrison ford
 harry bridges
 harry hotspur
 harry houdini
@@ -51427,6 +51910,7 @@ harvest-louse
 harvest-mites
 harvest mouse
 harvest queen
+harvey keitel
 hasty defence
 hasty defense
 hasty pudding
@@ -51692,6 +52176,7 @@ hubbly-bubbly
 huckle-backed
 hug-me-tights
 hugger mugger
+hugh griffith
 hugo de vries
 huig de groot
 hulsea algida
@@ -51858,6 +52343,7 @@ inverted snob
 invisible ink
 invisible man
 inward-moving
+ioan gruffudd
 ionic dialect
 iran-iraq war
 iranian dinar
@@ -51909,8 +52395,11 @@ jamaica apple
 james baldwin
 james boswell
 james madison
+james marsden
+james stewart
 james thurber
 jan tinbergen
+january jones
 japan current
 japanese crab
 japanese deer
@@ -51922,18 +52411,28 @@ japanese pink
 japanese plum
 japanese rose
 japanese tosa
+jason bateman
+jason robards
+jason statham
 jaunting-cars
 java sparrows
 javelle water
+javier bardem
 jazz festival
 jazz musician
+jean dujardin
 jean sibelius
+jeanne moreau
+jeff goldblum
 jeffreys pine
+jeremy renner
 jermyn street
 jerry-builder
 jersey lillie
 jerusalem oak
 jesse jackson
+jessica lange
+jessica lucas
 jessica tandy
 jessye norman
 jesting-stock
@@ -51942,12 +52441,14 @@ jeunes filles
 jewelry maker
 jewelry store
 jigsaw puzzle
+jim broadbent
 jimmy durante
 jimmy-ogoblin
 jimmy stewart
 jimmy woodser
 jingle-jangle
 joan crawford
+joan fontaine
 job candidate
 job interview
 jockey shorts
@@ -51959,12 +52460,14 @@ john-a-stiles
 john-a-styles
 john bartlett
 john burgoyne
+john c reilly
 john chinaman
 john endecott
 john endicott
 john fletcher
 john hemminge
 john herschel
+john houseman
 john lackland
 john le carre
 john marquand
@@ -51974,7 +52477,9 @@ john of gaunt
 john roebling
 john rowlands
 john rutledge
+john travolta
 john trumbull
+john turturro
 john vanbrugh
 john wycliffe
 johns cabbage
@@ -51989,6 +52494,7 @@ jointer plane
 jolies laides
 jordan almond
 joseph conrad
+joseph cotten
 joseph heller
 joseph hooker
 joseph lister
@@ -51996,6 +52502,7 @@ joseph oliver
 joseph paxton
 joseph stalin
 josh billings
+josh hartnett
 josiah quincy
 jovian planet
 jubilee clips
@@ -52007,9 +52514,13 @@ judgment lien
 judgment-seat
 judicial sale
 judicial writ
+judy holliday
 juglans nigra
 juglans regia
 jugular veins
+julia roberts
+julie andrews
+julie walters
 julius caesar
 julius erving
 julius ullman
@@ -52038,6 +52549,7 @@ kangaroos paw
 karl baedeker
 karl wernicke
 karol wojtyla
+kate bosworth
 keeled garlic
 keep a secret
 keep in check
@@ -52050,6 +52562,7 @@ kerb-merchant
 kerosene lamp
 kerosine lamp
 kettle stitch
+kevin costner
 key signature
 kick-starters
 kick-starting
@@ -52079,6 +52592,7 @@ kings proctor
 kingwood tree
 kinross-shire
 kinship group
+kirsten dunst
 kiss-and-tell
 kiss me hardy
 kiss-me-quick
@@ -52229,6 +52743,7 @@ laurel cherry
 laurel family
 laurel willow
 laurel wreath
+lauren bacall
 lavender bags
 lavender-pink
 law-and-order
@@ -52336,6 +52851,7 @@ limbic system
 limited audit
 lincoln green
 linden family
+lindsay lohan
 line-engraver
 line managers
 line of force
@@ -52394,6 +52910,7 @@ livery driver
 livery stable
 living fossil
 living memory
+liza minnelli
 lizard orchid
 lo and behold
 load-shedding
@@ -52509,6 +53026,7 @@ lusus naturae
 lycaon pictus
 lying in wait
 lynn fontanne
+lynn redgrave
 lyonia lucida
 lysergic acid
 ma non troppo
@@ -52545,6 +53063,7 @@ magnetic lens
 magnetic mine
 magnetic pole
 magnetic tape
+mahmoud abbas
 mahogany tree
 maid of honor
 maiden castle
@@ -52612,6 +53131,8 @@ margaret mead
 margaric acid
 marginal cost
 marginal seat
+margot kidder
+margot robbie
 maria theresa
 mariage blanc
 marie celeste
@@ -52622,10 +53143,12 @@ marine iguana
 marine museum
 marine mussel
 marine turtle
+marion davies
 mariottes law
 mariposa lily
 maritime alps
 mark my words
+mark wahlberg
 market forces
 market garden
 market keeper
@@ -52637,6 +53160,9 @@ market square
 marking gauge
 markoff chain
 markov chains
+marlee matlin
+marlon brando
+marlon wayans
 marmalade box
 marmota monax
 maroon-purple
@@ -52656,6 +53182,8 @@ marsupial rat
 martes martes
 martha graham
 martial music
+martin balsam
+martin landau
 martin luther
 martini-henry
 marx brothers
@@ -52681,7 +53209,9 @@ matinee idols
 matter of law
 maturity date
 maules quince
+maureen ohara
 maurice ravel
+max von sydow
 maximum cards
 me generation
 meadow beauty
@@ -52757,8 +53287,14 @@ mezzo-relievo
 mezzo-rilievo
 mezzo-soprano
 michael assat
+michael caine
+michael j fox
+michael miner
+michael sheen
+michelle yeoh
 michigan lily
 mickey mantle
+mickey rourke
 mickey-taking
 micro-brewery
 mid glamorgan
@@ -52806,6 +53342,7 @@ mineral pitch
 mineral water
 minerva press
 mingle-mangle
+minnie driver
 minor expense
 minor leaguer
 minor planets
@@ -52818,6 +53355,7 @@ minute of arc
 miocene epoch
 mirabile visu
 miracle fruit
+mireille enos
 mirror images
 mirror-writer
 mise en scene
@@ -52837,6 +53375,7 @@ mixed farming
 mixed numbers
 mixing faucet
 mixter-maxter
+miyoshi umeki
 mizzen course
 mobile phones
 mobius strips
@@ -53047,6 +53586,7 @@ napaea dioica
 napiers bones
 naples garlic
 naples yellow
+narendra modi
 narrow-bodied
 narrow escape
 narrow margin
@@ -53112,6 +53652,7 @@ nether region
 nettle family
 neutron bombs
 neutron stars
+neve campbell
 never-failing
 never-say-die
 new age music
@@ -53137,10 +53678,12 @@ new zealander
 newburg sauce
 news bulletin
 news magazine
+newt gingrich
 niagara falls
 niagara river
 nickel bronze
 nickel silver
+nicole kidman
 niddle-noddle
 night and day
 night-clothes
@@ -53198,10 +53741,14 @@ non-scheduled
 non-sequiturs
 nonanoic acid
 noncoding dna
+norma shearer
 normal school
 norman arches
 norman french
+norman lamont
 norman mailer
+norman reedus
+norman tebbit
 norman thomas
 north african
 north america
@@ -53319,6 +53866,7 @@ olduvai gorge
 olea europaea
 oleander fern
 olive-colored
+olivia colman
 olympian zeus
 olympic games
 omental bursa
@@ -53429,6 +53977,7 @@ oriel college
 oriel windows
 oriental sore
 orinoco river
+orlando bloom
 os triquetrum
 oswald veblen
 otic ganglion
@@ -53611,6 +54160,7 @@ patent office
 patent system
 pater patriae
 patience-dock
+patricia neal
 patrick henry
 patrick white
 patron saints
@@ -53618,6 +54168,8 @@ pattern-maker
 pattern races
 pattern-shops
 pattern-wheel
+paul giamatti
+paul scofield
 paul verlaine
 pause buttons
 paved surface
@@ -53656,6 +54208,7 @@ pectoral arch
 pectoral vein
 pedal pushers
 pedestal desk
+pedro sanchez
 pee dee river
 peer pressure
 pelican state
@@ -53673,6 +54226,7 @@ penang-lawyer
 pencil eraser
 pencil pusher
 pendente lite
+penelope cruz
 pennine chain
 penny-a-liner
 penny arcades
@@ -53718,6 +54272,7 @@ peter abelard
 peter behrens
 peter medawar
 peter sellers
+peter ustinov
 petit larceny
 petrol engine
 petting party
@@ -54269,6 +54824,7 @@ quebec bridge
 queen consort
 queen dowager
 queen it over
+queen latifah
 queen regnant
 queens guides
 queens scouts
@@ -54345,6 +54901,7 @@ rallies round
 rally-drivers
 rally-driving
 ralph ellison
+ralph fiennes
 rambutan tree
 ramon y cajal
 ramshaw rocks
@@ -54356,6 +54913,7 @@ rank and file
 rank-smelling
 rankine scale
 rapid transit
+rashida jones
 raspberry-red
 rat-a-tat-tat
 rat-tail file
@@ -54367,6 +54925,7 @@ rattle-headed
 rattus rattus
 ravenna grass
 raw vegetable
+ray stevenson
 rayleigh disc
 rayleigh disk
 rayleigh wave
@@ -54521,26 +55080,32 @@ ringed plover
 ringing tones
 ringside seat
 ringworm bush
+rinko kikuchi
 ripple effect
 ripple-marked
 rise to power
 rising prices
 risky venture
+rita hayworth
 river acheron
 river boulder
 river cocytus
 river dolphin
+river phoenix
 river red gum
 roaring drunk
 roasting-jack
+rob schneider
 robber-barons
 robert barany
 robert bunsen
+robert duvall
 robert fulton
 robert graves
 robert lowell
 robert merton
 robert morris
+robin weigert
 robot dancing
 rochelle salt
 rock and roll
@@ -54584,6 +55149,7 @@ roman holiday
 roman letters
 roman numeral
 romans a clef
+ronald colman
 ronald reagan
 roof mushroom
 roofing paper
@@ -54594,6 +55160,7 @@ root-parasite
 root-pressure
 rosa moschata
 rosa ponselle
+rosamund pike
 rose chestnut
 rose-coloured
 rose geranium
@@ -54678,6 +55245,8 @@ rupert brooke
 ruperts drops
 rush-bottomed
 russel crouse
+russell brand
+russell crowe
 russells body
 russian dolls
 russian olive
@@ -54689,6 +55258,7 @@ rusty grackle
 rusty woodsia
 ruth benedict
 ruth st denis
+ryan reynolds
 saber-toothed
 sabin vaccine
 sabre-rattled
@@ -54751,6 +55321,7 @@ salix cinerea
 salix humilis
 salix sericea
 salix tristis
+sally hawkins
 salmon-fisher
 salmon-ladder
 saloon keeper
@@ -54762,6 +55333,7 @@ salver-shaped
 salvia azurea
 salvia clarea
 salvia lyrata
+sam waterston
 samia cynthia
 samia walkeri
 sampling rate
@@ -54785,6 +55357,7 @@ santa clauses
 santee dakota
 santo domingo
 sao francisco
+saoirse ronan
 sapphire-wing
 sara teasdale
 sarah siddons
@@ -55128,6 +55701,8 @@ shipping room
 ships biscuit
 ships company
 ships officer
+shirley booth
+shirley jones
 shirley-quirk
 shirt dresses
 shirt-sleeves
@@ -55432,6 +56007,7 @@ soda fountain
 sodden-witted
 sodium amytal
 sodium iodide
+sofia vergara
 soft-pedalled
 softback book
 softball game
@@ -55688,6 +56264,7 @@ standing room
 standing wave
 standoff half
 stanley knife
+stanley tucci
 star-blasting
 star-duckweed
 star magnolia
@@ -55757,6 +56334,8 @@ stereo system
 sterling area
 sterling bloc
 stern-wheeler
+steve buscemi
+steve mcqueen
 stick-insects
 sticky labels
 sticky wicket
@@ -55946,6 +56525,7 @@ surgical seam
 surinam river
 surinam toads
 susan anthony
+susan hayward
 swagger canes
 swagger stick
 swallow-tails
@@ -56067,6 +56647,7 @@ tapioca plant
 tappet-motion
 tappet wrench
 tariff reform
+taron egerton
 tarpeian rock
 tartar emetic
 tartare sauce
@@ -56089,6 +56670,7 @@ tax threshold
 tax write-off
 taxidea taxus
 taxus baccata
+taylor kitsch
 tea-strainers
 teaching aids
 team teaching
@@ -56120,6 +56702,8 @@ tennis stroke
 tenpenny nail
 terbium metal
 tercel-gentle
+teresa palmer
+teresa wright
 terror-struck
 terrorist act
 test-marketed
@@ -56237,6 +56821,7 @@ tiffany glass
 tiffany lamps
 tiger-striped
 tight fitting
+tilda swinton
 tilia cordata
 tilting board
 timber-framed
@@ -56273,6 +56858,7 @@ tobacco-heart
 tobacco juice
 tobacco plant
 tobacco pouch
+tobey maguire
 todea barbara
 todea superba
 toffee-apples
@@ -56285,6 +56871,8 @@ token economy
 token payment
 toll-gatherer
 tom and jerry
+tom courtenay
+tom wilkinson
 tomato blight
 tomato streak
 tonal pattern
@@ -56296,6 +56884,7 @@ tongue-flower
 tongue-lashed
 tongue-lashes
 tongue-shaped
+toni collette
 toni morrison
 tonneau cover
 tooth-drawing
@@ -56517,6 +57106,7 @@ type-founding
 type locality
 type specimen
 typhoid fever
+tyrese gibson
 tyrian purple
 tyrolean alps
 tyrolean hats
@@ -56685,6 +57275,7 @@ villa hermosa
 village green
 village idiot
 vin ordinaire
+vincent gallo
 vinegar-plant
 vintage years
 vinyl acetate
@@ -56772,9 +57363,11 @@ walky-talkies
 wall of death
 wall painting
 wall streeter
+wallace beery
 wallaces line
 walnut blight
 walnut family
+walter huston
 walter piston
 walter ralegh
 waltz matilda
@@ -56788,7 +57381,9 @@ war criminals
 war memorials
 war of nerves
 war secretary
+warner baxter
 warning light
+warren beatty
 warren burger
 warts and all
 wash-and-wear
@@ -56927,6 +57522,7 @@ welsh poppies
 welsh rarebit
 welsh terrier
 welter-weight
+wesley snipes
 west berliner
 west bromwich
 west by north
@@ -57214,6 +57810,7 @@ yellow turnip
 yenisei river
 yenisey river
 yerba de mate
+yoon suk-yeol
 yorkshire fog
 yosemite toad
 you and yours
@@ -57295,6 +57892,7 @@ acute angles
 ad arbitrium
 ad infinitum
 adam-and-eve
+adam sandler
 adams needle
 adapid group
 add together
@@ -57307,6 +57905,7 @@ admirals cup
 adolf hitler
 adonis annua
 adriatic sea
+adrien brody
 adsuki beans
 adult female
 advance note
@@ -57350,6 +57949,7 @@ air sickness
 air terminal
 air traveler
 alan hodgkin
+alan rickman
 alan shepard
 alarm-clocks
 alarm system
@@ -57362,6 +57962,7 @@ alberti bass
 alcaic verse
 alder blight
 alder-leaved
+alec baldwin
 alencon lace
 aleph-nought
 aleppo grass
@@ -57372,6 +57973,7 @@ alfred krupp
 alfred nobel
 alfred noyes
 alginic acid
+ali khamenei
 alice walker
 aliquot part
 alizarin red
@@ -57408,6 +58010,7 @@ alto rilievo
 alton towers
 alveolar bed
 amabilis fir
+amanda bynes
 amazon river
 amazon-stone
 amboina pine
@@ -57446,6 +58049,8 @@ ancient pine
 and so forth
 andre derain
 andrew wyeth
+andrzej duda
+andy samberg
 anemone fish
 angara river
 angels share
@@ -57470,11 +58075,13 @@ anise cookie
 anise hyssop
 aniseed ball
 ankle biters
+anna magnani
 anna pavlova
 annelid worm
 annie oakley
 annual rings
 ansate cross
+anthony eden
 anti-federal
 anti-jacobin
 anti-semitic
@@ -57746,6 +58353,7 @@ bargain down
 bargain rate
 barge couple
 barge-master
+barham salih
 barium enema
 barium oxide
 barking deer
@@ -57769,6 +58377,7 @@ barrel maker
 barrel organ
 barrel vault
 barrier reef
+barry pepper
 bartle frere
 baryta paper
 bas mitszahs
@@ -57903,6 +58512,7 @@ belly dancer
 belly dances
 belly-timber
 belmont park
+ben kingsley
 bench-marked
 bench warmer
 benedict xiv
@@ -57929,6 +58539,7 @@ beta blocker
 beta orionis
 betel pepper
 betes noires
+bette midler
 better-known
 betting odds
 betting shop
@@ -57962,11 +58573,13 @@ bill clinton
 bill mauldin
 bill of fare
 bill of sale
+bill pullman
 bill russell
 bill sticker
 billets-doux
 billiard cue
 billy bunter
+billy crudup
 billy graham
 billy sunday
 billy wilder
@@ -58058,6 +58671,7 @@ black willow
 blackish-red
 bladder fern
 bladder worm
+blake lively
 blank cheque
 blanket bath
 blanket bogs
@@ -58130,6 +58744,7 @@ board member
 board school
 boat-builder
 boat whistle
+bob odenkirk
 bob woodward
 bobby calves
 bobby-socker
@@ -58300,6 +58915,7 @@ bristle fern
 bristle-tail
 bristle-worm
 bristol milk
+brit marling
 british warm
 brittle bush
 brittle fern
@@ -58328,6 +58944,7 @@ brown-nosing
 brown-purple
 brown thrush
 brownish-red
+bruce willis
 bruges group
 bruno walter
 brush turkey
@@ -58475,11 +59092,13 @@ calorie-free
 calvert vaux
 calves liver
 calvin klein
+cam gigandet
 came forward
 came through
 camel-backed
 camel racing
 camera angle
+cameron diaz
 camomile tea
 camp meeting
 campaign hat
@@ -58677,6 +59296,7 @@ cecil rhodes
 cedar of goa
 cedar rapids
 celery stick
+celeste holm
 celiac trunk
 cell nucleus
 celtic cross
@@ -58834,6 +59454,7 @@ chittam bark
 chittem bark
 chloramine-t
 chloric acid
+choi min-sik
 choice-drawn
 choir school
 choir-screen
@@ -58848,12 +59469,16 @@ chorus-girls
 chou dynasty
 choux pastry
 chow dynasty
+chow yun-fat
+chris cooper
+chris tucker
 christ-cross
 christ plant
 christ thorn
 chrome green
 chrome-steel
 chromic acid
+chuck norris
 chuckers-out
 chucking out
 chuckle-head
@@ -58906,6 +59531,7 @@ civil leader
 civil rights
 civvy street
 claim jumper
+claire danes
 clam chowder
 clarence day
 clasp-knives
@@ -58916,6 +59542,7 @@ class period
 classic cars
 clastic rock
 claude monet
+claude rains
 claw-hammers
 claw hatchet
 clay-brained
@@ -59471,10 +60098,15 @@ danger money
 danger point
 dangle-berry
 daniel boone
+daniel bruhl
+daniel craig
 daniel defoe
 daniel jones
 daniell cell
 danish krone
+danny aiello
+danny devito
+danny glover
 danube river
 dappled-gray
 dappled-grey
@@ -59490,6 +60122,7 @@ dark-skinned
 dark-spotted
 dart thrower
 darwin tulip
+daryl hannah
 data capture
 data highway
 dawn redwood
@@ -59515,6 +60148,8 @@ death-marked
 death-rattle
 death-stroke
 death valley
+deborah kerr
+debra winger
 debris storm
 debris surge
 debt ceiling
@@ -59553,6 +60188,7 @@ demon-ridden
 denali fault
 dengue fever
 dennis gabor
+dennis quaid
 dental floss
 dental plate
 dentate leaf
@@ -59585,6 +60221,8 @@ dialogue box
 diamond bird
 diamond dove
 diamond dust
+diane keaton
+dianne wiest
 diary keeper
 dibasic acid
 dibasic salt
@@ -59661,6 +60299,7 @@ domestic cat
 domestic dog
 dominion day
 don giovanni
+donald crisp
 donald trump
 doner kebabs
 donets basin
@@ -59864,6 +60503,7 @@ ebony family
 echo chamber
 echo sounder
 economic aid
+eddie murphy
 eddy current
 edgar varese
 edge effects
@@ -59873,9 +60513,11 @@ edible snail
 edith cavell
 edmond hoyle
 edmund burke
+edmund gwenn
 edvard grieg
 edvard munch
 edward albee
+edward heath
 edward pusey
 edward sapir
 edward teach
@@ -59921,6 +60563,7 @@ elevator man
 eleven-sided
 elf-children
 elf-shooting
+eliza dushku
 elizabeth ii
 elkhorn fern
 ellis island
@@ -59933,7 +60576,9 @@ emery wheels
 emesis basin
 emile herzog
 emily bronte
+emily watson
 emma goldman
+emma roberts
 emmett kelly
 emmy noether
 emperor moth
@@ -60064,6 +60709,7 @@ fair comment
 fair dealing
 fair hearing
 fair weather
+fairuza balk
 fairy-butter
 fairy circle
 fairy cycles
@@ -60134,6 +60780,7 @@ fatty tissue
 fault-finder
 favorite son
 fawn-colored
+faye dunaway
 feather ball
 feather-edge
 feather-foil
@@ -60507,6 +61154,7 @@ free-traders
 freeze-dried
 freeze-dries
 freeze-frame
+freida pinto
 freight rate
 freight-shed
 freight tons
@@ -60565,6 +61213,7 @@ full-mouthed
 fulling mill
 fumaric acid
 fume-chamber
+fumu kishida
 function key
 fund manager
 fund-raisers
@@ -60672,6 +61321,7 @@ geared wheel
 gearing down
 geert geerts
 gefilte fish
+gene hackman
 gene linkage
 gene sarazen
 gene therapy
@@ -61305,8 +61955,12 @@ green plover
 green snakes
 green turtle
 green-wellie
+greer garson
+greg kinnear
+gregory peck
 gregory xiii
 greshams law
+greta gerwig
 gretna green
 grevys zebra
 grey catbird
@@ -61321,6 +61975,7 @@ gross estate
 gross margin
 gross profit
 gross weight
+groucho marx
 ground-berry
 ground cable
 ground cedar
@@ -61392,6 +62047,7 @@ habitat loss
 hacking coat
 hackney cabs
 hagia sophia
+haing s ngor
 hair-brained
 hair-breadth
 hair-brushes
@@ -61401,6 +62057,7 @@ hair trigger
 hairpin bend
 hairy spurge
 hairy tongue
+hal holbrook
 halcyon days
 half-a-crown
 half a dozen
@@ -61565,6 +62222,7 @@ heat content
 heat-seeking
 heat shields
 heath family
+heath ledger
 heath violet
 heather bell
 heaven knows
@@ -61589,6 +62247,7 @@ heel-and-toe
 heel counter
 heirs-at-law
 helen keller
+helen mirren
 helium group
 hell raising
 hell-rooster
@@ -61601,9 +62260,11 @@ hemophilia a
 hemophilia b
 hen-harriers
 henrik ibsen
+henry cavill
 henry hudson
 henry miller
 henry morgan
+henry pelham
 hepatic coma
 hepatic duct
 hepatic lobe
@@ -61667,6 +62328,7 @@ high-voltage
 high wycombe
 highly-sexed
 highway code
+hilary swank
 hill-billies
 hill station
 hinging post
@@ -61697,6 +62359,7 @@ holding yard
 holes in one
 holiday camp
 holly family
+holly hunter
 holy rollers
 holy thistle
 holy trinity
@@ -61797,8 +62460,10 @@ huayna capac
 hudson river
 hug-me-tight
 hugh dowding
+hugh jackman
 hugo grotius
 hugo junkers
+hugo weaving
 human action
 human beings
 human botfly
@@ -61830,6 +62495,7 @@ hydroxy acid
 hydroxyl ion
 hyla regilla
 i chronicles
+ian mckellen
 ibizan hound
 ibota privet
 ice-breakers
@@ -61993,6 +62659,7 @@ iron rations
 irtish river
 irtysh river
 isaac asimov
+isaac herzog
 isaac newton
 isak dinesen
 ischial bone
@@ -62011,11 +62678,13 @@ jack dempsey
 jack kennedy
 jack kerouac
 jack-knifing
+jack palance
 jack-pudding
 jack rabbits
 jack russell
 jack-the-lad
 jacket crown
+jacki weaver
 jacobs staff
 jacques loeb
 jacques tati
@@ -62029,16 +62698,25 @@ jam sessions
 jam tomorrow
 james barrie
 james cagney
+james coburn
 james franck
+james franco
+james garner
 james hutton
+james mcavoy
 james monroe
 james murray
+james spader
+james t kirk
 james ussher
 james watson
 james wilson
 jan van eyck
+jane darwell
 jane goodall
 jane seymour
+janet gaynor
+janet mcteer
 janis joplin
 japan clover
 japan tallow
@@ -62054,19 +62732,25 @@ jaunting car
 java sparrow
 jawless fish
 jaws of life
+jay baruchel
 jean anouilh
 jean caulvin
 jean chauvin
 jean cocteau
 jean laffite
 jean lafitte
+jeff bridges
+jeff daniels
 jeffrey pine
 jellied eels
 jelly babies
 jelly fungus
 jenghiz khan
+jeremy irons
 jerry-builds
 jesse window
+jessica alba
+jessica biel
 jesuit order
 jesuits bark
 jesus christ
@@ -62076,6 +62760,7 @@ jeux desprit
 jewel casket
 jewel orchid
 jiggety-jogs
+jim caviezel
 jim morrison
 jimi hendrix
 jimmy cagney
@@ -62085,8 +62770,10 @@ jimmy riddle
 jinghis khan
 jingle bells
 jippi-jappas
+jo van fleet
 jodhpur boot
 jodhpur shoe
+jodie foster
 jodrell bank
 joe dimaggio
 joe-pye weed
@@ -62098,6 +62785,8 @@ john-bullism
 john chapman
 john cheever
 john dowland
+john gielgud
+john goodman
 john haldane
 john hancock
 john harvard
@@ -62106,6 +62795,7 @@ john marstan
 john ogroats
 john osborne
 john paul ii
+john russell
 john tyndall
 john webster
 johnson city
@@ -62125,6 +62815,7 @@ joseph haydn
 joseph henry
 joseph smith
 josephs coat
+josh duhamel
 josiah spode
 jour de fete
 journey cake
@@ -62137,6 +62828,7 @@ judy garland
 jugular vein
 juice reamer
 jules feifer
+julia stiles
 jumble-sales
 jump for joy
 jump jockeys
@@ -62181,9 +62873,13 @@ karen horney
 karl jaspers
 karl scheele
 kashmir goat
+kat dennings
+kate winslet
+katie holmes
 katsura tree
 kauai island
 kavir desert
+keanu reeves
 keeling over
 keen-sighted
 keep abreast
@@ -62192,7 +62888,9 @@ keep in line
 keep tabs on
 keeping back
 keeping-room
+keir starmer
 kelvin scale
+ken watanabe
 kendal green
 kendall test
 kendalls tau
@@ -62201,9 +62899,11 @@ keplers laws
 kerb crawler
 kerb-traders
 kerb-vendors
+keri russell
 kernigs sign
 ketone group
 kettle holes
+kevin spacey
 kewpie dolls
 key industry
 khayr ad-din
@@ -62218,6 +62918,7 @@ kill oneself
 killer whale
 killing time
 killing zone
+kim basinger
 kinchin-mort
 kind-hearted
 king begonia
@@ -62232,6 +62933,7 @@ king whiting
 kingdom come
 kings ransom
 kings speech
+kirk douglas
 kirk-session
 kiss me kate
 kiss of life
@@ -62247,6 +62949,7 @@ kith and kin
 kitten-tails
 kitty-corner
 kitty litter
+klaus kinski
 klein bottle
 knee-tribute
 knick-knacks
@@ -62269,9 +62972,12 @@ kokka shinto
 kokum butter
 korea strait
 krafft-ebing
+kristen bell
+kristen wiig
 ku klux klan
 kuala lumpur
 kumquat tree
+kurt russell
 la cerentola
 labia majora
 labia minora
@@ -62364,6 +63070,7 @@ launch sites
 laundry cart
 laundry list
 laundry-maid
+laura linney
 laurel sumac
 lavender bag
 law-breakers
@@ -62541,6 +63248,7 @@ like royalty
 like thunder
 lilac-purple
 lillian gish
+lily collins
 lily-livered
 limbering up
 limbic brain
@@ -62643,6 +63351,7 @@ locust-years
 lodge-keeper
 lodging turn
 loft bombing
+logan lerman
 loggan-stone
 logwood tree
 loin of lamb
@@ -62748,6 +63457,7 @@ lues venerea
 luggage rack
 luggage-vans
 luing cattle
+luise rainer
 lumbar nerve
 lumber-jacks
 lumber-mills
@@ -62787,6 +63497,8 @@ madeira cake
 madia sativa
 madonna lily
 magenta pink
+maggie grace
+maggie smith
 magic bullet
 magic carpet
 magic circle
@@ -62873,10 +63585,14 @@ mare nostrum
 maria callas
 marie stopes
 marine corps
+mario draghi
+marisa tomei
 maritime law
 mark anthony
 mark hopkins
 mark of cain
+mark ruffalo
+mark rylance
 marked cards
 market cross
 market maker
@@ -62895,6 +63611,7 @@ marron glace
 marrying off
 marsh mallow
 marsh orchid
+marsha mason
 marshal saxe
 marshal tito
 marston moor
@@ -62902,6 +63619,7 @@ martes foina
 martial arts
 martin buber
 martin cline
+martin sheen
 mary shelley
 masked balls
 masked shrew
@@ -62927,6 +63645,7 @@ maundy money
 max beerbohm
 max delbruck
 maximum card
+maya rudolph
 meadow-brown
 meadow clary
 meadow cress
@@ -63009,6 +63728,9 @@ mexican mint
 mexican onyx
 mexican peso
 mexican wave
+michael cera
+michael ealy
+michael foot
 mickey mouse
 mid-atlantic
 mid-december
@@ -63034,6 +63756,7 @@ midterm exam
 midwife toad
 mighty mouse
 mild-tasting
+miles teller
 military law
 military man
 milk bottles
@@ -63049,6 +63772,7 @@ mind-healing
 mind-numbing
 mind-readers
 mind-reading
+mindy kaling
 mine-sweeper
 mineral vein
 mineral wool
@@ -63067,6 +63791,7 @@ minute-glass
 minute-hands
 minute steak
 minute waltz
+mira sorvino
 miracle play
 miranda rule
 mirror balls
@@ -63274,6 +63999,7 @@ nail pulling
 nail removal
 nail varnish
 nailing down
+najla bouden
 naked ladies
 naked option
 naked-tailed
@@ -63282,6 +64008,7 @@ name-dropped
 name dropper
 name the day
 namib desert
+nancy pelosi
 nancy-pretty
 nand circuit
 nanga parbat
@@ -63325,6 +64052,7 @@ needle valve
 neer-do-well
 negev desert
 negro pepper
+neil kinnock
 nemean games
 neo-catholic
 neosho river
@@ -63370,7 +64098,9 @@ nickel bloom
 nickel steel
 nicola amati
 nicola sacco
+nicolas cage
 nicolo amati
+nigel lawson
 night-cellar
 night-faring
 night-flower
@@ -63444,6 +64174,7 @@ non-unionist
 non-verbally
 non-violence
 nook-shotten
+noomi rapace
 nor-nor-east
 nor-nor-west
 normal curve
@@ -63557,6 +64288,7 @@ olive ridley
 oliver hardy
 oliver stone
 oliver twist
+olivia wilde
 olla podrida
 omar bradley
 omar khayyam
@@ -63858,6 +64590,7 @@ paring knife
 parish clerk
 parity check
 park keepers
+parker posey
 parking area
 parking bays
 parking lots
@@ -63923,12 +64656,14 @@ patron saint
 pattern-bomb
 pattern race
 pattern-shop
+paul bettany
 paul cezanne
 paul ehrlich
 paul gauguin
 paul robeson
 paul tillich
 paul vernier
+paula patton
 paulo afonso
 pause button
 paving stone
@@ -64026,6 +64761,7 @@ peter otoole
 peter rabbit
 peter-see-me
 peter seeger
+peter weller
 peters gland
 peters pence
 petit maitre
@@ -64136,8 +64872,10 @@ pipe-dreamer
 pipe fitting
 pipe-stapple
 piper cubeba
+piper laurie
 piper longum
 piper nigrum
+piper perabo
 pisha paysha
 pissaba palm
 pistol-whips
@@ -64616,6 +65354,7 @@ race-suicide
 race-walkers
 race-walking
 racemic acid
+rachel weisz
 racing shell
 racing skate
 racing skiff
@@ -64684,6 +65423,7 @@ rap sessions
 rape suspect
 rapeseed oil
 rapid growth
+raquel welch
 rare-roasted
 rat-catching
 rat kangaroo
@@ -64701,6 +65441,7 @@ raw material
 ray bradbury
 ray of light
 ray robinson
+ray winstone
 razor-backed
 razor-blades
 rbmk reactor
@@ -64740,7 +65481,9 @@ real storage
 reaping hook
 rear admiral
 rear of tube
+rebecca hall
 rebecca west
+rebel wilson
 recent epoch
 recipe books
 record album
@@ -64827,6 +65570,7 @@ ribes nigrum
 ribes rubrum
 rice-biscuit
 rice-pudding
+richard gere
 richard kuhn
 rick-bartons
 riddle canon
@@ -64891,12 +65635,15 @@ robber synod
 robert boyle
 robert brown
 robert burns
+robert cecil
 robert clive
+robert donat
 robert frost
 robert hooke
 robert mills
 robert peary
 robert scott
+robin wright
 robing rooms
 rochon prism
 rock-breaker
@@ -64930,6 +65677,7 @@ rolling mill
 rolling-pins
 rolling wave
 rolls-royces
+romain duris
 roman a clef
 roman candle
 roman church
@@ -64997,6 +65745,7 @@ rove-beetles
 rover scouts
 rowing-boats
 rowlock arch
+roy scheider
 royal agaric
 royal assent
 royal casino
@@ -65018,6 +65767,7 @@ rubus idaeus
 ruby wedding
 rudder blade
 ruffian-like
+rufus sewell
 rug merchant
 rugby league
 ruling class
@@ -65054,7 +65804,9 @@ russian vine
 rust buckets
 rust-colored
 rust-proofed
+rutger hauer
 rwanda franc
+ryan gosling
 rydberg unit
 s gravenhage
 sabine river
@@ -65132,6 +65884,7 @@ salsola soda
 salt-cellars
 salt glazing
 salt marshes
+sam rockwell
 sambre river
 samuel adams
 samuel morse
@@ -65151,10 +65904,12 @@ sand verbena
 sandbox tree
 sandwich-man
 sandwich-men
+sandy dennis
 santa sophia
 santee sioux
 sanwa millet
 sapucaia-nut
+sarah polley
 sardine tins
 sargasso sea
 saronic gulf
@@ -65292,6 +66047,7 @@ seam bowlers
 seam bowling
 seam welding
 seaming-lace
+sean connery
 search party
 searing iron
 seat cushion
@@ -65319,6 +66075,7 @@ sedge family
 seed capital
 seed catalog
 seismic wave
+selena gomez
 selene vomer
 selenic acid
 self-abusers
@@ -65455,6 +66212,7 @@ set in stone
 set to music
 set up house
 sets against
+setsuko hara
 setter-forth
 settled with
 settles with
@@ -65494,6 +66252,7 @@ share option
 shark patrol
 shark sucker
 sharon fruit
+sharon stone
 sharp-angled
 sharp-ground
 sharp-limbed
@@ -65529,6 +66288,7 @@ shelling out
 shelter deck
 shelter tent
 shepherd dog
+shia labeouf
 shimmy-shake
 shin-plaster
 shin splints
@@ -65696,6 +66456,7 @@ sir lancelot
 sir tim rice
 sisal family
 sison amomum
+sissy spacek
 sister ships
 sitar player
 sitka spruce
@@ -66170,6 +66931,8 @@ step-parents
 step rockets
 stepped line
 stern chaser
+steve carell
+steve coogan
 steve martin
 stick around
 stick figure
@@ -66358,6 +67121,7 @@ supply route
 supply-sider
 support area
 support hose
+suraj sharma
 surf casting
 surf fishing
 surface area
@@ -66817,6 +67581,7 @@ top dressing
 top-gallants
 top priority
 top the bill
+topher grace
 topping lift
 torch-bearer
 torch singer
@@ -67185,6 +67950,7 @@ ventral horn
 ventral root
 venturi tube
 venuss curse
+vera farmiga
 verbal nouns
 verd antique
 verey lights
@@ -67220,6 +67986,7 @@ vigee-lebrun
 vigil candle
 village cart
 vina del mar
+vince vaughn
 vine-dresser
 vine-fretter
 vinegar tree
@@ -67498,6 +68265,7 @@ well-wishers
 well-wishing
 wellie boots
 welsh rabbit
+wendy hiller
 wendy houses
 went against
 went through
@@ -67634,11 +68402,15 @@ wild spinach
 wild tobacco
 wild vanilla
 wildcat well
+will ferrell
 will-worship
 willa cather
+willem dafoe
 william byrd
+william hurt
 william inge
 william kidd
+william lamb
 william penn
 william pitt
 william tell
@@ -67684,6 +68456,7 @@ wing-walkers
 wing-walking
 winged words
 winning post
+winona ryder
 winter-apple
 winter-berry
 winter-bloom
@@ -67940,6 +68713,7 @@ acts of war
 acute angle
 acyl halide
 ad campaign
+adam driver
 adams apple
 adders fern
 addis ababa
@@ -68069,7 +68843,9 @@ altar rails
 altar-stone
 alvar aalto
 alvin ailey
+amanda peet
 amber-green
+amber heard
 ambush bugs
 amen corner
 amenity bed
@@ -68081,6 +68857,7 @@ ampere-turn
 ampussy-and
 amsler grid
 amur privet
+amy poehler
 anas crecca
 anax andron
 ance-errand
@@ -68090,6 +68867,8 @@ anchor ring
 anchor rope
 and circuit
 andaman sea
+andy garcia
+andy serkis
 andy warhol
 angel cakes
 angel falls
@@ -68115,6 +68894,8 @@ ankle brace
 ankle joint
 ankle socks
 ankle strap
+anna paquin
+anne baxter
 anne boleyn
 anne bronte
 anne sexton
@@ -68202,6 +68983,7 @@ as required
 as you were
 asa yoelson
 ash blondes
+ashley judd
 asiatic flu
 assam fever
 assault gun
@@ -68226,6 +69008,7 @@ august plum
 auld reekie
 auto racing
 autos-da-fe
+ava gardner
 avant-garde
 avena fatua
 average out
@@ -68464,6 +69247,9 @@ belly laugh
 belt buckle
 belt-shaped
 belting out
+ben affleck
+ben johnson
+ben stiller
 ben trovato
 bench clamp
 bench lathe
@@ -68491,6 +69277,7 @@ beta crucis
 beta rhythm
 bette davis
 better half
+betty white
 beurre noir
 bezoar goat
 bi-weeklies
@@ -68506,9 +69293,12 @@ big spender
 bigeye scad
 bilge water
 bill-broker
+bill murray
+bill paxton
 bill poster
 billet doux
 billet-head
+billy burke
 billy-goats
 binary code
 binary file
@@ -68672,6 +69462,7 @@ boat people
 boat racing
 boat-shaped
 boat-trains
+bob hoskins
 bob mathias
 bobbin lace
 bobble hats
@@ -68713,6 +69504,7 @@ bond-timber
 bonduc tree
 bone marrow
 bone spavin
+bonnie hunt
 bonus issue
 bony-plated
 booby hatch
@@ -68844,6 +69636,7 @@ bridle path
 bridle-rein
 bridle road
 bridle-wise
+brie larson
 brief lives
 brier patch
 bright blue
@@ -69175,6 +69968,7 @@ cargo cults
 cargo hatch
 cargo liner
 cargo ships
+carl gustaf
 carl rogers
 carpal bone
 carpet-bags
@@ -69298,6 +70092,7 @@ charge unit
 chari river
 charity-boy
 charles vii
+charlie day
 charm quark
 chase after
 chasse-cafe
@@ -69373,7 +70168,9 @@ chorus girl
 chorus line
 chota-hazri
 chou en-lai
+chris evans
 chris evert
+chris pratt
 chrome alum
 chrome tape
 chuck berry
@@ -69587,6 +70384,7 @@ cold rubber
 cold starts
 cold turkey
 cole porter
+colin firth
 collar-beam
 collar-bone
 collar cell
@@ -69973,6 +70771,7 @@ damp course
 damp squibs
 damping off
 damson plum
+dan aykroyd
 dance-bands
 dance floor
 dance-halls
@@ -70008,10 +70807,14 @@ dative case
 datum-lines
 datum-plane
 datum point
+dave franco
 david bruce
 david hubel
+david jason
 david mamet
+david niven
 david smith
+david spade
 dawn chorus
 day boarder
 day centres
@@ -70044,6 +70847,7 @@ dead weight
 deadly sins
 deaf-mutism
 deaf person
+dean jagger
 dean martin
 death adder
 death-agony
@@ -70122,6 +70926,7 @@ dewar flask
 dhul-hijjah
 diamond jim
 diaper rash
+dick cheney
 dick turpin
 dickey-bird
 dickey-seat
@@ -70236,6 +71041,7 @@ dolphin oil
 domain name
 dome-shaped
 domoic acid
+don cheadle
 don marquis
 don quixote
 donald duck
@@ -70483,6 +71289,7 @@ egg custard
 egg fu yung
 egg-powders
 ego-tripper
+eid al-fitr
 eider ducks
 eight-sided
 eighth note
@@ -70498,8 +71305,10 @@ eldest hand
 eleven-plus
 eli whitney
 elie wiesel
+elijah wood
 elite group
 elizabeth i
+elliot page
 ember-goose
 emerald-cut
 emery board
@@ -70507,6 +71316,9 @@ emery cloth
 emery paper
 emery stone
 emery wheel
+emily blunt
+emma watson
+emmy rossum
 empty words
 emu-bobbers
 emu-bobbing
@@ -70542,6 +71354,7 @@ eresh-kigal
 erotic love
 errand boys
 errand girl
+errol flynn
 error-prone
 erucic acid
 escape cock
@@ -70554,6 +71367,7 @@ estate cars
 estate duty
 et tu brute
 ethan allen
+ethan hawke
 ethelred ii
 ethnic joke
 ethnic slur
@@ -70604,6 +71418,7 @@ eye-spotted
 eye surgery
 eye-witness
 eyelet-hole
+ezra miller
 face-cloths
 face-creams
 face fungus
@@ -71232,6 +72047,8 @@ garlic salt
 garment bag
 garter belt
 gary cooper
+gary oldman
+gary sinise
 gas-bottles
 gas bracket
 gas burners
@@ -71270,11 +72087,13 @@ gear-wheels
 geared down
 gebang palm
 gee-strings
+geena davis
 geiger tube
 geisha girl
 gem-cutting
 gender role
 gene tunney
+gene wilder
 genetic map
 geneva gown
 genius loci
@@ -71587,6 +72406,7 @@ glass-paper
 glass snake
 glebe house
 glebe lands
+glenn close
 glide slope
 globe-trots
 gloomy dean
@@ -71650,6 +72470,7 @@ golden-rods
 golden rule
 golden seal
 golden star
+goldie hawn
 golf caddie
 golf course
 golf lesson
@@ -71905,6 +72726,7 @@ gustavus iv
 gustavus vi
 gyppy tummy
 gyps fulvus
+h h asquith
 hack driver
 hack writer
 hackney cab
@@ -71954,6 +72776,7 @@ half volley
 half-witted
 half-yearly
 hall porter
+halle berry
 halo blight
 halo effect
 halter-neck
@@ -72101,6 +72924,7 @@ hello dolly
 hells angel
 hells bells
 hells teeth
+helmut kohl
 helper cell
 helping out
 hem and haw
@@ -72178,6 +73002,7 @@ high-ticket
 high-topped
 higher rank
 hightail it
+hilary duff
 hilary term
 hindu deity
 hinge joint
@@ -72346,6 +73171,7 @@ hubbles law
 huckle-bone
 hudson seal
 hue and cry
+hugh laurie
 hula skirts
 hulsea nana
 hum and haw
@@ -72532,10 +73358,12 @@ iron ration
 iron-willed
 iron-witted
 iron-worded
+irrfan khan
 irving howe
 isaac stern
 isaac watts
 isere river
+isla fisher
 islamic law
 island arcs
 island-hops
@@ -72553,6 +73381,7 @@ ivory plant
 ivory tower
 ivy-covered
 ivy leaguer
+j k simmons
 jack-a-lent
 jack-booted
 jack horner
@@ -72569,6 +73398,7 @@ jack-rafter
 jack salmon
 jack-straws
 jackass bat
+jackie chan
 jacking off
 jacob sheep
 jail-breaks
@@ -72584,13 +73414,17 @@ james mason
 james river
 james tobin
 james usher
+james woods
 james wyatt
+jamie chung
 jan vermeer
 jane austen
 jane jacobs
+janet leigh
 janus-faced
 japan cedar
 jar against
+jason segel
 java olives
 java pepper
 javel water
@@ -72599,19 +73433,23 @@ javelin-men
 jaw-crusher
 jaw-twister
 jazz around
+jean arthur
 jean cauvin
 jean harlow
 jean monnet
 jean piaget
 jean racine
+jean seberg
 jeanne darc
 jellied eel
 jelly rolls
+jena malone
 jerked meat
 jerking off
 jerome kern
 jerry-build
 jerry-built
+jerry lewis
 jersey city
 jersey fern
 jersey pine
@@ -72644,15 +73482,20 @@ job sharing
 jockey caps
 jockey club
 joel harris
+joel mccrea
 john bunyan
 john calvin
+john cazale
 john ciardi
+john cleese
 john copley
+john cusack
 john dalton
 john dryden
 john eccles
 john florio
 john gilpin
+john hawkes
 john heming
 john huston
 john irving
@@ -72664,6 +73507,7 @@ john napier
 john paul i
 john ruskin
 john scopes
+john stuart
 john thomas
 john updike
 john walker
@@ -72674,6 +73518,7 @@ john wilkes
 john wyclif
 johnny cake
 johnny cash
+johnny depp
 johnny raws
 join battle
 join forces
@@ -72685,7 +73530,10 @@ joint-stool
 jolie laide
 jolly along
 jolly roger
+jon favreau
+jose ferrer
 jose orozco
+josh brolin
 joshua tree
 joss-houses
 joss-sticks
@@ -72698,6 +73546,7 @@ jujube bush
 juke-joints
 jules verne
 julian bond
+julie delpy
 julius marx
 july-flower
 jumbie bead
@@ -72706,6 +73555,7 @@ jump jockey
 jump-starts
 jumper lead
 june beetle
+june squibb
 jungle cock
 jungle fowl
 jungle gyms
@@ -72720,12 +73570,14 @@ jury-rigged
 jury system
 jus divinum
 jus gentium
+justin long
 justinian i
 kaffir boom
 kaffir corn
 kahane chai
 kaiser bill
 kaiser roll
+kaley cuoco
 kalon tripa
 kansas city
 kappa-meson
@@ -72736,6 +73588,8 @@ karl czerny
 karl popper
 kasai river
 kate chopin
+kate hudson
+kathy bates
 kauri copal
 kauri-pines
 kauri resin
@@ -72761,6 +73615,9 @@ kerr effect
 kerry blues
 ketone body
 kettle hole
+kevin bacon
+kevin james
+kevin kline
 kew gardens
 kewpie doll
 key pattern
@@ -72779,6 +73636,7 @@ killer bees
 killer cell
 kiln-drying
 kilner jars
+kim jong-un
 kinetic art
 king arthur
 king cobras
@@ -72980,6 +73838,7 @@ lay witness
 layer-cakes
 lazar house
 le douanier
+lea seydoux
 lead-arming
 lead astray
 lead pencil
@@ -73038,6 +73897,7 @@ lemon shark
 lemon soles
 lemon sumac
 lemur catta
+lena headey
 lend a hand
 lens cortex
 lens system
@@ -73050,6 +73910,7 @@ leopard cat
 leroi jones
 les troyens
 lesh states
+leslie mann
 lesser kudu
 lethal dose
 lethal gene
@@ -73067,6 +73928,7 @@ ley farming
 leyden jars
 leydig cell
 lhasa apsos
+liam neeson
 liberty cap
 license fee
 license tax
@@ -73109,8 +73971,10 @@ lighting-up
 like a shot
 like blazes
 like-minded
+lili taylor
 lilly-pilly
 lily family
+lily tomlin
 limber-neck
 limber pine
 limbered up
@@ -73155,6 +74019,7 @@ liquid soap
 liquid unit
 liquor laws
 lis pendens
+lisa kudrow
 list-prices
 list system
 listened in
@@ -73176,6 +74041,7 @@ little owls
 little rock
 little slam
 little toes
+liv ullmann
 live-bearer
 live in sin
 liver fluke
@@ -73218,6 +74084,7 @@ log-rolling
 logan-stone
 loin-cloths
 loire river
+lois chiles
 lola montez
 loll around
 loll-shraub
@@ -73321,6 +74188,7 @@ lucky lindy
 lucy stoner
 luggage van
 luis bunuel
+luke wilson
 lule burgas
 lumbar pain
 lumbar vein
@@ -73406,6 +74274,7 @@ man-at-arms
 man orchids
 man-queller
 man-stealer
+mandy moore
 maned sheep
 manila bean
 manila hemp
@@ -73434,12 +74303,15 @@ marconi rig
 mares-nests
 mares-tails
 margin call
+maria bello
 marie curie
 marine glue
 marine mine
 marital bed
 mark antony
+mark hamill
 mark rothko
+mark strong
 marked card
 market-days
 market town
@@ -73488,6 +74360,7 @@ match plane
 match point
 mato grosso
 matron-like
+matt dillon
 matzah ball
 matzah meal
 matzo balls
@@ -73527,6 +74400,7 @@ melba sauce
 melba toast
 meles meles
 melic-grass
+melissa leo
 melody pipe
 melting pot
 member bank
@@ -73586,6 +74460,7 @@ midi system
 mild-spoken
 miles apart
 miles davis
+miley cyrus
 milk bottle
 milk floats
 milk powder
@@ -73808,8 +74683,10 @@ namby-pamby
 name brands
 name-plates
 namoi river
+nancy allen
 nanny-goats
 nanny state
+naomi watts
 napkin ring
 narco-state
 narrow boat
@@ -73820,6 +74697,7 @@ narrow wale
 nasal sinus
 nasal twang
 nathan hale
+nathan lane
 native bear
 native-born
 native land
@@ -74066,6 +74944,7 @@ oil painter
 oil-soluble
 oil-tankers
 oil workers
+olaf scholz
 old bullion
 old country
 old english
@@ -74089,6 +74968,7 @@ olive green
 olive-shell
 olive-sized
 olympic god
+omar sharif
 omnibus box
 on approval
 on-licences
@@ -74201,6 +75081,7 @@ orphan site
 os frontale
 os hyoideum
 osage river
+oscar isaac
 oscar wilde
 oscine bird
 ostrich-egg
@@ -74244,6 +75125,7 @@ over-refine
 over to you
 overcup oak
 ovis vignei
+owen wilson
 owen wister
 ox-antelope
 ox-bow lake
@@ -74410,8 +75292,10 @@ patrol ship
 patter-song
 patty shell
 paul bunyan
+paul kagame
 paul newman
 paul revere
+paul walker
 pawn ticket
 pay-packets
 pay-station
@@ -74488,6 +75372,8 @@ person hour
 pet scanner
 pet sitting
 pete seeger
+peter finch
+peter fonda
 peter lorre
 petit grain
 petit juror
@@ -74536,6 +75422,7 @@ picture hat
 piddle away
 piece goods
 pier mirror
+pig dog bay
 pig-sticker
 pigeon hawk
 pigeon loft
@@ -75084,6 +75971,7 @@ ramesses ii
 ramon lully
 ranch house
 random walk
+randy quaid
 range poles
 rap artists
 rap session
@@ -75111,6 +75999,7 @@ ravel bread
 raw recruit
 raw weather
 ray cattell
+ray milland
 razor-backs
 razor-blade
 razor-sharp
@@ -75165,6 +76054,7 @@ rectal vein
 red admiral
 red-blooded
 red buckeye
+red buttons
 red cabbage
 red campion
 red carpets
@@ -75190,6 +76080,7 @@ reed-thrush
 reeling off
 refuse heap
 regent-bird
+regina king
 regular guy
 reim-kennar
 rein orchid
@@ -75292,9 +76183,11 @@ rip current
 rip-roaring
 ripping bar
 ripple mark
+rishi sunak
 rising damp
 rising tide
 rising trot
+rita moreno
 ritt-master
 river adige
 river-banks
@@ -75330,6 +76223,7 @@ robert gray
 robert koch
 robert owen
 robert peel
+robert shaw
 robing room
 roble beech
 robot pilot
@@ -75355,8 +76249,10 @@ rock-violet
 rocket base
 rocket fuel
 rod puppets
+rod steiger
 rodeo rider
 roger bacon
+roger moore
 roger taney
 rogue state
 role models
@@ -75379,6 +76275,7 @@ rood screen
 roof garden
 room access
 room-ridden
+rooney mara
 root celery
 root cellar
 root ginger
@@ -75512,6 +76409,7 @@ rustling up
 rusty-brown
 rusty nails
 ruth fulton
+ruth gordon
 rydal water
 rye whiskey
 saale river
@@ -75600,8 +76498,10 @@ sales force
 sales pitch
 sales staff
 salix nigra
+sally field
 sally forth
 sally lunns
+salma hayek
 salmo salar
 salmon-leap
 salmon loaf
@@ -75613,6 +76513,7 @@ salt-cellar
 salt shaker
 salt-spring
 sam brownes
+sam elliott
 sam goldwyn
 sam houston
 sam shepard
@@ -76618,6 +77519,7 @@ step-dancer
 step ladder
 step-parent
 step rocket
+stephen rea
 stern-chase
 stern-frame
 stern-sheet
@@ -76939,6 +77841,7 @@ talc-schist
 tale-bearer
 tale-teller
 talent-spot
+talia shire
 talk out of
 talk turkey
 talky-talky
@@ -76980,6 +77883,7 @@ task-forces
 taste-maker
 tattie-claw
 tattle-tale
+tatum oneal
 tawdry lace
 tawny-brown
 tawny eagle
@@ -77104,6 +78008,7 @@ thomas mann
 thomas more
 thomas nast
 thomas reid
+thora birch
 thorn apple
 thorn-hedge
 thought-out
@@ -77175,6 +78080,7 @@ tilled land
 tiller-rope
 tilly-vally
 tilt-hammer
+tim robbins
 tim-whiskey
 timber line
 timber-mare
@@ -77492,6 +78398,7 @@ two-wheeler
 twyla tharp
 tyburn-tree
 tycho brahe
+tyler perry
 type-cutter
 type family
 type-holder
@@ -77506,6 +78413,7 @@ ulmus rubra
 ulnar nerve
 ultra-rapid
 ultra vires
+uma thurman
 un-american
 unasked-for
 uncared-for
@@ -77648,6 +78556,7 @@ vintage car
 vinyl ether
 vinyl group
 vinyl resin
+viola davis
 violet-blue
 violet-pink
 violin-bows
@@ -78262,6 +79171,7 @@ youth clubs
 yucca elata
 yue dialect
 yukon river
+yul brynner
 yves tanguy
 zaire river
 zebra finch
@@ -78272,6 +79182,7 @@ zero option
 zero-rating
 zhou en-lai
 zinc blende
+zoe saldana
 zoo-keepers
 a bit much
 a cappella
@@ -78283,6 +79194,7 @@ a outrance
 a peu pres
 aare river
 aaron burr
+aaron paul
 aarons rod
 abat-jours
 abies alba
@@ -78381,6 +79293,7 @@ al alamayn
 al-haytham
 al madinah
 al-mukalla
+alan arkin
 alan paton
 alarm bell
 alarm call
@@ -78473,6 +79386,7 @@ ankle-boot
 ankle-deep
 ankle-jack
 ankle sock
+anna faris
 annie hall
 anno mundi
 anno regni
@@ -78527,6 +79441,7 @@ arrow arum
 arrow-shot
 arrow wood
 arsy-versy
+art carney
 art critic
 art dealer
 art editor
@@ -78803,6 +79718,7 @@ belt along
 belt maker
 belted out
 belting up
+ben foster
 ben gurion
 ben jonson
 ben lomond
@@ -78816,6 +79732,7 @@ benny hill
 bent grass
 berg-adder
 bering sea
+bernie mac
 berry fern
 best-known
 best-loved
@@ -78851,11 +79768,13 @@ bilge keel
 bilge pump
 bilge well
 bill gates
+bill hader
 bill haley
 billy budd
 billy club
 billy goat
 billy liar
+billy zane
 bimli hemp
 bin liners
 binds over
@@ -79239,6 +80158,8 @@ brown owls
 brown pine
 brown rats
 brown rice
+bruce dern
+bruno ganz
 brush down
 brush fire
 brush-offs
@@ -79480,6 +80401,7 @@ cart-roads
 cart track
 carved out
 carves out
+cary elwes
 cary grant
 case-bound
 case knife
@@ -79631,6 +80553,7 @@ chop sueys
 choral ode
 chota pegs
 chow-chows
+chris pine
 chris rock
 chrome red
 chuang-tzu
@@ -79666,6 +80589,7 @@ civil wars
 civil year
 clabby-doo
 claim form
+claire foy
 clam-shell
 clammed up
 clamp down
@@ -79704,6 +80628,7 @@ cling film
 clip-board
 clip-clops
 clip joint
+clive owen
 clock dial
 clock face
 clock golf
@@ -80229,6 +81154,7 @@ demi-glaze
 demi-gorge
 demi-lance
 demi-monde
+demi moore
 demo tapes
 den mother
 depth bomb
@@ -80257,6 +81183,7 @@ dhul-qadah
 dial phone
 dial-plate
 dialog box
+diane lane
 dib-stones
 dice-boxes
 dicky-bird
@@ -80362,8 +81289,10 @@ dolly drop
 dolly girl
 dolly-shop
 dolly shot
+don ameche
 don carlos
 donkey-man
+donna reed
 donor card
 dont-knows
 doom-laden
@@ -80630,6 +81559,7 @@ emery rock
 emile coue
 emile zola
 emily post
+emma stone
 empire day
 empty talk
 empty tomb
@@ -80678,6 +81608,7 @@ eton suits
 eugene sue
 euro-rebel
 euxine sea
+eva mendes
 even money
 every inch
 every last
@@ -81221,6 +82152,7 @@ gaol-break
 garden egg
 garden pea
 garnet lac
+gary busey
 gas-bottle
 gas burner
 gas-carbon
@@ -81682,6 +82614,7 @@ gustavus i
 gustavus v
 gutter-man
 guy fawkes
+guy pearce
 gypsy moth
 hadean eon
 hag-ridden
@@ -81858,6 +82791,7 @@ hedge pink
 heel-piece
 heeling in
 held forth
+helen hunt
 hell-black
 hell-broth
 hell-holes
@@ -82071,6 +83005,7 @@ howls down
 hubble law
 hudson bay
 hugh capet
+hugh grant
 hula-hoops
 hula-hulas
 hula skirt
@@ -82113,11 +83048,13 @@ ice-skates
 iced water
 id al-adha
 id al-fitr
+ida lupino
 idee recue
 idiot card
 idiot tape
 idle wheel
 idle words
+idris elba
 ii timothy
 ilama tree
 iliac vein
@@ -82235,6 +83172,7 @@ ivy family
 ivy league
 j particle
 jack benny
+jack black
 jack-block
 jack frost
 jack-fruit
@@ -82257,6 +83195,7 @@ jail-fever
 jam-packed
 james agee
 james bond
+james caan
 james cook
 james dean
 james hogg
@@ -82264,8 +83203,12 @@ james ives
 james mill
 james polk
 james watt
+jamie bell
+jamie foxx
 jane fonda
+jane wyman
 jap clover
+jared leto
 jaunty car
 java finch
 jaw-fallen
@@ -82298,8 +83241,10 @@ jew-baiter
 jewel-weed
 jewish rye
 jiffy bags
+jim carrey
 jim henson
 jim thorpe
+joan allen
 job action
 job-master
 jobs tears
@@ -82313,6 +83258,7 @@ john-apple
 john barth
 john brown
 john cabot
+john candy
 john canoe
 john davis
 john davys
@@ -82326,6 +83272,7 @@ john keats
 john keble
 john locke
 john major
+john mills
 john smith
 john speke
 john tyler
@@ -82338,7 +83285,9 @@ joining up
 joint-heir
 joint-worm
 jolly boat
+jon voight
 jonah crab
+jonah hill
 jonas salk
 jook house
 jook joint
@@ -82350,6 +83299,8 @@ joy-riding
 joy-sticks
 judas tree
 judge-made
+judi dench
+judy davis
 jugal bone
 juke house
 juke joint
@@ -82382,12 +83333,14 @@ k particle
 kaffir cat
 kaffir pox
 kafir corn
+kais saied
 kama sutra
 karaya gum
 kariba dam
 karl barth
 karl gauss
 karl linne
+karl urban
 kate smith
 kauri pine
 keels over
@@ -82408,6 +83361,7 @@ kerb drill
 kermes oak
 kerry blue
 keuka lake
+kevin hart
 key stages
 key stroke
 kick about
@@ -82423,6 +83377,7 @@ killer bee
 kiln-dried
 kiln-dries
 kilner jar
+kim hunter
 king cobra
 king-craft
 king devil
@@ -82572,6 +83527,7 @@ laugh away
 laugh line
 laughs off
 launch pad
+laura dern
 laurel oak
 law centre
 law degree
@@ -82613,6 +83569,8 @@ lease-lend
 leaves off
 leaves out
 lech after
+lee j cobb
+lee marvin
 leech onto
 left-backs
 left brain
@@ -82706,6 +83664,7 @@ limbers up
 lime green
 lime juice
 lime-trees
+linda hunt
 line ahead
 line block
 line coach
@@ -82970,6 +83929,7 @@ mares tail
 margay cat
 marine law
 mark clark
+mark rutte
 mark tobey
 mark twain
 market day
@@ -82983,6 +83943,7 @@ marsh pink
 marsh tits
 marsh wren
 marten cat
+mary astor
 mary tudor
 mason bees
 mason city
@@ -82996,6 +83957,7 @@ mata haris
 match-cord
 match game
 match play
+matt damon
 matzo ball
 matzo meal
 maud gonne
@@ -83025,6 +83987,7 @@ meat-safes
 medal play
 media guru
 medium-dry
+mel brooks
 mel gibson
 mellow out
 melon ball
@@ -83048,6 +84011,7 @@ metal-work
 meter maid
 metric ton
 mezza voce
+mia farrow
 michel ney
 micro-brew
 micro chip
@@ -83060,7 +84024,9 @@ mid-wicket
 mid-winter
 middle age
 middle ear
+mike myers
 mike tyson
+mila kunis
 mild steel
 milk adder
 milk fever
@@ -83285,6 +84251,7 @@ near-white
 neat-house
 neck brace
 neck-piece
+ned beatty
 needle-gun
 needs must
 negro-corn
@@ -83333,6 +84300,8 @@ news story
 nicholas i
 nicholas v
 nicht wahr
+nick frost
+nick nolte
 nicker nut
 nickie-ben
 nicky-tams
@@ -83747,10 +84716,12 @@ patent log
 patient of
 patna rice
 patrol car
+patty duke
 patty-pans
 paul dukas
 paul heyse
 paul jones
+paul lukas
 paul simon
 pax romana
 pay-gravel
@@ -84331,6 +85302,7 @@ raw throat
 ray floret
 ray flower
 ray-fungus
+ray liotta
 razor-back
 razor-bill
 razor clam
@@ -84447,6 +85419,7 @@ relay race
 relief map
 renal vein
 render-set
+rene russo
 renegue on
 rennet-bag
 rent-a-car
@@ -84468,6 +85441,7 @@ rhone wine
 rhumb line
 rhus ovata
 rhyme-word
+rhys ifans
 ribbon-man
 rice cakes
 rice-field
@@ -84551,6 +85525,8 @@ roast beef
 roast lamb
 roast pork
 roast veal
+rob bottin
+rob riggle
 robber fly
 robert orr
 robin hood
@@ -84615,6 +85591,7 @@ rope-yards
 rosa parks
 rosa-solis
 rose apple
+rose byrne
 rose-cross
 rose-lilac
 rose-mauve
@@ -84927,6 +85904,7 @@ sea-walled
 seal limbs
 seal-point
 seal-rings
+sean astin
 seat-belts
 sedge bird
 sedge wren
@@ -84985,6 +85963,8 @@ set chisel
 set phrase
 set square
 set theory
+seth green
+seth rogen
 sets about
 setter-out
 settle-bed
@@ -85176,6 +86156,7 @@ silver fir
 silver fox
 silver oak
 silver-tip
+simon pegg
 simon-pure
 simple eye
 simple vow
@@ -86297,6 +87278,7 @@ toll agent
 toll-house
 toll plaza
 toll taker
+tom cruise
 tom sawyer
 tom turkey
 tommy-guns
@@ -86418,6 +87400,7 @@ troop-ship
 troth-ring
 trout farm
 trout lily
+troy baker
 troy ounce
 troy pound
 truck farm
@@ -86589,8 +87572,10 @@ vacant lot
 vacuum bag
 vade mecum
 vae victis
+val kilmer
 valley oak
 valve gear
+van heflin
 vanity bag
 vanity box
 vant-brass
@@ -86624,6 +87609,7 @@ video tube
 video wall
 view angle
 villa home
+vin diesel
 vine maple
 vine-props
 vine snake
@@ -87131,8 +88117,10 @@ wylie-coat
 x-ray film
 x-ray tube
 xerox copy
+xi jinping
 yacht club
 yacht race
+yair lapid
 yajur-veda
 yak butter
 yakety-yak
@@ -87178,6 +88166,7 @@ zeus faber
 zinc-bloom
 zinc oxide
 zinc white
+ziyi zhang
 zonked out
 zoo keeper
 zoom along
@@ -87284,13 +88273,16 @@ al jolson
 al-magrib
 al-maunah
 al nathir
+al pacino
 al qahira
 al qanoon
 al tawhid
+alan alda
 alder fly
 ale-berry
 ale-house
 ale-stake
+alice eve
 all along
 all clear
 all-fired
@@ -87322,6 +88314,7 @@ altar boy
 alter ego
 alto clef
 alum-root
+amy adams
 and so on
 ann arbor
 ant-bears
@@ -87354,6 +88347,7 @@ area code
 area unit
 areca nut
 arid zone
+arif alvi
 ark shell
 arm guard
 arms deal
@@ -87782,6 +88776,7 @@ bomb rack
 bomb site
 bona fide
 bona-roba
+bonar law
 bone-ache
 bone cell
 bone char
@@ -87841,6 +88836,7 @@ box pleat
 box-trees
 box-wagon
 boy scout
+brad pitt
 brain-fag
 brake pad
 brake-van
@@ -87857,6 +88853,7 @@ break off
 break out
 break-ups
 bren guns
+brian cox
 brick-nog
 brick red
 brick-tea
@@ -87932,6 +88929,7 @@ bunk beds
 bunk down
 bunny hug
 bur grass
+burl ives
 burn blue
 burn down
 burn mark
@@ -88681,6 +89679,7 @@ doom-palm
 door-case
 door-sill
 door-yard
+doris day
 dorm room
 dos-a-dos
 dose rate
@@ -88852,6 +89851,8 @@ ebb-tides
 ebbw vale
 ecce homo
 eco-label
+ed begley
+ed harris
 edge tool
 edmund ii
 edward ii
@@ -88904,12 +89905,14 @@ enola gay
 ens reale
 eo nomine
 epic poem
+eric bana
 essex man
 et cetera
 et ceteri
 eton crop
 eton suit
 eva braun
+eva green
 even-down
 even-toed
 every bit
@@ -89351,6 +90354,7 @@ gable end
 gaff-sail
 gag order
 gag-tooth
+gal gadot
 gall-duct
 gall gnat
 gall-less
@@ -89454,6 +90458,7 @@ gift-book
 gift shop
 gift wrap
 gig-lamps
+gig young
 gill arch
 gill-less
 gill nets
@@ -90177,6 +91182,7 @@ jay cooke
 jay gould
 jazz band
 jazz-rock
+jean reno
 jean rhys
 jelly bag
 jelly egg
@@ -90208,6 +91214,8 @@ jock itch
 joe biden
 joe clark
 joe louis
+joe pesci
+joey king
 jog pants
 jog-trots
 john bull
@@ -90216,6 +91224,7 @@ john cash
 john dory
 john drew
 john ford
+john hurt
 john huss
 john knox
 john lyly
@@ -90229,6 +91238,7 @@ john wain
 joined up
 joint fir
 jomada ii
+jon heder
 joy-rider
 joy-rides
 joy-stick
@@ -90270,6 +91280,7 @@ kam muang
 kan river
 kapil dev
 karl marx
+kate mara
 kauri gum
 kaw river
 kawa-kawa
@@ -90307,6 +91318,7 @@ kicked in
 kid glove
 kill zone
 kiln-hole
+kim novak
 kin group
 king-bird
 king-bolt
@@ -90380,6 +91392,7 @@ lag bomer
 lag screw
 laid-back
 lake aral
+lake bell
 lake chad
 lake duck
 lake erie
@@ -90462,6 +91475,7 @@ leave off
 leave out
 led up to
 lee-board
+lee grant
 lee shore
 lee tides
 left-back
@@ -90546,6 +91560,7 @@ lip rouge
 lip synch
 listen in
 little go
+liv tyler
 live axle
 live body
 live-born
@@ -90556,6 +91571,7 @@ live rail
 live wire
 live with
 liver rot
+liz truss
 load down
 load line
 loan word
@@ -90802,6 +91818,8 @@ meat-free
 meat hook
 meat loaf
 meat safe
+megan fox
+mel blanc
 melt down
 mem-sahib
 men-o-war
@@ -90932,6 +91950,7 @@ muster in
 muster up
 mute swan
 myna bird
+myrna loy
 naha city
 nail-beds
 nail bomb
@@ -91243,6 +92262,7 @@ palm tree
 palm-wine
 palme dor
 palo alto
+pam grier
 pan-broil
 pan-fried
 pan-fries
@@ -91283,7 +92303,10 @@ passes up
 paste-ups
 patch-box
 patty-pan
+paul dano
 paul klee
+paul muni
+paul rudd
 pauls-man
 pauls-men
 pay claim
@@ -91674,6 +92697,7 @@ rams horn
 ramses ii
 ran after
 ran along
+rand paul
 range rod
 rap group
 rap music
@@ -91888,6 +92912,7 @@ roly-poly
 roman law
 rome-scot
 romp home
+ronny cox
 rood-beam
 rood-loft
 rood-tree
@@ -92058,6 +93083,7 @@ sand-star
 sand trap
 sand-wasp
 sand-worm
+sandra oh
 sans gene
 santa ana
 sao louis
@@ -92181,6 +93207,8 @@ sea wrack
 seal bomb
 seal ring
 seam-rent
+sean bean
+sean penn
 search me
 seat belt
 sedge fly
@@ -92801,6 +93829,7 @@ sun river
 sun-roofs
 sun-shade
 sun visor
+sung kang
 sunn-hemp
 super-ego
 sur place
@@ -92956,6 +93985,7 @@ tea cloth
 tea dance
 tea-fight
 tea-house
+tea leoni
 tea maker
 tea party
 tea-plant
@@ -92987,6 +94017,7 @@ tent-guys
 tent-pegs
 tent-pole
 tent-work
+teri garr
 term-time
 teru-tero
 test-beds
@@ -93060,6 +94091,8 @@ tight end
 tile roof
 tilt-boat
 tilt-yard
+tim allen
+tim curry
 tim leary
 time-ball
 time bill
@@ -93123,7 +94156,10 @@ toll-free
 toll line
 toll road
 tolu tree
+tom conti
 tom hanks
+tom hardy
+tom hulce
 tom jones
 tom-noddy
 tom paine
@@ -93167,6 +94203,7 @@ touch-box
 touch off
 touch pad
 tough guy
+tow ropes
 tow truck
 towel bar
 town hall
@@ -93846,6 +94883,7 @@ alt keys
 ambs-ace
 ames-ace
 amy lyon
+amy ryan
 an nafud
 an nefud
 anal sex
@@ -94670,6 +95708,7 @@ eats out
 ebb away
 ebb down
 ebb-tide
+ed helms
 edit out
 edmund i
 edward i
@@ -95264,6 +96303,7 @@ hush kit
 hwang ho
 hyped up
 i samuel
+ian holm
 ibn-sina
 ice-axes
 ice bear
@@ -95386,10 +96426,13 @@ john jay
 joins up
 jolly up
 jomada i
+jon hamm
+josh gad
 jot down
 joy-ride
 ju-jitsu
 ju-jutsu
+jude law
 jug band
 jug wine
 juice up
@@ -95641,6 +96684,7 @@ low-rise
 low-tech
 low tide
 luck out
+lucy liu
 lum-hats
 lump sum
 lying-in
@@ -95710,6 +96754,7 @@ meat axe
 meat-fly
 meat-man
 meat pie
+meg ryan
 melt off
 mens rea
 mess kit
@@ -95818,6 +96863,7 @@ new town
 new wave
 new year
 new york
+nia long
 nig-nogs
 nim tree
 nine-pin
@@ -96347,6 +97393,7 @@ road hog
 road map
 road tax
 roar off
+rob lowe
 robert i
 rock bit
 rock-cod
@@ -96391,6 +97438,7 @@ rout out
 row-port
 royal we
 rub down
+ruby dee
 ruby-red
 rude boy
 rug-gown
@@ -96800,6 +97848,7 @@ sub rosa
 sub-test
 sub voce
 suck out
+sue lyon
 sun-bath
 sun-beam
 sun-bear
@@ -96960,6 +98009,7 @@ tie-wigs
 tien-pao
 til-seed
 tile-red
+tim roth
 time-gun
 time lag
 time off
@@ -96970,6 +98020,7 @@ tin gods
 tin hats
 tin pest
 tin-tack
+tina fey
 tip-cart
 tip-cats
 tip-offs
@@ -97016,6 +98067,7 @@ touch on
 touch up
 tow-head
 tow-iron
+tow rope
 town-end
 town gas
 toy boys
@@ -98999,6 +100051,7 @@ in rem
 in use
 ink in
 jell-o
+jet li
 k-lyte
 ken-no
 key in
@@ -99066,6 +100119,7 @@ on ice
 on-key
 on-off
 on tap
+on top
 one-er
 one-up
 op art
