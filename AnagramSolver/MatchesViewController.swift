@@ -9,13 +9,15 @@
 import UIKit
 import GoogleMobileAds
 import SwiftUtils
+import AVFoundation
 
 class MatchesViewController: UIViewController, AppStateChangeObserver, UITableViewDataSource, UITableViewDelegate
 {
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     fileprivate let cellIdentifier = "MatchesCell"
     fileprivate var model : Model!
-    
+    private let synthesizer = AVSpeechSynthesizer()
+
     static let monospacedFont = UIFont(name: "Menlo-Regular",size: 20.0)
     static let systemFont = UIFont.systemFont(ofSize: 16.0, weight: .regular)
 
@@ -138,7 +140,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
         let controller = UIAlertController(title: "Look up "+shortenedWord, message: nil, preferredStyle: .actionSheet)
         
         let speakAction = UIAlertAction(title: "Speak", style: .default,
-                                        handler: {action in mpdbSpeak(text: word)})
+                                        handler: {action in mpdbSpeak(synth: self.synthesizer, text: word)})
         let collinsAction = UIAlertAction(title: "Collins", style: .default,
                                           handler: {action in self.showWebPage(lookUp.collins)})
         let dictionaryComAction = UIAlertAction(title: "Dictionary.com", style: .default,

@@ -1010,7 +1010,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.15.05;
+				MARKETING_VERSION = 1.16.00;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pigdogbay.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1041,7 +1041,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.15.05;
+				MARKETING_VERSION = 1.16.00;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pigdogbay.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
