@@ -16,7 +16,9 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     fileprivate let cellIdentifier = "MatchesCell"
     fileprivate var model : Model!
-    private let synthesizer = AVSpeechSynthesizer()
+    private lazy var synthesizer : AVSpeechSynthesizer = {
+        AVSpeechSynthesizer()
+    }()
 
     static let monospacedFont = UIFont(name: "Menlo-Regular",size: 20.0)
     static let systemFont = UIFont.systemFont(ofSize: 16.0, weight: .regular)
