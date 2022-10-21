@@ -14,16 +14,8 @@ struct HelpView: View {
 
     var body: some View {
         Form {
-            HStack {
-                Spacer()
-                Image(systemName: "lightbulb")
-                    .font(Font.system(.title))
-                    .foregroundColor(Color.yellow)
-                Text(viewModel.tip.title)
-                    .multilineTextAlignment(.center)
-                    .font(.title)
-                Spacer()
-            }.padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
+            HelpTitleView(title: viewModel.tip.title)
+
             Text(viewModel.tip.description)
                 .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
             VStack(alignment: .leading) {

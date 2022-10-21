@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		001AAC2326EA9093000CC6B6 /* phrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = 001AAC2126EA9093000CC6B6 /* phrases.txt */; };
+		001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */; };
 		0029A03525307170002E96D1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029A03425307170002E96D1 /* Strings.swift */; };
 		002E8E7A27ECDA3C002BFC3E /* QueryTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E8E7927ECDA3C002BFC3E /* QueryTextFieldDelegate.swift */; };
 		003E10EB253EF72400AE8155 /* wordlist-fr.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10E7253EF72400AE8155 /* wordlist-fr.txt */; };
@@ -145,6 +146,7 @@
 
 /* Begin PBXFileReference section */
 		001AAC2126EA9093000CC6B6 /* phrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phrases.txt; sourceTree = "<group>"; };
+		001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpTitleView.swift; sourceTree = "<group>"; };
 		0029A03425307170002E96D1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		002E8E7927ECDA3C002BFC3E /* QueryTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryTextFieldDelegate.swift; sourceTree = "<group>"; };
 		003E10E7253EF72400AE8155 /* wordlist-fr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-fr.txt"; sourceTree = "<group>"; };
@@ -331,6 +333,7 @@
 				00F17DDC26A9E17300452020 /* FilterCard.swift */,
 				00EEA70625CABFE50017F6A4 /* FilterRow.swift */,
 				005BCB3426AACA2400DF44CE /* HelpOutCard.swift */,
+				001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */,
 				00EEA71F25CAC59D0017F6A4 /* MailView.swift */,
 				00EEA70B25CABFE50017F6A4 /* RateRow.swift */,
 				00F17DD626A9CC3500452020 /* SettingsCard.swift */,
@@ -752,6 +755,7 @@
 				0051B66225CC194300AB8B9D /* UserGuideRow.swift in Sources */,
 				00EEA72525CAC81A0017F6A4 /* HelpView.swift in Sources */,
 				00EEA72825CAC85A0017F6A4 /* DefinitionHelpView.swift in Sources */,
+				001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */,
 				00F17DDF26AAB8EB00452020 /* AboutCard.swift in Sources */,
 				00EEA71125CABFE50017F6A4 /* SettingsRow.swift in Sources */,
 				4DF2DE3A1FACBDBB00F44ADE /* FilterViewController.swift in Sources */,
