@@ -284,3 +284,14 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     }
     
 }
+
+extension WordFormatter {
+    public func setLabelText(_ label: UILabel?, _ word : String) {
+        let caseWord = isUpperCased ? word.uppercased() : word
+        if isAttributed {
+            label?.attributedText = formatAttributed(caseWord)
+        } else {
+            label?.text = format(caseWord)
+        }
+    }
+}
