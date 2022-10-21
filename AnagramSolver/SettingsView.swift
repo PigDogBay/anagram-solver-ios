@@ -10,8 +10,16 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    //Env var used to dismiss this nav view
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @ObservedObject var viewModel = SettingsViewModel()
     @State private var showDefaultSettingsAlert = false
+
+    ///Update settings when user presses the back button
+    private func backPressed(){
+        Coordinator.sharedInstance.updateSettings()
+        self.mode.wrappedValue.dismiss()
+    }
 
     private var showKeyboardToggle : some View {
         Toggle(isOn: $viewModel.showKeyboard) {
@@ -123,28 +131,30 @@ struct SettingsView: View {
             Section(header: Text("OTHER")){
                 longPressToggle
             }
-        }.onDisappear(){
-            Coordinator.sharedInstance.updateSettings()
         }
         .navigationBarTitle(Text("Settings"), displayMode: .inline)
     }
 
     var body: some View {
-        if #available(iOS 15.0, *) {
-            settingsForm
-                .navigationBarItems(trailing: Button("Reset"){showDefaultSettingsAlert = true})
-                .tint(Color.white)
-                .alert("Use Default Settings", isPresented: $showDefaultSettingsAlert){
-                    Button("Default settings", role: .destructive){viewModel.resetToDefaultSettings()}
-                        .accessibilityIdentifier("dialogResetSettings")
-                    Button("Cancel", role: .cancel){}
+        settingsForm
+            .navigationBarItems(trailing: Button("Reset"){showDefaultSettingsAlert = true})
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: Button(action: backPressed){
+                HStack {
+                    Image(systemName: "chevron.left")}
+                .padding(.trailing, -4)
+                    Text("Back")
                 }
-        } else {
-            //No reset button for iOS 14
-            settingsForm
-        }
+            )
+            .tint(Color.white)
+            .alert("Use Default Settings", isPresented: $showDefaultSettingsAlert){
+                Button("Default settings", role: .destructive){viewModel.resetToDefaultSettings()}
+                    .accessibilityIdentifier("dialogResetSettings")
+                Button("Cancel", role: .cancel){}
+            }
     }
 }
+
 struct ToggleMod : ViewModifier {
     func body(content: Content) -> some View {
         content
