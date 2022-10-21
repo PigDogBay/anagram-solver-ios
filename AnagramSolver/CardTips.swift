@@ -8,7 +8,6 @@
 
 import SwiftUI
 
-@available(iOS 14.0, *)
 struct CardTips: View {
     private let coordinator = Coordinator.sharedInstance
     let columns = [GridItem(.adaptive(minimum: 350))]
@@ -81,7 +80,6 @@ struct CardMod : ViewModifier {
     }
 }
 
-@available(iOS 14.0, *)
 struct CardTips_Previews: PreviewProvider {
     static var previews: some View {
         CardTips()
