@@ -139,7 +139,7 @@ class FilterViewController: UITableViewController, LettersCellCallback {
         case 0:
             return "Letters can be in any order here"
         case 1:
-            return "Find results that contain or exclude a word"
+            return "Find results that contain or exclude a word. Split multiple words with spaces, eg 'st ing'"
         case 2:
             return "Find results starting or ending with your specified letters"
         case 3:
