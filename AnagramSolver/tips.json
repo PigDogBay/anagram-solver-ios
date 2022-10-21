@@ -75,7 +75,7 @@
         "id" : 1009,
         "title" : "Codewords",
         "subtitle" : "Use 1,2,3 to represent the same letters",
-        "description" : "Codewords (and Cryptograms) are puzzles where you have to work out the letter for each number 1 to 26.\n\nFor example 23 18 15 15 9 2 2 9. We can see that 15, 9 and 2 are used more than once which we can make good use of, the app just needs to know which letters are used more than once.\n\nLets say we know 23 = c, so we enter c.112332, where 1,2,3 represent the unknown letters that are used more than once.",
+        "description" : "Codewords (and Cryptograms) are puzzles where you have to work out the letter for each number 1 to 26.\n\nFor example 23 18 15 15 9 2 2 9. We can see that 15, 9 and 2 are used more than once which we can make good use of, the app just needs to know which letters are used more than once.\n\nLets say we know 23 = c, so we enter c.112332, where 1,2,3 represent the unknown letters that are used more than once. The . represents an unknown letter that is only used once.",
         "example" : "cassette, pallette, commesse",
         "advanced" : "As you find letters you can use the Excluding filter and enter the letters you have already found. So in the above example, if we already have p and m then we can rule out pallette and commesse.\n\nIf you have no letters that are used more than once, then set the Distinct filter to All letters are different.\n\nTip! When starting a Codeword, first try the largest word in the grid.",
         "showMe" : "..112332"
