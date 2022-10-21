@@ -94,15 +94,19 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     }
     
     func applyDarkModeSetting(){
+        let window = UIApplication.shared.connectedScenes
+            .compactMap{$0 as? UIWindowScene}
+            .flatMap {$0.windows}
+            .first
         let darkMode = Model.sharedInstance.settings.darkModeOverride
         //Map dark mode setting to UIUserInterfaceStyle
         switch (darkMode){
         case Settings.darkModeValueLight:
-            UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .light
+            window?.overrideUserInterfaceStyle = .light
         case Settings.darkModeValueDark:
-            UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .dark
+            window?.overrideUserInterfaceStyle = .dark
         default:
-            UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .unspecified
+            window?.overrideUserInterfaceStyle = .unspecified
         }
     }
     
