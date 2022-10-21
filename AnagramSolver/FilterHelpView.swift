@@ -31,15 +31,7 @@ struct FilterSectionView: View {
 struct FilterHelpView: View {
     var body: some View {
         Form {
-            HStack {
-                Spacer()
-                Image(systemName: "lightbulb")
-                    .font(Font.system(.title))
-                    .foregroundColor(Color.yellow)
-                Text("Filters")
-                    .font(.title)
-                Spacer()
-            }.padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
+            HelpTitleView(title: "Filters")
             Text("To reduce the number of matches you can add extra search criteria. First enter your query and perform a search, next press the Filter button, you will be taken to the filters screen.\n\nSet up your filters and press the Search button, the app will go back to the results screen and perform the search again and apply any filters you have set.\n\nTip! Going back to the main screen will disable the filters. You can edit the main query from the filters screen to save time.")
                 .padding(8)
             FilterSectionView(title: "FILTER BY LETTERS", description: "Contains: The order of the letters does not matter and you can specify a letter more than once. So 'Contains aabc' will only allow matches that contain at least 2 a's, 1 b and 1 c.\n\nExcludes: Removes any matches that contain any of the letters that you specify.\n\nDistinct: This has two modes, allow words where all the letters are different or only allow words where some letters are the same. \n\nTip! Use the Distinct and Exclude filters for Codeword puzzles.")

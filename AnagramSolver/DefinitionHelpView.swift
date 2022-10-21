@@ -37,15 +37,7 @@ struct HelpSectionView: View {
 struct DefinitionHelpView: View {
     var body: some View {
         Form {
-            HStack {
-                Spacer()
-                Image(systemName: "info.circle")
-                    .font(Font.system(.title))
-                    .foregroundColor(Color.green)
-                Text("Definitions")
-                    .font(.title)
-                Spacer()
-            }.padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
+            HelpTitleView(title: "Definitions")
             HelpSectionView(title: "Look up", icon: "book", description: "To look up a word\'s meaning, tap on the information icon on the right hand side of the word. The app will open a web browser to look up the word on the web.\n\nYou can change which website to use in the Dictionary definition setting in the app's settings.\n\nTip! To close all the tabs in Safari, press and hold the tabs button and then press Close All Tabs from the menu.")
             HelpSectionView(title: "Long Press", icon: "hand.point.right", description: "Touch and hold a word to bring up a menu to choose which website to look up the word.\n\nIf you are stuck on a crossword, enter the clue and look it up on the M-W Thesaurus for suggestions.\n\nFor Scrabble players, select the Word Game Dictionary to check if the word is allowed.")
             HelpSectionView(title: "Speak", icon: "speaker.3", description: "From the long press menu select Speak for the app to say the word.")
