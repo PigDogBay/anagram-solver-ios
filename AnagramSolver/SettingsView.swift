@@ -113,7 +113,8 @@ struct SettingsView: View {
                 monospacedToggle
             }
 
-            Section(header: Text("KEYBOARD")){
+            Section(header: Text("KEYBOARD"),
+                    footer: Text("? and . both represent unknown letters in crossword searches")){
                 showKeyboardToggle
                 dictationToggle
 
