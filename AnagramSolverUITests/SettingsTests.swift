@@ -53,6 +53,9 @@ class SettingsTests: XCTestCase {
         app.mpdbUIType(msg: "MOONSTARER")
         app.buttons["Search"].tap()
         XCTAssertTrue(app.tables.element.staticTexts["ASTRONOMER"].waitForExistence(timeout: SEARCH_TIMEOUT))
+        //press back button
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+
     }
     
     func testConvertSpaceToQuestionMark1(){
