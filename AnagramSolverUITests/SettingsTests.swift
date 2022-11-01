@@ -31,6 +31,12 @@ class SettingsTests: XCTestCase {
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        let app = XCUIApplication()
+        //press settings button
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        //press Reset button to ensure settings are in a known state
+        app.buttons["Reset"].tap()
+        app.buttons["dialogResetSettings"].tap()
     }
 
     
@@ -65,7 +71,7 @@ class SettingsTests: XCTestCase {
 
     func testConvertFullStopToQuestionMark1(){
         let app = XCUIApplication()
-
+        app.swipeUp()
         app.descendants(matching: .switch).matching(identifier: "convertFullStopToggle").element.tap()
         //press back button
         app.navigationBars.buttons.element(boundBy: 0).tap()
