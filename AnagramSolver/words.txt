@@ -35459,6 +35459,7 @@ sportscasting
 sportsmanlike
 sportsmanship
 sportspersons
+sportswashing
 sportswriters
 sportswriting
 spottednesses
@@ -80727,6 +80728,7 @@ periwinkles
 perkinesses
 perlocution
 perlustrate
+permacrisis
 permafrosts
 permanences
 permanently
@@ -160610,6 +160612,7 @@ partizans
 partnered
 partridge
 partworks
+partygate
 partygoer
 partyisms
 parulides
@@ -170004,6 +170007,7 @@ splodgily
 splodging
 splooshed
 splooshes
+splooting
 sploshing
 splotched
 splotches
@@ -242847,6 +242851,7 @@ lavonne
 lavrock
 lawanda
 lawbook
+lawfare
 lawines
 lawings
 lawkses
@@ -252626,6 +252631,7 @@ rioting
 riotise
 riotize
 riotous
+ripasso
 ripcord
 ripecks
 ripened
@@ -308660,6 +308666,7 @@ kyar
 kyat
 kybo
 kyes
+kyiv
 kyle
 kynd
 kyne

@@ -32708,6 +32708,7 @@ crescent-shaped
 crescent wrench
 crested cariama
 crested penguin
+crewe alexandra
 cribbage-boards
 crime syndicate
 criminal lawyer
@@ -45155,6 +45156,7 @@ quick-scenting
 quick-tempered
 quick thinking
 quick-wittedly
+quiet quitting
 quill-feathers
 quilting-frame
 quilting-party
@@ -69306,6 +69308,7 @@ binary form
 binary star
 bing cherry
 bing crosby
+binge-watch
 bingo halls
 biology lab
 bird cherry
@@ -71310,6 +71313,7 @@ elite group
 elizabeth i
 elliot page
 ember-goose
+emeli sande
 emerald-cut
 emery board
 emery cloth
@@ -76854,6 +76858,7 @@ shariah law
 sharp-eared
 sharp-edged
 sharp-nosed
+shaun evans
 shave-grass
 shea-butter
 shear-steel
@@ -86724,6 +86729,7 @@ stock-pots
 stock room
 stock-take
 stock-whip
+stoke city
 stoke-hole
 stone axes
 stone bass
@@ -87594,6 +87600,7 @@ verse form
 verse line
 very light
 via lactea
+vibe shift
 vice-chair
 vice crime
 vice-queen
@@ -89675,6 +89682,7 @@ don budge
 don river
 done with
 dont-know
+doom loop
 doom-palm
 door-case
 door-sill
@@ -89974,6 +89982,7 @@ fair-lead
 fair play
 fairy cup
 fake book
+fake news
 fall away
 fall back
 fall down
@@ -92525,6 +92534,7 @@ pork-pies
 porky-pie
 port-fire
 port said
+port vale
 port vila
 port wine
 port-winy
@@ -97388,6 +97398,7 @@ riot gun
 rip-cord
 rip-offs
 rip-saws
+rita ora
 road-bed
 road hog
 road map

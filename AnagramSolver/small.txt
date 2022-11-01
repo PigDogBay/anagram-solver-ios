@@ -5134,6 +5134,7 @@ sportscasters
 sportscasting
 sportsmanlike
 sportsmanship
+sportswashing
 sportswriters
 sprightliness
 squatocracies
@@ -15401,6 +15402,7 @@ peristaltic
 peritoneums
 peritonitis
 periwinkles
+permacrisis
 permanently
 permissible
 permissibly
@@ -37069,6 +37071,7 @@ partitive
 partizans
 partnered
 partridge
+partygate
 passbooks
 passenger
 passersby
@@ -39777,6 +39780,7 @@ splinters
 splintery
 splinting
 splitting
+splooting
 sploshing
 splotched
 splotches
@@ -63159,6 +63163,7 @@ laurent
 laverne
 lavonne
 lawanda
+lawfare
 lawless
 lawsuit
 lawyers
@@ -66616,6 +66621,7 @@ rinsing
 rioters
 rioting
 riotous
+ripasso
 ripcord
 ripened
 ripoffs
@@ -88974,6 +88980,7 @@ kuhn
 kurd
 kurt
 kwan
+kyiv
 kyle
 labs
 lace
