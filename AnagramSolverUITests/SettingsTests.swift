@@ -44,7 +44,7 @@ class SettingsTests: XCTestCase {
     /// Run on the iPod, as requires keyboard
     func testLetterCase1() throws {
         let app = XCUIApplication()
-        app.descendants(matching: .switch).matching(identifier: "caseToggle").element.tap()
+        app.switches["caseToggle"].switches.firstMatch.tap()
         //press back button
         app.navigationBars.buttons.element(boundBy: 0).tap()
         
@@ -61,7 +61,7 @@ class SettingsTests: XCTestCase {
     func testConvertSpaceToQuestionMark1(){
         let app = XCUIApplication()
 
-        app.descendants(matching: .switch).matching(identifier: "convertSpaceToggle").element.tap()
+        app.switches["convertSpaceToggle"].switches.firstMatch.tap()
         //press back button
         app.navigationBars.buttons.element(boundBy: 0).tap()
 
@@ -75,7 +75,7 @@ class SettingsTests: XCTestCase {
     func testConvertFullStopToQuestionMark1(){
         let app = XCUIApplication()
         app.swipeUp()
-        app.descendants(matching: .switch).matching(identifier: "convertFullStopToggle").element.tap()
+        app.switches["convertFullStopToggle"].switches.firstMatch.tap()
         //press back button
         app.navigationBars.buttons.element(boundBy: 0).tap()
 
