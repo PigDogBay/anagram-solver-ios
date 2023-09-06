@@ -149,8 +149,6 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
                                                 handler: {action in self.showWebPage(lookUp.dictionaryCom)})
         let googleAction = UIAlertAction(title: "Google Dictionary", style: .default,
                                          handler: {action in self.showWebPage(lookUp.googleDictionary)})
-        let lexicoAction = UIAlertAction(title: "Lexico", style: .default,
-                                         handler: {action in self.showWebPage(lookUp.lexico)})
         let merriamWebsterAction = UIAlertAction(title: "Merriam-Webster", style: .default,
                                                  handler: {action in self.showWebPage(lookUp.merriamWebster)})
         let mwThesaurusAction = UIAlertAction(title: "M-W Thesaurus", style: .default,
@@ -173,7 +171,6 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
         controller.addAction(collinsAction)
         controller.addAction(dictionaryComAction)
         controller.addAction(googleAction)
-        controller.addAction(lexicoAction)
         controller.addAction(merriamWebsterAction)
         controller.addAction(mwThesaurusAction)
         controller.addAction(thesaurusAction)
