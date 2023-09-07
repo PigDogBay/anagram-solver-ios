@@ -95,7 +95,7 @@ struct SettingsView: View {
             }
 
             Section(header: Text("APPEARANCE"),
-                    footer: Text("Use a monospaced font for the query field and results")){
+                    footer: Text("Use a monospaced font for the query field")){
 
                 SettingsPicker(label: "Letter highlighting",
                                titles: Settings.highlightTitles,
