@@ -20,9 +20,6 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
         AVSpeechSynthesizer()
     }()
 
-    static let monospacedFont = UIFont(name: "Menlo-Regular",size: 20.0)
-    static let systemFont = UIFont.systemFont(ofSize: 16.0, weight: .regular)
-
     private var screenWidth : CGFloat {
         return view.frame.inset(by: view.safeAreaInsets).size.width
     }
@@ -218,7 +215,6 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
         cell.accessoryType = .detailButton
-        cell.textLabel?.font = model.settings.useMonospacedFont ? MatchesViewController.monospacedFont : MatchesViewController.systemFont
         let word = model.matches.getMatch(section: indexPath.section, row: indexPath.row) ?? ""
         model.wordFormatter.setLabelText(cell.textLabel, word)
         return cell
