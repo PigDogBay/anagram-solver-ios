@@ -110,7 +110,7 @@ struct SettingsView: View {
             }
 
             Section(header: Text("APPEARANCE"),
-                    footer: Text("Use a monospaced font for the query field")){
+                    footer: Text("")){
 
                 SettingsPicker(label: "Letter highlighting",
                                titles: Settings.highlightTitles,
@@ -125,11 +125,10 @@ struct SettingsView: View {
                 tipsToggle
                 //Set identifier for UI testing
                 useUpperCaseToggle.accessibilityIdentifier("caseToggle")
-                monospacedToggle
             }
 
             Section(header: Text("KEYBOARD"),
-                    footer: Text("? and . both represent unknown letters in crossword searches")){
+                    footer: Text("Use a monospaced font for the query and filter input fields")){
                 showKeyboardToggle
                 dictationToggle
 
@@ -142,6 +141,7 @@ struct SettingsView: View {
                     Text("Convert . to ?")
                 }.modifier(ToggleMod())
                 .accessibilityIdentifier("convertFullStopToggle")
+                monospacedToggle
             }
 
             Section(header: Text("OTHER")){
