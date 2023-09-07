@@ -51,14 +51,19 @@ struct SettingsView: View {
 
     private var monospacedToggle : some View {
         Toggle(isOn: $viewModel.useMonospacedFont) {
-            Text("Use monospaced font")
+            if viewModel.useMonospacedFont {
+                Text("Use monospaced font")
+                    .font(.system(.body,design: .monospaced))
+            } else {
+                Text("Use normal font")
+            }
         }.modifier(ToggleMod())
     }
 
     private var useUpperCaseToggle : some View {
         Toggle(isOn: $viewModel.useUpperCase) {
             if viewModel.useUpperCase {
-                Text("Uppercase letters")
+                Text("UPPERCASE LETTERS")
             } else {
                 Text("Lowercase letters")
             }
@@ -67,7 +72,17 @@ struct SettingsView: View {
 
     private var dictationToggle : some View {
         Toggle(isOn: $viewModel.allowDictation) {
-            Text("Allow dictation")
+            if viewModel.allowDictation {
+                HStack {
+                    Text("Allow dictation")
+                    Image(systemName: "mic")
+                }
+            } else {
+                HStack {
+                    Text("No dictation")
+                    Image(systemName: "mic.slash")
+                }
+            }
         }.modifier(ToggleMod())
     }
     
