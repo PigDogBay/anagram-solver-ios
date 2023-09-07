@@ -119,6 +119,7 @@ class Settings
     private let useUpperCaseKey = "useUpperCase"
     private let fullStopToQuestionMarkKey = "fullStopToQuestionMark"
     private let spaceToQuestionMarkKey = "spaceToQuestionMark"
+    private let useLargeResultsFontKey = "useLargeResultsFont"
 
     let defaultWordList = "words"
     let defaultDefinition = "google define"
@@ -134,6 +135,7 @@ class Settings
     let defaultMonospacedFont = false
     let defaultFullStopToQuestionMark = false
     let defaultSpaceToQuestionMark = false
+    let defaultUseLargeResultsFont = false
 
     var highlight : UIColor {
         get {
@@ -349,6 +351,18 @@ class Settings
         }
     }
     
+    var useLargeResultsFont : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: useLargeResultsFontKey)
+        }
+        set(flag) {
+            if flag != useLargeResultsFont {
+                let defaults = UserDefaults.standard
+                defaults.set(flag, forKey: useLargeResultsFontKey)
+            }
+        }
+    }
+
     func registerDefaultSettings() {
         let defaultSettings : [ String : Any] = [definitionKey : defaultDefinition,
                                                   highlightKey : defaultHighlight,
@@ -365,6 +379,7 @@ class Settings
                                             darkModeOverrideKey: defaultDarkMode,
                                                useUpperCaseKey : defaultUseUppercase,
                                           useMonospacedFontKey : defaultMonospacedFont,
+                                        useLargeResultsFontKey : defaultUseLargeResultsFont,
                                       useNonPersonalizedAdsKey : false]
         UserDefaults.standard.register(defaults: defaultSettings)
     }

@@ -97,6 +97,12 @@ class SettingsViewModel : ObservableObject {
         }
     }
 
+    @Published var useLargeResultsFont : Bool {
+        didSet {
+            settings.useLargeResultsFont = useLargeResultsFont
+        }
+    }
+
     init(){
         wordList = settings.wordList
         definition = settings.definition
@@ -112,6 +118,7 @@ class SettingsViewModel : ObservableObject {
         useUpperCase = settings.useUpperCase
         spaceToQuestionMark = settings.spaceToQuestionMark
         fullStopToQuestionMark = settings.fullStopToQuestionMark
+        useLargeResultsFont = settings.useLargeResultsFont
     }
  
     func resetToDefaultSettings(){
@@ -129,5 +136,6 @@ class SettingsViewModel : ObservableObject {
         spaceToQuestionMark = settings.defaultSpaceToQuestionMark
         fullStopToQuestionMark = settings.defaultFullStopToQuestionMark
         darkModeOverride = settings.defaultDarkMode
+        useLargeResultsFont = settings.defaultUseLargeResultsFont
     }
 }

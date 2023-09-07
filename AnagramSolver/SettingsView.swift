@@ -86,6 +86,17 @@ struct SettingsView: View {
         }.modifier(ToggleMod())
     }
     
+    private var largeFontToggle : some View {
+        Toggle(isOn: $viewModel.useLargeResultsFont){
+            if viewModel.useLargeResultsFont {
+                Text("Large Results Font")
+                    .font(.system(.title))
+            } else {
+                Text("Small Results Font")
+            }
+        }.modifier(ToggleMod())
+    }
+
     private var settingsForm : some View {
         Form {
             Section(header: Text("SEARCH"),
@@ -110,7 +121,7 @@ struct SettingsView: View {
             }
 
             Section(header: Text("APPEARANCE"),
-                    footer: Text("")){
+                    footer: Text("The results font can be small or large")){
 
                 SettingsPicker(label: "Letter highlighting",
                                titles: Settings.highlightTitles,
@@ -125,6 +136,7 @@ struct SettingsView: View {
                 tipsToggle
                 //Set identifier for UI testing
                 useUpperCaseToggle.accessibilityIdentifier("caseToggle")
+                largeFontToggle
             }
 
             Section(header: Text("KEYBOARD"),
