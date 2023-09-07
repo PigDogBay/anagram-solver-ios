@@ -15,6 +15,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
 {
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     fileprivate let cellIdentifier = "MatchesCell"
+    fileprivate let cellIdentifierLarge = "MatchesCellLarge"
     fileprivate var model : Model!
     private lazy var synthesizer : AVSpeechSynthesizer = {
         AVSpeechSynthesizer()
@@ -213,7 +214,8 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
+        let cellId = model.settings.useLargeResultsFont ? cellIdentifierLarge : cellIdentifier
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId)!
         cell.accessoryType = .detailButton
         let word = model.matches.getMatch(section: indexPath.section, row: indexPath.row) ?? ""
         model.wordFormatter.setLabelText(cell.textLabel, word)
