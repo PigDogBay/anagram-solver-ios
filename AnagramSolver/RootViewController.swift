@@ -15,8 +15,15 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
 {
     private var model : Model!
     private let searchSegueId = "searchSegue"
-    private let monospacedFont = UIFont(name: "Menlo-Regular",size: 24.0)
-    private let systemFont = UIFont.systemFont(ofSize: 24.0, weight: .regular)
+    lazy private(set) var monospacedFont : UIFont? = {
+        if let font = UIFont(name: "Menlo-Regular",size: 24.0) {
+            //Accessibility - Text Size:
+            //Dynamic font types require size to be specified as .title1 instead of fixed point size
+            return UIFontMetrics(forTextStyle: .title1).scaledFont(for: font)
+        }
+        return nil
+    }()
+    private let systemFont = UIFont.preferredFont(forTextStyle: .title1)
     private var coordinator = Coordinator.sharedInstance
     private let queryTextFieldDelegate = QueryTextFieldDelegate()
 

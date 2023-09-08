@@ -41,13 +41,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRf-rd-9cX">
                                 <rect key="frame" x="8" y="8" width="359" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter letters" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="a7i-Fj-C2n">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter letters" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="a7i-Fj-C2n">
                                         <rect key="frame" x="8" y="5" width="343" height="40"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="plt-OJ-fIO"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="plt-OJ-fIO"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="go" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                         <connections>
                                             <action selector="queryFinished:" destination="ldH-pm-mdz" eventType="editingDidEndOnExit" id="1VD-bB-bLp"/>
@@ -57,8 +57,9 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="a7i-Fj-C2n" secondAttribute="trailing" constant="8" id="1hd-J6-CSL"/>
-                                    <constraint firstAttribute="height" constant="50" id="OKM-Ck-mCc"/>
                                     <constraint firstItem="a7i-Fj-C2n" firstAttribute="centerY" secondItem="FRf-rd-9cX" secondAttribute="centerY" id="jUE-4K-kxb"/>
+                                    <constraint firstItem="a7i-Fj-C2n" firstAttribute="top" secondItem="FRf-rd-9cX" secondAttribute="top" constant="5" id="neO-Ze-dtY"/>
+                                    <constraint firstAttribute="bottom" secondItem="a7i-Fj-C2n" secondAttribute="bottom" constant="5" id="s9V-0g-3Lc"/>
                                     <constraint firstItem="a7i-Fj-C2n" firstAttribute="leading" secondItem="FRf-rd-9cX" secondAttribute="leading" constant="8" id="sba-nF-4q8"/>
                                 </constraints>
                             </view>
