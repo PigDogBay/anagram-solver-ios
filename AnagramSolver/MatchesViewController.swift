@@ -232,6 +232,14 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "\(model.matches.getNumberOfLetters(section: section)) letters"
     }
+
+    ///These two functions allow the row height to increase with Accessibility font size
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(44.0)
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return model.matches.sectionTitles
