@@ -38,11 +38,7 @@
 		00EEA6FD25CABDB10017F6A4 /* TipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA6FC25CABDB10017F6A4 /* TipsData.swift */; };
 		00EEA70025CABE8D0017F6A4 /* tips.json in Resources */ = {isa = PBXBuildFile; fileRef = 00EEA6FF25CABE8D0017F6A4 /* tips.json */; };
 		00EEA70325CABF7D0017F6A4 /* HelpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA70225CABF7D0017F6A4 /* HelpViewModel.swift */; };
-		00EEA70D25CABFE50017F6A4 /* TipRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA70525CABFE50017F6A4 /* TipRow.swift */; };
-		00EEA70E25CABFE50017F6A4 /* FilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA70625CABFE50017F6A4 /* FilterRow.swift */; };
-		00EEA70F25CABFE50017F6A4 /* DefinitionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA70725CABFE50017F6A4 /* DefinitionRow.swift */; };
 		00EEA71025CABFE50017F6A4 /* FeedbackRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA70825CABFE50017F6A4 /* FeedbackRow.swift */; };
-		00EEA71125CABFE50017F6A4 /* SettingsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA70925CABFE50017F6A4 /* SettingsRow.swift */; };
 		00EEA71225CABFE50017F6A4 /* AboutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA70A25CABFE50017F6A4 /* AboutRow.swift */; };
 		00EEA71325CABFE50017F6A4 /* RateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA70B25CABFE50017F6A4 /* RateRow.swift */; };
 		00EEA71425CABFE50017F6A4 /* TellFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA70C25CABFE50017F6A4 /* TellFriendRow.swift */; };
@@ -178,11 +174,7 @@
 		00EEA6FC25CABDB10017F6A4 /* TipsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsData.swift; sourceTree = "<group>"; };
 		00EEA6FF25CABE8D0017F6A4 /* tips.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tips.json; sourceTree = "<group>"; };
 		00EEA70225CABF7D0017F6A4 /* HelpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewModel.swift; sourceTree = "<group>"; };
-		00EEA70525CABFE50017F6A4 /* TipRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipRow.swift; sourceTree = "<group>"; };
-		00EEA70625CABFE50017F6A4 /* FilterRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterRow.swift; sourceTree = "<group>"; };
-		00EEA70725CABFE50017F6A4 /* DefinitionRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionRow.swift; sourceTree = "<group>"; };
 		00EEA70825CABFE50017F6A4 /* FeedbackRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackRow.swift; sourceTree = "<group>"; };
-		00EEA70925CABFE50017F6A4 /* SettingsRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRow.swift; sourceTree = "<group>"; };
 		00EEA70A25CABFE50017F6A4 /* AboutRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutRow.swift; sourceTree = "<group>"; };
 		00EEA70B25CABFE50017F6A4 /* RateRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateRow.swift; sourceTree = "<group>"; };
 		00EEA70C25CABFE50017F6A4 /* TellFriendRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TellFriendRow.swift; sourceTree = "<group>"; };
@@ -329,11 +321,9 @@
 				00EEA72B25CAC8B50017F6A4 /* ActivityViewController.swift */,
 				00EEA71625CAC02D0017F6A4 /* AutomatedTestRow.swift */,
 				005BCB3626AACED400DF44CE /* AutoTestCard.swift */,
-				00EEA70725CABFE50017F6A4 /* DefinitionRow.swift */,
 				00F17DDA26A9DD4000452020 /* DefinitionsCard.swift */,
 				00EEA70825CABFE50017F6A4 /* FeedbackRow.swift */,
 				00F17DDC26A9E17300452020 /* FilterCard.swift */,
-				00EEA70625CABFE50017F6A4 /* FilterRow.swift */,
 				005BCB3426AACA2400DF44CE /* HelpOutCard.swift */,
 				001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */,
 				00CE29392AB1D0690002CA30 /* HelpRow.swift */,
@@ -341,10 +331,8 @@
 				00EEA70B25CABFE50017F6A4 /* RateRow.swift */,
 				00F17DD626A9CC3500452020 /* SettingsCard.swift */,
 				004AA92026CEB1CB00A63C47 /* SettingsPicker.swift */,
-				00EEA70925CABFE50017F6A4 /* SettingsRow.swift */,
 				00EEA70C25CABFE50017F6A4 /* TellFriendRow.swift */,
 				006D010126A1936600DA083D /* TipCard.swift */,
-				00EEA70525CABFE50017F6A4 /* TipRow.swift */,
 				005BCB3826AAD23900DF44CE /* UpgradeCard.swift */,
 				005BCB3126AAC69700DF44CE /* UserGuideCard.swift */,
 				0051B66125CC194300AB8B9D /* UserGuideRow.swift */,
@@ -725,7 +713,6 @@
 				4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */,
 				00EEA71D25CAC5050017F6A4 /* AboutViewModel.swift in Sources */,
 				00F17DDB26A9DD4000452020 /* DefinitionsCard.swift in Sources */,
-				00EEA70E25CABFE50017F6A4 /* FilterRow.swift in Sources */,
 				4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */,
 				005BCB3226AAC69700DF44CE /* UserGuideCard.swift in Sources */,
 				4D3596411CFEEA50008D2FAF /* Ads.swift in Sources */,
@@ -753,18 +740,15 @@
 				00EEA72F25CACB430017F6A4 /* AboutView.swift in Sources */,
 				006D010226A1936600DA083D /* TipCard.swift in Sources */,
 				4D9E43B11FAC86EC007007C8 /* FilterFactory.swift in Sources */,
-				00EEA70F25CABFE50017F6A4 /* DefinitionRow.swift in Sources */,
 				00EEA71325CABFE50017F6A4 /* RateRow.swift in Sources */,
 				0051B66225CC194300AB8B9D /* UserGuideRow.swift in Sources */,
 				00EEA72525CAC81A0017F6A4 /* HelpView.swift in Sources */,
 				00EEA72825CAC85A0017F6A4 /* DefinitionHelpView.swift in Sources */,
 				001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */,
 				00F17DDF26AAB8EB00452020 /* AboutCard.swift in Sources */,
-				00EEA71125CABFE50017F6A4 /* SettingsRow.swift in Sources */,
 				4DF2DE3A1FACBDBB00F44ADE /* FilterViewController.swift in Sources */,
 				004AA91F26CE565F00A63C47 /* SettingsViewModel.swift in Sources */,
 				4D9E43AA1FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift in Sources */,
-				00EEA70D25CABFE50017F6A4 /* TipRow.swift in Sources */,
 				00CE293B2AB1D06A0002CA30 /* HelpRow.swift in Sources */,
 				004AA92126CEB1CB00A63C47 /* SettingsPicker.swift in Sources */,
 				005BCB3526AACA2400DF44CE /* HelpOutCard.swift in Sources */,
