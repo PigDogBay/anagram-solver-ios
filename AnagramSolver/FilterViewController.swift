@@ -207,7 +207,13 @@ class FilterViewController: UITableViewController, LettersCellCallback {
         }
         return cell
     }
-    
+    ///These two functions allow the row height to increase with Accessibility font size
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(44.0)
+    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
         case "segueShowNumberList":
