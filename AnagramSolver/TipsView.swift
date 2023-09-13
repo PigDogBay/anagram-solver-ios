@@ -11,34 +11,53 @@ import SwiftUI
 struct TipsView: View {
     private let coordinator = Coordinator.sharedInstance
 
+    private func tip(_ tipData : Tip) -> some View {
+        LinkedTipRow(viewModel: HelpViewModel(tip: tipData))
+    }
     var body: some View {
         List {
-            ForEach(tipsData) { tip in
-                LinkedTipRow(viewModel: HelpViewModel(tip: tip))
+            Group {
+                tip(anagramTip)
+                tip(blankLettersTip)
+                tip(twoWordAnagramTip)
+
+                NavigationLink(destination: DefinitionHelpView()){
+                    HelpRow(iconName: "book", colorName: "iconBlue", title: "Definitions", subTitle: "Tap on a result to look it up")
+                }
             }
-            NavigationLink(destination: FilterHelpView()){
-                FilterRow()
+            Group {
+                tip(crosswordTip)
+                tip(phraseTip)
+                tip(shortcutsTip)
+               NavigationLink(destination: FilterHelpView()){
+                    HelpRow(iconName: "line.3.horizontal.decrease.circle", colorName: "iconRed", title: "Filters", subTitle: "Too many matches? Refine your search!")
+                }
+                tip(spellingBeeTip)
+                tip(codewordsTip)
+                
+                NavigationLink(destination: SettingsHelpView()){
+                    HelpRow(iconName: "gear", colorName: "iconGreen", title: "Settings", subTitle: "Change the word list and more")
+                }
             }
-            NavigationLink(destination: DefinitionHelpView()){
-                DefinitionRow()
+            
+            Group {
+                tip(supergramsTip)
+                tip(prefixSuffixTip)
+                NavigationLink(destination: AboutView()){
+                    AboutRow()
+                }
+                UserGuideRow()
+                FeedbackRow()
+                RateRow()
+                TellFriendRow()
             }
-            UserGuideRow()
-            NavigationLink(destination: AboutView()){
-                AboutRow()
-            }
-            NavigationLink(destination: SettingsView()){
-                SettingsRow()
-            }
-            FeedbackRow()
-            RateRow()
-            TellFriendRow()
             #if DEBUG
             AutomatedTestRow()
             #endif
         }
         .listStyle(.plain)
-        .padding(.leading,8)
-        .padding(.trailing,8)
+        .padding(.leading,0)
+        .padding(.trailing,0)
         .background(Color.init("navBackground"))
         .gesture(DragGesture().onChanged { _ in
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
@@ -54,7 +73,7 @@ struct LinkedTipRow : View {
     @ObservedObject var viewModel : HelpViewModel
     var body : some View {
         NavigationLink(destination: HelpView(viewModel: viewModel), isActive: $viewModel.showTip){
-            TipRow(tip: viewModel.tip)
+            HelpRow(iconName: "questionmark.circle", colorName: "iconYellow", title: viewModel.tip.title, subTitle: viewModel.tip.subtitle)
         }
     }
 }

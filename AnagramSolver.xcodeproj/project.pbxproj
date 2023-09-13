@@ -30,6 +30,7 @@
 		00CD12D327CE326C008191B2 /* AnagramSolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12D227CE326C008191B2 /* AnagramSolverUITests.swift */; };
 		00CD12D527CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */; };
 		00CD12DD27CE3CAD008191B2 /* UITestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */; };
+		00CE293B2AB1D06A0002CA30 /* HelpRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CE29392AB1D0690002CA30 /* HelpRow.swift */; };
 		00E4B60527D0E388002ACEF8 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B60427D0E388002ACEF8 /* ModelTests.swift */; };
 		00E4B60827D20FD3002ACEF8 /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B60727D20FD3002ACEF8 /* SettingsTests.swift */; };
 		00E4B60A27D21000002ACEF8 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B60927D21000002ACEF8 /* SearchTests.swift */; };
@@ -169,6 +170,7 @@
 		00CD12D227CE326C008191B2 /* AnagramSolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolverUITests.swift; sourceTree = "<group>"; };
 		00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolverUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestUtils.swift; sourceTree = "<group>"; };
+		00CE29392AB1D0690002CA30 /* HelpRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpRow.swift; sourceTree = "<group>"; };
 		00E4B60427D0E388002ACEF8 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		00E4B60727D20FD3002ACEF8 /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 		00E4B60927D21000002ACEF8 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 				00EEA70625CABFE50017F6A4 /* FilterRow.swift */,
 				005BCB3426AACA2400DF44CE /* HelpOutCard.swift */,
 				001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */,
+				00CE29392AB1D0690002CA30 /* HelpRow.swift */,
 				00EEA71F25CAC59D0017F6A4 /* MailView.swift */,
 				00EEA70B25CABFE50017F6A4 /* RateRow.swift */,
 				00F17DD626A9CC3500452020 /* SettingsCard.swift */,
@@ -762,6 +765,7 @@
 				004AA91F26CE565F00A63C47 /* SettingsViewModel.swift in Sources */,
 				4D9E43AA1FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift in Sources */,
 				00EEA70D25CABFE50017F6A4 /* TipRow.swift in Sources */,
+				00CE293B2AB1D06A0002CA30 /* HelpRow.swift in Sources */,
 				004AA92126CEB1CB00A63C47 /* SettingsPicker.swift in Sources */,
 				005BCB3526AACA2400DF44CE /* HelpOutCard.swift in Sources */,
 				4DA0C3FA236C761600AF693B /* AppState.swift in Sources */,
