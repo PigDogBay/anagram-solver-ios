@@ -61,15 +61,19 @@ class Model : WordListCallback, IAPDelegate
     
     func loadDictionary()
     {
-        appState.appState = .loading
-        var didLoad = wordSearch.loadDictionary(resource: wordListName)
-        if (self.loadPhrases && didLoad){
-            didLoad = self.wordSearch.loadPhrases(resource: "phrases")
-            if (didLoad){
-                self.loadPhrases = false
+        Task {
+            appState.appState = .loading
+            do {
+                try await wordSearch.loadDictionary(resource: wordListName)
+                if (self.loadPhrases){
+                    try await self.wordSearch.loadPhrases(resource: "phrases")
+                    self.loadPhrases = false
+                }
+                appState.appState = .ready
+            } catch {
+                appState.appState = .error
             }
         }
-        appState.appState = didLoad ? .ready : .error
     }
     
     func setAndValidateQuery( _ raw : String) ->Bool
