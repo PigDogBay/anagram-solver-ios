@@ -203,7 +203,8 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
             self.searchButton.isEnabled=false
             let proFlag = self.model.settings.isProMode
             self.title = proFlag ? "AS Pro" : "Anagram Solver"
-            Task {
+            //Run on a background thread
+            Task.detached(priority: .userInitiated) {
                 await self.model.loadDictionary()
             }
         case .loading:
