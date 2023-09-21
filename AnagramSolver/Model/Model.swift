@@ -59,20 +59,18 @@ class Model : WordListCallback, IAPDelegate
         appState.appState = .uninitialized
     }
     
-    func loadDictionary()
-    {
-        Task {
-            appState.appState = .loading
-            do {
-                try await wordSearch.loadDictionary(resource: wordListName)
-                if (self.loadPhrases){
-                    try await self.wordSearch.loadPhrases(resource: "phrases")
-                    self.loadPhrases = false
-                }
-                appState.appState = .ready
-            } catch {
-                appState.appState = .error
+    func loadDictionary() async
+	{
+        appState.appState = .loading
+        do {
+            try await wordSearch.loadDictionary(resource: wordListName)
+            if (self.loadPhrases){
+                try await self.wordSearch.loadPhrases(resource: "phrases")
+                self.loadPhrases = false
             }
+            appState.appState = .ready
+        } catch {
+            appState.appState = .error
         }
     }
     

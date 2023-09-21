@@ -203,7 +203,9 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
             self.searchButton.isEnabled=false
             let proFlag = self.model.settings.isProMode
             self.title = proFlag ? "AS Pro" : "Anagram Solver"
-            self.model.loadDictionary()
+            Task {
+                await self.model.loadDictionary()
+            }
         case .loading:
             self.searchButton.isEnabled=false
         case .ready:

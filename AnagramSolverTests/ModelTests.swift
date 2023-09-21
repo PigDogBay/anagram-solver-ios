@@ -22,11 +22,11 @@ class ModelTests: XCTestCase {
     /**
          Bug: Two word anagram searches can find multiple results, one from phrase list and one from the words list.
      */
-    func testDistinctResults1() throws {
+    func testDistinctResults1() async throws {
         let model = Model()
         model.applySettings()
         model.wordListName = "words"
-        model.loadDictionary()
+        await model.loadDictionary()
         model.query = "ab initoi"
         model.prepareToSearch()
         model.search()
@@ -35,11 +35,11 @@ class ModelTests: XCTestCase {
         XCTAssertEqual("ai biotin", model.matches.getMatch(section: 0, row: 1))
     }
 
-    func testPerformanceSearch() throws {
+    func testPerformanceSearch() async throws {
         let model = Model()
         model.applySettings()
         model.wordListName = "words"
-        model.loadDictionary()
+        await model.loadDictionary()
         model.query = "....."
         model.prepareToSearch()
         self.measure {
