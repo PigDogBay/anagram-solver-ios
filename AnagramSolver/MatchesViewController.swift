@@ -74,7 +74,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
         //expect to be in ready state when search has been pressed from main VC or filter VC
         if model.appState.appState == .ready
         {
-            DispatchQueue.global(qos: .default).async
+            DispatchQueue.global(qos: .userInitiated).async
             {
                 self.model.search()
             }
