@@ -31,10 +31,12 @@ class FilterFactory : WordListCallbackAbstractFactory {
             callback = BiggerThanFilter(callback: callback, size: filter.biggerThan)
         }
         if filter.startingWith != "" {
-            callback = StartsWithFilter(callback: callback, letters: filter.startingWith.lowercased())
+            callback = StartsWithFilter(callback: callback, letters: filter.startingWith.lowercased(),
+                                        isNot: filter.isStartingWithNotEnabled)
         }
         if filter.endingWith != "" {
-            callback = EndsWithFilter(callback: callback, letters: filter.endingWith.lowercased())
+            callback = EndsWithFilter(callback: callback, letters: filter.endingWith.lowercased(),
+                                      isNot: filter.isEndingWithNotEnabled)
         }
         if filter.containing != "" {
             callback = ContainsFilter(callback: callback, letters: filter.containing.lowercased())

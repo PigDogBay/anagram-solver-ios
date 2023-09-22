@@ -14,6 +14,8 @@ class Filter {
     var lessThan = 0
     var equalTo = 0
     var distinct = 0
+    var isStartingWithNotEnabled = false
+    var isEndingWithNotEnabled = false
 
     var startingWith = ""
     var endingWith = ""
@@ -52,6 +54,8 @@ class Filter {
         lessThan = 0
         equalTo = 0
         distinct = 0
+        isStartingWithNotEnabled = false
+        isEndingWithNotEnabled = false
         startingWith = ""
         endingWith = ""
         containing = ""
