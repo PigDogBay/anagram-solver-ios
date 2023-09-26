@@ -16,6 +16,7 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var lettersTextView: UITextField!
+    @IBOutlet weak var notSwitch: UISwitch?
 
     //Settings for the crossword pattern and query fields
     var convertSpaceToQuestionMark = false
@@ -47,11 +48,13 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
 
         switch filterType {
         case .startsWith:
-            titleLabel.text = "Prefix"
+            notSwitch?.isOn = filter.isStartingWithNotEnabled
+            updateStartingWithLabel()
             lettersTextView.text = filter.startingWith
             lettersTextView.placeholder = "Enter prefix"
         case .endsWith:
-            titleLabel.text = "Suffix"
+            notSwitch?.isOn = filter.isEndingWithNotEnabled
+            updateEndingWithLabel()
             lettersTextView.text = filter.endingWith
             lettersTextView.placeholder = "Enter suffix"
         case .contains:
@@ -86,7 +89,28 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
         lettersTextView.delegate = self
     }
     
-    //Update the filter immediately, textFieldDidEndEditing is called after model.prepareToFilterSearch
+    private func updateStartingWithLabel(){
+        if let filter = filter {
+            titleLabel.text = filter.isStartingWithNotEnabled ? "Not Starting With" : "Starting With"
+        }
+    }
+    private func updateEndingWithLabel(){
+        if let filter = filter {
+            titleLabel.text = filter.isEndingWithNotEnabled ? "Not Ending With" : "Ending With"
+        }
+    }
+
+    @IBAction func notSwitchChanged(_ sender: UISwitch) {
+        if filterType == .startsWith {
+            filter?.isStartingWithNotEnabled = sender.isOn
+            updateStartingWithLabel()
+        } else if filterType == .endsWith {
+            filter?.isEndingWithNotEnabled = sender.isOn
+            updateEndingWithLabel()
+        }
+    }
+    
+    ///Update the filter immediately, textFieldDidEndEditing is called after model.prepareToFilterSearch
     @objc func textFieldDidChange(_ textField : UITextField){
         if let ft = filterType {
             switch ft {

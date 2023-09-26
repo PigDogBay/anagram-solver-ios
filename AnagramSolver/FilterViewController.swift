@@ -37,6 +37,7 @@ class FilterViewController: UITableViewController, LettersCellCallback {
     fileprivate var model : Model!
     fileprivate let numberCellId = "cellNumbersFilter"
     fileprivate let letterCellId = "cellLettersFilter"
+    fileprivate let notCellId = "cellNot"
     fileprivate var useUpperCase = false
 
     override func viewDidLoad() {
@@ -141,7 +142,7 @@ class FilterViewController: UITableViewController, LettersCellCallback {
         case 1:
             return "Find results that contain or exclude a word. Split multiple words with spaces, eg 'st ing'"
         case 2:
-            return "Find results starting or ending with your specified letters"
+            return "Find results starting or ending with your specified letters. Press the switches for NOT."
         case 3:
             return ""
         case 4:
@@ -186,7 +187,8 @@ class FilterViewController: UITableViewController, LettersCellCallback {
         }
     }
     fileprivate func cellForLettersFilter(_ indexPath: IndexPath, _ filterType : LettersFilterTableViewCell.FilterType) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: letterCellId, for: indexPath) as! LettersFilterTableViewCell
+        let cellId = (filterType == .startsWith || filterType == .endsWith) ? notCellId : letterCellId
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! LettersFilterTableViewCell
         cell.bind(filter: model.filter, filterType: filterType, isUpperCase: useUpperCase)
         cell.callback = self
         cell.convertSpaceToQuestionMark = model.settings.spaceToQuestionMark
@@ -207,6 +209,7 @@ class FilterViewController: UITableViewController, LettersCellCallback {
         }
         return cell
     }
+
     ///These two functions allow the row height to increase with Accessibility font size
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(44.0)
