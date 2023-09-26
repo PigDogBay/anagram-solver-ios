@@ -322,15 +322,15 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellNot" rowHeight="96" id="0cv-bz-Xn8" customClass="LettersFilterTableViewCell" customModule="AnagramSolver" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="199.33333206176758" width="375" height="96"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellNot" rowHeight="92" id="0cv-bz-Xn8" customClass="LettersFilterTableViewCell" customModule="AnagramSolver" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="199.33333206176758" width="375" height="92"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0cv-bz-Xn8" id="KUj-yG-ymO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SE-wk-0bK">
-                                            <rect key="frame" x="16" y="10.999999999999998" width="33" height="20.333333333333329"/>
+                                            <rect key="frame" x="16" y="15.999999999999998" width="33" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -352,12 +352,12 @@
                                         <constraint firstAttribute="trailing" secondItem="XN5-t1-TBU" secondAttribute="trailing" constant="16" id="9Yk-SQ-3At"/>
                                         <constraint firstItem="nKY-i0-dTu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4SE-wk-0bK" secondAttribute="trailing" constant="16" id="EU9-qO-K7u"/>
                                         <constraint firstItem="4SE-wk-0bK" firstAttribute="leading" secondItem="KUj-yG-ymO" secondAttribute="leading" constant="16" id="GtP-sk-vv0"/>
-                                        <constraint firstAttribute="bottom" secondItem="XN5-t1-TBU" secondAttribute="bottom" constant="14" id="IBE-Yd-Wh0"/>
-                                        <constraint firstItem="XN5-t1-TBU" firstAttribute="top" secondItem="4SE-wk-0bK" secondAttribute="bottom" constant="16.329999999999998" id="UHz-aF-xFH"/>
-                                        <constraint firstItem="4SE-wk-0bK" firstAttribute="top" secondItem="KUj-yG-ymO" secondAttribute="top" constant="11" id="fBg-Qf-dqE"/>
+                                        <constraint firstAttribute="bottom" secondItem="XN5-t1-TBU" secondAttribute="bottom" constant="10" id="IBE-Yd-Wh0"/>
+                                        <constraint firstItem="XN5-t1-TBU" firstAttribute="top" secondItem="4SE-wk-0bK" secondAttribute="bottom" constant="11.33" id="UHz-aF-xFH"/>
+                                        <constraint firstItem="4SE-wk-0bK" firstAttribute="top" secondItem="KUj-yG-ymO" secondAttribute="top" constant="16" id="fBg-Qf-dqE"/>
                                         <constraint firstItem="XN5-t1-TBU" firstAttribute="leading" secondItem="KUj-yG-ymO" secondAttribute="leading" constant="16" id="jAb-eV-yw8"/>
                                         <constraint firstAttribute="trailing" secondItem="nKY-i0-dTu" secondAttribute="trailing" constant="16" id="k2E-CR-x97"/>
-                                        <constraint firstItem="XN5-t1-TBU" firstAttribute="top" secondItem="nKY-i0-dTu" secondAttribute="bottom" constant="8" id="qpf-Jc-vrU"/>
+                                        <constraint firstItem="XN5-t1-TBU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nKY-i0-dTu" secondAttribute="bottom" constant="8" id="qpf-Jc-vrU"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
