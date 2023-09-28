@@ -24329,9 +24329,11 @@ nominative
 nominators
 nonactives
 nonaligned
+nonapology
 nonbinding
 noncaloric
 nonchalant
+noncompete
 nondrinker
 nonelastic
 nonesuches
@@ -42704,6 +42706,7 @@ baathist
 babblers
 babbling
 babushka
+babycino
 babyhood
 babylons
 babysits
@@ -43083,6 +43086,7 @@ bewilder
 biannual
 biassing
 biathlon
+bibimbap
 biblical
 bibulous
 bicepses
@@ -45316,6 +45320,7 @@ delirium
 delivers
 delivery
 delmarva
+delorean
 deloused
 delouses
 deluding
@@ -46625,6 +46630,7 @@ feminise
 feminism
 feminist
 feminize
+femocrat
 fentanyl
 ferguson
 ferments
@@ -57202,6 +57208,7 @@ baptise
 baptism
 baptist
 baptize
+barback
 barbara
 barbary
 barbell
@@ -59080,6 +59087,7 @@ corsage
 corsair
 corsets
 corsica
+cortado
 cortege
 coshing
 cosiest
@@ -63554,6 +63562,7 @@ lysenko
 macabre
 macadam
 macaque
+macaron
 macbeth
 macedon
 machete
@@ -64569,6 +64578,7 @@ notable
 notably
 notated
 notates
+notator
 notched
 notches
 notelet
@@ -67135,6 +67145,7 @@ scuttle
 scythed
 scythes
 scythia
+seabass
 seabeds
 seabird
 seaborg
@@ -72128,6 +72139,7 @@ coleen
 coleus
 coleys
 colfax
+collab
 collar
 collie
 collin
@@ -73988,6 +74000,7 @@ gentoo
 gentry
 geodes
 george
+geotag
 gerald
 gerard
 gerber
@@ -75936,6 +75949,7 @@ massif
 masted
 master
 mastic
+matcha
 maters
 mateys
 mather
@@ -83913,6 +83927,7 @@ krill
 krona
 krone
 krupp
+kubie
 kudos
 kudzu
 kusch
@@ -84390,6 +84405,7 @@ melee
 melon
 melts
 melva
+memed
 memes
 memos
 mends
@@ -85399,6 +85415,7 @@ ramos
 ramps
 ranch
 randi
+rando
 randy
 ranee
 range
@@ -86791,6 +86808,7 @@ treks
 trend
 trent
 tress
+trevi
 trews
 treys
 triad
@@ -88816,6 +88834,7 @@ isle
 isms
 itch
 item
+itty
 ivan
 ives
 iyar
@@ -89037,6 +89056,7 @@ lear
 leas
 lech
 leda
+lede
 leek
 leer
 lees
@@ -89458,6 +89478,7 @@ oaks
 oars
 oath
 oats
+oaty
 obey
 obis
 obit
@@ -90493,6 +90514,7 @@ vita
 vito
 viva
 vlad
+vlog
 void
 vole
 volt

@@ -114556,6 +114556,7 @@ nonadmirer
 nonaligned
 nonallelic
 nonanswers
+nonapology
 nonaquatic
 nonaqueous
 nonarrival
@@ -114583,6 +114584,7 @@ nonclasses
 noncollege
 noncolored
 noncolours
+noncompete
 noncomplex
 nonconcern
 nonconcurs
@@ -180628,6 +180630,7 @@ babudoms
 babuisms
 babushka
 babycham
+babycino
 babydoll
 babyfood
 babygros
@@ -181913,6 +181916,7 @@ biathlon
 bibation
 bibcocks
 bibelots
+bibimbap
 biblical
 biblists
 bibulous
@@ -188391,6 +188395,7 @@ dellslow
 delmarva
 delnorte
 deloping
+delorean
 deloused
 delouser
 delouses
@@ -192390,6 +192395,7 @@ feminity
 feminize
 femiters
 femmiest
+femocrat
 femstats
 fenagled
 fenagles
@@ -226610,6 +226616,7 @@ baptize
 baraboo
 baracan
 barazas
+barback
 barbara
 barbary
 barbate
@@ -231482,6 +231489,7 @@ corsica
 corsive
 corslet
 corsned
+cortado
 cortaro
 cortege
 cortile
@@ -243930,6 +243938,7 @@ macabre
 macacos
 macadam
 macaque
+macaron
 macbeth
 macchia
 macchie
@@ -246915,6 +246924,7 @@ notaeum
 notanda
 notated
 notates
+notator
 notched
 notchel
 notcher
@@ -254099,6 +254109,7 @@ sdeigns
 sdeined
 seabags
 seabank
+seabass
 seabeck
 seabeds
 seabees
@@ -267769,6 +267780,7 @@ colics
 colies
 colima
 colins
+collab
 collar
 colled
 collet
@@ -272280,6 +272292,7 @@ geodic
 geoids
 geomys
 george
+geotag
 gerahs
 gerald
 gerard
@@ -277369,6 +277382,7 @@ masury
 matadi
 matais
 matata
+matcha
 maters
 mateys
 mather
@@ -297357,6 +297371,7 @@ krubi
 krupp
 ksars
 kuban
+kubie
 kudos
 kudus
 kudzu
@@ -298461,6 +298476,7 @@ melos
 melts
 melty
 melva
+memed
 memes
 memos
 menad
@@ -300910,6 +300926,7 @@ ranas
 rance
 ranch
 randi
+rando
 rands
 randy
 ranee
@@ -303989,6 +304006,7 @@ trent
 tress
 trest
 trets
+trevi
 trews
 treys
 triac
@@ -308259,6 +308277,7 @@ isos
 itas
 itch
 item
+itty
 iuka
 iure
 ivan
@@ -308759,6 +308778,7 @@ leat
 lebo
 lech
 leda
+lede
 leed
 leek
 leep
@@ -309569,6 +309589,7 @@ oary
 oast
 oath
 oats
+oaty
 oban
 obas
 obes
@@ -311600,6 +311621,7 @@ vivo
 vizy
 vlad
 vlei
+vlog
 voar
 voca
 voes

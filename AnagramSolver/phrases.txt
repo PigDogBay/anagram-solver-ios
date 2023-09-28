@@ -25852,6 +25852,7 @@ class scaphopoda
 class tardigrada
 classical ballet
 classified stock
+claudia schiffer
 cleansing-creams
 cleanup position
 clear-headedness
@@ -29946,6 +29947,7 @@ school-inspector
 school newspaper
 school principal
 schreibers aster
+schrodingers cat
 scipio africanus
 scipio the elder
 sciurus vulgaris
@@ -30707,6 +30709,8 @@ tomato fruitworm
 tomentum cerebri
 tongue depressor
 top fermentation
+top of the class
+top of the world
 torchwood family
 torque converter
 torvill and dean
@@ -34665,6 +34669,7 @@ hip-hip-hurrahs
 hippety-hoppety
 hirundo rustica
 historic period
+hit ones stride
 hit the ceiling
 hit the jackpot
 hitting average
@@ -43437,6 +43442,7 @@ light-horseman
 light industry
 light infantry
 light reaction
+light sleepers
 light-spirited
 lightning bugs
 lightning rods
@@ -45486,6 +45492,7 @@ rubber-stamped
 rubus hispidus
 rubus odoratus
 rudaceous rock
+rude awakening
 rudolf nureyev
 rudolf steiner
 rudolf virchow
@@ -46937,6 +46944,7 @@ tooth-ornament
 toothache tree
 toothed spurge
 topic sentence
+topkapi palace
 topsy-turvydom
 toreador pants
 tornado cellar
@@ -52842,6 +52850,7 @@ light-hearted
 light-o-loves
 light-of-love
 light railway
+light sleeper
 lightly-armed
 lightning bug
 lightning rod
@@ -68975,6 +68984,7 @@ art nouveau
 art student
 art teacher
 art therapy
+arte povera
 arthur ashe
 arthur marx
 arts centre
