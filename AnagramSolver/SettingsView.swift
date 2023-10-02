@@ -165,16 +165,17 @@ struct SettingsView: View {
 
     var body: some View {
         settingsForm
-            .navigationBarItems(trailing: Button("Reset"){showDefaultSettingsAlert = true})
+            .navigationBarItems(trailing: Button("Reset"){
+                    showDefaultSettingsAlert = true
+                }.tint(Color.white))
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: Button(action: backPressed){
                 HStack {
                     Image(systemName: "chevron.left")}
-                .padding(.trailing, -4)
+                        .padding(.trailing, -4)
                     Text("Back")
-                }
+                }.tint(Color.white)
             )
-            .tint(Color.white)
             .alert("Use Default Settings", isPresented: $showDefaultSettingsAlert){
                 Button("Default settings", role: .destructive){viewModel.resetToDefaultSettings()}
                     .accessibilityIdentifier("dialogResetSettings")
