@@ -8,8 +8,6 @@
 
 import UIKit
 import GoogleMobileAds
-import AppTrackingTransparency
-import AdSupport
 import SwiftUtils
 
 class Ads
@@ -21,18 +19,8 @@ class Ads
     {
         if !isAdsSetupFinished {
             self.isAdsSetupFinished = true
-            requestIDFA()
+            initializeAds()
         }
-    }
-    /**
-     For testing: delete the app to show dialog
-     Dialog appears only once, on queue, com.apple.root.default-qos
-     Otherwise .authorized or .denied is return on main-thread
-     */
-    private func requestIDFA() {
-        ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-            self.initializeAds()
-        })
     }
     
     private func initializeAds(){
