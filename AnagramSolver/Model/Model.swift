@@ -47,12 +47,6 @@ class Model : WordListCallback, IAPDelegate
         applySettings()
     }
     
-    func setUpAds(){
-        if !settings.isProMode {
-            ads.setUp()
-        }
-    }
-    
     func unloadDictionary()
     {
         wordSearch.unloadDictionary()

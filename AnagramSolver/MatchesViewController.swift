@@ -10,6 +10,7 @@ import UIKit
 import GoogleMobileAds
 import SwiftUtils
 import AVFoundation
+import UserMessagingPlatform
 
 class MatchesViewController: UIViewController, AppStateChangeObserver, UITableViewDataSource, UITableViewDelegate
 {
@@ -115,7 +116,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     }
     
     private func loadAd(){
-        if !model.settings.isProMode
+        if !model.settings.isProMode && UMPConsentInformation.sharedInstance.canRequestAds
         {
             //Set up bannerView height for the device
             //Another method is to set the bannerHeightConstraint relation to be greater than or equal to 0

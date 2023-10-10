@@ -27,6 +27,7 @@
 		0081F01525B1BB6C00792552 /* wordlist-it.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01325B1BB6C00792552 /* wordlist-it.txt */; };
 		0081F01625B1BB6C00792552 /* wordlist-pt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01425B1BB6C00792552 /* wordlist-pt.txt */; };
 		0091BC052535E5A000BE7A43 /* AutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091BC042535E5A000BE7A43 /* AutoTest.swift */; };
+		00B81C572AD56BAB00A4FF17 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B81C562AD56BAB00A4FF17 /* AppTrackingTransparency.framework */; };
 		00CD12D327CE326C008191B2 /* AnagramSolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12D227CE326C008191B2 /* AnagramSolverUITests.swift */; };
 		00CD12D527CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */; };
 		00CD12DD27CE3CAD008191B2 /* UITestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */; };
@@ -162,6 +163,7 @@
 		0081F01325B1BB6C00792552 /* wordlist-it.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-it.txt"; sourceTree = "<group>"; };
 		0081F01425B1BB6C00792552 /* wordlist-pt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-pt.txt"; sourceTree = "<group>"; };
 		0091BC042535E5A000BE7A43 /* AutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTest.swift; sourceTree = "<group>"; };
+		00B81C562AD56BAB00A4FF17 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		00CD12D027CE326C008191B2 /* AnagramSolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnagramSolverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CD12D227CE326C008191B2 /* AnagramSolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolverUITests.swift; sourceTree = "<group>"; };
 		00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolverUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D1D6E621FA0CE33008466F2 /* Pods_AnagramSolver.framework in Frameworks */,
+				00B81C572AD56BAB00A4FF17 /* AppTrackingTransparency.framework in Frameworks */,
 				4DF7B6D61D10419F00A26A20 /* StoreKit.framework in Frameworks */,
 				4D0543851CFDBE060084538A /* SwiftUtils.framework in Frameworks */,
 			);
@@ -343,6 +346,7 @@
 		1E9D5EE9EB3E676642812536 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00B81C562AD56BAB00A4FF17 /* AppTrackingTransparency.framework */,
 				4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */,
 				4DF7B6D51D10419F00A26A20 /* StoreKit.framework */,
 				4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */,

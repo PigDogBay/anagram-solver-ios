@@ -124,21 +124,12 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         applyDarkModeSetting()
         model = Model.sharedInstance
         model.appState.addObserver(observer: self)
-        //ATT prompt can only be shown when the app becomes active, so need to listen for this event.
-        NotificationCenter.default.addObserver(self, selector: #selector (appDidBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
         //prevent email autocomplete showing on the keyboard
         textFieldQuery.textContentType = UITextContentType(rawValue: "")
         textFieldQuery.delegate = queryTextFieldDelegate
-    }
-
-    ///Called when the app becomes active
-    ///ATT Dialog will only be shown when the app is active
-    ///requestTrackingAuthorization will return status undetermined if called before app is active
-    ///and any app update will be rejected by Apple
-    @objc private func appDidBecomeActive(){
-        model.setUpAds()
-        //Now ads are set up no need to receive any more updates
-        NotificationCenter.default.removeObserver(self,name: UIApplication.didBecomeActiveNotification, object: nil)
+        if !model.settings.isProMode {
+            model.ads.setUp(viewControler: self)
+        }
     }
 
     override func viewDidAppear(_ animated: Bool)
