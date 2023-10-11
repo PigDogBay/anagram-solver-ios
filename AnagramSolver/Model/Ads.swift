@@ -59,7 +59,7 @@ class Ads
                 }
             }
         }
-        
+        //Try load an ad immediately
         if UMPConsentInformation.sharedInstance.canRequestAds {
             self.initializeAds()
         }
