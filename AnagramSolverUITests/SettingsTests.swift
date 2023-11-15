@@ -60,7 +60,7 @@ class SettingsTests: XCTestCase {
     
     func testConvertSpaceToQuestionMark1(){
         let app = XCUIApplication()
-
+        app.swipeUp()
         app.switches["convertSpaceToggle"].switches.firstMatch.tap()
         //press back button
         app.navigationBars.buttons.element(boundBy: 0).tap()
