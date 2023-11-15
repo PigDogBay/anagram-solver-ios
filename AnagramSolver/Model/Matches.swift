@@ -26,7 +26,7 @@ class Matches {
     ///scrolled through
     var sectionTitles : [String]? {
         if let g = grouped, g.count > 1, matches.count > minimumMatchesForLegend {
-            return g.map{"\($0[0].length)"}
+            return g.map{"\($0[0].letterCount())"}
         }
         return nil
     }
@@ -40,7 +40,7 @@ class Matches {
     }
     
     func getNumberOfLetters(section : Int) -> Int{
-        return grouped?[section][0].length ?? 0
+        return grouped?[section][0].letterCount() ?? 0
     }
     
     func removeAll(){
@@ -66,7 +66,7 @@ class Matches {
     }
     
     func groupBySize() {
-        self.grouped = Dictionary(grouping: matches, by: {$0.length})
+        self.grouped = Dictionary(grouping: matches, by: {$0.letterCount()})
             .sorted (by: {$0.0 > $1.0})
             .map{$0.value}
     }
