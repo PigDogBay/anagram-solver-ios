@@ -57,5 +57,18 @@ class Coordinator : ObservableObject {
         showCards = Model.sharedInstance.settings.showCardTips
         rootVC?.updateSettings()
     }
+
+    func webLookUp(word : String) {
+        let defModel = DefaultDefintion(word: word)
+        if let url = defModel.lookupUrl(){
+            showWebPage(address: url)
+        }
+    }
+    
+    func showWebPage(address : String) {
+        if let url = URL(string: address) {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
 }
 

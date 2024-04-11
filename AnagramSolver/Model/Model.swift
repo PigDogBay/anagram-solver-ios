@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUtils
 
-class Model : WordListCallback, IAPDelegate
+class Model : WordListCallback, IAPDelegate, WordDictionary
 {
     //Singleton
     static let sharedInstance = Model()
@@ -36,7 +36,11 @@ class Model : WordListCallback, IAPDelegate
     let iap : IAPInterface
     let filter : Filter
     let filterFactory : WordListCallbackAbstractFactory
-    
+    private var nabuSearch : Search? = nil
+    var nabuLookUp : NabuLookUp? = nil
+    ///Store lookUpResult for DefinitionView
+    var lookUpResult : LookUpResult = LookUpResult(word: "", definitions: [])
+
     init()
     {
         filter = Filter()
@@ -61,6 +65,14 @@ class Model : WordListCallback, IAPDelegate
             if (self.loadPhrases){
                 try await self.wordSearch.loadPhrases(resource: "phrases")
                 self.loadPhrases = false
+            }
+            //Load Nabu database, takes less than 1ms
+            if self.nabuSearch == nil {
+                if let db = NabuDatabase.open(bundleName: "nabu") {
+                    let nabu = NabuSearch(db)
+                    self.nabuSearch = nabu
+                    self.nabuLookUp = NabuLookUp(nabu)
+                }
             }
             appState.appState = .ready
         } catch {
@@ -145,6 +157,12 @@ class Model : WordListCallback, IAPDelegate
             //Use Pro Word list setting has changed
             appState.appState = .uninitialized
         }
+    }
+    
+    //MARK:- WordDictionary implementation
+    func lookUpDefinition(_ word : String) -> LookUpResult {
+        lookUpResult = nabuLookUp?.lookUp(word: word) ?? LookUpResult(word: "", definitions: [])
+        return lookUpResult
     }
     
     //MARK:- IAPDelegate

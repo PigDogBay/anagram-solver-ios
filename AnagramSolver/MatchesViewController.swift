@@ -227,10 +227,15 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         if let word = model.matches.getMatch(section: indexPath.section, row: indexPath.row) {
-            let url = model.settings.getDefinitionUrl(word: word)
-            selectedWord = word
-            //showWebPage(url)
-            performSegue(withIdentifier: self.definitionSegueId, sender: self)
+            let lookUpResult = model.lookUpDefinition(word)
+            if (lookUpResult.isDefinitionAvailable) {
+                selectedWord = word
+                performSegue(withIdentifier: self.definitionSegueId, sender: self)
+            } else {
+                //No definition found, so open a web browser to search for it
+                let url = model.settings.getDefinitionUrl(word: word)
+                showWebPage(url)
+            }
         }
     }
     

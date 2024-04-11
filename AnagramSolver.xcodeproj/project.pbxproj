@@ -33,6 +33,12 @@
 		00CD12DD27CE3CAD008191B2 /* UITestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */; };
 		00CE293B2AB1D06A0002CA30 /* HelpRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CE29392AB1D0690002CA30 /* HelpRow.swift */; };
 		00DEE1382BC7EB9300669505 /* DefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DEE1372BC7EB9300669505 /* DefinitionViewController.swift */; };
+		00DEE13B2BC7F68800669505 /* DefinitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DEE13A2BC7F68800669505 /* DefinitionViewModel.swift */; };
+		00DEE13E2BC7F71A00669505 /* DefinitionSynonymsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DEE13C2BC7F71A00669505 /* DefinitionSynonymsRow.swift */; };
+		00DEE13F2BC7F71A00669505 /* DefinitionHeaderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DEE13D2BC7F71A00669505 /* DefinitionHeaderRow.swift */; };
+		00DEE1412BC7F74200669505 /* DefinitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DEE1402BC7F74100669505 /* DefinitionView.swift */; };
+		00DEE1432BC7FEAF00669505 /* nabu.db in Resources */ = {isa = PBXBuildFile; fileRef = 00DEE1422BC7FEAF00669505 /* nabu.db */; };
+		00DEE1442BC7FEAF00669505 /* nabu.db in Resources */ = {isa = PBXBuildFile; fileRef = 00DEE1422BC7FEAF00669505 /* nabu.db */; };
 		00E4B60527D0E388002ACEF8 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B60427D0E388002ACEF8 /* ModelTests.swift */; };
 		00E4B60827D20FD3002ACEF8 /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B60727D20FD3002ACEF8 /* SettingsTests.swift */; };
 		00E4B60A27D21000002ACEF8 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B60927D21000002ACEF8 /* SearchTests.swift */; };
@@ -172,6 +178,11 @@
 		00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestUtils.swift; sourceTree = "<group>"; };
 		00CE29392AB1D0690002CA30 /* HelpRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpRow.swift; sourceTree = "<group>"; };
 		00DEE1372BC7EB9300669505 /* DefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionViewController.swift; sourceTree = "<group>"; };
+		00DEE13A2BC7F68800669505 /* DefinitionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionViewModel.swift; sourceTree = "<group>"; };
+		00DEE13C2BC7F71A00669505 /* DefinitionSynonymsRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionSynonymsRow.swift; sourceTree = "<group>"; };
+		00DEE13D2BC7F71A00669505 /* DefinitionHeaderRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionHeaderRow.swift; sourceTree = "<group>"; };
+		00DEE1402BC7F74100669505 /* DefinitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionView.swift; sourceTree = "<group>"; };
+		00DEE1422BC7FEAF00669505 /* nabu.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = nabu.db; sourceTree = "<group>"; };
 		00E4B60427D0E388002ACEF8 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		00E4B60727D20FD3002ACEF8 /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 		00E4B60927D21000002ACEF8 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
@@ -272,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				00EEA71C25CAC5050017F6A4 /* AboutViewModel.swift */,
+				00DEE13A2BC7F68800669505 /* DefinitionViewModel.swift */,
 				4D3596401CFEEA50008D2FAF /* Ads.swift */,
 				4DA0C3F9236C761600AF693B /* AppState.swift */,
 				0091BC042535E5A000BE7A43 /* AutoTest.swift */,
@@ -309,6 +321,7 @@
 			children = (
 				00EEA72E25CACB430017F6A4 /* AboutView.swift */,
 				006D010426A1B89000DA083D /* CardTips.swift */,
+				00DEE1402BC7F74100669505 /* DefinitionView.swift */,
 				00EEA72725CAC85A0017F6A4 /* DefinitionHelpView.swift */,
 				00EEA72225CAC8190017F6A4 /* FilterHelpView.swift */,
 				00EEA72325CAC8190017F6A4 /* HelpView.swift */,
@@ -329,6 +342,8 @@
 				00EEA71625CAC02D0017F6A4 /* AutomatedTestRow.swift */,
 				005BCB3626AACED400DF44CE /* AutoTestCard.swift */,
 				00F17DDA26A9DD4000452020 /* DefinitionsCard.swift */,
+				00DEE13D2BC7F71A00669505 /* DefinitionHeaderRow.swift */,
+				00DEE13C2BC7F71A00669505 /* DefinitionSynonymsRow.swift */,
 				00EEA70825CABFE50017F6A4 /* FeedbackRow.swift */,
 				00F17DDC26A9E17300452020 /* FilterCard.swift */,
 				005BCB3426AACA2400DF44CE /* HelpOutCard.swift */,
@@ -426,6 +441,7 @@
 				4D45EFB81A9DFABA00C40BB4 /* Info.plist */,
 				4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */,
 				4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */,
+				00DEE1422BC7FEAF00669505 /* nabu.db */,
 				001AAC2126EA9093000CC6B6 /* phrases.txt */,
 				00F17DCB26A8463400452020 /* small.txt */,
 				4DE5CA8C238EB6250013D3F5 /* sowpods.txt */,
@@ -613,6 +629,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00DEE1442BC7FEAF00669505 /* nabu.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +648,7 @@
 				003E10ED253EF72400AE8155 /* wordlist-es.txt in Resources */,
 				4DE5CA8B238EB6170013D3F5 /* words.txt in Resources */,
 				00F17DCD26A8463400452020 /* small.txt in Resources */,
+				00DEE1432BC7FEAF00669505 /* nabu.db in Resources */,
 				4D45EFC41A9DFABA00C40BB4 /* LaunchScreen.xib in Resources */,
 				4DBBEEA9239A7C3800ADCA41 /* colors.xcassets in Resources */,
 				4DE5CA8D238EB6250013D3F5 /* sowpods.txt in Resources */,
@@ -726,6 +744,7 @@
 				00F17DDB26A9DD4000452020 /* DefinitionsCard.swift in Sources */,
 				4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */,
 				005BCB3226AAC69700DF44CE /* UserGuideCard.swift in Sources */,
+				00DEE13B2BC7F68800669505 /* DefinitionViewModel.swift in Sources */,
 				4D3596411CFEEA50008D2FAF /* Ads.swift in Sources */,
 				4D9E43AD1FAC84FC007007C8 /* Filter.swift in Sources */,
 				00EEA70325CABF7D0017F6A4 /* HelpViewModel.swift in Sources */,
@@ -735,6 +754,7 @@
 				4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */,
 				0091BC052535E5A000BE7A43 /* AutoTest.swift in Sources */,
 				005BCB3926AAD23900DF44CE /* UpgradeCard.swift in Sources */,
+				00DEE1412BC7F74200669505 /* DefinitionView.swift in Sources */,
 				00EEA71225CABFE50017F6A4 /* AboutRow.swift in Sources */,
 				00EEA71A25CAC2A40017F6A4 /* Coordinator.swift in Sources */,
 				00EEA71025CABFE50017F6A4 /* FeedbackRow.swift in Sources */,
@@ -767,6 +787,7 @@
 				4DA0C3FA236C761600AF693B /* AppState.swift in Sources */,
 				4DF2DE401FB0A82300F44ADE /* ListViewController.swift in Sources */,
 				00EEA72425CAC81A0017F6A4 /* FilterHelpView.swift in Sources */,
+				00DEE13E2BC7F71A00669505 /* DefinitionSynonymsRow.swift in Sources */,
 				00EEA6FD25CABDB10017F6A4 /* TipsData.swift in Sources */,
 				00EEA72C25CAC8B50017F6A4 /* ActivityViewController.swift in Sources */,
 				4DF2DE3D1FACC4B300F44ADE /* LettersFilterTableViewCell.swift in Sources */,
@@ -774,6 +795,7 @@
 				00EEA72025CAC59D0017F6A4 /* MailView.swift in Sources */,
 				4D45EFBA1A9DFABA00C40BB4 /* AppDelegate.swift in Sources */,
 				006D010526A1B89000DA083D /* CardTips.swift in Sources */,
+				00DEE13F2BC7F71A00669505 /* DefinitionHeaderRow.swift in Sources */,
 				00F17DDD26A9E17300452020 /* FilterCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
