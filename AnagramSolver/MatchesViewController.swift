@@ -17,7 +17,9 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     fileprivate let cellIdentifier = "MatchesCell"
     fileprivate let cellIdentifierLarge = "MatchesCellLarge"
+    fileprivate let definitionSegueId = "showDefinitionSegue"
     fileprivate var model : Model!
+    fileprivate var selectedWord = ""
     private lazy var synthesizer : AVSpeechSynthesizer = {
         AVSpeechSynthesizer()
     }()
@@ -225,8 +227,10 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         if let word = model.matches.getMatch(section: indexPath.section, row: indexPath.row) {
-           let url = model.settings.getDefinitionUrl(word: word)
-           showWebPage(url)
+            let url = model.settings.getDefinitionUrl(word: word)
+            selectedWord = word
+            //showWebPage(url)
+            performSegue(withIdentifier: self.definitionSegueId, sender: self)
         }
     }
     
@@ -246,6 +250,14 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
         return model.matches.sectionTitles
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == self.definitionSegueId
+        {
+            if let definitionVC = segue.destination as? DefinitionViewController {
+                definitionVC.word = self.selectedWord
+            }
+        }
+    }
     
     // MARK: - StateChangeObserver Conformance
     func appStateChanged(_ newState: AppStates)

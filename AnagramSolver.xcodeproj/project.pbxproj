@@ -32,6 +32,7 @@
 		00CD12D527CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */; };
 		00CD12DD27CE3CAD008191B2 /* UITestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */; };
 		00CE293B2AB1D06A0002CA30 /* HelpRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CE29392AB1D0690002CA30 /* HelpRow.swift */; };
+		00DEE1382BC7EB9300669505 /* DefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DEE1372BC7EB9300669505 /* DefinitionViewController.swift */; };
 		00E4B60527D0E388002ACEF8 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B60427D0E388002ACEF8 /* ModelTests.swift */; };
 		00E4B60827D20FD3002ACEF8 /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B60727D20FD3002ACEF8 /* SettingsTests.swift */; };
 		00E4B60A27D21000002ACEF8 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B60927D21000002ACEF8 /* SearchTests.swift */; };
@@ -170,6 +171,7 @@
 		00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolverUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestUtils.swift; sourceTree = "<group>"; };
 		00CE29392AB1D0690002CA30 /* HelpRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpRow.swift; sourceTree = "<group>"; };
+		00DEE1372BC7EB9300669505 /* DefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionViewController.swift; sourceTree = "<group>"; };
 		00E4B60427D0E388002ACEF8 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		00E4B60727D20FD3002ACEF8 /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 		00E4B60927D21000002ACEF8 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 		4D1D62BB1E26674F00231DB3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				00DEE1372BC7EB9300669505 /* DefinitionViewController.swift */,
 				4DF2DE391FACBDBB00F44ADE /* FilterViewController.swift */,
 				4DF2DE3C1FACC4B300F44ADE /* LettersFilterTableViewCell.swift */,
 				4DF2DE3F1FB0A82300F44ADE /* ListViewController.swift */,
@@ -749,6 +752,7 @@
 				006D010226A1936600DA083D /* TipCard.swift in Sources */,
 				4D9E43B11FAC86EC007007C8 /* FilterFactory.swift in Sources */,
 				00EEA71325CABFE50017F6A4 /* RateRow.swift in Sources */,
+				00DEE1382BC7EB9300669505 /* DefinitionViewController.swift in Sources */,
 				0051B66225CC194300AB8B9D /* UserGuideRow.swift in Sources */,
 				00EEA72525CAC81A0017F6A4 /* HelpView.swift in Sources */,
 				00EEA72825CAC85A0017F6A4 /* DefinitionHelpView.swift in Sources */,
