@@ -394,8 +394,22 @@
                     <view key="view" contentMode="scaleToFill" id="MIE-xV-pzG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="718"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGh-Px-vnz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="718"/>
+                                <connections>
+                                    <segue destination="7Di-1g-Y0c" kind="embed" destinationCreationSelector="embedSwiftUIView:" id="EN6-NI-Xd4"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8CH-x4-4pl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dGh-Px-vnz" firstAttribute="top" secondItem="8CH-x4-4pl" secondAttribute="top" id="1q1-EK-4HH"/>
+                            <constraint firstItem="dGh-Px-vnz" firstAttribute="leading" secondItem="8CH-x4-4pl" secondAttribute="leading" id="7jC-JN-Qi4"/>
+                            <constraint firstItem="dGh-Px-vnz" firstAttribute="centerY" secondItem="MIE-xV-pzG" secondAttribute="centerY" id="UdP-pA-Jk2"/>
+                            <constraint firstItem="dGh-Px-vnz" firstAttribute="centerX" secondItem="MIE-xV-pzG" secondAttribute="centerX" id="jbi-Lu-Jsb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="A9Z-pK-3UN"/>
                     <connections>
@@ -404,7 +418,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v9m-s9-jQN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="952"/>
+            <point key="canvasLocation" x="1113" y="1032"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="4jg-Ms-Zlt">
+            <objects>
+                <hostingController id="7Di-1g-Y0c" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ual-xr-7jG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1940" y="1032"/>
         </scene>
         <!--Equal To-->
         <scene sceneID="IM2-Mz-4w7">

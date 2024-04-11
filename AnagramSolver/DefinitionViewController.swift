@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import SwiftUI
 
 class DefinitionViewController: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationItem!
 
+    ///See book, SwiftUI Essentials 34.7 for embedding UIHostingController
+    @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: AboutView())
+    }
     var word : String!
     
     override func viewDidLoad() {
