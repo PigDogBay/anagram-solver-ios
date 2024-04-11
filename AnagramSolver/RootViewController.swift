@@ -26,6 +26,8 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     private let systemFont = UIFont.preferredFont(forTextStyle: .title1)
     private var coordinator = Coordinator.sharedInstance
     private let queryTextFieldDelegate = QueryTextFieldDelegate()
+    
+    var dictionary : WordDictionary {model}
 
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var textFieldQuery: UITextField!

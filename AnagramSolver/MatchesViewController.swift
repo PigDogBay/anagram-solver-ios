@@ -260,6 +260,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
         {
             if let definitionVC = segue.destination as? DefinitionViewController {
                 definitionVC.word = self.selectedWord
+                definitionVC.dictionary = model
             }
         }
     }
