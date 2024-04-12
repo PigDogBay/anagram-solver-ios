@@ -19,8 +19,6 @@ import AVFoundation
 let synthesizer = AVSpeechSynthesizer()
 
 struct DefinitionHeaderRow: View {
-    @EnvironmentObject var coordinator : Coordinator
-
     let title : String
     @State private var speakIconScale : CGFloat = 1
     @State private var searchIconScale : CGFloat = 1
@@ -46,7 +44,7 @@ struct DefinitionHeaderRow: View {
                 searchIconScale = 1
             }
         }
-        coordinator.webLookUp(word: title)
+        Coordinator.sharedInstance.webLookUp(word: title)
     }
     
     var body: some View {
