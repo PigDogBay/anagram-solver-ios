@@ -80,7 +80,9 @@ class SearchTests: XCTestCase {
 
         //Set up filter
         app.buttons["Filters"].tap()
-        //Prefix filter is 7th textField (index 6)
+        //Pattern filter is 7th textField (index 6)
+        app.swipeUp()
+        app.swipeUp()
         app.textFields.element(boundBy: 6).tap()
         app.typeText(".!!.!!.")
         app.buttons["Search"].tap()
