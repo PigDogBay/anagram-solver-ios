@@ -15,7 +15,7 @@ struct DefinitionSynonymsRow: View {
     var body: some View {
         Group {
             Text(partOfSpeech)
-                .foregroundColor(Color("highlightRed")) +
+                .foregroundColor(Color("exampleResult")) +
             Text(synonyms)
         }
         .tint(Color("accentColor")) //Links color
