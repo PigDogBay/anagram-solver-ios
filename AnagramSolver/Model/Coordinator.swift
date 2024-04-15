@@ -20,7 +20,9 @@ class Coordinator : ObservableObject {
     var rootVC : RootViewController?
     @Published var showCards = true
     @Published var selection : Int? = nil
-    
+    //Using a @state variable to toggle the tell sheet does not work
+    @Published var showTell = false
+
     var tip : Tip = anagramTip
     
     let SHOW_ABOUT = 1

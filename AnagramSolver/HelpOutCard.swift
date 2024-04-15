@@ -9,8 +9,7 @@
 import SwiftUI
 
 struct HelpOutCard: View {
-    private let coordinator = Coordinator.sharedInstance
-    @State private var isPresented: Bool = false
+    @ObservedObject var coordinator = Coordinator.sharedInstance
 
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
@@ -23,7 +22,8 @@ struct HelpOutCard: View {
 
     private var buttons : some View {
         HStack(){
-            Button(action:{isPresented = true}){
+            //Using a @state variable to toggle the tell sheet does not work
+            Button(action:{coordinator.showTell=true}){
                 Text("TELL")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
@@ -38,7 +38,7 @@ struct HelpOutCard: View {
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
         }
-        .sheet(isPresented: $isPresented){
+        .sheet(isPresented: $coordinator.showTell){
             ActivityViewController(activityItems: [Strings.tellFriends])
         }
     }
