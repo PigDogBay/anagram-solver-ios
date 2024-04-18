@@ -14,6 +14,8 @@ import UserMessagingPlatform
 class Ads
 {
     static let bannerAdId = "ca-app-pub-3582986480189311/9351680384"
+    static let definitionAdId = "ca-app-pub-3582986480189311/9698201433"
+    
     private var isAdsSetupFinished = false
     // Use a boolean to initialize the Google Mobile Ads SDK and load ads once.
     private var isMobileAdsStartCalled = false

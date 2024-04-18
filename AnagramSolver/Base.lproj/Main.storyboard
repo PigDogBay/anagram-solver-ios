@@ -387,38 +387,50 @@
             </objects>
             <point key="canvasLocation" x="1960.8" y="207.63546798029557"/>
         </scene>
-        <!--Title-->
+        <!--Definition-->
         <scene sceneID="Tr8-5k-MNh">
             <objects>
-                <viewController id="isl-bt-h4J" customClass="DefinitionViewController" customModule="AnagramSolver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Definition" id="isl-bt-h4J" customClass="DefinitionViewController" customModule="AnagramSolver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MIE-xV-pzG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="718"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGh-Px-vnz">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="718"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="634"/>
                                 <connections>
                                     <segue destination="7Di-1g-Y0c" kind="embed" destinationCreationSelector="embedSwiftUIView:" id="EN6-NI-Xd4"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VeB-Pt-hJJ" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="634" width="375" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qSc-z5-1Yd"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8CH-x4-4pl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dGh-Px-vnz" firstAttribute="top" secondItem="8CH-x4-4pl" secondAttribute="top" id="1q1-EK-4HH"/>
-                            <constraint firstItem="dGh-Px-vnz" firstAttribute="leading" secondItem="8CH-x4-4pl" secondAttribute="leading" id="7jC-JN-Qi4"/>
-                            <constraint firstItem="dGh-Px-vnz" firstAttribute="centerY" secondItem="MIE-xV-pzG" secondAttribute="centerY" id="UdP-pA-Jk2"/>
-                            <constraint firstItem="dGh-Px-vnz" firstAttribute="centerX" secondItem="MIE-xV-pzG" secondAttribute="centerX" id="jbi-Lu-Jsb"/>
+                            <constraint firstItem="dGh-Px-vnz" firstAttribute="leading" secondItem="8CH-x4-4pl" secondAttribute="leading" id="7Fv-AR-Fah"/>
+                            <constraint firstItem="VeB-Pt-hJJ" firstAttribute="trailing" secondItem="8CH-x4-4pl" secondAttribute="trailing" id="ITO-ab-jcg"/>
+                            <constraint firstItem="VeB-Pt-hJJ" firstAttribute="top" secondItem="dGh-Px-vnz" secondAttribute="bottom" id="ex3-he-Ios"/>
+                            <constraint firstItem="VeB-Pt-hJJ" firstAttribute="leading" secondItem="8CH-x4-4pl" secondAttribute="leading" id="ga8-rP-WRB"/>
+                            <constraint firstItem="8CH-x4-4pl" firstAttribute="bottom" secondItem="VeB-Pt-hJJ" secondAttribute="bottom" id="oT2-Md-F6X"/>
+                            <constraint firstItem="dGh-Px-vnz" firstAttribute="trailing" secondItem="8CH-x4-4pl" secondAttribute="trailing" id="wBd-Tc-RFx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="A9Z-pK-3UN"/>
+                    <navigationItem key="navigationItem" title="Definition" id="A9Z-pK-3UN"/>
                     <connections>
+                        <outlet property="bannerHeightConstraint" destination="qSc-z5-1Yd" id="mRx-ew-yAJ"/>
+                        <outlet property="bannerView" destination="VeB-Pt-hJJ" id="TxW-Ba-Bwg"/>
                         <outlet property="navigationBar" destination="A9Z-pK-3UN" id="qZi-xl-lMO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v9m-s9-jQN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1113" y="1032"/>
+            <point key="canvasLocation" x="1112.8" y="1031.5270935960591"/>
         </scene>
         <!--Hosting Controller-->
         <scene sceneID="4jg-Ms-Zlt">
