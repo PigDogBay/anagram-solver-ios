@@ -78,6 +78,7 @@ abandonais
 abandonara
 abandonava
 abandoneis
+abantesmas
 abarcadora
 abarcantes
 abarcardes
@@ -1303,6 +1304,15 @@ acotovelem
 acotoveles
 acotovelou
 acougueiro
+acoutardes
+acoutareis
+acoutariam
+acoutarias
+acoutarmos
+acoutassem
+acoutasses
+acoutastes
+acoutaveis
 acovardada
 acovardado
 acovardais
@@ -6262,6 +6272,7 @@ apoquentei
 apoquentem
 apoquentes
 apoquentou
+aporofobia
 aportardes
 aportareis
 aportariam
@@ -6831,6 +6842,8 @@ arderiamos
 ardessemos
 ardimentos
 arduamente
+areariamos
+areassemos
 arejadoras
 arejadores
 arejamento
@@ -7778,15 +7791,6 @@ artriticos
 artritismo
 artropodes
 arvicultor
-arvorardes
-arvorareis
-arvorariam
-arvorarias
-arvorarmos
-arvorassem
-arvorasses
-arvorastes
-arvoraveis
 ascendamos
 ascendemos
 ascendendo
@@ -8018,16 +8022,11 @@ assemelhei
 assemelhem
 assemelhes
 assemelhou
-assenhorai
-assenhoram
 assenhorar
-assenhoras
 assenhorea
 assenhoree
 assenhorei
-assenhorem
 assenhoreo
-assenhores
 assenhorou
 assentadas
 assentador
@@ -9501,6 +9500,7 @@ avantajais
 avantajara
 avantajava
 avantajeis
+avantesmas
 avarandado
 avariardes
 avariareis
@@ -13695,6 +13695,8 @@ chamaremos
 chamarieis
 chamarizes
 chamasseis
+chamativas
+chamativos
 chamavamos
 chamejadas
 chamejados
@@ -14993,6 +14995,7 @@ comandaste
 comandavam
 comandavas
 comandemos
+comanditas
 combalamos
 combalidas
 combalidos
@@ -17954,6 +17957,7 @@ decilitrem
 decilitres
 decilitros
 decilitrou
+decimetros
 decisorias
 decisorios
 declamacao
@@ -25479,6 +25483,22 @@ encerraste
 encerravam
 encerravas
 encerremos
+encestadas
+encestados
+encestamos
+encestando
+encestaram
+encestarao
+encestaras
+encestarei
+encestarem
+encestares
+encestaria
+encestasse
+encestaste
+encestavam
+encestavas
+encestemos
 encetardes
 encetareis
 encetariam
@@ -27490,6 +27510,9 @@ entreabrir
 entreabris
 entreabriu
 entreajuda
+entrecorta
+entrecorte
+entrecorto
 entrecosto
 entregadas
 entregador
@@ -32680,6 +32703,7 @@ formigaste
 formigavam
 formigavas
 formigueis
+formosuras
 formulacao
 formuladas
 formulador
@@ -33152,6 +33176,8 @@ fumegasses
 fumegastes
 fumegaveis
 fumeguemos
+funambulas
+funambulos
 funcionada
 funcionado
 funcionais
@@ -33706,6 +33732,7 @@ geometrico
 geoquimica
 georgianas
 georgianos
+geotecnica
 geotecnico
 geotermica
 geotermico
@@ -34670,9 +34697,11 @@ hesitaveis
 heterodoxa
 heterodoxo
 heteronimo
+heureticos
 heuristica
 heuristico
 hexacampea
+hexagonais
 hibernacao
 hibernadas
 hibernados
@@ -34825,6 +34854,8 @@ historiado
 historiais
 historiara
 historiava
+historicas
+historicos
 historieis
 historieta
 hitlerismo
@@ -35599,6 +35630,7 @@ improcedes
 improcedeu
 improcedia
 improducao
+improficua
 improficuo
 improperio
 impropriai
@@ -36369,6 +36401,7 @@ inebriavas
 inebriemos
 ineficacia
 ineficazes
+inelastica
 inelastico
 inelegante
 inelegivel
@@ -39742,6 +39775,7 @@ magnificas
 magnificos
 magnificou
 magnifique
+magnitudes
 magoaramos
 magoaremos
 magoarieis
@@ -45451,6 +45485,10 @@ pigarreais
 pigarreara
 pigarreava
 pigarreeis
+pigarreiam
+pigarreias
+pigarreiem
+pigarreies
 pigmentada
 pigmentado
 pigmentais
@@ -46924,6 +46962,7 @@ primitivos
 primordial
 primordios
 primorosas
+primorosos
 principado
 principais
 principiai
@@ -55094,8 +55133,12 @@ sinonimeis
 sinonimiza
 sinonimize
 sinonimizo
+sinopticas
+sinopticos
 sintaticas
 sintaticos
+sinteticas
+sinteticos
 sintetismo
 sintetizai
 sintetizam
@@ -58085,6 +58128,8 @@ trevissima
 trevissimo
 triangular
 triangulos
+triariamos
+triassemos
 triatomico
 tribalismo
 tribulacao
@@ -58538,7 +58583,6 @@ unicamente
 unicelular
 unicidades
 unicornios
-unifamilar
 unificacao
 unificadas
 unificador
@@ -58988,6 +59032,11 @@ veneraveis
 venezianas
 venezianos
 venosidade
+ventaramos
+ventaremos
+ventarieis
+ventasseis
+ventavamos
 ventilacao
 ventiladas
 ventilador
@@ -59731,6 +59780,7 @@ zaragateia
 zaragateie
 zaragateio
 zaragateou
+zaragatoas
 zarparamos
 zarparemos
 zarparieis
@@ -59874,6 +59924,7 @@ abandonem
 abandones
 abandonos
 abandonou
+abantesma
 abarcadas
 abarcador
 abarcados
@@ -61229,6 +61280,22 @@ acostumou
 acotovela
 acotovele
 acotovelo
+acoutadas
+acoutados
+acoutamos
+acoutando
+acoutaram
+acoutarao
+acoutaras
+acoutarei
+acoutarem
+acoutares
+acoutaria
+acoutasse
+acoutaste
+acoutavam
+acoutavas
+acoutemos
 acovardai
 acovardam
 acovardar
@@ -63545,6 +63612,7 @@ algemaste
 algemavam
 algemavas
 algememos
+algerozes
 algibeira
 algoritmo
 alheardes
@@ -64949,6 +65017,7 @@ amurasses
 amurastes
 amuraveis
 anabolico
+anacondas
 anacoreta
 anaerobio
 anafardes
@@ -66152,6 +66221,7 @@ aplicavam
 aplicavas
 aplicavel
 apliqueis
+apneistas
 apocrifas
 apocrifos
 apoderada
@@ -66752,7 +66822,14 @@ ardilosos
 ardimento
 ardorosas
 ardorosos
+areadoras
+areadores
 areamento
+arearamos
+arearemos
+arearieis
+areasseis
+areavamos
 arejadora
 arejardes
 arejareis
@@ -67594,21 +67671,6 @@ artolemos
 artritica
 artritico
 artropode
-arvoradas
-arvorados
-arvoramos
-arvorando
-arvoraram
-arvorarao
-arvoraras
-arvorarei
-arvorarem
-arvorares
-arvoraria
-arvorasse
-arvoraste
-arvoravam
-arvoravas
 arvoredos
 asariamos
 asassemos
@@ -67815,8 +67877,6 @@ assemelha
 assemelhe
 assemelho
 assenhora
-assenhore
-assenhoro
 assentada
 assentado
 assentais
@@ -69174,6 +69234,7 @@ avantajei
 avantajem
 avantajes
 avantajou
+avantesma
 avarentas
 avarentos
 avariadas
@@ -73126,6 +73187,8 @@ centraste
 centravam
 centravas
 centremos
+centricas
+centricos
 centrista
 centuplos
 centurial
@@ -73296,6 +73359,8 @@ chamarmos
 chamassem
 chamasses
 chamastes
+chamativa
+chamativo
 chamaveis
 chamejada
 chamejado
@@ -74654,6 +74719,7 @@ comandais
 comandara
 comandava
 comandeis
+comandita
 combalais
 combaliam
 combalias
@@ -77100,6 +77166,7 @@ decilitra
 decilitre
 decilitro
 decimavel
+decimetro
 decisivas
 decisivos
 decisoras
@@ -79536,6 +79603,7 @@ despertas
 despertei
 despertem
 despertes
+despertos
 despertou
 despetala
 despetale
@@ -81126,6 +81194,8 @@ eclipsava
 eclipseis
 ecliptica
 ecliptico
+ecliticas
+ecliticos
 eclodidas
 eclodidos
 eclodieis
@@ -82546,6 +82616,12 @@ encerrais
 encerrara
 encerrava
 encerreis
+encestada
+encestado
+encestais
+encestara
+encestava
+encesteis
 encetadas
 encetados
 encetamos
@@ -88784,6 +88860,8 @@ fumegaste
 fumegavam
 fumegavas
 fumegueis
+funambula
+funambulo
 funcionai
 funcional
 funcionam
@@ -88999,6 +89077,7 @@ galgasses
 galgastes
 galgaveis
 galguemos
+galhardas
 galhardea
 galhardia
 galhardos
@@ -89379,6 +89458,8 @@ geometria
 geoplanos
 georgiana
 georgiano
+geosferas
+geotecnia
 geradoras
 geradores
 geraramos
@@ -90465,6 +90546,8 @@ historial
 historiam
 historiar
 historias
+historica
+historico
 historiei
 historiem
 histories
@@ -93681,6 +93764,7 @@ legaremos
 legarieis
 legasseis
 legatario
+legatorio
 legavamos
 legendada
 legendado
@@ -94046,6 +94130,7 @@ linearizo
 linfatica
 linfatico
 linfocito
+lingeries
 linguados
 linguagem
 linguicas
@@ -95301,6 +95386,7 @@ matraquea
 matraquei
 matraquem
 matraques
+matreiras
 matreiros
 matriarca
 matricial
@@ -100117,12 +100203,11 @@ picuinhas
 pieguices
 piercings
 pigarreai
-pigarream
 pigarrear
-pigarreas
 pigarreei
-pigarreem
-pigarrees
+pigarreia
+pigarreie
+pigarreio
 pigarreou
 pigmentai
 pigmentam
@@ -108481,10 +108566,14 @@ sinonimes
 sinonimia
 sinonimos
 sinonimou
+sinoptica
+sinoptico
 sintagmas
 sintatica
 sintatico
 sintaxico
+sintetica
+sintetico
 sintetiza
 sintetize
 sintetizo
@@ -111095,8 +111184,15 @@ trespunha
 trespuser
 trezentas
 trezentos
+triadoras
+triadores
 triangulo
+triaramos
+triaremos
+triarieis
 triasicos
+triasseis
+triavamos
 tribunais
 tributada
 tributado
@@ -111898,6 +111994,7 @@ vaporizei
 vaporizem
 vaporizes
 vaporizou
+vaporosas
 vaporosos
 vaqueiras
 vaqueiros
@@ -112143,6 +112240,15 @@ veneziana
 veneziano
 venezuela
 ventanias
+ventardes
+ventareis
+ventariam
+ventarias
+ventarmos
+ventassem
+ventasses
+ventastes
+ventaveis
 ventilada
 ventilado
 ventilais
@@ -112894,6 +113000,7 @@ zapatismo
 zapatista
 zaragatas
 zaragatea
+zaragatoa
 zarolhice
 zarpardes
 zarpareis
@@ -113905,6 +114012,12 @@ acostume
 acostumo
 acoteado
 acougues
+acoutada
+acoutado
+acoutais
+acoutara
+acoutava
+acouteis
 acovarda
 acovarde
 acovardo
@@ -116533,6 +116646,7 @@ amuraste
 amuravam
 amuravas
 amuremos
+anaconda
 anafadas
 anafados
 anafamos
@@ -116774,6 +116888,8 @@ animavam
 animavas
 animavel
 animemos
+animicas
+animicos
 animismo
 animista
 animosas
@@ -117405,6 +117521,7 @@ aplicava
 apliquei
 apliquem
 apliques
+apneista
 apocrifa
 apocrifo
 apoderai
@@ -117825,6 +117942,16 @@ ardiloso
 ardorosa
 ardoroso
 ardosias
+areadora
+areardes
+areareis
+areariam
+arearias
+arearmos
+areassem
+areasses
+areastes
+areaveis
 areeiros
 areentas
 areentos
@@ -118414,10 +118541,6 @@ artolara
 artolava
 artoleis
 artrites
-arvorada
-arvorado
-arvorara
-arvorava
 arvoredo
 asadoras
 asadores
@@ -118901,7 +119024,6 @@ atazanem
 atazanes
 atazanou
 ateadora
-ateantes
 ateardes
 ateareis
 ateariam
@@ -121647,6 +121769,7 @@ buscavam
 buscavas
 busqueis
 bussolas
+butiques
 buzinada
 buzinado
 buzinais
@@ -121681,6 +121804,7 @@ caberias
 cabermos
 cabiamos
 cabidela
+cabiveis
 cablagem
 cabotina
 cabotino
@@ -122934,6 +123058,8 @@ centrais
 centrara
 centrava
 centreis
+centrica
+centrico
 centuplo
 centuria
 cepaceos
@@ -124300,6 +124426,7 @@ colorido
 colorira
 colossal
 colossos
+columbia
 colunata
 colurais
 comadres
@@ -128585,6 +128712,7 @@ eclipsem
 eclipses
 eclipsou
 eclitica
+eclitico
 eclodiam
 eclodias
 eclodida
@@ -129545,6 +129673,14 @@ encerrei
 encerrem
 encerres
 encerrou
+encestai
+encestam
+encestar
+encestas
+encestei
+encestem
+encestes
+encestou
 encetada
 encetado
 encetais
@@ -131923,6 +132059,7 @@ estudais
 estudara
 estudava
 estudeis
+estudios
 estufada
 estufado
 estufais
@@ -134091,6 +134228,7 @@ fremires
 fremiria
 fremisse
 fremiste
+fremitos
 frenadas
 frenados
 frenamos
@@ -134500,6 +134638,7 @@ galgaste
 galgavam
 galgavas
 galgueis
+galharda
 galhardo
 galhofai
 galhofam
@@ -138672,6 +138811,7 @@ linchara
 linchava
 lincheis
 lineares
+lingerie
 lingotes
 linguado
 lingueta
@@ -139834,6 +139974,7 @@ matracar
 matracas
 matracou
 matraque
+matreira
 matreiro
 matrizes
 matronal
@@ -139857,6 +139998,8 @@ mauberes
 mauricia
 mauricio
 mausoleu
+maviosas
+maviosos
 maxiloso
 maximiza
 maximize
@@ -143089,6 +143232,7 @@ patuscas
 patuscos
 patuscou
 patusque
+pauladas
 paulinho
 paulismo
 paulista
@@ -143743,8 +143887,6 @@ pieguice
 piemonte
 piercing
 pigarrea
-pigarree
-pigarreo
 pigmenta
 pigmente
 pigmento
@@ -151001,6 +151143,7 @@ suestais
 suestara
 suestava
 suesteis
+sueteres
 sufismos
 sufixada
 sufixado
@@ -151785,6 +151928,7 @@ tenistas
 tenreiro
 tenrinha
 tenrinho
+tensores
 tentacao
 tentadas
 tentador
@@ -152793,8 +152937,18 @@ trespoes
 trespora
 treteiro
 trezenio
+triadora
 triagens
+triardes
+triareis
+triariam
+triarias
+triarmos
 triasico
+triassem
+triasses
+triastes
+triaveis
 tribunal
 tribunas
 tribunos
@@ -152939,6 +153093,7 @@ trocavel
 trocemos
 trocista
 trofense
+troficos
 troianas
 troianos
 trombada
@@ -153537,6 +153692,7 @@ vaporeis
 vaporiza
 vaporize
 vaporizo
+vaporosa
 vaporoso
 vaqueira
 vaqueiro
@@ -153769,7 +153925,22 @@ venereas
 venereis
 venereos
 venhamos
+ventadas
+ventados
+ventamos
+ventando
 ventania
+ventaram
+ventarao
+ventaras
+ventarei
+ventarem
+ventares
+ventaria
+ventasse
+ventaste
+ventavam
+ventavas
 ventilai
 ventilam
 ventilar
@@ -155335,7 +155506,14 @@ acostes
 acostou
 acoteia
 acougue
+acoutai
+acoutam
+acoutar
+acoutas
+acoutei
+acoutem
 acoutes
+acoutou
 acresca
 acresce
 acresci
@@ -156434,6 +156612,7 @@ algemei
 algemem
 algemes
 algemou
+algeroz
 algodao
 algozes
 algumas
@@ -156445,7 +156624,10 @@ alheais
 alheara
 alheava
 alheeis
+alheiam
 alheias
+alheiem
+alheies
 alheios
 alheira
 alheiro
@@ -157238,6 +157420,8 @@ animais
 animara
 animava
 animeis
+animica
+animico
 animosa
 animoso
 aninhai
@@ -157302,6 +157486,7 @@ antedao
 antedas
 antedei
 anteder
+antedes
 antedeu
 antediz
 antedou
@@ -157837,7 +158022,24 @@ ardieis
 ardinas
 ardores
 ardosia
+areadas
+areador
+areados
+areamos
+areando
+arearam
+arearao
+arearas
+arearei
+arearem
+areares
+arearia
+areasse
+areaste
+areavam
+areavas
 areeiro
+areemos
 areenta
 areento
 arejada
@@ -158222,10 +158424,7 @@ artoles
 artolou
 artrite
 artrose
-arvorar
-arvorei
 arvores
-arvorou
 asadora
 asardes
 asareis
@@ -158512,7 +158711,6 @@ ateador
 ateados
 ateamos
 ateando
-ateante
 atearam
 atearao
 atearas
@@ -160422,6 +160620,7 @@ busquei
 busquem
 busques
 bussola
+butique
 buzinai
 buzinam
 buzinar
@@ -160464,6 +160663,7 @@ cabieis
 cabinas
 cabinda
 cabines
+cabivel
 cabrada
 cabrita
 cabrite
@@ -161660,6 +161860,8 @@ cingias
 cingida
 cingido
 cingira
+cinicas
+cinicos
 cinismo
 cinjais
 cintada
@@ -162283,6 +162485,8 @@ conheca
 conhece
 conheci
 conheco
+conicas
+conicos
 conjuga
 conjuge
 conjugo
@@ -162867,6 +163071,7 @@ cunhara
 cunhava
 cunheis
 cupidez
+cupulas
 curadas
 curador
 curados
@@ -164965,6 +165170,9 @@ encerou
 encerra
 encerre
 encerro
+encesta
+enceste
+encesto
 encetai
 encetam
 encetar
@@ -165268,6 +165476,7 @@ enlates
 enlatou
 enlevar
 enlevei
+enlevos
 enlevou
 enlutai
 enlutam
@@ -166302,6 +166511,7 @@ estudas
 estudei
 estudem
 estudes
+estudio
 estudos
 estudou
 estufai
@@ -170149,6 +170359,8 @@ lagarto
 lagosta
 lagrima
 lagunar
+lagunas
+laicais
 laiciza
 laicize
 laicizo
@@ -171085,6 +171297,7 @@ macicas
 macicez
 macicos
 macieza
+maconha
 macudas
 macudos
 maculai
@@ -171545,6 +171758,7 @@ matutes
 matutou
 maubere
 mavilde
+maviosa
 mavioso
 maxilar
 maxilas
@@ -172076,6 +172290,7 @@ modicai
 modicam
 modicar
 modicas
+modicos
 modicou
 modinha
 modique
@@ -180136,6 +180351,8 @@ tremula
 tremule
 tremulo
 tremura
+trengas
+trengos
 trepada
 trepado
 trepais
@@ -180149,8 +180366,24 @@ trespoe
 trespor
 trespos
 trespus
+triadas
 triades
+triador
+triados
 triagem
+triamos
+triando
+triaram
+triarao
+triaras
+triarei
+triarem
+triares
+triaria
+triasse
+triaste
+triavam
+triavas
 tribais
 tribuna
 tribuno
@@ -180161,6 +180394,7 @@ tricota
 tricote
 tricoto
 triedro
+triemos
 trienal
 trienio
 trigoso
@@ -180233,6 +180467,7 @@ trocava
 troceis
 troemos
 trofeus
+trofico
 troiana
 troiano
 troleis
@@ -180350,6 +180585,7 @@ tumores
 tumular
 tumulos
 tumulto
+tunicas
 tunisia
 turbada
 turbado
@@ -180956,6 +181192,10 @@ venerou
 venhais
 venosas
 venosos
+ventada
+ventado
+ventara
+ventava
 ventila
 ventile
 ventilo
@@ -181867,7 +182107,9 @@ acosso
 acosta
 acoste
 acosto
+acouta
 acoute
+acouto
 acucar
 acudai
 acudam
@@ -182495,13 +182737,10 @@ alguma
 alguns
 alhada
 alheai
-alheam
 alhear
-alheas
 alheei
-alheem
-alhees
 alheia
+alheie
 alheio
 alheou
 alheta
@@ -182718,6 +182957,7 @@ ameies
 ameiga
 ameigo
 ameixa
+amelia
 amemos
 amenas
 amenos
@@ -182960,6 +183200,7 @@ ansias
 ansiei
 ansiou
 anteda
+antede
 antena
 antero
 anteve
@@ -183084,6 +183325,7 @@ aplane
 aplano
 aplica
 aplico
+apneia
 apodra
 apodre
 apodri
@@ -183241,8 +183483,12 @@ ardina
 arduas
 ardume
 arduos
+areada
 areado
 areais
+areara
+areava
+areeis
 areias
 arejai
 arejam
@@ -183409,7 +183655,6 @@ artola
 artole
 artolo
 arvoar
-arvora
 arvore
 asadas
 asador
@@ -184157,6 +184402,7 @@ beirem
 beires
 beirou
 beleza
+belfos
 belgas
 belica
 belico
@@ -184393,6 +184639,7 @@ bordos
 bordou
 boreal
 borges
+borico
 borlas
 borneu
 borrai
@@ -184763,6 +185010,7 @@ calcei
 calcem
 calces
 calcio
+calcos
 calcou
 caldai
 caldam
@@ -185123,6 +185371,7 @@ cercea
 cerceo
 cercos
 cercou
+cerdas
 cereal
 cereja
 cernam
@@ -185351,6 +185600,8 @@ cingia
 cingir
 cingis
 cingiu
+cinica
+cinico
 cinjam
 cinjas
 cintai
@@ -185700,6 +185951,7 @@ confim
 confio
 congro
 conica
+conico
 connor
 conota
 conote
@@ -186017,6 +186269,7 @@ cunhes
 cunhou
 cupido
 cupoes
+cupula
 curada
 curado
 curais
@@ -186707,6 +186960,8 @@ duvide
 duvido
 duzias
 ebanos
+ebrias
+ebrios
 eclode
 eclodi
 ecluda
@@ -191451,6 +191706,8 @@ ostras
 otaria
 otario
 otavio
+oticas
+oticos
 otilia
 otimas
 otimos
@@ -192244,6 +192501,7 @@ poroes
 porosa
 poroso
 porque
+porros
 portai
 portal
 portam
@@ -193256,6 +193514,7 @@ reptei
 reptem
 reptes
 reptil
+reptos
 reptou
 reputa
 repute
@@ -194137,6 +194396,8 @@ sintas
 sintra
 siques
 sirene
+sirias
+sirios
 sirvam
 sirvas
 sirzam
@@ -194414,6 +194675,7 @@ suemos
 suesta
 sueste
 suesto
+sueter
 suevas
 suevos
 sufixa
@@ -195073,6 +195335,7 @@ toucar
 toucas
 toucou
 touque
+toural
 touras
 tourea
 touros
@@ -195177,6 +195440,8 @@ tremeu
 tremia
 tremor
 tremou
+trenga
+trengo
 trenos
 trento
 trepai
@@ -195192,8 +195457,13 @@ trevas
 trevis
 triada
 triade
+triado
+triais
+triara
+triava
 tribal
 tribos
+trieis
 trigal
 trigos
 trilha
@@ -195298,6 +195568,7 @@ tulipa
 tumulo
 tundra
 tuneis
+tunica
 tuplos
 turbai
 turbam
@@ -195653,7 +195924,9 @@ venosa
 venoso
 ventar
 ventas
+ventei
 ventos
+ventou
 ventre
 verbal
 verbas
@@ -196186,6 +196459,7 @@ acnes
 acode
 acoes
 acola
+acres
 acuda
 acude
 acudi
@@ -196373,8 +196647,6 @@ alges
 algoz
 algum
 alhea
-alhee
-alheo
 alhos
 aliai
 aliam
@@ -196634,14 +196906,21 @@ ardis
 ardor
 ardua
 arduo
+areai
 areal
+aream
+arear
 areas
+areei
+areem
+arees
 areia
 areis
 areja
 areje
 arejo
 arena
+areou
 arfai
 arfam
 arfar
@@ -196735,12 +197014,8 @@ atalo
 atara
 atava
 ateai
-ateam
 atear
-ateas
 ateei
-ateem
-atees
 ateia
 ateie
 ateio
@@ -196988,6 +197263,7 @@ beire
 beiro
 belas
 belem
+belfo
 belga
 belos
 bemol
@@ -197461,6 +197737,7 @@ cepos
 ceras
 cerca
 cerco
+cerda
 cerna
 cerne
 cerni
@@ -197570,6 +197847,7 @@ cinze
 cinzo
 ciosa
 cioso
+cipos
 circe
 circo
 cirio
@@ -198172,6 +198450,7 @@ duzia
 dylan
 eanes
 ebano
+ebria
 ebrio
 ebulo
 ecoai
@@ -198198,6 +198477,7 @@ efluo
 efuso
 egide
 egito
+eguas
 eiras
 eixos
 ejeta
@@ -198880,6 +199160,7 @@ geado
 geais
 geara
 geava
+gecos
 geeis
 geiam
 geias
@@ -198977,6 +199258,7 @@ golfe
 golfo
 golos
 golpe
+gomas
 gomes
 gomez
 gomos
@@ -199312,6 +199594,7 @@ jazes
 jazeu
 jazia
 jeans
+jecos
 jeito
 jejua
 jejue
@@ -199408,6 +199691,7 @@ ladro
 lagar
 lagoa
 lagos
+laias
 laica
 laico
 laivo
@@ -200304,6 +200588,7 @@ nutre
 nutri
 nutro
 nuvem
+nuveo
 nylon
 oasis
 obesa
@@ -200465,6 +200750,7 @@ ossos
 ostra
 otelo
 otica
+otico
 otima
 otimo
 oucam
@@ -200619,6 +200905,7 @@ patas
 patim
 patio
 patos
+pauis
 paula
 pauli
 paulo
@@ -200890,6 +201177,7 @@ pores
 poria
 poros
 porra
+porro
 porta
 porte
 porto
@@ -201763,6 +202051,7 @@ sinto
 sique
 sirga
 siria
+sirio
 sirva
 sirvo
 sirza
@@ -202236,6 +202525,7 @@ tonel
 tonem
 tones
 tonga
+tonia
 tonou
 tonta
 tonto
@@ -202332,13 +202622,21 @@ treta
 treva
 trevo
 treze
+triai
+triam
+triar
+trias
 tribo
 trico
+triei
+triem
+tries
 trigo
 trina
 trine
 trino
 trios
+triou
 tripa
 tripe
 troai
@@ -203023,8 +203321,10 @@ arde
 ardi
 ardo
 area
+aree
 arei
 arem
+areo
 ares
 arfa
 arfe
@@ -203063,10 +203363,8 @@ atam
 atar
 atas
 atea
-atee
 atei
 atem
-ateo
 ater
 ates
 ateu
@@ -203436,6 +203734,7 @@ edis
 egas
 egeu
 egos
+egua
 eira
 eito
 eixo
@@ -203601,6 +203900,7 @@ gaza
 gaze
 geai
 gear
+geco
 geei
 geia
 geie
@@ -203744,6 +204044,7 @@ jazi
 jazo
 jazz
 jean
+jeco
 jipe
 joan
 joao
@@ -204100,6 +204401,7 @@ omar
 onca
 onda
 onde
+onus
 onze
 opas
 opia
@@ -204403,6 +204705,7 @@ roeu
 roga
 rogo
 roia
+rois
 rola
 role
 rolo
@@ -204665,6 +204968,9 @@ trai
 tras
 traz
 trem
+tres
+tria
+trie
 trio
 triz
 troa
@@ -204927,6 +205233,7 @@ dar
 das
 dei
 der
+des
 deu
 dez
 dia
@@ -205058,6 +205365,7 @@ oca
 oco
 ode
 ola
+ole
 oma
 opa
 ora
@@ -205131,6 +205439,7 @@ sol
 som
 soo
 sor
+sos
 sou
 sra
 sta
@@ -205182,6 +205491,7 @@ vau
 vaz
 vem
 ver
+ves
 veu
 vez
 via
@@ -205199,6 +205509,7 @@ vou
 voz
 web
 xas
+xis
 yao
 zas
 zes

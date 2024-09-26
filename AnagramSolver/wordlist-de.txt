@@ -20557,8 +20557,8 @@ installierst
 installierte
 instandsetze
 instandsetzt
-instantiiere
-instantiiert
+instanziiere
+instanziiert
 instinktivem
 instinktiven
 instinktiver
@@ -181553,6 +181553,7 @@ systeme
 systems
 tabelle
 tableau
+tablets
 tablett
 tadelnd
 tadelst
@@ -190557,6 +190558,7 @@ syrier
 system
 szenen
 tabaks
+tablet
 tabula
 tadele
 tadeln
@@ -197575,7 +197577,6 @@ gel
 gen
 gib
 gnu
-gst
 gut
 hab
 hai
@@ -197787,6 +197788,7 @@ an
 da
 du
 eh
+ei
 er
 es
 ex
