@@ -30,7 +30,7 @@ class Ads
     private func setUpDebug(_ parameters : UMPRequestParameters){
         UMPConsentInformation.sharedInstance.reset()
         let debugSettings = UMPDebugSettings()
-        debugSettings.geography = .notEEA
+        debugSettings.geography = .other
         debugSettings.testDeviceIdentifiers = ["A9AB339F-440F-4116-9BA1-BF7EC15CB959"]
         parameters.debugSettings = debugSettings
     }
