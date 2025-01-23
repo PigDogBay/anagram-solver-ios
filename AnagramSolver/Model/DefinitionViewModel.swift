@@ -50,7 +50,11 @@ class DefinitionViewModel : ObservableObject {
     func synonymTapped(_ url : URL) {
         if let synonym = url.absoluteString.removingPercentEncoding {
             let result = dictionary.lookUpDefinition(synonym)
-            convert(result)
+            if result.isDefinitionAvailable {
+                convert(result)
+            } else {
+                Coordinator.sharedInstance.webLookUp(word: synonym)
+            }
         }
     }
     
