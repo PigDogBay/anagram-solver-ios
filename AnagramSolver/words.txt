@@ -93957,6 +93957,7 @@ athermancy
 atheromata
 athetising
 athetizing
+athleisure
 athrocytes
 atmologies
 atmologist
@@ -290166,6 +290167,7 @@ zoozoo
 zorils
 zorino
 zorros
+zorses
 zoster
 zouave
 zounds
@@ -296414,6 +296416,7 @@ hunan
 hunch
 hunks
 hunky
+hunte
 hunts
 hupas
 hupeh
@@ -305585,6 +305588,7 @@ zorch
 zoril
 zoris
 zorro
+zorse
 zosma
 zouks
 zowie
@@ -310240,6 +310244,7 @@ ragg
 ragi
 rago
 rags
+ragu
 rahs
 rahu
 raia

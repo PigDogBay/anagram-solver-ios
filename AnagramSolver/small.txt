@@ -18667,6 +18667,7 @@ atascadero
 athabascan
 athabaskan
 athanasius
+athleisure
 atmosphere
 atomically
 atrocities
@@ -80781,6 +80782,7 @@ zombis
 zoning
 zonked
 zoomed
+zorses
 zoster
 zounds
 zurich
@@ -83587,6 +83589,7 @@ hunan
 hunch
 hunks
 hunky
+hunte
 hunts
 hurls
 huron
@@ -87464,6 +87467,7 @@ zoned
 zones
 zooms
 zorro
+zorse
 zosma
 zukor
 zulus
@@ -89808,6 +89812,7 @@ raft
 raga
 rage
 rags
+ragu
 raid
 rail
 rain
