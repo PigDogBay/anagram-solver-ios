@@ -146,7 +146,7 @@ class FilterViewController: UITableViewController, LettersCellCallback {
         case 3:
             return ""
         case 4:
-            return "To create a pattern, use . to represent any letter and @ for 1 or more letters, eg s.r..b.e"
+            return "To create a pattern, use . to represent any letter and @ for 0 or more letters, eg s.r..b.e"
         case 5:
             return "Edit the main search query"
         default:

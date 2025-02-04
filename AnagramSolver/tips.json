@@ -65,8 +65,8 @@
     {
         "id" : 1008,
         "title" : "Prefix@Suffix",
-        "subtitle" : "Use @ for 1 or more unknown letters",
-        "description" : "A pattern search similar to crosswords where @ represents 1 or more unknown letters",
+        "subtitle" : "Use @ for 0 or more unknown letters",
+        "description" : "A pattern search similar to crosswords where @ represents 0 or more unknown letters",
         "example" : "supersophisticated, superheated",
         "advanced" : "You can mix . and @ in your search, enter sup@x. to find supergalaxy",
         "showMe" : "super@ted"
