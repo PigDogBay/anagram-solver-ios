@@ -18,7 +18,7 @@ struct DefinitionSynonymsRow: View {
                 .foregroundColor(Color("exampleResult")) +
             Text(synonyms)
         }
-        .tint(Color("accentColor")) //Links color
+        .tint(Color("synonymColor")) //Links color
     }
 }
 
