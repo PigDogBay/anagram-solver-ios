@@ -120,6 +120,7 @@ class Settings
     private let fullStopToQuestionMarkKey = "fullStopToQuestionMark"
     private let spaceToQuestionMarkKey = "spaceToQuestionMark"
     private let useLargeResultsFontKey = "useLargeResultsFont"
+    private let enableSearchHistoryKey = "enableSearchHistory"
 
     let defaultWordList = "words"
     let defaultDefinition = "google define"
@@ -136,6 +137,7 @@ class Settings
     let defaultFullStopToQuestionMark = false
     let defaultSpaceToQuestionMark = false
     let defaultUseLargeResultsFont = false
+    let defaultEnableSearchHistory = true
 
     var highlight : UIColor {
         get {
@@ -363,6 +365,17 @@ class Settings
         }
     }
 
+    var isSearchHistoryEnabled : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: enableSearchHistoryKey)
+        }
+        set(flag) {
+            if flag != isSearchHistoryEnabled {
+                let defaults = UserDefaults.standard
+                defaults.set(flag, forKey: enableSearchHistoryKey)
+            }
+        }
+    }
     func registerDefaultSettings() {
         let defaultSettings : [ String : Any] = [definitionKey : defaultDefinition,
                                                   highlightKey : defaultHighlight,
@@ -380,6 +393,7 @@ class Settings
                                                useUpperCaseKey : defaultUseUppercase,
                                           useMonospacedFontKey : defaultMonospacedFont,
                                         useLargeResultsFontKey : defaultUseLargeResultsFont,
+                                         enableSearchHistoryKey: defaultEnableSearchHistory,
                                       useNonPersonalizedAdsKey : false]
         UserDefaults.standard.register(defaults: defaultSettings)
     }

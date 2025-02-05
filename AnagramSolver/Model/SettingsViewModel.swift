@@ -103,6 +103,12 @@ class SettingsViewModel : ObservableObject {
         }
     }
 
+    @Published var isSearchHistoryEnabled : Bool {
+        didSet {
+            settings.isSearchHistoryEnabled = isSearchHistoryEnabled
+        }
+    }
+
     init(){
         wordList = settings.wordList
         definition = settings.definition
@@ -119,6 +125,7 @@ class SettingsViewModel : ObservableObject {
         spaceToQuestionMark = settings.spaceToQuestionMark
         fullStopToQuestionMark = settings.fullStopToQuestionMark
         useLargeResultsFont = settings.useLargeResultsFont
+        isSearchHistoryEnabled = settings.isSearchHistoryEnabled
     }
  
     func resetToDefaultSettings(){
@@ -137,5 +144,6 @@ class SettingsViewModel : ObservableObject {
         fullStopToQuestionMark = settings.defaultFullStopToQuestionMark
         darkModeOverride = settings.defaultDarkMode
         useLargeResultsFont = settings.defaultUseLargeResultsFont
+        isSearchHistoryEnabled = settings.defaultEnableSearchHistory
     }
 }

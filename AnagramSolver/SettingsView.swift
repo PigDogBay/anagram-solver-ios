@@ -96,6 +96,17 @@ struct SettingsView: View {
             }
         }.modifier(ToggleMod())
     }
+    
+    private var searchHistoryToggle : some View {
+        Toggle(isOn: $viewModel.isSearchHistoryEnabled) {
+            if viewModel.isSearchHistoryEnabled {
+                Text("Search history is on")
+            } else {
+                Text("Search history is off")
+            }
+        }.modifier(ToggleMod())
+    }
+
 
     private var settingsForm : some View {
         Form {
@@ -157,6 +168,7 @@ struct SettingsView: View {
             }
 
             Section(header: Text("OTHER")){
+                searchHistoryToggle
                 longPressToggle
             }
         }
