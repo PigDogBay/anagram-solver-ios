@@ -11,8 +11,6 @@ import SwiftUtils
 
 class SearchHistoryCardViewModel : ObservableObject {
     @Published var showHistory = true
-    
-    private var isFirstTimeAppeared = true
 
     var history : [String] = Model.sharedInstance
         .searchHistory
@@ -41,16 +39,21 @@ class SearchHistoryCardViewModel : ObservableObject {
             && latest[0] == history[0] )
     }
     
-    func onAppear(){
-        if isFirstTimeAppeared {
-            isFirstTimeAppeared = false
-            return
+    func checkShowHistory(_ historyCount : Int){
+        let canShow = historyCount > 4
+        if canShow != showHistory {
+            showHistory = !canShow
         }
+    }
+    
+    func onAppear(){
         //Check if need to update the history
         let latest = Model.sharedInstance
             .searchHistory
             .getHistory()
-        if hasHistoryChanged(latest){
+        checkShowHistory(latest.count)
+
+        if showHistory && hasHistoryChanged(latest){
             //show updated history
             history = latest
             objectWillChange.send()

@@ -50,9 +50,6 @@ struct SearchHistoryCard: View {
             }
             return .discarded
         })
-        .onAppear{
-            viewModel.onAppear()
-        }
     }
 }
 

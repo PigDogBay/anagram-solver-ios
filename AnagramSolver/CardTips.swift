@@ -67,6 +67,9 @@ struct CardTips: View {
             .padding(.top, 16)
             .padding(.bottom, 48)
         }
+        .onAppear{
+            searchCardViewModel.onAppear()
+        }
         .background(Color("tipsBackground"))
         .gesture(DragGesture().onChanged { _ in
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
