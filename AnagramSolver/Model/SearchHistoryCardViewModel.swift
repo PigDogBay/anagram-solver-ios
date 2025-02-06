@@ -31,6 +31,7 @@ class SearchHistoryCardViewModel : ObservableObject {
     }
 
     func clearHistory(){
+        Model.sharedInstance.clearSearchHistory()
         showHistory = false
     }
     

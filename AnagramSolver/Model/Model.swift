@@ -170,6 +170,12 @@ class Model : WordListCallback, IAPDelegate, WordDictionary
         }
     }
     
+    func clearSearchHistory(){
+        searchHistory.clear()
+        let persistence = SearchHistoryPersistence()
+        persistence.clear()
+    }
+    
     //MARK:- WordDictionary implementation
     func lookUpDefinition(_ word : String) -> LookUpResult {
         lookUpResult = nabuLookUp?.lookUp(word: word) ?? LookUpResult(word: "", definitions: [])
