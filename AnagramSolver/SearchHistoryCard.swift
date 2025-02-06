@@ -15,7 +15,7 @@ struct SearchHistoryCard: View {
 
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
-            ForEach(viewModel.markdownLinks, id: \.self) { historyItem in
+            ForEach(viewModel.historyModel.markdownLinks, id: \.self) { historyItem in
                 Text(LocalizedStringKey(historyItem))
             }
         }

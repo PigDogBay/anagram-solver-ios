@@ -10,56 +10,29 @@ import Foundation
 import SwiftUtils
 
 class SearchHistoryCardViewModel : ObservableObject {
-    @Published var showHistory = true
+    @Published var showHistory : Bool
     
     let historyModel : SearchHistoryModel
-    var history : [String]
 
     init(_ historyModel : SearchHistoryModel){
         self.historyModel = historyModel
-        history = historyModel.searchHistory.getHistory()
+        self.showHistory = historyModel.canShowSearchHistory
     }
     
-    ///Converts the queries to markdown that the user can tap on
-    ///Only takes the first 5 history entries
-    var markdownLinks : [String] {
-        if history.count < 5 {
-            return []
-        }
-        return history
-            .prefix(upTo: 5)
-            .map {$0.trimmingCharacters(in: .whitespaces)}
-            .map {"[\($0)](\($0.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""))"}
-    }
-
     func clearHistory(){
         historyModel.clearSearchHistory()
         showHistory = false
     }
     
-    private func hasHistoryChanged(_ latest : [String]) -> Bool {
-        return !( latest.count == history.count
-            && latest.count>0
-            && latest[0] == history[0] )
-    }
-    
-    func checkShowHistory(_ historyCount : Int){
-        let canShow = historyCount > 4
-        if canShow != showHistory {
-            showHistory = canShow
-        }
-    }
-    
     func onAppear(){
-        //Check if need to update the history
-        let latest = historyModel
-            .searchHistory
-            .getHistory()
-        checkShowHistory(latest.count)
+        //Sync with model, but only set if different ( to
+        //prevent unnecessary change notifications)
+        if historyModel.canShowSearchHistory != showHistory {
+            showHistory = historyModel.canShowSearchHistory
+        }
 
-        if showHistory && hasHistoryChanged(latest){
-            //show updated history
-            history = latest
+        //Check if need to update the history
+        if showHistory && historyModel.hasHistoryChanged(){
             objectWillChange.send()
         }
     }
