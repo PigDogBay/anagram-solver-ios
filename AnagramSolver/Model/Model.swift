@@ -23,7 +23,7 @@ class Model : WordListCallback, IAPDelegate, WordDictionary
     let appState = AppStateObservable()
     let wordSearch : WordSearch
     let searchParser = SearchParser()
-    lazy private(set) var searchHistory = SearchHistoryPersistence().load()
+    lazy private(set) var searchHistoryModel = SearchHistoryModel()
     let wordFormatter = WordFormatter()
     let matches = Matches()
     var query = ""
@@ -41,7 +41,7 @@ class Model : WordListCallback, IAPDelegate, WordDictionary
     var nabuLookUp : NabuLookUp? = nil
     ///Store lookUpResult for DefinitionView
     var lookUpResult : LookUpResult = LookUpResult(word: "", definitions: [])
-
+    
     init()
     {
         filter = Filter()
@@ -118,7 +118,7 @@ class Model : WordListCallback, IAPDelegate, WordDictionary
         let filterPipeline = filterFactory.createChainedCallback(lastCallback: self)
         filter.updateFilterCount()
         self.wordSearch.runQuery(searchQuery, callback: filterPipeline)
-        updateSearchHistory(query: query)
+        searchHistoryModel.updateSearchHistory(query: query)
         appState.appState = .finished
     }
     
@@ -160,22 +160,6 @@ class Model : WordListCallback, IAPDelegate, WordDictionary
             appState.appState = .uninitialized
         }
     }
-    
-    func updateSearchHistory(query : String){
-        if settings.isSearchHistoryEnabled {
-            searchHistory.add(query: query)
-            //save it
-            let persistence = SearchHistoryPersistence()
-            persistence.save(history: self.searchHistory)
-        }
-    }
-    
-    func clearSearchHistory(){
-        searchHistory.clear()
-        let persistence = SearchHistoryPersistence()
-        persistence.clear()
-    }
-    
     //MARK:- WordDictionary implementation
     func lookUpDefinition(_ word : String) -> LookUpResult {
         lookUpResult = nabuLookUp?.lookUp(word: word) ?? LookUpResult(word: "", definitions: [])

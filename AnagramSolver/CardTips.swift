@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CardTips: View {
     private let coordinator = Coordinator.sharedInstance
-    @ObservedObject var searchCardViewModel = SearchHistoryCardViewModel()
+    @ObservedObject var searchCardViewModel = SearchHistoryCardViewModel(Model.sharedInstance.searchHistoryModel)
     let columns = [GridItem(.adaptive(minimum: 350))]
     
     var body: some View {

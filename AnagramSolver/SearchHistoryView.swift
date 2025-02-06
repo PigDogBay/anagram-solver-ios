@@ -11,6 +11,7 @@ import SwiftUI
 struct SearchHistoryView: View {
     private let coordinator = Coordinator.sharedInstance
     private let history = Model.sharedInstance
+        .searchHistoryModel
         .searchHistory
         .getHistory()
 

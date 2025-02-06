@@ -11,10 +11,14 @@ import SwiftUtils
 
 class SearchHistoryCardViewModel : ObservableObject {
     @Published var showHistory = true
+    
+    let historyModel : SearchHistoryModel
+    var history : [String]
 
-    var history : [String] = Model.sharedInstance
-        .searchHistory
-        .getHistory()
+    init(_ historyModel : SearchHistoryModel){
+        self.historyModel = historyModel
+        history = historyModel.searchHistory.getHistory()
+    }
     
     ///Converts the queries to markdown that the user can tap on
     ///Only takes the first 5 history entries
@@ -29,7 +33,7 @@ class SearchHistoryCardViewModel : ObservableObject {
     }
 
     func clearHistory(){
-        Model.sharedInstance.clearSearchHistory()
+        historyModel.clearSearchHistory()
         showHistory = false
     }
     
@@ -42,13 +46,13 @@ class SearchHistoryCardViewModel : ObservableObject {
     func checkShowHistory(_ historyCount : Int){
         let canShow = historyCount > 4
         if canShow != showHistory {
-            showHistory = !canShow
+            showHistory = canShow
         }
     }
     
     func onAppear(){
         //Check if need to update the history
-        let latest = Model.sharedInstance
+        let latest = historyModel
             .searchHistory
             .getHistory()
         checkShowHistory(latest.count)

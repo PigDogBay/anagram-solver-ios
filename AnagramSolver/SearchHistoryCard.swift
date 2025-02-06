@@ -56,8 +56,8 @@ struct SearchHistoryCard: View {
 struct SearchHistoryCard_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SearchHistoryCard(viewModel: SearchHistoryCardViewModel())
-            SearchHistoryCard(viewModel: SearchHistoryCardViewModel())
+            SearchHistoryCard(viewModel: SearchHistoryCardViewModel(SearchHistoryModel()))
+            SearchHistoryCard(viewModel: SearchHistoryCardViewModel(SearchHistoryModel()))
                 .preferredColorScheme(.dark)
             
         }.previewLayout(.fixed(width: 300, height: 220))
