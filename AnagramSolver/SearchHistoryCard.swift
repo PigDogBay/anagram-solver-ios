@@ -12,15 +12,23 @@ import SwiftUtils
 struct SearchHistoryCard: View {
     private let coordinator = Coordinator.sharedInstance
     
-    private let history = Model.sharedInstance
-        .searchHistory
-        .getHistory()
-        .prefix(upTo: 5)
+    func getHistory() -> [String] {
+        let history = Model.sharedInstance
+            .searchHistory
+            .getHistory()
+        if history.count < 5 {
+            return []
+        }
+        return history
+            .prefix(upTo: 5)
+            .map {$0.trimmingCharacters(in: .whitespaces)}
+            .map {"[\($0)](\($0.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""))"}
+    }
 
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
-            ForEach(history, id: \.self) { historyItem in
-                Text(historyItem)
+            ForEach(getHistory(), id: \.self) { historyItem in
+                Text(LocalizedStringKey(historyItem))
             }
         }
     }
@@ -48,6 +56,12 @@ struct SearchHistoryCard: View {
             buttons
                 .padding(16)
         }
+        .environment(\.openURL, OpenURLAction { url in
+            if let query = url.absoluteString.removingPercentEncoding{
+                coordinator.showHelpExample(example: query)
+            }
+            return .discarded
+        })
     }
 }
 
