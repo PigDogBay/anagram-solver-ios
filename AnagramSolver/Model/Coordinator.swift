@@ -22,7 +22,6 @@ class Coordinator : ObservableObject {
     @Published var selection : Int? = nil
     //Using a @state variable to toggle the tell sheet does not work
     @Published var showTell = false
-    @Published var showHistory = true
 
     var tip : Tip = anagramTip
     
@@ -73,10 +72,6 @@ class Coordinator : ObservableObject {
         if let url = URL(string: address) {
             UIApplication.shared.open(url, options: [:])
         }
-    }
-    
-    func clearHistory(){
-        showHistory = false
     }
 }
 

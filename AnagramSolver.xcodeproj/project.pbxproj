@@ -29,6 +29,7 @@
 		0091BC052535E5A000BE7A43 /* AutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091BC042535E5A000BE7A43 /* AutoTest.swift */; };
 		0092DE872D54DB7400D0AFB5 /* SearchHistoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE852D54DB6D00D0AFB5 /* SearchHistoryCard.swift */; };
 		0092DE892D54E3B700D0AFB5 /* SearchHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE882D54E3AE00D0AFB5 /* SearchHistoryView.swift */; };
+		0092DE8B2D551B3400D0AFB5 /* SearchHistoryCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE8A2D551B2500D0AFB5 /* SearchHistoryCardViewModel.swift */; };
 		00B81C572AD56BAB00A4FF17 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B81C562AD56BAB00A4FF17 /* AppTrackingTransparency.framework */; };
 		00CD12D327CE326C008191B2 /* AnagramSolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12D227CE326C008191B2 /* AnagramSolverUITests.swift */; };
 		00CD12D527CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */; };
@@ -175,6 +176,7 @@
 		0091BC042535E5A000BE7A43 /* AutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTest.swift; sourceTree = "<group>"; };
 		0092DE852D54DB6D00D0AFB5 /* SearchHistoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryCard.swift; sourceTree = "<group>"; };
 		0092DE882D54E3AE00D0AFB5 /* SearchHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryView.swift; sourceTree = "<group>"; };
+		0092DE8A2D551B2500D0AFB5 /* SearchHistoryCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryCardViewModel.swift; sourceTree = "<group>"; };
 		00B81C562AD56BAB00A4FF17 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		00CD12D027CE326C008191B2 /* AnagramSolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnagramSolverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CD12D227CE326C008191B2 /* AnagramSolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolverUITests.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				4D9D30EA1D156D5D0088392C /* IAPHelper.swift */,
 				4DA0C3F6236B0FC800AF693B /* Matches.swift */,
 				4D45F0231A9E487A00C40BB4 /* Model.swift */,
+				0092DE8A2D551B2500D0AFB5 /* SearchHistoryCardViewModel.swift */,
 				4D45D7B21E2CF0C500EC2D27 /* Settings.swift */,
 				004AA91E26CE565F00A63C47 /* SettingsViewModel.swift */,
 				0029A03425307170002E96D1 /* Strings.swift */,
@@ -794,6 +797,7 @@
 				005BCB3526AACA2400DF44CE /* HelpOutCard.swift in Sources */,
 				4DA0C3FA236C761600AF693B /* AppState.swift in Sources */,
 				4DF2DE401FB0A82300F44ADE /* ListViewController.swift in Sources */,
+				0092DE8B2D551B3400D0AFB5 /* SearchHistoryCardViewModel.swift in Sources */,
 				00EEA72425CAC81A0017F6A4 /* FilterHelpView.swift in Sources */,
 				00DEE13E2BC7F71A00669505 /* DefinitionSynonymsRow.swift in Sources */,
 				00EEA6FD25CABDB10017F6A4 /* TipsData.swift in Sources */,

@@ -11,23 +11,11 @@ import SwiftUtils
 
 struct SearchHistoryCard: View {
     private let coordinator = Coordinator.sharedInstance
-    
-    func getHistory() -> [String] {
-        let history = Model.sharedInstance
-            .searchHistory
-            .getHistory()
-        if history.count < 5 {
-            return []
-        }
-        return history
-            .prefix(upTo: 5)
-            .map {$0.trimmingCharacters(in: .whitespaces)}
-            .map {"[\($0)](\($0.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""))"}
-    }
+    @ObservedObject var viewModel : SearchHistoryCardViewModel
 
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
-            ForEach(getHistory(), id: \.self) { historyItem in
+            ForEach(viewModel.markdownLinks, id: \.self) { historyItem in
                 Text(LocalizedStringKey(historyItem))
             }
         }
@@ -35,7 +23,7 @@ struct SearchHistoryCard: View {
 
     private var buttons : some View {
         HStack(){
-            Button(action:{coordinator.clearHistory()}){
+            Button(action:{viewModel.clearHistory()}){
                 Text("CLEAR")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
@@ -62,14 +50,17 @@ struct SearchHistoryCard: View {
             }
             return .discarded
         })
+        .onAppear{
+            viewModel.onAppear()
+        }
     }
 }
 
 struct SearchHistoryCard_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SearchHistoryCard()
-            SearchHistoryCard()
+            SearchHistoryCard(viewModel: SearchHistoryCardViewModel())
+            SearchHistoryCard(viewModel: SearchHistoryCardViewModel())
                 .preferredColorScheme(.dark)
             
         }.previewLayout(.fixed(width: 300, height: 220))
