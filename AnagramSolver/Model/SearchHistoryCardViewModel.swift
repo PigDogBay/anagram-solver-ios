@@ -24,6 +24,8 @@ class SearchHistoryCardViewModel : ObservableObject {
         showHistory = false
     }
     
+    ///If navigating back from the matches view controller, the view will not be recreated
+    ///so need to sync with the model
     func onAppear(){
         //Sync with model, but only set if different ( to
         //prevent unnecessary change notifications)
