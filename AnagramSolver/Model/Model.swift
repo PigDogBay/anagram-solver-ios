@@ -23,6 +23,7 @@ class Model : WordListCallback, IAPDelegate, WordDictionary
     let appState = AppStateObservable()
     let wordSearch : WordSearch
     let searchParser = SearchParser()
+    lazy private(set) var searchHistory = SearchHistoryPersistence().load()
     let wordFormatter = WordFormatter()
     let matches = Matches()
     var query = ""
@@ -117,6 +118,7 @@ class Model : WordListCallback, IAPDelegate, WordDictionary
         let filterPipeline = filterFactory.createChainedCallback(lastCallback: self)
         filter.updateFilterCount()
         self.wordSearch.runQuery(searchQuery, callback: filterPipeline)
+        updateSearchHistory(query: query)
         appState.appState = .finished
     }
     
@@ -156,6 +158,15 @@ class Model : WordListCallback, IAPDelegate, WordDictionary
         if oldValue != wordListName{
             //Use Pro Word list setting has changed
             appState.appState = .uninitialized
+        }
+    }
+    
+    func updateSearchHistory(query : String){
+        if settings.isSearchHistoryEnabled {
+            searchHistory.add(query: query)
+            //save it
+            let persistence = SearchHistoryPersistence()
+            persistence.save(history: self.searchHistory)
         }
     }
     
