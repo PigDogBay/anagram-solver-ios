@@ -27,6 +27,8 @@
 		0081F01525B1BB6C00792552 /* wordlist-it.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01325B1BB6C00792552 /* wordlist-it.txt */; };
 		0081F01625B1BB6C00792552 /* wordlist-pt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01425B1BB6C00792552 /* wordlist-pt.txt */; };
 		0091BC052535E5A000BE7A43 /* AutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091BC042535E5A000BE7A43 /* AutoTest.swift */; };
+		0092DE872D54DB7400D0AFB5 /* SearchHistoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE852D54DB6D00D0AFB5 /* SearchHistoryCard.swift */; };
+		0092DE892D54E3B700D0AFB5 /* SearchHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE882D54E3AE00D0AFB5 /* SearchHistoryView.swift */; };
 		00B81C572AD56BAB00A4FF17 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B81C562AD56BAB00A4FF17 /* AppTrackingTransparency.framework */; };
 		00CD12D327CE326C008191B2 /* AnagramSolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12D227CE326C008191B2 /* AnagramSolverUITests.swift */; };
 		00CD12D527CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */; };
@@ -171,6 +173,8 @@
 		0081F01325B1BB6C00792552 /* wordlist-it.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-it.txt"; sourceTree = "<group>"; };
 		0081F01425B1BB6C00792552 /* wordlist-pt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-pt.txt"; sourceTree = "<group>"; };
 		0091BC042535E5A000BE7A43 /* AutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTest.swift; sourceTree = "<group>"; };
+		0092DE852D54DB6D00D0AFB5 /* SearchHistoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryCard.swift; sourceTree = "<group>"; };
+		0092DE882D54E3AE00D0AFB5 /* SearchHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryView.swift; sourceTree = "<group>"; };
 		00B81C562AD56BAB00A4FF17 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		00CD12D027CE326C008191B2 /* AnagramSolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnagramSolverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CD12D227CE326C008191B2 /* AnagramSolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolverUITests.swift; sourceTree = "<group>"; };
@@ -326,6 +330,7 @@
 				00EEA72225CAC8190017F6A4 /* FilterHelpView.swift */,
 				00EEA72325CAC8190017F6A4 /* HelpView.swift */,
 				00F17DD326A9ABD000452020 /* RootView.swift */,
+				0092DE882D54E3AE00D0AFB5 /* SearchHistoryView.swift */,
 				00F17DD826A9D00700452020 /* SettingsHelpView.swift */,
 				004AA91B26CD306D00A63C47 /* SettingsView.swift */,
 				00EEA6F925CABCA60017F6A4 /* TipsView.swift */,
@@ -351,6 +356,7 @@
 				00CE29392AB1D0690002CA30 /* HelpRow.swift */,
 				00EEA71F25CAC59D0017F6A4 /* MailView.swift */,
 				00EEA70B25CABFE50017F6A4 /* RateRow.swift */,
+				0092DE852D54DB6D00D0AFB5 /* SearchHistoryCard.swift */,
 				00F17DD626A9CC3500452020 /* SettingsCard.swift */,
 				004AA92026CEB1CB00A63C47 /* SettingsPicker.swift */,
 				00EEA70C25CABFE50017F6A4 /* TellFriendRow.swift */,
@@ -756,6 +762,7 @@
 				005BCB3926AAD23900DF44CE /* UpgradeCard.swift in Sources */,
 				00DEE1412BC7F74200669505 /* DefinitionView.swift in Sources */,
 				00EEA71225CABFE50017F6A4 /* AboutRow.swift in Sources */,
+				0092DE892D54E3B700D0AFB5 /* SearchHistoryView.swift in Sources */,
 				00EEA71A25CAC2A40017F6A4 /* Coordinator.swift in Sources */,
 				00EEA71025CABFE50017F6A4 /* FeedbackRow.swift in Sources */,
 				002E8E7A27ECDA3C002BFC3E /* QueryTextFieldDelegate.swift in Sources */,
@@ -774,6 +781,7 @@
 				00EEA71325CABFE50017F6A4 /* RateRow.swift in Sources */,
 				00DEE1382BC7EB9300669505 /* DefinitionViewController.swift in Sources */,
 				0051B66225CC194300AB8B9D /* UserGuideRow.swift in Sources */,
+				0092DE872D54DB7400D0AFB5 /* SearchHistoryCard.swift in Sources */,
 				00EEA72525CAC81A0017F6A4 /* HelpView.swift in Sources */,
 				00EEA72825CAC85A0017F6A4 /* DefinitionHelpView.swift in Sources */,
 				001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */,

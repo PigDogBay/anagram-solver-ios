@@ -15,7 +15,10 @@ struct CardTips: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 16) {
-                
+                if coordinator.showHistory {
+                    SearchHistoryCard()
+                        .modifier(CardMod())
+                }
                 Group {
                     TipCard(tip: anagramTip)
                         .modifier(CardMod())

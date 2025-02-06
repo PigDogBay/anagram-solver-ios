@@ -55,6 +55,11 @@ struct RootView: View {
                        selection: $coordinator.selection){
             EmptyView()
         }.buttonStyle(.plain)
+        NavigationLink(destination: SearchHistoryView(),
+                       tag: coordinator.SHOW_SEARCH_HISTORY,
+                       selection: $coordinator.selection){
+            EmptyView()
+        }.buttonStyle(.plain)
     }
 }
 
