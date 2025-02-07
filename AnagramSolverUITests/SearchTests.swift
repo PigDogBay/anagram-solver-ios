@@ -67,7 +67,7 @@ class SearchTests: XCTestCase {
         app.textFields.element.tap()
         app.typeText("t!!ter@")
         app.buttons["Search"].tap()
-        XCTAssertTrue(app.staticTexts["Matches: 9"].waitForExistence(timeout: SEARCH_TIMEOUT))
+        XCTAssertTrue(app.staticTexts["Matches: 13"].waitForExistence(timeout: SEARCH_TIMEOUT))
         XCTAssertTrue(app.tables.element.staticTexts["teeterboards"].waitForExistence(timeout: SEARCH_TIMEOUT))
     }
 
