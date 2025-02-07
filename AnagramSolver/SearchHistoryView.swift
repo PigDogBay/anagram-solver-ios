@@ -24,11 +24,14 @@ class SearchHistoryViewVM : ObservableObject {
             .getHistory()
     }
 
+    func clearHistory(){
+        historyModel.clearSearchHistory()
+        objectWillChange.send()
+    }
     func onAppear(){
         if refreshRequired {
             refreshRequired = false
         }
-
     }
 }
 
@@ -63,6 +66,9 @@ struct SearchHistoryView: View {
         }
         .listStyle(.plain)
         .navigationBarTitle(Text("History"), displayMode: .inline)
+        .navigationBarItems(trailing: Button("Clear"){
+            viewModel.clearHistory()
+            }.tint(Color.white))
         .onAppear {
             viewModel.onAppear()
         }
