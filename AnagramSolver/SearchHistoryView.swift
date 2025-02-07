@@ -62,6 +62,7 @@ struct SearchHistoryView: View {
             }
         }
         .listStyle(.plain)
+        .navigationBarTitle(Text("History"), displayMode: .inline)
         .onAppear {
             viewModel.onAppear()
         }
