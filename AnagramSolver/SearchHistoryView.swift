@@ -8,22 +8,72 @@
 
 import SwiftUI
 
-struct SearchHistoryView: View {
-    private let coordinator = Coordinator.sharedInstance
-    private let history = Model.sharedInstance
-        .searchHistoryModel
-        .searchHistory
-        .getHistory()
 
-    private let columns = [GridItem(.adaptive(minimum: 350))]
+class SearchHistoryViewVM : ObservableObject {
+    @Published var refreshRequired = false
+    
+    let historyModel : SearchHistoryModel
+
+    init(_ historyModel : SearchHistoryModel){
+        self.historyModel = historyModel
+    }
+
+    var history : [String] { return
+            historyModel
+            .searchHistory
+            .getHistory()
+    }
+
+    func onAppear(){
+        if refreshRequired {
+            refreshRequired = false
+        }
+
+    }
+}
+
+struct HistoryItem : View {
+    let query : String
+    var body: some View {
+        HStack {
+            Image(systemName: "fossil.shell")
+                .foregroundColor(Color("accentColor"))
+                .padding(8)
+            Text(query)
+            Spacer()
+        }
+    }
+}
+
+struct SearchHistoryView: View {
+    
+    @ObservedObject var viewModel = SearchHistoryViewVM(Model.sharedInstance.searchHistoryModel)
+    
+    private let coordinator = Coordinator.sharedInstance
 
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 16) {
-                ForEach(history, id: \.self) { historyItem in
-                    Text(historyItem)
-                }
+        List {
+            ForEach(viewModel.history, id: \.self) { historyItem in
+                HistoryItem(query: historyItem)
+                    .onTapGesture {
+                        self.coordinator.showHelpExample(example: historyItem)
+                        viewModel.refreshRequired = true
+                    }
             }
         }
+        .listStyle(.plain)
+        .onAppear {
+            viewModel.onAppear()
+        }
+    }
+}
+
+struct HistoryItem_Previews: PreviewProvider {
+    static var previews: some View {
+        List {
+            HistoryItem(query: "m.g..")
+            HistoryItem(query: "m.g..")
+            HistoryItem(query: "m.g..")
+        }.listStyle(.plain)
     }
 }
