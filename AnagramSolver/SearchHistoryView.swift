@@ -58,6 +58,7 @@ struct SearchHistoryView: View {
         List {
             ForEach(viewModel.history, id: \.self) { historyItem in
                 HistoryItem(query: historyItem)
+                    .contentShape(Rectangle()) //Ensure row white space is tappable
                     .onTapGesture {
                         self.coordinator.showHelpExample(example: historyItem)
                         viewModel.refreshRequired = true
