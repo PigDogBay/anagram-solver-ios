@@ -20,7 +20,11 @@ struct TipsView: View {
                 tip(anagramTip)
                 tip(blankLettersTip)
                 tip(twoWordAnagramTip)
-
+                if coordinator.showHistory{
+                    NavigationLink(destination: SearchHistoryView()){
+                        HelpRow(iconName: "fossil.shell", colorName: "iconBlue", title: "History", subTitle: "View your previous searches")
+                    }
+                }
                 NavigationLink(destination: DefinitionHelpView()){
                     HelpRow(iconName: "book", colorName: "iconBlue", title: "Definitions", subTitle: "Tap on a result to look it up")
                 }
