@@ -10,8 +10,6 @@ import SwiftUI
 
 struct CardTips: View {
     private let coordinator = Coordinator.sharedInstance
-    private let settings = Model.sharedInstance.settings
-    
     let columns = [GridItem(.adaptive(minimum: 350))]
     
     var body: some View {
@@ -22,7 +20,7 @@ struct CardTips: View {
                         .modifier(CardMod())
                     TipCard(tip: blankLettersTip)
                         .modifier(CardMod())
-                    if settings.isSearchHistoryEnabled{
+                    if coordinator.showHistory{
                         SearchHistoryCard()
                             .modifier(CardMod())
                     }
