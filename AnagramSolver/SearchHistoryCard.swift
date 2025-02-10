@@ -44,6 +44,9 @@ struct SearchHistoryCard: View {
             buttons
                 .padding(16)
         }
+        .onAppear{
+            viewModel.onAppear()
+        }
         .environment(\.openURL, OpenURLAction { url in
             if let query = url.absoluteString.removingPercentEncoding{
                 coordinator.showHelpExample(example: query)
