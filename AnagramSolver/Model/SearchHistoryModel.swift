@@ -9,6 +9,28 @@
 import Foundation
 import SwiftUtils
 
+class SearchHistoryCardViewModel : ObservableObject {
+    let historyModel : SearchHistoryModel
+
+    init(_ historyModel : SearchHistoryModel){
+        self.historyModel = historyModel
+    }
+    
+    func clearHistory(){
+        historyModel.clearSearchHistory()
+        //Update UI
+        objectWillChange.send()
+    }
+    
+    ///If navigating back from the matches view controller, the view will not be recreated
+    ///so need to Check if need to update the history
+    func onAppear(){
+        if historyModel.hasHistoryChanged(){
+            objectWillChange.send()
+        }
+    }
+}
+
 class SearchHistoryModel {
     private static let SEARCH_HISTORY_MAX_ENTRIES = 5
     lazy private(set) var searchHistory = SearchHistoryPersistence().load()
