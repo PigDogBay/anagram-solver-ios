@@ -33,9 +33,15 @@ class SearchHistoryCardViewModel : ObservableObject {
 
 class SearchHistoryModel {
     private static let SEARCH_HISTORY_MAX_ENTRIES = 5
-    lazy private(set) var searchHistory = SearchHistoryUserDefaults().load()
+    private let persistence : SearchHistoryPersistence
+    lazy private(set) var searchHistory = persistence.load()
     var isSearchHistoryEnabled = true
     private var isDirty = false
+    
+    init(persistence: SearchHistoryPersistence, isSearchHistoryEnabled: Bool = true) {
+        self.persistence = persistence
+        self.isSearchHistoryEnabled = isSearchHistoryEnabled
+    }
     
     ///Converts the queries to markdown that the user can tap on
     ///Only takes the first 5 history entries
@@ -55,7 +61,6 @@ class SearchHistoryModel {
         if isSearchHistoryEnabled {
             searchHistory.add(query: query)
             //save it
-            let persistence = SearchHistoryUserDefaults()
             persistence.save(history: self.searchHistory)
             isDirty = true
         }
@@ -69,7 +74,6 @@ class SearchHistoryModel {
     
     func clearSearchHistory(){
         searchHistory.clear()
-        let persistence = SearchHistoryUserDefaults()
         persistence.clear()
     }
     
@@ -78,6 +82,5 @@ class SearchHistoryModel {
         for _ in 1...100 {
             searchHistory.add(query: randomQuery.anagram())
         }
-        
     }
 }

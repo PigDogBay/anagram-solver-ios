@@ -23,7 +23,11 @@ class Model : WordListCallback, IAPDelegate, WordDictionary
     let appState = AppStateObservable()
     let wordSearch : WordSearch
     let searchParser = SearchParser()
-    lazy private(set) var searchHistoryModel = SearchHistoryModel()
+    lazy private(set) var searchHistoryModel =
+    {
+        SearchHistoryModel(persistence: SearchHistoryUserDefaults(),
+                           isSearchHistoryEnabled: self.settings.isSearchHistoryEnabled)
+    }()
     let wordFormatter = WordFormatter()
     let matches = Matches()
     var query = ""
