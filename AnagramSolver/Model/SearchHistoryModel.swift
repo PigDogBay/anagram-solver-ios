@@ -10,13 +10,12 @@ import Foundation
 import SwiftUtils
 
 class SearchHistoryModel {
-    static let SEARCH_HISTORY_MIN_ENTRIES = 5
+    static let SEARCH_HISTORY_MAX_ENTRIES = 5
     lazy private(set) var searchHistory = SearchHistoryPersistence().load()
     let settings = Settings()
     
     var canShowSearchHistory : Bool {
-        return searchHistory.count >= SearchHistoryModel.SEARCH_HISTORY_MIN_ENTRIES
-            && settings.isSearchHistoryEnabled
+            return settings.isSearchHistoryEnabled
     }
     
     private var isDirty = false
@@ -24,12 +23,13 @@ class SearchHistoryModel {
     ///Converts the queries to markdown that the user can tap on
     ///Only takes the first 5 history entries
     var markdownLinks : [String] {
-        if searchHistory.count < 5 {
+        if searchHistory.count == 0 {
             return []
         }
+        let maxEntries = min(SearchHistoryModel.SEARCH_HISTORY_MAX_ENTRIES,searchHistory.count)
         return searchHistory
             .getHistory()
-            .prefix(upTo: 5)
+            .prefix(upTo: maxEntries)
             .map {$0.trimmingCharacters(in: .whitespaces)}
             .map {"[\($0)](\($0.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""))"}
     }
@@ -54,5 +54,13 @@ class SearchHistoryModel {
         searchHistory.clear()
         let persistence = SearchHistoryPersistence()
         persistence.clear()
+    }
+    
+    func dbgFillHistory(){
+        let randomQuery = RandomQuery()
+        for _ in 1...100 {
+            searchHistory.add(query: randomQuery.anagram())
+        }
+        
     }
 }
