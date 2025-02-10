@@ -151,7 +151,9 @@ class Model : WordListCallback, IAPDelegate, WordDictionary
         self.resultsLimit = self.settings.resultsLimit
         self.wordListName = settings.wordList
         self.wordSearch.findSubAnagrams = settings.showSubAnagrams
+        self.searchHistoryModel.isSearchHistoryEnabled = settings.isSearchHistoryEnabled
     }
+    
     func checkForSettingsChange(){
         let oldValue = wordListName
         applySettings()

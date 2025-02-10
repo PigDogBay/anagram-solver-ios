@@ -34,7 +34,7 @@ class SearchHistoryCardViewModel : ObservableObject {
 class SearchHistoryModel {
     private static let SEARCH_HISTORY_MAX_ENTRIES = 5
     lazy private(set) var searchHistory = SearchHistoryPersistence().load()
-    private let settings = Settings()
+    var isSearchHistoryEnabled = true
     private var isDirty = false
     
     ///Converts the queries to markdown that the user can tap on
@@ -52,7 +52,7 @@ class SearchHistoryModel {
     }
 
     func updateSearchHistory(query : String){
-        if settings.isSearchHistoryEnabled {
+        if isSearchHistoryEnabled {
             searchHistory.add(query: query)
             //save it
             let persistence = SearchHistoryPersistence()
