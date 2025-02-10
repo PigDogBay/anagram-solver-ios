@@ -10,12 +10,10 @@ import Foundation
 import SwiftUtils
 
 class SearchHistoryCardViewModel : ObservableObject {
-    let showHistory : Bool
     let historyModel : SearchHistoryModel
 
     init(_ historyModel : SearchHistoryModel){
         self.historyModel = historyModel
-        self.showHistory = historyModel.canShowSearchHistory
     }
     
     func clearHistory(){

@@ -10,14 +10,9 @@ import Foundation
 import SwiftUtils
 
 class SearchHistoryModel {
-    static let SEARCH_HISTORY_MAX_ENTRIES = 5
+    private static let SEARCH_HISTORY_MAX_ENTRIES = 5
     lazy private(set) var searchHistory = SearchHistoryPersistence().load()
-    let settings = Settings()
-    
-    var canShowSearchHistory : Bool {
-            return settings.isSearchHistoryEnabled
-    }
-    
+    private let settings = Settings()
     private var isDirty = false
     
     ///Converts the queries to markdown that the user can tap on
