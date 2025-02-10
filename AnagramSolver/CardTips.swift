@@ -10,14 +10,15 @@ import SwiftUI
 
 struct CardTips: View {
     private let coordinator = Coordinator.sharedInstance
-    @ObservedObject var searchCardViewModel = SearchHistoryCardViewModel(Model.sharedInstance.searchHistoryModel)
+    private let settings = Model.sharedInstance.settings
+    
     let columns = [GridItem(.adaptive(minimum: 350))]
     
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 16) {
-                if searchCardViewModel.showHistory {
-                    SearchHistoryCard(viewModel: searchCardViewModel)
+                if settings.isSearchHistoryEnabled{
+                    SearchHistoryCard()
                         .modifier(CardMod())
                 }
                 Group {

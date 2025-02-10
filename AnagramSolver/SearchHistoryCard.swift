@@ -11,7 +11,7 @@ import SwiftUtils
 
 struct SearchHistoryCard: View {
     private let coordinator = Coordinator.sharedInstance
-    @ObservedObject var viewModel : SearchHistoryCardViewModel
+    @ObservedObject var viewModel = SearchHistoryCardViewModel(Model.sharedInstance.searchHistoryModel)
 
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
