@@ -13,12 +13,15 @@ struct SearchHistoryCard: View {
     private let coordinator = Coordinator.sharedInstance
     @ObservedObject var viewModel = SearchHistoryCardViewModel(Model.sharedInstance.searchHistoryModel)
 
-    private var description : some View {
+    private var historyLinks : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
             ForEach(viewModel.historyModel.markdownLinks, id: \.self) { historyItem in
                 Text(LocalizedStringKey(historyItem))
             }
         }
+    }
+    private var noHistory : some View {
+        Text("Lists your previous searches")
     }
 
     private var buttons : some View {
@@ -39,10 +42,16 @@ struct SearchHistoryCard: View {
         VStack(alignment: .center) {
             CardTitle(title: "History", icon: "history")
                 .padding(.top,16)
-            description
-                .padding(.top,2)
-            buttons
-                .padding(16)
+            if viewModel.isHistoryAvailable {
+                historyLinks
+                    .padding(.top,2)
+                buttons
+                    .padding(16)
+            } else {
+                noHistory
+                    .font(.body.italic())
+                    .padding(.bottom, 32)
+            }
         }
         .onAppear{
             viewModel.onAppear()

@@ -11,6 +11,10 @@ import SwiftUtils
 
 class SearchHistoryCardViewModel : ObservableObject {
     let historyModel : SearchHistoryModel
+    
+    var isHistoryAvailable : Bool {
+        return historyModel.searchHistory.count>0
+    }
 
     init(_ historyModel : SearchHistoryModel){
         self.historyModel = historyModel
