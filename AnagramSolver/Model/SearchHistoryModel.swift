@@ -9,6 +9,22 @@
 import Foundation
 import SwiftUtils
 
+class SearchHistoryRowViewModel : ObservableObject {
+    let historyModel : SearchHistoryModel
+    @Published var showHistory : Bool
+
+    init(_ historyModel : SearchHistoryModel){
+        self.historyModel = historyModel
+        self.showHistory = historyModel.isSearchHistoryEnabled
+    }
+
+    func onAppear(){
+        if showHistory != historyModel.isSearchHistoryEnabled {
+            showHistory = historyModel.isSearchHistoryEnabled
+        }
+    }
+}
+
 class SearchHistoryCardViewModel : ObservableObject {
     let historyModel : SearchHistoryModel
     @Published var showHistory : Bool
@@ -19,7 +35,7 @@ class SearchHistoryCardViewModel : ObservableObject {
 
     init(_ historyModel : SearchHistoryModel){
         self.historyModel = historyModel
-        showHistory = false
+        self.showHistory = historyModel.isSearchHistoryEnabled
     }
     
     func clearHistory(){

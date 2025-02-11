@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct TipsView: View {
+    @ObservedObject var searchHistoryVM = SearchHistoryRowViewModel(Model.sharedInstance.searchHistoryModel)
     private let coordinator = Coordinator.sharedInstance
 
     private func tip(_ tipData : Tip) -> some View {
@@ -20,7 +21,7 @@ struct TipsView: View {
                 tip(anagramTip)
                 tip(blankLettersTip)
                 tip(twoWordAnagramTip)
-                if coordinator.showHistory{
+                if searchHistoryVM.showHistory{
                     NavigationLink(destination: SearchHistoryView()){
                         HelpRow(iconName: "fossil.shell", colorName: "iconBlue", title: "History", subTitle: "View your previous searches")
                     }
@@ -58,6 +59,9 @@ struct TipsView: View {
             #if DEBUG
             AutomatedTestRow()
             #endif
+        }
+        .onAppear{
+            searchHistoryVM.onAppear()
         }
         .listStyle(.plain)
         .padding(.leading,0)

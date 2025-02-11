@@ -21,7 +21,7 @@ struct CardTips: View {
                         .modifier(CardMod())
                     TipCard(tip: blankLettersTip)
                         .modifier(CardMod())
-                    if coordinator.showHistory{
+                    if searchHistoryVM.showHistory{
                         SearchHistoryCard(viewModel: searchHistoryVM)
                             .modifier(CardMod())
                     }
