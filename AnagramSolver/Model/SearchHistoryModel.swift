@@ -46,6 +46,9 @@ class SearchHistoryCardViewModel : ObservableObject {
     
     ///If navigating back from the matches view controller, the view will not be recreated
     ///so need to Check if need to update the history
+    ///Note that the ScrollView in card tips will cause the view to be re-created, however
+    ///the list in TipsView will not be. This view model will always ensure the view is updated
+    ///and not rely on a side effect in ScrollView, this VM does not causes any excessive UI updates (ScrollView will tho)
     func onAppear(){
         if showHistory != historyModel.isSearchHistoryEnabled {
             showHistory = historyModel.isSearchHistoryEnabled
