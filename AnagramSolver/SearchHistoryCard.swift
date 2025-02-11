@@ -11,7 +11,7 @@ import SwiftUtils
 
 struct SearchHistoryCard: View {
     private let coordinator = Coordinator.sharedInstance
-    @ObservedObject var viewModel = SearchHistoryCardViewModel(Model.sharedInstance.searchHistoryModel)
+    @ObservedObject var viewModel : SearchHistoryCardViewModel
 
     private var historyLinks : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
@@ -52,9 +52,6 @@ struct SearchHistoryCard: View {
                     .font(.body.italic())
                     .padding(.bottom, 32)
             }
-        }
-        .onAppear{
-            viewModel.onAppear()
         }
         .environment(\.openURL, OpenURLAction { url in
             if let query = url.absoluteString.removingPercentEncoding{

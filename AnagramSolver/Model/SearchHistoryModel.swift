@@ -11,6 +11,7 @@ import SwiftUtils
 
 class SearchHistoryCardViewModel : ObservableObject {
     let historyModel : SearchHistoryModel
+    @Published var showHistory : Bool
     
     var isHistoryAvailable : Bool {
         return historyModel.searchHistory.count>0
@@ -18,6 +19,7 @@ class SearchHistoryCardViewModel : ObservableObject {
 
     init(_ historyModel : SearchHistoryModel){
         self.historyModel = historyModel
+        showHistory = false
     }
     
     func clearHistory(){
@@ -29,6 +31,9 @@ class SearchHistoryCardViewModel : ObservableObject {
     ///If navigating back from the matches view controller, the view will not be recreated
     ///so need to Check if need to update the history
     func onAppear(){
+        if showHistory != historyModel.isSearchHistoryEnabled {
+            showHistory = historyModel.isSearchHistoryEnabled
+        }
         if historyModel.hasHistoryChanged(){
             objectWillChange.send()
         }

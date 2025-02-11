@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct CardTips: View {
+    @ObservedObject var searchHistoryVM = SearchHistoryCardViewModel(Model.sharedInstance.searchHistoryModel)
     private let coordinator = Coordinator.sharedInstance
     let columns = [GridItem(.adaptive(minimum: 350))]
     
@@ -21,7 +22,7 @@ struct CardTips: View {
                     TipCard(tip: blankLettersTip)
                         .modifier(CardMod())
                     if coordinator.showHistory{
-                        SearchHistoryCard()
+                        SearchHistoryCard(viewModel: searchHistoryVM)
                             .modifier(CardMod())
                     }
                     DefinitionsCard()
@@ -65,6 +66,9 @@ struct CardTips: View {
             .padding(.horizontal,8)
             .padding(.top, 16)
             .padding(.bottom, 48)
+        }
+        .onAppear{
+            searchHistoryVM.onAppear()
         }
         .background(Color("tipsBackground"))
         .gesture(DragGesture().onChanged { _ in
