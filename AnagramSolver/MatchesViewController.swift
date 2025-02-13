@@ -31,7 +31,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var matchesTable: UITableView!
     @IBOutlet weak var navBar: UINavigationItem!
-    @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var bannerView: BannerView!
     
     override func viewDidLoad()
     {
