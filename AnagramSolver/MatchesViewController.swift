@@ -126,7 +126,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
             let adSize = Ads.createAdsize(screenWidth: screenWidth)
             bannerHeightConstraint.constant = adSize.size.height
             bannerView.adSize = adSize
-            bannerView.load(Ads.createRequest(useNpa: model.settings.useNonPersonalizedAds))
+            bannerView.load(Ads.createRequest())
         }
     }
     

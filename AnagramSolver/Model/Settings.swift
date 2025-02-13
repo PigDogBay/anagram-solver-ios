@@ -112,7 +112,6 @@ class Settings
     private let showSubAnagramsKey = "showSubAnagrams"
     private let resultsLimitKey = "resultsLimit"
     private let isProKey = "isProFlag"
-    private let useNonPersonalizedAdsKey = "useNonPersonalisedAds"
     private let showCardTipsKey = "showCardTips"
     private let darkModeOverrideKey = "darkModeOverride"
     private let keyboardTypeKey = "keyboardType"
@@ -317,18 +316,6 @@ class Settings
             }
         }
     }
-    
-    var useNonPersonalizedAds : Bool {
-        get{
-            return UserDefaults.standard.bool(forKey: useNonPersonalizedAdsKey)
-        }
-        set(flag) {
-            if flag != useNonPersonalizedAds {
-                let defaults = UserDefaults.standard
-                defaults.set(flag, forKey: useNonPersonalizedAdsKey)
-            }
-        }
-    }
 
     var darkModeOverride : String {
         get {
@@ -376,6 +363,7 @@ class Settings
             }
         }
     }
+    
     func registerDefaultSettings() {
         let defaultSettings : [ String : Any] = [definitionKey : defaultDefinition,
                                                   highlightKey : defaultHighlight,
@@ -394,7 +382,7 @@ class Settings
                                           useMonospacedFontKey : defaultMonospacedFont,
                                         useLargeResultsFontKey : defaultUseLargeResultsFont,
                                          enableSearchHistoryKey: defaultEnableSearchHistory,
-                                      useNonPersonalizedAdsKey : false]
+                                      ]
         UserDefaults.standard.register(defaults: defaultSettings)
     }
 }

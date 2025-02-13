@@ -97,15 +97,7 @@ class Ads
         }
     }
     
-    static func createRequest(useNpa : Bool) -> Request{
-        let request = Request()
-        if useNpa {
-            let extras = Extras()
-            extras.additionalParameters = ["npa": "1"]
-            request.register(extras)
-        }
-        return request
-    }
+    static func createRequest() -> Request { Request()}
     
     static func createAdsize(screenWidth : CGFloat) -> AdSize {
         //GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth does not work for landscape
