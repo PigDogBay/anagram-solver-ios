@@ -12,20 +12,22 @@ import MessageUI
 import SwiftUtils
 
 class AboutViewModel : ObservableObject, IAPDelegate {
-    @Published var showMeRelevantAds = true
     @Published var buyButtonEnabled = false
     @Published var buyButtonText = "BUY"
     @Published var showAlertRestored = false
     @Published var showAlertFailed = false
     let model : Model
     let observerName = "AboutVM"
-
+    
+    var canShowPrivacyForm : Bool {
+        model.ads.isPrivacyOptionsRequired
+    }
+    
     init(){
         model = Model.sharedInstance
     }
 
     func onAppear(){
-        showMeRelevantAds = !model.settings.useNonPersonalizedAds
         if model.settings.isProMode
         {
             //purchase already made
@@ -40,10 +42,13 @@ class AboutViewModel : ObservableObject, IAPDelegate {
     }
     
     func onDisappear(){
-        model.settings.useNonPersonalizedAds = !showMeRelevantAds
         model.iap.observable.removeObserver(observerName)
     }
 
+    func showAdPrivacyForm(){
+        model.ads.showPrivacyForm()
+    }
+    
     func showPrivacyPolicy(){
         UIApplication.shared.open(URL(string: Strings.privacyURL)!, options: [:])
     }

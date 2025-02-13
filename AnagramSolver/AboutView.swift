@@ -64,16 +64,6 @@ struct AboutView: View {
         }
     }
     
-    private var adPersonalizeButton : some View {
-        Toggle(isOn: $viewModel.showMeRelevantAds) {
-            if viewModel.showMeRelevantAds {
-                Text("Show me relevant ads")
-            } else {
-                Text("Show me ads that are less relevant")
-            }
-        }.modifier(ToggleMod())
-    }
-    
     private var adsSection : some View {
         VStack(alignment: .leading, spacing: 16){
             Text("ADVERTISEMENTS")
@@ -105,9 +95,17 @@ struct AboutView: View {
                         .modifier(AboutButtonMod())
                 }.buttonStyle(BorderlessButtonStyle())
             }
-            Text("This app will use your data to tailor ads to you. Our partners will collect data and use an unique identifier on your device to show you ads. You select here if we can continue to use your data to tailor ads for you.")
-                .font(.body)
-            adPersonalizeButton
+            
+            if viewModel.canShowPrivacyForm {
+                Text("You can review and update your Ad privacy options by clicking the button below")
+                HStack {
+                    Spacer()
+                    Button(action: viewModel.showAdPrivacyForm){
+                        Text("SHOW PRIVACY OPTIONS")
+                            .modifier(AboutButtonMod())
+                    }.buttonStyle(BorderlessButtonStyle())
+                }
+            }
         }
     }
     

@@ -18,7 +18,11 @@ class Ads
     private var isAdsSetupFinished = false
     // Use a boolean to initialize the Google Mobile Ads SDK and load ads once.
     private var isMobileAdsStartCalled = false
-
+    
+    var isPrivacyOptionsRequired: Bool {
+      return UMPConsentInformation.sharedInstance.privacyOptionsRequirementStatus == .required
+    }
+    
     func setUp(viewControler : UIViewController)
     {
         if !isAdsSetupFinished {
@@ -30,9 +34,17 @@ class Ads
     private func setUpDebug(_ parameters : UMPRequestParameters){
         UMPConsentInformation.sharedInstance.reset()
         let debugSettings = UMPDebugSettings()
-        debugSettings.geography = .other
+        debugSettings.geography = .regulatedUSState
         debugSettings.testDeviceIdentifiers = ["A9AB339F-440F-4116-9BA1-BF7EC15CB959"]
         parameters.debugSettings = debugSettings
+    }
+    
+    func showPrivacyForm(){
+        UMPConsentForm.presentPrivacyOptionsForm(from: nil) {
+            [weak self] formError in
+            guard let self, let formError else { return }
+                print("Privacy Form Error: \(formError)")
+          }
     }
     
     ///See https://developers.google.com/admob/ios/privacy
@@ -40,7 +52,7 @@ class Ads
     private func umpRequest(_ viewControler : UIViewController){
         let parameters = UMPRequestParameters()
         parameters.tagForUnderAgeOfConsent = false
-//        setUpDebug(parameters)
+        //setUpDebug(parameters)
         
         UMPConsentInformation.sharedInstance.requestConsentInfoUpdate(with: parameters){
             [weak self] requestConsentError in
