@@ -16,6 +16,7 @@ target 'AnagramSolver' do
 
   # Pods for AnagramSolver
   pod 'Google-Mobile-Ads-SDK'
+  pod 'GoogleMobileAdsMediationFacebook'
     
   target 'AnagramSolverTests' do
     inherit! :search_paths
