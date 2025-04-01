@@ -20,7 +20,7 @@ class Ads
     private var isMobileAdsStartCalled = false
     
     var isPrivacyOptionsRequired: Bool {
-      return UMPConsentInformation.sharedInstance.privacyOptionsRequirementStatus == .required
+        return ConsentInformation.shared.privacyOptionsRequirementStatus == .required
     }
     
     func setUp(viewControler : UIViewController)
@@ -31,18 +31,17 @@ class Ads
         }
     }
     
-    private func setUpDebug(_ parameters : UMPRequestParameters){
-        UMPConsentInformation.sharedInstance.reset()
-        let debugSettings = UMPDebugSettings()
+    private func setUpDebug(_ parameters : RequestParameters){
+        ConsentInformation.shared.reset()
+        let debugSettings = DebugSettings()
         debugSettings.geography = .regulatedUSState
         debugSettings.testDeviceIdentifiers = ["A9AB339F-440F-4116-9BA1-BF7EC15CB959"]
         parameters.debugSettings = debugSettings
     }
     
     func showPrivacyForm(){
-        UMPConsentForm.presentPrivacyOptionsForm(from: nil) {
-            [weak self] formError in
-            guard let self, let formError else { return }
+        ConsentForm.presentPrivacyOptionsForm(from: nil) { formError in
+            guard let formError else { return }
                 print("Privacy Form Error: \(formError)")
           }
     }
@@ -50,30 +49,30 @@ class Ads
     ///See https://developers.google.com/admob/ios/privacy
     ///Also make sure GDPR and IDFA explainer are set up on Admob-> Privacy and Messaging
     private func umpRequest(_ viewControler : UIViewController){
-        let parameters = UMPRequestParameters()
-        parameters.tagForUnderAgeOfConsent = false
+        let parameters = RequestParameters()
+        parameters.isTaggedForUnderAgeOfConsent = false
         //setUpDebug(parameters)
         
-        UMPConsentInformation.sharedInstance.requestConsentInfoUpdate(with: parameters){
+        ConsentInformation.shared.requestConsentInfoUpdate(with: parameters){
             [weak self] requestConsentError in
             guard let self else {return}
             if let consentError = requestConsentError {
                 return print("UMP Info Update Error: \(consentError.localizedDescription)")
             }
             
-            UMPConsentForm.loadAndPresentIfRequired(from: viewControler){
+            ConsentForm.loadAndPresentIfRequired(from: viewControler){
                 [weak self] loadAndPresentError in
                 guard let self else {return}
                 if let consentError = loadAndPresentError {
                     return print("UMP Load Present Error: \(consentError.localizedDescription)")
                 }
-                if UMPConsentInformation.sharedInstance.canRequestAds {
+                if ConsentInformation.shared.canRequestAds {
                     self.initializeAds()
                 }
             }
         }
         //Try load an ad immediately
-        if UMPConsentInformation.sharedInstance.canRequestAds {
+        if ConsentInformation.shared.canRequestAds {
             self.initializeAds()
         }
     }
@@ -88,7 +87,7 @@ class Ads
             //Admob SDK guide recommends removing this code for release builds
 #if DEBUG
             requestConfiguration.testDeviceIdentifiers = [
-                "dd7094a5b568e8b751d05661330cceae", //iPhone
+                "fd0dba53a07dee0cf4662658cf5c90a3", //iPhone
                 "29E32845-E763-4E6B-BCE6-9B9F8B642F46",//iPad
                 "a4b042150b6cace14cc182d6bf254d09"//iPod Touch
                ]

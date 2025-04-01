@@ -1,11 +1,11 @@
 PODS:
-  - FBAudienceNetwork (6.17.0)
-  - Google-Mobile-Ads-SDK (12.1.0):
+  - FBAudienceNetwork (6.17.1)
+  - Google-Mobile-Ads-SDK (12.2.0):
     - GoogleUserMessagingPlatform (>= 1.1)
-  - GoogleMobileAdsMediationFacebook (6.17.0.0):
-    - FBAudienceNetwork (= 6.17.0)
+  - GoogleMobileAdsMediationFacebook (6.17.1.0):
+    - FBAudienceNetwork (= 6.17.1)
     - Google-Mobile-Ads-SDK (~> 12.0)
-  - GoogleUserMessagingPlatform (2.7.0)
+  - GoogleUserMessagingPlatform (3.0.0)
 
 DEPENDENCIES:
   - Google-Mobile-Ads-SDK
@@ -19,10 +19,10 @@ SPEC REPOS:
     - GoogleUserMessagingPlatform
 
 SPEC CHECKSUMS:
-  FBAudienceNetwork: 0f84c13e480f480a1290ca998f82533a3f476c14
-  Google-Mobile-Ads-SDK: c9e5722cac79b39241d13b911f9f1eb21bdd0802
-  GoogleMobileAdsMediationFacebook: a08bc1c2e83a88a9a1f1e6c9b7cba75589627862
-  GoogleUserMessagingPlatform: a8b56893477f67212fbc8411c139e61d463349f5
+  FBAudienceNetwork: eb3ffbf2b35df25e21e163657044ffef66616a40
+  Google-Mobile-Ads-SDK: 1dfb0c3cb46c7e2b00b0f4de74a1e06d9ea25d67
+  GoogleMobileAdsMediationFacebook: 750a2c14ce0bdf813e4e1d4ab4aa283f72f8a875
+  GoogleUserMessagingPlatform: f8d0cdad3ca835406755d0a69aa634f00e76d576
 
 PODFILE CHECKSUM: 9dc0aa81354393e0bdaab76c6b682321f97f6d4a
 
