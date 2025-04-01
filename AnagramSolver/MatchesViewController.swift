@@ -12,7 +12,7 @@ import SwiftUtils
 import AVFoundation
 import UserMessagingPlatform
 
-class MatchesViewController: UIViewController, AppStateChangeObserver, UITableViewDataSource, UITableViewDelegate
+class MatchesViewController: UIViewController, AppStateChangeObserver, UITableViewDataSource, UITableViewDelegate, BannerViewDelegate
 {
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     fileprivate let cellIdentifier = "MatchesCell"
@@ -31,23 +31,16 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var matchesTable: UITableView!
     @IBOutlet weak var navBar: UINavigationItem!
-    @IBOutlet weak var bannerView: BannerView!
+    @IBOutlet weak var bannerContainerView: UIView!
+    private var bannerView : BannerView?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         self.model = Model.sharedInstance
 
-        if model.settings.isProMode
-        {
-            bannerHeightConstraint.constant = 0
-        }
-        else
-        {
-            bannerView.adUnitID = Ads.bannerAdId
-            bannerView.rootViewController = self
-        }
-
+        //Remove blank gap at the bottom of the screen whilst Ad is loading
+        bannerHeightConstraint.constant = 0
         if model.settings.isLongPressEnabled {
             let longPress = UILongPressGestureRecognizer(target: self, action: #selector(MatchesViewController.handleLongPress))
             matchesTable.addGestureRecognizer(longPress)
@@ -120,16 +113,39 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     private func loadAd(){
         if !model.settings.isProMode && ConsentInformation.shared.canRequestAds
         {
+            print("Loading Ad")
             //Set up bannerView height for the device
             //Another method is to set the bannerHeightConstraint relation to be greater than or equal to 0
             //but IB complains about ambiguous constraints
             let adSize = Ads.createAdsize(screenWidth: screenWidth)
-            bannerHeightConstraint.constant = adSize.size.height
-            bannerView.adSize = adSize
-            bannerView.load(Ads.createRequest())
+            //Remove old ads
+            bannerView?.removeFromSuperview()
+            bannerView = nil
+            bannerHeightConstraint.constant = 0
+            self.bannerView = BannerView(adSize: adSize)
+            bannerView?.adUnitID = Ads.bannerAdId
+            bannerView?.rootViewController = self
+            bannerView?.delegate = self
+            bannerView?.load(Ads.createRequest())
         }
     }
     
+    func bannerViewDidReceiveAd(_ bannerView: BannerView) {
+        print("Ad Loaded")
+        if bannerContainerView.subviews.isEmpty {
+            print("Adding SubView")
+            bannerHeightConstraint.constant = bannerView.adSize.size.height
+            bannerView.translatesAutoresizingMaskIntoConstraints = false
+            bannerContainerView.addSubview(bannerView)
+            // Constraints to center the banner within adContainerView
+            bannerView.centerXAnchor.constraint(equalTo: bannerContainerView.centerXAnchor).isActive = true
+            bannerView.centerYAnchor.constraint(equalTo: bannerContainerView.centerYAnchor).isActive = true
+        }
+    }
+    
+    func bannerView(_ bannerView: BannerView, didFailToReceiveAdWithError error: Error) {
+        print("Failed to load ad: \(error.localizedDescription)")
+    }
     func shortenWord(word : String, maxSize : Int) -> String {
         if word.length <= maxSize {
             return word
