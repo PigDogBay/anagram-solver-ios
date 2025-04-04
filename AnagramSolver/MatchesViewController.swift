@@ -113,7 +113,6 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     private func loadAd(){
         if !model.settings.isProMode && ConsentInformation.shared.canRequestAds
         {
-            print("Loading Ad")
             //Set up bannerView height for the device
             //Another method is to set the bannerHeightConstraint relation to be greater than or equal to 0
             //but IB complains about ambiguous constraints
@@ -131,9 +130,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     }
     
     func bannerViewDidReceiveAd(_ bannerView: BannerView) {
-        print("Ad Loaded")
         if bannerContainerView.subviews.isEmpty {
-            print("Adding SubView")
             bannerHeightConstraint.constant = bannerView.adSize.size.height
             bannerView.translatesAutoresizingMaskIntoConstraints = false
             bannerContainerView.addSubview(bannerView)
