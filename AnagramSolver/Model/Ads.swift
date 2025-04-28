@@ -88,7 +88,7 @@ class Ads
 #if DEBUG
             requestConfiguration.testDeviceIdentifiers = [
                 "fd0dba53a07dee0cf4662658cf5c90a3", //iPhone
-                "29E32845-E763-4E6B-BCE6-9B9F8B642F46",//iPad
+                "715446b0d43c336f6d439877fdcf8b5e",//iPad
                 "a4b042150b6cace14cc182d6bf254d09"//iPod Touch
                ]
 #endif
