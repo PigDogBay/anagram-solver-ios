@@ -30613,6 +30613,7 @@ cautioned
 cavalcade
 cavaliers
 cavalries
+cavatelli
 cavendish
 cavernous
 cavilings
@@ -44312,6 +44313,7 @@ clanking
 clannish
 clansman
 clansmen
+clapback
 clappers
 clapping
 claptrap
@@ -71973,6 +71975,7 @@ choked
 choker
 chokes
 choler
+cholet
 chomps
 chooks
 choose
@@ -77832,6 +77835,7 @@ remold
 remote
 remove
 rename
+renate
 render
 renege
 renews
@@ -82496,6 +82500,7 @@ duped
 duper
 dupes
 duple
+durag
 duran
 durer
 durex
@@ -86057,6 +86062,7 @@ sixty
 sized
 sizer
 sizes
+skarn
 skate
 skeet
 skein

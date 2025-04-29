@@ -138438,6 +138438,7 @@ cavaletti
 cavaliers
 cavallies
 cavalries
+cavatelli
 cavatinas
 caveating
 caveators
@@ -185617,6 +185618,7 @@ clannish
 clanship
 clansman
 clansmen
+clapback
 clapdish
 clapnets
 clappers
@@ -267356,6 +267358,7 @@ chokra
 chokri
 cholas
 choler
+cholet
 cholic
 cholis
 cholla
@@ -282422,6 +282425,7 @@ remsen
 remuda
 renail
 rename
+renate
 renays
 rended
 render
@@ -293997,6 +294001,7 @@ dupes
 duple
 duply
 duppy
+durag
 dural
 duran
 duras
@@ -302339,6 +302344,7 @@ skags
 skail
 skald
 skank
+skarn
 skart
 skate
 skats
