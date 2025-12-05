@@ -26352,6 +26352,7 @@ division-lobbies
 dmitri mendeleev
 do-it-yourselfer
 docking facility
+doctor doolittle
 document readers
 documentary film
 dogs-tooth check
@@ -31012,6 +31013,7 @@ whats eating you
 whats the damage
 wheel-animalcule
 wheel of fortune
+wheelbarrow race
 whirligig beetle
 whirling dervish
 whispering bells
@@ -65399,6 +65401,7 @@ radio-opaque
 radio signal
 radio source
 radish plant
+rage baiting
 ragged robin
 ragman rolls
 railroad bed
@@ -92699,6 +92702,7 @@ rag-money
 rag paper
 rag trade
 rag wheel
+rage bait
 rail-cars
 rail line
 rain-band
