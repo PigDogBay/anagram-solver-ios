@@ -35,6 +35,9 @@
 		00CD12D527CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */; };
 		00CD12DD27CE3CAD008191B2 /* UITestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */; };
 		00CE293B2AB1D06A0002CA30 /* HelpRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CE29392AB1D0690002CA30 /* HelpRow.swift */; };
+		00D596962EE31E6300EF6D7A /* game.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00D596952EE31E6300EF6D7A /* game.txt */; };
+		00D596972EE31E6300EF6D7A /* game.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00D596952EE31E6300EF6D7A /* game.txt */; };
+		00D596982EE31E6300EF6D7A /* game.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00D596952EE31E6300EF6D7A /* game.txt */; };
 		00DEE1382BC7EB9300669505 /* DefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DEE1372BC7EB9300669505 /* DefinitionViewController.swift */; };
 		00DEE13B2BC7F68800669505 /* DefinitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DEE13A2BC7F68800669505 /* DefinitionViewModel.swift */; };
 		00DEE13E2BC7F71A00669505 /* DefinitionSynonymsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DEE13C2BC7F71A00669505 /* DefinitionSynonymsRow.swift */; };
@@ -183,6 +186,7 @@
 		00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolverUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestUtils.swift; sourceTree = "<group>"; };
 		00CE29392AB1D0690002CA30 /* HelpRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpRow.swift; sourceTree = "<group>"; };
+		00D596952EE31E6300EF6D7A /* game.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = game.txt; sourceTree = "<group>"; };
 		00DEE1372BC7EB9300669505 /* DefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionViewController.swift; sourceTree = "<group>"; };
 		00DEE13A2BC7F68800669505 /* DefinitionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionViewModel.swift; sourceTree = "<group>"; };
 		00DEE13C2BC7F71A00669505 /* DefinitionSynonymsRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionSynonymsRow.swift; sourceTree = "<group>"; };
@@ -445,6 +449,7 @@
 		4D45EFB71A9DFABA00C40BB4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				00D596952EE31E6300EF6D7A /* game.txt */,
 				4DBBEEA8239A7C3800ADCA41 /* colors.xcassets */,
 				4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */,
 				4D45EFB81A9DFABA00C40BB4 /* Info.plist */,
@@ -638,6 +643,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00D596982EE31E6300EF6D7A /* game.txt in Resources */,
 				00DEE1442BC7FEAF00669505 /* nabu.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,6 +668,7 @@
 				4DBBEEA9239A7C3800ADCA41 /* colors.xcassets in Resources */,
 				4DE5CA8D238EB6250013D3F5 /* sowpods.txt in Resources */,
 				4D45EFC11A9DFABA00C40BB4 /* Images.xcassets in Resources */,
+				00D596972EE31E6300EF6D7A /* game.txt in Resources */,
 				001AAC2326EA9093000CC6B6 /* phrases.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,6 +677,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00D596962EE31E6300EF6D7A /* game.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

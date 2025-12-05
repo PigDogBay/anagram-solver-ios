@@ -13,6 +13,7 @@ class Settings
 {
     static let wordListTitles = [
         "Essential (90k words)",
+        "Game Acceptable (82k words)",
         "US Scrabble (180k words)",
         "World Scrabble (270k words)",
         "English (310k words)",
@@ -24,6 +25,7 @@ class Settings
     
     static let wordListValues = [
         "small",
+        "game",
         "twl",
         "sowpods",
         "words",
