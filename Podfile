@@ -1,6 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 # Uncomment this line to define a global platform for your project
-platform :ios, '13.0'
+platform :ios, '15.0'
 #Suggested fix for the Xcode compiler warning to update project settings
 #https://stackoverflow.com/questions/37160688/set-deployment-target-for-cocoapodss-pod
 post_install do |installer|
