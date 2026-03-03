@@ -38,6 +38,9 @@ class Model : WordListCallback, IAPDelegate, WordDictionary
     let settings = Settings()
     let ads = Ads()
     let ratings = Ratings(appId: Strings.appId)
+    var storeVM : StoreInterface = MockStoreViewModel()
+//        var storeVM : StoreInterface = StoreViewModel()
+
     let iap : IAPInterface
     let filter : Filter
     let filterFactory : WordListCallbackAbstractFactory

@@ -27,6 +27,7 @@
 		0081F01525B1BB6C00792552 /* wordlist-it.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01325B1BB6C00792552 /* wordlist-it.txt */; };
 		0081F01625B1BB6C00792552 /* wordlist-pt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01425B1BB6C00792552 /* wordlist-pt.txt */; };
 		0091BC052535E5A000BE7A43 /* AutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091BC042535E5A000BE7A43 /* AutoTest.swift */; };
+		009283C72F570F84008439F2 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009283C52F570F7F008439F2 /* StoreViewModel.swift */; };
 		0092DE872D54DB7400D0AFB5 /* SearchHistoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE852D54DB6D00D0AFB5 /* SearchHistoryCard.swift */; };
 		0092DE892D54E3B700D0AFB5 /* SearchHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE882D54E3AE00D0AFB5 /* SearchHistoryView.swift */; };
 		0092DE8D2D55535C00D0AFB5 /* SearchHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE8C2D55535500D0AFB5 /* SearchHistoryModel.swift */; };
@@ -177,6 +178,7 @@
 		0081F01325B1BB6C00792552 /* wordlist-it.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-it.txt"; sourceTree = "<group>"; };
 		0081F01425B1BB6C00792552 /* wordlist-pt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-pt.txt"; sourceTree = "<group>"; };
 		0091BC042535E5A000BE7A43 /* AutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTest.swift; sourceTree = "<group>"; };
+		009283C52F570F7F008439F2 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 		0092DE852D54DB6D00D0AFB5 /* SearchHistoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryCard.swift; sourceTree = "<group>"; };
 		0092DE882D54E3AE00D0AFB5 /* SearchHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryView.swift; sourceTree = "<group>"; };
 		0092DE8C2D55535500D0AFB5 /* SearchHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryModel.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				0092DE8C2D55535500D0AFB5 /* SearchHistoryModel.swift */,
 				4D45D7B21E2CF0C500EC2D27 /* Settings.swift */,
 				004AA91E26CE565F00A63C47 /* SettingsViewModel.swift */,
+				009283C52F570F7F008439F2 /* StoreViewModel.swift */,
 				0029A03425307170002E96D1 /* Strings.swift */,
 				00EEA6FC25CABDB10017F6A4 /* TipsData.swift */,
 				4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */,
@@ -728,9 +731,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -784,6 +791,7 @@
 				00F17DD426A9ABD000452020 /* RootView.swift in Sources */,
 				4D45D7B31E2CF0C500EC2D27 /* Settings.swift in Sources */,
 				4DA0C3F7236B0FC800AF693B /* Matches.swift in Sources */,
+				009283C72F570F84008439F2 /* StoreViewModel.swift in Sources */,
 				004AA91C26CD306D00A63C47 /* SettingsView.swift in Sources */,
 				00EEA6FA25CABCA60017F6A4 /* TipsView.swift in Sources */,
 				00EEA72F25CACB430017F6A4 /* AboutView.swift in Sources */,
