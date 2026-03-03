@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUtils
 
-class Model : WordListCallback, IAPDelegate, WordDictionary
+class Model : WordListCallback, WordDictionary
 {
     //Singleton
     static let sharedInstance = Model()
@@ -41,7 +41,6 @@ class Model : WordListCallback, IAPDelegate, WordDictionary
     var storeVM : StoreInterface = MockStoreViewModel()
 //        var storeVM : StoreInterface = StoreViewModel()
 
-    let iap : IAPInterface
     let filter : Filter
     let filterFactory : WordListCallbackAbstractFactory
     private var nabuSearch : Search? = nil
@@ -54,8 +53,6 @@ class Model : WordListCallback, IAPDelegate, WordDictionary
         filter = Filter()
         filterFactory = FilterFactory(filter: filter)
         self.wordSearch = WordSearch()
-        self.iap = IAPFactory.createIAPInterface()
-        self.iap.observable.addObserver("model", observer: self)
         applySettings()
     }
     
@@ -174,26 +171,4 @@ class Model : WordListCallback, IAPDelegate, WordDictionary
         lookUpResult = nabuLookUp?.lookUp(word: word) ?? LookUpResult(word: "", definitions: [])
         return lookUpResult
     }
-    
-    //MARK:- IAPDelegate
-    func productsRequest(){
-        //list of products received - do nothing
-        //print("Model-IAPDelegate-products request")
-    }
-    func purchaseRequest(_ productID : String){
-        //purchase successful, store in NSDefaults
-        //print("Model-IAPDelegate-purchaseRequest \(productID)")
-        settings.isProMode = true
-    }
-    func restoreRequest(_ productID : String){
-        //purchase successful, store in NSDefaults
-        //print("Model-IAPDelegate-restore request \(productID)")
-        settings.isProMode = true
-    }
-    func purchaseFailed(_ productID : String){
-        //purchase failed - do nothing here
-        //print("Model-IAPDelegate-purchase failed \(productID)")
-    }
-
-    
 }
