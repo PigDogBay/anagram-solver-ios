@@ -72,6 +72,9 @@
             ReferencedContainer = "container:AnagramSolver.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <StoreKitConfigurationFileReference
+         identifier = "../AnagramSolver/InAppPurchaseStore.storekit">
+      </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

@@ -38,8 +38,8 @@ class Model : WordListCallback, WordDictionary
     let settings = Settings()
     let ads = Ads()
     let ratings = Ratings(appId: Strings.appId)
-    var storeVM : StoreInterface = MockStoreViewModel()
-//        var storeVM : StoreInterface = StoreViewModel()
+//    var storeVM : StoreInterface = MockStoreViewModel()
+    var storeVM : StoreInterface = StoreViewModel()
 
     let filter : Filter
     let filterFactory : WordListCallbackAbstractFactory
