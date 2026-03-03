@@ -28,6 +28,7 @@
 		0081F01625B1BB6C00792552 /* wordlist-pt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01425B1BB6C00792552 /* wordlist-pt.txt */; };
 		0091BC052535E5A000BE7A43 /* AutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091BC042535E5A000BE7A43 /* AutoTest.swift */; };
 		009283C72F570F84008439F2 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009283C52F570F7F008439F2 /* StoreViewModel.swift */; };
+		009283C92F57226B008439F2 /* InAppPurchaseStore.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */; };
 		0092DE872D54DB7400D0AFB5 /* SearchHistoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE852D54DB6D00D0AFB5 /* SearchHistoryCard.swift */; };
 		0092DE892D54E3B700D0AFB5 /* SearchHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE882D54E3AE00D0AFB5 /* SearchHistoryView.swift */; };
 		0092DE8D2D55535C00D0AFB5 /* SearchHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE8C2D55535500D0AFB5 /* SearchHistoryModel.swift */; };
@@ -177,6 +178,7 @@
 		0081F01425B1BB6C00792552 /* wordlist-pt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-pt.txt"; sourceTree = "<group>"; };
 		0091BC042535E5A000BE7A43 /* AutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTest.swift; sourceTree = "<group>"; };
 		009283C52F570F7F008439F2 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
+		009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; name = InAppPurchaseStore.storekit; path = AnagramSolver/InAppPurchaseStore.storekit; sourceTree = "<group>"; };
 		0092DE852D54DB6D00D0AFB5 /* SearchHistoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryCard.swift; sourceTree = "<group>"; };
 		0092DE882D54E3AE00D0AFB5 /* SearchHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryView.swift; sourceTree = "<group>"; };
 		0092DE8C2D55535500D0AFB5 /* SearchHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryModel.swift; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 		4D45EFAB1A9DFABA00C40BB4 = {
 			isa = PBXGroup;
 			children = (
+				009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */,
 				4D45D7AF1E2901BF00EC2D27 /* Settings.bundle */,
 				4D45EFB61A9DFABA00C40BB4 /* AnagramSolver */,
 				4D45EFCC1A9DFABA00C40BB4 /* AnagramSolverTests */,
@@ -658,6 +661,7 @@
 				4DE5CA8F238EB6330013D3F5 /* twl.txt in Resources */,
 				4D45EFBF1A9DFABA00C40BB4 /* Main.storyboard in Resources */,
 				003E10ED253EF72400AE8155 /* wordlist-es.txt in Resources */,
+				009283C92F57226B008439F2 /* InAppPurchaseStore.storekit in Resources */,
 				4DE5CA8B238EB6170013D3F5 /* words.txt in Resources */,
 				00F17DCD26A8463400452020 /* small.txt in Resources */,
 				00DEE1432BC7FEAF00669505 /* nabu.db in Resources */,
