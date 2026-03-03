@@ -11,7 +11,21 @@ import SwiftUI
 struct UpgradeCard: View {
     private let coordinator = Coordinator.sharedInstance
     @ObservedObject var viewModel = AboutViewModel()
-
+    
+    private let storeVM = Model.sharedInstance.storeVM
+    @State private var showRefundSheet = false
+    
+    private var showAlertBinding: Binding<Bool> {
+        Binding(
+            get: { storeVM.errorMessage != nil },
+            set: {
+                if !$0 {
+                    Model.sharedInstance.storeVM.errorMessage = nil
+                }
+            }
+        )
+    }
+    
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
             Text("* Remove Ads")
@@ -19,22 +33,47 @@ struct UpgradeCard: View {
             Text("* More screen space")
         }
     }
-
+    
     private var buttons : some View {
         HStack(){
-            Button(action:viewModel.restorePurchase){
+            Button(action:storeVM.restorePurchase){
                 Text("RESTORE PURCHASE")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
             Spacer()
-            Button(action:viewModel.buy){
-                Text(viewModel.buyButtonText)
-                    .modifier(TipButtonMod())
-            }.buttonStyle(BorderlessButtonStyle())
-            .disabled(!viewModel.buyButtonEnabled)
+            switch storeVM.storeStatus {
+            case .Unavailable:
+                Text("Unavailable")
+            case .Available:
+                Button(action: storeVM.buy){
+                    Text("BUY \(storeVM.price)")
+                        .modifier(TipButtonMod())
+                }
+                .buttonStyle(BorderlessButtonStyle())
+                .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
+            case .Purchasing:
+                ProgressView("Processing purchase…")
+                    .progressViewStyle(.circular)
+                    .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
+            case .Pending:
+                ProgressView("Purchase pending…")
+                    .progressViewStyle(.circular)
+                    .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
+            case .Purchased:
+                Button(action: refund){
+                    Text("REFUND THIS PURCHASE")
+                        .modifier(TipButtonMod())
+                }
+                .buttonStyle(BorderlessButtonStyle())
+                .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
+            case .Restoring:
+                ProgressView("Restoring purchase…")
+                    .progressViewStyle(.circular)
+                    .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
+            }
         }
     }
-
+    
     var body: some View {
         VStack(alignment: .center) {
             CardTitle(title: "Upgrade", icon: "pro")
@@ -44,15 +83,33 @@ struct UpgradeCard: View {
             buttons
                 .padding(16)
         }
-        .alert(isPresented: $viewModel.showAlertRestored){
-            Alert(title: Text("Purchase Restored"), message: Text("Your purchase has been restored, Ads have now been removed"), dismissButton: .default(Text("OK")))
-        }
-        .alert(isPresented: $viewModel.showAlertFailed){
-            Alert(title: Text("Purchase Failed"), message: Text("Sorry, unable to complete the purchase. You have not been charged."), dismissButton: .default(Text("OK")))
+        .refundRequestSheet(
+            for: storeVM.transaction?.id ?? 0,
+            isPresented: $showRefundSheet){ result in
+                switch result {
+                case .success(let status):
+                    print("Refund status \(status)")
+                case .failure(let error):
+                    print("Refund failed: \(error)")
+                }
+            }
+        .alert(isPresented: showAlertBinding){
+            Alert(
+                title: Text("Purchase Failed"),
+                message: Text(storeVM.errorMessage ?? "nil"),
+                dismissButton: .default(Text("OK")
+            ))
         }
         .onAppear{viewModel.onAppear()}
         .onDisappear{viewModel.onDisappear()}
     }
+
+    private func refund(){
+        if (storeVM.transaction) != nil {
+            showRefundSheet = true
+        }
+    }
+
 }
 
 struct UpgradeCard_Previews: PreviewProvider {

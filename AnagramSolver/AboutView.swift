@@ -13,14 +13,14 @@ struct AboutView: View {
     private let coordinator = Coordinator.sharedInstance
     @ObservedObject var viewModel = AboutViewModel()
     @State private var showRefundSheet = false
-    private let storeVM = Model.sharedInstance.storeVM
+    private var storeVM = Model.sharedInstance.storeVM
     
     private var showAlertBinding: Binding<Bool> {
         Binding(
             get: { storeVM.errorMessage != nil },
             set: {
                 if !$0 {
-                    //storeVM.errorMessage = nil
+                    Model.sharedInstance.storeVM.errorMessage = nil
                 }
             }
         )
