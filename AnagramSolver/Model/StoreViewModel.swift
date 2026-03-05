@@ -27,97 +27,31 @@ public enum StoreStatus {
     case Unavailable, Available, Purchasing, Pending, Purchased, Restoring
 }
 
-//@MainActor
-public protocol StoreInterface
-{
-    var storeStatus : StoreStatus { get }
-    var price: String { get }
-    var errorMessage: String? { get set }
-    var transaction : StoreKit.Transaction? { get }
-    
-    func buy()
-    func restorePurchase()
+public enum PurchaseStatus {
+    case unknown, verified, unverified, refunded(date: Date?), notFound
 }
+
+let REMOVE_ADS_PRODUCT_ID = "com.mpdbailey.ios.anagramsolver.gopro"
 
 @Observable
 //@MainActor
-final class MockStoreViewModel : StoreInterface {
-    
+final class StoreViewModel {
+    private let removeAdsID : String
     var storeStatus = StoreStatus.Unavailable
     var price = "£4.99"
     var errorMessage: String? = nil
-    var transaction: StoreKit.Transaction? = nil
-
-    init(){
-        Task {
-            await refresh()
-        }
-    }
-    
-    private func refresh() async {
-        print("MOCK refresh()")
-        await loadProduct()
-    }
-    
-    private func loadProduct() async {
-        print("MOCK loadProduct()")
-        try? await Task.sleep(for: .seconds(3))
-        storeStatus = .Available
-    }
-    
-    private func purchase() async {
-        print("MOCK purchase()")
-        storeStatus = .Purchasing
-        try? await Task.sleep(for: .seconds(3))
-        //storeStatus = .Purchased
-        
-        storeStatus = .Available
-        errorMessage = "There was an error processing the payment"
-    }
-
-    private func refreshPurchasedStatus() async {
-        print("MOCK refreshPurchasedStatus()")
-        try? await Task.sleep(for: .seconds(3))
-        storeStatus = .Purchased
-    }
-
-    
-    func buy(){
-        print("MOCK buy")
-        Task { await purchase()}
-    }
-    
-    func restorePurchase(){
-        print("MOCK restore")
-        if storeStatus != .Purchased {
-            storeStatus = .Restoring
-            Task { await refreshPurchasedStatus() }
-        }
-    }
-}
-
-
-@Observable
-//@MainActor
-final class StoreViewModel : StoreInterface {
-    private let removeAdsID = "com.mpdbailey.ios.anagramsolver.gopro"
-    var storeStatus = StoreStatus.Unavailable
-    var price = "£4.99"
-    var errorMessage: String? = nil
+    @ObservationIgnored var errorTitle : String? = nil
+    @ObservationIgnored private var purchaseStatus = PurchaseStatus.unknown
     @ObservationIgnored var transaction: StoreKit.Transaction? = nil
     @ObservationIgnored private var product : Product?
-
     
-    init(){
+    init(productID : String){
+        self.removeAdsID = productID
         Task {
-            await refresh()
+            await loadProduct()
+            await refreshPurchasedStatus()
         }
         listenForTransaction()
-    }
-    
-    private func refresh() async {
-        await loadProduct()
-        await refreshPurchasedStatus()
     }
     
     private func loadProduct() async {
@@ -137,6 +71,7 @@ final class StoreViewModel : StoreInterface {
         guard let product else { return }
         storeStatus = .Purchasing
         errorMessage = nil
+        errorTitle = "Purchase Failed"
 
         let result = try? await product.purchase()
         switch result {
@@ -147,6 +82,7 @@ final class StoreViewModel : StoreInterface {
                 // Complete the transaction after providing
                 // the user access to the content.
                 await transaction.finish()
+                //Call refresh as no update is sent in listenForUpdates()
                 await refreshPurchasedStatus()
             case .unverified(_, let error):
                 storeStatus = .Available
@@ -158,14 +94,16 @@ final class StoreViewModel : StoreInterface {
             storeStatus = .Available
         case .none:
             storeStatus = .Available
-            errorMessage = "No reason given."
+            errorMessage = "No reason given"
         @unknown default:
             storeStatus = .Available
-            errorMessage = "Unknown reason."
+            errorMessage = "Unknown reason"
             break
         }
     }
-
+    
+    ///This code is called from init(), purchase(), listenForTransaction() and restorePurchase()
+    ///Updates purchaseStatus
     private func refreshPurchasedStatus() async {
         transaction = nil
         // For a non-consumable, latest(for:) is an easy way to check entitlement
@@ -177,21 +115,27 @@ final class StoreViewModel : StoreInterface {
                     storeStatus = .Purchased
                     self.transaction = transaction
                     Settings().isProMode = true
+                    purchaseStatus = .verified
                 } else {
                     //User has refunded the purchased
                     storeStatus = .Available
                     Settings().isProMode = false
+                    purchaseStatus = .refunded(date: transaction.revocationDate)
                 }
             case .unverified:
                 storeStatus = .Available
                 Settings().isProMode = false
+                purchaseStatus = .unverified
             }
         } else {
-            errorMessage = "No transaction found"
             storeStatus = .Available
+            Settings().isProMode = false
+            purchaseStatus = .notFound
         }
     }
-
+    
+    ///This functions runs in the background, will respond to refunds which
+    ///may arrive 24-48 hours after a request
     private func listenForTransaction() {
         Task {
             for await update in Transaction.updates {
@@ -208,9 +152,25 @@ final class StoreViewModel : StoreInterface {
     }
     
     func restorePurchase(){
+        errorMessage = nil
         if storeStatus != .Purchased {
             storeStatus = .Restoring
-            Task { await refreshPurchasedStatus() }
+            errorTitle = "Restore"
+            Task {
+                await refreshPurchasedStatus()
+                switch purchaseStatus {
+                case .unknown:
+                    errorMessage = "Could not determine purchase status"
+                case .verified:
+                    errorMessage = "Purchase successfully restored"
+                case .unverified:
+                    errorMessage = "Purchase is unverified"
+                case .refunded(let date):
+                    errorMessage = "Purchase was refunded on \(date, default: "unknown")"
+                case .notFound:
+                    errorMessage = "Purchase was not found"
+                }
+            }
         }
     }
 }

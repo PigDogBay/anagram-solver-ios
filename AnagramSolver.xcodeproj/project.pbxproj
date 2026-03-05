@@ -29,6 +29,10 @@
 		0091BC052535E5A000BE7A43 /* AutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091BC042535E5A000BE7A43 /* AutoTest.swift */; };
 		009283C72F570F84008439F2 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009283C52F570F7F008439F2 /* StoreViewModel.swift */; };
 		009283C92F57226B008439F2 /* InAppPurchaseStore.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */; };
+		009283D22F59B960008439F2 /* StoreViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009283D12F59B960008439F2 /* StoreViewModelTests.swift */; };
+		009283D42F59B97A008439F2 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009283C52F570F7F008439F2 /* StoreViewModel.swift */; };
+		009283D52F59B984008439F2 /* InAppPurchaseStore.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */; };
+		009283D62F59B998008439F2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45D7B21E2CF0C500EC2D27 /* Settings.swift */; };
 		0092DE872D54DB7400D0AFB5 /* SearchHistoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE852D54DB6D00D0AFB5 /* SearchHistoryCard.swift */; };
 		0092DE892D54E3B700D0AFB5 /* SearchHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE882D54E3AE00D0AFB5 /* SearchHistoryView.swift */; };
 		0092DE8D2D55535C00D0AFB5 /* SearchHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE8C2D55535500D0AFB5 /* SearchHistoryModel.swift */; };
@@ -179,6 +183,7 @@
 		0091BC042535E5A000BE7A43 /* AutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTest.swift; sourceTree = "<group>"; };
 		009283C52F570F7F008439F2 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 		009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; name = InAppPurchaseStore.storekit; path = AnagramSolver/InAppPurchaseStore.storekit; sourceTree = "<group>"; };
+		009283D12F59B960008439F2 /* StoreViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModelTests.swift; sourceTree = "<group>"; };
 		0092DE852D54DB6D00D0AFB5 /* SearchHistoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryCard.swift; sourceTree = "<group>"; };
 		0092DE882D54E3AE00D0AFB5 /* SearchHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryView.swift; sourceTree = "<group>"; };
 		0092DE8C2D55535500D0AFB5 /* SearchHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryModel.swift; sourceTree = "<group>"; };
@@ -477,6 +482,7 @@
 				4D45EFCD1A9DFABA00C40BB4 /* Supporting Files */,
 				00E4B60427D0E388002ACEF8 /* ModelTests.swift */,
 				00F997592B04F62C009C36E1 /* MatchesTests.swift */,
+				009283D12F59B960008439F2 /* StoreViewModelTests.swift */,
 			);
 			path = AnagramSolverTests;
 			sourceTree = "<group>";
@@ -678,6 +684,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				009283D52F59B984008439F2 /* InAppPurchaseStore.storekit in Resources */,
 				00D596962EE31E6300EF6D7A /* game.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -828,8 +835,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				009283D42F59B97A008439F2 /* StoreViewModel.swift in Sources */,
 				00E4B60527D0E388002ACEF8 /* ModelTests.swift in Sources */,
 				00F9975A2B04F62C009C36E1 /* MatchesTests.swift in Sources */,
+				009283D22F59B960008439F2 /* StoreViewModelTests.swift in Sources */,
+				009283D62F59B998008439F2 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,7 +898,7 @@
 				DEVELOPMENT_TEAM = ZYM8DA54T6;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -918,7 +928,7 @@
 				DEVELOPMENT_TEAM = ZYM8DA54T6;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mpdbailey.AnagramSolverUITests;
@@ -1118,7 +1128,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = AnagramSolverTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1139,7 +1149,7 @@
 				DEVELOPMENT_TEAM = ZYM8DA54T6;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AnagramSolverTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
