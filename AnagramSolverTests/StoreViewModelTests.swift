@@ -35,6 +35,7 @@ struct StoreViewModelTests {
         session.clearTransactions()
         try await Task.sleep(for: .seconds(1))
         #expect(storeVM.price == "$4.99")
+        session.resetToDefaultState()
     }
 
     @available(iOS 26.0, *)
@@ -48,6 +49,7 @@ struct StoreViewModelTests {
         #expect(storeVM.storeStatus == .Purchased)
         let adsRemoved = Settings().isProMode
         #expect(adsRemoved)
+        session.resetToDefaultState()
     }
     
     /*
@@ -68,6 +70,7 @@ struct StoreViewModelTests {
         #expect(storeVM.storeStatus == .Available)
         let adsRemoved = Settings().isProMode
         #expect(!adsRemoved)
+        session.resetToDefaultState()
     }
 
     @available(iOS 26.0, *)
@@ -80,7 +83,7 @@ struct StoreViewModelTests {
         storeVM.buy()
         try await Task.sleep(for: .seconds(1))
         #expect(storeVM.storeStatus == .Pending)
-        session.askToBuyEnabled = false
+        session.resetToDefaultState()
     }
     
 }

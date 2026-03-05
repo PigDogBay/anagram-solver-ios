@@ -32,6 +32,7 @@ class Coordinator : ObservableObject {
     let SHOW_SETTINGS = 5
     let SHOW_SETTINGS_HELP = 6
     let SHOW_SEARCH_HISTORY = 7
+    let SHOW_REMOVE_ADS_DETAIL = 8
 
     func showHelpExample(example : String){
         rootVC?.showMe(query: example)

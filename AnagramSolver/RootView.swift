@@ -60,6 +60,11 @@ struct RootView: View {
                        selection: $coordinator.selection){
             EmptyView()
         }.buttonStyle(.plain)
+        NavigationLink(destination: RemoveAdsDetailView(),
+                       tag: coordinator.SHOW_REMOVE_ADS_DETAIL,
+                       selection: $coordinator.selection){
+            EmptyView()
+        }.buttonStyle(.plain)
     }
 }
 

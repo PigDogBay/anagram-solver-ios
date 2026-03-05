@@ -23,7 +23,7 @@ struct UpgradeCard: View {
     
     private var buttons : some View {
         HStack(){
-            Button(action:storeVM.restorePurchase){
+            Button(action:{coordinator.show(coordinator.SHOW_REMOVE_ADS_DETAIL)}){
                 Text("MORE INFO")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())

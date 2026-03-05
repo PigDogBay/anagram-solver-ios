@@ -33,8 +33,8 @@ public enum PurchaseStatus {
 
 let REMOVE_ADS_PRODUCT_ID = "com.mpdbailey.ios.anagramsolver.gopro"
 
-@Observable
 //@MainActor
+@Observable
 final class StoreViewModel {
     private let removeAdsID : String
     var storeStatus = StoreStatus.Unavailable
