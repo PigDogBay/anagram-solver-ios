@@ -15,7 +15,7 @@ struct UpgradeCard: View {
     
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
-            Text("* Remove Ads")
+            Text("* No more ads")
             Text("* One time purchase")
             Text("* More screen space")
         }
@@ -59,7 +59,7 @@ struct UpgradeCard: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            CardTitle(title: "Upgrade", icon: "pro")
+            CardTitle(title: "Remove Ads", icon: "pro")
                 .padding(.top,16)
             description
                 .padding(.top,2)
