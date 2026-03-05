@@ -26,9 +26,8 @@ struct RemoveAdsDetailView: View {
     private var title: some View {
         HStack{
             Spacer()
-            Image(systemName: "crown")
-                .font(Font.system(.title))
-                .foregroundColor(Color.orange)
+            Image("pro")
+                .padding(16)
             Text("Remove Ads")
                 .multilineTextAlignment(.center)
                 .font(.title)
