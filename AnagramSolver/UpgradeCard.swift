@@ -10,21 +10,8 @@ import SwiftUI
 
 struct UpgradeCard: View {
     private let coordinator = Coordinator.sharedInstance
-    @ObservedObject var viewModel = AboutViewModel()
     
     private let storeVM = Model.sharedInstance.storeVM
-    @State private var showRefundSheet = false
-    
-    private var showAlertBinding: Binding<Bool> {
-        Binding(
-            get: { storeVM.errorMessage != nil },
-            set: {
-                if !$0 {
-                    Model.sharedInstance.storeVM.errorMessage = nil
-                }
-            }
-        )
-    }
     
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
@@ -37,7 +24,7 @@ struct UpgradeCard: View {
     private var buttons : some View {
         HStack(){
             Button(action:storeVM.restorePurchase){
-                Text("RESTORE PURCHASE")
+                Text("MORE INFO")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
             Spacer()
@@ -60,11 +47,7 @@ struct UpgradeCard: View {
                     .progressViewStyle(.circular)
                     .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
             case .Purchased:
-                Button(action: refund){
-                    Text("REFUND THIS PURCHASE")
-                        .modifier(TipButtonMod())
-                }
-                .buttonStyle(BorderlessButtonStyle())
+                Text("Purchased")
                 .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
             case .Restoring:
                 ProgressView("Restoring purchase…")
@@ -83,33 +66,7 @@ struct UpgradeCard: View {
             buttons
                 .padding(16)
         }
-        .refundRequestSheet(
-            for: storeVM.transaction?.id ?? 0,
-            isPresented: $showRefundSheet){ result in
-                switch result {
-                case .success(let status):
-                    print("Refund status \(status)")
-                case .failure(let error):
-                    print("Refund failed: \(error)")
-                }
-            }
-        .alert(isPresented: showAlertBinding){
-            Alert(
-                title: Text("Purchase Failed"),
-                message: Text(storeVM.errorMessage ?? "nil"),
-                dismissButton: .default(Text("OK")
-            ))
-        }
-        .onAppear{viewModel.onAppear()}
-        .onDisappear{viewModel.onDisappear()}
     }
-
-    private func refund(){
-        if (storeVM.transaction) != nil {
-            showRefundSheet = true
-        }
-    }
-
 }
 
 struct UpgradeCard_Previews: PreviewProvider {
