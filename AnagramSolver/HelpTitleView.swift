@@ -10,12 +10,18 @@ import SwiftUI
 
 struct HelpTitleView: View {
     let title : String
+    let icon : String
+    
+    init(title: String, icon : String = "lightbulb_on"){
+        self.title = title
+        self.icon = icon
+    }
+    
     var body: some View {
         HStack{
             Spacer()
-            Image(systemName: "info.circle")
-                .font(Font.system(.title))
-                .foregroundColor(Color("iconYellow"))
+            Image(icon)
+                .padding(8)
             Text(title)
                 .multilineTextAlignment(.center)
                 .font(.title)

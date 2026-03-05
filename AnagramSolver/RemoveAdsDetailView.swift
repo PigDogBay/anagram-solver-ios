@@ -23,25 +23,13 @@ struct RemoveAdsDetailView: View {
         )
     }
 
-    private var title: some View {
-        HStack{
-            Spacer()
-            Image("pro")
-                .padding(16)
-            Text("Remove Ads")
-                .multilineTextAlignment(.center)
-                .font(.title)
-            Spacer()
-        }.padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 32))
-    }
-
     var body: some View {
         Form {
             
             Section(footer: Text("If you have already purchased the option to remove ads, press the restore button above to retrieve your purchase details."))
             {
                 VStack(alignment: .leading, spacing: 16) {
-                    title
+                    HelpTitleView(title: "Remove Ads", icon: "pro")
                     if storeVM.storeStatus == .Purchased{
                         Text("Thank you for your purchase to remove ads. You may request to refund this purchase by pressing the button below. Requests are sent to Apple and take 24 to 48 hours to process.")
                             .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
