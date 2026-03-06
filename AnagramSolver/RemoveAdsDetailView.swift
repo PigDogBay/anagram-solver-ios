@@ -73,11 +73,22 @@ struct RemoveAdsDetailView: View {
                 }
             }
             Section("HELP"){
-                FilterSectionView(title: "REFUNDS", description: "If you wish to request a refund, you can do so within the app or by signing in to reportaproblem.apple.com, refunds take 24 to 48 hours after the request.")
-                FilterSectionView(title: "USER ID", description: "If you have made an in-app purchase, it is tied to your Apple user ID (e.g. email address). To use the purchase on your other devices, ensure you are signed-in using the same user ID.")
+                FilterSectionView(title: "REFUNDS", description: "To refund a purchase you can do so within the app or by signing in to reportaproblem.apple.com, refunds take 24 to 48 hours after the request.")
+                FilterSectionView(title: "USER ID", description: "The in-app purchase is tied to your Apple user ID (e.g. email address). To use the purchase on your other devices, ensure you are signed-in using the same user ID.")
                 FilterSectionView(title: "ONE TIME", description: "The Remove Ads in-app purchase is a one time payment that does not expire.")
-                FilterSectionView(title: "RESTORE", description: "You can restore a purchase by pressing the restore button (top-right on the tool bar). You will need to do this if you have re-installed the app.")
-                FilterSectionView(title: "SUPPORT", description: "If you need further assistance, use the Feedback button on the main screen to send us (MPD Bailey Technology) an email and we will endeavour to reply to you as soon as possible.")
+                FilterSectionView(title: "RESTORE", description: "Restore a purchase by pressing the restore button at the top of this screen. You will need to do this if you have re-installed the app.")
+                VStack {
+                    FilterSectionView(title: "SUPPORT", description: "For further assistance, press the button below to send an email to MPD Bailey Technology and we will try to reply to you as soon as possible.")
+                    HStack {
+                        Spacer()
+                        Button(action:Coordinator.sharedInstance.sendFeedback){
+                            Text("EMAIL SUPPORT")
+                                .modifier(TipButtonMod())
+                        }.buttonStyle(BorderlessButtonStyle())
+                    }
+                    .padding(EdgeInsets(top: 16, leading: 8, bottom: 32, trailing: 8))
+
+                }
             }
         }
         .refundRequestSheet(
