@@ -12,19 +12,6 @@ struct AboutView: View {
     
     private let coordinator = Coordinator.sharedInstance
     @ObservedObject var viewModel = AboutViewModel()
-    @State private var showRefundSheet = false
-    private var storeVM = Model.sharedInstance.storeVM
-    
-    private var showAlertBinding: Binding<Bool> {
-        Binding(
-            get: { storeVM.errorMessage != nil },
-            set: {
-                if !$0 {
-                    Model.sharedInstance.storeVM.errorMessage = nil
-                }
-            }
-        )
-    }
 
     private var title : some View {
         HStack {
@@ -91,48 +78,6 @@ struct AboutView: View {
                         .modifier(AboutButtonMod())
                 }.buttonStyle(BorderlessButtonStyle())
             }
-            Text("You may remove advertisements by making a one off in app purchase.")
-            HStack {
-                Spacer()
-                switch storeVM.storeStatus {
-                case .Unavailable:
-                    Text("Unavailable")
-                case .Available:
-                    Button(action: storeVM.buy){
-                        Text("BUY \(storeVM.price)")
-                            .modifier(AboutButtonMod())
-                    }
-                    .buttonStyle(BorderlessButtonStyle())
-                    .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
-                case .Purchasing:
-                    ProgressView("Processing purchase…")
-                        .progressViewStyle(.circular)
-                        .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
-                case .Pending:
-                    ProgressView("Purchase pending…")
-                        .progressViewStyle(.circular)
-                        .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
-                case .Purchased:
-                    Button(action: refund){
-                        Text("REFUND THIS PURCHASE")
-                            .modifier(AboutButtonMod())
-                    }
-                    .buttonStyle(BorderlessButtonStyle())
-                    .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
-                case .Restoring:
-                    ProgressView("Restoring purchase…")
-                        .progressViewStyle(.circular)
-                        .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
-                }
-            }
-            Text("If you have already purchased the option to remove ads, press the restore button below to retrieve your purchase details.")
-            HStack {
-                Spacer()
-                Button(action: storeVM.restorePurchase){
-                    Text("RESTORE PURCHASE")
-                        .modifier(AboutButtonMod())
-                }.buttonStyle(BorderlessButtonStyle())
-            }
             
             if viewModel.canShowPrivacyForm {
                 Text("You can review and update your Ad privacy options by clicking the button below")
@@ -144,6 +89,8 @@ struct AboutView: View {
                     }.buttonStyle(BorderlessButtonStyle())
                 }
             }
+
+            Text("You may remove advertisements by making an in-app purchase, for more details see Remove Ads on the home screen.")
         }
     }
     
@@ -179,34 +126,9 @@ struct AboutView: View {
                 helpOutSection
             }
             .padding(.top, 16)
-            .refundRequestSheet(
-                for: storeVM.transaction?.id ?? 0,
-                isPresented: $showRefundSheet){ result in
-                    switch result {
-                    case .success(let status):
-                        print("Refund status \(status)")
-                    case .failure(let error):
-                        print("Refund failed: \(error)")
-                    }
-                }
-            .alert(isPresented: showAlertBinding){
-                Alert(
-                    title: Text("Purchase Failed"),
-                    message: Text(storeVM.errorMessage ?? "nil"),
-                    dismissButton: .default(Text("OK")))
-            }
-            .onAppear{viewModel.onAppear()}
-            .onDisappear{viewModel.onDisappear()}
             .navigationBarTitle(Text("About"), displayMode: .inline)
         }
     }
-
-    private func refund(){
-        if (storeVM.transaction) != nil {
-            showRefundSheet = true
-        }
-    }
-
 }
 
 struct AboutButtonMod : ViewModifier {

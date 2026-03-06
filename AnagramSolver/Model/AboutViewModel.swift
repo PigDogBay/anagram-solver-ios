@@ -12,11 +12,7 @@ import MessageUI
 import SwiftUtils
 
 class AboutViewModel : ObservableObject {
-    @Published var buyButtonEnabled = false
-    @Published var buyButtonText = "BUY"
-    @Published var showAlertRestored = false
-    @Published var showAlertFailed = false
-    let model : Model
+    private let model : Model
     let observerName = "AboutVM"
     
     var canShowPrivacyForm : Bool {
@@ -25,18 +21,6 @@ class AboutViewModel : ObservableObject {
     
     init(){
         model = Model.sharedInstance
-    }
-
-    func onAppear(){
-        if model.settings.isProMode
-        {
-            //purchase already made
-            buyButtonEnabled=false
-            buyButtonText = "Purchased"
-        }
-    }
-    
-    func onDisappear(){
     }
 
     func showAdPrivacyForm(){
@@ -53,13 +37,5 @@ class AboutViewModel : ObservableObject {
     
     class func rate(){
         UIApplication.shared.open(URL(string: Strings.itunesAppURL)!, options: [:])
-    }
-    
-    func buy(){
-        model.storeVM.buy()
-    }
-
-    func restorePurchase(){
-        model.storeVM.restorePurchase()
     }
 }
