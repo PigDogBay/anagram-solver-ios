@@ -25,6 +25,8 @@ struct CardTips: View {
                         SearchHistoryCard(viewModel: searchHistoryVM)
                             .modifier(CardMod())
                     }
+                    UpgradeCard()
+                        .modifier(CardMod())
                     DefinitionsCard()
                         .modifier(CardMod())
                     FilterCard()
@@ -37,10 +39,10 @@ struct CardTips: View {
                         .modifier(CardMod())
                     TipCard(tip: phraseTip)
                         .modifier(CardMod())
-                    TipCard(tip: shortcutsTip)
-                        .modifier(CardMod())
                 }
                 Group {
+                    TipCard(tip: shortcutsTip)
+                        .modifier(CardMod())
                     AboutCard()
                         .modifier(CardMod())
                     TipCard(tip: spellingBeeTip)
@@ -54,8 +56,6 @@ struct CardTips: View {
                     TipCard(tip: prefixSuffixTip)
                         .modifier(CardMod())
                     HelpOutCard()
-                        .modifier(CardMod())
-                    UpgradeCard()
                         .modifier(CardMod())
                     #if DEBUG
                     AutoTestCard()
