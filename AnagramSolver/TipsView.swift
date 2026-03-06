@@ -37,6 +37,9 @@ struct TipsView: View {
                NavigationLink(destination: FilterHelpView()){
                     HelpRow(iconName: "line.3.horizontal.decrease.circle", colorName: "iconRed", title: "Filters", subTitle: "Too many matches? Refine your search!")
                 }
+                NavigationLink(destination: RemoveAdsDetailView()){
+                    RemoveAdsRow(storeVM: Model.sharedInstance.storeVM)
+                 }
                 tip(spellingBeeTip)
                 tip(codewordsTip)
                 

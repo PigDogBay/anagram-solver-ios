@@ -34,6 +34,7 @@
 		009283D52F59B984008439F2 /* InAppPurchaseStore.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */; };
 		009283D62F59B998008439F2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45D7B21E2CF0C500EC2D27 /* Settings.swift */; };
 		009283D82F59BDAB008439F2 /* RemoveAdsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009283D72F59BDAB008439F2 /* RemoveAdsDetailView.swift */; };
+		009283DC2F5AE5A8008439F2 /* RemoveAdsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009283DB2F5AE5A8008439F2 /* RemoveAdsRow.swift */; };
 		0092DE872D54DB7400D0AFB5 /* SearchHistoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE852D54DB6D00D0AFB5 /* SearchHistoryCard.swift */; };
 		0092DE892D54E3B700D0AFB5 /* SearchHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE882D54E3AE00D0AFB5 /* SearchHistoryView.swift */; };
 		0092DE8D2D55535C00D0AFB5 /* SearchHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE8C2D55535500D0AFB5 /* SearchHistoryModel.swift */; };
@@ -186,6 +187,7 @@
 		009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; name = InAppPurchaseStore.storekit; path = AnagramSolver/InAppPurchaseStore.storekit; sourceTree = "<group>"; };
 		009283D12F59B960008439F2 /* StoreViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModelTests.swift; sourceTree = "<group>"; };
 		009283D72F59BDAB008439F2 /* RemoveAdsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveAdsDetailView.swift; sourceTree = "<group>"; };
+		009283DB2F5AE5A8008439F2 /* RemoveAdsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveAdsRow.swift; sourceTree = "<group>"; };
 		0092DE852D54DB6D00D0AFB5 /* SearchHistoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryCard.swift; sourceTree = "<group>"; };
 		0092DE882D54E3AE00D0AFB5 /* SearchHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryView.swift; sourceTree = "<group>"; };
 		0092DE8C2D55535500D0AFB5 /* SearchHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryModel.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 				00CE29392AB1D0690002CA30 /* HelpRow.swift */,
 				00EEA71F25CAC59D0017F6A4 /* MailView.swift */,
 				00EEA70B25CABFE50017F6A4 /* RateRow.swift */,
+				009283DB2F5AE5A8008439F2 /* RemoveAdsRow.swift */,
 				0092DE852D54DB6D00D0AFB5 /* SearchHistoryCard.swift */,
 				00F17DD626A9CC3500452020 /* SettingsCard.swift */,
 				004AA92026CEB1CB00A63C47 /* SettingsPicker.swift */,
@@ -739,9 +742,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -786,6 +793,7 @@
 				00EEA71225CABFE50017F6A4 /* AboutRow.swift in Sources */,
 				0092DE892D54E3B700D0AFB5 /* SearchHistoryView.swift in Sources */,
 				00EEA71A25CAC2A40017F6A4 /* Coordinator.swift in Sources */,
+				009283DC2F5AE5A8008439F2 /* RemoveAdsRow.swift in Sources */,
 				00EEA71025CABFE50017F6A4 /* FeedbackRow.swift in Sources */,
 				002E8E7A27ECDA3C002BFC3E /* QueryTextFieldDelegate.swift in Sources */,
 				0029A03525307170002E96D1 /* Strings.swift in Sources */,
