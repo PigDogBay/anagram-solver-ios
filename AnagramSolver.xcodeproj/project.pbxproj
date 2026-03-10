@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001059482F6057C60064A149 /* AnagramSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059472F6057C60064A149 /* AnagramSolver.swift */; };
 		001AAC2326EA9093000CC6B6 /* phrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = 001AAC2126EA9093000CC6B6 /* phrases.txt */; };
 		001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */; };
 		0029A03525307170002E96D1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029A03425307170002E96D1 /* Strings.swift */; };
@@ -163,6 +164,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		001059472F6057C60064A149 /* AnagramSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolver.swift; sourceTree = "<group>"; };
 		001AAC2126EA9093000CC6B6 /* phrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phrases.txt; sourceTree = "<group>"; };
 		001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpTitleView.swift; sourceTree = "<group>"; };
 		0029A03425307170002E96D1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -452,6 +454,7 @@
 				00EEA6F825CABBD60017F6A4 /* Supporting Views */,
 				4D1D62BB1E26674F00231DB3 /* ViewControllers */,
 				00EEA6F625CABBB40017F6A4 /* Views */,
+				001059472F6057C60064A149 /* AnagramSolver.swift */,
 				4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */,
 			);
 			path = AnagramSolver;
@@ -805,6 +808,7 @@
 				009283C72F570F84008439F2 /* StoreViewModel.swift in Sources */,
 				004AA91C26CD306D00A63C47 /* SettingsView.swift in Sources */,
 				00EEA6FA25CABCA60017F6A4 /* TipsView.swift in Sources */,
+				001059482F6057C60064A149 /* AnagramSolver.swift in Sources */,
 				00EEA72F25CACB430017F6A4 /* AboutView.swift in Sources */,
 				006D010226A1936600DA083D /* TipCard.swift in Sources */,
 				4D9E43B11FAC86EC007007C8 /* FilterFactory.swift in Sources */,
