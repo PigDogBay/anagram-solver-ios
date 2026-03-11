@@ -32,14 +32,15 @@ struct SearchBarMod : ViewModifier {
         content
             .autocorrectionDisabled()
             .accessibilityIdentifier("searchTextField")
+            .frame(height: 44)
             .padding(.leading,8)
             .padding(.trailing,8)
-            .padding(.top,8)
-            .padding(.bottom,8)
+            .padding(.top,3)
+            .padding(.bottom,3)
             .background(Color("queryBackground"))
             .padding(8)
             .background(Color("navBackground"))
-            .textFieldStyle(PlainTextFieldStyle())
+            .textFieldStyle(.plain)
             .modifier(EmailKeyboardMod(textStyle: .title))
             .submitLabel(.search)
 
