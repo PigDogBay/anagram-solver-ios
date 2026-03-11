@@ -47,20 +47,23 @@ struct SearchBarMod : ViewModifier {
 }
 struct EmailKeyboardMod : ViewModifier {
     
+    @AppStorage(Keys.useUpperCase) var useUpperCase: Bool = Settings().useUpperCase
+    @AppStorage(Keys.keyboardType) var keyboardName : String = Settings().keyboardType
+    @AppStorage(Keys.useMonospacedFont) var useMonospacedFont : Bool = Settings().useMonospacedFont
+
     @Environment(AppViewModel.self) var coordinator
-    let settings = Settings()
     private let textStyle : Font.TextStyle
 
     private var autoCap : UITextAutocapitalizationType {
-        return settings.useUpperCase ? .allCharacters : .none
+        return useUpperCase ? .allCharacters : .none
     }
     
     private var keyboardType : UIKeyboardType {
-        return settings.keyboardType == Settings.keyboardWebSearch ? .webSearch : .emailAddress
+        return keyboardName == Settings.keyboardWebSearch ? .webSearch : .emailAddress
     }
     
     private var fontDesign : Font.Design {
-        settings.useMonospacedFont ? .monospaced : .default
+        useMonospacedFont ? .monospaced : .default
     }
     
     init(textStyle : Font.TextStyle = .body){
