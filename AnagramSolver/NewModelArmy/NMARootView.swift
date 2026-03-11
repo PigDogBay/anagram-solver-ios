@@ -13,15 +13,8 @@ struct NMARootView: View {
     
     @ViewBuilder
     var body: some View {
-        VStack(spacing: 0){         //Spacing 0: Remove white gap between search bar and tips
-            SearchBarView(searchBarVM: coordinator.searchBarVM)
-            if Settings().showCardTips {
-                CardTips()
-            } else {
-                TipsView()
-                    .ignoresSafeArea()
-            }
+        NavigationStack(path: Bindable(coordinator).path){
+            MainView()
         }
-
     }
 }

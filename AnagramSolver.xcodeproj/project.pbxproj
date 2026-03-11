@@ -12,6 +12,8 @@
 		001059522F6190C00064A149 /* NMARootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059512F6190BB0064A149 /* NMARootView.swift */; };
 		001059542F6193AB0064A149 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059532F6193A00064A149 /* SearchBarView.swift */; };
 		001059562F61971E0064A149 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059552F6197120064A149 /* SearchBarViewModel.swift */; };
+		001059582F619E7A0064A149 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059572F619E760064A149 /* MainView.swift */; };
+		0010595A2F61A0280064A149 /* ToolbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059592F61A0280064A149 /* ToolbarButton.swift */; };
 		001AAC2326EA9093000CC6B6 /* phrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = 001AAC2126EA9093000CC6B6 /* phrases.txt */; };
 		001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */; };
 		0029A03525307170002E96D1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029A03425307170002E96D1 /* Strings.swift */; };
@@ -173,6 +175,8 @@
 		001059512F6190BB0064A149 /* NMARootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMARootView.swift; sourceTree = "<group>"; };
 		001059532F6193A00064A149 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		001059552F6197120064A149 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
+		001059572F619E760064A149 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		001059592F61A0280064A149 /* ToolbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarButton.swift; sourceTree = "<group>"; };
 		001AAC2126EA9093000CC6B6 /* phrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phrases.txt; sourceTree = "<group>"; };
 		001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpTitleView.swift; sourceTree = "<group>"; };
 		0029A03425307170002E96D1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -311,10 +315,11 @@
 		0010594B2F605A2F0064A149 /* NewModelArmy */ = {
 			isa = PBXGroup;
 			children = (
-				001059552F6197120064A149 /* SearchBarViewModel.swift */,
-				001059532F6193A00064A149 /* SearchBarView.swift */,
-				001059512F6190BB0064A149 /* NMARootView.swift */,
 				0010594D2F605A570064A149 /* AppViewModel.swift */,
+				001059572F619E760064A149 /* MainView.swift */,
+				001059512F6190BB0064A149 /* NMARootView.swift */,
+				001059532F6193A00064A149 /* SearchBarView.swift */,
+				001059552F6197120064A149 /* SearchBarViewModel.swift */,
 			);
 			path = NewModelArmy;
 			sourceTree = "<group>";
@@ -398,6 +403,7 @@
 				00F17DD626A9CC3500452020 /* SettingsCard.swift */,
 				004AA92026CEB1CB00A63C47 /* SettingsPicker.swift */,
 				00EEA70C25CABFE50017F6A4 /* TellFriendRow.swift */,
+				001059592F61A0280064A149 /* ToolbarButton.swift */,
 				006D010126A1936600DA083D /* TipCard.swift */,
 				005BCB3826AAD23900DF44CE /* UpgradeCard.swift */,
 				005BCB3126AAC69700DF44CE /* UserGuideCard.swift */,
@@ -842,6 +848,7 @@
 				00EEA72525CAC81A0017F6A4 /* HelpView.swift in Sources */,
 				001059562F61971E0064A149 /* SearchBarViewModel.swift in Sources */,
 				00EEA72825CAC85A0017F6A4 /* DefinitionHelpView.swift in Sources */,
+				001059582F619E7A0064A149 /* MainView.swift in Sources */,
 				001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */,
 				00F17DDF26AAB8EB00452020 /* AboutCard.swift in Sources */,
 				4DF2DE3A1FACBDBB00F44ADE /* FilterViewController.swift in Sources */,
@@ -852,6 +859,7 @@
 				009283D82F59BDAB008439F2 /* RemoveAdsDetailView.swift in Sources */,
 				004AA92126CEB1CB00A63C47 /* SettingsPicker.swift in Sources */,
 				005BCB3526AACA2400DF44CE /* HelpOutCard.swift in Sources */,
+				0010595A2F61A0280064A149 /* ToolbarButton.swift in Sources */,
 				4DA0C3FA236C761600AF693B /* AppState.swift in Sources */,
 				4DF2DE401FB0A82300F44ADE /* ListViewController.swift in Sources */,
 				00EEA72425CAC81A0017F6A4 /* FilterHelpView.swift in Sources */,
