@@ -33,6 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().compactAppearance = appearance
         UINavigationBar.appearance().tintColor = .white
 
+        //Enable clear button on the text field
+        //https://stackoverflow.com/questions/58200555/swiftui-add-clearbutton-to-textfield
+        UITextField.appearance().clearButtonMode = .always
+
         let settings = Settings()
         settings.registerDefaultSettings()
         return true
