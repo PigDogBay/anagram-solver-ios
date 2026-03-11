@@ -17,7 +17,7 @@ struct AnagramSolverApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NMARootView()
                 .environment(appViewModel)
                 // Dark Mode handling
                 .preferredColorScheme(getPreferredColorScheme())

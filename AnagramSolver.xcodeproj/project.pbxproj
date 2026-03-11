@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		001059482F6057C60064A149 /* AnagramSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059472F6057C60064A149 /* AnagramSolver.swift */; };
 		0010594E2F605A570064A149 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010594D2F605A570064A149 /* AppViewModel.swift */; };
+		001059522F6190C00064A149 /* NMARootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059512F6190BB0064A149 /* NMARootView.swift */; };
+		001059542F6193AB0064A149 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059532F6193A00064A149 /* SearchBarView.swift */; };
+		001059562F61971E0064A149 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059552F6197120064A149 /* SearchBarViewModel.swift */; };
 		001AAC2326EA9093000CC6B6 /* phrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = 001AAC2126EA9093000CC6B6 /* phrases.txt */; };
 		001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */; };
 		0029A03525307170002E96D1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029A03425307170002E96D1 /* Strings.swift */; };
@@ -167,6 +170,9 @@
 /* Begin PBXFileReference section */
 		001059472F6057C60064A149 /* AnagramSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolver.swift; sourceTree = "<group>"; };
 		0010594D2F605A570064A149 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		001059512F6190BB0064A149 /* NMARootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMARootView.swift; sourceTree = "<group>"; };
+		001059532F6193A00064A149 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		001059552F6197120064A149 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
 		001AAC2126EA9093000CC6B6 /* phrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phrases.txt; sourceTree = "<group>"; };
 		001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpTitleView.swift; sourceTree = "<group>"; };
 		0029A03425307170002E96D1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -305,6 +311,9 @@
 		0010594B2F605A2F0064A149 /* NewModelArmy */ = {
 			isa = PBXGroup;
 			children = (
+				001059552F6197120064A149 /* SearchBarViewModel.swift */,
+				001059532F6193A00064A149 /* SearchBarView.swift */,
+				001059512F6190BB0064A149 /* NMARootView.swift */,
 				0010594D2F605A570064A149 /* AppViewModel.swift */,
 			);
 			path = NewModelArmy;
@@ -806,6 +815,7 @@
 				00DEE1412BC7F74200669505 /* DefinitionView.swift in Sources */,
 				00EEA71225CABFE50017F6A4 /* AboutRow.swift in Sources */,
 				0092DE892D54E3B700D0AFB5 /* SearchHistoryView.swift in Sources */,
+				001059522F6190C00064A149 /* NMARootView.swift in Sources */,
 				00EEA71A25CAC2A40017F6A4 /* Coordinator.swift in Sources */,
 				009283DC2F5AE5A8008439F2 /* RemoveAdsRow.swift in Sources */,
 				00EEA71025CABFE50017F6A4 /* FeedbackRow.swift in Sources */,
@@ -827,8 +837,10 @@
 				00EEA71325CABFE50017F6A4 /* RateRow.swift in Sources */,
 				00DEE1382BC7EB9300669505 /* DefinitionViewController.swift in Sources */,
 				0051B66225CC194300AB8B9D /* UserGuideRow.swift in Sources */,
+				001059542F6193AB0064A149 /* SearchBarView.swift in Sources */,
 				0092DE872D54DB7400D0AFB5 /* SearchHistoryCard.swift in Sources */,
 				00EEA72525CAC81A0017F6A4 /* HelpView.swift in Sources */,
+				001059562F61971E0064A149 /* SearchBarViewModel.swift in Sources */,
 				00EEA72825CAC85A0017F6A4 /* DefinitionHelpView.swift in Sources */,
 				001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */,
 				00F17DDF26AAB8EB00452020 /* AboutCard.swift in Sources */,
