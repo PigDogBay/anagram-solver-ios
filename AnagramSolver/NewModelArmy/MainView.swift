@@ -11,12 +11,13 @@ import SwiftUtils
 
 struct MainView: View {
     @Environment(AppViewModel.self) var coordinator
-    
+    @AppStorage(Keys.showCardTips) var showCardTips: Bool = Settings().showCardTips
+
     @ViewBuilder
     var body: some View {
         VStack(spacing: 0){         //Spacing 0: Remove white gap between search bar and tips
             SearchBarView(searchBarVM: coordinator.searchBarVM)
-            if Settings().showCardTips {
+            if showCardTips {
                 CardTips()
             } else {
                 TipsView()
