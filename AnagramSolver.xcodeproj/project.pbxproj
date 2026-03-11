@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		001059482F6057C60064A149 /* AnagramSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059472F6057C60064A149 /* AnagramSolver.swift */; };
+		0010594E2F605A570064A149 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010594D2F605A570064A149 /* AppViewModel.swift */; };
 		001AAC2326EA9093000CC6B6 /* phrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = 001AAC2126EA9093000CC6B6 /* phrases.txt */; };
 		001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */; };
 		0029A03525307170002E96D1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029A03425307170002E96D1 /* Strings.swift */; };
@@ -165,6 +166,7 @@
 
 /* Begin PBXFileReference section */
 		001059472F6057C60064A149 /* AnagramSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolver.swift; sourceTree = "<group>"; };
+		0010594D2F605A570064A149 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		001AAC2126EA9093000CC6B6 /* phrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phrases.txt; sourceTree = "<group>"; };
 		001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpTitleView.swift; sourceTree = "<group>"; };
 		0029A03425307170002E96D1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -300,6 +302,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0010594B2F605A2F0064A149 /* NewModelArmy */ = {
+			isa = PBXGroup;
+			children = (
+				0010594D2F605A570064A149 /* AppViewModel.swift */,
+			);
+			path = NewModelArmy;
+			sourceTree = "<group>";
+		};
 		0029A03325307126002E96D1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +459,7 @@
 		4D45EFB61A9DFABA00C40BB4 /* AnagramSolver */ = {
 			isa = PBXGroup;
 			children = (
+				0010594B2F605A2F0064A149 /* NewModelArmy */,
 				0029A03325307126002E96D1 /* Model */,
 				4D45EFB71A9DFABA00C40BB4 /* Supporting Files */,
 				00EEA6F825CABBD60017F6A4 /* Supporting Views */,
@@ -803,6 +814,7 @@
 				00F17DD926A9D00700452020 /* SettingsHelpView.swift in Sources */,
 				00EEA71425CABFE50017F6A4 /* TellFriendRow.swift in Sources */,
 				00F17DD426A9ABD000452020 /* RootView.swift in Sources */,
+				0010594E2F605A570064A149 /* AppViewModel.swift in Sources */,
 				4D45D7B31E2CF0C500EC2D27 /* Settings.swift in Sources */,
 				4DA0C3F7236B0FC800AF693B /* Matches.swift in Sources */,
 				009283C72F570F84008439F2 /* StoreViewModel.swift in Sources */,

@@ -11,10 +11,12 @@ import SwiftUI
 @main
 struct AnagramSolverApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
+    @State private var appViewModel = AppViewModel()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(appViewModel)
         }
     }
 }
