@@ -13,4 +13,11 @@ import SwiftUI
 @Observable
 class AppViewModel {
     @ObservationIgnored let settings = Settings()
+    
+    
+    ///App life cycle function: called when the app goes into the background
+    func onResignActive(){
+//        model.stopSearch()
+    }
+
 }

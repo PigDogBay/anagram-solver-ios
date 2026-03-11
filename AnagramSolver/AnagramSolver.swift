@@ -11,12 +11,34 @@ import SwiftUI
 @main
 struct AnagramSolverApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @Environment(\.scenePhase) private var scenePhase
     @State private var appViewModel = AppViewModel()
+    @AppStorage(Keys.darkModeOverride) var darkModeOverride: String = Settings.darkModeValueSystem
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(appViewModel)
+                // Dark Mode handling
+                .preferredColorScheme(getPreferredColorScheme())
+                .onChange(of: scenePhase) { oldPhase, newPhase in
+                    switch newPhase {
+                    case .inactive:
+                        appViewModel.onResignActive()
+                    case .background: break
+                    case .active: break
+                    @unknown default:
+                        break
+                    }
+                }
+        }
+    }
+    
+    private func getPreferredColorScheme() -> ColorScheme? {
+        switch (darkModeOverride){
+        case Settings.darkModeValueLight: return .light
+        case Settings.darkModeValueDark: return .dark
+        default: return .none
         }
     }
 }
