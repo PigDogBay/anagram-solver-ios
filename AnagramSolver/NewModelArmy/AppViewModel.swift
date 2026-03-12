@@ -101,6 +101,10 @@ class AppViewModel {
             UIApplication.shared.open(url, options: [:])
         }
     }
+    
+    func createMatchesVM() -> MatchesViewModel {
+        return MatchesViewModel(query: searchBarVM.query, engine: engine, filtersVM: filtersVM)
+    }
 
 
     private func loadWordList(){
