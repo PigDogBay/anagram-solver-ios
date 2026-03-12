@@ -25,5 +25,5 @@ struct MatchesView: View {
 }
 
 #Preview {
-    MatchesView(matchesVM: MatchesViewModel(query: "preview"))
+    MatchesView(matchesVM: MatchesViewModel(query: "preview", engine: WordEngine()))
 }

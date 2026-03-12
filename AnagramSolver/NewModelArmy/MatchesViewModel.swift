@@ -8,12 +8,24 @@
 
 
 import SwiftUI
+import SwiftUtils
+
+enum ResultsListMode {
+    case empty, plain, groupedByLength
+}
 
 @Observable class MatchesViewModel {
     var query : String
-    
-    init(query: String) {
+    @ObservationIgnored let engine : WordEngine
+    let wordFormatter = WordFormatter()
+
+    var status  = ""
+    @ObservationIgnored var resultsListMode = ResultsListMode.empty
+    @ObservationIgnored var grouped = [[String]]()
+
+    init(query: String, engine : WordEngine) {
         print("MatchesVM init()")
         self.query = query
+        self.engine = engine
     }
 }

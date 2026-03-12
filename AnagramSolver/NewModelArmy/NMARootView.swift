@@ -17,7 +17,9 @@ struct NMARootView: View {
             MainView()
                 .navigationDestination(for: NavigationScreens.self) { destination in
                     switch (destination){
-                    case .Matches: MatchesView(matchesVM: MatchesViewModel(query: appViewModel.query))
+                    case .Matches: MatchesView(matchesVM: MatchesViewModel(
+                        query: appViewModel.query,
+                        engine: appViewModel.engine))
                         
         //            case .Tip(let index): HelpView(tip: tipsData[index])
                     case .Tip(let index): SettingsView()
