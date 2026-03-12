@@ -26,7 +26,7 @@ enum SearchState {
     let wordFormatter = WordFormatter()
     @ObservationIgnored var resultsListMode = ResultsListMode.empty
     @ObservationIgnored var grouped = [[String]]()
-    var matches : [String] = []
+    @ObservationIgnored var matches : [String] = []
     var searchState : SearchState = .ready
 
     var status  : String {
@@ -68,9 +68,9 @@ enum SearchState {
         Task {
             self.engine.combinedSearch(searchQuery, callback: filterPipeline)
             matches.append(contentsOf: engine.working)
+            resultsListMode = calculateListMode()
             searchState = .finished
         }
-
     }
     
     private func getSearchingStatusText() -> String{
@@ -92,6 +92,24 @@ enum SearchState {
         }
         return "Matches: \(matches.count)"
     }
+    
+    private func calculateListMode() -> ResultsListMode {
+        groupBySize()
+        return grouped.count>1 ? .groupedByLength : .plain
+    }
+    
+    ///Converts the matches array into multiple arrays where where strings are the same length
+    private func groupBySize() {
+        //Dictionary(grouping) does the hard word in creating the key - length, value - [string]
+        //Interestingly the order as each match is added to it's array is preserved
+        //so no need to do an A-Z sort on each array.
+        //The keys are then sorted in descending order
+        //The map then iterates over the sorted key/pairs returning the [string] values as [[string]]
+        self.grouped = Dictionary(grouping: matches, by: {$0.length})
+            .sorted (by: {$0.0 > $1.0})
+            .map{$0.value}
+    }
+
 
     
 }
