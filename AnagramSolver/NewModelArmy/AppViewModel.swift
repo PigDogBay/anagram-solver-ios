@@ -20,9 +20,27 @@ class AppViewModel {
     @ObservationIgnored let settings = Settings()
     @ObservationIgnored let engine = WordEngine()
     var searchBarVM = SearchBarViewModel()
-    
+    var appState = AppStates.uninitialized
+
     var query : String {
         return searchBarVM.query
+    }
+    
+    var showErrorAlert : Binding<Bool> {
+        Binding(
+            get: {
+                self.appState == .error
+            },
+            set: {
+                if !$0{
+                    print("Error Detected!")
+                    self.appState = .uninitialized
+                    //Just incase reset to the default wordlist
+                    self.settings.wordList = self.settings.defaultWordList
+                    self.loadWordList()
+                }
+            }
+        )
     }
     
     //Navigation stack's path
@@ -30,8 +48,9 @@ class AppViewModel {
 
     ///Called when RootView first appears
     func onLaunch() {
-        print("App Launched")
-        loadWordList()
+        if (appState == .uninitialized){
+            loadWordList()
+        }
     }
     
     ///App life cycle function: called when the app goes into the background
@@ -51,11 +70,13 @@ class AppViewModel {
     }
 
     private func loadWordList(){
+        appState = .loading
         Task {
             do {
                 try await self.engine.loadWordList(name: self.settings.wordList)
+                appState = .ready
             } catch {
-                //TO DO Error state
+                appState = .error
             }
         }
     }
