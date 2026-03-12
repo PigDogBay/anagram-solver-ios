@@ -10,13 +10,13 @@ import SwiftUI
 import SwiftUtils
 
 struct MainView: View {
-    @Environment(AppViewModel.self) var coordinator
+    @Environment(AppViewModel.self) var appViewModel
     @AppStorage(Keys.showCardTips) var showCardTips: Bool = Settings().showCardTips
 
     @ViewBuilder
     var body: some View {
         VStack(spacing: 0){         //Spacing 0: Remove white gap between search bar and tips
-            SearchBarView(searchBarVM: coordinator.searchBarVM)
+            SearchBarView(searchBarVM: appViewModel.searchBarVM)
             if showCardTips {
                 CardTips()
             } else {
@@ -27,8 +27,8 @@ struct MainView: View {
         .navigationTitle("Anagram Solver")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarIconButton(placement: .topBarLeading, iconName: "gear") {coordinator.goto(screen: .Settings)}
-            ToolbarButton(placement: .topBarTrailing, label: "Search"){coordinator.goto(screen: .Filters)}
+            ToolbarIconButton(placement: .topBarLeading, iconName: "gear") {appViewModel.goto(screen: .Settings)}
+            ToolbarButton(placement: .topBarTrailing, label: "Search"){appViewModel.goto(screen: .Filters)}
         }
 
     }

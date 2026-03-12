@@ -9,11 +9,11 @@
 import SwiftUI
 
 struct NMARootView: View {
-    @Environment(AppViewModel.self) var coordinator
+    @Environment(AppViewModel.self) var appViewModel
     
     @ViewBuilder
     var body: some View {
-        NavigationStack(path: Bindable(coordinator).path){
+        NavigationStack(path: Bindable(appViewModel).path){
             MainView()
                 .navigationDestination(for: NavigationScreens.self) { destination in
                     switch (destination){
