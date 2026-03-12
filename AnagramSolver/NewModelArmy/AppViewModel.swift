@@ -19,7 +19,8 @@ enum NavigationScreens : Hashable {
 class AppViewModel {
     @ObservationIgnored let settings = Settings()
     @ObservationIgnored let engine = WordEngine()
-    var searchBarVM = SearchBarViewModel()
+    let searchBarVM = SearchBarViewModel()
+    @ObservationIgnored let filtersVM = FiltersViewModel()
     var appState = AppStates.uninitialized
 
     var query : String {

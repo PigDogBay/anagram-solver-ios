@@ -17,6 +17,10 @@
 		0010595C2F62D7EB0064A149 /* MatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010595B2F62D7EB0064A149 /* MatchesViewModel.swift */; };
 		0010595E2F62D7FF0064A149 /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010595D2F62D7FF0064A149 /* MatchesView.swift */; };
 		001059602F62E9B40064A149 /* WordEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010595F2F62E9B40064A149 /* WordEngine.swift */; };
+		001059622F6306740064A149 /* FiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059612F6306740064A149 /* FiltersViewModel.swift */; };
+		001059642F6308CD0064A149 /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059632F6308CD0064A149 /* FiltersView.swift */; };
+		001059662F6309C30064A149 /* TextFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059652F6309C30064A149 /* TextFilterRow.swift */; };
+		001059682F6309E40064A149 /* FilterPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059672F6309E40064A149 /* FilterPicker.swift */; };
 		001AAC2326EA9093000CC6B6 /* phrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = 001AAC2126EA9093000CC6B6 /* phrases.txt */; };
 		001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */; };
 		0029A03525307170002E96D1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029A03425307170002E96D1 /* Strings.swift */; };
@@ -183,6 +187,10 @@
 		0010595B2F62D7EB0064A149 /* MatchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewModel.swift; sourceTree = "<group>"; };
 		0010595D2F62D7FF0064A149 /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
 		0010595F2F62E9B40064A149 /* WordEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordEngine.swift; sourceTree = "<group>"; };
+		001059612F6306740064A149 /* FiltersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewModel.swift; sourceTree = "<group>"; };
+		001059632F6308CD0064A149 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
+		001059652F6309C30064A149 /* TextFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFilterRow.swift; sourceTree = "<group>"; };
+		001059672F6309E40064A149 /* FilterPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPicker.swift; sourceTree = "<group>"; };
 		001AAC2126EA9093000CC6B6 /* phrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phrases.txt; sourceTree = "<group>"; };
 		001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpTitleView.swift; sourceTree = "<group>"; };
 		0029A03425307170002E96D1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -322,6 +330,8 @@
 			isa = PBXGroup;
 			children = (
 				0010594D2F605A570064A149 /* AppViewModel.swift */,
+				001059612F6306740064A149 /* FiltersViewModel.swift */,
+				001059632F6308CD0064A149 /* FiltersView.swift */,
 				001059572F619E760064A149 /* MainView.swift */,
 				0010595D2F62D7FF0064A149 /* MatchesView.swift */,
 				0010595B2F62D7EB0064A149 /* MatchesViewModel.swift */,
@@ -402,6 +412,7 @@
 				00DEE13C2BC7F71A00669505 /* DefinitionSynonymsRow.swift */,
 				00EEA70825CABFE50017F6A4 /* FeedbackRow.swift */,
 				00F17DDC26A9E17300452020 /* FilterCard.swift */,
+				001059672F6309E40064A149 /* FilterPicker.swift */,
 				005BCB3426AACA2400DF44CE /* HelpOutCard.swift */,
 				001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */,
 				00CE29392AB1D0690002CA30 /* HelpRow.swift */,
@@ -412,6 +423,7 @@
 				00F17DD626A9CC3500452020 /* SettingsCard.swift */,
 				004AA92026CEB1CB00A63C47 /* SettingsPicker.swift */,
 				00EEA70C25CABFE50017F6A4 /* TellFriendRow.swift */,
+				001059652F6309C30064A149 /* TextFilterRow.swift */,
 				001059592F61A0280064A149 /* ToolbarButton.swift */,
 				006D010126A1936600DA083D /* TipCard.swift */,
 				005BCB3826AAD23900DF44CE /* UpgradeCard.swift */,
@@ -812,6 +824,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001059642F6308CD0064A149 /* FiltersView.swift in Sources */,
 				4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */,
 				00EEA71D25CAC5050017F6A4 /* AboutViewModel.swift in Sources */,
 				00F17DDB26A9DD4000452020 /* DefinitionsCard.swift in Sources */,
@@ -820,6 +833,7 @@
 				00DEE13B2BC7F68800669505 /* DefinitionViewModel.swift in Sources */,
 				4D3596411CFEEA50008D2FAF /* Ads.swift in Sources */,
 				4D9E43AD1FAC84FC007007C8 /* Filter.swift in Sources */,
+				001059622F6306740064A149 /* FiltersViewModel.swift in Sources */,
 				00EEA70325CABF7D0017F6A4 /* HelpViewModel.swift in Sources */,
 				00EEA71725CAC02D0017F6A4 /* AutomatedTestRow.swift in Sources */,
 				005BCB3726AACED400DF44CE /* AutoTestCard.swift in Sources */,
@@ -847,6 +861,7 @@
 				00EEA6FA25CABCA60017F6A4 /* TipsView.swift in Sources */,
 				001059482F6057C60064A149 /* AnagramSolver.swift in Sources */,
 				00EEA72F25CACB430017F6A4 /* AboutView.swift in Sources */,
+				001059682F6309E40064A149 /* FilterPicker.swift in Sources */,
 				006D010226A1936600DA083D /* TipCard.swift in Sources */,
 				4D9E43B11FAC86EC007007C8 /* FilterFactory.swift in Sources */,
 				00EEA71325CABFE50017F6A4 /* RateRow.swift in Sources */,
@@ -883,6 +898,7 @@
 				4D45EFBA1A9DFABA00C40BB4 /* AppDelegate.swift in Sources */,
 				006D010526A1B89000DA083D /* CardTips.swift in Sources */,
 				00DEE13F2BC7F71A00669505 /* DefinitionHeaderRow.swift in Sources */,
+				001059662F6309C30064A149 /* TextFilterRow.swift in Sources */,
 				00F17DDD26A9E17300452020 /* FilterCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

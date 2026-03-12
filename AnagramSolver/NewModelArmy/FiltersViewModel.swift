@@ -1,0 +1,133 @@
+//
+//  Filters.swift
+//  CSKPrototype
+//
+//  Created by Mark Bailey on 16/06/2020.
+//  Copyright © 2020 MPD Bailey Technology. All rights reserved.
+//
+
+import SwiftUI
+import SwiftUtils
+
+@Observable class FiltersViewModel {
+    var contains = ""
+    var excludes = ""
+    var containsWord = ""
+    var excludesWord = ""
+    var prefix = ""
+    var suffix = ""
+    var isStartingWithNotEnabled = false
+    var isEndingWithNotEnabled = false
+    var pattern = ""
+    var regExp = ""
+    var distinctSelection = 0
+    var lessThan = 0
+    var moreThan = 0
+    var equalTo = 0
+    
+    let settings = Settings()
+
+    var filterCount : Int {
+        var count = 0
+        if moreThan != 0 { count = count + 1}
+        if lessThan != 0 { count = count + 1}
+        if equalTo != 0 { count = count + 1}
+        if distinctSelection != 0 { count = count + 1}
+        if prefix != "" { count = count + 1}
+        if suffix != "" { count = count + 1}
+        if contains != "" { count = count + 1}
+        if excludes != "" { count = count + 1}
+        if containsWord != "" { count = count + 1}
+        if excludesWord != "" { count = count + 1}
+        if pattern != "" { count = count + 1}
+        if regExp != "" { count = count + 1}
+        return count
+    }
+    
+    
+    /// The title indicates the number of filters set
+    var title : String {
+        let count = filterCount
+        return count == 0 ? "Filters" : "Filters (\(count))"
+    }
+    
+    func reset() {
+        moreThan = 0
+        lessThan = 0
+        equalTo = 0
+        distinctSelection = 0
+        prefix = ""
+        suffix = ""
+        isStartingWithNotEnabled = false
+        isEndingWithNotEnabled = false
+        contains = ""
+        excludes = ""
+        containsWord = ""
+        excludesWord = ""
+        pattern = ""
+        regExp = ""
+    }
+
+    func createChainedCallback(lastCallback: WordListCallback) -> WordListCallback {
+        var callback = lastCallback
+        
+        //chain filters
+        if self.equalTo != 0 {
+            callback = EqualToFilter(callback: callback, size: self.equalTo)
+        }
+        if self.lessThan != 0 {
+            callback = LessThanFilter(callback: callback, size: self.lessThan)
+        }
+        if self.moreThan != 0 {
+            callback = BiggerThanFilter(callback: callback, size: self.moreThan)
+        }
+        if self.prefix != "" {
+            callback = StartsWithFilter(callback: callback, letters: self.prefix.lowercased(),
+                                        isNot: self.isStartingWithNotEnabled)
+        }
+        if self.suffix != "" {
+            callback = EndsWithFilter(callback: callback, letters: self.suffix.lowercased(),
+                                      isNot: self.isEndingWithNotEnabled)
+        }
+        if self.contains != "" {
+            callback = ContainsFilter(callback: callback, letters: self.contains.lowercased())
+        }
+        if self.excludes != "" {
+            callback = ExcludesFilter(callback: callback, letters: self.excludes.lowercased())
+        }
+        if self.containsWord != "" {
+            callback = ContainsWordFilter(callback: callback, word: self.containsWord.lowercased())
+        }
+        if self.excludesWord != "" {
+            callback = ExcludesWordFilter(callback: callback, word: self.excludesWord.lowercased())
+        }
+        if self.pattern != "" {
+            callback =  RegexFilter.createCrosswordFilter(callback: callback, query: self.pattern.lowercased())
+        }
+        if self.regExp != "" {
+            callback =  RegexFilter(callback: callback, pattern: self.regExp.lowercased())
+        }
+        if self.distinctSelection == 1 {
+            callback = DistinctFilter(callback: callback)
+        }
+        if self.distinctSelection == 2 {
+            callback = NotDistinctFilter(callback: callback)
+        }
+        return callback
+    }
+    
+    
+    /// Converts typed spaces and . to ? for the crossword pattern filter
+    /// - Parameter typed: typed chars in the crossword pattern text field
+    func setPatternFrom(typed : String) {
+        var query = typed
+        if settings.spaceToQuestionMark {
+            query = query.replacingOccurrences(of: " ", with: "?")
+        }
+        if settings.fullStopToQuestionMark {
+            query = query.replacingOccurrences(of: ".", with: "?")
+        }
+        pattern = query
+    }
+
+}

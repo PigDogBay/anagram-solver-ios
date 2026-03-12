@@ -34,7 +34,7 @@ struct NMARootView: View {
                     case .Definition : SettingsView()
                     case .Settings: SettingsView()
                         //            case .Filters: FiltersView(filters: viewModel.model.filters)
-                    case .Filters: SettingsView()
+                    case .Filters: FiltersView(filters: appViewModel.filtersVM)
                     case .DefinitionHelp: DefinitionHelpView()
                     case .FiltersHelp: FilterHelpView()
                     case .SettingsHelp: SettingsHelpView()
