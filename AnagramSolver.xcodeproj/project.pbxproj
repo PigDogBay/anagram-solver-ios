@@ -21,6 +21,8 @@
 		001059642F6308CD0064A149 /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059632F6308CD0064A149 /* FiltersView.swift */; };
 		001059662F6309C30064A149 /* TextFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059652F6309C30064A149 /* TextFilterRow.swift */; };
 		001059682F6309E40064A149 /* FilterPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059672F6309E40064A149 /* FilterPicker.swift */; };
+		0010596A2F6339BE0064A149 /* MatchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059692F6339BE0064A149 /* MatchRow.swift */; };
+		0010596C2F6340500064A149 /* ExpandableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010596B2F6340500064A149 /* ExpandableSection.swift */; };
 		001AAC2326EA9093000CC6B6 /* phrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = 001AAC2126EA9093000CC6B6 /* phrases.txt */; };
 		001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */; };
 		0029A03525307170002E96D1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029A03425307170002E96D1 /* Strings.swift */; };
@@ -191,6 +193,8 @@
 		001059632F6308CD0064A149 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
 		001059652F6309C30064A149 /* TextFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFilterRow.swift; sourceTree = "<group>"; };
 		001059672F6309E40064A149 /* FilterPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPicker.swift; sourceTree = "<group>"; };
+		001059692F6339BE0064A149 /* MatchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRow.swift; sourceTree = "<group>"; };
+		0010596B2F6340500064A149 /* ExpandableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableSection.swift; sourceTree = "<group>"; };
 		001AAC2126EA9093000CC6B6 /* phrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phrases.txt; sourceTree = "<group>"; };
 		001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpTitleView.swift; sourceTree = "<group>"; };
 		0029A03425307170002E96D1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -335,6 +339,7 @@
 				001059572F619E760064A149 /* MainView.swift */,
 				0010595D2F62D7FF0064A149 /* MatchesView.swift */,
 				0010595B2F62D7EB0064A149 /* MatchesViewModel.swift */,
+				001059692F6339BE0064A149 /* MatchRow.swift */,
 				001059512F6190BB0064A149 /* NMARootView.swift */,
 				001059532F6193A00064A149 /* SearchBarView.swift */,
 				001059552F6197120064A149 /* SearchBarViewModel.swift */,
@@ -410,6 +415,7 @@
 				00F17DDA26A9DD4000452020 /* DefinitionsCard.swift */,
 				00DEE13D2BC7F71A00669505 /* DefinitionHeaderRow.swift */,
 				00DEE13C2BC7F71A00669505 /* DefinitionSynonymsRow.swift */,
+				0010596B2F6340500064A149 /* ExpandableSection.swift */,
 				00EEA70825CABFE50017F6A4 /* FeedbackRow.swift */,
 				00F17DDC26A9E17300452020 /* FilterCard.swift */,
 				001059672F6309E40064A149 /* FilterPicker.swift */,
@@ -887,11 +893,13 @@
 				005BCB3526AACA2400DF44CE /* HelpOutCard.swift in Sources */,
 				0010595A2F61A0280064A149 /* ToolbarButton.swift in Sources */,
 				4DA0C3FA236C761600AF693B /* AppState.swift in Sources */,
+				0010596A2F6339BE0064A149 /* MatchRow.swift in Sources */,
 				0010595E2F62D7FF0064A149 /* MatchesView.swift in Sources */,
 				4DF2DE401FB0A82300F44ADE /* ListViewController.swift in Sources */,
 				00EEA72425CAC81A0017F6A4 /* FilterHelpView.swift in Sources */,
 				00DEE13E2BC7F71A00669505 /* DefinitionSynonymsRow.swift in Sources */,
 				00EEA6FD25CABDB10017F6A4 /* TipsData.swift in Sources */,
+				0010596C2F6340500064A149 /* ExpandableSection.swift in Sources */,
 				00EEA72C25CAC8B50017F6A4 /* ActivityViewController.swift in Sources */,
 				4DF2DE3D1FACC4B300F44ADE /* LettersFilterTableViewCell.swift in Sources */,
 				00EEA72025CAC59D0017F6A4 /* MailView.swift in Sources */,

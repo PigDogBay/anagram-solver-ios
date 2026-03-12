@@ -7,20 +7,83 @@
 //
 
 import SwiftUI
+import SwiftUtils
 
 struct MatchesView: View {
     @Environment(AppViewModel.self) var appViewModel
     @State var matchesVM : MatchesViewModel
+    
+    private var listSection : some View {
+        return List {
+            Text(matchesVM.status)
+                .frame(maxWidth: .infinity, alignment: .center)
+                .padding(8)
+                .transition(.scale)
+            resultRows(matchesVM.matches, matchesVM.wordFormatter)
+        }
+        .listStyle(.insetGrouped)
+        .scrollDismissesKeyboard(.immediately)
+    }
+
+    private var groupedByLengthSection : some View {
+        return List {
+            Text(matchesVM.status)
+                .frame(maxWidth: .infinity, alignment: .center)
+                .padding(8)
+                .transition(.scale)
+            ForEach(matchesVM.grouped, id: \.self) { group in
+                ExpandableSection(
+                    isExpanded: true,
+                    title: matchesVM.getSectionTitle(rows: group)) {
+                        resultRows(group, self.matchesVM.wordFormatter)
+                    }.tint(Color("accentColor"))
+            }
+        }
+        .listStyle(.sidebar)
+        .scrollDismissesKeyboard(.immediately)
+    }
+
+    private func resultRows(_ matches : [String], _ formatter : IWordFormatter) -> some View {
+        ForEach(matches, id: \.self) { match in
+            MatchRow(match: match, formatter: formatter, largeFont: appViewModel.settings.useLargeResultsFont)
+                .contextMenu{
+                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .Collins) }){Text("Collins")}
+                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .Dictionary) }){Text("Dictionary.com")}
+                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .GoogleDictionary) }){Text("Google Dictionary")}
+                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .MerriamWebster) }){Text("Merriam-Webster")}
+                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .MWThesaurus) }){Text("M-W Thesaurus")}
+                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .Thesaurus) }){Text("Thesaurus.com")}
+                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .Wiktionary) }){Text("Wiktionary")}
+                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .Wikipedia) }){Text("Wikipedia")}
+                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .WordGameDictionary) }){Text("Word Game Dictionary")}
+                    Button(action: {self.matchesVM.search(word: match)}){Text("Search")}
+                }
+                .contentShape(Rectangle()) //Ensure row white space is tappable
+                .onTapGesture {self.appViewModel.lookUpWord(word: match)}
+        }
+    }
+    
 
     var body: some View {
-        Text("Query \(matchesVM.query)")
-            .navigationTitle("\(matchesVM.query)")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarBackButtonHidden(true)
-            .toolbar {
-                ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left") {appViewModel.goBack()}
-                ToolbarButton(placement: .topBarTrailing, label: "Filters"){appViewModel.goto(screen: .Filters)}
+        VStack {
+            switch matchesVM.resultsListMode {
+            case .plain:
+                listSection
+            case .groupedByLength:
+                groupedByLengthSection
+            case .empty:
+                listSection
             }
+            Spacer()
+            Text("BANNER ADVERT")
+        }
+        .navigationTitle("\(matchesVM.query)")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left") {appViewModel.goBack()}
+            ToolbarButton(placement: .topBarTrailing, label: "Filters"){appViewModel.goto(screen: .Filters)}
+        }
     }
 }
 

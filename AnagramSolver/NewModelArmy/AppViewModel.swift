@@ -69,6 +69,39 @@ class AppViewModel {
     func goto(screen : NavigationScreens){
         path.append(screen)
     }
+    
+    func webLookUp(word : String) {
+        let defModel = DefaultDefintion(word: word)
+        if let url = defModel.lookupUrl(){
+            showWebPage(address: url)
+        }
+    }
+
+    func lookUpWord(word : String){
+        webLookUp(word: word)
+//        let lookUpResult = model.lookUpDefinition(word)
+//        if (lookUpResult.isDefinitionAvailable) {
+//            //Navigate to the DefinitionView
+//            path.append(NavigationScreens.Definition)
+//        } else {
+//            //No definition found, so open a web browser to search for it
+//            webLookUp(word: word)
+//        }
+    }
+    
+    func lookUpWord(word : String, provider : DefinitionProviders){
+        let defModel = ContextDefintion(word : word, provider: provider)
+        if let url = defModel.lookupUrl(){
+            showWebPage(address: url)
+        }
+    }
+
+    func showWebPage(address : String) {
+        if let url = URL(string: address) {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+
 
     private func loadWordList(){
         appState = .loading
