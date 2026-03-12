@@ -15,10 +15,10 @@ struct MatchesView: View {
     
     private var listSection : some View {
         return List {
-            Text(matchesVM.status)
-                .frame(maxWidth: .infinity, alignment: .center)
-                .padding(8)
-                .transition(.scale)
+                Text(matchesVM.status)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .padding(8)
+                    .transition(.scale)
             resultRows(matchesVM.matches, matchesVM.wordFormatter)
         }
         .listStyle(.insetGrouped)
@@ -77,6 +77,9 @@ struct MatchesView: View {
             Spacer()
             Text("BANNER ADVERT")
         }
+        .onAppear() {
+            matchesVM.search(word: matchesVM.query)
+        }
         .navigationTitle("\(matchesVM.query)")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
@@ -88,5 +91,11 @@ struct MatchesView: View {
 }
 
 #Preview {
-    MatchesView(matchesVM: MatchesViewModel(query: "preview", engine: WordEngine()))
+    MatchesView(
+        matchesVM: MatchesViewModel(
+            query: "preview",
+            engine: WordEngine(),
+            filtersVM: FiltersViewModel()
+        )
+    )
 }
