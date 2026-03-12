@@ -14,6 +14,8 @@
 		001059562F61971E0064A149 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059552F6197120064A149 /* SearchBarViewModel.swift */; };
 		001059582F619E7A0064A149 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059572F619E760064A149 /* MainView.swift */; };
 		0010595A2F61A0280064A149 /* ToolbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059592F61A0280064A149 /* ToolbarButton.swift */; };
+		0010595C2F62D7EB0064A149 /* MatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010595B2F62D7EB0064A149 /* MatchesViewModel.swift */; };
+		0010595E2F62D7FF0064A149 /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010595D2F62D7FF0064A149 /* MatchesView.swift */; };
 		001AAC2326EA9093000CC6B6 /* phrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = 001AAC2126EA9093000CC6B6 /* phrases.txt */; };
 		001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */; };
 		0029A03525307170002E96D1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029A03425307170002E96D1 /* Strings.swift */; };
@@ -177,6 +179,8 @@
 		001059552F6197120064A149 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
 		001059572F619E760064A149 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		001059592F61A0280064A149 /* ToolbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarButton.swift; sourceTree = "<group>"; };
+		0010595B2F62D7EB0064A149 /* MatchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewModel.swift; sourceTree = "<group>"; };
+		0010595D2F62D7FF0064A149 /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
 		001AAC2126EA9093000CC6B6 /* phrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phrases.txt; sourceTree = "<group>"; };
 		001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpTitleView.swift; sourceTree = "<group>"; };
 		0029A03425307170002E96D1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -317,6 +321,8 @@
 			children = (
 				0010594D2F605A570064A149 /* AppViewModel.swift */,
 				001059572F619E760064A149 /* MainView.swift */,
+				0010595D2F62D7FF0064A149 /* MatchesView.swift */,
+				0010595B2F62D7EB0064A149 /* MatchesViewModel.swift */,
 				001059512F6190BB0064A149 /* NMARootView.swift */,
 				001059532F6193A00064A149 /* SearchBarView.swift */,
 				001059552F6197120064A149 /* SearchBarViewModel.swift */,
@@ -849,6 +855,7 @@
 				001059562F61971E0064A149 /* SearchBarViewModel.swift in Sources */,
 				00EEA72825CAC85A0017F6A4 /* DefinitionHelpView.swift in Sources */,
 				001059582F619E7A0064A149 /* MainView.swift in Sources */,
+				0010595C2F62D7EB0064A149 /* MatchesViewModel.swift in Sources */,
 				001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */,
 				00F17DDF26AAB8EB00452020 /* AboutCard.swift in Sources */,
 				4DF2DE3A1FACBDBB00F44ADE /* FilterViewController.swift in Sources */,
@@ -861,6 +868,7 @@
 				005BCB3526AACA2400DF44CE /* HelpOutCard.swift in Sources */,
 				0010595A2F61A0280064A149 /* ToolbarButton.swift in Sources */,
 				4DA0C3FA236C761600AF693B /* AppState.swift in Sources */,
+				0010595E2F62D7FF0064A149 /* MatchesView.swift in Sources */,
 				4DF2DE401FB0A82300F44ADE /* ListViewController.swift in Sources */,
 				00EEA72425CAC81A0017F6A4 /* FilterHelpView.swift in Sources */,
 				00DEE13E2BC7F71A00669505 /* DefinitionSynonymsRow.swift in Sources */,

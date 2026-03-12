@@ -28,7 +28,7 @@ struct MainView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarIconButton(placement: .topBarLeading, iconName: "gear") {appViewModel.goto(screen: .Settings)}
-            ToolbarButton(placement: .topBarTrailing, label: "Search"){appViewModel.goto(screen: .Filters)}
+            ToolbarButton(placement: .topBarTrailing, label: "Search"){appViewModel.goto(screen: .Matches)}
         }
 
     }

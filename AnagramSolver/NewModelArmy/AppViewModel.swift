@@ -11,7 +11,7 @@ import SwiftUI
 
 enum NavigationScreens : Hashable {
     case Tip(Int)
-    case Definition, Settings, Filters, DefinitionHelp, FiltersHelp, SettingsHelp, About, RemoveAdsDetail
+    case Matches, Definition, Settings, Filters, DefinitionHelp, FiltersHelp, SettingsHelp, About, RemoveAdsDetail
 }
 
 @MainActor
@@ -20,6 +20,10 @@ class AppViewModel {
     @ObservationIgnored let settings = Settings()
 
     var searchBarVM = SearchBarViewModel()
+    
+    var query : String {
+        return searchBarVM.query
+    }
     
     //Navigation stack's path
     var path = NavigationPath()
