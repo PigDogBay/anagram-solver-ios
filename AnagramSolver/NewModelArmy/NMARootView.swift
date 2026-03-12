@@ -35,6 +35,8 @@ struct NMARootView: View {
                     case .RemoveAdsDetail: RemoveAdsDetailView()
                     }
                 }
+        }.onAppear(){
+            appViewModel.onLaunch()
         }
     }
 }

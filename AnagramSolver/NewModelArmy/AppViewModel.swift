@@ -28,10 +28,15 @@ class AppViewModel {
     //Navigation stack's path
     var path = NavigationPath()
 
+    ///Called when RootView first appears
+    func onLaunch() {
+        print("App Launched")
+        loadWordList()
+    }
     
     ///App life cycle function: called when the app goes into the background
     func onResignActive(){
-//        model.stopSearch()
+        engine.stopSearch()
     }
     
     ///Call this when the user presses the Back button
@@ -45,5 +50,14 @@ class AppViewModel {
         path.append(screen)
     }
 
+    private func loadWordList(){
+        Task {
+            do {
+                try await self.engine.loadWordList(name: self.settings.wordList)
+            } catch {
+                //TO DO Error state
+            }
+        }
+    }
 
 }
