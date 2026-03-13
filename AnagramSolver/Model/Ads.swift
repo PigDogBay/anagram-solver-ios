@@ -99,6 +99,11 @@ class Ads
     static func createRequest() -> Request { Request()}
     
     static func createAdsize(screenWidth : CGFloat) -> AdSize {
-        return largeAnchoredAdaptiveBanner(width: screenWidth)
+//        return largeAnchoredAdaptiveBanner(width: screenWidth)
+        if (UIDevice.current.orientation.isLandscape){
+            return landscapeAnchoredAdaptiveBanner(width: screenWidth)
+        } else {
+            return portraitAnchoredAdaptiveBanner(width: screenWidth)
+        }
     }
 }
