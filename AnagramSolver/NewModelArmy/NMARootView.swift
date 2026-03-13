@@ -11,7 +11,6 @@ import SwiftUI
 struct NMARootView: View {
     @Environment(AppViewModel.self) var appViewModel
     private let formViewControllerRepresentable = FormViewControllerRepresentable()
-
     
     @ViewBuilder
     var body: some View {

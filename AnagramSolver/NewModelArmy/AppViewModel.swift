@@ -17,13 +17,13 @@ enum NavigationScreens : Hashable {
 @MainActor
 @Observable
 class AppViewModel {
-    @ObservationIgnored let ads = Ads()
     @ObservationIgnored let settings = Settings()
     @ObservationIgnored let engine = WordEngine()
     let searchBarVM = SearchBarViewModel()
     @ObservationIgnored let filtersVM = FiltersViewModel()
     var appState = AppStates.uninitialized
-
+    @ObservationIgnored let ads = Ads()
+    
     var query : String {
         return searchBarVM.query
     }
@@ -119,5 +119,5 @@ class AppViewModel {
             }
         }
     }
-
+    
 }

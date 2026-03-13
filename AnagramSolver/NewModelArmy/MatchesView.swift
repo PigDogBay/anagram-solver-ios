@@ -12,7 +12,24 @@ import SwiftUtils
 struct MatchesView: View {
     @Environment(AppViewModel.self) var appViewModel
     @State var matchesVM : MatchesViewModel
+    @State var isAdLoaded = false
     
+    private func adSection() -> some View {
+        HStack {
+            let size = GADBannerViewController.getAdBannerSize()
+            Spacer()
+            GADBannerViewController(isAdLoaded: $isAdLoaded)
+                .frame(
+                    width: size.size.width,
+                    height: isAdLoaded ? size.size.height : 0)
+                .opacity(isAdLoaded ? 1 : 0)
+                .offset(y: isAdLoaded ? 0 : 50)
+                .animation(.easeInOut(duration: 0.5), value: isAdLoaded)
+                .clipped()
+            Spacer()
+        }
+    }
+
     private var listSection : some View {
         return List {
                 Text(matchesVM.status)
@@ -74,8 +91,7 @@ struct MatchesView: View {
             case .empty:
                 listSection
             }
-            Spacer()
-            Text("BANNER ADVERT")
+            adSection()
         }
         .onAppear() {
             matchesVM.search(word: matchesVM.query)
