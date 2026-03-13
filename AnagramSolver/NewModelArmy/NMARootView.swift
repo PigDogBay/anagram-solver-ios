@@ -10,13 +10,8 @@ import SwiftUI
 
 struct NMARootView: View {
     @Environment(AppViewModel.self) var appViewModel
-    
-//    private var showErrorAlert : Binding<Bool>{
-//        Binding(
-//            get: {appViewModel.appState == .error},
-//            set: {}
-//            )
-//    }
+    private let formViewControllerRepresentable = FormViewControllerRepresentable()
+
     
     @ViewBuilder
     var body: some View {
@@ -40,8 +35,18 @@ struct NMARootView: View {
                     }
                 }
         }
+        .background {
+            // Add the ViewControllerRepresentable to the background so it
+            // doesn't influence the placement of other views in the view hierarchy.
+            formViewControllerRepresentable
+                .frame(width: .zero, height: .zero)
+        }
         .onAppear(){
             appViewModel.onLaunch()
+            if !appViewModel.settings.isProMode {
+                appViewModel.ads.setUp(viewControler: formViewControllerRepresentable.viewController)
+            }
+
         }
         .alert(isPresented: appViewModel.showErrorAlert){
             Alert(

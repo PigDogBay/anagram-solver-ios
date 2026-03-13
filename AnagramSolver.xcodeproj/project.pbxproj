@@ -38,6 +38,7 @@
 		005BCB3526AACA2400DF44CE /* HelpOutCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BCB3426AACA2400DF44CE /* HelpOutCard.swift */; };
 		005BCB3726AACED400DF44CE /* AutoTestCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BCB3626AACED400DF44CE /* AutoTestCard.swift */; };
 		005BCB3926AAD23900DF44CE /* UpgradeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BCB3826AAD23900DF44CE /* UpgradeCard.swift */; };
+		005CDEAD2F646123007DB3ED /* FormViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CDEAC2F646123007DB3ED /* FormViewControllerRepresentable.swift */; };
 		006D010226A1936600DA083D /* TipCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D010126A1936600DA083D /* TipCard.swift */; };
 		006D010526A1B89000DA083D /* CardTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D010426A1B89000DA083D /* CardTips.swift */; };
 		0081F01525B1BB6C00792552 /* wordlist-it.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01325B1BB6C00792552 /* wordlist-it.txt */; };
@@ -210,6 +211,7 @@
 		005BCB3426AACA2400DF44CE /* HelpOutCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpOutCard.swift; sourceTree = "<group>"; };
 		005BCB3626AACED400DF44CE /* AutoTestCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTestCard.swift; sourceTree = "<group>"; };
 		005BCB3826AAD23900DF44CE /* UpgradeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeCard.swift; sourceTree = "<group>"; };
+		005CDEAC2F646123007DB3ED /* FormViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		006D010126A1936600DA083D /* TipCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCard.swift; sourceTree = "<group>"; };
 		006D010426A1B89000DA083D /* CardTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTips.swift; sourceTree = "<group>"; };
 		0081F01325B1BB6C00792552 /* wordlist-it.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-it.txt"; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 				00EEA70825CABFE50017F6A4 /* FeedbackRow.swift */,
 				00F17DDC26A9E17300452020 /* FilterCard.swift */,
 				001059672F6309E40064A149 /* FilterPicker.swift */,
+				005CDEAC2F646123007DB3ED /* FormViewControllerRepresentable.swift */,
 				005BCB3426AACA2400DF44CE /* HelpOutCard.swift */,
 				001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */,
 				00CE29392AB1D0690002CA30 /* HelpRow.swift */,
@@ -876,6 +879,7 @@
 				001059542F6193AB0064A149 /* SearchBarView.swift in Sources */,
 				0092DE872D54DB7400D0AFB5 /* SearchHistoryCard.swift in Sources */,
 				00EEA72525CAC81A0017F6A4 /* HelpView.swift in Sources */,
+				005CDEAD2F646123007DB3ED /* FormViewControllerRepresentable.swift in Sources */,
 				001059562F61971E0064A149 /* SearchBarViewModel.swift in Sources */,
 				00EEA72825CAC85A0017F6A4 /* DefinitionHelpView.swift in Sources */,
 				001059602F62E9B40064A149 /* WordEngine.swift in Sources */,
