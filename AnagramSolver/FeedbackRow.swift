@@ -9,8 +9,9 @@
 import SwiftUI
 
 struct FeedbackRow: View {
+    @State var aboutVM = AboutViewModel(ads: Ads())
     var body: some View {
-        Button(action: Coordinator.sharedInstance.sendFeedback){
+        Button(action: aboutVM.feedback){
             HStack {
                 Image(systemName: "envelope")
                     .font(Font.system(.largeTitle))
@@ -22,6 +23,10 @@ struct FeedbackRow: View {
                 }
                 Spacer()
             }
+        }
+        .sheet(isPresented: $aboutVM.isMailVCPresented, content: {MailView(recipient: Strings.emailAddress, subject: Strings.feedbackSubject, result: self.$aboutVM.result)})
+        .alert(isPresented: $aboutVM.showNoEmailAlert){
+            Alert(title: Text("Email Not Supported"), message: Text("Please email me at: \(Strings.emailAddress)"), dismissButton: .default(Text("OK")))
         }
     }
 }

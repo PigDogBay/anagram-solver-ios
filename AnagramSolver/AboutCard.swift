@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct AboutCard: View {
-    @Environment(AppViewModel.self) var appViewModel
+    @Environment(AppViewModel.self) var appVM
 
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
@@ -22,7 +22,7 @@ struct AboutCard: View {
     private var buttons : some View {
         HStack(){
             Spacer()
-            Button(action:{appViewModel.goto(screen: .About)}){
+            Button(action:{appVM.goto(screen: .About)}){
                 Text("SHOW ABOUT")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())

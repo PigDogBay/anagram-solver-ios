@@ -9,9 +9,10 @@
 import SwiftUI
 
 struct DefinitionsCard: View {
+    @Environment(AppViewModel.self) var appVM
 
     private func showHelp(){
-        Coordinator.sharedInstance.show(Coordinator.sharedInstance.SHOW_DEFINITION_HELP)
+        appVM.goto(screen: .DefinitionHelp)
     }
 
     private var description : some View {

@@ -9,9 +9,10 @@
 import SwiftUI
 
 struct FilterCard: View {
+    @Environment(AppViewModel.self) var appVM
 
     private func showHelp(){
-        Coordinator.sharedInstance.show(Coordinator.sharedInstance.SHOW_FILTER_HELP)
+        appVM.goto(screen: .FiltersHelp)
     }
     
     private var description : some View {
