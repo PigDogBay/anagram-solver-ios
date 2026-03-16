@@ -19,7 +19,7 @@ struct MainView: View {
         VStack(spacing: 0){         //Spacing 0: Remove white gap between search bar and tips
             SearchBarView(searchBarVM: searchBarVM)
             if showCardTips {
-                CardTips()
+                CardTips(searchHistoryVM: SearchHistoryCardViewModel(appViewModel.searchHistoryModel))
             } else {
                 TipsView()
                     .ignoresSafeArea()

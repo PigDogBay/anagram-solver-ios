@@ -22,6 +22,13 @@ class AppViewModel {
     var appState = AppStates.uninitialized
     @ObservationIgnored let ads = Ads()
     
+    @ObservationIgnored lazy private(set) var searchHistoryModel =
+    {
+        SearchHistoryModel(persistence: SearchHistoryUserDefaults(),
+                           isSearchHistoryEnabled: self.settings.isSearchHistoryEnabled)
+    }()
+
+    
     var showErrorAlert : Binding<Bool> {
         Binding(
             get: {

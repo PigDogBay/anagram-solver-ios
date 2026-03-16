@@ -7,11 +7,16 @@
 //
 
 import SwiftUI
+import SwiftUtils
 
 struct CardTips: View {
-    @ObservedObject var searchHistoryVM = SearchHistoryCardViewModel(Model.sharedInstance.searchHistoryModel)
+    @State var searchHistoryVM : SearchHistoryCardViewModel
     private let coordinator = Coordinator.sharedInstance
     let columns = [GridItem(.adaptive(minimum: 350))]
+    
+    init(searchHistoryVM: SearchHistoryCardViewModel) {
+        self.searchHistoryVM = searchHistoryVM
+    }
     
     var body: some View {
         ScrollView {
@@ -89,6 +94,8 @@ struct CardMod : ViewModifier {
 
 struct CardTips_Previews: PreviewProvider {
     static var previews: some View {
-        CardTips()
+        CardTips(searchHistoryVM: SearchHistoryCardViewModel(
+            SearchHistoryModel(persistence: SearchHistoryUserDefaults())
+        ))
     }
 }

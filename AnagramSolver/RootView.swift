@@ -19,12 +19,12 @@ struct RootView: View {
      https://stackoverflow.com/questions/70223291/eliminate-navigationlink-button-shape-in-accessibility-mode
     */
     var body: some View {
-        if coordinator.showCards {
-            CardTips()
-        } else {
-            TipsView()
-                .ignoresSafeArea()
-        }
+//        if coordinator.showCards {
+//            CardTips(searchHistoryVM: SearchHistoryCardViewModel(coordinator.searchHistoryModel))
+//        } else {
+//            TipsView()
+//                .ignoresSafeArea()
+//        }
         NavigationLink(destination: AboutView(),
                        tag: coordinator.SHOW_ABOUT,
                        selection: $coordinator.selection){
