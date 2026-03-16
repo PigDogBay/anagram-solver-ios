@@ -57,9 +57,9 @@ struct TipsView: View {
             Group {
                 tip(supergramsTip)
                 tip(prefixSuffixTip)
-//                NavigationLink(destination: AboutView()){
-//                    AboutRow()
-//                }
+                NavigationLink(value: NavigationScreens.About){
+                    AboutRow()
+                }
                 UserGuideRow()
                 FeedbackRow()
                 RateRow()
