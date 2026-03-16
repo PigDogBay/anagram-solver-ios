@@ -17,11 +17,12 @@ enum NavigationScreens : Hashable {
 @MainActor
 @Observable
 class AppViewModel {
+    var appState = AppStates.uninitialized
+    let searchBarVM = SearchBarViewModel()
+
     @ObservationIgnored let settings = Settings()
     @ObservationIgnored let engine = WordEngine()
-    var appState = AppStates.uninitialized
     @ObservationIgnored let ads = Ads()
-    
     @ObservationIgnored lazy private(set) var searchHistoryModel =
     {
         SearchHistoryModel(persistence: SearchHistoryUserDefaults(),
@@ -48,7 +49,7 @@ class AppViewModel {
     
     //Navigation stack's path
     var path = NavigationPath()
-
+    
     ///Called when RootView first appears
     func onLaunch() {
         if (appState == .uninitialized){
@@ -76,8 +77,12 @@ class AppViewModel {
         path.append(NavigationScreens.Tip(tip))
     }
     
+    func showMe(example : String) {
+        path.append(NavigationScreens.Matches)
+    }
+    
     func showHelpExample(example : String){
-        
+        path.append(NavigationScreens.Matches)
     }
 
     func webLookUp(word : String) {

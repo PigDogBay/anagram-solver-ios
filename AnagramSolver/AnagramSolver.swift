@@ -15,7 +15,6 @@ struct AnagramSolverApp: App {
     
     @State private var appVM = AppViewModel()
     @State private var filtersVM = FiltersViewModel()
-    @State private var searchBarVM = SearchBarViewModel()
     
     @AppStorage(Keys.darkModeOverride) var darkModeOverride: String = Settings.darkModeValueSystem
 
@@ -24,7 +23,6 @@ struct AnagramSolverApp: App {
             NMARootView()
                 .environment(appVM)
                 .environment(filtersVM)
-                .environment(searchBarVM)
                 // Dark Mode handling
                 .preferredColorScheme(getPreferredColorScheme())
                 .onChange(of: scenePhase) { oldPhase, newPhase in

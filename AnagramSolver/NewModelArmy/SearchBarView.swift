@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SearchBarView : View {
     @FocusState private var isFocused: Bool
-    
     @State var searchBarVM : SearchBarViewModel
     
     var body: some View {
