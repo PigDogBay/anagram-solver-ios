@@ -17,7 +17,7 @@ struct TipsView: View {
     }
 
     private func tip(_ tipData : Tip) -> some View {
-        LinkedTipRow(viewModel: HelpViewModel(tip: tipData))
+        LinkedTipRow(tip: tipData)
     }
     
     var body: some View {
@@ -27,11 +27,11 @@ struct TipsView: View {
                 tip(blankLettersTip)
                 tip(twoWordAnagramTip)
                 if searchHistoryVM.showHistory{
-                    NavigationLink(destination: SearchHistoryView()){
+                    NavigationLink(value: NavigationScreens.SearchHistory){
                         HelpRow(iconName: "fossil.shell", colorName: "iconBlue", title: "History", subTitle: "View your previous searches")
                     }
                 }
-                NavigationLink(destination: DefinitionHelpView()){
+                NavigationLink(value: NavigationScreens.DefinitionHelp){
                     HelpRow(iconName: "book", colorName: "iconBlue", title: "Definitions", subTitle: "Tap on a result to look it up")
                 }
             }
@@ -39,16 +39,16 @@ struct TipsView: View {
                 tip(crosswordTip)
                 tip(phraseTip)
                 tip(shortcutsTip)
-               NavigationLink(destination: FilterHelpView()){
+                NavigationLink(value: NavigationScreens.FiltersHelp){
                     HelpRow(iconName: "line.3.horizontal.decrease.circle", colorName: "iconRed", title: "Filters", subTitle: "Too many matches? Refine your search!")
                 }
-                NavigationLink(destination: RemoveAdsDetailView()){
+                NavigationLink(value: NavigationScreens.RemoveAdsDetail){
                     RemoveAdsRow(storeVM: Model.sharedInstance.storeVM)
                  }
                 tip(spellingBeeTip)
                 tip(codewordsTip)
                 
-                NavigationLink(destination: SettingsHelpView()){
+                NavigationLink(value: NavigationScreens.SettingsHelp){
                     HelpRow(iconName: "gear", colorName: "iconGreen", title: "Settings", subTitle: "Change the word list and more")
                 }
             }
@@ -86,10 +86,14 @@ struct TipsView: View {
  which allows TipRow to pop the view when the show me button is pressed.
  */
 struct LinkedTipRow : View {
-    @ObservedObject var viewModel : HelpViewModel
+    let tip : Tip
     var body : some View {
-        NavigationLink(destination: HelpView(tip: viewModel.tip), isActive: $viewModel.showTip){
-            HelpRow(iconName: "questionmark.circle", colorName: "iconYellow", title: viewModel.tip.title, subTitle: viewModel.tip.subtitle)
+        NavigationLink(value: NavigationScreens.Tip(tip)){
+            HelpRow(
+                iconName: "questionmark.circle",
+                colorName: "iconYellow",
+                title: tip.title,
+                subTitle: tip.subtitle)
         }
     }
 }

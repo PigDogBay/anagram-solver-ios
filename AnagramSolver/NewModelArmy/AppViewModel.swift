@@ -11,7 +11,7 @@ import SwiftUI
 
 enum NavigationScreens : Hashable {
     case Tip(Tip)
-    case Matches, Definition, Settings, Filters, DefinitionHelp, FiltersHelp, SettingsHelp, About, RemoveAdsDetail
+    case Matches, Definition, Settings, Filters, DefinitionHelp, FiltersHelp, SettingsHelp, About, RemoveAdsDetail, SearchHistory
 }
 
 @MainActor
