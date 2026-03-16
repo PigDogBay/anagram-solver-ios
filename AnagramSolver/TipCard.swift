@@ -38,7 +38,7 @@ struct TipCard: View {
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
             Spacer()
-            Button(action: {appViewModel.showHelpExample(example: tip.showMe)}){
+            Button(action: {appViewModel.showMe(example: tip.showMe)}){
                 Text("SHOW ME")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())

@@ -31,7 +31,7 @@ struct HelpView: View {
                     .padding(.bottom, 8)
                 HStack {
                     Spacer()
-                    Button(action: {appVM.showHelpExample(example: tip.showMe)}){
+                    Button(action: {appVM.showMe(example: tip.showMe)}){
                         Text("SHOW ME")
                             .modifier(TipButtonMod())
                     }.buttonStyle(BorderlessButtonStyle())

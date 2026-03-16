@@ -78,13 +78,10 @@ class AppViewModel {
     }
     
     func showMe(example : String) {
+        searchBarVM.showMe(example: example)
         path.append(NavigationScreens.Matches)
     }
     
-    func showHelpExample(example : String){
-        path.append(NavigationScreens.Matches)
-    }
-
     func webLookUp(word : String) {
         let defModel = DefaultDefintion(word: word)
         if let url = defModel.lookupUrl(){
