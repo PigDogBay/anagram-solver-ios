@@ -21,7 +21,7 @@ struct MainView: View {
             if showCardTips {
                 CardTips(searchHistoryVM: SearchHistoryCardViewModel(appViewModel.searchHistoryModel))
             } else {
-                TipsView()
+                TipsView(searchHistoryVM: SearchHistoryRowViewModel(appViewModel.searchHistoryModel))
                     .ignoresSafeArea()
             }
         }

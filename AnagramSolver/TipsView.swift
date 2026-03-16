@@ -7,14 +7,19 @@
 //
 
 import SwiftUI
+import SwiftUtils
 
 struct TipsView: View {
-    @ObservedObject var searchHistoryVM = SearchHistoryRowViewModel(Model.sharedInstance.searchHistoryModel)
-    private let coordinator = Coordinator.sharedInstance
+    @State var searchHistoryVM : SearchHistoryRowViewModel
+    
+    init(searchHistoryVM: SearchHistoryRowViewModel) {
+        self.searchHistoryVM = searchHistoryVM
+    }
 
     private func tip(_ tipData : Tip) -> some View {
         LinkedTipRow(viewModel: HelpViewModel(tip: tipData))
     }
+    
     var body: some View {
         List {
             Group {
@@ -91,6 +96,8 @@ struct LinkedTipRow : View {
 
 struct TipsView_Previews: PreviewProvider {
     static var previews: some View {
-        TipsView()
+        TipsView(searchHistoryVM: SearchHistoryRowViewModel(
+            SearchHistoryModel(persistence: SearchHistoryUserDefaults())
+        ))
     }
 }
