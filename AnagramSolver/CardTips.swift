@@ -11,7 +11,6 @@ import SwiftUtils
 
 struct CardTips: View {
     @State var searchHistoryVM : SearchHistoryCardViewModel
-    private let coordinator = Coordinator.sharedInstance
     let columns = [GridItem(.adaptive(minimum: 350))]
     
     init(searchHistoryVM: SearchHistoryCardViewModel) {
