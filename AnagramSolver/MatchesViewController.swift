@@ -116,7 +116,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
             //Set up bannerView height for the device
             //Another method is to set the bannerHeightConstraint relation to be greater than or equal to 0
             //but IB complains about ambiguous constraints
-            let adSize = Ads.createAdsize(screenWidth: screenWidth)
+            let adSize = GADBannerViewController.getAdBannerSize()
             //Remove old ads
             bannerView?.removeFromSuperview()
             bannerView = nil
