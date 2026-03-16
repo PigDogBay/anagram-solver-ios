@@ -30,41 +30,41 @@ struct RootView: View {
 //                       selection: $coordinator.selection){
 //            EmptyView()
 //        }.buttonStyle(.plain)
-        NavigationLink(destination: DefinitionHelpView(),
-                       tag: coordinator.SHOW_DEFINITION_HELP,
-                       selection: $coordinator.selection){
-            EmptyView()
-        }.buttonStyle(.plain)
-        NavigationLink(destination: FilterHelpView(),
-                       tag: coordinator.SHOW_FILTER_HELP,
-                       selection: $coordinator.selection){
-            EmptyView()
-        }.buttonStyle(.plain)
-        NavigationLink(destination: HelpView(tip: coordinator.tip),
-                       tag: coordinator.SHOW_HELP,
-                       selection: $coordinator.selection){
-            EmptyView()
-        }.buttonStyle(.plain)
-        NavigationLink(destination: SettingsHelpView(),
-                       tag: coordinator.SHOW_SETTINGS_HELP,
-                       selection: $coordinator.selection){
-            EmptyView()
-        }.buttonStyle(.plain)
-        NavigationLink(destination: SettingsView(),
-                       tag: coordinator.SHOW_SETTINGS,
-                       selection: $coordinator.selection){
-            EmptyView()
-        }.buttonStyle(.plain)
-        NavigationLink(destination: SearchHistoryView(),
-                       tag: coordinator.SHOW_SEARCH_HISTORY,
-                       selection: $coordinator.selection){
-            EmptyView()
-        }.buttonStyle(.plain)
-        NavigationLink(destination: RemoveAdsDetailView(),
-                       tag: coordinator.SHOW_REMOVE_ADS_DETAIL,
-                       selection: $coordinator.selection){
-            EmptyView()
-        }.buttonStyle(.plain)
+//        NavigationLink(destination: DefinitionHelpView(),
+//                       tag: coordinator.SHOW_DEFINITION_HELP,
+//                       selection: $coordinator.selection){
+//            EmptyView()
+//        }.buttonStyle(.plain)
+//        NavigationLink(destination: FilterHelpView(),
+//                       tag: coordinator.SHOW_FILTER_HELP,
+//                       selection: $coordinator.selection){
+//            EmptyView()
+//        }.buttonStyle(.plain)
+//        NavigationLink(destination: HelpView(tip: coordinator.tip),
+//                       tag: coordinator.SHOW_HELP,
+//                       selection: $coordinator.selection){
+//            EmptyView()
+//        }.buttonStyle(.plain)
+//        NavigationLink(destination: SettingsHelpView(),
+//                       tag: coordinator.SHOW_SETTINGS_HELP,
+//                       selection: $coordinator.selection){
+//            EmptyView()
+//        }.buttonStyle(.plain)
+//        NavigationLink(destination: SettingsView(),
+//                       tag: coordinator.SHOW_SETTINGS,
+//                       selection: $coordinator.selection){
+//            EmptyView()
+//        }.buttonStyle(.plain)
+//        NavigationLink(destination: SearchHistoryView(),
+//                       tag: coordinator.SHOW_SEARCH_HISTORY,
+//                       selection: $coordinator.selection){
+//            EmptyView()
+//        }.buttonStyle(.plain)
+//        NavigationLink(destination: RemoveAdsDetailView(),
+//                       tag: coordinator.SHOW_REMOVE_ADS_DETAIL,
+//                       selection: $coordinator.selection){
+//            EmptyView()
+//        }.buttonStyle(.plain)
     }
 }
 

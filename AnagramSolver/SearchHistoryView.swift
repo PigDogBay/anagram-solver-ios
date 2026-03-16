@@ -50,9 +50,8 @@ struct HistoryItem : View {
 
 struct SearchHistoryView: View {
     
-    @ObservedObject var viewModel = SearchHistoryViewVM(Model.sharedInstance.searchHistoryModel)
-    
-    private let coordinator = Coordinator.sharedInstance
+    @Environment(AppViewModel.self) var appViewModel
+    @State var viewModel : SearchHistoryViewVM
 
     var body: some View {
         List {
@@ -60,7 +59,7 @@ struct SearchHistoryView: View {
                 HistoryItem(query: historyItem)
                     .contentShape(Rectangle()) //Ensure row white space is tappable
                     .onTapGesture {
-                        self.coordinator.showHelpExample(example: historyItem)
+                        appViewModel.showMe(example: historyItem)
                         viewModel.refreshRequired = true
                     }
             }

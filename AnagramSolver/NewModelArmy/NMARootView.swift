@@ -36,7 +36,8 @@ struct NMARootView: View {
                     case .SettingsHelp: SettingsHelpView()
                     case .About: AboutView(viewModel: AboutViewModel(ads: appVM.ads))
                     case .RemoveAdsDetail: RemoveAdsDetailView()
-                    case .SearchHistory: SearchHistoryView()
+                    case .SearchHistory: SearchHistoryView(
+                        viewModel: SearchHistoryViewVM(appVM.searchHistoryModel))
                     }
                 }
         }

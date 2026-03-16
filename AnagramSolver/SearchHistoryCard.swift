@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftUtils
 
 struct SearchHistoryCard: View {
-    private let coordinator = Coordinator.sharedInstance
+    @Environment(AppViewModel.self) var appViewModel
     @ObservedObject var viewModel : SearchHistoryCardViewModel
 
     private var historyLinks : some View {
@@ -31,7 +31,7 @@ struct SearchHistoryCard: View {
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
             Spacer()
-            Button(action: {coordinator.show(coordinator.SHOW_SEARCH_HISTORY)}){
+            Button(action: {appViewModel.goto(screen: .SearchHistory)}){
                 Text("SHOW ALL")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
@@ -55,7 +55,7 @@ struct SearchHistoryCard: View {
         }
         .environment(\.openURL, OpenURLAction { url in
             if let query = url.absoluteString.removingPercentEncoding{
-                coordinator.showHelpExample(example: query)
+                appViewModel.showMe(example: query)
             }
             return .discarded
         })
