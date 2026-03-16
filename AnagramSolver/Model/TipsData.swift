@@ -20,7 +20,7 @@ let prefixSuffixTip = tipsData[7]
 let codewordsTip = tipsData[8]
 let spellingBeeTip = tipsData[9]
 
-struct Tip : Identifiable, Codable{
+struct Tip : Identifiable, Codable, Hashable{
     var id : Int
     var title : String
     var subtitle : String

@@ -27,8 +27,7 @@ struct NMARootView: View {
                             engine: appViewModel.engine,
                             filtersVM: filtersVM)
                     )
-                        //            case .Tip(let index): HelpView(tip: tipsData[index])
-                    case .Tip(let index): SettingsView()
+                    case .Tip(let tip): HelpView(tip: tip)
                         //            case .Definition: DefinitionView(coordinator.model)
                     case .Definition : SettingsView()
                     case .Settings: SettingsView()

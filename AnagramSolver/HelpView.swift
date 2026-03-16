@@ -9,14 +9,14 @@
 import SwiftUI
 
 struct HelpView: View {
-    private let coordinator = Coordinator.sharedInstance
-    @ObservedObject var viewModel : HelpViewModel
+    @Environment(AppViewModel.self) var appVM
+    let tip : Tip
 
     var body: some View {
         Form {
-            HelpTitleView(title: viewModel.tip.title)
+            HelpTitleView(title: tip.title)
 
-            Text(viewModel.tip.description)
+            Text(tip.description)
                 .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
             VStack(alignment: .leading) {
                 Text("Example")
@@ -24,14 +24,14 @@ struct HelpView: View {
                     .underline()
                     .padding(.top, 8)
                     .padding(.bottom, 16)
-                Text("Try ")+Text(viewModel.tip.showMe).foregroundColor(Color("exampleQuery")) + Text(" to find:")
-                Text(viewModel.tip.example)
+                Text("Try ")+Text(tip.showMe).foregroundColor(Color("exampleQuery")) + Text(" to find:")
+                Text(tip.example)
                     .foregroundColor(Color("exampleResult"))
                     .padding(.top, 8)
                     .padding(.bottom, 8)
                 HStack {
                     Spacer()
-                    Button(action: {self.viewModel.showMe(coordinator: self.coordinator)}){
+                    Button(action: {appVM.showHelpExample(example: tip.showMe)}){
                         Text("SHOW ME")
                             .modifier(TipButtonMod())
                     }.buttonStyle(BorderlessButtonStyle())
@@ -46,7 +46,7 @@ struct HelpView: View {
                     .padding(.top, 8)
                     .padding(.bottom, 16)
 
-                Text(viewModel.tip.advanced)
+                Text(tip.advanced)
                     .lineLimit(nil)
                     .frame(maxHeight: .infinity)
                     .font(.body)
@@ -59,6 +59,6 @@ struct HelpView: View {
 
 struct HelpView_Previews: PreviewProvider {
     static var previews: some View {
-        HelpView(viewModel: HelpViewModel(tip: tipsData[0]))
+        HelpView(tip: tipsData[0])
     }
 }

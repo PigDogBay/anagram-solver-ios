@@ -40,7 +40,7 @@ struct RootView: View {
                        selection: $coordinator.selection){
             EmptyView()
         }.buttonStyle(.plain)
-        NavigationLink(destination: HelpView(viewModel: HelpViewModel(tip: coordinator.tip)),
+        NavigationLink(destination: HelpView(tip: coordinator.tip),
                        tag: coordinator.SHOW_HELP,
                        selection: $coordinator.selection){
             EmptyView()

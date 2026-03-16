@@ -12,7 +12,7 @@ let TIP_TEXT_SPACING = CGFloat(10.0)
 
 struct TipCard: View {
     let tip : Tip
-    private let coordinator = Coordinator.sharedInstance
+    @Environment(AppViewModel.self) var appViewModel
     
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
@@ -33,12 +33,12 @@ struct TipCard: View {
     
     private var buttons : some View {
         HStack(){
-            Button(action:{coordinator.show(tip)}){
+            Button(action:{appViewModel.show(tip)}){
                 Text("MORE INFO")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
             Spacer()
-            Button(action: {coordinator.showHelpExample(example: tip.showMe)}){
+            Button(action: {appViewModel.showHelpExample(example: tip.showMe)}){
                 Text("SHOW ME")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())

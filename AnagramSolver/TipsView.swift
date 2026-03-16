@@ -88,7 +88,7 @@ struct TipsView: View {
 struct LinkedTipRow : View {
     @ObservedObject var viewModel : HelpViewModel
     var body : some View {
-        NavigationLink(destination: HelpView(viewModel: viewModel), isActive: $viewModel.showTip){
+        NavigationLink(destination: HelpView(tip: viewModel.tip), isActive: $viewModel.showTip){
             HelpRow(iconName: "questionmark.circle", colorName: "iconYellow", title: viewModel.tip.title, subTitle: viewModel.tip.subtitle)
         }
     }

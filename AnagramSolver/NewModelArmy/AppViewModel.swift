@@ -10,7 +10,7 @@ import SwiftUtils
 import SwiftUI
 
 enum NavigationScreens : Hashable {
-    case Tip(Int)
+    case Tip(Tip)
     case Matches, Definition, Settings, Filters, DefinitionHelp, FiltersHelp, SettingsHelp, About, RemoveAdsDetail
 }
 
@@ -71,7 +71,15 @@ class AppViewModel {
     func goto(screen : NavigationScreens){
         path.append(screen)
     }
+
+    func show(_ tip : Tip){
+        path.append(NavigationScreens.Tip(tip))
+    }
     
+    func showHelpExample(example : String){
+        
+    }
+
     func webLookUp(word : String) {
         let defModel = DefaultDefintion(word: word)
         if let url = defModel.lookupUrl(){
