@@ -90,15 +90,13 @@ class AppViewModel {
     }
 
     func lookUpWord(word : String){
-        webLookUp(word: word)
-//        let lookUpResult = model.lookUpDefinition(word)
-//        if (lookUpResult.isDefinitionAvailable) {
-//            //Navigate to the DefinitionView
-//            path.append(NavigationScreens.Definition)
-//        } else {
-//            //No definition found, so open a web browser to search for it
-//            webLookUp(word: word)
-//        }
+        let lookUpResult = engine.lookUpDefinition(word)
+        if (lookUpResult.isDefinitionAvailable) {
+            goto(screen: .Definition)
+        } else {
+            //No definition found, so open a web browser to search for it
+            webLookUp(word: word)
+        }
     }
     
     func lookUpWord(word : String, provider : DefinitionProviders){

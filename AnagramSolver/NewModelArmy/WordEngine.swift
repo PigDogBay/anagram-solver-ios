@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUtils
 
-class WordEngine : WordListCallback {
+class WordEngine : WordListCallback, WordDictionary {
     var showSynonyms = true
     let wordSearch = WordSearch()
     var resultsLimit = 5000
@@ -23,6 +23,8 @@ class WordEngine : WordListCallback {
     var nabuLookUp : NabuLookUp? = nil
     private let atomicStop = AtomicBool()
     private var distinctMatchesOnly = false
+    ///WordDictionary:: Store lookUpResult for DefinitionView
+    var lookUpResult : LookUpResult = LookUpResult(word: "", definitions: [])
 
     ///Call this code from a background queue
     ///Loads the specified wordlist and also the Nabu database and phrase word lists if not yet loaded
@@ -86,5 +88,11 @@ class WordEngine : WordListCallback {
     func stopSearch(){
         atomicStop.value = true
         wordSearch.stop()
+    }
+
+    ///WordDictionary implementation
+    func lookUpDefinition(_ word : String) -> LookUpResult {
+        lookUpResult = nabuLookUp?.lookUp(word: word) ?? LookUpResult(word: "", definitions: [])
+        return lookUpResult
     }
 }
