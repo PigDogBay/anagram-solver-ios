@@ -10,15 +10,14 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    //Env var used to dismiss this nav view
-    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @Environment(AppViewModel.self) var appVM
     @ObservedObject var viewModel = SettingsViewModel()
     @State private var showDefaultSettingsAlert = false
 
     ///Update settings when user presses the back button
     private func backPressed(){
         Coordinator.sharedInstance.updateSettings()
-        self.mode.wrappedValue.dismiss()
+        appVM.goBack()
     }
 
     private var showKeyboardToggle : some View {
