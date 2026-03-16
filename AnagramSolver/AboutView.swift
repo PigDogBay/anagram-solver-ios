@@ -10,8 +10,7 @@ import SwiftUI
 
 struct AboutView: View {
     
-    private let coordinator = Coordinator.sharedInstance
-    @ObservedObject var viewModel = AboutViewModel()
+    @State var viewModel : AboutViewModel
 
     private var title : some View {
         HStack {
@@ -35,7 +34,7 @@ struct AboutView: View {
                 .font(.body)
             Text(Strings.webAddress)
                 .font(.body)
-            Button(action: coordinator.sendFeedback){
+            Button(action: viewModel.feedback){
                 Text(Strings.emailAddress)
                     .font(.body)
                     .foregroundColor(Color("materialButton"))
@@ -102,7 +101,7 @@ struct AboutView: View {
                 .font(.body)
             HStack {
                 Spacer()
-                Button(action: coordinator.sendFeedback){
+                Button(action: viewModel.feedback){
                     Text("FEEDBACK")
                         .modifier(AboutButtonMod())
                 }.buttonStyle(BorderlessButtonStyle())
@@ -127,6 +126,10 @@ struct AboutView: View {
             }
             .padding(.top, 16)
             .navigationBarTitle(Text("About"), displayMode: .inline)
+            .sheet(isPresented: $viewModel.isMailVCPresented, content: {MailView(recipient: Strings.emailAddress, subject: Strings.feedbackSubject, result: self.$viewModel.result)})
+            .alert(isPresented: $viewModel.showNoEmailAlert){
+                Alert(title: Text("Email Not Supported"), message: Text("Please email me at: \(Strings.emailAddress)"), dismissButton: .default(Text("OK")))
+            }
         }
     }
 }
@@ -141,6 +144,6 @@ struct AboutButtonMod : ViewModifier {
 
 struct AboutView_Previews: PreviewProvider {
     static var previews: some View {
-        AboutView()
+        AboutView(viewModel: AboutViewModel(ads: Ads()))
     }
 }

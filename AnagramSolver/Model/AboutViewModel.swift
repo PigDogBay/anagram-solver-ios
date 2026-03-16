@@ -11,20 +11,26 @@ import Combine
 import MessageUI
 import SwiftUtils
 
-class AboutViewModel : ObservableObject {
-    private let model : Model
+@Observable
+class AboutViewModel {
+    
+    var result: Result<MFMailComposeResult, Error>? = nil
+    var isMailVCPresented = false
+    var showNoEmailAlert = false
+
+    @ObservationIgnored private let ads : Ads
     let observerName = "AboutVM"
     
-    var canShowPrivacyForm : Bool {
-        model.ads.isPrivacyOptionsRequired
+    init(ads: Ads) {
+        self.ads = ads
     }
     
-    init(){
-        model = Model.sharedInstance
+    var canShowPrivacyForm : Bool {
+        ads.isPrivacyOptionsRequired
     }
 
     func showAdPrivacyForm(){
-        model.ads.showPrivacyForm()
+        ads.showPrivacyForm()
     }
     
     func showPrivacyPolicy(){
@@ -38,4 +44,15 @@ class AboutViewModel : ObservableObject {
     class func rate(){
         UIApplication.shared.open(URL(string: Strings.itunesAppURL)!, options: [:])
     }
+
+    func feedback(){
+        if MFMailComposeViewController.canSendMail() {
+            isMailVCPresented = true
+        } else if let emailUrl = mpdbCreateEmailUrl(to: Strings.emailAddress, subject: Strings.feedbackSubject, body: "")  {
+            UIApplication.shared.open(emailUrl)
+        } else {
+            showNoEmailAlert = true
+        }
+    }
+
 }

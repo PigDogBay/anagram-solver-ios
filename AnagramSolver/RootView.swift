@@ -25,11 +25,11 @@ struct RootView: View {
 //            TipsView()
 //                .ignoresSafeArea()
 //        }
-        NavigationLink(destination: AboutView(),
-                       tag: coordinator.SHOW_ABOUT,
-                       selection: $coordinator.selection){
-            EmptyView()
-        }.buttonStyle(.plain)
+//        NavigationLink(destination: AboutView(),
+//                       tag: coordinator.SHOW_ABOUT,
+//                       selection: $coordinator.selection){
+//            EmptyView()
+//        }.buttonStyle(.plain)
         NavigationLink(destination: DefinitionHelpView(),
                        tag: coordinator.SHOW_DEFINITION_HELP,
                        selection: $coordinator.selection){
