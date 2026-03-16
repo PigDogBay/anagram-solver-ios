@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct UpgradeCard: View {
-    private let coordinator = Coordinator.sharedInstance
     
-    private let storeVM = Model.sharedInstance.storeVM
+    @Environment(AppViewModel.self) var appVM
+    @Environment(StoreViewModel.self) var storeVM
     
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
@@ -23,7 +23,7 @@ struct UpgradeCard: View {
     
     private var buttons : some View {
         HStack(){
-            Button(action:{coordinator.show(coordinator.SHOW_REMOVE_ADS_DETAIL)}){
+            Button(action:{appVM.goto(screen: .RemoveAdsDetail)}){
                 Text("MORE INFO")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())

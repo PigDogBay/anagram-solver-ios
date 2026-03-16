@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct RemoveAdsDetailView: View {
-    private let storeVM = Model.sharedInstance.storeVM
+    @Environment(StoreViewModel.self) var storeVM
     @State private var showRefundSheet = false
     
     private var showAlertBinding: Binding<Bool> {

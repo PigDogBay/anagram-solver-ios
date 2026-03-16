@@ -38,7 +38,7 @@ class Model : WordListCallback, WordDictionary
     let settings = Settings()
     let ads = Ads()
     let ratings = Ratings(appId: Strings.appId)
-    var storeVM = StoreViewModel(productID: REMOVE_ADS_PRODUCT_ID)
+//    var storeVM = StoreViewModel(productID: REMOVE_ADS_PRODUCT_ID)
 
     let filter : Filter
     let filterFactory : WordListCallbackAbstractFactory

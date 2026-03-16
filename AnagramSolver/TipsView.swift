@@ -11,7 +11,8 @@ import SwiftUtils
 
 struct TipsView: View {
     @State var searchHistoryVM : SearchHistoryRowViewModel
-    
+    @Environment(StoreViewModel.self) var storeVM
+
     init(searchHistoryVM: SearchHistoryRowViewModel) {
         self.searchHistoryVM = searchHistoryVM
     }
@@ -43,7 +44,7 @@ struct TipsView: View {
                     HelpRow(iconName: "line.3.horizontal.decrease.circle", colorName: "iconRed", title: "Filters", subTitle: "Too many matches? Refine your search!")
                 }
                 NavigationLink(value: NavigationScreens.RemoveAdsDetail){
-                    RemoveAdsRow(storeVM: Model.sharedInstance.storeVM)
+                    RemoveAdsRow(storeVM: storeVM)
                  }
                 tip(spellingBeeTip)
                 tip(codewordsTip)
