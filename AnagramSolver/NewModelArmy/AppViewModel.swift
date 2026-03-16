@@ -19,13 +19,8 @@ enum NavigationScreens : Hashable {
 class AppViewModel {
     @ObservationIgnored let settings = Settings()
     @ObservationIgnored let engine = WordEngine()
-    let searchBarVM = SearchBarViewModel()
     var appState = AppStates.uninitialized
     @ObservationIgnored let ads = Ads()
-    
-    var query : String {
-        return searchBarVM.query
-    }
     
     var showErrorAlert : Binding<Bool> {
         Binding(
@@ -101,11 +96,6 @@ class AppViewModel {
             UIApplication.shared.open(url, options: [:])
         }
     }
-    
-    func createMatchesVM(filtersVM : FiltersViewModel) -> MatchesViewModel {
-        return MatchesViewModel(query: searchBarVM.query, engine: engine, filtersVM: filtersVM)
-    }
-
 
     private func loadWordList(){
         appState = .loading

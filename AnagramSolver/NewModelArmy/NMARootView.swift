@@ -11,6 +11,7 @@ import SwiftUI
 struct NMARootView: View {
     @Environment(AppViewModel.self) var appViewModel
     @Environment(FiltersViewModel.self) var filtersVM
+    @Environment(SearchBarViewModel.self) var searchBarVM
     
     private let formViewControllerRepresentable = FormViewControllerRepresentable()
     
@@ -20,7 +21,12 @@ struct NMARootView: View {
             MainView()
                 .navigationDestination(for: NavigationScreens.self) { destination in
                     switch (destination){
-                    case .Matches: MatchesView(matchesVM: appViewModel.createMatchesVM(filtersVM: filtersVM))
+                    case .Matches:MatchesView(
+                        matchesVM: MatchesViewModel(
+                            query: searchBarVM.query,
+                            engine: appViewModel.engine,
+                            filtersVM: filtersVM)
+                    )
                         //            case .Tip(let index): HelpView(tip: tipsData[index])
                     case .Tip(let index): SettingsView()
                         //            case .Definition: DefinitionView(coordinator.model)

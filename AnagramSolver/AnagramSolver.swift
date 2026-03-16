@@ -13,22 +13,24 @@ struct AnagramSolverApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @Environment(\.scenePhase) private var scenePhase
     
-    @State private var appViewModel = AppViewModel()
-    @State private var filtersViewModel = FiltersViewModel()
+    @State private var appVM = AppViewModel()
+    @State private var filtersVM = FiltersViewModel()
+    @State private var searchBarVM = SearchBarViewModel()
     
     @AppStorage(Keys.darkModeOverride) var darkModeOverride: String = Settings.darkModeValueSystem
 
     var body: some Scene {
         WindowGroup {
             NMARootView()
-                .environment(appViewModel)
-                .environment(filtersViewModel)
+                .environment(appVM)
+                .environment(filtersVM)
+                .environment(searchBarVM)
                 // Dark Mode handling
                 .preferredColorScheme(getPreferredColorScheme())
                 .onChange(of: scenePhase) { oldPhase, newPhase in
                     switch newPhase {
                     case .inactive:
-                        appViewModel.onResignActive()
+                        appVM.onResignActive()
                     case .background: break
                     case .active: break
                     @unknown default:
