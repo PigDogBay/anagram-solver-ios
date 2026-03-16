@@ -12,13 +12,17 @@ import SwiftUI
 struct AnagramSolverApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @Environment(\.scenePhase) private var scenePhase
+    
     @State private var appViewModel = AppViewModel()
+    @State private var filtersViewModel = FiltersViewModel()
+    
     @AppStorage(Keys.darkModeOverride) var darkModeOverride: String = Settings.darkModeValueSystem
 
     var body: some Scene {
         WindowGroup {
             NMARootView()
                 .environment(appViewModel)
+                .environment(filtersViewModel)
                 // Dark Mode handling
                 .preferredColorScheme(getPreferredColorScheme())
                 .onChange(of: scenePhase) { oldPhase, newPhase in

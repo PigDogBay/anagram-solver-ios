@@ -20,7 +20,6 @@ class AppViewModel {
     @ObservationIgnored let settings = Settings()
     @ObservationIgnored let engine = WordEngine()
     let searchBarVM = SearchBarViewModel()
-    @ObservationIgnored let filtersVM = FiltersViewModel()
     var appState = AppStates.uninitialized
     @ObservationIgnored let ads = Ads()
     
@@ -103,7 +102,7 @@ class AppViewModel {
         }
     }
     
-    func createMatchesVM() -> MatchesViewModel {
+    func createMatchesVM(filtersVM : FiltersViewModel) -> MatchesViewModel {
         return MatchesViewModel(query: searchBarVM.query, engine: engine, filtersVM: filtersVM)
     }
 
