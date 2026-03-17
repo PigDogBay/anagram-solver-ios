@@ -10,26 +10,32 @@ import SwiftUI
 import SwiftUtils
 
 struct MainView: View {
-    @Environment(AppViewModel.self) var appViewModel
+    @Environment(AppViewModel.self) var appVM
     @AppStorage(Keys.showCardTips) var showCardTips: Bool = Settings().showCardTips
 
     @ViewBuilder
     var body: some View {
         VStack(spacing: 0){         //Spacing 0: Remove white gap between search bar and tips
-            SearchBarView(searchBarVM: appViewModel.searchBarVM)
+            SearchBarView(searchBarVM: appVM.searchBarVM)
             if showCardTips {
-                CardTips(searchHistoryVM: SearchHistoryCardViewModel(appViewModel.searchHistoryModel))
+                CardTips(searchHistoryVM: SearchHistoryCardViewModel(appVM.searchHistoryModel))
             } else {
-                TipsView(searchHistoryVM: SearchHistoryRowViewModel(appViewModel.searchHistoryModel))
+                TipsView(searchHistoryVM: SearchHistoryRowViewModel(appVM.searchHistoryModel))
                     .ignoresSafeArea()
             }
         }
         .navigationTitle("Anagram Solver")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarIconButton(placement: .topBarLeading, iconName: "gear") {appViewModel.goto(screen: .Settings)}
-            if (appViewModel.appState == .ready){
-                ToolbarButton(placement: .topBarTrailing, label: "Search"){appViewModel.goto(screen: .Matches)}
+            ToolbarIconButton(placement: .topBarLeading, iconName: "gear") {appVM.goto(screen: .Settings)}
+            if (appVM.appState == .ready){
+                ToolbarButton(placement: .topBarTrailing, label: "Search"){
+                    if appVM.searchBarVM.isValid() {
+                        appVM.search()
+                    } else {
+                        appVM.searchBarVM.showValidationError = true
+                    }
+                }
             }
         }
         .scrollDismissesKeyboard(.immediately)

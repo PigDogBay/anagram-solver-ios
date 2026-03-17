@@ -10,7 +10,8 @@ import SwiftUI
 struct SearchBarView : View {
     @FocusState private var isFocused: Bool
     @State var searchBarVM : SearchBarViewModel
-    
+    @Environment(AppViewModel.self) var appVM
+
     var body: some View {
         return TextField("Enter letters", text: $searchBarVM.query)
             .onChange(of: searchBarVM.query){ oldValue, newValue in
@@ -18,11 +19,26 @@ struct SearchBarView : View {
                     searchBarVM.updateQuery(newValue)
                 }
             }
+            .onSubmit {
+                if searchBarVM.isValid() {
+                    appVM.search()
+                } else {
+                    searchBarVM.showValidationError = true
+                }
+            }
             .modifier(SearchBarMod())
             .focused($isFocused)
             .onAppear(){
                 isFocused = Settings().showKeyboard
             }
+            .alert(isPresented: $searchBarVM.showValidationError){
+                Alert(
+                    title: Text("Search Error"),
+                    message: Text("Please enter a valid query"),
+                    dismissButton: .default(Text("OK")
+                ))
+            }
+
     }
 }
 
@@ -51,7 +67,6 @@ struct EmailKeyboardMod : ViewModifier {
     @AppStorage(Keys.keyboardType) var keyboardName : String = Settings().keyboardType
     @AppStorage(Keys.useMonospacedFont) var useMonospacedFont : Bool = Settings().useMonospacedFont
 
-    @Environment(AppViewModel.self) var coordinator
     private let textStyle : Font.TextStyle
 
     private var autoCap : UITextAutocapitalizationType {

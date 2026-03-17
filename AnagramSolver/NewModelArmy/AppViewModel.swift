@@ -73,6 +73,12 @@ class AppViewModel {
         path.append(screen)
     }
     
+    func search(){
+        if appState == .ready {
+            goto(screen: .Matches)
+        }
+    }
+    
     func matchesExited(){
         engine.stopSearch()
         goBack()

@@ -7,10 +7,19 @@
 //
 
 import SwiftUI
+import SwiftUtils
 
 @Observable class SearchBarViewModel {
     var query = ""
-    let settings = Settings()
+    @ObservationIgnored let settings = Settings()
+    @ObservationIgnored let searchParser = SearchParser()
+    
+    var showValidationError = false
+    
+    func isValid() -> Bool{
+        let clean = searchParser.clean(query)
+        return clean.length>0
+    }
     
     func showMe(example : String){
         let casedQuery = settings.useUpperCase ? example.uppercased() : example
