@@ -35,6 +35,7 @@ struct HelpSectionView: View {
 }
 
 struct DefinitionHelpView: View {
+    @Environment(AppViewModel.self) var appVM
     var body: some View {
         Form {
             HelpTitleView(title: "Definitions", icon: "definition")
@@ -44,7 +45,12 @@ struct DefinitionHelpView: View {
             HelpSectionView(title: "Copy", icon: "doc.on.doc", description: "From the long press menu select Copy to copy the word onto the clipboard. You can then paste the word into other apps.")
             HelpSectionView(title: "Settings", icon: "gear", description: "Change the default look up website in the Dictionary definition setting in the app's settings.")
         }
-        .navigationBarTitle(Text("Help"), displayMode: .inline)
+        .navigationTitle("Help")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left", action: appVM.goBack)
+        }
     }
     
 }

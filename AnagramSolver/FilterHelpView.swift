@@ -29,6 +29,8 @@ struct FilterSectionView: View {
 }
 
 struct FilterHelpView: View {
+    @Environment(AppViewModel.self) var appVM
+
     var body: some View {
         Form {
             HelpTitleView(title: "Filters", icon: "funnel")
@@ -40,7 +42,12 @@ struct FilterHelpView: View {
             FilterSectionView(title: "EXPERT FILTERS", description: "Pattern Filter: Similar to a Crossword search, use . for an unknown letter.  So .tr... will look for 6 letter words where the second letter is a t and the third an r. This is useful for Scrabble games where you specify the letters on the board you want to use. You also can use @ to mean 0 or more letters.\n\nReg Exp: Create powerful search patterns using Regular Expression.\n\nExamples\n [aeiou] letter must be a vowel.\n [a-z]+ any letter one or more times.\n [aeiou][a-z]+[aeiou] Matches words that start and end with a vowel.\n\nTip! Use * for the main search query to filter against the entire word list.")
             FilterSectionView(title: "WORD SIZE", description: "Only allow words that are equal to, smaller than or greater than the specified size.\n\nThese filters are useful for anagram searches when you need to find words of a certain length, for example in WordScapes where you need to find those last few pesky 3 letter words.")
         }
-        .navigationBarTitle(Text("Help"), displayMode: .inline)
+        .navigationTitle("Help")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left", action: appVM.goBack)
+        }
     }}
 
 struct FilterHelpView_Previews: PreviewProvider {

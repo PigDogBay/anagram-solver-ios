@@ -50,7 +50,7 @@ struct HistoryItem : View {
 
 struct SearchHistoryView: View {
     
-    @Environment(AppViewModel.self) var appViewModel
+    @Environment(AppViewModel.self) var appVM
     @State var viewModel : SearchHistoryViewVM
 
     var body: some View {
@@ -59,18 +59,18 @@ struct SearchHistoryView: View {
                 HistoryItem(query: historyItem)
                     .contentShape(Rectangle()) //Ensure row white space is tappable
                     .onTapGesture {
-                        appViewModel.showMe(example: historyItem)
+                        appVM.showMe(example: historyItem)
                         viewModel.refreshRequired = true
                     }
             }
         }
         .listStyle(.plain)
-        .navigationBarTitle(Text("History"), displayMode: .inline)
-        .navigationBarItems(trailing: Button("Clear"){
-            viewModel.clearHistory()
-            }.tint(Color.white))
-        .onAppear {
-            viewModel.onAppear()
+        .navigationTitle("History")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left", action: appVM.goBack)
+            ToolbarButton(placement: .topBarTrailing, label: "Clear", action: viewModel.clearHistory)
         }
     }
 }

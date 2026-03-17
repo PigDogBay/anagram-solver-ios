@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct RemoveAdsDetailView: View {
+    @Environment(AppViewModel.self) var appVM
     @Environment(StoreViewModel.self) var storeVM
     @State private var showRefundSheet = false
     
@@ -110,9 +111,11 @@ struct RemoveAdsDetailView: View {
         }
         .navigationTitle("Remove Ads")
         .navigationBarTitleDisplayMode(.inline)
-        .navigationBarItems(trailing: Button("Restore"){
-            storeVM.restorePurchase()
-        }.tint(Color.white))
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left", action: appVM.goBack)
+            ToolbarButton(placement: .topBarTrailing, label: "Restore", action: storeVM.restorePurchase)
+        }
     }
     
     private func refund(){

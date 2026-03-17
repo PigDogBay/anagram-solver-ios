@@ -10,6 +10,7 @@ import SwiftUI
 import SwiftUtils
 
 struct DefinitionView: View {
+    @Environment(AppViewModel.self) var appVM
     @ObservedObject var viewModel : DefinitionViewModel
     
     init(_ dictionary : WordDictionary){
@@ -52,6 +53,12 @@ struct DefinitionView: View {
             }
         }.listStyle(.plain)
         .navigationBarTitle(Text("Dictionary"), displayMode: .inline)
+        .navigationTitle("Dictionary")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left", action: appVM.goBack)
+        }
     }
 }
 

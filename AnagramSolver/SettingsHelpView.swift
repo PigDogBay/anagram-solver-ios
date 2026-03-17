@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct SettingsHelpView: View {
+    @Environment(AppViewModel.self) var appVM
+
     var body: some View {
         Form {
             HelpTitleView(title: "Settings", icon: "gear")
@@ -19,7 +21,12 @@ struct SettingsHelpView: View {
             FilterSectionView(title: "KEYBOARD", description: "Automatically show keyboard: Pops up the keyboard when you return to the home screen.\n\nAllow dictation will change the keyboard layout to include a microphone button to allow speech to text entry.\n\nConvert Space to ? will emit a ? instead of a space character, ? represents an unknown letter in crossword queries.\n\nConvert . to ? will enter a ? character when you press . on the keyboard. Both . and ? represent an unknown letter.\n\nUse monospaced font: Display the query input text with a monospaced font. A monospaced font is useful for crossword searches as the unknowns(.) and letters are spaced equally.")
             FilterSectionView(title: "OTHER", description: "Search history: When off, your search history will not be saved and the History card will not be displayed. When on, search history will be stored on your device and displayed in the card.\n\nAllow long press on results: You can touch and hold a result to bring up a context menu of options, use this setting to enable or disable this feature.")
         }
-        .navigationBarTitle(Text("Help"), displayMode: .inline)
+        .navigationTitle("Help")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left", action: appVM.goBack)
+        }
     }
 }
 

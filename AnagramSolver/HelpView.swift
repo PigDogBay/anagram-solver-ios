@@ -53,7 +53,12 @@ struct HelpView: View {
             }
             .padding()
         }
-        .navigationBarTitle(Text("Help"), displayMode: .inline)
+        .navigationTitle("Help")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left", action: appVM.goBack)
+        }
     }
 }
 

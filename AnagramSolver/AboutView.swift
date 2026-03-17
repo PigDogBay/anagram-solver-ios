@@ -10,6 +10,7 @@ import SwiftUI
 
 struct AboutView: View {
     
+    @Environment(AppViewModel.self) var appVM
     @State var viewModel : AboutViewModel
 
     private var title : some View {
@@ -125,11 +126,16 @@ struct AboutView: View {
                 helpOutSection
             }
             .padding(.top, 16)
-            .navigationBarTitle(Text("About"), displayMode: .inline)
             .sheet(isPresented: $viewModel.isMailVCPresented, content: {MailView(recipient: Strings.emailAddress, subject: Strings.feedbackSubject, result: self.$viewModel.result)})
             .alert(isPresented: $viewModel.showNoEmailAlert){
                 Alert(title: Text("Email Not Supported"), message: Text("Please email me at: \(Strings.emailAddress)"), dismissButton: .default(Text("OK")))
             }
+        }
+        .navigationTitle("About")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left", action: appVM.goBack)
         }
     }
 }
