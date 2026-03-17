@@ -32,6 +32,7 @@ struct MainView: View {
                 ToolbarButton(placement: .topBarTrailing, label: "Search"){appViewModel.goto(screen: .Matches)}
             }
         }
+        .scrollDismissesKeyboard(.immediately)
 
     }
 }
