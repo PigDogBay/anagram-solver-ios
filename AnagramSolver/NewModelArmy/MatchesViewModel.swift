@@ -28,6 +28,7 @@ enum SearchState {
     @ObservationIgnored var grouped = [[String]]()
     @ObservationIgnored var matches : [String] = []
     var searchState : SearchState = .ready
+    @ObservationIgnored let settings = Settings()
 
     var status  : String {
         switch (searchState){
@@ -46,6 +47,13 @@ enum SearchState {
         self.query = query
         self.engine = engine
         self.filtersVM = filtersVM
+        
+        //Apply settings
+        wordFormatter.highlightColor = settings.highlight
+        wordFormatter.isUpperCased = settings.useUpperCase
+        engine.resultsLimit = settings.resultsLimit
+        engine.wordSearch.findSubAnagrams = settings.showSubAnagrams
+        
     }
     
     func getSectionTitle(rows : [String]) -> String {

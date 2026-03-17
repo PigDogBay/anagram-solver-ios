@@ -72,6 +72,20 @@ class AppViewModel {
     func goto(screen : NavigationScreens){
         path.append(screen)
     }
+    
+    func matchesExited(){
+        engine.stopSearch()
+        goBack()
+    }
+    
+    func settingsExited(didChangeWordList : Bool){
+        engine.resultsLimit = settings.resultsLimit
+        engine.wordSearch.findSubAnagrams = settings.showSubAnagrams
+        if didChangeWordList {
+            loadWordList()
+        }
+        goBack()
+    }
 
     func show(_ tip : Tip){
         path.append(NavigationScreens.Tip(tip))

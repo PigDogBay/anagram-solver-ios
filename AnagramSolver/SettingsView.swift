@@ -11,13 +11,12 @@ import SwiftUI
 struct SettingsView: View {
     
     @Environment(AppViewModel.self) var appVM
-    @ObservedObject var viewModel = SettingsViewModel()
+    @State var viewModel = SettingsViewModel()
     @State private var showDefaultSettingsAlert = false
 
     ///Update settings when user presses the back button
     private func backPressed(){
-        Coordinator.sharedInstance.updateSettings()
-        appVM.goBack()
+        appVM.settingsExited(didChangeWordList: viewModel.hasWordListChanged)
     }
 
     private var showKeyboardToggle : some View {

@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftUtils
 
 struct MatchesView: View {
-    @Environment(AppViewModel.self) var appViewModel
+    @Environment(AppViewModel.self) var appVM
     @State var matchesVM : MatchesViewModel
     @State var isAdLoaded = false
     
@@ -62,21 +62,21 @@ struct MatchesView: View {
 
     private func resultRows(_ matches : [String], _ formatter : IWordFormatter) -> some View {
         ForEach(matches, id: \.self) { match in
-            MatchRow(match: match, formatter: formatter, largeFont: appViewModel.settings.useLargeResultsFont)
+            MatchRow(match: match, formatter: formatter, largeFont: matchesVM.settings.useLargeResultsFont)
                 .contextMenu{
-                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .Collins) }){Text("Collins")}
-                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .Dictionary) }){Text("Dictionary.com")}
-                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .GoogleDictionary) }){Text("Google Dictionary")}
-                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .MerriamWebster) }){Text("Merriam-Webster")}
-                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .MWThesaurus) }){Text("M-W Thesaurus")}
-                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .Thesaurus) }){Text("Thesaurus.com")}
-                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .Wiktionary) }){Text("Wiktionary")}
-                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .Wikipedia) }){Text("Wikipedia")}
-                    Button(action: {self.appViewModel.lookUpWord(word: match, provider: .WordGameDictionary) }){Text("Word Game Dictionary")}
+                    Button(action: {self.appVM.lookUpWord(word: match, provider: .Collins) }){Text("Collins")}
+                    Button(action: {self.appVM.lookUpWord(word: match, provider: .Dictionary) }){Text("Dictionary.com")}
+                    Button(action: {self.appVM.lookUpWord(word: match, provider: .GoogleDictionary) }){Text("Google Dictionary")}
+                    Button(action: {self.appVM.lookUpWord(word: match, provider: .MerriamWebster) }){Text("Merriam-Webster")}
+                    Button(action: {self.appVM.lookUpWord(word: match, provider: .MWThesaurus) }){Text("M-W Thesaurus")}
+                    Button(action: {self.appVM.lookUpWord(word: match, provider: .Thesaurus) }){Text("Thesaurus.com")}
+                    Button(action: {self.appVM.lookUpWord(word: match, provider: .Wiktionary) }){Text("Wiktionary")}
+                    Button(action: {self.appVM.lookUpWord(word: match, provider: .Wikipedia) }){Text("Wikipedia")}
+                    Button(action: {self.appVM.lookUpWord(word: match, provider: .WordGameDictionary) }){Text("Word Game Dictionary")}
                     Button(action: {self.matchesVM.search(word: match)}){Text("Search")}
                 }
                 .contentShape(Rectangle()) //Ensure row white space is tappable
-                .onTapGesture {self.appViewModel.lookUpWord(word: match)}
+                .onTapGesture {self.appVM.lookUpWord(word: match)}
         }
     }
     
@@ -100,8 +100,8 @@ struct MatchesView: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
         .toolbar {
-            ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left") {appViewModel.goBack()}
-            ToolbarButton(placement: .topBarTrailing, label: "Filters"){appViewModel.goto(screen: .Filters)}
+            ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left") {appVM.matchesExited()}
+            ToolbarButton(placement: .topBarTrailing, label: "Filters"){appVM.goto(screen: .Filters)}
         }
     }
 }

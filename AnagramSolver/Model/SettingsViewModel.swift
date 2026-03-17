@@ -7,77 +7,82 @@
 //
 
 import Combine
+import Observation
 
-class SettingsViewModel : ObservableObject {
-    let settings = Settings()
+@Observable
+class SettingsViewModel {
+    @ObservationIgnored let settings = Settings()
     
-    @Published var wordList : String{
+    ///Used to check if the wordListName has changed
+    @ObservationIgnored private var originalWordListName = ""
+
+    var wordList : String{
         didSet {
             settings.wordList = wordList
         }
     }
 
-    @Published var definition : String{
+    var definition : String{
         didSet {
             settings.definition = definition
         }
     }
     
-    @Published var resultsLimit : String{
+    var resultsLimit : String{
         didSet {
             settings.resultsLimitValue = resultsLimit
         }
     }
     
-    @Published var highlight : String{
+    var highlight : String{
         didSet {
             settings.highlightValue = highlight
         }
     }
 
-    @Published var showCardTips : Bool {
+    var showCardTips : Bool {
         didSet {
             settings.showCardTips = showCardTips
         }
     }
 
-    @Published var showKeyboard : Bool {
+    var showKeyboard : Bool {
         didSet {
             settings.showKeyboard = showKeyboard
         }
     }
     
-    @Published var allowDictation : Bool {
+    var allowDictation : Bool {
         didSet {
             settings.keyboardType = allowDictation ? Settings.keyboardWebSearch : Settings.keyboardEmail
         }
     }
     
-    @Published var isLongPressEnabled : Bool {
+    var isLongPressEnabled : Bool {
         didSet {
             settings.isLongPressEnabled = isLongPressEnabled
         }
     }
     
-    @Published var showSubAnagrams : Bool {
+    var showSubAnagrams : Bool {
         didSet {
             settings.showSubAnagrams = showSubAnagrams
         }
     }
     
-    @Published var useMonospacedFont : Bool {
+    var useMonospacedFont : Bool {
         didSet {
             settings.useMonospacedFont = useMonospacedFont
         }
     }
     
-    @Published var useUpperCase : Bool {
+    var useUpperCase : Bool {
         didSet {
             settings.useUpperCase = useUpperCase
         }
     }
 
-    @Published var darkModeOverride : String {
+    var darkModeOverride : String {
         didSet {
             settings.darkModeOverride = darkModeOverride
             //Update this setting immediately
@@ -85,32 +90,37 @@ class SettingsViewModel : ObservableObject {
         }
     }
 
-    @Published var spaceToQuestionMark : Bool {
+    var spaceToQuestionMark : Bool {
         didSet {
             settings.spaceToQuestionMark = spaceToQuestionMark
         }
     }
 
-    @Published var fullStopToQuestionMark : Bool {
+    var fullStopToQuestionMark : Bool {
         didSet {
             settings.fullStopToQuestionMark = fullStopToQuestionMark
         }
     }
 
-    @Published var useLargeResultsFont : Bool {
+    var useLargeResultsFont : Bool {
         didSet {
             settings.useLargeResultsFont = useLargeResultsFont
         }
     }
 
-    @Published var isSearchHistoryEnabled : Bool {
+    var isSearchHistoryEnabled : Bool {
         didSet {
             settings.isSearchHistoryEnabled = isSearchHistoryEnabled
         }
     }
 
+    @ObservationIgnored var hasWordListChanged : Bool {
+        return originalWordListName != settings.wordList
+    }
+
     init(){
         wordList = settings.wordList
+        originalWordListName = settings.wordList
         definition = settings.definition
         resultsLimit = settings.resultsLimitValue
         highlight = settings.highlightValue
