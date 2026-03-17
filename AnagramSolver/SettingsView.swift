@@ -25,12 +25,6 @@ struct SettingsView: View {
         }.modifier(ToggleMod())
     }
 
-    private var longPressToggle : some View {
-        Toggle(isOn: $viewModel.isLongPressEnabled) {
-            Text("Allow long press on results")
-        }.modifier(ToggleMod())
-    }
-    
     private var subAnagramsToggle : some View {
         Toggle(isOn: $viewModel.showSubAnagrams) {
             Text("Show sub-anagrams")
@@ -167,7 +161,6 @@ struct SettingsView: View {
 
             Section(header: Text("OTHER")){
                 searchHistoryToggle
-                longPressToggle
             }
         }
         .navigationBarTitle(Text("Settings"), displayMode: .inline)
