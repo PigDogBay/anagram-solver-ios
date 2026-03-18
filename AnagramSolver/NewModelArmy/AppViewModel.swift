@@ -21,7 +21,7 @@ class AppViewModel {
     let searchBarVM = SearchBarViewModel()
     @ObservationIgnored let settings = Settings()
     @ObservationIgnored let ads = Ads()
-    var autoTest : NMAAutoTest? = nil
+    @ObservationIgnored private var autoTest : NMAAutoTest? = nil
 
     var showErrorAlert : Binding<Bool> {
         Binding(
@@ -46,7 +46,6 @@ class AppViewModel {
     ///Called when RootView first appears
     func onLaunch() {
         if (model.appState == .uninitialized){
-            autoTest = NMAAutoTest(model: model, appVM: self)
             loadWordList()
         }
     }
@@ -135,6 +134,12 @@ class AppViewModel {
             } catch {
                 model.appState = .error
             }
+        }
+    }
+    
+    func autoTestStart(){
+        if autoTest == nil {
+            autoTest = NMAAutoTest(model: model, appVM: self)
         }
     }
     

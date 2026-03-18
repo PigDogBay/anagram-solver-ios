@@ -22,8 +22,6 @@ class NMAAutoTest {
         self.appVM = appVM
 
         model.$appState
-            .dropFirst()
-            .removeDuplicates()
             .sink(receiveValue:{[weak self] appState in self?.onAppState(newState: appState)})
             .store(in: &disposables)
 

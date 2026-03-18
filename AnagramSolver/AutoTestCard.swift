@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct AutoTestCard: View {
-    private let coordinator = Coordinator.sharedInstance
+    @Environment(AppViewModel.self) var appVM
 
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
@@ -20,7 +20,7 @@ struct AutoTestCard: View {
     private var buttons : some View {
         HStack(){
             Spacer()
-            Button(action:coordinator.autoTest){
+            Button(action:appVM.autoTestStart){
                 Text("START")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
