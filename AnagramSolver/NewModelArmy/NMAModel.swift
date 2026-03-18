@@ -11,15 +11,14 @@ import SwiftUtils
 
 /*
     Data that needs to be shared between various view-models
+    AppState needs to be tracked by AutoTest
  */
-@Observable
-class NMAModel {
-    var appState = AppStates.uninitialized
-    @ObservationIgnored let engine = WordEngine()
-    @ObservationIgnored lazy private(set) var searchHistoryModel =
+class NMAModel : ObservableObject {
+    @Published var appState = AppStates.uninitialized
+    let engine = WordEngine()
+    lazy private(set) var searchHistoryModel =
     {
         SearchHistoryModel(persistence: SearchHistoryUserDefaults(),
                            isSearchHistoryEnabled: Settings().isSearchHistoryEnabled)
     }()
-
 }
