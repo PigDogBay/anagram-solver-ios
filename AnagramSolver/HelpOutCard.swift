@@ -9,8 +9,9 @@
 import SwiftUI
 
 struct HelpOutCard: View {
-    @ObservedObject var coordinator = Coordinator.sharedInstance
-
+    @State var aboutVM = AboutViewModel()
+    @State private var isPresented: Bool = false
+    
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
             Text("Keep updates coming")
@@ -23,7 +24,7 @@ struct HelpOutCard: View {
     private var buttons : some View {
         HStack(){
             //Using a @state variable to toggle the tell sheet does not work
-            Button(action:{coordinator.showTell=true}){
+            Button(action:{isPresented = true}){
                 Text("TELL")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
@@ -33,13 +34,17 @@ struct HelpOutCard: View {
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
             Spacer()
-            Button(action:coordinator.sendFeedback){
+            Button(action:aboutVM.feedback){
                 Text("FEEDBACK")
                     .modifier(TipButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
         }
-        .sheet(isPresented: $coordinator.showTell){
+        .sheet(isPresented: $isPresented){
             ActivityViewController(activityItems: [Strings.tellFriends])
+        }
+        .sheet(isPresented: $aboutVM.isMailVCPresented, content: {MailView(recipient: Strings.emailAddress, subject: Strings.feedbackSubject, result: self.$aboutVM.result)})
+        .alert(isPresented: $aboutVM.showNoEmailAlert){
+            Alert(title: Text("Email Not Supported"), message: Text("Please email me at: \(Strings.emailAddress)"), dismissButton: .default(Text("OK")))
         }
     }
 

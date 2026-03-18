@@ -18,19 +18,19 @@ class AboutViewModel {
     var isMailVCPresented = false
     var showNoEmailAlert = false
 
-    @ObservationIgnored private let ads : Ads
+    @ObservationIgnored private let ads : Ads?
     let observerName = "AboutVM"
     
-    init(ads: Ads) {
+    init(ads: Ads? = nil) {
         self.ads = ads
     }
     
     var canShowPrivacyForm : Bool {
-        ads.isPrivacyOptionsRequired
+        ads?.isPrivacyOptionsRequired ?? false
     }
 
     func showAdPrivacyForm(){
-        ads.showPrivacyForm()
+        ads?.showPrivacyForm()
     }
     
     func showPrivacyPolicy(){

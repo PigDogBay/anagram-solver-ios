@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct FeedbackRow: View {
-    @State var aboutVM = AboutViewModel(ads: Ads())
+    @State var aboutVM = AboutViewModel()
     var body: some View {
         Button(action: aboutVM.feedback){
             HStack {
