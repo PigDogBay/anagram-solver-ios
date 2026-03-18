@@ -18,9 +18,9 @@ struct MainView: View {
         VStack(spacing: 0){         //Spacing 0: Remove white gap between search bar and tips
             SearchBarView(searchBarVM: appVM.searchBarVM)
             if showCardTips {
-                CardTips(searchHistoryVM: SearchHistoryCardViewModel(appVM.searchHistoryModel))
+                CardTips(searchHistoryVM: SearchHistoryCardViewModel(appVM.model.searchHistoryModel))
             } else {
-                TipsView(searchHistoryVM: SearchHistoryRowViewModel(appVM.searchHistoryModel))
+                TipsView(searchHistoryVM: SearchHistoryRowViewModel(appVM.model.searchHistoryModel))
                     .ignoresSafeArea()
             }
         }
@@ -28,7 +28,7 @@ struct MainView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarIconButton(placement: .topBarLeading, iconName: "gear") {appVM.goto(screen: .Settings)}
-            if (appVM.appState == .ready){
+            if (appVM.model.appState == .ready){
                 ToolbarButton(placement: .topBarTrailing, label: "Search"){
                     if appVM.searchBarVM.isValid() {
                         appVM.search()

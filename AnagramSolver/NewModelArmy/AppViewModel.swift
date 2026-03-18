@@ -17,28 +17,20 @@ enum NavigationScreens : Hashable {
 @MainActor
 @Observable
 class AppViewModel {
-    var appState = AppStates.uninitialized
+    var model = NMAModel()
     let searchBarVM = SearchBarViewModel()
-
     @ObservationIgnored let settings = Settings()
-    @ObservationIgnored let engine = WordEngine()
     @ObservationIgnored let ads = Ads()
-    @ObservationIgnored lazy private(set) var searchHistoryModel =
-    {
-        SearchHistoryModel(persistence: SearchHistoryUserDefaults(),
-                           isSearchHistoryEnabled: self.settings.isSearchHistoryEnabled)
-    }()
 
-    
     var showErrorAlert : Binding<Bool> {
         Binding(
             get: {
-                self.appState == .error
+                self.model.appState == .error
             },
             set: {
                 if !$0{
                     print("Error Detected!")
-                    self.appState = .uninitialized
+                    self.model.appState = .uninitialized
                     //Just incase reset to the default wordlist
                     self.settings.wordList = self.settings.defaultWordList
                     self.loadWordList()
@@ -52,14 +44,14 @@ class AppViewModel {
     
     ///Called when RootView first appears
     func onLaunch() {
-        if (appState == .uninitialized){
+        if (model.appState == .uninitialized){
             loadWordList()
         }
     }
     
     ///App life cycle function: called when the app goes into the background
     func onResignActive(){
-        engine.stopSearch()
+        model.engine.stopSearch()
     }
     
     ///Call this when the user presses the Back button
@@ -74,19 +66,19 @@ class AppViewModel {
     }
     
     func search(){
-        if appState == .ready {
+        if model.appState == .ready {
             goto(screen: .Matches)
         }
     }
     
     func matchesExited(){
-        engine.stopSearch()
+        model.engine.stopSearch()
         goBack()
     }
     
     func settingsExited(didChangeWordList : Bool){
-        engine.resultsLimit = settings.resultsLimit
-        engine.wordSearch.findSubAnagrams = settings.showSubAnagrams
+        model.engine.resultsLimit = settings.resultsLimit
+        model.engine.wordSearch.findSubAnagrams = settings.showSubAnagrams
         if didChangeWordList {
             loadWordList()
         }
@@ -110,7 +102,7 @@ class AppViewModel {
     }
 
     func lookUpWord(word : String){
-        let lookUpResult = engine.lookUpDefinition(word)
+        let lookUpResult = model.engine.lookUpDefinition(word)
         if (lookUpResult.isDefinitionAvailable) {
             goto(screen: .Definition)
         } else {
@@ -133,13 +125,13 @@ class AppViewModel {
     }
 
     private func loadWordList(){
-        appState = .loading
+        model.appState = .loading
         Task {
             do {
-                try await self.engine.loadWordList(name: self.settings.wordList)
-                appState = .ready
+                try await model.engine.loadWordList(name: settings.wordList)
+                model.appState = .ready
             } catch {
-                appState = .error
+                model.appState = .error
             }
         }
     }

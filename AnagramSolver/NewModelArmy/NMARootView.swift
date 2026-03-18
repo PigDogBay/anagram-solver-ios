@@ -23,11 +23,11 @@ struct NMARootView: View {
                     case .Matches:MatchesView(
                         matchesVM: MatchesViewModel(
                             query: appVM.searchBarVM.query,
-                            engine: appVM.engine,
+                            engine: appVM.model.engine,
                             filtersVM: filtersVM)
                     )
                     case .Tip(let tip): HelpView(tip: tip)
-                    case .Definition: DefinitionView(appVM.engine)
+                    case .Definition: DefinitionView(appVM.model.engine)
                     case .Settings: SettingsView()
                     case .Filters: FiltersView(filters: filtersVM)
                     case .DefinitionHelp: DefinitionHelpView()
@@ -36,7 +36,7 @@ struct NMARootView: View {
                     case .About: AboutView(viewModel: AboutViewModel(ads: appVM.ads))
                     case .RemoveAdsDetail: RemoveAdsDetailView()
                     case .SearchHistory: SearchHistoryView(
-                        viewModel: SearchHistoryViewVM(appVM.searchHistoryModel))
+                        viewModel: SearchHistoryViewVM(appVM.model.searchHistoryModel))
                     }
                 }
         }
