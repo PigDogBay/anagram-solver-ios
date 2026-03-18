@@ -21,6 +21,7 @@ enum SearchState {
 
 @Observable class MatchesViewModel {
     var query : String
+    let model : NMAModel
     @ObservationIgnored let engine : WordEngine
     let filtersVM : FiltersViewModel
     let wordFormatter = WordFormatter()
@@ -42,18 +43,16 @@ enum SearchState {
     }
 
     
-    init(query: String, engine : WordEngine, filtersVM : FiltersViewModel) {
+    init(query: String, model : NMAModel, filtersVM : FiltersViewModel) {
         print("MatchesVM init()")
         self.query = query
-        self.engine = engine
+        self.model = model
+        self.engine = model.engine
         self.filtersVM = filtersVM
         
         //Apply settings
         wordFormatter.highlightColor = settings.highlight
         wordFormatter.isUpperCased = settings.useUpperCase
-        engine.resultsLimit = settings.resultsLimit
-        engine.wordSearch.findSubAnagrams = settings.showSubAnagrams
-        
     }
     
     func getSectionTitle(rows : [String]) -> String {

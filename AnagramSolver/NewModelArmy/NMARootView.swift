@@ -23,7 +23,7 @@ struct NMARootView: View {
                     case .Matches:MatchesView(
                         matchesVM: MatchesViewModel(
                             query: appVM.searchBarVM.query,
-                            engine: appVM.model.engine,
+                            model: appVM.model,
                             filtersVM: filtersVM)
                     )
                     case .Tip(let tip): HelpView(tip: tip)

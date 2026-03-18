@@ -110,7 +110,7 @@ struct MatchesView: View {
     MatchesView(
         matchesVM: MatchesViewModel(
             query: "preview",
-            engine: WordEngine(),
+            model: NMAModel(),
             filtersVM: FiltersViewModel()
         )
     )
