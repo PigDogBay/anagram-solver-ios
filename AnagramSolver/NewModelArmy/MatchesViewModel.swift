@@ -14,31 +14,34 @@ enum ResultsListMode {
     case empty, plain, groupedByLength
 }
 
-//Maybe add states for filter, showMe, results, user
-enum SearchState {
-    case ready, searching, finished
-}
-
-@Observable class MatchesViewModel {
+@MainActor
+@Observable
+class MatchesViewModel {
     var query : String
     let model : NMAModel
+    
     @ObservationIgnored let engine : WordEngine
-    let filtersVM : FiltersViewModel
-    let wordFormatter = WordFormatter()
+    @ObservationIgnored let filtersVM : FiltersViewModel
+    @ObservationIgnored let wordFormatter = WordFormatter()
     @ObservationIgnored var resultsListMode = ResultsListMode.empty
     @ObservationIgnored var grouped = [[String]]()
     @ObservationIgnored var matches : [String] = []
-    var searchState : SearchState = .ready
     @ObservationIgnored let settings = Settings()
 
     var status  : String {
-        switch (searchState){
+        switch (model.appState){
         case .ready:
             return "Ready"
         case .searching:
             return getSearchingStatusText()
         case .finished:
             return getFinishedStatusText()
+        case .uninitialized:
+            return ""
+        case .loading:
+            return "Loading..."
+        case .error:
+            return "App Error"
         }
     }
 
@@ -62,10 +65,10 @@ enum SearchState {
     func search(word : String){
         query = word
         if query == "" {
-            searchState = .finished
+            model.appState = .finished
             return
         }
-        searchState = .searching
+        model.appState = .searching
         engine.resetStop()
         let searchParser = SearchParser()
         let searchQuery = searchParser.parse(query: query)
@@ -76,7 +79,7 @@ enum SearchState {
             self.engine.combinedSearch(searchQuery, callback: filterPipeline)
             matches.append(contentsOf: engine.working)
             resultsListMode = calculateListMode()
-            searchState = .finished
+            model.appState = .finished
         }
     }
     
