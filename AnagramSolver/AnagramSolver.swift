@@ -21,7 +21,7 @@ struct AnagramSolverApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NMARootView()
+            RootView()
                 .environment(appVM)
                 .environment(filtersVM)
                 .environment(storeVM)

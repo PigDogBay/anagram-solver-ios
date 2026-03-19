@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		001059482F6057C60064A149 /* AnagramSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059472F6057C60064A149 /* AnagramSolver.swift */; };
 		0010594E2F605A570064A149 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010594D2F605A570064A149 /* AppViewModel.swift */; };
-		001059522F6190C00064A149 /* NMARootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059512F6190BB0064A149 /* NMARootView.swift */; };
+		001059522F6190C00064A149 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059512F6190BB0064A149 /* RootView.swift */; };
 		001059542F6193AB0064A149 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059532F6193A00064A149 /* SearchBarView.swift */; };
 		001059562F61971E0064A149 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059552F6197120064A149 /* SearchBarViewModel.swift */; };
 		001059582F619E7A0064A149 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059572F619E760064A149 /* MainView.swift */; };
@@ -94,7 +94,7 @@
 		00EEA72C25CAC8B50017F6A4 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72B25CAC8B50017F6A4 /* ActivityViewController.swift */; };
 		00EEA72F25CACB430017F6A4 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72E25CACB430017F6A4 /* AboutView.swift */; };
 		00F17DCD26A8463400452020 /* small.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00F17DCB26A8463400452020 /* small.txt */; };
-		00F17DD426A9ABD000452020 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DD326A9ABD000452020 /* RootView.swift */; };
+		00F17DD426A9ABD000452020 /* RRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DD326A9ABD000452020 /* RRootView.swift */; };
 		00F17DD726A9CC3500452020 /* SettingsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DD626A9CC3500452020 /* SettingsCard.swift */; };
 		00F17DD926A9D00700452020 /* SettingsHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DD826A9D00700452020 /* SettingsHelpView.swift */; };
 		00F17DDB26A9DD4000452020 /* DefinitionsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DDA26A9DD4000452020 /* DefinitionsCard.swift */; };
@@ -185,7 +185,7 @@
 /* Begin PBXFileReference section */
 		001059472F6057C60064A149 /* AnagramSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramSolver.swift; sourceTree = "<group>"; };
 		0010594D2F605A570064A149 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
-		001059512F6190BB0064A149 /* NMARootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMARootView.swift; sourceTree = "<group>"; };
+		001059512F6190BB0064A149 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		001059532F6193A00064A149 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		001059552F6197120064A149 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
 		001059572F619E760064A149 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -265,7 +265,7 @@
 		00EEA72B25CAC8B50017F6A4 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		00EEA72E25CACB430017F6A4 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		00F17DCB26A8463400452020 /* small.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = small.txt; sourceTree = "<group>"; };
-		00F17DD326A9ABD000452020 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		00F17DD326A9ABD000452020 /* RRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RRootView.swift; sourceTree = "<group>"; };
 		00F17DD626A9CC3500452020 /* SettingsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCard.swift; sourceTree = "<group>"; };
 		00F17DD826A9D00700452020 /* SettingsHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelpView.swift; sourceTree = "<group>"; };
 		00F17DDA26A9DD4000452020 /* DefinitionsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionsCard.swift; sourceTree = "<group>"; };
@@ -350,7 +350,7 @@
 				0010595B2F62D7EB0064A149 /* MatchesViewModel.swift */,
 				001059692F6339BE0064A149 /* MatchRow.swift */,
 				005CDEB62F6AC588007DB3ED /* Model.swift */,
-				001059512F6190BB0064A149 /* NMARootView.swift */,
+				001059512F6190BB0064A149 /* RootView.swift */,
 				001059532F6193A00064A149 /* SearchBarView.swift */,
 				001059552F6197120064A149 /* SearchBarViewModel.swift */,
 				0010595F2F62E9B40064A149 /* WordEngine.swift */,
@@ -386,7 +386,7 @@
 				00EEA70225CABF7D0017F6A4 /* HelpViewModel.swift */,
 				4D45F0231A9E487A00C40BB4 /* RModel.swift */,
 				4DA0C3F9236C761600AF693B /* AppState.swift */,
-				00F17DD326A9ABD000452020 /* RootView.swift */,
+				00F17DD326A9ABD000452020 /* RRootView.swift */,
 				4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */,
 			);
 			path = Royalists;
@@ -870,7 +870,7 @@
 				00DEE1412BC7F74200669505 /* DefinitionView.swift in Sources */,
 				00EEA71225CABFE50017F6A4 /* AboutRow.swift in Sources */,
 				0092DE892D54E3B700D0AFB5 /* SearchHistoryView.swift in Sources */,
-				001059522F6190C00064A149 /* NMARootView.swift in Sources */,
+				001059522F6190C00064A149 /* RootView.swift in Sources */,
 				00EEA71A25CAC2A40017F6A4 /* Coordinator.swift in Sources */,
 				009283DC2F5AE5A8008439F2 /* RemoveAdsRow.swift in Sources */,
 				00EEA71025CABFE50017F6A4 /* FeedbackRow.swift in Sources */,
@@ -879,7 +879,7 @@
 				0029A03525307170002E96D1 /* Strings.swift in Sources */,
 				00F17DD926A9D00700452020 /* SettingsHelpView.swift in Sources */,
 				00EEA71425CABFE50017F6A4 /* TellFriendRow.swift in Sources */,
-				00F17DD426A9ABD000452020 /* RootView.swift in Sources */,
+				00F17DD426A9ABD000452020 /* RRootView.swift in Sources */,
 				0010594E2F605A570064A149 /* AppViewModel.swift in Sources */,
 				4D45D7B31E2CF0C500EC2D27 /* Settings.swift in Sources */,
 				4DA0C3F7236B0FC800AF693B /* Matches.swift in Sources */,

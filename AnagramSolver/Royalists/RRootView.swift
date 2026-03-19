@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct RootView: View {
+struct RRootView: View {
     @ObservedObject var coordinator = RCoordinator.sharedInstance
 
 
@@ -70,6 +70,6 @@ struct RootView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        RootView()
+        RRootView()
     }
 }

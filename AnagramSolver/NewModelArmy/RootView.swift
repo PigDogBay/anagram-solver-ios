@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct NMARootView: View {
+struct RootView: View {
     @Environment(AppViewModel.self) var appVM
     @Environment(FiltersViewModel.self) var filtersVM
     

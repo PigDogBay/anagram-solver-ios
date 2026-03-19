@@ -46,7 +46,7 @@ class RootViewController: UIViewController, RAppStateChangeObserver, MFMailCompo
     @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
         coordinator.rootVC = self
         coordinator.showCards = RModel.sharedInstance.settings.showCardTips
-        return UIHostingController(coder: coder, rootView: RootView(coordinator: coordinator))
+        return UIHostingController(coder: coder, rootView: RRootView(coordinator: coordinator))
     }
     
     func sendFeedback(){
