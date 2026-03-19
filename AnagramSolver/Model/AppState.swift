@@ -13,11 +13,6 @@ protocol AppStateChangeObserver : AnyObject
     func appStateChanged(_ newState : AppStates)
 }
 
-enum AppStates
-{
-    case uninitialized, loading, ready, searching, finished, error
-}
-
 class AppStateObservable {
     private var observers = [AppStateChangeObserver]()
     private let queue  = DispatchQueue(label: "com.pigdogbay.anagramsolver.appstateobservable.queue")

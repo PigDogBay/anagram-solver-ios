@@ -383,6 +383,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		00C27FE62F6BF5C5002064FB /* Royalists */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Royalists;
+			sourceTree = "<group>";
+		};
 		00CD12D127CE326C008191B2 /* AnagramSolverUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,6 +520,7 @@
 		4D45EFB61A9DFABA00C40BB4 /* AnagramSolver */ = {
 			isa = PBXGroup;
 			children = (
+				00C27FE62F6BF5C5002064FB /* Royalists */,
 				0010594B2F605A2F0064A149 /* NewModelArmy */,
 				0029A03325307126002E96D1 /* Model */,
 				4D45EFB71A9DFABA00C40BB4 /* Supporting Files */,

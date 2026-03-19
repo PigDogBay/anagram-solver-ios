@@ -9,30 +9,25 @@
 import Foundation
 import SwiftUtils
 
+
+enum AppStates
+{
+    case uninitialized, loading, ready, searching, finished, error
+}
+
 /*
     Data that needs to be shared between various view-models
-    AppState needs to be tracked by AutoTest
  */
 @Observable
 class NMAModel {
     var appState: AppStates = .uninitialized {
+        //AppState needs to be tracked by AutoTest
         didSet { onStateChange?(appState) }
     }
-    var onStateChange: ((AppStates) -> Void)?
+    @ObservationIgnored var onStateChange: ((AppStates) -> Void)?
 
     @ObservationIgnored let engine = WordEngine()
     @ObservationIgnored lazy private(set) var searchHistoryModel =
-    {
-        SearchHistoryModel(persistence: SearchHistoryUserDefaults(),
-                           isSearchHistoryEnabled: Settings().isSearchHistoryEnabled)
-    }()
-
-}
-
-class NMAModelX : ObservableObject {
-    @Published var appState = AppStates.uninitialized
-    let engine = WordEngine()
-    lazy private(set) var searchHistoryModel =
     {
         SearchHistoryModel(persistence: SearchHistoryUserDefaults(),
                            isSearchHistoryEnabled: Settings().isSearchHistoryEnabled)
