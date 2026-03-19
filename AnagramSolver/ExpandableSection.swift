@@ -35,3 +35,16 @@ struct ExpandableSection<Content : View> : View {
         )
     }
 }
+
+struct SectionIndexModifier : ViewModifier {
+    let title : String
+    func body(content: Content) -> some View {
+        if #available(iOS 26.0, *) {
+            content
+                .sectionIndexLabel(title)
+        } else {
+            // Fallback on earlier versions
+            content
+        }
+    }
+}

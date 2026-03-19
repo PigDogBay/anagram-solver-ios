@@ -54,6 +54,7 @@ struct MatchesView: View {
                     title: matchesVM.getSectionTitle(rows: group)) {
                         resultRows(group, self.matchesVM.wordFormatter)
                     }.tint(Color("accentColor"))
+                    .modifier(SectionIndexModifier(title: "\(group[0].length)"))
             }
         }
         .listStyle(.sidebar)
