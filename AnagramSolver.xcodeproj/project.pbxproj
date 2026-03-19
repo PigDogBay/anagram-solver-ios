@@ -377,6 +377,7 @@
 		00C27FE62F6BF5C5002064FB /* Royalists */ = {
 			isa = PBXGroup;
 			children = (
+				4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */,
 				4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */,
 				4D9E43AC1FAC84FC007007C8 /* Filter.swift */,
 				00EEA71925CAC2A40017F6A4 /* Coordinator.swift */,
@@ -385,6 +386,7 @@
 				00EEA70225CABF7D0017F6A4 /* HelpViewModel.swift */,
 				4D45F0231A9E487A00C40BB4 /* Model.swift */,
 				4DA0C3F9236C761600AF693B /* AppState.swift */,
+				00F17DD326A9ABD000452020 /* RootView.swift */,
 				4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */,
 			);
 			path = Royalists;
@@ -412,7 +414,6 @@
 				00EEA72225CAC8190017F6A4 /* FilterHelpView.swift */,
 				00EEA72325CAC8190017F6A4 /* HelpView.swift */,
 				009283D72F59BDAB008439F2 /* RemoveAdsDetailView.swift */,
-				00F17DD326A9ABD000452020 /* RootView.swift */,
 				0092DE882D54E3AE00D0AFB5 /* SearchHistoryView.swift */,
 				00F17DD826A9D00700452020 /* SettingsHelpView.swift */,
 				004AA91B26CD306D00A63C47 /* SettingsView.swift */,
@@ -541,7 +542,6 @@
 				4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */,
 				4D45EFB81A9DFABA00C40BB4 /* Info.plist */,
 				4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */,
-				4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */,
 				00DEE1422BC7FEAF00669505 /* nabu.db */,
 				001AAC2126EA9093000CC6B6 /* phrases.txt */,
 				00F17DCB26A8463400452020 /* small.txt */,

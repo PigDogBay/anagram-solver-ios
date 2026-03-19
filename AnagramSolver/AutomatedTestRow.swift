@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct AutomatedTestRow: View {
+    @Environment(AppViewModel.self) var appVM
+
     var body: some View {
-        Button(action: Coordinator.sharedInstance.autoTest){
+        Button(action: appVM.autoTestStart){
             HStack {
                 Image(systemName: "wand.and.stars")
                     .font(Font.system(.largeTitle))
