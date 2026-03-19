@@ -119,7 +119,18 @@ class MatchesViewModel {
             .sorted (by: {$0.0 > $1.0})
             .map{$0.value}
     }
-
-
     
+    func flattenMatches()->String {
+        return matches.reduce(""){result, next in result+next+"\n"}
+    }
+
+
+    func share()->String
+    {
+        var builder = "-Anagram Solver-\n\nQuery:\n\(self.query)\n\nMatches:\n"
+        builder.append(flattenMatches())
+        builder+="\nAvailable on the App Store\n"
+        builder+=Strings.itunesAppURL
+        return builder
+    }
 }
