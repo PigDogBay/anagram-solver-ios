@@ -10,7 +10,7 @@ import Foundation
 import SwiftUtils
 
 @MainActor
-class NMAAutoTest {
+class AutoTest {
     private let model : NMAModel
     private let appVM : AppViewModel
     private let randomQuery = RandomQuery()

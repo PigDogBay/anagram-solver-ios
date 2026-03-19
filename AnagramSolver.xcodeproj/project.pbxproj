@@ -40,13 +40,13 @@
 		005BCB3926AAD23900DF44CE /* UpgradeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005BCB3826AAD23900DF44CE /* UpgradeCard.swift */; };
 		005CDEAD2F646123007DB3ED /* FormViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CDEAC2F646123007DB3ED /* FormViewControllerRepresentable.swift */; };
 		005CDEB02F646500007DB3ED /* GADBannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CDEAF2F646500007DB3ED /* GADBannerViewController.swift */; };
-		005CDEB42F6ABAF4007DB3ED /* NMAAutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CDEB32F6ABAEE007DB3ED /* NMAAutoTest.swift */; };
+		005CDEB42F6ABAF4007DB3ED /* AutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CDEB32F6ABAEE007DB3ED /* AutoTest.swift */; };
 		005CDEB72F6AC58C007DB3ED /* NMAModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CDEB62F6AC588007DB3ED /* NMAModel.swift */; };
 		006D010226A1936600DA083D /* TipCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D010126A1936600DA083D /* TipCard.swift */; };
 		006D010526A1B89000DA083D /* CardTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D010426A1B89000DA083D /* CardTips.swift */; };
 		0081F01525B1BB6C00792552 /* wordlist-it.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01325B1BB6C00792552 /* wordlist-it.txt */; };
 		0081F01625B1BB6C00792552 /* wordlist-pt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01425B1BB6C00792552 /* wordlist-pt.txt */; };
-		0091BC052535E5A000BE7A43 /* AutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091BC042535E5A000BE7A43 /* AutoTest.swift */; };
+		0091BC052535E5A000BE7A43 /* RAutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091BC042535E5A000BE7A43 /* RAutoTest.swift */; };
 		009283C72F570F84008439F2 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009283C52F570F7F008439F2 /* StoreViewModel.swift */; };
 		009283C92F57226B008439F2 /* InAppPurchaseStore.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */; };
 		009283D22F59B960008439F2 /* StoreViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009283D12F59B960008439F2 /* StoreViewModelTests.swift */; };
@@ -112,7 +112,7 @@
 		4D45EFC11A9DFABA00C40BB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */; };
 		4D45EFC41A9DFABA00C40BB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */; };
 		4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */; };
-		4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0231A9E487A00C40BB4 /* Model.swift */; };
+		4D45F0241A9E487A00C40BB4 /* RModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0231A9E487A00C40BB4 /* RModel.swift */; };
 		4D9E43AA1FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */; };
 		4D9E43AD1FAC84FC007007C8 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E43AC1FAC84FC007007C8 /* Filter.swift */; };
 		4D9E43B11FAC86EC007007C8 /* FilterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */; };
@@ -216,13 +216,13 @@
 		005BCB3826AAD23900DF44CE /* UpgradeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradeCard.swift; sourceTree = "<group>"; };
 		005CDEAC2F646123007DB3ED /* FormViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		005CDEAF2F646500007DB3ED /* GADBannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADBannerViewController.swift; sourceTree = "<group>"; };
-		005CDEB32F6ABAEE007DB3ED /* NMAAutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMAAutoTest.swift; sourceTree = "<group>"; };
+		005CDEB32F6ABAEE007DB3ED /* AutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTest.swift; sourceTree = "<group>"; };
 		005CDEB62F6AC588007DB3ED /* NMAModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMAModel.swift; sourceTree = "<group>"; };
 		006D010126A1936600DA083D /* TipCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCard.swift; sourceTree = "<group>"; };
 		006D010426A1B89000DA083D /* CardTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTips.swift; sourceTree = "<group>"; };
 		0081F01325B1BB6C00792552 /* wordlist-it.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-it.txt"; sourceTree = "<group>"; };
 		0081F01425B1BB6C00792552 /* wordlist-pt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-pt.txt"; sourceTree = "<group>"; };
-		0091BC042535E5A000BE7A43 /* AutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTest.swift; sourceTree = "<group>"; };
+		0091BC042535E5A000BE7A43 /* RAutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAutoTest.swift; sourceTree = "<group>"; };
 		009283C52F570F7F008439F2 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 		009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; name = InAppPurchaseStore.storekit; path = AnagramSolver/InAppPurchaseStore.storekit; sourceTree = "<group>"; };
 		009283D12F59B960008439F2 /* StoreViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModelTests.swift; sourceTree = "<group>"; };
@@ -286,7 +286,7 @@
 		4D45EFC91A9DFABA00C40BB4 /* AnagramSolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnagramSolverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D45EFCE1A9DFABA00C40BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		4D45F0231A9E487A00C40BB4 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4D45F0231A9E487A00C40BB4 /* RModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RModel.swift; sourceTree = "<group>"; };
 		4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListCallbackAbstractFactory.swift; sourceTree = "<group>"; };
 		4D9E43AC1FAC84FC007007C8 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFactory.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -341,7 +341,7 @@
 		0010594B2F605A2F0064A149 /* NewModelArmy */ = {
 			isa = PBXGroup;
 			children = (
-				005CDEB32F6ABAEE007DB3ED /* NMAAutoTest.swift */,
+				005CDEB32F6ABAEE007DB3ED /* AutoTest.swift */,
 				0010594D2F605A570064A149 /* AppViewModel.swift */,
 				001059612F6306740064A149 /* FiltersViewModel.swift */,
 				001059632F6308CD0064A149 /* FiltersView.swift */,
@@ -381,10 +381,10 @@
 				4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */,
 				4D9E43AC1FAC84FC007007C8 /* Filter.swift */,
 				00EEA71925CAC2A40017F6A4 /* Coordinator.swift */,
-				0091BC042535E5A000BE7A43 /* AutoTest.swift */,
+				0091BC042535E5A000BE7A43 /* RAutoTest.swift */,
 				4DA0C3F6236B0FC800AF693B /* Matches.swift */,
 				00EEA70225CABF7D0017F6A4 /* HelpViewModel.swift */,
-				4D45F0231A9E487A00C40BB4 /* Model.swift */,
+				4D45F0231A9E487A00C40BB4 /* RModel.swift */,
 				4DA0C3F9236C761600AF693B /* AppState.swift */,
 				00F17DD326A9ABD000452020 /* RootView.swift */,
 				4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */,
@@ -851,7 +851,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				001059642F6308CD0064A149 /* FiltersView.swift in Sources */,
-				4D45F0241A9E487A00C40BB4 /* Model.swift in Sources */,
+				4D45F0241A9E487A00C40BB4 /* RModel.swift in Sources */,
 				00EEA71D25CAC5050017F6A4 /* AboutViewModel.swift in Sources */,
 				00F17DDB26A9DD4000452020 /* DefinitionsCard.swift in Sources */,
 				4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */,
@@ -865,7 +865,7 @@
 				005BCB3726AACED400DF44CE /* AutoTestCard.swift in Sources */,
 				00F17DD726A9CC3500452020 /* SettingsCard.swift in Sources */,
 				4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */,
-				0091BC052535E5A000BE7A43 /* AutoTest.swift in Sources */,
+				0091BC052535E5A000BE7A43 /* RAutoTest.swift in Sources */,
 				005BCB3926AAD23900DF44CE /* UpgradeCard.swift in Sources */,
 				00DEE1412BC7F74200669505 /* DefinitionView.swift in Sources */,
 				00EEA71225CABFE50017F6A4 /* AboutRow.swift in Sources */,
@@ -908,7 +908,7 @@
 				00F17DDF26AAB8EB00452020 /* AboutCard.swift in Sources */,
 				4DF2DE3A1FACBDBB00F44ADE /* FilterViewController.swift in Sources */,
 				004AA91F26CE565F00A63C47 /* SettingsViewModel.swift in Sources */,
-				005CDEB42F6ABAF4007DB3ED /* NMAAutoTest.swift in Sources */,
+				005CDEB42F6ABAF4007DB3ED /* AutoTest.swift in Sources */,
 				4D9E43AA1FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift in Sources */,
 				0092DE8D2D55535C00D0AFB5 /* SearchHistoryModel.swift in Sources */,
 				00CE293B2AB1D06A0002CA30 /* HelpRow.swift in Sources */,

@@ -21,7 +21,7 @@ class AppViewModel {
     let searchBarVM = SearchBarViewModel()
     @ObservationIgnored let settings = Settings()
     @ObservationIgnored let ads = Ads()
-    @ObservationIgnored private var autoTest : NMAAutoTest? = nil
+    @ObservationIgnored private var autoTest : AutoTest? = nil
 
     var showErrorAlert : Binding<Bool> {
         Binding(
@@ -139,7 +139,7 @@ class AppViewModel {
     
     func autoTestStart(){
         if autoTest == nil {
-            autoTest = NMAAutoTest(model: model, appVM: self)
+            autoTest = AutoTest(model: model, appVM: self)
         }
     }
     
