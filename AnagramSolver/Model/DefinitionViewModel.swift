@@ -53,11 +53,24 @@ class DefinitionViewModel : ObservableObject {
             if result.isDefinitionAvailable {
                 convert(result)
             } else {
-                Coordinator.sharedInstance.webLookUp(word: synonym)
+                webLookUp(word: synonym)
             }
         }
     }
+
+    func webLookUp(word : String) {
+        let defModel = DefaultDefintion(word: word)
+        if let url = defModel.lookupUrl(){
+            showWebPage(address: url)
+        }
+    }
     
+    func showWebPage(address : String) {
+        if let url = URL(string: address) {
+            UIApplication.shared.open(url, options: [:])
+        }
+    }
+
 }
 
 enum DefinitionProviders {

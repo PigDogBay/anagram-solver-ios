@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HelpViewModel : ObservableObject {
+class RHelpViewModel : ObservableObject {
     @Published var showTip = false
     let tip : Tip
     
@@ -16,7 +16,7 @@ class HelpViewModel : ObservableObject {
         self.tip = tip
     }
     
-    func showMe(coordinator : Coordinator){
+    func showMe(coordinator : RCoordinator){
         coordinator.showHelpExample(example: tip.showMe)
         showTip = false
     }

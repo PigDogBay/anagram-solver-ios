@@ -9,12 +9,12 @@
 import Foundation
 import SwiftUtils
 
-protocol WordListCallbackAbstractFactory
+protocol RWordListCallbackAbstractFactory
 {
     func createChainedCallback(lastCallback : WordListCallback) -> WordListCallback
 }
 
-class NullWLCAF : WordListCallbackAbstractFactory {
+class NullWLCAF : RWordListCallbackAbstractFactory {
     func createChainedCallback(lastCallback: WordListCallback) -> WordListCallback {
         return lastCallback
     }

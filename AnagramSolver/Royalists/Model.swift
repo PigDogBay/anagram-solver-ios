@@ -9,10 +9,10 @@
 import Foundation
 import SwiftUtils
 
-class Model : WordListCallback, WordDictionary
+class RModel : WordListCallback, WordDictionary
 {
     //Singleton
-    static let sharedInstance = Model()
+    static let sharedInstance = RModel()
     
     //Need to check if user changes the word list setting, so cache it here
     var wordListName = ""
@@ -20,7 +20,7 @@ class Model : WordListCallback, WordDictionary
     //Flag for one time load of the phrases word list
     private var loadPhrases = true
 
-    let appState = AppStateObservable()
+    let appState = RAppStateObservable()
     let wordSearch : WordSearch
     let searchParser = SearchParser()
     lazy private(set) var searchHistoryModel =
@@ -29,7 +29,7 @@ class Model : WordListCallback, WordDictionary
                            isSearchHistoryEnabled: self.settings.isSearchHistoryEnabled)
     }()
     let wordFormatter = WordFormatter()
-    let matches = Matches()
+    let matches = RMatches()
     var query = ""
     var casedQuery : String {
         return settings.useUpperCase ? query.uppercased() : query
@@ -40,8 +40,8 @@ class Model : WordListCallback, WordDictionary
     let ratings = Ratings(appId: Strings.appId)
 //    var storeVM = StoreViewModel(productID: REMOVE_ADS_PRODUCT_ID)
 
-    let filter : Filter
-    let filterFactory : WordListCallbackAbstractFactory
+    let filter : RFilter
+    let filterFactory : RWordListCallbackAbstractFactory
     private var nabuSearch : Search? = nil
     var nabuLookUp : NabuLookUp? = nil
     ///Store lookUpResult for DefinitionView
@@ -49,8 +49,8 @@ class Model : WordListCallback, WordDictionary
     
     init()
     {
-        filter = Filter()
-        filterFactory = FilterFactory(filter: filter)
+        filter = RFilter()
+        filterFactory = RFilterFactory(filter: filter)
         self.wordSearch = WordSearch()
         applySettings()
     }

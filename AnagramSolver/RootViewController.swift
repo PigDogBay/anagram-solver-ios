@@ -11,9 +11,9 @@ import SwiftUtils
 import MessageUI
 import SwiftUI
 
-class RootViewController: UIViewController, AppStateChangeObserver, MFMailComposeViewControllerDelegate
+class RootViewController: UIViewController, RAppStateChangeObserver, MFMailComposeViewControllerDelegate
 {
-    private var model : Model!
+    private var model : RModel!
     private let searchSegueId = "searchSegue"
     lazy private(set) var monospacedFont : UIFont? = {
         if let font = UIFont(name: "Menlo-Regular",size: 24.0) {
@@ -24,7 +24,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         return nil
     }()
     private let systemFont = UIFont.preferredFont(forTextStyle: .title1)
-    private var coordinator = Coordinator.sharedInstance
+    private var coordinator = RCoordinator.sharedInstance
     private let queryTextFieldDelegate = QueryTextFieldDelegate()
     
     var dictionary : WordDictionary {model}
@@ -45,7 +45,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     
     @IBSegueAction func embedSwiftUIView(_ coder: NSCoder) -> UIViewController? {
         coordinator.rootVC = self
-        coordinator.showCards = Model.sharedInstance.settings.showCardTips
+        coordinator.showCards = RModel.sharedInstance.settings.showCardTips
         return UIHostingController(coder: coder, rootView: RootView(coordinator: coordinator))
     }
     
@@ -85,7 +85,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
     }
 
     func updateSettings(){
-        let settings = Model.sharedInstance.settings
+        let settings = RModel.sharedInstance.settings
         let font = settings.useMonospacedFont ? monospacedFont : systemFont
         if font?.fontName != textFieldQuery.font?.fontName {
             //font setting has changed
@@ -107,7 +107,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
             .compactMap{$0 as? UIWindowScene}
             .flatMap {$0.windows}
             .first
-        let darkMode = Model.sharedInstance.settings.darkModeOverride
+        let darkMode = RModel.sharedInstance.settings.darkModeOverride
         //Map dark mode setting to UIUserInterfaceStyle
         switch (darkMode){
         case Settings.darkModeValueLight:
@@ -124,7 +124,7 @@ class RootViewController: UIViewController, AppStateChangeObserver, MFMailCompos
         super.viewDidLoad()
         updateSettings()
         applyDarkModeSetting()
-        model = Model.sharedInstance
+        model = RModel.sharedInstance
         model.appState.addObserver(observer: self)
         //prevent email autocomplete showing on the keyboard
         textFieldQuery.textContentType = UITextContentType(rawValue: "")

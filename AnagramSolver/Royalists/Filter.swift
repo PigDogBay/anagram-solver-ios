@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Filter {
+class RFilter {
     
     var biggerThan = 0
     var lessThan = 0

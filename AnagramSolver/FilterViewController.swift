@@ -34,7 +34,7 @@ class FilterViewController: UITableViewController, LettersCellCallback {
         }
     }
     
-    fileprivate var model : Model!
+    fileprivate var model : RModel!
     fileprivate let numberCellId = "cellNumbersFilter"
     fileprivate let letterCellId = "cellLettersFilter"
     fileprivate let notCellId = "cellNot"
@@ -42,7 +42,7 @@ class FilterViewController: UITableViewController, LettersCellCallback {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.model = Model.sharedInstance
+        self.model = RModel.sharedInstance
         tableView.dataSource = self
         tableView.delegate = self
         useUpperCase = model.settings.useUpperCase

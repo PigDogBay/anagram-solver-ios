@@ -9,11 +9,11 @@
 import Foundation
 import SwiftUtils
 
-class FilterFactory : WordListCallbackAbstractFactory {
+class RFilterFactory : RWordListCallbackAbstractFactory {
     
-    let filter : Filter
+    let filter : RFilter
     
-    init(filter : Filter){
+    init(filter : RFilter){
         self.filter = filter
     }
     

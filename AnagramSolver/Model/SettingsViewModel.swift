@@ -85,8 +85,6 @@ class SettingsViewModel {
     var darkModeOverride : String {
         didSet {
             settings.darkModeOverride = darkModeOverride
-            //Update this setting immediately
-            Coordinator.sharedInstance.rootVC?.applyDarkModeSetting()
         }
     }
 

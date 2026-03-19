@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct RootView: View {
-    @ObservedObject var coordinator = Coordinator.sharedInstance
+    @ObservedObject var coordinator = RCoordinator.sharedInstance
 
 
     /*

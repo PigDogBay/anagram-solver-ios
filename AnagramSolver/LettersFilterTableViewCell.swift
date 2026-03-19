@@ -29,7 +29,7 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
     weak var callback : LettersCellCallback?
     
     fileprivate var filterType : FilterType?
-    fileprivate var filter : Filter?
+    fileprivate var filter : RFilter?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,7 +40,7 @@ class LettersFilterTableViewCell: UITableViewCell, UITextFieldDelegate {
         Data binding is handled in this class as it seems the most convenient for now, similar to
         Android's ViewHolder.
     */
-    func bind(filter : Filter, filterType : FilterType, isUpperCase : Bool = false){
+    func bind(filter : RFilter, filterType : FilterType, isUpperCase : Bool = false){
         self.filter = filter
         self.filterType = filterType
         lettersTextView.delegate = nil

@@ -11,10 +11,10 @@ import SwiftUtils
 import Combine
 
 ///Deals with interactions between views and holds shared observed variables
-class Coordinator : ObservableObject {
+class RCoordinator : ObservableObject {
 
     //Singleton, occasionally get null pointer crashes if try to use it as Environment variable
-    static let sharedInstance = Coordinator()
+    static let sharedInstance = RCoordinator()
     private init(){}
 
     var rootVC : RootViewController?
@@ -43,7 +43,7 @@ class Coordinator : ObservableObject {
     }
     
     func autoTest(){
-        AutoTest.start(model: Model.sharedInstance, rootVC: rootVC!)
+        RAutoTest.start(model: RModel.sharedInstance, rootVC: rootVC!)
     }
     
     func show(_ viewId : Int){
@@ -57,8 +57,8 @@ class Coordinator : ObservableObject {
 
     /// Call when the user exits the Settings screen and apply any setting changes
     func updateSettings(){
-        Model.sharedInstance.checkForSettingsChange()
-        showCards = Model.sharedInstance.settings.showCardTips
+        RModel.sharedInstance.checkForSettingsChange()
+        showCards = RModel.sharedInstance.settings.showCardTips
         rootVC?.updateSettings()
     }
 

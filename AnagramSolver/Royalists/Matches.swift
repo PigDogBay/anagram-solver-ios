@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Matches {
+class RMatches {
     private let minimumMatchesForLegend = 100
     private var matches : [String] = []
     private var grouped : [[String]]?

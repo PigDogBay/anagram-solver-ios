@@ -12,13 +12,13 @@ import SwiftUtils
 import AVFoundation
 import UserMessagingPlatform
 
-class MatchesViewController: UIViewController, AppStateChangeObserver, UITableViewDataSource, UITableViewDelegate, BannerViewDelegate
+class MatchesViewController: UIViewController, RAppStateChangeObserver, UITableViewDataSource, UITableViewDelegate, BannerViewDelegate
 {
     @IBOutlet weak var bannerHeightConstraint: NSLayoutConstraint!
     fileprivate let cellIdentifier = "MatchesCell"
     fileprivate let cellIdentifierLarge = "MatchesCellLarge"
     fileprivate let definitionSegueId = "showDefinitionSegue"
-    fileprivate var model : Model!
+    fileprivate var model : RModel!
     fileprivate var selectedWord = ""
     private lazy var synthesizer : AVSpeechSynthesizer = {
         AVSpeechSynthesizer()
@@ -37,7 +37,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.model = Model.sharedInstance
+        self.model = RModel.sharedInstance
 
         //Remove blank gap at the bottom of the screen whilst Ad is loading
         bannerHeightConstraint.constant = 0
@@ -90,7 +90,7 @@ class MatchesViewController: UIViewController, AppStateChangeObserver, UITableVi
         //Only do something when moving back to parent
         if parent == nil
         {
-            Model.sharedInstance.ratings.requestRating()
+            RModel.sharedInstance.ratings.requestRating()
         }
     }
     @objc func appMovedToBackground() {

@@ -15,21 +15,21 @@ import SwiftUtils
 /// Remember to edit the Run scheme:
 ///  - check Debug executable - shows CPU/Memory usuage
 ///  - Build configuration - select Release so that searches are fast
-class AutoTest : AppStateChangeObserver {
+class RAutoTest : RAppStateChangeObserver {
     
-    private static var instance : AutoTest?
-    private let model : Model
+    private static var instance : RAutoTest?
+    private let model : RModel
     private let randomQuery = RandomQuery()
     private let rootVC : RootViewController
     
-    static func start(model : Model, rootVC : RootViewController){
+    static func start(model : RModel, rootVC : RootViewController){
         if instance == nil {
-            instance = AutoTest(model: model, rootVC: rootVC)
+            instance = RAutoTest(model: model, rootVC: rootVC)
         }
         instance?.appStateChanged(model.appState.appState)
     }
 
-    init(model : Model, rootVC : RootViewController){
+    init(model : RModel, rootVC : RootViewController){
         self.model = model
         self.rootVC = rootVC
         model.appState.addObserver(observer: self)

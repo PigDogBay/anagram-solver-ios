@@ -12,6 +12,7 @@ struct RemoveAdsDetailView: View {
     @Environment(AppViewModel.self) var appVM
     @Environment(StoreViewModel.self) var storeVM
     @State private var showRefundSheet = false
+    @State private var aboutVM = AboutViewModel()
     
     private var showAlertBinding: Binding<Bool> {
         Binding(
@@ -82,7 +83,7 @@ struct RemoveAdsDetailView: View {
                     FilterSectionView(title: "SUPPORT", description: "For further assistance, press the button below to send an email to MPD Bailey Technology and we will try to reply to you as soon as possible.")
                     HStack {
                         Spacer()
-                        Button(action:Coordinator.sharedInstance.sendFeedback){
+                        Button(action: aboutVM.feedback){
                             Text("EMAIL SUPPORT")
                                 .modifier(TipButtonMod())
                         }.buttonStyle(BorderlessButtonStyle())
