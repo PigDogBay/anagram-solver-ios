@@ -364,6 +364,7 @@
 		00C27FE62F6BF5C5002064FB /* Royalists */ = {
 			isa = PBXGroup;
 			children = (
+				4D1D62BB1E26674F00231DB3 /* ViewControllers */,
 				4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */,
 				4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */,
 				4D9E43AC1FAC84FC007007C8 /* Filter.swift */,
@@ -518,7 +519,6 @@
 				0029A03325307126002E96D1 /* Model */,
 				4D45EFB71A9DFABA00C40BB4 /* Supporting Files */,
 				00EEA6F825CABBD60017F6A4 /* Supporting Views */,
-				4D1D62BB1E26674F00231DB3 /* ViewControllers */,
 				00EEA6F625CABBB40017F6A4 /* Views */,
 				001059472F6057C60064A149 /* AnagramSolver.swift */,
 				4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */,
