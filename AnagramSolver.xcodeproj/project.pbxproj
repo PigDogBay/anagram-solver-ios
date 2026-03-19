@@ -364,13 +364,6 @@
 				00EEA71C25CAC5050017F6A4 /* AboutViewModel.swift */,
 				00DEE13A2BC7F68800669505 /* DefinitionViewModel.swift */,
 				4D3596401CFEEA50008D2FAF /* Ads.swift */,
-				4DA0C3F9236C761600AF693B /* AppState.swift */,
-				0091BC042535E5A000BE7A43 /* AutoTest.swift */,
-				00EEA71925CAC2A40017F6A4 /* Coordinator.swift */,
-				4D9E43AC1FAC84FC007007C8 /* Filter.swift */,
-				4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */,
-				00EEA70225CABF7D0017F6A4 /* HelpViewModel.swift */,
-				4DA0C3F6236B0FC800AF693B /* Matches.swift */,
 				4D45F0231A9E487A00C40BB4 /* Model.swift */,
 				0092DE8C2D55535500D0AFB5 /* SearchHistoryModel.swift */,
 				4D45D7B21E2CF0C500EC2D27 /* Settings.swift */,
@@ -378,7 +371,6 @@
 				009283C52F570F7F008439F2 /* StoreViewModel.swift */,
 				0029A03425307170002E96D1 /* Strings.swift */,
 				00EEA6FC25CABDB10017F6A4 /* TipsData.swift */,
-				4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -386,6 +378,14 @@
 		00C27FE62F6BF5C5002064FB /* Royalists */ = {
 			isa = PBXGroup;
 			children = (
+				4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */,
+				4D9E43AC1FAC84FC007007C8 /* Filter.swift */,
+				00EEA71925CAC2A40017F6A4 /* Coordinator.swift */,
+				0091BC042535E5A000BE7A43 /* AutoTest.swift */,
+				4DA0C3F6236B0FC800AF693B /* Matches.swift */,
+				00EEA70225CABF7D0017F6A4 /* HelpViewModel.swift */,
+				4DA0C3F9236C761600AF693B /* AppState.swift */,
+				4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */,
 			);
 			path = Royalists;
 			sourceTree = "<group>";
