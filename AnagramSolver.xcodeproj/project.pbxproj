@@ -338,38 +338,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0010594B2F605A2F0064A149 /* NewModelArmy */ = {
-			isa = PBXGroup;
-			children = (
-				005CDEB32F6ABAEE007DB3ED /* AutoTest.swift */,
-				0010594D2F605A570064A149 /* AppViewModel.swift */,
-				001059612F6306740064A149 /* FiltersViewModel.swift */,
-				001059632F6308CD0064A149 /* FiltersView.swift */,
-				001059572F619E760064A149 /* MainView.swift */,
-				0010595D2F62D7FF0064A149 /* MatchesView.swift */,
-				0010595B2F62D7EB0064A149 /* MatchesViewModel.swift */,
-				001059692F6339BE0064A149 /* MatchRow.swift */,
-				005CDEB62F6AC588007DB3ED /* Model.swift */,
-				001059512F6190BB0064A149 /* RootView.swift */,
-				001059532F6193A00064A149 /* SearchBarView.swift */,
-				001059552F6197120064A149 /* SearchBarViewModel.swift */,
-				0010595F2F62E9B40064A149 /* WordEngine.swift */,
-			);
-			path = NewModelArmy;
-			sourceTree = "<group>";
-		};
 		0029A03325307126002E96D1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				00EEA71C25CAC5050017F6A4 /* AboutViewModel.swift */,
-				00DEE13A2BC7F68800669505 /* DefinitionViewModel.swift */,
 				4D3596401CFEEA50008D2FAF /* Ads.swift */,
+				0010594D2F605A570064A149 /* AppViewModel.swift */,
+				005CDEB32F6ABAEE007DB3ED /* AutoTest.swift */,
+				00DEE13A2BC7F68800669505 /* DefinitionViewModel.swift */,
+				001059612F6306740064A149 /* FiltersViewModel.swift */,
+				0010595B2F62D7EB0064A149 /* MatchesViewModel.swift */,
+				005CDEB62F6AC588007DB3ED /* Model.swift */,
+				001059552F6197120064A149 /* SearchBarViewModel.swift */,
 				0092DE8C2D55535500D0AFB5 /* SearchHistoryModel.swift */,
 				4D45D7B21E2CF0C500EC2D27 /* Settings.swift */,
 				004AA91E26CE565F00A63C47 /* SettingsViewModel.swift */,
 				009283C52F570F7F008439F2 /* StoreViewModel.swift */,
 				0029A03425307170002E96D1 /* Strings.swift */,
 				00EEA6FC25CABDB10017F6A4 /* TipsData.swift */,
+				0010595F2F62E9B40064A149 /* WordEngine.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -412,8 +399,12 @@
 				00DEE1402BC7F74100669505 /* DefinitionView.swift */,
 				00EEA72725CAC85A0017F6A4 /* DefinitionHelpView.swift */,
 				00EEA72225CAC8190017F6A4 /* FilterHelpView.swift */,
+				001059632F6308CD0064A149 /* FiltersView.swift */,
 				00EEA72325CAC8190017F6A4 /* HelpView.swift */,
+				001059572F619E760064A149 /* MainView.swift */,
+				0010595D2F62D7FF0064A149 /* MatchesView.swift */,
 				009283D72F59BDAB008439F2 /* RemoveAdsDetailView.swift */,
+				001059512F6190BB0064A149 /* RootView.swift */,
 				0092DE882D54E3AE00D0AFB5 /* SearchHistoryView.swift */,
 				00F17DD826A9D00700452020 /* SettingsHelpView.swift */,
 				004AA91B26CD306D00A63C47 /* SettingsView.swift */,
@@ -443,8 +434,10 @@
 				001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */,
 				00CE29392AB1D0690002CA30 /* HelpRow.swift */,
 				00EEA71F25CAC59D0017F6A4 /* MailView.swift */,
+				001059692F6339BE0064A149 /* MatchRow.swift */,
 				00EEA70B25CABFE50017F6A4 /* RateRow.swift */,
 				009283DB2F5AE5A8008439F2 /* RemoveAdsRow.swift */,
+				001059532F6193A00064A149 /* SearchBarView.swift */,
 				0092DE852D54DB6D00D0AFB5 /* SearchHistoryCard.swift */,
 				00F17DD626A9CC3500452020 /* SettingsCard.swift */,
 				004AA92026CEB1CB00A63C47 /* SettingsPicker.swift */,
@@ -522,7 +515,6 @@
 			isa = PBXGroup;
 			children = (
 				00C27FE62F6BF5C5002064FB /* Royalists */,
-				0010594B2F605A2F0064A149 /* NewModelArmy */,
 				0029A03325307126002E96D1 /* Model */,
 				4D45EFB71A9DFABA00C40BB4 /* Supporting Files */,
 				00EEA6F825CABBD60017F6A4 /* Supporting Views */,
