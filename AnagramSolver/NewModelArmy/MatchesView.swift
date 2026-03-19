@@ -111,7 +111,7 @@ struct MatchesView: View {
     MatchesView(
         matchesVM: MatchesViewModel(
             query: "preview",
-            model: NMAModel(),
+            model: Model(),
             filtersVM: FiltersViewModel()
         )
     )

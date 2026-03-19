@@ -17,7 +17,7 @@ enum NavigationScreens : Hashable {
 @MainActor
 @Observable
 class AppViewModel {
-    var model = NMAModel()
+    var model = Model()
     let searchBarVM = SearchBarViewModel()
     @ObservationIgnored let settings = Settings()
     @ObservationIgnored let ads = Ads()

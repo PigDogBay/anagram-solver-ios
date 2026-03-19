@@ -19,7 +19,7 @@ enum AppStates
     Data that needs to be shared between various view-models
  */
 @Observable
-class NMAModel {
+class Model {
     var appState: AppStates = .uninitialized {
         //AppState needs to be tracked by AutoTest
         didSet { onStateChange?(appState) }

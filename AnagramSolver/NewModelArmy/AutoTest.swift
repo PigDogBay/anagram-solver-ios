@@ -11,11 +11,11 @@ import SwiftUtils
 
 @MainActor
 class AutoTest {
-    private let model : NMAModel
+    private let model : Model
     private let appVM : AppViewModel
     private let randomQuery = RandomQuery()
     
-    init(model: NMAModel, appVM: AppViewModel) {
+    init(model: Model, appVM: AppViewModel) {
         self.model = model
         self.appVM = appVM
         

@@ -18,7 +18,7 @@ enum ResultsListMode {
 @Observable
 class MatchesViewModel {
     var query : String
-    let model : NMAModel
+    let model : Model
     
     @ObservationIgnored let engine : WordEngine
     @ObservationIgnored let filtersVM : FiltersViewModel
@@ -46,7 +46,7 @@ class MatchesViewModel {
     }
 
     
-    init(query: String, model : NMAModel, filtersVM : FiltersViewModel) {
+    init(query: String, model : Model, filtersVM : FiltersViewModel) {
         print("MatchesVM init()")
         self.query = query
         self.model = model
