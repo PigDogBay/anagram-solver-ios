@@ -17,6 +17,7 @@ struct SearchHistoryCard: View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
             ForEach(viewModel.historyModel.markdownLinks, id: \.self) { historyItem in
                 Text(LocalizedStringKey(historyItem))
+                    .tint(Color("exampleQuery"))
             }
         }
     }
