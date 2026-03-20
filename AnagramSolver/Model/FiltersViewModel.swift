@@ -127,7 +127,8 @@ import SwiftUtils
         if settings.fullStopToQuestionMark {
             query = query.replacingOccurrences(of: ".", with: "?")
         }
-        pattern = query
+        if pattern != query{
+            pattern = query
+        }
     }
-
 }

@@ -61,12 +61,13 @@ struct FiltersView: View {
     }
     
     private var expertFilters : some View {
-        let binding = Binding(
-            get: {self.filters.pattern},
-            set: {self.filters.setPatternFrom(typed: $0)})
-
         return Section(header: Text("EXPERT FILTERS"), footer: Text("To create a pattern use ? to represent any letter and @ for 0 or more letters, eg s?r??b?e")){
-            TextFilterRow(label: "Pattern", hint: "Enter pattern", text: binding)
+            TextFilterRow(label: "Pattern", hint: "Enter pattern", text: $filters.pattern)
+                .onChange(of: filters.pattern){ oldValue, newValue in
+                    if (oldValue != newValue) {
+                        self.filters.setPatternFrom(typed: newValue)
+                    }
+                }
             TextFilterRow(label: "Reg Exp", hint: "Enter regex", text: $filters.regExp)
         }
     }
