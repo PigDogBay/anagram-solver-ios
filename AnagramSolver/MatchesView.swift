@@ -58,7 +58,7 @@ struct MatchesView: View {
             }
         }
         .listStyle(.sidebar)
-        .tint(Color("accentColor"))
+        .tint(Color("accentColor")) //Need this for the section index
         .scrollDismissesKeyboard(.immediately)
     }
 
