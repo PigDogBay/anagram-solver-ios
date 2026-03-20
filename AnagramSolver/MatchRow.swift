@@ -8,17 +8,9 @@
 
 import SwiftUI
 import SwiftUtils
-import AVFoundation
-
-/*
- Make it global for now
- If created in the struct, will generate 50+ AXSpeech threads and run out of memory (app will lock up)
- Since the struct is created for every result and may be re-created every time there is a state change
- really bad to put object creation in SwiftUI View structs.
- */
-//let synthesizer = AVSpeechSynthesizer()
 
 struct MatchRow: View {
+    @Environment(SpeechManager.self) var speech
     @State private var speakIconScale : CGFloat = 1
     @State private var copyIconScale : CGFloat = 1
     @State private var isCopiedVisible = false
@@ -31,7 +23,7 @@ struct MatchRow: View {
     }
     
     private func speak(){
-        mpdbSpeak(synth: synthesizer, text: match)
+        speech.speak(match)
         withAnimation(Animation.easeOut(duration: 0.5)){
             speakIconScale = 2
         }
