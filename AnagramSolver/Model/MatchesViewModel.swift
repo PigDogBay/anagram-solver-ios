@@ -79,6 +79,7 @@ class MatchesViewModel {
             self.engine.combinedSearch(searchQuery, callback: filterPipeline)
             matches.append(contentsOf: engine.working)
             resultsListMode = calculateListMode()
+            model.searchHistoryModel.updateSearchHistory(query: query)
             model.appState = .finished
         }
     }
