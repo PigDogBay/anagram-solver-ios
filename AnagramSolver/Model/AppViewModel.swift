@@ -66,6 +66,10 @@ class AppViewModel {
         path.append(screen)
     }
     
+    func canSearch() -> Bool {
+        return model.appState == .ready || model.appState == .finished
+    }
+    
     func search(){
         if model.appState == .ready {
             goto(screen: .Matches)
@@ -75,6 +79,7 @@ class AppViewModel {
     func matchesExited(){
         model.engine.stopSearch()
         goBack()
+        model.appState = .ready
     }
     
     func settingsExited(didChangeWordList : Bool){

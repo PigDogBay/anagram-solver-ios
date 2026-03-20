@@ -28,7 +28,7 @@ struct MainView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarIconButton(placement: .topBarLeading, iconName: "gear") {appVM.goto(screen: .Settings)}
-            if (appVM.model.appState == .ready){
+            if (appVM.canSearch()){
                 ToolbarButton(placement: .topBarTrailing, label: "Search"){
                     if appVM.searchBarVM.isValid() {
                         appVM.search()
