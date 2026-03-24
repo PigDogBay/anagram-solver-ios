@@ -113,7 +113,7 @@ struct MatchesView: View {
         matchesVM: MatchesViewModel(
             query: "preview",
             model: Model(),
-            filtersVM: FiltersViewModel()
+            filtersVM: Filters()
         )
     )
 }

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct FiltersView: View {
     @Environment(AppViewModel.self) var appVM
-    @Bindable var filters : FiltersViewModel
+    @Bindable var filters : Filters
 
     private let numberFilters = ["No filter", "1 letter", "2 letters", "3 letters", "4 letters", "5 letters", "6 letters", "7 letters", "8 letters", "9 letters", "10 letters", "11 letters", "12 letters", "13 letters", "14 letters", "15 letters", "16 letters", "17 letters", "18 letters", "19 letters", "20 letters"]
     private let distinctFilters = ["No filter", "All letters are different", "Some letters are the same"]

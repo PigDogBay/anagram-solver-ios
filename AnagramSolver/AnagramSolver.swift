@@ -17,7 +17,7 @@ struct AnagramSolverApp: App {
     @Environment(\.scenePhase) private var scenePhase
     
     @State private var appVM = AppViewModel()
-    @State private var filtersVM = FiltersViewModel()
+    @State private var filtersVM = Filters()
     @State private var storeVM = StoreViewModel(productID: REMOVE_ADS_PRODUCT_ID)
     @State private var speech = SpeechManager()
 

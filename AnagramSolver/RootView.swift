@@ -10,7 +10,7 @@ import SwiftUI
 
 struct RootView: View {
     @Environment(AppViewModel.self) var appVM
-    @Environment(FiltersViewModel.self) var filtersVM
+    @Environment(Filters.self) var filtersVM
     
     private let formViewControllerRepresentable = FormViewControllerRepresentable()
     

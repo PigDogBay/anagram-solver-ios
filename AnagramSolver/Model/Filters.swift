@@ -9,7 +9,7 @@
 import SwiftUI
 import SwiftUtils
 
-@Observable class FiltersViewModel {
+@Observable class Filters {
     var contains = ""
     var excludes = ""
     var containsWord = ""

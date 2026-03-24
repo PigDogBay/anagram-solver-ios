@@ -21,7 +21,7 @@ class MatchesViewModel {
     let model : Model
     
     @ObservationIgnored let engine : WordEngine
-    @ObservationIgnored let filtersVM : FiltersViewModel
+    @ObservationIgnored let filtersVM : Filters
     @ObservationIgnored let wordFormatter = WordFormatter()
     @ObservationIgnored var resultsListMode = ResultsListMode.empty
     @ObservationIgnored var grouped = [[String]]()
@@ -46,7 +46,7 @@ class MatchesViewModel {
     }
 
     
-    init(query: String, model : Model, filtersVM : FiltersViewModel) {
+    init(query: String, model : Model, filtersVM : Filters) {
         print("MatchesVM init()")
         self.query = query
         self.model = model
