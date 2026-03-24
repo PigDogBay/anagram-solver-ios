@@ -96,7 +96,7 @@ struct MatchesView: View {
             adSection()
         }
         .onAppear() {
-            matchesVM.search(word: matchesVM.query)
+            matchesVM.onAppear()
         }
         .navigationTitle("\(matchesVM.query)")
         .navigationBarTitleDisplayMode(.inline)

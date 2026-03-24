@@ -58,6 +58,13 @@ class MatchesViewModel {
         wordFormatter.isUpperCased = settings.useUpperCase
     }
     
+    func onAppear(){
+        print("On Appear")
+        if model.appState == .ready {
+            search(word: query)
+        }
+    }
+    
     func getSectionTitle(rows : [String]) -> String {
         rows[0].length == 1 ? "1 letter" : "\(rows[0].length) letters"
     }
