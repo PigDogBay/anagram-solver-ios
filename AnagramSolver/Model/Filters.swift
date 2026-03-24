@@ -10,6 +10,7 @@ import SwiftUI
 import SwiftUtils
 
 @Observable class Filters {
+    @ObservationIgnored var isActive = false
     var contains = ""
     var excludes = ""
     var containsWord = ""

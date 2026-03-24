@@ -102,8 +102,12 @@ struct MatchesView: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
         .toolbar {
-            ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left") {appVM.matchesExited()}
-            ToolbarButton(placement: .topBarTrailing, label: "Filters"){appVM.goto(screen: .Filters)}
+            ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left") {
+                appVM.matchesExited(filters: matchesVM.filters)
+            }
+            ToolbarButton(placement: .topBarTrailing, label: "Filters"){
+                appVM.goto(screen: .Filters)
+            }
         }
     }
 }
@@ -113,7 +117,7 @@ struct MatchesView: View {
         matchesVM: MatchesViewModel(
             query: "preview",
             model: Model(),
-            filtersVM: Filters()
+            filters: Filters()
         )
     )
 }

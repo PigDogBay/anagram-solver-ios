@@ -66,8 +66,10 @@ class AppViewModel {
         path.append(screen)
     }
     
-    func applyPressed(){
+    func apply(filters : Filters){
+        //so state to .ready so that MatchesVM starts a new search
         model.appState = .ready
+        filters.isActive = true
         goBack()
     }
 
@@ -77,12 +79,16 @@ class AppViewModel {
     
     func search(){
         if model.appState == .ready {
+            //Disable filters
+            
             goto(screen: .Matches)
         }
     }
     
-    func matchesExited(){
+    func matchesExited(filters : Filters){
         model.engine.stopSearch()
+        //Disable filters for new searches
+        filters.isActive = false
         goBack()
         model.appState = .ready
     }

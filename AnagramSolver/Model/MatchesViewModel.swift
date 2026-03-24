@@ -21,7 +21,7 @@ class MatchesViewModel {
     let model : Model
     
     @ObservationIgnored let engine : WordEngine
-    @ObservationIgnored let filtersVM : Filters
+    @ObservationIgnored let filters : Filters
     @ObservationIgnored let wordFormatter = WordFormatter()
     @ObservationIgnored var resultsListMode = ResultsListMode.empty
     @ObservationIgnored var grouped = [[String]]()
@@ -46,12 +46,12 @@ class MatchesViewModel {
     }
 
     
-    init(query: String, model : Model, filtersVM : Filters) {
+    init(query: String, model : Model, filters : Filters) {
         print("MatchesVM init()")
         self.query = query
         self.model = model
         self.engine = model.engine
-        self.filtersVM = filtersVM
+        self.filters = filters
         
         //Apply settings
         wordFormatter.highlightColor = settings.highlight
@@ -80,7 +80,7 @@ class MatchesViewModel {
         let searchParser = SearchParser()
         let searchQuery = searchParser.parse(query: query)
         wordFormatter.newSearch(searchQuery)
-        let filterPipeline = filtersVM.createChainedCallback(lastCallback: engine)
+        let filterPipeline = filters.isActive ? filters.createChainedCallback(lastCallback: engine) : engine
         matches.removeAll()
         Task {
             self.engine.combinedSearch(searchQuery, callback: filterPipeline)
@@ -92,11 +92,11 @@ class MatchesViewModel {
     }
     
     private func getSearchingStatusText() -> String{
-        if filtersVM.filterCount > 1 {
-            return "Searching (\(filtersVM.filterCount) Filters Active)"
+        if filters.isActive && filters.filterCount > 1 {
+            return "Searching (\(filters.filterCount) Filters Active)"
         }
-        if filtersVM.filterCount > 0 {
-            return "Searching (\(filtersVM.filterCount) Filter Active)"
+        if filters.isActive && filters.filterCount > 0 {
+            return "Searching (\(filters.filterCount) Filter Active)"
         }
         return "Searching"
     }
@@ -105,8 +105,8 @@ class MatchesViewModel {
         if query == "" {
             return ""
         }
-        if filtersVM.filterCount > 0 {
-            return "Matches: \(matches.count) Filters: \(filtersVM.filterCount)"
+        if filters.isActive && filters.filterCount > 0 {
+            return "Matches: \(matches.count) Filters: \(filters.filterCount)"
         }
         return "Matches: \(matches.count)"
     }

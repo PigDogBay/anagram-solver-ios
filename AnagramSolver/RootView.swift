@@ -24,7 +24,7 @@ struct RootView: View {
                         matchesVM: MatchesViewModel(
                             query: appVM.searchBarVM.query,
                             model: appVM.model,
-                            filtersVM: filtersVM)
+                            filters: filtersVM)
                     )
                     case .Tip(let tip): HelpView(tip: tip)
                     case .Definition: DefinitionView(appVM.model.engine)

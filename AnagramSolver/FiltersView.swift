@@ -85,7 +85,7 @@ struct FiltersView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left", action: appVM.goBack)
-            ToolbarButton(placement: .topBarTrailing, label: "Apply", action : appVM.applyPressed)
+            ToolbarButton(placement: .topBarTrailing, label: "Apply"){appVM.apply(filters: filters)}
         }
         .navigationBarBackButtonHidden(true)
     }
