@@ -66,6 +66,11 @@ class AppViewModel {
         path.append(screen)
     }
     
+    func applyPressed(){
+        model.appState = .ready
+        goBack()
+    }
+
     func canSearch() -> Bool {
         return model.appState == .ready || model.appState == .finished
     }

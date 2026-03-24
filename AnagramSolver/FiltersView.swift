@@ -72,10 +72,6 @@ struct FiltersView: View {
         }
     }
 
-    private func backPressed(){
-        appVM.goBack()
-    }
-
     var body: some View {
         Form {
             letterFilters
@@ -88,8 +84,8 @@ struct FiltersView: View {
         .navigationTitle(filters.title)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left", action: backPressed)
-            ToolbarButton(placement: .topBarTrailing, label: "Apply", action : filters.reset)
+            ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left", action: appVM.goBack)
+            ToolbarButton(placement: .topBarTrailing, label: "Apply", action : appVM.applyPressed)
         }
         .navigationBarBackButtonHidden(true)
     }
