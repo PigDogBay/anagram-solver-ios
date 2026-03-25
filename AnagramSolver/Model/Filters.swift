@@ -58,8 +58,6 @@ import SwiftData
         self.lessThan = lessThan
         self.moreThan = moreThan
         self.equalTo = equalTo
-        
-        print("Filters.init containsWord = \(containsWord)")
     }
     
     
