@@ -14,6 +14,11 @@ struct MatchesView: View {
     @State var matchesVM : MatchesViewModel
     @State var isAdLoaded = false
     
+    init(query: String, model: Model, filters: Filters) {
+        // Use _matchesVM to initialize the @State property wrapper
+        _matchesVM = State(initialValue: MatchesViewModel(query: query, model: model, filters: filters))
+    }
+
     private func adSection() -> some View {
         HStack {
             let size = GADBannerViewController.getAdBannerSize()
@@ -114,10 +119,8 @@ struct MatchesView: View {
 
 #Preview {
     MatchesView(
-        matchesVM: MatchesViewModel(
-            query: "preview",
-            model: Model(),
-            filters: Filters()
-        )
+        query: "preview",
+        model: Model(),
+        filters: Filters()
     )
 }

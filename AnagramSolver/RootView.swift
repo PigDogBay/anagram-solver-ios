@@ -26,10 +26,9 @@ struct RootView: View {
                 .navigationDestination(for: NavigationScreens.self) { destination in
                     switch (destination){
                     case .Matches:MatchesView(
-                        matchesVM: MatchesViewModel(
-                            query: appVM.searchBarVM.query,
-                            model: appVM.model,
-                            filters: filters ?? Filters())
+                        query: appVM.searchBarVM.query,
+                        model: appVM.model,
+                        filters: filters ?? Filters()
                     )
                     case .Tip(let tip): HelpView(tip: tip)
                     case .Definition: DefinitionView(appVM.model.engine)
@@ -57,7 +56,6 @@ struct RootView: View {
                 appVM.ads.setUp(viewControler: formViewControllerRepresentable.viewController)
             }
             if filters == nil{
-                print("Fetching filters")
                 let descriptor = FetchDescriptor<Filters>()
                 // Fetch manually from the context
                 filters = try? modelContext.fetch(descriptor).first
