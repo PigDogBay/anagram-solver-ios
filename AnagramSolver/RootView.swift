@@ -10,13 +10,12 @@ import SwiftUI
 import SwiftData
 
 struct RootView: View {
+    @Environment(\.modelContext) private var modelContext
     @Environment(AppViewModel.self) var appVM
-    @Query private var allFilters : [Filters]
     
-    private var filters : Filters {
-        //To avoid the optional, return a default value if nil
-        allFilters.first ?? Filters()
-    }
+    //Don't use @Query for filters, as it will cause an update every time the filters are changed
+    //Filters will be retrieved from the model container in .onAppear()
+    @State private var filters : Filters?
     
     private let formViewControllerRepresentable = FormViewControllerRepresentable()
     
@@ -30,12 +29,12 @@ struct RootView: View {
                         matchesVM: MatchesViewModel(
                             query: appVM.searchBarVM.query,
                             model: appVM.model,
-                            filters: filters)
+                            filters: filters ?? Filters())
                     )
                     case .Tip(let tip): HelpView(tip: tip)
                     case .Definition: DefinitionView(appVM.model.engine)
                     case .Settings: SettingsView()
-                    case .Filters: FiltersView(filters: filters)
+                    case .Filters: FiltersView(filters: filters ?? Filters())
                     case .DefinitionHelp: DefinitionHelpView()
                     case .FiltersHelp: FilterHelpView()
                     case .SettingsHelp: SettingsHelpView()
@@ -56,6 +55,12 @@ struct RootView: View {
             appVM.onLaunch()
             if !appVM.settings.isProMode {
                 appVM.ads.setUp(viewControler: formViewControllerRepresentable.viewController)
+            }
+            if filters == nil{
+                print("Fetching filters")
+                let descriptor = FetchDescriptor<Filters>()
+                // Fetch manually from the context
+                filters = try? modelContext.fetch(descriptor).first
             }
 
         }
