@@ -15,7 +15,7 @@ struct RootView: View {
     
     //Don't use @Query for filters, as it will cause an update every time the filters are changed
     //Filters will be retrieved from the model container in .onAppear()
-    @State private var filters : Filters?
+    @State private var filters = Filters()
     
     private let formViewControllerRepresentable = FormViewControllerRepresentable()
     
@@ -28,12 +28,12 @@ struct RootView: View {
                     case .Matches:MatchesView(
                         query: appVM.searchBarVM.query,
                         model: appVM.model,
-                        filters: filters ?? Filters()
+                        filters: filters
                     )
                     case .Tip(let tip): HelpView(tip: tip)
                     case .Definition: DefinitionView(appVM.model.engine)
                     case .Settings: SettingsView()
-                    case .Filters: FiltersView(filters: filters ?? Filters())
+                    case .Filters: FiltersView(filters: filters)
                     case .DefinitionHelp: DefinitionHelpView()
                     case .FiltersHelp: FilterHelpView()
                     case .SettingsHelp: SettingsHelpView()
@@ -55,12 +55,11 @@ struct RootView: View {
             if !appVM.settings.isProMode {
                 appVM.ads.setUp(viewControler: formViewControllerRepresentable.viewController)
             }
-            if filters == nil{
-                let descriptor = FetchDescriptor<Filters>()
-                // Fetch manually from the context
-                filters = try? modelContext.fetch(descriptor).first
+            //Fetch filters from the model context
+            let descriptor = FetchDescriptor<Filters>()
+            if let persistedFilters = try? modelContext.fetch(descriptor).first {
+                self.filters = persistedFilters
             }
-
         }
         .alert(isPresented: appVM.showErrorAlert){
             Alert(
