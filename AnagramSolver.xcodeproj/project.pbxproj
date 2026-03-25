@@ -44,6 +44,7 @@
 		005CDEB72F6AC58C007DB3ED /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CDEB62F6AC588007DB3ED /* Model.swift */; };
 		006D010226A1936600DA083D /* TipCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D010126A1936600DA083D /* TipCard.swift */; };
 		006D010526A1B89000DA083D /* CardTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D010426A1B89000DA083D /* CardTips.swift */; };
+		0074C21A2F740B5900D80A3E /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0074C2192F740B5300D80A3E /* Keyboard.swift */; };
 		0081F01525B1BB6C00792552 /* wordlist-it.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01325B1BB6C00792552 /* wordlist-it.txt */; };
 		0081F01625B1BB6C00792552 /* wordlist-pt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01425B1BB6C00792552 /* wordlist-pt.txt */; };
 		0091BC052535E5A000BE7A43 /* RAutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091BC042535E5A000BE7A43 /* RAutoTest.swift */; };
@@ -220,6 +221,7 @@
 		005CDEB62F6AC588007DB3ED /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		006D010126A1936600DA083D /* TipCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCard.swift; sourceTree = "<group>"; };
 		006D010426A1B89000DA083D /* CardTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTips.swift; sourceTree = "<group>"; };
+		0074C2192F740B5300D80A3E /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		0081F01325B1BB6C00792552 /* wordlist-it.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-it.txt"; sourceTree = "<group>"; };
 		0081F01425B1BB6C00792552 /* wordlist-pt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-pt.txt"; sourceTree = "<group>"; };
 		0091BC042535E5A000BE7A43 /* RAutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAutoTest.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 				005CDEB32F6ABAEE007DB3ED /* AutoTest.swift */,
 				00DEE13A2BC7F68800669505 /* DefinitionViewModel.swift */,
 				001059612F6306740064A149 /* Filters.swift */,
+				0074C2192F740B5300D80A3E /* Keyboard.swift */,
 				0010595B2F62D7EB0064A149 /* MatchesViewModel.swift */,
 				005CDEB62F6AC588007DB3ED /* Model.swift */,
 				001059552F6197120064A149 /* SearchBarViewModel.swift */,
@@ -906,6 +909,7 @@
 				00CE293B2AB1D06A0002CA30 /* HelpRow.swift in Sources */,
 				009283D82F59BDAB008439F2 /* RemoveAdsDetailView.swift in Sources */,
 				004AA92126CEB1CB00A63C47 /* SettingsPicker.swift in Sources */,
+				0074C21A2F740B5900D80A3E /* Keyboard.swift in Sources */,
 				005BCB3526AACA2400DF44CE /* HelpOutCard.swift in Sources */,
 				0010595A2F61A0280064A149 /* ToolbarButton.swift in Sources */,
 				4DA0C3FA236C761600AF693B /* AppState.swift in Sources */,

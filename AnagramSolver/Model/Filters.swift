@@ -10,7 +10,6 @@ import SwiftData
 
 @Model class Filters {
     @Transient var isActive : Bool = false
-    @Transient let settings = Settings()
 
     var contains : String
     var excludes : String
@@ -135,19 +134,4 @@ import SwiftData
         return callback
     }
     
-    
-    /// Converts typed spaces and . to ? for the crossword pattern filter
-    /// - Parameter typed: typed chars in the crossword pattern text field
-    func setPatternFrom(typed : String) {
-        var query = typed
-        if settings.spaceToQuestionMark {
-            query = query.replacingOccurrences(of: " ", with: "?")
-        }
-        if settings.fullStopToQuestionMark {
-            query = query.replacingOccurrences(of: ".", with: "?")
-        }
-        if pattern != query{
-            pattern = query
-        }
-    }
 }

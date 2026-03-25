@@ -10,6 +10,7 @@ import SwiftUI
 
 struct FiltersView: View {
     @Environment(AppViewModel.self) var appVM
+    @State var keyboard = Keyboard()
     @Bindable var filters : Filters
 
     private let numberFilters = ["No filter", "1 letter", "2 letters", "3 letters", "4 letters", "5 letters", "6 letters", "7 letters", "8 letters", "9 letters", "10 letters", "11 letters", "12 letters", "13 letters", "14 letters", "15 letters", "16 letters", "17 letters", "18 letters", "19 letters", "20 letters"]
@@ -65,7 +66,7 @@ struct FiltersView: View {
             TextFilterRow(label: "Pattern", hint: "Enter pattern", text: $filters.pattern)
                 .onChange(of: filters.pattern){ oldValue, newValue in
                     if (oldValue != newValue) {
-                        self.filters.setPatternFrom(typed: newValue)
+                        self.filters.pattern = keyboard.crossword(typed: newValue)
                     }
                 }
             TextFilterRow(label: "Reg Exp", hint: "Enter regex", text: $filters.regExp)
