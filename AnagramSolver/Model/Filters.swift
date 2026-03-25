@@ -1,33 +1,32 @@
 //
 //  Filters.swift
-//  CSKPrototype
 //
 //  Created by Mark Bailey on 16/06/2020.
 //  Copyright © 2020 MPD Bailey Technology. All rights reserved.
 //
 
-import SwiftUI
 import SwiftUtils
+import SwiftData
 
-@Observable class Filters {
-    @ObservationIgnored var isActive = false
-    var contains = ""
-    var excludes = ""
-    var containsWord = ""
-    var excludesWord = ""
-    var prefix = ""
-    var suffix = ""
-    var isStartingWithNotEnabled = false
-    var isEndingWithNotEnabled = false
-    var pattern = ""
-    var regExp = ""
-    var distinctSelection = 0
-    var lessThan = 0
-    var moreThan = 0
-    var equalTo = 0
+@Model class Filters {
+    @Transient var isActive : Bool = false
+    @Transient let settings = Settings()
+
+    var contains : String
+    var excludes : String
+    var containsWord : String
+    var excludesWord : String
+    var prefix : String
+    var suffix : String
+    var isStartingWithNotEnabled  : Bool
+    var isEndingWithNotEnabled  : Bool
+    var pattern : String
+    var regExp : String
+    var distinctSelection : Int
+    var lessThan : Int
+    var moreThan : Int
+    var equalTo : Int
     
-    let settings = Settings()
-
     var filterCount : Int {
         var count = 0
         if moreThan != 0 { count = count + 1}
@@ -43,6 +42,25 @@ import SwiftUtils
         if pattern != "" { count = count + 1}
         if regExp != "" { count = count + 1}
         return count
+    }
+    
+    init(contains: String = "", excludes: String = "", containsWord: String = "", excludesWord: String = "", prefix: String = "", suffix: String = "", isStartingWithNotEnabled: Bool = false, isEndingWithNotEnabled: Bool = false, pattern: String = "", regExp: String = "", distinctSelection: Int = 0, lessThan: Int = 0, moreThan: Int = 0, equalTo: Int = 0) {
+        self.contains = contains
+        self.excludes = excludes
+        self.containsWord = containsWord
+        self.excludesWord = excludesWord
+        self.prefix = prefix
+        self.suffix = suffix
+        self.isStartingWithNotEnabled = isStartingWithNotEnabled
+        self.isEndingWithNotEnabled = isEndingWithNotEnabled
+        self.pattern = pattern
+        self.regExp = regExp
+        self.distinctSelection = distinctSelection
+        self.lessThan = lessThan
+        self.moreThan = moreThan
+        self.equalTo = equalTo
+        
+        print("Filters.init containsWord = \(containsWord)")
     }
     
     

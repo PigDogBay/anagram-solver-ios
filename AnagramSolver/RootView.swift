@@ -7,10 +7,16 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct RootView: View {
     @Environment(AppViewModel.self) var appVM
-    @Environment(Filters.self) var filtersVM
+    @Query private var allFilters : [Filters]
+    
+    private var filters : Filters {
+        //To avoid the optional, return a default value if nil
+        allFilters.first ?? Filters()
+    }
     
     private let formViewControllerRepresentable = FormViewControllerRepresentable()
     
@@ -24,12 +30,12 @@ struct RootView: View {
                         matchesVM: MatchesViewModel(
                             query: appVM.searchBarVM.query,
                             model: appVM.model,
-                            filters: filtersVM)
+                            filters: filters)
                     )
                     case .Tip(let tip): HelpView(tip: tip)
                     case .Definition: DefinitionView(appVM.model.engine)
                     case .Settings: SettingsView()
-                    case .Filters: FiltersView(filters: filtersVM)
+                    case .Filters: FiltersView(filters: filters)
                     case .DefinitionHelp: DefinitionHelpView()
                     case .FiltersHelp: FilterHelpView()
                     case .SettingsHelp: SettingsHelpView()

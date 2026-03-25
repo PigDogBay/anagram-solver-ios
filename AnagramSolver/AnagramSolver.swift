@@ -8,7 +8,7 @@
 
 import SwiftUI
 import SwiftUtils
-
+import SwiftData
 import AVFoundation
 
 @main
@@ -17,19 +17,50 @@ struct AnagramSolverApp: App {
     @Environment(\.scenePhase) private var scenePhase
     
     @State private var appVM = AppViewModel()
-    @State private var filtersVM = Filters()
     @State private var storeVM = StoreViewModel(productID: REMOVE_ADS_PRODUCT_ID)
     @State private var speech = SpeechManager()
+    
+    @State private var container: ModelContainer
 
     @AppStorage(Keys.darkModeOverride) var darkModeOverride: String = Settings.darkModeValueSystem
+    
+    init(){
+        //Set up SwiftData
+        do {
+            let config = ModelConfiguration(for: Filters.self)
+            let container = try ModelContainer(for: Filters.self, configurations: config)
+            self._container = State(initialValue: container)
+            ensureDefaultFilters(in: container)
+        } catch {
+            fatalError("Could not initialize SwiftData: \(error)")
+        }
+    }
+    
+    //Set up initial container data
+    @MainActor
+    private func ensureDefaultFilters(in container: ModelContainer) {
+        let context = container.mainContext
+        let descriptor = FetchDescriptor<Filters>()
+        
+        do {
+            let existingCount = try context.fetchCount(descriptor)
+            if existingCount == 0 {
+                let defaultFilters = Filters()
+                context.insert(defaultFilters)
+                try context.save()
+            }
+        } catch {
+            print("Failed to seed default filters: \(error)")
+        }
+    }
 
     var body: some Scene {
         WindowGroup {
             RootView()
                 .environment(appVM)
-                .environment(filtersVM)
                 .environment(storeVM)
                 .environment(speech)
+                .modelContainer(for: [Filters.self])
                 // Dark Mode handling
                 .preferredColorScheme(getPreferredColorScheme())
                 .onChange(of: scenePhase) { oldPhase, newPhase in
