@@ -9,7 +9,6 @@
 import SwiftUI
 import SwiftUtils
 import SwiftData
-import AVFoundation
 
 @main
 struct AnagramSolverApp: App {
