@@ -41,7 +41,6 @@ struct HistoryItem : View {
         HStack {
             Image(systemName: "fossil.shell")
                 .foregroundColor(Color("accentColor"))
-                .padding(8)
             Text(query)
             Spacer()
         }
@@ -61,6 +60,10 @@ struct SearchHistoryView: View {
                     .onTapGesture {
                         appVM.showMe(example: historyItem)
                         viewModel.refreshRequired = true
+                    }
+                    .alignmentGuide(.listRowSeparatorLeading) { viewDimensions in
+                        // Forces the separator to start at the absolute edge (0) of the row
+                        return 0
                     }
             }
         }
