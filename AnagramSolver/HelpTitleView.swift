@@ -26,7 +26,7 @@ struct HelpTitleView: View {
                 .multilineTextAlignment(.center)
                 .font(.title)
             Spacer()
-        }.padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 32))
+        }.padding(EdgeInsets(top: 16, leading: -32, bottom: 0, trailing: 8))
     }
 }
 

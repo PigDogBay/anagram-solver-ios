@@ -14,6 +14,7 @@ struct SettingsHelpView: View {
     var body: some View {
         Form {
             HelpTitleView(title: "Settings", icon: "gear")
+                .listRowSeparator(.hidden)
             Text("The settings can be accessed by pressing the gear icon on the top left of the home screen.")
                 .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
             FilterSectionView(title: "SEARCH", description: "Word List: The default word list is huge, over 310,000 words, containing many proper nouns and rare words not allowed in games. For word games choose the US or World Scrabble word lists so that the app only returns valid words. The Essential word list, 90,000 words, is ideal for many crosswords and puzzles where you only require common words.\n\nGerman, Spanish, Portuguese, Italian and French word lists are also available.\n\nDictionary Definition: Allows you to choose which website to use when looking up a word\'s meaning by pressing info icon.\n\nShow sub-anagrams: You can disable sub-anagrams so that the app will only return words that use all the letters in your query.")

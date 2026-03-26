@@ -15,9 +15,9 @@ struct HelpView: View {
     var body: some View {
         Form {
             HelpTitleView(title: tip.title)
-
+                .listRowSeparator(.hidden)
             Text(tip.description)
-                .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
+                .padding(EdgeInsets(top: 0, leading: 8, bottom: 16, trailing: 8))
             VStack(alignment: .leading) {
                 Text("Example")
                     .font(.headline)
