@@ -42,6 +42,7 @@ struct MatchesView: View {
                     .transition(.scale)
             resultRows(matchesVM.matches, matchesVM.wordFormatter)
         }
+        .padding(.top,-16)
         .listStyle(.insetGrouped)
         .scrollDismissesKeyboard(.immediately)
     }
@@ -59,6 +60,7 @@ struct MatchesView: View {
                     }
             }
         }
+        .padding(.top,-16)
         .listStyle(.sidebar)
         .tint(Color("accentColor")) //Need this for the section index
         .scrollDismissesKeyboard(.immediately)
