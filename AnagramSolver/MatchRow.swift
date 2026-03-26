@@ -74,7 +74,7 @@ struct MatchRow: View {
                     .padding(.trailing,8)
                     .onTapGesture(perform: copy)
                     .scaleEffect(copyIconScale)
-            }.padding(8)
+            }
             if isCopiedVisible {
                 Text("Copied")
                     .foregroundColor(Color.white)
