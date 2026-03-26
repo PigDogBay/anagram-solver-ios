@@ -47,6 +47,11 @@ class AppViewModel {
     func onLaunch() {
         if (model.appState == .uninitialized){
             loadWordList()
+            //Load up last query, some users complain that the app forgets queries when they switch apps
+            if settings.isSearchHistoryEnabled {
+                searchBarVM.query = model.searchHistoryModel.searchHistory.getHistory().first ?? ""
+            }
+            
         }
     }
     
