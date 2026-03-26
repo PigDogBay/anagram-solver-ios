@@ -40,6 +40,10 @@ struct MatchesView: View {
                 Text(matchesVM.status)
                     .frame(maxWidth: .infinity, alignment: .center)
                     .transition(.scale)
+                    .alignmentGuide(.listRowSeparatorLeading) { viewDimensions in
+                        // Forces the separator to start at the absolute edge (0) of the row
+                        return 0
+                    }
             resultRows(matchesVM.matches, matchesVM.wordFormatter)
         }
         .padding(.top,-16)
