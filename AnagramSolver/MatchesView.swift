@@ -39,7 +39,6 @@ struct MatchesView: View {
         return List {
                 Text(matchesVM.status)
                     .frame(maxWidth: .infinity, alignment: .center)
-                    .padding(8)
                     .transition(.scale)
             resultRows(matchesVM.matches, matchesVM.wordFormatter)
         }
@@ -51,7 +50,6 @@ struct MatchesView: View {
         return List {
             Text(matchesVM.status)
                 .frame(maxWidth: .infinity, alignment: .center)
-                .padding(8)
                 .transition(.scale)
             ForEach(matchesVM.grouped, id: \.self) { group in
                 ExpandableSection(
@@ -59,7 +57,6 @@ struct MatchesView: View {
                     title: matchesVM.getSectionTitle(rows: group)) {
                         resultRows(group, self.matchesVM.wordFormatter)
                     }
-                    .modifier(SectionIndexModifier(title: "\(group[0].length)"))
             }
         }
         .listStyle(.sidebar)
