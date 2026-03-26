@@ -84,8 +84,6 @@ class AppViewModel {
     
     func search(){
         if model.appState == .ready {
-            //Disable filters
-            
             goto(screen: .Matches)
         }
     }
