@@ -55,6 +55,7 @@
 		008C16B62F8E569F00520640 /* SearchHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE8C2D55535500D0AFB5 /* SearchHistoryModel.swift */; };
 		008C16B72F8E56DF00520640 /* WordEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010595F2F62E9B40064A149 /* WordEngine.swift */; };
 		008C16B82F8E571500520640 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029A03425307170002E96D1 /* Strings.swift */; };
+		008C16BA2F8E5E4800520640 /* WordEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C16B92F8E5E4100520640 /* WordEngineTests.swift */; };
 		0091BC052535E5A000BE7A43 /* RAutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091BC042535E5A000BE7A43 /* RAutoTest.swift */; };
 		009283C72F570F84008439F2 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009283C52F570F7F008439F2 /* StoreViewModel.swift */; };
 		009283C92F57226B008439F2 /* InAppPurchaseStore.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */; };
@@ -231,6 +232,7 @@
 		0081F01325B1BB6C00792552 /* wordlist-it.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-it.txt"; sourceTree = "<group>"; };
 		0081F01425B1BB6C00792552 /* wordlist-pt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-pt.txt"; sourceTree = "<group>"; };
 		008C16AF2F8E53EF00520640 /* MatchesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewModelTests.swift; sourceTree = "<group>"; };
+		008C16B92F8E5E4100520640 /* WordEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordEngineTests.swift; sourceTree = "<group>"; };
 		0091BC042535E5A000BE7A43 /* RAutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAutoTest.swift; sourceTree = "<group>"; };
 		009283C52F570F7F008439F2 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 		009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; name = InAppPurchaseStore.storekit; path = AnagramSolver/InAppPurchaseStore.storekit; sourceTree = "<group>"; };
@@ -564,6 +566,7 @@
 				4D45EFCD1A9DFABA00C40BB4 /* Supporting Files */,
 				008C16AF2F8E53EF00520640 /* MatchesViewModelTests.swift */,
 				009283D12F59B960008439F2 /* StoreViewModelTests.swift */,
+				008C16B92F8E5E4100520640 /* WordEngineTests.swift */,
 			);
 			path = AnagramSolverTests;
 			sourceTree = "<group>";
@@ -940,6 +943,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				009283D42F59B97A008439F2 /* StoreViewModel.swift in Sources */,
+				008C16BA2F8E5E4800520640 /* WordEngineTests.swift in Sources */,
 				008C16B52F8E55F300520640 /* Filters.swift in Sources */,
 				008C16B22F8E552A00520640 /* DefinitionViewModel.swift in Sources */,
 				009283D22F59B960008439F2 /* StoreViewModelTests.swift in Sources */,
