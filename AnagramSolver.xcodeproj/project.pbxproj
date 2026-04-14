@@ -47,6 +47,14 @@
 		0074C21A2F740B5900D80A3E /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0074C2192F740B5300D80A3E /* Keyboard.swift */; };
 		0081F01525B1BB6C00792552 /* wordlist-it.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01325B1BB6C00792552 /* wordlist-it.txt */; };
 		0081F01625B1BB6C00792552 /* wordlist-pt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0081F01425B1BB6C00792552 /* wordlist-pt.txt */; };
+		008C16B12F8E53FD00520640 /* MatchesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C16AF2F8E53EF00520640 /* MatchesViewModelTests.swift */; };
+		008C16B22F8E552A00520640 /* DefinitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DEE13A2BC7F68800669505 /* DefinitionViewModel.swift */; };
+		008C16B32F8E553F00520640 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005CDEB62F6AC588007DB3ED /* Model.swift */; };
+		008C16B42F8E55CB00520640 /* MatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010595B2F62D7EB0064A149 /* MatchesViewModel.swift */; };
+		008C16B52F8E55F300520640 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001059612F6306740064A149 /* Filters.swift */; };
+		008C16B62F8E569F00520640 /* SearchHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0092DE8C2D55535500D0AFB5 /* SearchHistoryModel.swift */; };
+		008C16B72F8E56DF00520640 /* WordEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010595F2F62E9B40064A149 /* WordEngine.swift */; };
+		008C16B82F8E571500520640 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029A03425307170002E96D1 /* Strings.swift */; };
 		0091BC052535E5A000BE7A43 /* RAutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091BC042535E5A000BE7A43 /* RAutoTest.swift */; };
 		009283C72F570F84008439F2 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009283C52F570F7F008439F2 /* StoreViewModel.swift */; };
 		009283C92F57226B008439F2 /* InAppPurchaseStore.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */; };
@@ -74,7 +82,6 @@
 		00DEE1412BC7F74200669505 /* DefinitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DEE1402BC7F74100669505 /* DefinitionView.swift */; };
 		00DEE1432BC7FEAF00669505 /* nabu.db in Resources */ = {isa = PBXBuildFile; fileRef = 00DEE1422BC7FEAF00669505 /* nabu.db */; };
 		00DEE1442BC7FEAF00669505 /* nabu.db in Resources */ = {isa = PBXBuildFile; fileRef = 00DEE1422BC7FEAF00669505 /* nabu.db */; };
-		00E4B60527D0E388002ACEF8 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B60427D0E388002ACEF8 /* ModelTests.swift */; };
 		00E4B60827D20FD3002ACEF8 /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B60727D20FD3002ACEF8 /* SettingsTests.swift */; };
 		00E4B60A27D21000002ACEF8 /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E4B60927D21000002ACEF8 /* SearchTests.swift */; };
 		00EEA6FA25CABCA60017F6A4 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA6F925CABCA60017F6A4 /* TipsView.swift */; };
@@ -101,7 +108,6 @@
 		00F17DDB26A9DD4000452020 /* DefinitionsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DDA26A9DD4000452020 /* DefinitionsCard.swift */; };
 		00F17DDD26A9E17300452020 /* FilterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DDC26A9E17300452020 /* FilterCard.swift */; };
 		00F17DDF26AAB8EB00452020 /* AboutCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DDE26AAB8EB00452020 /* AboutCard.swift */; };
-		00F9975A2B04F62C009C36E1 /* MatchesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F997592B04F62C009C36E1 /* MatchesTests.swift */; };
 		4D0543851CFDBE060084538A /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; };
 		4D0543861CFDBE060084538A /* SwiftUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D1D6E621FA0CE33008466F2 /* Pods_AnagramSolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */; };
@@ -224,6 +230,7 @@
 		0074C2192F740B5300D80A3E /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		0081F01325B1BB6C00792552 /* wordlist-it.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-it.txt"; sourceTree = "<group>"; };
 		0081F01425B1BB6C00792552 /* wordlist-pt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-pt.txt"; sourceTree = "<group>"; };
+		008C16AF2F8E53EF00520640 /* MatchesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewModelTests.swift; sourceTree = "<group>"; };
 		0091BC042535E5A000BE7A43 /* RAutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAutoTest.swift; sourceTree = "<group>"; };
 		009283C52F570F7F008439F2 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 		009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; name = InAppPurchaseStore.storekit; path = AnagramSolver/InAppPurchaseStore.storekit; sourceTree = "<group>"; };
@@ -246,7 +253,6 @@
 		00DEE13D2BC7F71A00669505 /* DefinitionHeaderRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionHeaderRow.swift; sourceTree = "<group>"; };
 		00DEE1402BC7F74100669505 /* DefinitionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionView.swift; sourceTree = "<group>"; };
 		00DEE1422BC7FEAF00669505 /* nabu.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = nabu.db; sourceTree = "<group>"; };
-		00E4B60427D0E388002ACEF8 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		00E4B60727D20FD3002ACEF8 /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 		00E4B60927D21000002ACEF8 /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
 		00EEA6F925CABCA60017F6A4 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
@@ -273,7 +279,6 @@
 		00F17DDA26A9DD4000452020 /* DefinitionsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionsCard.swift; sourceTree = "<group>"; };
 		00F17DDC26A9E17300452020 /* FilterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCard.swift; sourceTree = "<group>"; };
 		00F17DDE26AAB8EB00452020 /* AboutCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCard.swift; sourceTree = "<group>"; };
-		00F997592B04F62C009C36E1 /* MatchesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTests.swift; sourceTree = "<group>"; };
 		4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftUtils.xcodeproj; path = ../SwiftUtils/SwiftUtils.xcodeproj; sourceTree = "<group>"; };
 		4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AnagramSolver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3596401CFEEA50008D2FAF /* Ads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
@@ -557,8 +562,7 @@
 			isa = PBXGroup;
 			children = (
 				4D45EFCD1A9DFABA00C40BB4 /* Supporting Files */,
-				00E4B60427D0E388002ACEF8 /* ModelTests.swift */,
-				00F997592B04F62C009C36E1 /* MatchesTests.swift */,
+				008C16AF2F8E53EF00520640 /* MatchesViewModelTests.swift */,
 				009283D12F59B960008439F2 /* StoreViewModelTests.swift */,
 			);
 			path = AnagramSolverTests;
@@ -936,10 +940,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				009283D42F59B97A008439F2 /* StoreViewModel.swift in Sources */,
-				00E4B60527D0E388002ACEF8 /* ModelTests.swift in Sources */,
-				00F9975A2B04F62C009C36E1 /* MatchesTests.swift in Sources */,
+				008C16B52F8E55F300520640 /* Filters.swift in Sources */,
+				008C16B22F8E552A00520640 /* DefinitionViewModel.swift in Sources */,
 				009283D22F59B960008439F2 /* StoreViewModelTests.swift in Sources */,
+				008C16B12F8E53FD00520640 /* MatchesViewModelTests.swift in Sources */,
+				008C16B82F8E571500520640 /* Strings.swift in Sources */,
+				008C16B42F8E55CB00520640 /* MatchesViewModel.swift in Sources */,
 				009283D62F59B998008439F2 /* Settings.swift in Sources */,
+				008C16B72F8E56DF00520640 /* WordEngine.swift in Sources */,
+				008C16B32F8E553F00520640 /* Model.swift in Sources */,
+				008C16B62F8E569F00520640 /* SearchHistoryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
