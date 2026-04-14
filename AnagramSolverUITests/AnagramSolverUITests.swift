@@ -37,12 +37,9 @@ class AnagramSolverUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         app.textFields.element.tap()
+        app.mpdbDeleteAll()
         app.mpdbUIType(msg: "test")
-//        app.keys["t"].tap()
-//        app.keys["e"].tap()
-//        app.keys["s"].tap()
-//        app.keys["t"].tap()
-        app.buttons["Search"].tap()
+        app.navigationBars.buttons["Search"].tap()
         
         XCTAssertTrue(app.staticTexts["Matches: 12"].waitForExistence(timeout: 2.5))
     }

@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import SwiftUI
 
 let SEARCH_TIMEOUT : TimeInterval = 15.0
 
@@ -21,5 +22,11 @@ extension XCUIApplication {
         }
     }
     
+    func mpdbDeleteAll(){
+        let stringValue = self.textFields.element.value as? String ?? ""
+        for _ in 0..<stringValue.count {
+            self.keyboards.keys["delete"].tap()
+        }
+    }
 }
 

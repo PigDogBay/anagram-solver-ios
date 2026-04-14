@@ -31,6 +31,7 @@ class SearchTests: XCTestCase {
     func testNoDupliucates1() throws {
         let app = XCUIApplication()
         app.textFields.element.tap()
+        app.mpdbDeleteAll()
         app.typeText("cloes-shaev")
         app.buttons["Search"].tap()
         XCTAssertTrue(app.staticTexts["Matches: 446"].waitForExistence(timeout: SEARCH_TIMEOUT))
@@ -56,6 +57,7 @@ class SearchTests: XCTestCase {
     func testCrosswordVowel1(){
         let app = XCUIApplication()
         app.textFields.element.tap()
+        app.mpdbDeleteAll()
         app.typeText("gr!!.")
         app.buttons["Search"].tap()
         XCTAssertTrue(app.staticTexts["Matches: 27"].waitForExistence(timeout: SEARCH_TIMEOUT))
@@ -65,6 +67,7 @@ class SearchTests: XCTestCase {
     func testCrosswordVowel2(){
         let app = XCUIApplication()
         app.textFields.element.tap()
+        app.mpdbDeleteAll()
         app.typeText("t!!ter@")
         app.buttons["Search"].tap()
         XCTAssertTrue(app.staticTexts["Matches: 13"].waitForExistence(timeout: SEARCH_TIMEOUT))
@@ -74,6 +77,7 @@ class SearchTests: XCTestCase {
     func testCrosswordVowel3(){
         let app = XCUIApplication()
         app.textFields.element.tap()
+        app.mpdbDeleteAll()
         app.typeText("moonstarer")
         app.buttons["Search"].tap()
         XCTAssertTrue(app.tables.element.staticTexts["astronomer"].waitForExistence(timeout: SEARCH_TIMEOUT))

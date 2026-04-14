@@ -50,6 +50,7 @@ class SettingsTests: XCTestCase {
         
         //Do a search
         app.textFields.element.tap()
+        app.mpdbDeleteAll()
         app.mpdbUIType(msg: "MOONSTARER")
         app.buttons["Search"].tap()
         XCTAssertTrue(app.tables.element.staticTexts["ASTRONOMER"].waitForExistence(timeout: SEARCH_TIMEOUT))
@@ -66,6 +67,7 @@ class SettingsTests: XCTestCase {
         app.navigationBars.buttons.element(boundBy: 0).tap()
 
         app.textFields.element.tap()
+        app.mpdbDeleteAll()
         app.keys["o"].tap()
         app.keys["k"].tap()
         app.keys["space"].tap()
@@ -80,6 +82,7 @@ class SettingsTests: XCTestCase {
         app.navigationBars.buttons.element(boundBy: 0).tap()
 
         app.textFields.element.tap()
+        app.mpdbDeleteAll()
         app.keys["o"].tap()
         app.keys["k"].tap()
         app.keys["."].tap()
