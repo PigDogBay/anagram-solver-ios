@@ -33,9 +33,9 @@ class SearchTests: XCTestCase {
         app.textFields.element.tap()
         app.mpdbDeleteAll()
         app.typeText("cloes-shaev")
-        app.buttons["Search"].tap()
+        app.navigationBars.buttons["Search"].tap()
         XCTAssertTrue(app.staticTexts["Matches: 446"].waitForExistence(timeout: SEARCH_TIMEOUT))
-        XCTAssertTrue(app.tables.element.staticTexts["close shave"].exists)
+        XCTAssertTrue(app.staticTexts["close shave"].exists)
 
         //No check it is not duplicated lower down the list
         //Unfortunately, close shave is scrolled past on iPod and IPhone 13 sim
@@ -50,7 +50,7 @@ class SearchTests: XCTestCase {
         //Prefix filter is 5th textField (index 4)
         app.textFields.element(boundBy: 4).tap()
         app.mpdbUIType(msg: "close")
-        app.buttons["Search"].tap()
+        app.navigationBars.buttons["Apply"].tap()
         XCTAssertTrue(app.staticTexts["Matches: 3 Filters: 1"].waitForExistence(timeout: SEARCH_TIMEOUT))
     }
     
@@ -59,7 +59,7 @@ class SearchTests: XCTestCase {
         app.textFields.element.tap()
         app.mpdbDeleteAll()
         app.typeText("gr!!.")
-        app.buttons["Search"].tap()
+        app.navigationBars.buttons["Search"].tap()
         XCTAssertTrue(app.staticTexts["Matches: 27"].waitForExistence(timeout: SEARCH_TIMEOUT))
 
     }
@@ -69,9 +69,9 @@ class SearchTests: XCTestCase {
         app.textFields.element.tap()
         app.mpdbDeleteAll()
         app.typeText("t!!ter@")
-        app.buttons["Search"].tap()
+        app.navigationBars.buttons["Search"].tap()
         XCTAssertTrue(app.staticTexts["Matches: 13"].waitForExistence(timeout: SEARCH_TIMEOUT))
-        XCTAssertTrue(app.tables.element.staticTexts["teeterboards"].waitForExistence(timeout: SEARCH_TIMEOUT))
+        XCTAssertTrue(app.staticTexts["teeterboards"].waitForExistence(timeout: SEARCH_TIMEOUT))
     }
 
     func testCrosswordVowel3(){
@@ -79,19 +79,19 @@ class SearchTests: XCTestCase {
         app.textFields.element.tap()
         app.mpdbDeleteAll()
         app.typeText("moonstarer")
-        app.buttons["Search"].tap()
-        XCTAssertTrue(app.tables.element.staticTexts["astronomer"].waitForExistence(timeout: SEARCH_TIMEOUT))
+        app.navigationBars.buttons["Search"].tap()
+        XCTAssertTrue(app.staticTexts["astronomer"].waitForExistence(timeout: SEARCH_TIMEOUT))
 
         //Set up filter
         app.buttons["Filters"].tap()
         //Pattern filter is 7th textField (index 6)
         app.swipeUp()
         app.swipeUp()
-        app.textFields.element(boundBy: 6).tap()
+        app.textFields["Pattern"].tap()
         app.typeText(".!!.!!.")
-        app.buttons["Search"].tap()
+        app.navigationBars.buttons["Apply"].tap()
         XCTAssertTrue(app.staticTexts["Matches: 2 Filters: 1"].waitForExistence(timeout: SEARCH_TIMEOUT))
-        XCTAssertTrue(app.tables.element.staticTexts["searoom (ntr)"].waitForExistence(timeout: SEARCH_TIMEOUT))
-        XCTAssertTrue(app.tables.element.staticTexts["tearoom (nsr)"].waitForExistence(timeout: SEARCH_TIMEOUT))
+        XCTAssertTrue(app.staticTexts["searoom (ntr)"].waitForExistence(timeout: SEARCH_TIMEOUT))
+        XCTAssertTrue(app.staticTexts["tearoom (nsr)"].waitForExistence(timeout: SEARCH_TIMEOUT))
     }
 }

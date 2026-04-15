@@ -17,8 +17,9 @@ struct TextFilterRow : View {
         HStack {
             Text(label)
             TextField(hint, text: $text)
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .modifier(EmailKeyboardMod())
+                .accessibilityIdentifier(self.label)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .modifier(EmailKeyboardMod())
         }
     }
 }

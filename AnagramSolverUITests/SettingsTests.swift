@@ -24,8 +24,9 @@ class SettingsTests: XCTestCase {
         //press settings button
         app.navigationBars.buttons.element(boundBy: 0).tap()
         //press Reset button to ensure settings are in a known state
-        app.buttons["Reset"].tap()
-        app.buttons["dialogResetSettings"].tap()
+        app.navigationBars.buttons["Reset"].tap()
+        //Accessibility ID can be applied to child elements, so need to use first match
+        app.alerts.buttons["dialogResetSettings"].firstMatch.tap()
 
     }
 
@@ -35,8 +36,8 @@ class SettingsTests: XCTestCase {
         //press settings button
         app.navigationBars.buttons.element(boundBy: 0).tap()
         //press Reset button to ensure settings are in a known state
-        app.buttons["Reset"].tap()
-        app.buttons["dialogResetSettings"].tap()
+        app.navigationBars.buttons["Reset"].tap()
+        app.buttons["dialogResetSettings"].firstMatch.tap()
     }
 
     
@@ -52,8 +53,8 @@ class SettingsTests: XCTestCase {
         app.textFields.element.tap()
         app.mpdbDeleteAll()
         app.mpdbUIType(msg: "MOONSTARER")
-        app.buttons["Search"].tap()
-        XCTAssertTrue(app.tables.element.staticTexts["ASTRONOMER"].waitForExistence(timeout: SEARCH_TIMEOUT))
+        app.navigationBars.buttons["Search"].tap()
+        XCTAssertTrue(app.staticTexts["ASTRONOMER"].waitForExistence(timeout: SEARCH_TIMEOUT))
         //press back button
         app.navigationBars.buttons.element(boundBy: 0).tap()
 
