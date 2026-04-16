@@ -79510,6 +79510,7 @@ auto maker
 awl-shaped
 axe handle
 axle-guard
+ayda field
 ayers rock
 aztec lily
 babacu oil
@@ -81041,6 +81042,7 @@ dado plane
 daily mail
 dairy farm
 daisy bush
+daisy lowe
 dalai lama
 dall sheep
 damp-proof
@@ -99300,6 +99302,7 @@ on hold
 on-lend
 on-lent
 on-line
+on loan
 on-site
 on song
 on that
