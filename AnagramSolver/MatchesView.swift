@@ -101,7 +101,9 @@ struct MatchesView: View {
             case .empty:
                 listSection
             }
-            adSection()
+            if !appVM.settings.isProMode {
+                adSection()
+            }
         }
         .onAppear() {
             matchesVM.onAppear()
