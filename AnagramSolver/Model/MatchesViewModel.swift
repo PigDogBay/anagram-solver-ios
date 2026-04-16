@@ -47,7 +47,6 @@ class MatchesViewModel {
 
     
     init(query: String, model : Model, filters : Filters) {
-        print("MatchesVM init()")
         self.query = query
         self.model = model
         self.engine = model.engine
@@ -59,7 +58,6 @@ class MatchesViewModel {
     }
     
     func onAppear(){
-        print("On Appear")
         if model.appState == .ready {
             search(word: query)
         }
