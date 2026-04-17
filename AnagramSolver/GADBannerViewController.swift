@@ -21,7 +21,6 @@ struct GADBannerViewController: UIViewControllerRepresentable {
     
     func makeUIViewController(context: Context) -> UIViewController {
         let bannerSize = GADBannerViewController.getAdBannerSize()
-        print("GAD make: ad size \(bannerSize.size)")
         let viewController = UIViewController()
         let banner = BannerView(adSize: bannerSize)
         banner.adSize = bannerSize
