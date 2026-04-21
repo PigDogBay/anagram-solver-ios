@@ -137,7 +137,16 @@ class MatchesViewModel {
 
     func share()->[String]
     {
-        var builder = "-Anagram Solver-\n\nQuery:\n\(self.query)\n\nMatches:\n"
+        var builder = "-Anagram Solver-\n\nQuery:\n\(self.query)\n\n"
+        let filterDescriptions = filters.activeFiltersDescriptions()
+        if filters.isActive && !filterDescriptions.isEmpty {
+            builder+="Filters:\n"
+            builder.append(filterDescriptions
+                .reduce("") {result, next in result+next+"\n"}
+            )
+            builder.append("\n")
+        }
+        builder+="Matches:\n"
         builder.append(flattenMatches())
         builder+="\nAvailable on the App Store\n"
         builder+=Strings.itunesAppURL
