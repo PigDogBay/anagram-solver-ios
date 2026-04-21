@@ -26,6 +26,9 @@ import SwiftData
     var moreThan : Int
     var equalTo : Int
     
+    static let DISTINCT = 1
+    static let NOT_DISTINCT = 2
+    
     var filterCount : Int {
         var count = 0
         if moreThan != 0 { count = count + 1}
@@ -83,6 +86,34 @@ import SwiftData
         pattern = ""
         regExp = ""
     }
+    
+    func activeFiltersDescriptions() -> [String] {
+        var list = [String]()
+        
+        if contains != "" {list.append("Contains letters \(contains)")}
+        if excludes != "" {list.append("Excludes letters \(excludes)")}
+        if distinctSelection == Filters.DISTINCT {
+            list.append("All letters are different")
+        } else if distinctSelection == Filters.NOT_DISTINCT {
+            list.append("Some letters are the same")
+        }
+
+        if containsWord != "" {list.append("Contains word \(containsWord)")}
+        if excludesWord != "" {list.append("Excludes word \(excludesWord)")}
+
+        let prefixNot = isStartingWithNotEnabled ? "Not s" : "S"
+        if prefix != "" {list.append("\(prefixNot)tarting with \(prefix)")}
+        let suffixNot = isEndingWithNotEnabled ? "Not e" : "E"
+        if suffix != "" {list.append("\(suffixNot)nding with \(suffix)")}
+
+        if pattern != "" {list.append("Pattern \(pattern)")}
+        if regExp != "" {list.append("Reg Exp \(regExp)")}
+
+        if moreThan != 0 {list.append("More than \(moreThan) letters")}
+        if lessThan != 0 {list.append("Less than \(lessThan) letters")}
+        if equalTo != 0 {list.append("Equal to \(equalTo) letters")}
+        return list
+    }
 
     func createChainedCallback(lastCallback: WordListCallback) -> WordListCallback {
         var callback = lastCallback
@@ -123,10 +154,10 @@ import SwiftData
         if self.regExp != "" {
             callback =  RegexFilter(callback: callback, pattern: self.regExp.lowercased())
         }
-        if self.distinctSelection == 1 {
+        if self.distinctSelection == Filters.DISTINCT {
             callback = DistinctFilter(callback: callback)
         }
-        if self.distinctSelection == 2 {
+        if self.distinctSelection == Filters.NOT_DISTINCT {
             callback = NotDistinctFilter(callback: callback)
         }
         return callback
