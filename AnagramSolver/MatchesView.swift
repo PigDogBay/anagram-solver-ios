@@ -99,6 +99,9 @@ struct MatchesView: View {
                     .foregroundColor(Color("accentColor"))
                     .padding(.trailing,8)
                     .onTapGesture{
+                        // Add a light haptic "click"
+                        let impact = UIImpactFeedbackGenerator(style: .light)
+                        impact.impactOccurred()
                         isShareOptionsPresented = true
                     }
             }
