@@ -44,6 +44,10 @@ class MatchesViewModel {
             return "App Error"
         }
     }
+    
+    var showShareButton : Bool {
+        return model.appState == .finished
+    }
 
     
     init(query: String, model : Model, filters : Filters) {
@@ -131,12 +135,12 @@ class MatchesViewModel {
     }
 
 
-    func share()->String
+    func share()->[String]
     {
         var builder = "-Anagram Solver-\n\nQuery:\n\(self.query)\n\nMatches:\n"
         builder.append(flattenMatches())
         builder+="\nAvailable on the App Store\n"
         builder+=Strings.itunesAppURL
-        return builder
+        return [builder]
     }
 }

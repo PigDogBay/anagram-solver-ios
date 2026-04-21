@@ -13,7 +13,8 @@ struct MatchesView: View {
     @Environment(AppViewModel.self) var appVM
     @State var matchesVM : MatchesViewModel
     @State var isAdLoaded = false
-    
+    @State private var isShareOptionsPresented: Bool = false
+
     init(query: String, model: Model, filters: Filters) {
         // Use _matchesVM to initialize the @State property wrapper
         _matchesVM = State(initialValue: MatchesViewModel(query: query, model: model, filters: filters))
@@ -37,13 +38,12 @@ struct MatchesView: View {
 
     private var listSection : some View {
         return List {
-                Text(matchesVM.status)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .transition(.scale)
-                    .alignmentGuide(.listRowSeparatorLeading) { viewDimensions in
-                        // Forces the separator to start at the absolute edge (0) of the row
-                        return 0
-                    }
+            status()
+                .alignmentGuide(.listRowSeparatorLeading) { viewDimensions in
+                    //Bug fix as separator starts at left hand side of the text
+                    //So force the separator to start at the absolute edge (0) of the row
+                    return 0
+                }
             resultRows(matchesVM.matches, matchesVM.wordFormatter)
         }
         .padding(.top,-16)
@@ -53,9 +53,7 @@ struct MatchesView: View {
 
     private var groupedByLengthSection : some View {
         return List {
-            Text(matchesVM.status)
-                .frame(maxWidth: .infinity, alignment: .center)
-                .transition(.scale)
+            status()
             ForEach(matchesVM.grouped, id: \.self) { group in
                 ExpandableSection(
                     isExpanded: true,
@@ -89,7 +87,23 @@ struct MatchesView: View {
                 .onTapGesture {self.appVM.lookUpWord(word: match)}
         }
     }
-    
+
+    private func status() -> some View {
+        HStack {
+            Spacer()
+            Text(matchesVM.status)
+                .font(Font.body)
+            Spacer()
+            if matchesVM.showShareButton {
+                Image(systemName: "square.and.arrow.up")
+                    .foregroundColor(Color("accentColor"))
+                    .padding(.trailing,8)
+                    .onTapGesture{
+                        isShareOptionsPresented = true
+                    }
+            }
+        }
+    }
 
     var body: some View {
         VStack {
@@ -118,6 +132,9 @@ struct MatchesView: View {
             ToolbarButton(placement: .topBarTrailing, label: "Filters"){
                 appVM.goto(screen: .Filters)
             }
+        }
+        .sheet(isPresented: $isShareOptionsPresented){
+            ActivityViewController(activityItems: matchesVM.share())
         }
     }
 }
