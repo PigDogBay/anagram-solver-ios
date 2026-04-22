@@ -14,30 +14,19 @@ struct DefinitionHeaderRow: View {
     @Environment(SpeechManager.self) var speech
     
     let title : String
-    @State private var speakIconScale : CGFloat = 1
-    @State private var searchIconScale : CGFloat = 1
+    @State private var speakCount = 0
+    @State private var searchCount = 0
 
     private func speak(){
+        speakCount+=1
+        // Add a light haptic "click"
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
         speech.speak(title)
-        withAnimation(Animation.easeOut(duration: 0.5)){
-            speakIconScale = 2
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            withAnimation(Animation.easeOut(duration: 0.5)){
-                speakIconScale = 1
-            }
-        }
     }
     
     private func webLookUp(){
-        withAnimation(Animation.easeOut(duration: 0.25)){
-            searchIconScale = 2
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-            withAnimation(Animation.easeOut(duration: 0.25)){
-                searchIconScale = 1
-            }
-        }
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        searchCount+=1
         appVM.webLookUp(word: title)
     }
     
@@ -46,8 +35,8 @@ struct DefinitionHeaderRow: View {
             Image(systemName: "speaker.wave.3.fill")
                 .foregroundColor(Color("accentColor"))
                 .padding([.leading,.trailing],4)
+                .symbolEffect(.bounce, value: speakCount)
                 .onTapGesture(perform: speak)
-                .scaleEffect(speakIconScale)
             Text(title)
                 .font(.headline)
                 .textCase(.uppercase)
@@ -56,8 +45,8 @@ struct DefinitionHeaderRow: View {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(Color("accentColor"))
                 .padding(.trailing,16)
+                .symbolEffect(.bounce, value: searchCount)
                 .onTapGesture(perform: webLookUp)
-                .scaleEffect(searchIconScale)
         }
     }
 }
