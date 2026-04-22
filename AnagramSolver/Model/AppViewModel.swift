@@ -83,8 +83,8 @@ class AppViewModel {
     }
     
     func search(){
-        if model.appState == .ready {
-            goto(screen: .Matches)
+        if canSearch() {
+            path.append(NavigationScreens.Matches)
         }
     }
     
@@ -110,8 +110,10 @@ class AppViewModel {
     }
     
     func showMe(example : String) {
-        searchBarVM.showMe(example: example)
-        path.append(NavigationScreens.Matches)
+        if canSearch() {
+            searchBarVM.showMe(example: example)
+            path.append(NavigationScreens.Matches)
+        }
     }
     
     func webLookUp(word : String) {
