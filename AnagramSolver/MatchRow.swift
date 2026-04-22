@@ -68,8 +68,8 @@ struct MatchRow: View {
                     .foregroundColor(Color.white)
                     .padding(.leading, 12)
                     .padding(.trailing, 12)
-                    .padding(.top,6)
-                    .padding(.bottom,6)
+                    .padding(.top,2)
+                    .padding(.bottom,2)
                     .background(Capsule().fill(Color.blue))
             }
         }
