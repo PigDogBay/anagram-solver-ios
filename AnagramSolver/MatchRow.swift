@@ -11,8 +11,8 @@ import SwiftUtils
 
 struct MatchRow: View {
     @Environment(SpeechManager.self) var speech
-    @State private var speakIconScale : CGFloat = 1
-    @State private var copyIconScale : CGFloat = 1
+    @State private var speakCount = 0
+    @State private var copyCount = 0
     @State private var isCopiedVisible = false
     let match : String
     let formatter : IWordFormatter
@@ -23,32 +23,19 @@ struct MatchRow: View {
     }
     
     private func speak(){
+        speakCount+=1
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
         speech.speak(match)
-        withAnimation(Animation.easeOut(duration: 0.5)){
-            speakIconScale = 2
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            withAnimation(Animation.easeOut(duration: 0.5)){
-                speakIconScale = 1
-            }
-        }
     }
     
     private func copy(){
+        copyCount+=1
         UIPasteboard.general.string = match
         UINotificationFeedbackGenerator().notificationOccurred(.success)
         //Animate the fade in of the Copied text
         //(Note opacity is the default transition)
         withAnimation{
             isCopiedVisible = true
-        }
-        withAnimation(Animation.easeOut(duration: 0.2)){
-            copyIconScale = 2
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            withAnimation(Animation.easeOut(duration: 0.1)){
-                self.copyIconScale = 1
-            }
         }
         //Animate the fade out of the Copied text
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -67,13 +54,13 @@ struct MatchRow: View {
                 Image(systemName: "speaker.3")
                     .foregroundColor(Color("accentColor"))
                     .padding(.trailing,8)
+                    .symbolEffect(.bounce, value: speakCount)
                     .onTapGesture(perform: speak)
-                    .scaleEffect(speakIconScale)
                 Image(systemName: "doc.on.doc")
                     .foregroundColor(Color("accentColor"))
                     .padding(.trailing,8)
+                    .symbolEffect(.bounce.byLayer, value: copyCount)
                     .onTapGesture(perform: copy)
-                    .scaleEffect(copyIconScale)
             }
             if isCopiedVisible {
                 Text("Copied")
