@@ -23,6 +23,7 @@ struct MatchRow: View {
     }
     
     private func speak(){
+        //Set off the symbol effect bounce animation
         speakCount+=1
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
         speech.speak(match)
