@@ -31,6 +31,7 @@ struct MatchRow: View {
     
     private func copy(){
         copyCount+=1
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
         UIPasteboard.general.string = match
         UINotificationFeedbackGenerator().notificationOccurred(.success)
         //Animate the fade in of the Copied text
