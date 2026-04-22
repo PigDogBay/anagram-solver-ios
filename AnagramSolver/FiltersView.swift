@@ -22,9 +22,19 @@ struct FiltersView: View {
     
     private var status : some View {
         Section(footer: Text("Set up you filters below and then press Apply to perform a filtered search.")){
+            let filterCount = filters.filterCount
             HStack {
-                if (filters.filterCount==1){
+                if filterCount != 0 {
+                    Image(systemName: "info.triangle")
+                        .foregroundColor(Color("iconYellow"))
+                        .padding([.leading,.trailing],4)
+                        .symbolEffect(.bounce, options: .repeating)
+
+                }
+                if filterCount == 1{
                     Text("1 filter set")
+                } else if filterCount == 0 {
+                    Text("No filters set")
                 } else {
                     Text("\(filters.filterCount) filters set")
                 }
