@@ -12,6 +12,8 @@ import SwiftUtils
 struct MainView: View {
     @Environment(AppViewModel.self) var appVM
     @AppStorage(Keys.showCardTips) var showCardTips: Bool = Settings().showCardTips
+    @AppStorage(Keys.showSymbolBar) var showSymbolBar: Bool = Settings().showSymbolBar
+
     
     @ViewBuilder
     var body: some View {
@@ -40,8 +42,10 @@ struct MainView: View {
         }
         .scrollDismissesKeyboard(.immediately)
         .overlay(alignment: .bottom) {
-            SymbolBar(searchBarVM: appVM.searchBarVM)
-                .padding(.bottom, 20) // Adjust height from the bottom edge
+            if showSymbolBar {
+                SymbolBar(searchBarVM: appVM.searchBarVM)
+                    .padding(.bottom, 20)
+            }
         }
     }
 }

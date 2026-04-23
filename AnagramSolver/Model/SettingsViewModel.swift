@@ -52,6 +52,12 @@ class SettingsViewModel {
         }
     }
     
+    var showSymbolBar : Bool {
+        didSet {
+            settings.showSymbolBar = showSymbolBar
+        }
+    }
+    
     var allowDictation : Bool {
         didSet {
             settings.keyboardType = allowDictation ? Settings.keyboardWebSearch : Settings.keyboardEmail
@@ -123,6 +129,7 @@ class SettingsViewModel {
         resultsLimit = settings.resultsLimitValue
         highlight = settings.highlightValue
         showKeyboard = settings.showKeyboard
+        showSymbolBar = settings.showSymbolBar
         isLongPressEnabled = settings.isLongPressEnabled
         showSubAnagrams = settings.showSubAnagrams
         showCardTips = settings.showCardTips
@@ -142,6 +149,7 @@ class SettingsViewModel {
         resultsLimit = settings.defaultResultsLimit
         highlight = settings.defaultHighlight
         showKeyboard = settings.defaultShowKeyboard
+        showSymbolBar = settings.defaultShowSymbolBar
         isLongPressEnabled = settings.defaultLongPressEnabled
         showSubAnagrams = settings.defaultShowSubAnagrams
         showCardTips = settings.defaultShowCardTips

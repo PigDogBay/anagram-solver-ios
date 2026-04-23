@@ -13,6 +13,7 @@ enum Keys {
     static let definition = "definition"
     static let highlight = "highlight"
     static let showKeyboard = "showKeyboard"
+    static let showSymbolBar = "showSymbolBar"
     static let longPressEnabled = "longPressEnabled"
     static let useMonospacedFont = "useMonospacedFont"
     static let wordList = "wordList"
@@ -132,6 +133,7 @@ class Settings
     let defaultDarkMode = darkModeValueSystem
     let defaultKeyboardType = keyboardEmail
     let defaultShowKeyboard = false
+    let defaultShowSymbolBar = false
     let defaultLongPressEnabled = true
     let defaultShowSubAnagrams = true
     let defaultShowCardTips = true
@@ -202,6 +204,18 @@ class Settings
             if flag != showKeyboard {
                 let defaults = UserDefaults.standard
                 defaults.set(flag, forKey: Keys.showKeyboard)
+            }
+        }
+    }
+
+    var showSymbolBar : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: Keys.showSymbolBar)
+        }
+        set(flag) {
+            if flag != showSymbolBar {
+                let defaults = UserDefaults.standard
+                defaults.set(flag, forKey: Keys.showSymbolBar)
             }
         }
     }
@@ -372,6 +386,7 @@ class Settings
         let defaultSettings : [ String : Any] = [Keys.definition : defaultDefinition,
                                                  Keys.highlight : defaultHighlight,
                                                  Keys.showKeyboard : defaultShowKeyboard,
+                                                 Keys.showSymbolBar : defaultShowSymbolBar,
                                                  Keys.longPressEnabled : defaultLongPressEnabled,
                                                  Keys.wordList : defaultWordList,
                                                  Keys.isPro : false,

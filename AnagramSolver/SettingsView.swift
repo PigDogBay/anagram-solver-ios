@@ -25,6 +25,13 @@ struct SettingsView: View {
         }.modifier(ToggleMod())
     }
 
+    private var showSymbolBarToggle : some View {
+        Toggle(isOn: $viewModel.showSymbolBar) {
+            Text("Show the symbol bar")
+        }.modifier(ToggleMod())
+    }
+
+
     private var subAnagramsToggle : some View {
         Toggle(isOn: $viewModel.showSubAnagrams) {
             Text("Show sub-anagrams")
@@ -145,6 +152,7 @@ struct SettingsView: View {
             Section(header: Text("KEYBOARD"),
                     footer: Text("Use a monospaced font for the query and filter input fields")){
                 showKeyboardToggle
+                showSymbolBarToggle
                 dictationToggle
 
                 Toggle(isOn: $viewModel.spaceToQuestionMark) {
