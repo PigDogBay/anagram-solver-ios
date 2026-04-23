@@ -15,7 +15,16 @@ import SwiftUtils
     @ObservationIgnored let searchParser = SearchParser()
     
     var showValidationError = false
-    
+
+    // Symbol Bar symbols and their corresponding SF Symbol names
+    let symbols = [
+        ("?", "questionmark"),
+        ("+", "plus"),
+        ("*", "asterisk"),
+        ("$", "dollarsign"),
+        ("@", "at")
+    ]
+
     func isValid() -> Bool{
         let clean = searchParser.clean(query)
         return clean.length>0
@@ -42,5 +51,9 @@ import SwiftUtils
         if query != working {
            query = working
         }
+    }
+    
+    func append(symbol : String){
+        query.append(symbol)
     }
 }
