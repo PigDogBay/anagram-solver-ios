@@ -1187,7 +1187,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.23.03;
+				CURRENT_PROJECT_VERSION = 1.23.04;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AnagramSolver/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Anagram Solver - Crosswords";
@@ -1197,7 +1197,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.23.03;
+				MARKETING_VERSION = 1.23.04;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pigdogbay.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1218,7 +1218,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.23.03;
+				CURRENT_PROJECT_VERSION = 1.23.04;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = AnagramSolver/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Anagram Solver - Crosswords";
@@ -1228,7 +1228,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.23.03;
+				MARKETING_VERSION = 1.23.04;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pigdogbay.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
