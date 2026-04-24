@@ -47,6 +47,8 @@ class SearchTests: XCTestCase {
 
         //Set up a prefix filter to reduce number of matches
         app.buttons["Filters"].tap()
+        //Clear any existing filters
+        app.buttons["CLEAR"].tap()
         //Prefix filter is 5th textField (index 4)
         app.textFields.element(boundBy: 4).tap()
         app.mpdbUIType(msg: "close")
@@ -84,6 +86,8 @@ class SearchTests: XCTestCase {
 
         //Set up filter
         app.buttons["Filters"].tap()
+        //Clear any existing filters
+        app.buttons["CLEAR"].tap()
         //Pattern filter is 7th textField (index 6)
         app.swipeUp()
         app.swipeUp()
