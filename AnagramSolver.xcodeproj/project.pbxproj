@@ -29,7 +29,7 @@
 		003E10EB253EF72400AE8155 /* wordlist-fr.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10E7253EF72400AE8155 /* wordlist-fr.txt */; };
 		003E10EC253EF72400AE8155 /* wordlist-de.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10E9253EF72400AE8155 /* wordlist-de.txt */; };
 		003E10ED253EF72400AE8155 /* wordlist-es.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10EA253EF72400AE8155 /* wordlist-es.txt */; };
-		0043163B2FA379CA00E89640 /* AnagramSolverGlassIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 0043163A2FA379CA00E89640 /* AnagramSolverGlassIcon.icon */; };
+		0043163E2FA38F9500E89640 /* GlassIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 0043163D2FA38F9500E89640 /* GlassIcon.icon */; };
 		004AA91C26CD306D00A63C47 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA91B26CD306D00A63C47 /* SettingsView.swift */; };
 		004AA91F26CE565F00A63C47 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA91E26CE565F00A63C47 /* SettingsViewModel.swift */; };
 		004AA92126CEB1CB00A63C47 /* SettingsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA92026CEB1CB00A63C47 /* SettingsPicker.swift */; };
@@ -198,7 +198,7 @@
 		003E10E7253EF72400AE8155 /* wordlist-fr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-fr.txt"; sourceTree = "<group>"; };
 		003E10E9253EF72400AE8155 /* wordlist-de.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-de.txt"; sourceTree = "<group>"; };
 		003E10EA253EF72400AE8155 /* wordlist-es.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-es.txt"; sourceTree = "<group>"; };
-		0043163A2FA379CA00E89640 /* AnagramSolverGlassIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AnagramSolverGlassIcon.icon; sourceTree = "<group>"; };
+		0043163D2FA38F9500E89640 /* GlassIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = GlassIcon.icon; sourceTree = "<group>"; };
 		004AA91B26CD306D00A63C47 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		004AA91E26CE565F00A63C47 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		004AA92026CEB1CB00A63C47 /* SettingsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPicker.swift; sourceTree = "<group>"; };
@@ -439,7 +439,6 @@
 		4D45EFAB1A9DFABA00C40BB4 = {
 			isa = PBXGroup;
 			children = (
-				0043163A2FA379CA00E89640 /* AnagramSolverGlassIcon.icon */,
 				009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */,
 				4D45D7AF1E2901BF00EC2D27 /* Settings.bundle */,
 				4D45EFB61A9DFABA00C40BB4 /* AnagramSolver */,
@@ -481,6 +480,7 @@
 				4DBBEEA8239A7C3800ADCA41 /* colors.xcassets */,
 				4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */,
 				4D45EFB81A9DFABA00C40BB4 /* Info.plist */,
+				0043163D2FA38F9500E89640 /* GlassIcon.icon */,
 				4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */,
 				00DEE1422BC7FEAF00669505 /* nabu.db */,
 				001AAC2126EA9093000CC6B6 /* phrases.txt */,
@@ -690,8 +690,8 @@
 				4DE5CA8F238EB6330013D3F5 /* twl.txt in Resources */,
 				003E10ED253EF72400AE8155 /* wordlist-es.txt in Resources */,
 				009283C92F57226B008439F2 /* InAppPurchaseStore.storekit in Resources */,
+				0043163E2FA38F9500E89640 /* GlassIcon.icon in Resources */,
 				4DE5CA8B238EB6170013D3F5 /* words.txt in Resources */,
-				0043163B2FA379CA00E89640 /* AnagramSolverGlassIcon.icon in Resources */,
 				00F17DCD26A8463400452020 /* small.txt in Resources */,
 				00DEE1432BC7FEAF00669505 /* nabu.db in Resources */,
 				4D45EFC41A9DFABA00C40BB4 /* LaunchScreen.xib in Resources */,
@@ -1090,7 +1090,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB50C070B1073CE365C9392E /* Pods-AnagramSolver.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AnagramSolverGlassIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = GlassIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1121,7 +1121,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F767D7B066CC063F11B0CB8 /* Pods-AnagramSolver.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AnagramSolverGlassIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = GlassIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
