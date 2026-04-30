@@ -26,7 +26,6 @@
 		001AAC2326EA9093000CC6B6 /* phrases.txt in Resources */ = {isa = PBXBuildFile; fileRef = 001AAC2126EA9093000CC6B6 /* phrases.txt */; };
 		001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */; };
 		0029A03525307170002E96D1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029A03425307170002E96D1 /* Strings.swift */; };
-		002E8E7A27ECDA3C002BFC3E /* QueryTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002E8E7927ECDA3C002BFC3E /* QueryTextFieldDelegate.swift */; };
 		003E10EB253EF72400AE8155 /* wordlist-fr.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10E7253EF72400AE8155 /* wordlist-fr.txt */; };
 		003E10EC253EF72400AE8155 /* wordlist-de.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10E9253EF72400AE8155 /* wordlist-de.txt */; };
 		003E10ED253EF72400AE8155 /* wordlist-es.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10EA253EF72400AE8155 /* wordlist-es.txt */; };
@@ -59,7 +58,6 @@
 		008C16B72F8E56DF00520640 /* WordEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010595F2F62E9B40064A149 /* WordEngine.swift */; };
 		008C16B82F8E571500520640 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0029A03425307170002E96D1 /* Strings.swift */; };
 		008C16BA2F8E5E4800520640 /* WordEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008C16B92F8E5E4100520640 /* WordEngineTests.swift */; };
-		0091BC052535E5A000BE7A43 /* RAutoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0091BC042535E5A000BE7A43 /* RAutoTest.swift */; };
 		009283C72F570F84008439F2 /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009283C52F570F7F008439F2 /* StoreViewModel.swift */; };
 		009283C92F57226B008439F2 /* InAppPurchaseStore.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */; };
 		009283D22F59B960008439F2 /* StoreViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009283D12F59B960008439F2 /* StoreViewModelTests.swift */; };
@@ -79,7 +77,6 @@
 		00D596962EE31E6300EF6D7A /* game.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00D596952EE31E6300EF6D7A /* game.txt */; };
 		00D596972EE31E6300EF6D7A /* game.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00D596952EE31E6300EF6D7A /* game.txt */; };
 		00D596982EE31E6300EF6D7A /* game.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00D596952EE31E6300EF6D7A /* game.txt */; };
-		00DEE1382BC7EB9300669505 /* DefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DEE1372BC7EB9300669505 /* DefinitionViewController.swift */; };
 		00DEE13B2BC7F68800669505 /* DefinitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DEE13A2BC7F68800669505 /* DefinitionViewModel.swift */; };
 		00DEE13E2BC7F71A00669505 /* DefinitionSynonymsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DEE13C2BC7F71A00669505 /* DefinitionSynonymsRow.swift */; };
 		00DEE13F2BC7F71A00669505 /* DefinitionHeaderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DEE13D2BC7F71A00669505 /* DefinitionHeaderRow.swift */; };
@@ -91,13 +88,11 @@
 		00EEA6FA25CABCA60017F6A4 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA6F925CABCA60017F6A4 /* TipsView.swift */; };
 		00EEA6FD25CABDB10017F6A4 /* TipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA6FC25CABDB10017F6A4 /* TipsData.swift */; };
 		00EEA70025CABE8D0017F6A4 /* tips.json in Resources */ = {isa = PBXBuildFile; fileRef = 00EEA6FF25CABE8D0017F6A4 /* tips.json */; };
-		00EEA70325CABF7D0017F6A4 /* HelpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA70225CABF7D0017F6A4 /* HelpViewModel.swift */; };
 		00EEA71025CABFE50017F6A4 /* FeedbackRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA70825CABFE50017F6A4 /* FeedbackRow.swift */; };
 		00EEA71225CABFE50017F6A4 /* AboutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA70A25CABFE50017F6A4 /* AboutRow.swift */; };
 		00EEA71325CABFE50017F6A4 /* RateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA70B25CABFE50017F6A4 /* RateRow.swift */; };
 		00EEA71425CABFE50017F6A4 /* TellFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA70C25CABFE50017F6A4 /* TellFriendRow.swift */; };
 		00EEA71725CAC02D0017F6A4 /* AutomatedTestRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA71625CAC02D0017F6A4 /* AutomatedTestRow.swift */; };
-		00EEA71A25CAC2A40017F6A4 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA71925CAC2A40017F6A4 /* Coordinator.swift */; };
 		00EEA71D25CAC5050017F6A4 /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA71C25CAC5050017F6A4 /* AboutViewModel.swift */; };
 		00EEA72025CAC59D0017F6A4 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA71F25CAC59D0017F6A4 /* MailView.swift */; };
 		00EEA72425CAC81A0017F6A4 /* FilterHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72225CAC8190017F6A4 /* FilterHelpView.swift */; };
@@ -106,7 +101,6 @@
 		00EEA72C25CAC8B50017F6A4 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72B25CAC8B50017F6A4 /* ActivityViewController.swift */; };
 		00EEA72F25CACB430017F6A4 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EEA72E25CACB430017F6A4 /* AboutView.swift */; };
 		00F17DCD26A8463400452020 /* small.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00F17DCB26A8463400452020 /* small.txt */; };
-		00F17DD426A9ABD000452020 /* RRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DD326A9ABD000452020 /* RRootView.swift */; };
 		00F17DD726A9CC3500452020 /* SettingsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DD626A9CC3500452020 /* SettingsCard.swift */; };
 		00F17DD926A9D00700452020 /* SettingsHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DD826A9D00700452020 /* SettingsHelpView.swift */; };
 		00F17DDB26A9DD4000452020 /* DefinitionsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DDA26A9DD4000452020 /* DefinitionsCard.swift */; };
@@ -119,25 +113,13 @@
 		4D45D7B01E2901BF00EC2D27 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D45D7AF1E2901BF00EC2D27 /* Settings.bundle */; };
 		4D45D7B31E2CF0C500EC2D27 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45D7B21E2CF0C500EC2D27 /* Settings.swift */; };
 		4D45EFBA1A9DFABA00C40BB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */; };
-		4D45EFBF1A9DFABA00C40BB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */; };
 		4D45EFC11A9DFABA00C40BB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */; };
 		4D45EFC41A9DFABA00C40BB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */; };
-		4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */; };
-		4D45F0241A9E487A00C40BB4 /* RModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45F0231A9E487A00C40BB4 /* RModel.swift */; };
-		4D9E43AA1FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */; };
-		4D9E43AD1FAC84FC007007C8 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E43AC1FAC84FC007007C8 /* Filter.swift */; };
-		4D9E43B11FAC86EC007007C8 /* FilterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */; };
-		4DA0C3F7236B0FC800AF693B /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0C3F6236B0FC800AF693B /* Matches.swift */; };
-		4DA0C3FA236C761600AF693B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0C3F9236C761600AF693B /* AppState.swift */; };
 		4DBBEEA9239A7C3800ADCA41 /* colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBBEEA8239A7C3800ADCA41 /* colors.xcassets */; };
 		4DE5CA8B238EB6170013D3F5 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5CA89238EB6170013D3F5 /* words.txt */; };
 		4DE5CA8D238EB6250013D3F5 /* sowpods.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5CA8C238EB6250013D3F5 /* sowpods.txt */; };
 		4DE5CA8F238EB6330013D3F5 /* twl.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5CA8E238EB6330013D3F5 /* twl.txt */; };
-		4DF2DE3A1FACBDBB00F44ADE /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2DE391FACBDBB00F44ADE /* FilterViewController.swift */; };
-		4DF2DE3D1FACC4B300F44ADE /* LettersFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2DE3C1FACC4B300F44ADE /* LettersFilterTableViewCell.swift */; };
-		4DF2DE401FB0A82300F44ADE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2DE3F1FB0A82300F44ADE /* ListViewController.swift */; };
 		4DF7B6D61D10419F00A26A20 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF7B6D51D10419F00A26A20 /* StoreKit.framework */; };
-		4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */; };
 		B98A90515758048121BFEF80 /* Pods_AnagramSolverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7965FE98B3E9D2A1706D894 /* Pods_AnagramSolverTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -213,7 +195,6 @@
 		001AAC2126EA9093000CC6B6 /* phrases.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phrases.txt; sourceTree = "<group>"; };
 		001E3B0F2902B9CA0087DF39 /* HelpTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpTitleView.swift; sourceTree = "<group>"; };
 		0029A03425307170002E96D1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
-		002E8E7927ECDA3C002BFC3E /* QueryTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryTextFieldDelegate.swift; sourceTree = "<group>"; };
 		003E10E7253EF72400AE8155 /* wordlist-fr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-fr.txt"; sourceTree = "<group>"; };
 		003E10E9253EF72400AE8155 /* wordlist-de.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-de.txt"; sourceTree = "<group>"; };
 		003E10EA253EF72400AE8155 /* wordlist-es.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-es.txt"; sourceTree = "<group>"; };
@@ -239,7 +220,6 @@
 		0081F01425B1BB6C00792552 /* wordlist-pt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-pt.txt"; sourceTree = "<group>"; };
 		008C16AF2F8E53EF00520640 /* MatchesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewModelTests.swift; sourceTree = "<group>"; };
 		008C16B92F8E5E4100520640 /* WordEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordEngineTests.swift; sourceTree = "<group>"; };
-		0091BC042535E5A000BE7A43 /* RAutoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAutoTest.swift; sourceTree = "<group>"; };
 		009283C52F570F7F008439F2 /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 		009283C82F57226B008439F2 /* InAppPurchaseStore.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; name = InAppPurchaseStore.storekit; path = AnagramSolver/InAppPurchaseStore.storekit; sourceTree = "<group>"; };
 		009283D12F59B960008439F2 /* StoreViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModelTests.swift; sourceTree = "<group>"; };
@@ -255,7 +235,6 @@
 		00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestUtils.swift; sourceTree = "<group>"; };
 		00CE29392AB1D0690002CA30 /* HelpRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpRow.swift; sourceTree = "<group>"; };
 		00D596952EE31E6300EF6D7A /* game.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = game.txt; sourceTree = "<group>"; };
-		00DEE1372BC7EB9300669505 /* DefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionViewController.swift; sourceTree = "<group>"; };
 		00DEE13A2BC7F68800669505 /* DefinitionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionViewModel.swift; sourceTree = "<group>"; };
 		00DEE13C2BC7F71A00669505 /* DefinitionSynonymsRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionSynonymsRow.swift; sourceTree = "<group>"; };
 		00DEE13D2BC7F71A00669505 /* DefinitionHeaderRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionHeaderRow.swift; sourceTree = "<group>"; };
@@ -266,13 +245,11 @@
 		00EEA6F925CABCA60017F6A4 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		00EEA6FC25CABDB10017F6A4 /* TipsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsData.swift; sourceTree = "<group>"; };
 		00EEA6FF25CABE8D0017F6A4 /* tips.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tips.json; sourceTree = "<group>"; };
-		00EEA70225CABF7D0017F6A4 /* HelpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewModel.swift; sourceTree = "<group>"; };
 		00EEA70825CABFE50017F6A4 /* FeedbackRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackRow.swift; sourceTree = "<group>"; };
 		00EEA70A25CABFE50017F6A4 /* AboutRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutRow.swift; sourceTree = "<group>"; };
 		00EEA70B25CABFE50017F6A4 /* RateRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateRow.swift; sourceTree = "<group>"; };
 		00EEA70C25CABFE50017F6A4 /* TellFriendRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TellFriendRow.swift; sourceTree = "<group>"; };
 		00EEA71625CAC02D0017F6A4 /* AutomatedTestRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomatedTestRow.swift; sourceTree = "<group>"; };
-		00EEA71925CAC2A40017F6A4 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		00EEA71C25CAC5050017F6A4 /* AboutViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
 		00EEA71F25CAC59D0017F6A4 /* MailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		00EEA72225CAC8190017F6A4 /* FilterHelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterHelpView.swift; sourceTree = "<group>"; };
@@ -281,7 +258,6 @@
 		00EEA72B25CAC8B50017F6A4 /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		00EEA72E25CACB430017F6A4 /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		00F17DCB26A8463400452020 /* small.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = small.txt; sourceTree = "<group>"; };
-		00F17DD326A9ABD000452020 /* RRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RRootView.swift; sourceTree = "<group>"; };
 		00F17DD626A9CC3500452020 /* SettingsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCard.swift; sourceTree = "<group>"; };
 		00F17DD826A9D00700452020 /* SettingsHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHelpView.swift; sourceTree = "<group>"; };
 		00F17DDA26A9DD4000452020 /* DefinitionsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionsCard.swift; sourceTree = "<group>"; };
@@ -295,27 +271,15 @@
 		4D45EFB41A9DFABA00C40BB4 /* AnagramSolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnagramSolver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D45EFB81A9DFABA00C40BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D45EFBE1A9DFABA00C40BB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4D45EFC31A9DFABA00C40BB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4D45EFC91A9DFABA00C40BB4 /* AnagramSolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnagramSolverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D45EFCE1A9DFABA00C40BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		4D45F0231A9E487A00C40BB4 /* RModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RModel.swift; sourceTree = "<group>"; };
-		4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListCallbackAbstractFactory.swift; sourceTree = "<group>"; };
-		4D9E43AC1FAC84FC007007C8 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
-		4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterFactory.swift; sourceTree = "<group>"; usesTabs = 0; };
-		4DA0C3F6236B0FC800AF693B /* Matches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
-		4DA0C3F9236C761600AF693B /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		4DBBEEA8239A7C3800ADCA41 /* colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = colors.xcassets; sourceTree = "<group>"; };
 		4DE5CA89238EB6170013D3F5 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		4DE5CA8C238EB6250013D3F5 /* sowpods.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sowpods.txt; sourceTree = "<group>"; };
 		4DE5CA8E238EB6330013D3F5 /* twl.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = twl.txt; sourceTree = "<group>"; };
-		4DF2DE391FACBDBB00F44ADE /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
-		4DF2DE3C1FACC4B300F44ADE /* LettersFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersFilterTableViewCell.swift; sourceTree = "<group>"; };
-		4DF2DE3F1FB0A82300F44ADE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4DF7B6D51D10419F00A26A20 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		9F767D7B066CC063F11B0CB8 /* Pods-AnagramSolver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnagramSolver.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver.release.xcconfig"; sourceTree = "<group>"; };
 		C818D066BAB2E9CF4F60E3A1 /* Pods-AnagramSolverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnagramSolverTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnagramSolverTests/Pods-AnagramSolverTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB50C070B1073CE365C9392E /* Pods-AnagramSolver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnagramSolver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver.debug.xcconfig"; sourceTree = "<group>"; };
@@ -375,25 +339,6 @@
 				0010595F2F62E9B40064A149 /* WordEngine.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		00C27FE62F6BF5C5002064FB /* Royalists */ = {
-			isa = PBXGroup;
-			children = (
-				4D1D62BB1E26674F00231DB3 /* ViewControllers */,
-				4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */,
-				4D9E43B01FAC86EC007007C8 /* FilterFactory.swift */,
-				4D9E43AC1FAC84FC007007C8 /* Filter.swift */,
-				00EEA71925CAC2A40017F6A4 /* Coordinator.swift */,
-				0091BC042535E5A000BE7A43 /* RAutoTest.swift */,
-				4DA0C3F6236B0FC800AF693B /* Matches.swift */,
-				00EEA70225CABF7D0017F6A4 /* HelpViewModel.swift */,
-				4D45F0231A9E487A00C40BB4 /* RModel.swift */,
-				4DA0C3F9236C761600AF693B /* AppState.swift */,
-				00F17DD326A9ABD000452020 /* RRootView.swift */,
-				4D9E43A91FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift */,
-			);
-			path = Royalists;
 			sourceTree = "<group>";
 		};
 		00CD12D127CE326C008191B2 /* AnagramSolverUITests */ = {
@@ -491,20 +436,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4D1D62BB1E26674F00231DB3 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				00DEE1372BC7EB9300669505 /* DefinitionViewController.swift */,
-				4DF2DE391FACBDBB00F44ADE /* FilterViewController.swift */,
-				4DF2DE3C1FACC4B300F44ADE /* LettersFilterTableViewCell.swift */,
-				4DF2DE3F1FB0A82300F44ADE /* ListViewController.swift */,
-				4DF8C23D1AA08AF500642E75 /* MatchesViewController.swift */,
-				4D45F0181A9E03BE00C40BB4 /* RootViewController.swift */,
-				002E8E7927ECDA3C002BFC3E /* QueryTextFieldDelegate.swift */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
 		4D45EFAB1A9DFABA00C40BB4 = {
 			isa = PBXGroup;
 			children = (
@@ -533,7 +464,6 @@
 		4D45EFB61A9DFABA00C40BB4 /* AnagramSolver */ = {
 			isa = PBXGroup;
 			children = (
-				00C27FE62F6BF5C5002064FB /* Royalists */,
 				0029A03325307126002E96D1 /* Model */,
 				4D45EFB71A9DFABA00C40BB4 /* Supporting Files */,
 				00EEA6F825CABBD60017F6A4 /* Supporting Views */,
@@ -758,7 +688,6 @@
 				0081F01525B1BB6C00792552 /* wordlist-it.txt in Resources */,
 				00EEA70025CABE8D0017F6A4 /* tips.json in Resources */,
 				4DE5CA8F238EB6330013D3F5 /* twl.txt in Resources */,
-				4D45EFBF1A9DFABA00C40BB4 /* Main.storyboard in Resources */,
 				003E10ED253EF72400AE8155 /* wordlist-es.txt in Resources */,
 				009283C92F57226B008439F2 /* InAppPurchaseStore.storekit in Resources */,
 				4DE5CA8B238EB6170013D3F5 /* words.txt in Resources */,
@@ -863,39 +792,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				001059642F6308CD0064A149 /* FiltersView.swift in Sources */,
-				4D45F0241A9E487A00C40BB4 /* RModel.swift in Sources */,
 				00EEA71D25CAC5050017F6A4 /* AboutViewModel.swift in Sources */,
 				00F17DDB26A9DD4000452020 /* DefinitionsCard.swift in Sources */,
-				4D45F01C1A9E03BE00C40BB4 /* RootViewController.swift in Sources */,
 				005BCB3226AAC69700DF44CE /* UserGuideCard.swift in Sources */,
 				00DEE13B2BC7F68800669505 /* DefinitionViewModel.swift in Sources */,
 				4D3596411CFEEA50008D2FAF /* Ads.swift in Sources */,
-				4D9E43AD1FAC84FC007007C8 /* Filter.swift in Sources */,
 				001059622F6306740064A149 /* Filters.swift in Sources */,
-				00EEA70325CABF7D0017F6A4 /* HelpViewModel.swift in Sources */,
 				00EEA71725CAC02D0017F6A4 /* AutomatedTestRow.swift in Sources */,
 				005BCB3726AACED400DF44CE /* AutoTestCard.swift in Sources */,
 				00F17DD726A9CC3500452020 /* SettingsCard.swift in Sources */,
-				4DF8C23E1AA08AF500642E75 /* MatchesViewController.swift in Sources */,
-				0091BC052535E5A000BE7A43 /* RAutoTest.swift in Sources */,
 				005BCB3926AAD23900DF44CE /* UpgradeCard.swift in Sources */,
 				0067FCC02F9A49A100819282 /* SymbolBar.swift in Sources */,
 				00DEE1412BC7F74200669505 /* DefinitionView.swift in Sources */,
 				00EEA71225CABFE50017F6A4 /* AboutRow.swift in Sources */,
 				0092DE892D54E3B700D0AFB5 /* SearchHistoryView.swift in Sources */,
 				001059522F6190C00064A149 /* RootView.swift in Sources */,
-				00EEA71A25CAC2A40017F6A4 /* Coordinator.swift in Sources */,
 				009283DC2F5AE5A8008439F2 /* RemoveAdsRow.swift in Sources */,
 				00EEA71025CABFE50017F6A4 /* FeedbackRow.swift in Sources */,
-				002E8E7A27ECDA3C002BFC3E /* QueryTextFieldDelegate.swift in Sources */,
 				005CDEB02F646500007DB3ED /* GADBannerViewController.swift in Sources */,
 				0029A03525307170002E96D1 /* Strings.swift in Sources */,
 				00F17DD926A9D00700452020 /* SettingsHelpView.swift in Sources */,
 				00EEA71425CABFE50017F6A4 /* TellFriendRow.swift in Sources */,
-				00F17DD426A9ABD000452020 /* RRootView.swift in Sources */,
 				0010594E2F605A570064A149 /* AppViewModel.swift in Sources */,
 				4D45D7B31E2CF0C500EC2D27 /* Settings.swift in Sources */,
-				4DA0C3F7236B0FC800AF693B /* Matches.swift in Sources */,
 				009283C72F570F84008439F2 /* StoreViewModel.swift in Sources */,
 				004AA91C26CD306D00A63C47 /* SettingsView.swift in Sources */,
 				00EEA6FA25CABCA60017F6A4 /* TipsView.swift in Sources */,
@@ -903,10 +822,8 @@
 				00EEA72F25CACB430017F6A4 /* AboutView.swift in Sources */,
 				001059682F6309E40064A149 /* FilterPicker.swift in Sources */,
 				006D010226A1936600DA083D /* TipCard.swift in Sources */,
-				4D9E43B11FAC86EC007007C8 /* FilterFactory.swift in Sources */,
 				00EEA71325CABFE50017F6A4 /* RateRow.swift in Sources */,
 				005CDEB72F6AC58C007DB3ED /* Model.swift in Sources */,
-				00DEE1382BC7EB9300669505 /* DefinitionViewController.swift in Sources */,
 				0051B66225CC194300AB8B9D /* UserGuideRow.swift in Sources */,
 				001059542F6193AB0064A149 /* SearchBarView.swift in Sources */,
 				0092DE872D54DB7400D0AFB5 /* SearchHistoryCard.swift in Sources */,
@@ -919,10 +836,8 @@
 				0010595C2F62D7EB0064A149 /* MatchesViewModel.swift in Sources */,
 				001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */,
 				00F17DDF26AAB8EB00452020 /* AboutCard.swift in Sources */,
-				4DF2DE3A1FACBDBB00F44ADE /* FilterViewController.swift in Sources */,
 				004AA91F26CE565F00A63C47 /* SettingsViewModel.swift in Sources */,
 				005CDEB42F6ABAF4007DB3ED /* AutoTest.swift in Sources */,
-				4D9E43AA1FAC84C6007007C8 /* WordListCallbackAbstractFactory.swift in Sources */,
 				0092DE8D2D55535C00D0AFB5 /* SearchHistoryModel.swift in Sources */,
 				00CE293B2AB1D06A0002CA30 /* HelpRow.swift in Sources */,
 				009283D82F59BDAB008439F2 /* RemoveAdsDetailView.swift in Sources */,
@@ -930,16 +845,13 @@
 				0074C21A2F740B5900D80A3E /* Keyboard.swift in Sources */,
 				005BCB3526AACA2400DF44CE /* HelpOutCard.swift in Sources */,
 				0010595A2F61A0280064A149 /* ToolbarButton.swift in Sources */,
-				4DA0C3FA236C761600AF693B /* AppState.swift in Sources */,
 				0010596A2F6339BE0064A149 /* MatchRow.swift in Sources */,
 				0010595E2F62D7FF0064A149 /* MatchesView.swift in Sources */,
-				4DF2DE401FB0A82300F44ADE /* ListViewController.swift in Sources */,
 				00EEA72425CAC81A0017F6A4 /* FilterHelpView.swift in Sources */,
 				00DEE13E2BC7F71A00669505 /* DefinitionSynonymsRow.swift in Sources */,
 				00EEA6FD25CABDB10017F6A4 /* TipsData.swift in Sources */,
 				0010596C2F6340500064A149 /* ExpandableSection.swift in Sources */,
 				00EEA72C25CAC8B50017F6A4 /* ActivityViewController.swift in Sources */,
-				4DF2DE3D1FACC4B300F44ADE /* LettersFilterTableViewCell.swift in Sources */,
 				00EEA72025CAC59D0017F6A4 /* MailView.swift in Sources */,
 				4D45EFBA1A9DFABA00C40BB4 /* AppDelegate.swift in Sources */,
 				006D010526A1B89000DA083D /* CardTips.swift in Sources */,
@@ -990,14 +902,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4D45EFBD1A9DFABA00C40BB4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4D45EFBE1A9DFABA00C40BB4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
