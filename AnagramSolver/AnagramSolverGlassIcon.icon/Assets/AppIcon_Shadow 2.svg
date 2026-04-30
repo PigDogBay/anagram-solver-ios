@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="657.22339"
+   height="591.60413"
+   viewBox="0 0 173.89035 156.5286"
+   version="1.1"
+   id="svg4752"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs4746">
+    <linearGradient
+       id="linearGradient4848">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.39805827"
+         offset="0"
+         id="stop4844" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0.00485437"
+         offset="1"
+         id="stop4846" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient4848"
+       id="linearGradient4850"
+       x1="151.73521"
+       y1="249.399"
+       x2="363.96686"
+       y2="461.63065"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <metadata
+     id="metadata4749">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer2"
+     transform="translate(-20.108333,-21.166666)">
+    <path
+       style="fill:url(#linearGradient4850);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 255.99999,80 123.74414,411.99414 76,434.723 359.61449,671.6041 733.22341,542.15743 Z"
+       id="path4839"
+       transform="scale(0.26458333)" />
+  </g>
+</svg>
