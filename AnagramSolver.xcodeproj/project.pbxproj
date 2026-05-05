@@ -29,6 +29,7 @@
 		003E10EB253EF72400AE8155 /* wordlist-fr.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10E7253EF72400AE8155 /* wordlist-fr.txt */; };
 		003E10EC253EF72400AE8155 /* wordlist-de.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10E9253EF72400AE8155 /* wordlist-de.txt */; };
 		003E10ED253EF72400AE8155 /* wordlist-es.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10EA253EF72400AE8155 /* wordlist-es.txt */; };
+		003FD3B52FAA297200AB84FA /* FilterBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FD3B32FAA296700AB84FA /* FilterBadge.swift */; };
 		0043163E2FA38F9500E89640 /* GlassIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 0043163D2FA38F9500E89640 /* GlassIcon.icon */; };
 		004AA91C26CD306D00A63C47 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA91B26CD306D00A63C47 /* SettingsView.swift */; };
 		004AA91F26CE565F00A63C47 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA91E26CE565F00A63C47 /* SettingsViewModel.swift */; };
@@ -198,6 +199,7 @@
 		003E10E7253EF72400AE8155 /* wordlist-fr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-fr.txt"; sourceTree = "<group>"; };
 		003E10E9253EF72400AE8155 /* wordlist-de.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-de.txt"; sourceTree = "<group>"; };
 		003E10EA253EF72400AE8155 /* wordlist-es.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-es.txt"; sourceTree = "<group>"; };
+		003FD3B32FAA296700AB84FA /* FilterBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBadge.swift; sourceTree = "<group>"; };
 		0043163D2FA38F9500E89640 /* GlassIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = GlassIcon.icon; sourceTree = "<group>"; };
 		004AA91B26CD306D00A63C47 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		004AA91E26CE565F00A63C47 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				00DEE13C2BC7F71A00669505 /* DefinitionSynonymsRow.swift */,
 				0010596B2F6340500064A149 /* ExpandableSection.swift */,
 				00EEA70825CABFE50017F6A4 /* FeedbackRow.swift */,
+				003FD3B32FAA296700AB84FA /* FilterBadge.swift */,
 				00F17DDC26A9E17300452020 /* FilterCard.swift */,
 				001059672F6309E40064A149 /* FilterPicker.swift */,
 				005CDEAC2F646123007DB3ED /* FormViewControllerRepresentable.swift */,
@@ -832,6 +835,7 @@
 				001059562F61971E0064A149 /* SearchBarViewModel.swift in Sources */,
 				00EEA72825CAC85A0017F6A4 /* DefinitionHelpView.swift in Sources */,
 				001059602F62E9B40064A149 /* WordEngine.swift in Sources */,
+				003FD3B52FAA297200AB84FA /* FilterBadge.swift in Sources */,
 				001059582F619E7A0064A149 /* MainView.swift in Sources */,
 				0010595C2F62D7EB0064A149 /* MatchesViewModel.swift in Sources */,
 				001E3B112902B9CA0087DF39 /* HelpTitleView.swift in Sources */,

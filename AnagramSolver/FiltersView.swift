@@ -52,15 +52,20 @@ struct FiltersView: View {
     private var letterFilters : some View {
         Section(header: Text("FILTER BY LETTERS"), footer: Text("Letters can be in any order here")){
             TextFilterRow(label: "Contains", hint: "Enter letters", text: $filters.contains)
+                .filterBadge(show: !filters.contains.isEmpty)
             TextFilterRow(label: "Excludes", hint: "Enter letters", text: $filters.excludes)
+                .filterBadge(show: !filters.excludes.isEmpty)
             FilterPicker(label: "Distinct", values: distinctFilters, selection: $filters.distinctSelection)
+                .filterBadge(show: filters.distinctSelection != Filters.NOT_SET)
         }
     }
     
     private var wordFilters : some View {
         Section(header: Text("FILTER BY WORDS"), footer: Text("Find results that contain or exclude a word. Split multiple words with spaces, eg 'st ing'")){
             TextFilterRow(label: "Contains Word", hint: "Enter word", text: $filters.containsWord)
+                .filterBadge(show: !filters.containsWord.isEmpty)
             TextFilterRow(label: "Excludes Word", hint: "Enter word", text: $filters.excludesWord)
+                .filterBadge(show: !filters.excludesWord.isEmpty)
         }
     }
     
@@ -74,6 +79,7 @@ struct FiltersView: View {
                 }
             }.modifier(ToggleMod())
             TextFilterRow(label: "Prefix", hint: "Enter prefix", text: $filters.prefix)
+                .filterBadge(show: !filters.prefix.isEmpty)
 
             Toggle(isOn: $filters.isEndingWithNotEnabled) {
                 if filters.isEndingWithNotEnabled {
@@ -83,14 +89,18 @@ struct FiltersView: View {
                 }
             }.modifier(ToggleMod())
             TextFilterRow(label: "Suffix", hint: "Enter suffix", text: $filters.suffix)
+                .filterBadge(show: !filters.suffix.isEmpty)
         }
     }
     
     private var sizeFilters : some View {
         Section(header: Text("FILTER BY WORD SIZE"), footer: Text("")){
             FilterPicker(label: "Equal To", values: numberFilters, selection: $filters.equalTo)
+                .filterBadge(show: filters.equalTo != Filters.NOT_SET)
             FilterPicker(label: "More Than", values: numberFilters, selection: $filters.moreThan)
+                .filterBadge(show: filters.moreThan != Filters.NOT_SET)
             FilterPicker(label: "Less Than", values: numberFilters, selection: $filters.lessThan)
+                .filterBadge(show: filters.lessThan != Filters.NOT_SET)
         }
     }
     
@@ -102,7 +112,9 @@ struct FiltersView: View {
                         self.filters.pattern = keyboard.crossword(typed: newValue)
                     }
                 }
+                .filterBadge(show: !filters.pattern.isEmpty)
             TextFilterRow(label: "Reg Exp", hint: "Enter regex", text: $filters.regExp)
+                .filterBadge(show: !filters.regExp.isEmpty)
         }
     }
 
@@ -112,8 +124,8 @@ struct FiltersView: View {
             letterFilters
             wordFilters
             prefixSuffixFilters
-            expertFilters
             sizeFilters
+            expertFilters
         }
         .scrollDismissesKeyboard(.immediately)
         .navigationTitle(filters.title)

@@ -26,6 +26,7 @@ import SwiftData
     var moreThan : Int
     var equalTo : Int
     
+    static let NOT_SET = 0
     static let DISTINCT = 1
     static let NOT_DISTINCT = 2
     
