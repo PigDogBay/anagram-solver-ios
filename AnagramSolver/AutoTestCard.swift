@@ -22,7 +22,7 @@ struct AutoTestCard: View {
             Spacer()
             Button(action:appVM.autoTestStart){
                 Text("START")
-                    .modifier(TipButtonMod())
+                    .modifier(ButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
         }
     }

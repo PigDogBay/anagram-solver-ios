@@ -28,7 +28,7 @@ struct FilterCard: View {
         HStack(){
             Button(action:showHelp){
                 Text("MORE INFO")
-                    .modifier(TipButtonMod())
+                    .modifier(ButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
             Spacer()
         }

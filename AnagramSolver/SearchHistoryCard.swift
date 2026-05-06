@@ -29,12 +29,12 @@ struct SearchHistoryCard: View {
         HStack(){
             Button(action:{viewModel.clearHistory()}){
                 Text("CLEAR")
-                    .modifier(TipButtonMod())
+                    .modifier(ButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
             Spacer()
             Button(action: {appViewModel.goto(screen: .SearchHistory)}){
                 Text("SHOW ALL")
-                    .modifier(TipButtonMod())
+                    .modifier(ButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
         }
     }

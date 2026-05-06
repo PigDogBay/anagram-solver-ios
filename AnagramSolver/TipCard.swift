@@ -35,12 +35,12 @@ struct TipCard: View {
         HStack(){
             Button(action:{appViewModel.show(tip)}){
                 Text("MORE INFO")
-                    .modifier(TipButtonMod())
+                    .modifier(ButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
             Spacer()
             Button(action: {appViewModel.showMe(example: tip.showMe)}){
                 Text("SHOW ME")
-                    .modifier(TipButtonMod())
+                    .modifier(ButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
         }
     }
@@ -75,7 +75,7 @@ struct CardTitle : View {
     }
 }
 
-struct TipButtonMod : ViewModifier {
+struct ButtonMod : ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.footnote.bold())

@@ -24,12 +24,12 @@ struct SettingsCard: View {
         HStack(){
             Button(action:{appVM.goto(screen: .SettingsHelp)}){
                 Text("MORE INFO")
-                    .modifier(TipButtonMod())
+                    .modifier(ButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
             Spacer()
             Button(action: {appVM.goto(screen: .Settings)}){
                 Text("SHOW SETTINGS")
-                    .modifier(TipButtonMod())
+                    .modifier(ButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
         }
     }

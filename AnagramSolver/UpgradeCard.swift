@@ -25,7 +25,7 @@ struct UpgradeCard: View {
         HStack(){
             Button(action:{appVM.goto(screen: .RemoveAdsDetail)}){
                 Text("MORE INFO")
-                    .modifier(TipButtonMod())
+                    .modifier(ButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
             Spacer()
             switch storeVM.storeStatus {
@@ -34,7 +34,7 @@ struct UpgradeCard: View {
             case .Available:
                 Button(action: storeVM.buy){
                     Text("BUY \(storeVM.price)")
-                        .modifier(TipButtonMod())
+                        .modifier(ButtonMod())
                 }
                 .buttonStyle(BorderlessButtonStyle())
                 .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))

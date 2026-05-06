@@ -24,7 +24,7 @@ struct UserGuideCard: View {
             Spacer()
             Button(action:{UIApplication.shared.open(URL(string: Strings.userGuideURL)!, options: [:])}){
                 Text("VIEW GUIDE")
-                    .modifier(TipButtonMod())
+                    .modifier(ButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
         }
     }

@@ -47,7 +47,7 @@ struct RemoveAdsDetailView: View {
                         case .Available:
                             Button(action: storeVM.buy){
                                 Text("BUY \(storeVM.price)")
-                                    .modifier(TipButtonMod())
+                                    .modifier(ButtonMod())
                             }
                             .buttonStyle(BorderlessButtonStyle())
                             .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
@@ -62,7 +62,7 @@ struct RemoveAdsDetailView: View {
                         case .Purchased:
                             Button(action: refund){
                                 Text("REFUND THIS PURCHASE")
-                                    .modifier(TipButtonMod())
+                                    .modifier(ButtonMod())
                             }
                             .buttonStyle(BorderlessButtonStyle())
                             .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
@@ -85,7 +85,7 @@ struct RemoveAdsDetailView: View {
                         Spacer()
                         Button(action: aboutVM.feedback){
                             Text("EMAIL SUPPORT")
-                                .modifier(TipButtonMod())
+                                .modifier(ButtonMod())
                         }.buttonStyle(BorderlessButtonStyle())
                     }
                     .padding(EdgeInsets(top: 16, leading: 8, bottom: 32, trailing: 8))

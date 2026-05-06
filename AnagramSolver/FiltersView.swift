@@ -41,7 +41,7 @@ struct FiltersView: View {
                 Spacer()
                 Button(action: filters.reset){
                     Text("CLEAR")
-                        .modifier(AboutButtonMod())
+                        .modifier(ButtonMod())
                 }.buttonStyle(BorderlessButtonStyle())
             }
         }

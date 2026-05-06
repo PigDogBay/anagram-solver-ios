@@ -58,7 +58,7 @@ struct AboutView: View {
                 Spacer()
                 Button(action: viewModel.showPrivacyPolicy){
                     Text("PRIVACY POLICY")
-                        .modifier(AboutButtonMod())
+                        .modifier(ButtonMod())
                 }.buttonStyle(BorderlessButtonStyle())
             }
         }
@@ -75,7 +75,7 @@ struct AboutView: View {
                 Spacer()
                 Button(action: viewModel.showGooglePrivacyPolicy){
                     Text("FIND OUT MORE")
-                        .modifier(AboutButtonMod())
+                        .modifier(ButtonMod())
                 }.buttonStyle(BorderlessButtonStyle())
             }
             
@@ -85,7 +85,7 @@ struct AboutView: View {
                     Spacer()
                     Button(action: viewModel.showAdPrivacyForm){
                         Text("SHOW PRIVACY OPTIONS")
-                            .modifier(AboutButtonMod())
+                            .modifier(ButtonMod())
                     }.buttonStyle(BorderlessButtonStyle())
                 }
             }
@@ -104,12 +104,12 @@ struct AboutView: View {
                 Spacer()
                 Button(action: viewModel.feedback){
                     Text("FEEDBACK")
-                        .modifier(AboutButtonMod())
+                        .modifier(ButtonMod())
                 }.buttonStyle(BorderlessButtonStyle())
                 .padding(.leading, 16)
                 Button(action: AboutViewModel.rate){
                     Text("RATE")
-                        .modifier(AboutButtonMod())
+                        .modifier(ButtonMod())
                 }.buttonStyle(BorderlessButtonStyle())
                 .padding(.leading, 16)
             }.padding(.bottom, 16)
@@ -137,14 +137,6 @@ struct AboutView: View {
         .toolbar {
             ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left", action: appVM.goBack)
         }
-    }
-}
-
-struct AboutButtonMod : ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.footnote.bold())
-            .foregroundColor(Color("materialButton"))
     }
 }
 

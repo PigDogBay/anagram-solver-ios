@@ -26,17 +26,17 @@ struct HelpOutCard: View {
             //Using a @state variable to toggle the tell sheet does not work
             Button(action:{isPresented = true}){
                 Text("TELL")
-                    .modifier(TipButtonMod())
+                    .modifier(ButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
             Spacer()
             Button(action:AboutViewModel.rate){
                 Text("RATE")
-                    .modifier(TipButtonMod())
+                    .modifier(ButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
             Spacer()
             Button(action:aboutVM.feedback){
                 Text("FEEDBACK")
-                    .modifier(TipButtonMod())
+                    .modifier(ButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
         }
         .sheet(isPresented: $isPresented){

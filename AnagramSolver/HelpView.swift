@@ -32,7 +32,7 @@ struct HelpView: View {
                     Spacer()
                     Button(action: {appVM.showMe(example: tip.showMe)}){
                         Text("SHOW ME")
-                            .modifier(TipButtonMod())
+                            .modifier(ButtonMod())
                     }.buttonStyle(BorderlessButtonStyle())
                 }
             }

@@ -24,7 +24,7 @@ struct AboutCard: View {
             Spacer()
             Button(action:{appVM.goto(screen: .About)}){
                 Text("SHOW ABOUT")
-                    .modifier(TipButtonMod())
+                    .modifier(ButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
         }
     }
