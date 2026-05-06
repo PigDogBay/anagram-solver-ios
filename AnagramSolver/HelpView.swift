@@ -19,9 +19,8 @@ struct HelpView: View {
             Text(tip.description)
                 .padding(EdgeInsets(top: 0, leading: 8, bottom: 16, trailing: 8))
             VStack(alignment: .leading) {
-                Text("Example")
+                Text("EXAMPLE")
                     .font(.headline)
-                    .underline()
                     .padding(.top, 8)
                     .padding(.bottom, 16)
                 Text("Try ")+Text(tip.showMe).foregroundColor(Color("exampleQuery")) + Text(" to find:")
@@ -40,9 +39,8 @@ struct HelpView: View {
             .padding(8)
             
             VStack(alignment: .leading) {
-                Text("More Info")
+                Text("MORE INFO")
                     .font(.headline)
-                    .underline()
                     .padding(.top, 8)
                     .padding(.bottom, 16)
 
