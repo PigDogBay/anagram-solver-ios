@@ -36,7 +36,7 @@ struct FilterHelpView: View {
             Section{
                 HelpTitleView(title: "Filters", icon: "funnel")
                     .listRowSeparator(.hidden)
-                Text("To reduce the number of matches you can add extra search criteria. First enter your query and perform a search, next press the Filter button, you will be taken to the filters screen.\n\nSet up your filters and press the Search button, the app will go back to the results screen and perform the search again and apply any filters you have set.\n\nTip! Going back to the main screen will disable the filters. You can edit the main query from the filters screen to save time.")
+                Text("To reduce the number of matches you can add extra search criteria. First enter your query and perform a search, next press the Filter button, you will be taken to the filters screen.\n\nSet up your filters and press the Apply button, the app will go back to the results screen and perform the search again and apply any filters you have set.\n\nThe app will save filters but you can press CLEAR to reset them all.")
                     .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
             }
             Section(header: Text("FILTER BY LETTERS"), footer: Text("Contains and Excludes filters are great for Wordle")){
