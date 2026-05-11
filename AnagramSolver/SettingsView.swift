@@ -110,7 +110,7 @@ struct SettingsView: View {
     private var settingsForm : some View {
         Form {
             Section(header: Text("SEARCH"),
-                    footer: Text("There are 9 built-in word lists to choose from including Spanish, French and lists for Scrabble")){
+                    footer: Text("There are \(Settings.wordListTitles.count) built-in word lists to choose from including Spanish, French and lists for Scrabble")){
                 
                 SettingsPicker(label: "Word list",
                                titles: Settings.wordListTitles,
