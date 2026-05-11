@@ -21,7 +21,7 @@ struct SettingsHelpView: View {
             }
             Section(header: Text("SEARCH")){
                 FilterSectionView(title: "WORD LIST", description: "The default word list is huge, over 310,000 words, containing many proper nouns and rare words not allowed in games. For word games choose the US or World Scrabble word lists so that the app only returns valid words. The Essential word list (90K words) is ideal for many crosswords and puzzles where you only require common words.\n\nGerman, Spanish, Portuguese, Italian and French word lists are also available.")
-                FilterSectionView(title: "DICTIONARY DEFINITION", description: "Allows you to choose which website to use when looking up a word\'s meaning by pressing info icon.")
+                FilterSectionView(title: "DICTIONARY DEFINITION", description: "Allows you to choose which website to use when the app uses a web-lookup for a word\'s meaning.")
                 FilterSectionView(title: "SHOW SUB-ANAGRAMS", description: "You can disable sub-anagrams so that the app will only return words that use all the letters in your query.")
             }
             Section(header: Text("APPEARANCE")){
@@ -33,6 +33,7 @@ struct SettingsHelpView: View {
             }
             Section(header: Text("KEYBOARD")){
                 FilterSectionView(title: "AUTOMATICALLY SHOW KEYBOARD", description: "Pops up the keyboard when you return to the home screen.")
+                FilterSectionView(title: "SHOW THE SYMBOL BAR", description: "Enable to show a handy toolbar shortcut for the symbols ? + * $ @")
                 FilterSectionView(title: "ALLOW DICTATION", description: "Changes the keyboard layout to include a microphone button to allow speech to text entry.")
                 FilterSectionView(title: "CONVERT SPACE TO ?", description: "Pressing space emits a ? instead of a space character, ? represents an unknown letter in crossword queries.")
                 FilterSectionView(title: "CONVERT . TO ?", description: "Pressing . emits a ? character instead of a full-stop/period. Both . and ? represent an unknown letter.")
