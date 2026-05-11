@@ -17,10 +17,9 @@ struct FilterCard: View {
     
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
-            Text("Too many matches?")
-            Text("Refine your search, filter by")
-            Text("* Word size")
-            Text("* Letters in the word")
+            Text("Refine your results:")
+            Text("• Contain / Exclude letters")
+            Text("• Word Size and more")
         }
     }
 
