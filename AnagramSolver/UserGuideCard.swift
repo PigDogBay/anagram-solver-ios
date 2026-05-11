@@ -12,10 +12,9 @@ struct UserGuideCard: View {
 
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
-            Text("Online User Guide")
-            Text("* In-depth help")
-            Text("* Crack word games")
-            Text("* Best ways to use filters")
+            Text("• In-depth help")
+            Text("• Tips for word games")
+            Text("• Best ways to use filters")
         }
     }
 

@@ -14,10 +14,9 @@ struct HelpOutCard: View {
     
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
-            Text("Keep updates coming")
-            Text("* Rate the app")
-            Text("* Send any suggestions")
-            Text("* Tell your friends")
+            Text("• Rate the app")
+            Text("• Send suggestions")
+            Text("• Tell your friends")
         }
     }
 

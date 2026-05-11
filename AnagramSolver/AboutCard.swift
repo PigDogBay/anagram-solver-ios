@@ -13,9 +13,9 @@ struct AboutCard: View {
 
     private var description : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
-            Text("* Information about the app")
-            Text("* Set your Ad preferences")
-            Text("* View the privacy policy")
+            Text("• Information about the app")
+            Text("• Set your Ad preferences")
+            Text("• View the privacy policy")
         }
     }
 
