@@ -42,7 +42,7 @@ struct AboutView: View {
                     .underline()
             }.buttonStyle(BorderlessButtonStyle())
 
-            Text("©MPD Bailey Technology 2015")
+            Text("©MPD Bailey Technology 2026")
                 .font(.body)
         }
     }
