@@ -50,7 +50,8 @@ class SearchTests: XCTestCase {
         //Clear any existing filters
         app.buttons["CLEAR"].tap()
         //Prefix filter is 5th textField (index 4)
-        app.textFields.element(boundBy: 4).tap()
+        app.swipeUp()
+        app.textFields["Enter prefix"].tap()
         app.mpdbUIType(msg: "close")
         app.navigationBars.buttons["Apply"].tap()
         XCTAssertTrue(app.staticTexts["Matches: 3 Filters: 1"].waitForExistence(timeout: SEARCH_TIMEOUT))
