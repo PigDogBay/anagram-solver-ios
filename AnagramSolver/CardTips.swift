@@ -12,6 +12,8 @@ import SwiftUtils
 struct CardTips: View {
     @State var searchHistoryVM : SearchHistoryCardViewModel
     let columns = [GridItem(.adaptive(minimum: 350))]
+    @AppStorage(Keys.enableSearchHistory) var showSearchHistory: Bool = Settings().isSearchHistoryEnabled
+
     
     init(searchHistoryVM: SearchHistoryCardViewModel) {
         self.searchHistoryVM = searchHistoryVM
@@ -25,7 +27,7 @@ struct CardTips: View {
                         .modifier(CardMod())
                     TipCard(tip: blankLettersTip)
                         .modifier(CardMod())
-                    if searchHistoryVM.showHistory{
+                    if showSearchHistory{
                         SearchHistoryCard(viewModel: searchHistoryVM)
                             .modifier(CardMod())
                     }

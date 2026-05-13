@@ -12,6 +12,7 @@ import SwiftUtils
 struct TipsView: View {
     @State var searchHistoryVM : SearchHistoryRowViewModel
     @Environment(StoreViewModel.self) var storeVM
+    @AppStorage(Keys.enableSearchHistory) var showSearchHistory: Bool = Settings().isSearchHistoryEnabled
 
     init(searchHistoryVM: SearchHistoryRowViewModel) {
         self.searchHistoryVM = searchHistoryVM
@@ -27,7 +28,7 @@ struct TipsView: View {
                 tip(anagramTip)
                 tip(blankLettersTip)
                 tip(twoWordAnagramTip)
-                if searchHistoryVM.showHistory{
+                if showSearchHistory{
                     NavigationLink(value: NavigationScreens.SearchHistory){
                         HelpRow(iconName: "fossil.shell", colorName: "iconBlue", title: "History", subTitle: "View your previous searches")
                     }
