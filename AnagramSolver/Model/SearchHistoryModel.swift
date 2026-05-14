@@ -20,30 +20,25 @@ class SearchHistoryRowViewModel : ObservableObject {
 @Observable class SearchHistoryCardViewModel {
     let historyModel : SearchHistoryModel
     
-    var forceUIRefresh = 0
+    var history : [String] = []
+
     var isHistoryAvailable : Bool {
-        return historyModel.searchHistory.count>0
+        return !history.isEmpty
     }
 
     init(_ historyModel : SearchHistoryModel){
         self.historyModel = historyModel
+        history = historyModel.markdownLinks
     }
     
     func clearHistory(){
         historyModel.clearSearchHistory()
-        //Force UI update
-        forceUIRefresh += 1
+        history.removeAll()
     }
     
-    ///If navigating back from the matches view controller, the view will not be recreated
-    ///so need to Check if need to update the history
-    ///Note that the ScrollView in card tips will cause the view to be re-created, however
-    ///the list in TipsView will not be. This view model will always ensure the view is updated
-    ///and not rely on a side effect in ScrollView, this VM does not causes any excessive UI updates (ScrollView will tho)
     func onAppear(){
-        if historyModel.hasHistoryChanged(){
-            //Force UI update
-            forceUIRefresh += 1
+        if historyModel.hasHistoryChanged() {
+            history = historyModel.markdownLinks
         }
     }
 }

@@ -44,7 +44,7 @@ struct SearchHistoryCard: View {
 
     var body: some View {
         //The history data is now observable, but I can track this variable to listen for history updates
-        let _ = viewModel.forceUIRefresh
+        //let _ = viewModel.forceUIRefresh
         VStack(alignment: .center) {
             CardTitle(title: "History", icon: "history")
                 .padding(.top,16)
