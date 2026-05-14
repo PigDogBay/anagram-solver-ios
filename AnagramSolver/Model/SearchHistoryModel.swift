@@ -92,6 +92,7 @@ class SearchHistoryModel {
     func clearSearchHistory(){
         searchHistory.clear()
         persistence.clear()
+        isDirty = true
     }
     
     func dbgFillHistory(){
