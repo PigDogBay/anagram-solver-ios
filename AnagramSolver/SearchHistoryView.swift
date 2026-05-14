@@ -9,10 +9,10 @@
 import SwiftUI
 
 
-class SearchHistoryViewVM : ObservableObject {
-    @Published var refreshRequired = false
+@Observable class SearchHistoryViewVM {
     
     let historyModel : SearchHistoryModel
+    var forceUIRefresh = 0
 
     init(_ historyModel : SearchHistoryModel){
         self.historyModel = historyModel
@@ -26,12 +26,11 @@ class SearchHistoryViewVM : ObservableObject {
 
     func clearHistory(){
         historyModel.clearSearchHistory()
-        objectWillChange.send()
+        forceUIRefresh += 1
     }
+    
     func onAppear(){
-        if refreshRequired {
-            refreshRequired = false
-        }
+        forceUIRefresh += 1
     }
 }
 
@@ -53,13 +52,13 @@ struct SearchHistoryView: View {
     @State var viewModel : SearchHistoryViewVM
 
     var body: some View {
+        let _ = viewModel.forceUIRefresh
         List {
             ForEach(viewModel.history, id: \.self) { historyItem in
                 HistoryItem(query: historyItem)
                     .contentShape(Rectangle()) //Ensure row white space is tappable
                     .onTapGesture {
                         appVM.showMe(example: historyItem)
-                        viewModel.refreshRequired = true
                     }
                     .alignmentGuide(.listRowSeparatorLeading) { viewDimensions in
                         // Forces the separator to start at the absolute edge (0) of the row
@@ -74,6 +73,9 @@ struct SearchHistoryView: View {
         .toolbar {
             ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left", action: appVM.goBack)
             ToolbarButton(placement: .topBarTrailing, label: "Clear", action: viewModel.clearHistory)
+        }
+        .onAppear(){
+            viewModel.onAppear()
         }
     }
 }
