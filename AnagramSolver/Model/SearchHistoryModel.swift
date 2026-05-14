@@ -9,14 +9,6 @@
 import Foundation
 import SwiftUtils
 
-class SearchHistoryRowViewModel : ObservableObject {
-    let historyModel : SearchHistoryModel
-
-    init(_ historyModel : SearchHistoryModel){
-        self.historyModel = historyModel
-    }
-}
-
 @Observable class SearchHistoryModel {
     private static let SEARCH_HISTORY_MAX_ENTRIES = 5
     @ObservationIgnored private let persistence : SearchHistoryPersistence
