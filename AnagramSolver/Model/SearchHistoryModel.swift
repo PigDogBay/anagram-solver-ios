@@ -17,9 +17,10 @@ class SearchHistoryRowViewModel : ObservableObject {
     }
 }
 
-class SearchHistoryCardViewModel : ObservableObject {
+@Observable class SearchHistoryCardViewModel {
     let historyModel : SearchHistoryModel
     
+    var updateUICount = 0
     var isHistoryAvailable : Bool {
         return historyModel.searchHistory.count>0
     }
@@ -30,8 +31,8 @@ class SearchHistoryCardViewModel : ObservableObject {
     
     func clearHistory(){
         historyModel.clearSearchHistory()
-        //Update UI
-        objectWillChange.send()
+        //Force UI update
+        updateUICount += 1
     }
     
     ///If navigating back from the matches view controller, the view will not be recreated
@@ -41,7 +42,8 @@ class SearchHistoryCardViewModel : ObservableObject {
     ///and not rely on a side effect in ScrollView, this VM does not causes any excessive UI updates (ScrollView will tho)
     func onAppear(){
         if historyModel.hasHistoryChanged(){
-            objectWillChange.send()
+            //Force UI update
+            updateUICount += 1
         }
     }
 }

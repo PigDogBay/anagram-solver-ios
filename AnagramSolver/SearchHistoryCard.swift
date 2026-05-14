@@ -11,7 +11,7 @@ import SwiftUtils
 
 struct SearchHistoryCard: View {
     @Environment(AppViewModel.self) var appViewModel
-    @ObservedObject var viewModel : SearchHistoryCardViewModel
+    var viewModel : SearchHistoryCardViewModel
 
     private var historyLinks : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){

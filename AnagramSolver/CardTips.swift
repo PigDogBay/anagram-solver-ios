@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftUtils
 
 struct CardTips: View {
-    @State var searchHistoryVM : SearchHistoryCardViewModel
+    var searchHistoryVM : SearchHistoryCardViewModel
     let columns = [GridItem(.adaptive(minimum: 350))]
     @AppStorage(Keys.enableSearchHistory) var showSearchHistory: Bool = Settings().isSearchHistoryEnabled
 
