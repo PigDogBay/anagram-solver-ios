@@ -9,28 +9,6 @@
 import SwiftUI
 
 
-@Observable class SearchHistoryViewVM {
-    
-    let historyModel : SearchHistoryModel
-
-    init(_ historyModel : SearchHistoryModel){
-        self.historyModel = historyModel
-    }
-    
-    var history : [String] = []
-
-    func clearHistory(){
-        historyModel.clearSearchHistory()
-        history.removeAll()
-    }
-    
-    func onAppear(){
-        history = historyModel
-                    .searchHistory
-                    .getHistory()
-    }
-}
-
 struct HistoryItem : View {
     let query : String
     var body: some View {
@@ -46,7 +24,9 @@ struct HistoryItem : View {
 struct SearchHistoryView: View {
     
     @Environment(AppViewModel.self) var appVM
-    @State var viewModel : SearchHistoryViewVM
+    var viewModel : SearchHistoryModel {
+        return appVM.model.searchHistoryModel
+    }
 
     var body: some View {
         List {
@@ -68,10 +48,10 @@ struct SearchHistoryView: View {
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarIconButton(placement: .topBarLeading, iconName: "chevron.left", action: appVM.goBack)
-            ToolbarButton(placement: .topBarTrailing, label: "Clear", action: viewModel.clearHistory)
+            ToolbarButton(placement: .topBarTrailing, label: "Clear", action: viewModel.clearSearchHistory)
         }
         .onAppear(){
-            viewModel.onAppear()
+            viewModel.onDetailAppear()
         }
     }
 }

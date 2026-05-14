@@ -27,10 +27,13 @@ import SwiftUtils
         self.isSearchHistoryEnabled = isSearchHistoryEnabled
     }
     
-    func onAppear(){
+    func onCardAppear(){
         history = markdownLinks
     }
-
+    func onDetailAppear(){
+        history = searchHistory
+                    .getHistory()
+    }
     
     ///Converts the queries to markdown that the user can tap on
     ///Only takes the first 5 history entries
