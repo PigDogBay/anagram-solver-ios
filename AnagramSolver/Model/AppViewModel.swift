@@ -17,8 +17,9 @@ enum NavigationScreens : Hashable {
 @MainActor
 @Observable
 class AppViewModel {
-    var model = Model()
+    let model : Model
     let searchBarVM = SearchBarViewModel()
+    let historyCardVM : SearchHistoryCardViewModel
     @ObservationIgnored let settings = Settings()
     @ObservationIgnored let ads = Ads()
     @ObservationIgnored private var autoTest : AutoTest? = nil
@@ -42,6 +43,11 @@ class AppViewModel {
     
     //Navigation stack's path
     var path = NavigationPath()
+    
+    init(){
+        self.model = Model()
+        self.historyCardVM = SearchHistoryCardViewModel(model.searchHistoryModel)
+    }
     
     ///Called when RootView first appears
     func onLaunch() {

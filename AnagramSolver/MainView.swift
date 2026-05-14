@@ -11,18 +11,18 @@ import SwiftUtils
 
 struct MainView: View {
     @Environment(AppViewModel.self) var appVM
-    @AppStorage(Keys.showCardTips) var showCardTips: Bool = Settings().showCardTips
-    @AppStorage(Keys.showSymbolBar) var showSymbolBar: Bool = Settings().showSymbolBar
-
+    @AppStorage(Keys.showCardTips) var showCardTips: Bool = true
+    @AppStorage(Keys.showSymbolBar) var showSymbolBar: Bool = false
+    @AppStorage(Keys.enableSearchHistory) var showSearchHistory: Bool = true
     
     @ViewBuilder
     var body: some View {
         VStack(spacing: 0){         //Spacing 0: Remove white gap between search bar and tips
             SearchBarView(searchBarVM: appVM.searchBarVM)
             if showCardTips {
-                CardTips(searchHistoryVM: SearchHistoryCardViewModel(appVM.model.searchHistoryModel))
+                CardTips(showSearchHistory: showSearchHistory)
             } else {
-                TipsView()
+                TipsView(showSearchHistory: showSearchHistory)
                     .ignoresSafeArea()
             }
         }

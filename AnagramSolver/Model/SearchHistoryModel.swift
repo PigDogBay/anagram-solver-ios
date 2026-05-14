@@ -20,7 +20,7 @@ class SearchHistoryRowViewModel : ObservableObject {
 @Observable class SearchHistoryCardViewModel {
     let historyModel : SearchHistoryModel
     
-    var updateUICount = 0
+    var forceUIRefresh = 0
     var isHistoryAvailable : Bool {
         return historyModel.searchHistory.count>0
     }
@@ -32,7 +32,7 @@ class SearchHistoryRowViewModel : ObservableObject {
     func clearHistory(){
         historyModel.clearSearchHistory()
         //Force UI update
-        updateUICount += 1
+        forceUIRefresh += 1
     }
     
     ///If navigating back from the matches view controller, the view will not be recreated
@@ -43,7 +43,7 @@ class SearchHistoryRowViewModel : ObservableObject {
     func onAppear(){
         if historyModel.hasHistoryChanged(){
             //Force UI update
-            updateUICount += 1
+            forceUIRefresh += 1
         }
     }
 }

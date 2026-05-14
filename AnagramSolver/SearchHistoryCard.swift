@@ -11,7 +11,10 @@ import SwiftUtils
 
 struct SearchHistoryCard: View {
     @Environment(AppViewModel.self) var appViewModel
-    var viewModel : SearchHistoryCardViewModel
+    
+    var viewModel : SearchHistoryCardViewModel {
+        return appViewModel.historyCardVM
+    }
 
     private var historyLinks : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
@@ -40,6 +43,8 @@ struct SearchHistoryCard: View {
     }
 
     var body: some View {
+        //The history data is now observable, but I can track this variable to listen for history updates
+        let _ = viewModel.forceUIRefresh
         VStack(alignment: .center) {
             CardTitle(title: "History", icon: "history")
                 .padding(.top,16)
@@ -54,6 +59,9 @@ struct SearchHistoryCard: View {
                     .padding(.bottom, 32)
             }
         }
+        .onAppear{
+            viewModel.onAppear()
+        }
         .environment(\.openURL, OpenURLAction { url in
             if let query = url.absoluteString.removingPercentEncoding{
                 appViewModel.showMe(example: query)
@@ -66,8 +74,8 @@ struct SearchHistoryCard: View {
 struct SearchHistoryCard_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SearchHistoryCard(viewModel: SearchHistoryCardViewModel(SearchHistoryModel(persistence: SearchHistoryUserDefaults())))
-            SearchHistoryCard(viewModel: SearchHistoryCardViewModel(SearchHistoryModel(persistence: SearchHistoryUserDefaults())))
+            SearchHistoryCard()
+            SearchHistoryCard()
                 .preferredColorScheme(.dark)
             
         }.previewLayout(.fixed(width: 300, height: 220))

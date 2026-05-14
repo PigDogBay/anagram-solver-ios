@@ -11,7 +11,7 @@ import SwiftUtils
 
 struct TipsView: View {
     @Environment(StoreViewModel.self) var storeVM
-    @AppStorage(Keys.enableSearchHistory) var showSearchHistory: Bool = Settings().isSearchHistoryEnabled
+    let showSearchHistory: Bool
 
     private func tip(_ tipData : Tip) -> some View {
         LinkedTipRow(tip: tipData)
@@ -94,6 +94,6 @@ struct LinkedTipRow : View {
 
 struct TipsView_Previews: PreviewProvider {
     static var previews: some View {
-        TipsView()
+        TipsView(showSearchHistory: true)
     }
 }

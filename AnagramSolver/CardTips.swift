@@ -10,15 +10,9 @@ import SwiftUI
 import SwiftUtils
 
 struct CardTips: View {
-    var searchHistoryVM : SearchHistoryCardViewModel
     let columns = [GridItem(.adaptive(minimum: 350))]
-    @AppStorage(Keys.enableSearchHistory) var showSearchHistory: Bool = Settings().isSearchHistoryEnabled
+    let showSearchHistory: Bool
 
-    
-    init(searchHistoryVM: SearchHistoryCardViewModel) {
-        self.searchHistoryVM = searchHistoryVM
-    }
-    
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 16) {
@@ -28,7 +22,7 @@ struct CardTips: View {
                     TipCard(tip: blankLettersTip)
                         .modifier(CardMod())
                     if showSearchHistory{
-                        SearchHistoryCard(viewModel: searchHistoryVM)
+                        SearchHistoryCard()
                             .modifier(CardMod())
                     }
                     UpgradeCard()
@@ -73,9 +67,6 @@ struct CardTips: View {
             .padding(.top, 16)
             .padding(.bottom, 48)
         }
-        .onAppear{
-            searchHistoryVM.onAppear()
-        }
         .background(Color("tipsBackground"))
         .gesture(DragGesture().onChanged { _ in
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
@@ -95,8 +86,6 @@ struct CardMod : ViewModifier {
 
 struct CardTips_Previews: PreviewProvider {
     static var previews: some View {
-        CardTips(searchHistoryVM: SearchHistoryCardViewModel(
-            SearchHistoryModel(persistence: SearchHistoryUserDefaults())
-        ))
+        CardTips(showSearchHistory: true)
     }
 }
