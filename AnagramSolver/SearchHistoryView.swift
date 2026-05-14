@@ -51,7 +51,7 @@ struct SearchHistoryView: View {
             ToolbarButton(placement: .topBarTrailing, label: "Clear", action: viewModel.clearSearchHistory)
         }
         .onAppear(){
-            viewModel.onDetailAppear()
+            viewModel.onAppear()
         }
     }
 }

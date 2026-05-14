@@ -18,7 +18,7 @@ struct SearchHistoryCard: View {
 
     private var historyLinks : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
-            ForEach(viewModel.history, id: \.self) { historyItem in
+            ForEach(viewModel.markdownLinks, id: \.self) { historyItem in
                 Text(LocalizedStringKey(historyItem))
                     .tint(Color("exampleQuery"))
             }
@@ -60,7 +60,7 @@ struct SearchHistoryCard: View {
             }
         }
         .onAppear{
-            viewModel.onCardAppear()
+            viewModel.onAppear()
         }
         .environment(\.openURL, OpenURLAction { url in
             if let query = url.absoluteString.removingPercentEncoding{

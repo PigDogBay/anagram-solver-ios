@@ -25,16 +25,9 @@ import SwiftUtils
     init(persistence: SearchHistoryPersistence, isSearchHistoryEnabled: Bool = true) {
         self.persistence = persistence
         self.isSearchHistoryEnabled = isSearchHistoryEnabled
+        self.isDirty = true
     }
-    
-    func onCardAppear(){
-        history = markdownLinks
-    }
-    func onDetailAppear(){
-        history = searchHistory
-                    .getHistory()
-    }
-    
+
     ///Converts the queries to markdown that the user can tap on
     ///Only takes the first 5 history entries
     var markdownLinks : [String] {
@@ -42,11 +35,17 @@ import SwiftUtils
             return []
         }
         let maxEntries = min(SearchHistoryModel.SEARCH_HISTORY_MAX_ENTRIES,searchHistory.count)
-        return searchHistory
-            .getHistory()
+        return history
             .prefix(upTo: maxEntries)
             .map {$0.trimmingCharacters(in: .whitespaces)}
             .map {"[\($0)](\($0.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""))"}
+    }
+    
+    func onAppear(){
+        if (hasHistoryChanged()){
+            history = searchHistory
+                .getHistory()
+        }
     }
 
     func updateSearchHistory(query : String){
