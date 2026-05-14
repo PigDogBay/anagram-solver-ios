@@ -25,6 +25,7 @@ import SwiftUtils
     init(persistence: SearchHistoryPersistence, isSearchHistoryEnabled: Bool = true) {
         self.persistence = persistence
         self.isSearchHistoryEnabled = isSearchHistoryEnabled
+        //Ensure history is populated when first appears
         self.isDirty = true
     }
 
@@ -42,7 +43,10 @@ import SwiftUtils
     }
     
     func onAppear(){
-        if (hasHistoryChanged()){
+        //Only update if necessary
+        if (isDirty){
+            //Clear flag
+            isDirty = false
             history = searchHistory
                 .getHistory()
         }
@@ -56,13 +60,7 @@ import SwiftUtils
             isDirty = true
         }
     }
-    
-    func hasHistoryChanged() -> Bool {
-        let isChanged = isDirty
-        isDirty = false
-        return isChanged
-    }
-    
+
     func clearSearchHistory(){
         searchHistory.clear()
         persistence.clear()
