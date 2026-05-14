@@ -12,25 +12,22 @@ import SwiftUI
 @Observable class SearchHistoryViewVM {
     
     let historyModel : SearchHistoryModel
-    var forceUIRefresh = 0
 
     init(_ historyModel : SearchHistoryModel){
         self.historyModel = historyModel
     }
-
-    var history : [String] { return
-            historyModel
-            .searchHistory
-            .getHistory()
-    }
+    
+    var history : [String] = []
 
     func clearHistory(){
         historyModel.clearSearchHistory()
-        forceUIRefresh += 1
+        history.removeAll()
     }
     
     func onAppear(){
-        forceUIRefresh += 1
+        history = historyModel
+                    .searchHistory
+                    .getHistory()
     }
 }
 
@@ -52,7 +49,6 @@ struct SearchHistoryView: View {
     @State var viewModel : SearchHistoryViewVM
 
     var body: some View {
-        let _ = viewModel.forceUIRefresh
         List {
             ForEach(viewModel.history, id: \.self) { historyItem in
                 HistoryItem(query: historyItem)
