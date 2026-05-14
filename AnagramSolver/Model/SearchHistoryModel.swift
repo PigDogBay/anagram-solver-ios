@@ -11,23 +11,14 @@ import SwiftUtils
 
 class SearchHistoryRowViewModel : ObservableObject {
     let historyModel : SearchHistoryModel
-    @Published var showHistory : Bool
 
     init(_ historyModel : SearchHistoryModel){
         self.historyModel = historyModel
-        self.showHistory = historyModel.isSearchHistoryEnabled
-    }
-
-    func onAppear(){
-        if showHistory != historyModel.isSearchHistoryEnabled {
-            showHistory = historyModel.isSearchHistoryEnabled
-        }
     }
 }
 
 class SearchHistoryCardViewModel : ObservableObject {
     let historyModel : SearchHistoryModel
-    @Published var showHistory : Bool
     
     var isHistoryAvailable : Bool {
         return historyModel.searchHistory.count>0
@@ -35,7 +26,6 @@ class SearchHistoryCardViewModel : ObservableObject {
 
     init(_ historyModel : SearchHistoryModel){
         self.historyModel = historyModel
-        self.showHistory = historyModel.isSearchHistoryEnabled
     }
     
     func clearHistory(){
@@ -50,9 +40,6 @@ class SearchHistoryCardViewModel : ObservableObject {
     ///the list in TipsView will not be. This view model will always ensure the view is updated
     ///and not rely on a side effect in ScrollView, this VM does not causes any excessive UI updates (ScrollView will tho)
     func onAppear(){
-        if showHistory != historyModel.isSearchHistoryEnabled {
-            showHistory = historyModel.isSearchHistoryEnabled
-        }
         if historyModel.hasHistoryChanged(){
             objectWillChange.send()
         }

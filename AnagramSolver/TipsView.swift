@@ -10,13 +10,8 @@ import SwiftUI
 import SwiftUtils
 
 struct TipsView: View {
-    @State var searchHistoryVM : SearchHistoryRowViewModel
     @Environment(StoreViewModel.self) var storeVM
     @AppStorage(Keys.enableSearchHistory) var showSearchHistory: Bool = Settings().isSearchHistoryEnabled
-
-    init(searchHistoryVM: SearchHistoryRowViewModel) {
-        self.searchHistoryVM = searchHistoryVM
-    }
 
     private func tip(_ tipData : Tip) -> some View {
         LinkedTipRow(tip: tipData)
@@ -70,9 +65,6 @@ struct TipsView: View {
             AutomatedTestRow()
             #endif
         }
-        .onAppear{
-            searchHistoryVM.onAppear()
-        }
         .listStyle(.plain)
         .padding(.leading,0)
         .padding(.trailing,0)
@@ -102,8 +94,6 @@ struct LinkedTipRow : View {
 
 struct TipsView_Previews: PreviewProvider {
     static var previews: some View {
-        TipsView(searchHistoryVM: SearchHistoryRowViewModel(
-            SearchHistoryModel(persistence: SearchHistoryUserDefaults())
-        ))
+        TipsView()
     }
 }
