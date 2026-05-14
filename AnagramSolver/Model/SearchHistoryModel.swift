@@ -17,8 +17,12 @@ class SearchHistoryRowViewModel : ObservableObject {
     }
 }
 
-@Observable class SearchHistoryCardViewModel {
-    let historyModel : SearchHistoryModel
+@Observable class SearchHistoryModel {
+    private static let SEARCH_HISTORY_MAX_ENTRIES = 5
+    @ObservationIgnored private let persistence : SearchHistoryPersistence
+    @ObservationIgnored lazy private(set) var searchHistory = persistence.load()
+    @ObservationIgnored var isSearchHistoryEnabled = true
+    @ObservationIgnored private var isDirty = false
     
     var history : [String] = []
 
@@ -26,34 +30,15 @@ class SearchHistoryRowViewModel : ObservableObject {
         return !history.isEmpty
     }
 
-    init(_ historyModel : SearchHistoryModel){
-        self.historyModel = historyModel
-        history = historyModel.markdownLinks
-    }
-    
-    func clearHistory(){
-        historyModel.clearSearchHistory()
-        history.removeAll()
-    }
-    
-    func onAppear(){
-        if historyModel.hasHistoryChanged() {
-            history = historyModel.markdownLinks
-        }
-    }
-}
-
-class SearchHistoryModel {
-    private static let SEARCH_HISTORY_MAX_ENTRIES = 5
-    private let persistence : SearchHistoryPersistence
-    lazy private(set) var searchHistory = persistence.load()
-    var isSearchHistoryEnabled = true
-    private var isDirty = false
-    
     init(persistence: SearchHistoryPersistence, isSearchHistoryEnabled: Bool = true) {
         self.persistence = persistence
         self.isSearchHistoryEnabled = isSearchHistoryEnabled
     }
+    
+    func onAppear(){
+        history = markdownLinks
+    }
+
     
     ///Converts the queries to markdown that the user can tap on
     ///Only takes the first 5 history entries
@@ -87,6 +72,7 @@ class SearchHistoryModel {
     func clearSearchHistory(){
         searchHistory.clear()
         persistence.clear()
+        history.removeAll()
         isDirty = true
     }
     

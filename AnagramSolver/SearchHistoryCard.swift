@@ -12,13 +12,13 @@ import SwiftUtils
 struct SearchHistoryCard: View {
     @Environment(AppViewModel.self) var appViewModel
     
-    var viewModel : SearchHistoryCardViewModel {
-        return appViewModel.historyCardVM
+    var viewModel : SearchHistoryModel {
+        return appViewModel.model.searchHistoryModel
     }
 
     private var historyLinks : some View {
         VStack(alignment: .leading, spacing: TIP_TEXT_SPACING){
-            ForEach(viewModel.historyModel.markdownLinks, id: \.self) { historyItem in
+            ForEach(viewModel.history, id: \.self) { historyItem in
                 Text(LocalizedStringKey(historyItem))
                     .tint(Color("exampleQuery"))
             }
@@ -30,7 +30,7 @@ struct SearchHistoryCard: View {
 
     private var buttons : some View {
         HStack(){
-            Button(action:{viewModel.clearHistory()}){
+            Button(action:{viewModel.clearSearchHistory()}){
                 Text("CLEAR")
                     .modifier(ButtonMod())
             }.buttonStyle(BorderlessButtonStyle())
