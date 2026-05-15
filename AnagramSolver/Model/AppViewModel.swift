@@ -99,6 +99,7 @@ class AppViewModel {
     func settingsExited(didChangeWordList : Bool){
         model.engine.resultsLimit = settings.resultsLimit
         model.engine.wordSearch.findSubAnagrams = settings.showSubAnagrams
+        model.searchHistoryModel.isSearchHistoryEnabled = settings.isSearchHistoryEnabled
         if didChangeWordList {
             loadWordList()
         }
