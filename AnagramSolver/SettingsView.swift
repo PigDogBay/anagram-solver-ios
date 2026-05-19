@@ -105,6 +105,16 @@ struct SettingsView: View {
             }
         }.modifier(ToggleMod())
     }
+    
+    private var autoClearFiltersToggle : some View {
+        Toggle(isOn: $viewModel.isAutoClearFiltersEnabled) {
+            if viewModel.isAutoClearFiltersEnabled {
+                Text("Automatically reset filters")
+            } else {
+                Text("Remember filters")
+            }
+        }.modifier(ToggleMod())
+    }
 
 
     private var settingsForm : some View {
@@ -168,8 +178,10 @@ struct SettingsView: View {
                 monospacedToggle
             }
 
-            Section(header: Text("OTHER")){
+            Section(header: Text("OTHER"),
+                    footer: Text("The app will save your filters between searches, enable the setting here to automatically clear the filters")){
                 searchHistoryToggle
+                autoClearFiltersToggle
             }
         }
     }

@@ -28,6 +28,7 @@ enum Keys {
     static let spaceToQuestionMark = "spaceToQuestionMark"
     static let useLargeResultsFont = "useLargeResultsFont"
     static let enableSearchHistory = "enableSearchHistory"
+    static let autoClearFilters = "autoClearFilters"
 }
 
 class Settings
@@ -143,6 +144,7 @@ class Settings
     let defaultSpaceToQuestionMark = false
     let defaultUseLargeResultsFont = false
     let defaultEnableSearchHistory = true
+    let defaultAutoClearFilters = false
 
     var highlight : UIColor {
         get {
@@ -382,6 +384,18 @@ class Settings
         }
     }
     
+    var autoClearFilters : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: Keys.autoClearFilters)
+        }
+        set(flag) {
+            if flag != autoClearFilters {
+                let defaults = UserDefaults.standard
+                defaults.set(flag, forKey: Keys.autoClearFilters)
+            }
+        }
+    }
+
     func registerDefaultSettings() {
         let defaultSettings : [ String : Any] = [Keys.definition : defaultDefinition,
                                                  Keys.highlight : defaultHighlight,
@@ -400,6 +414,7 @@ class Settings
                                                  Keys.useUpperCase : defaultUseUppercase,
                                                  Keys.useMonospacedFont : defaultMonospacedFont,
                                                  Keys.useLargeResultsFont : defaultUseLargeResultsFont,
+                                                 Keys.autoClearFilters : defaultAutoClearFilters,
                                                  Keys.enableSearchHistory: defaultEnableSearchHistory,
                                       ]
         UserDefaults.standard.register(defaults: defaultSettings)

@@ -117,6 +117,12 @@ class SettingsViewModel {
             settings.isSearchHistoryEnabled = isSearchHistoryEnabled
         }
     }
+    
+    var isAutoClearFiltersEnabled : Bool {
+        didSet {
+            settings.autoClearFilters = isAutoClearFiltersEnabled
+        }
+    }
 
     @ObservationIgnored var hasWordListChanged : Bool {
         return originalWordListName != settings.wordList
@@ -141,6 +147,7 @@ class SettingsViewModel {
         fullStopToQuestionMark = settings.fullStopToQuestionMark
         useLargeResultsFont = settings.useLargeResultsFont
         isSearchHistoryEnabled = settings.isSearchHistoryEnabled
+        isAutoClearFiltersEnabled = settings.autoClearFilters
     }
  
     func resetToDefaultSettings(){
@@ -161,5 +168,6 @@ class SettingsViewModel {
         darkModeOverride = settings.defaultDarkMode
         useLargeResultsFont = settings.defaultUseLargeResultsFont
         isSearchHistoryEnabled = settings.defaultEnableSearchHistory
+        isAutoClearFiltersEnabled = settings.defaultAutoClearFilters
     }
 }
