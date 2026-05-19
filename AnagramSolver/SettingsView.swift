@@ -154,6 +154,7 @@ struct SettingsView: View {
                 showKeyboardToggle
                 showSymbolBarToggle
                 dictationToggle
+                    .accessibilityIdentifier("dictationToggle")
 
                 Toggle(isOn: $viewModel.spaceToQuestionMark) {
                     Text("Convert space to ?")

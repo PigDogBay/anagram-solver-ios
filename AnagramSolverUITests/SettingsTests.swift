@@ -9,17 +9,17 @@
 import XCTest
 
 class SettingsTests: XCTestCase {
-
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-
+        
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
+        
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-
+        
         let app = XCUIApplication()
         //press settings button
         app.navigationBars.buttons.element(boundBy: 0).tap()
@@ -27,9 +27,9 @@ class SettingsTests: XCTestCase {
         app.navigationBars.buttons["Reset"].tap()
         //Accessibility ID can be applied to child elements, so need to use first match
         app.alerts.buttons["dialogResetSettings"].firstMatch.tap()
-
+        
     }
-
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         let app = XCUIApplication()
@@ -39,7 +39,7 @@ class SettingsTests: XCTestCase {
         app.navigationBars.buttons["Reset"].tap()
         app.buttons["dialogResetSettings"].firstMatch.tap()
     }
-
+    
     
     /// Tests the Letter Case setting
     /// Run on the iPod, as requires keyboard
@@ -57,7 +57,7 @@ class SettingsTests: XCTestCase {
         XCTAssertTrue(app.staticTexts["ASTRONOMER"].waitForExistence(timeout: SEARCH_TIMEOUT))
         //press back button
         app.navigationBars.buttons.element(boundBy: 0).tap()
-
+        
     }
     
     func testConvertSpaceToQuestionMark1(){
@@ -66,7 +66,7 @@ class SettingsTests: XCTestCase {
         app.switches["convertSpaceToggle"].switches.firstMatch.tap()
         //press back button
         app.navigationBars.buttons.element(boundBy: 0).tap()
-
+        
         app.textFields.element.tap()
         app.mpdbDeleteAll()
         app.keys["o"].tap()
@@ -74,14 +74,14 @@ class SettingsTests: XCTestCase {
         app.keys["space"].tap()
         XCTAssertEqual(app.textFields.element.value as! String, "ok?")
     }
-
+    
     func testConvertFullStopToQuestionMark1(){
         let app = XCUIApplication()
         app.swipeUp()
         app.switches["convertFullStopToggle"].switches.firstMatch.tap()
         //press back button
         app.navigationBars.buttons.element(boundBy: 0).tap()
-
+        
         app.textFields.element.tap()
         app.mpdbDeleteAll()
         app.keys["o"].tap()
@@ -89,4 +89,26 @@ class SettingsTests: XCTestCase {
         app.keys["."].tap()
         XCTAssertEqual(app.textFields.element.value as! String, "ok?")
     }
+    
+    ///Regression Test for the Ellipsis bug
+    ///When dictation keyboard is selected (.webSearch) ... is converted into …
+    ///Check that the app converts the ellipsis … back to 3 dots ...
+    func testAllowDictation1(){
+        let app = XCUIApplication()
+        app.swipeUp()
+        app.switches["dictationToggle"].switches.firstMatch.tap()
+        //press back button
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+
+        app.textFields.element.tap()
+        app.mpdbDeleteAll()
+        app.keys["."].tap()
+        app.keys["."].tap()
+        app.keys["."].tap()
+        app.keys["."].tap()
+        app.keys["."].tap()
+        XCTAssertEqual(app.textFields.element.value as! String, ".....")
+    }
+
+    
 }
