@@ -105,7 +105,7 @@ struct FiltersView: View {
     }
     
     private var expertFilters : some View {
-        return Section(header: Text("EXPERT FILTERS"), footer: Text("To create a pattern use ? to represent any letter and @ for 0 or more letters, eg s?r??b?e")){
+        return Section(header: Text("EXPERT FILTERS"), footer: Text("To create a pattern use . to represent any letter and @ for 0 or more letters, eg s.r..b.e")){
             TextFilterRow(label: "Pattern", hint: "Enter pattern", text: $filters.pattern)
                 .onChange(of: filters.pattern){ oldValue, newValue in
                     if (oldValue != newValue) {
