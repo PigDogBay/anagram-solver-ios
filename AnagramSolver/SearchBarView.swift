@@ -45,7 +45,6 @@ struct SearchBarView : View {
 struct SearchBarMod : ViewModifier {
     func body(content: Content) -> some View {
         content
-            .autocorrectionDisabled()
             .accessibilityIdentifier("searchTextField")
             .frame(height: 44)
             .padding(.leading,8)
@@ -69,8 +68,8 @@ struct EmailKeyboardMod : ViewModifier {
 
     private let textStyle : Font.TextStyle
 
-    private var autoCap : UITextAutocapitalizationType {
-        return useUpperCase ? .allCharacters : .none
+    private var autoCap : TextInputAutocapitalization {
+        return useUpperCase ? .characters : .never
     }
     
     private var keyboardType : UIKeyboardType {
@@ -91,7 +90,7 @@ struct EmailKeyboardMod : ViewModifier {
             .font(.system(textStyle, design: fontDesign))
             .keyboardType(keyboardType)
             .textContentType(UITextContentType(rawValue: "")) //Prevent email addresses being shown
-            .disableAutocorrection(true)
-            .autocapitalization(autoCap)
+            .autocorrectionDisabled()
+            .textInputAutocapitalization(autoCap)
     }
 }
