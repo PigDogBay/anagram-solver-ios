@@ -12,7 +12,8 @@ struct Keyboard {
     /// Converts typed spaces and . to ? for the crossword pattern filter
     /// - Parameter typed: typed chars in the crossword pattern text field
     func crossword(typed : String) -> String{
-        var query = typed
+        // Convert ellipsis back to three periods
+        var query = typed.replacingOccurrences(of: "…", with: "...")
         if settings.spaceToQuestionMark {
             query = query.replacingOccurrences(of: " ", with: "?")
         }
@@ -20,6 +21,11 @@ struct Keyboard {
             query = query.replacingOccurrences(of: ".", with: "?")
         }
         return query
+    }
+
+    func regEx(typed : String) -> String{
+        // Convert ellipsis back to three periods
+        return typed.replacingOccurrences(of: "…", with: "...")
     }
 
 }

@@ -41,7 +41,9 @@ import SwiftUtils
     }
 
     func updateQuery (_ newValue : String) {
-        var working = newValue
+        // The .webSearch (Allow Dictation) keyboard has smart punctuation so,
+        // Convert ellipsis back to three periods
+        var working = newValue.replacingOccurrences(of: "…", with: "...")
         if settings.spaceToQuestionMark {
             working = working.replacingOccurrences(of: " ", with: "?")
         }

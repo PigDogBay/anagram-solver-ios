@@ -114,6 +114,11 @@ struct FiltersView: View {
                 }
                 .filterBadge(show: !filters.pattern.isEmpty)
             TextFilterRow(label: "Reg Exp", hint: "Enter regex", text: $filters.regExp)
+                .onChange(of: filters.regExp){ oldValue, newValue in
+                    if (oldValue != newValue) {
+                        self.filters.regExp = keyboard.regEx(typed: newValue)
+                    }
+                }
                 .filterBadge(show: !filters.regExp.isEmpty)
         }
     }
