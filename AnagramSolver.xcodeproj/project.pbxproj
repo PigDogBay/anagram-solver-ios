@@ -31,6 +31,7 @@
 		003E10ED253EF72400AE8155 /* wordlist-es.txt in Resources */ = {isa = PBXBuildFile; fileRef = 003E10EA253EF72400AE8155 /* wordlist-es.txt */; };
 		003FD3B52FAA297200AB84FA /* FilterBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003FD3B32FAA296700AB84FA /* FilterBadge.swift */; };
 		0043163E2FA38F9500E89640 /* GlassIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 0043163D2FA38F9500E89640 /* GlassIcon.icon */; };
+		004A98622FBCD00800137C8B /* FilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004A98602FBCCFFC00137C8B /* FilterUITests.swift */; };
 		004AA91C26CD306D00A63C47 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA91B26CD306D00A63C47 /* SettingsView.swift */; };
 		004AA91F26CE565F00A63C47 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA91E26CE565F00A63C47 /* SettingsViewModel.swift */; };
 		004AA92126CEB1CB00A63C47 /* SettingsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004AA92026CEB1CB00A63C47 /* SettingsPicker.swift */; };
@@ -201,6 +202,7 @@
 		003E10EA253EF72400AE8155 /* wordlist-es.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "wordlist-es.txt"; sourceTree = "<group>"; };
 		003FD3B32FAA296700AB84FA /* FilterBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBadge.swift; sourceTree = "<group>"; };
 		0043163D2FA38F9500E89640 /* GlassIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = GlassIcon.icon; sourceTree = "<group>"; };
+		004A98602FBCCFFC00137C8B /* FilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterUITests.swift; sourceTree = "<group>"; };
 		004AA91B26CD306D00A63C47 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		004AA91E26CE565F00A63C47 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		004AA92026CEB1CB00A63C47 /* SettingsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPicker.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 			children = (
 				00CD12D227CE326C008191B2 /* AnagramSolverUITests.swift */,
 				00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */,
+				004A98602FBCCFFC00137C8B /* FilterUITests.swift */,
 				00E4B60927D21000002ACEF8 /* SearchTests.swift */,
 				00E4B60727D20FD3002ACEF8 /* SettingsTests.swift */,
 				00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */,
@@ -785,6 +788,7 @@
 				00CD12DD27CE3CAD008191B2 /* UITestUtils.swift in Sources */,
 				00CD12D327CE326C008191B2 /* AnagramSolverUITests.swift in Sources */,
 				00E4B60A27D21000002ACEF8 /* SearchTests.swift in Sources */,
+				004A98622FBCD00800137C8B /* FilterUITests.swift in Sources */,
 				00E4B60827D20FD3002ACEF8 /* SettingsTests.swift in Sources */,
 				00CD12D527CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift in Sources */,
 			);
