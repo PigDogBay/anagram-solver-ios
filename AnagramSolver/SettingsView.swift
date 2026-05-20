@@ -109,9 +109,9 @@ struct SettingsView: View {
     private var autoClearFiltersToggle : some View {
         Toggle(isOn: $viewModel.isAutoClearFiltersEnabled) {
             if viewModel.isAutoClearFiltersEnabled {
-                Text("Automatically reset filters")
+                Text("Clear filters automatically")
             } else {
-                Text("Remember filters")
+                Text("Clear filters is off")
             }
         }.modifier(ToggleMod())
     }
