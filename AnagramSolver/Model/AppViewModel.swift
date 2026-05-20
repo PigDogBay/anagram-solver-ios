@@ -64,7 +64,10 @@ class AppViewModel {
     ///For consistency do not call dismiss() from:
     ///   @Environment(\.dismiss) var dismiss
     func goBack(){
-        path.removeLast()
+        //prevent double tap crash
+        if path.count > 0 {
+            path.removeLast()
+        }
     }
     
     func goto(screen : NavigationScreens){
