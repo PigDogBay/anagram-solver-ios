@@ -46,9 +46,9 @@ struct MatchesView: View {
                 }
             resultRows(matchesVM.matches, matchesVM.wordFormatter)
         }
-        .padding(.top,-16)
         .listStyle(.insetGrouped)
         .scrollDismissesKeyboard(.immediately)
+        .contentMargins(.top, 12, for: .scrollContent) //Remove excess padding at the top of the list
     }
 
     private var groupedByLengthSection : some View {
@@ -62,10 +62,10 @@ struct MatchesView: View {
                     }
             }
         }
-        .padding(.top,-16)
         .listStyle(.sidebar)
         .tint(Color("accentColor")) //Need this for the section index
         .scrollDismissesKeyboard(.immediately)
+        .contentMargins(.top, 12, for: .scrollContent) //Remove excess padding at the top of the list
     }
 
     private func resultRows(_ matches : [String], _ formatter : IWordFormatter) -> some View {
