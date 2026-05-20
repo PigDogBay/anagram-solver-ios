@@ -77,13 +77,14 @@ class MatchesViewModel {
             model.appState = .finished
             return
         }
-        model.appState = .searching
         engine.resetStop()
         let searchParser = SearchParser()
         let searchQuery = searchParser.parse(query: query)
         wordFormatter.newSearch(searchQuery)
         let filterPipeline = filters.isActive ? filters.createChainedCallback(lastCallback: engine) : engine
         matches.removeAll()
+        grouped.removeAll()
+        model.appState = .searching
         Task {
             self.engine.combinedSearch(searchQuery, callback: filterPipeline)
             matches.append(contentsOf: engine.working)
