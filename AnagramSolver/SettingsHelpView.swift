@@ -41,6 +41,7 @@ struct SettingsHelpView: View {
             }
             Section(header: Text("OTHER")){
                 FilterSectionView(title: "SEARCH HISTORY", description: "When off, your search history will not be saved and the History card will not be displayed. When on, search history will be stored on your device and displayed in the card.")
+                FilterSectionView(title: "CLEAR FILTERS", description: "When off, the app will remember your last filter settings. Turn on to automatically clear the filters when you start a new search.")
             }
         }
         .navigationTitle("Help")
