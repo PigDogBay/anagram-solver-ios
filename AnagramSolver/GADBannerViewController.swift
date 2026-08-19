@@ -69,13 +69,7 @@ struct GADBannerViewController: UIViewControllerRepresentable {
         if let scene = UIApplication.shared.connectedScenes.first(where:{$0 is UIWindowScene}) as? UIWindowScene {
             if let rootView = scene.windows.first?.rootViewController?.view {
                 let frame = rootView.frame.inset(by: rootView.safeAreaInsets)
-                if (UIDevice.current.orientation.isLandscape){
-                    return landscapeAnchoredAdaptiveBanner(width: frame.width)
-                } else {
-                    return portraitAnchoredAdaptiveBanner(width: frame.width)
-                }
-//New banner is twice the height, users dunna larke eet
-//                return largeAnchoredAdaptiveBanner(width: frame.width)
+                return largeAnchoredAdaptiveBanner(width: frame.width)
             }
         }
         //No root VC, use 320x50 ad banner
