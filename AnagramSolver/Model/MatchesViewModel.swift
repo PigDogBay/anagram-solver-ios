@@ -64,6 +64,11 @@ class MatchesViewModel {
     func onAppear(){
         if model.appState == .ready {
             search(word: query)
+            //Clear any filters if performing a new search (eg no active filters)
+            //AND when auto clear filters is active
+            if !filters.isActive && settings.autoClearFilters {
+                filters.reset()
+            }
         }
     }
     

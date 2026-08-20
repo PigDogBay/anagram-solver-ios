@@ -95,10 +95,6 @@ class AppViewModel {
         model.engine.stopSearch()
         //Disable filters for new searches
         filters.isActive = false
-        //Clear any filters when the user returns to the main screen
-        if settings.autoClearFilters {
-            filters.reset()
-        }
         goBack()
         model.appState = .ready
     }
