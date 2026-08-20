@@ -21,6 +21,7 @@ import SwiftUtils
         ("?", "questionmark"),
         ("+", "plus"),
         ("*", "asterisk"),
+        (" ", "space"),
         ("$", "dollarsign"),
         ("@", "at")
     ]
@@ -56,6 +57,11 @@ import SwiftUtils
     }
     
     func append(symbol : String){
-        query.append(symbol)
+        //If the symbol is a space but convert space to ? is active, convert the symbol to a comma
+        if settings.spaceToQuestionMark && symbol == " "{
+            query.append(",")
+        } else {
+            query.append(symbol)
+        }
     }
 }
