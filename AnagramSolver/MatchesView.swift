@@ -11,6 +11,8 @@ import SwiftUtils
 
 struct MatchesView: View {
     @Environment(AppViewModel.self) var appVM
+    @State private var isThesaurusExpanded : Bool = true
+    @State private var isAnagramsExpanded : Bool = true
     @State var matchesVM : MatchesViewModel
     @State var isAdLoaded = false
     @State private var isShareOptionsPresented: Bool = false
@@ -47,6 +49,34 @@ struct MatchesView: View {
             resultRows(matchesVM.matches, matchesVM.wordFormatter)
         }
         .listStyle(.insetGrouped)
+        .scrollDismissesKeyboard(.immediately)
+        .contentMargins(.top, 12, for: .scrollContent) //Remove excess padding at the top of the list
+    }
+    
+    private var thesaurusAnagramGroupedSection : some View {
+        return List {
+            status()
+            ///Not using ExpandableSection here, as I want to persist the expanded states
+            Section(
+                isExpanded: $isThesaurusExpanded,
+                content: {
+                    resultRows(matchesVM.synonyms, NoFormatting())
+                },
+                header: {
+                    Text("Thesaurus (\(matchesVM.synonyms.count))")
+                }
+            ).tint(Color("accentColor")) //tint only works for iOS 18
+            Section(
+                isExpanded: $isAnagramsExpanded,
+                content: {
+                    resultRows(matchesVM.matches, matchesVM.wordFormatter)
+                },
+                header: {
+                    Text("Anagrams (\(matchesVM.matches.count))")
+                }
+            ).tint(Color("accentColor"))
+        }
+        .listStyle(.sidebar)
         .scrollDismissesKeyboard(.immediately)
         .contentMargins(.top, 12, for: .scrollContent) //Remove excess padding at the top of the list
     }
@@ -117,6 +147,8 @@ struct MatchesView: View {
                 groupedByLengthSection
             case .empty:
                 listSection
+            case .thesaurusAnagramGroup:
+                thesaurusAnagramGroupedSection
             }
             if !appVM.settings.isProMode {
                 adSection()

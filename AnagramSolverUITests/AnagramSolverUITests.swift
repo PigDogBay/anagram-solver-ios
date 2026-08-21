@@ -41,7 +41,7 @@ class AnagramSolverUITests: XCTestCase {
         app.mpdbUIType(msg: "test")
         app.navigationBars.buttons["Search"].tap()
         
-        XCTAssertTrue(app.staticTexts["Matches: 12"].waitForExistence(timeout: 2.5))
+        XCTAssertTrue(app.staticTexts["Matches: 139"].waitForExistence(timeout: 2.5))
     }
 
 //SLOW - launches app 10x

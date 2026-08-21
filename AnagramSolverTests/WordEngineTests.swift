@@ -17,6 +17,7 @@ struct WordEngineTests {
     @Test("Verify multi-word searches remove duplicates")
     func removeDuplicates1() async throws {
         let engine = WordEngine()
+        engine.showSynonyms = false
         try await engine.loadWordList(name: "words")
         let query = SearchParser().parse(query: "ab initio")
         engine.combinedSearch(query, callback: engine)

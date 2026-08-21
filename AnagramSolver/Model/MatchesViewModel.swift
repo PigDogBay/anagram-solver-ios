@@ -11,7 +11,7 @@ import SwiftUI
 import SwiftUtils
 
 enum ResultsListMode {
-    case empty, plain, groupedByLength
+    case empty, plain, groupedByLength, thesaurusAnagramGroup
 }
 
 @MainActor
@@ -26,6 +26,7 @@ class MatchesViewModel {
     @ObservationIgnored var resultsListMode = ResultsListMode.empty
     @ObservationIgnored var grouped = [[String]]()
     @ObservationIgnored var matches : [String] = []
+    @ObservationIgnored var synonyms : [String] = []
     @ObservationIgnored let settings = Settings()
 
     var status  : String {
@@ -88,11 +89,13 @@ class MatchesViewModel {
         wordFormatter.newSearch(searchQuery)
         let filterPipeline = filters.isActive ? filters.createChainedCallback(lastCallback: engine) : engine
         matches.removeAll()
+        synonyms.removeAll()
         grouped.removeAll()
         model.appState = .searching
         Task {
             self.engine.combinedSearch(searchQuery, callback: filterPipeline)
             matches.append(contentsOf: engine.working)
+            synonyms.append(contentsOf: engine.synonymWorking)
             resultsListMode = calculateListMode()
             model.searchHistoryModel.updateSearchHistory(query: query)
             model.appState = .finished
@@ -114,12 +117,15 @@ class MatchesViewModel {
             return ""
         }
         if filters.isActive && filters.filterCount > 0 {
-            return "Matches: \(matches.count) Filters: \(filters.filterCount)"
+            return "Matches: \(matches.count + synonyms.count) Filters: \(filters.filterCount)"
         }
-        return "Matches: \(matches.count)"
+        return "Matches: \(matches.count + synonyms.count)"
     }
     
     private func calculateListMode() -> ResultsListMode {
+        if engine.synonymWorking.count > 0 {
+            return .thesaurusAnagramGroup
+        }
         groupBySize()
         return grouped.count>1 ? .groupedByLength : .plain
     }
