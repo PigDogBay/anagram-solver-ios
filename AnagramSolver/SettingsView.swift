@@ -38,6 +38,12 @@ struct SettingsView: View {
         }.modifier(ToggleMod())
     }
 
+    private var showSynonymsToggle : some View {
+        Toggle(isOn: $viewModel.showSynonyms) {
+            Text("Enable thesaurus")
+        }.modifier(ToggleMod())
+    }
+
     private var tipsToggle : some View {
         Toggle(isOn: $viewModel.showCardTips) {
             if viewModel.showCardTips {
@@ -138,6 +144,7 @@ struct SettingsView: View {
                                selection: $viewModel.resultsLimit)
 
                 subAnagramsToggle
+                showSynonymsToggle
             }
 
             Section(header: Text("APPEARANCE"),

@@ -76,6 +76,12 @@ class SettingsViewModel {
         }
     }
     
+    var showSynonyms : Bool {
+        didSet {
+            settings.showSynonyms = showSynonyms
+        }
+    }
+
     var useMonospacedFont : Bool {
         didSet {
             settings.useMonospacedFont = useMonospacedFont
@@ -138,6 +144,7 @@ class SettingsViewModel {
         showSymbolBar = settings.showSymbolBar
         isLongPressEnabled = settings.isLongPressEnabled
         showSubAnagrams = settings.showSubAnagrams
+        showSynonyms = settings.showSynonyms
         showCardTips = settings.showCardTips
         useMonospacedFont = settings.useMonospacedFont
         darkModeOverride = settings.darkModeOverride
@@ -159,6 +166,7 @@ class SettingsViewModel {
         showSymbolBar = settings.defaultShowSymbolBar
         isLongPressEnabled = settings.defaultLongPressEnabled
         showSubAnagrams = settings.defaultShowSubAnagrams
+        showSynonyms = settings.defaultShowSynonyms
         showCardTips = settings.defaultShowCardTips
         useMonospacedFont = settings.defaultMonospacedFont
         allowDictation = false
