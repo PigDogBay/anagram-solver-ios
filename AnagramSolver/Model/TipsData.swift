@@ -19,6 +19,7 @@ let supergramsTip = tipsData[6]
 let prefixSuffixTip = tipsData[7]
 let codewordsTip = tipsData[8]
 let spellingBeeTip = tipsData[9]
+let thesaurusTip = tipsData[10]
 
 struct Tip : Identifiable, Codable, Hashable{
     var id : Int

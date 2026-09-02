@@ -34,6 +34,7 @@ struct TipsView: View {
             }
             Group {
                 tip(crosswordTip)
+                tip(thesaurusTip)
                 tip(phraseTip)
                 tip(shortcutsTip)
                 NavigationLink(value: NavigationScreens.FiltersHelp){

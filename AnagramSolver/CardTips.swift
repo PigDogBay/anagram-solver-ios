@@ -29,6 +29,8 @@ struct CardTips: View {
                         .modifier(CardMod())
                     DefinitionsCard()
                         .modifier(CardMod())
+                    TipCard(tip: thesaurusTip)
+                        .modifier(CardMod())
                     FilterCard()
                         .modifier(CardMod())
                     TipCard(tip: twoWordAnagramTip)
