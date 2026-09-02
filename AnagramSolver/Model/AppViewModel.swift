@@ -46,6 +46,7 @@ class AppViewModel {
     ///Called when RootView first appears
     func onLaunch() {
         if (model.appState == .uninitialized){
+            applySettings()
             loadWordList()
             //Load up last query, some users complain that the app forgets queries when they switch apps
             if settings.isSearchHistoryEnabled {
@@ -53,6 +54,13 @@ class AppViewModel {
             }
             
         }
+    }
+    
+    private func applySettings(){
+        model.engine.resultsLimit = settings.resultsLimit
+        model.engine.wordSearch.findSubAnagrams = settings.showSubAnagrams
+        model.engine.showSynonyms = settings.showSubAnagrams
+        model.searchHistoryModel.isSearchHistoryEnabled = settings.isSearchHistoryEnabled
     }
     
     ///App life cycle function: called when the app goes into the background
@@ -100,9 +108,7 @@ class AppViewModel {
     }
     
     func settingsExited(didChangeWordList : Bool){
-        model.engine.resultsLimit = settings.resultsLimit
-        model.engine.wordSearch.findSubAnagrams = settings.showSubAnagrams
-        model.searchHistoryModel.isSearchHistoryEnabled = settings.isSearchHistoryEnabled
+        applySettings()
         if didChangeWordList {
             loadWordList()
         }
