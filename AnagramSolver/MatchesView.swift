@@ -11,7 +11,7 @@ import SwiftUtils
 
 struct MatchesView: View {
     @Environment(AppViewModel.self) var appVM
-    @State private var isThesaurusExpanded : Bool = true
+    @AppStorage(Keys.expandSynonyms) var isThesaurusExpanded: Bool = true
     @State private var isAnagramsExpanded : Bool = true
     @State var matchesVM : MatchesViewModel
     @State var isAdLoaded = false
