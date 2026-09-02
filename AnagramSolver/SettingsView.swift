@@ -79,13 +79,11 @@ struct SettingsView: View {
         Toggle(isOn: $viewModel.allowDictation) {
             if viewModel.allowDictation {
                 HStack {
-                    Text("Allow dictation")
-                    Image(systemName: "mic")
+                    Text("Keyboard layout B")
                 }
             } else {
                 HStack {
-                    Text("No dictation")
-                    Image(systemName: "mic.slash")
+                    Text("Keyboard layout A")
                 }
             }
         }.modifier(ToggleMod())
