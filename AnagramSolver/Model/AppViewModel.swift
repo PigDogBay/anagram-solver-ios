@@ -59,7 +59,7 @@ class AppViewModel {
     private func applySettings(){
         model.engine.resultsLimit = settings.resultsLimit
         model.engine.wordSearch.findSubAnagrams = settings.showSubAnagrams
-        model.engine.showSynonyms = settings.showSubAnagrams
+        model.engine.showSynonyms = settings.showSynonyms
         model.searchHistoryModel.isSearchHistoryEnabled = settings.isSearchHistoryEnabled
     }
     
