@@ -29,6 +29,8 @@ enum Keys {
     static let useLargeResultsFont = "useLargeResultsFont"
     static let enableSearchHistory = "enableSearchHistory"
     static let autoClearFilters = "autoClearFilters"
+    static let showSynonyms = "showSynonyms"
+    static let expandSynonyms = "expandSynonyms"
 }
 
 class Settings
@@ -145,6 +147,8 @@ class Settings
     let defaultUseLargeResultsFont = false
     let defaultEnableSearchHistory = true
     let defaultAutoClearFilters = false
+    let defaultShowSynonyms = true
+    let defaultExpandSynonyms = true
 
     var highlight : UIColor {
         get {
@@ -396,6 +400,31 @@ class Settings
         }
     }
 
+    var showSynonyms : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: Keys.showSynonyms)
+        }
+        set(flag) {
+            if flag != showSynonyms {
+                let defaults = UserDefaults.standard
+                defaults.set(flag, forKey: Keys.showSynonyms)
+            }
+        }
+    }
+
+    var expandSynonyms : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: Keys.expandSynonyms)
+        }
+        set(flag) {
+            if flag != expandSynonyms {
+                let defaults = UserDefaults.standard
+                defaults.set(flag, forKey: Keys.expandSynonyms)
+            }
+        }
+    }
+
+    
     func registerDefaultSettings() {
         let defaultSettings : [ String : Any] = [Keys.definition : defaultDefinition,
                                                  Keys.highlight : defaultHighlight,
@@ -415,6 +444,8 @@ class Settings
                                                  Keys.useMonospacedFont : defaultMonospacedFont,
                                                  Keys.useLargeResultsFont : defaultUseLargeResultsFont,
                                                  Keys.autoClearFilters : defaultAutoClearFilters,
+                                                 Keys.showSynonyms : defaultShowSynonyms,
+                                                 Keys.expandSynonyms : defaultExpandSynonyms,
                                                  Keys.enableSearchHistory: defaultEnableSearchHistory,
                                       ]
         UserDefaults.standard.register(defaults: defaultSettings)
