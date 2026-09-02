@@ -21,9 +21,10 @@ import SwiftUtils
         ("?", "questionmark"),
         ("+", "plus"),
         ("*", "asterisk"),
-        (" ", "space"),
+        ("-", "minus"),
         ("$", "dollarsign"),
-        ("@", "at")
+        ("@", "at"),
+        ("!","exclamationmark")
     ]
 
     func isValid() -> Bool{
