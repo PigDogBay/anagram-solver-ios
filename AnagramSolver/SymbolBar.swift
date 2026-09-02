@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SymbolBar : View {
-    @State var searchBarVM : SearchBarViewModel
+    var searchBarVM : SearchBarViewModel
     let haptic = UIImpactFeedbackGenerator(style: .light)
 
     var body: some View {

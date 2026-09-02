@@ -39,13 +39,12 @@ struct MainView: View {
                     }
                 }
             }
-        }
-        .scrollDismissesKeyboard(.immediately)
-        .overlay(alignment: .bottom) {
             if showSymbolBar {
-                SymbolBar(searchBarVM: appVM.searchBarVM)
-                    .padding(.bottom, 20)
+                ToolbarItemGroup(placement: .keyboard) {
+                    SymbolBar(searchBarVM: appVM.searchBarVM)
+                }
             }
         }
+        .scrollDismissesKeyboard(.immediately)
     }
 }
