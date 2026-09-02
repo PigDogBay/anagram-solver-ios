@@ -91,11 +91,11 @@
     },
     {
         "id" : 1011,
-        "title" : "Crossword Clues",
-        "subtitle" : "Search the thesaurus for answers",
-        "description" : "Enter your crossword clue and the app will search its built in thesaurus to find related words and phrases.\n\nTo look up phrases, use a space to separate the words. For example try close shave\n\nThe app will also find anagrams of the word you enter.",
+        "title" : "Thesaurus",
+        "subtitle" : "Search for similar words",
+        "description" : "Enter a word and the app will search its built in thesaurus to find related words and phrases.\n\nTo look up phrases, use a space to separate the words. For example try close shave\n\nThe app will also find anagrams of the word you enter.",
         "example" : "ketchup, mustard, wasabi",
-        "advanced" : "If the app is unable to find any matches try, again with another similar meaning word, eg in the example above, try seasoning.\n\nYou can quickly drill down for more synonyms by pressing a word until a menu appears and then selecting the Search option.\n\nFor cryptic clues enter the first and last word of the clue and the app will find synonyms for both words, use a space to separate the words.",
+        "advanced" : "If the app is unable to find any matches try, again with another similar meaning word, eg in the example above, try seasoning.\n\nYou can quickly drill down for more synonyms by pressing a word until a menu appears and then selecting the Search option.\n\nFor cryptic crossword clues enter the first and last word of the clue and the app will find synonyms for both words, use a space to separate the words.",
         "showMe" : "condiment"
     },
 ]
