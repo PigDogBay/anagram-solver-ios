@@ -28,9 +28,6 @@ struct SearchBarView : View {
             }
             .modifier(SearchBarMod())
             .focused($isFocused)
-            .onAppear(){
-                isFocused = Settings().showKeyboard
-            }
             .alert(isPresented: $searchBarVM.showValidationError){
                 Alert(
                     title: Text("Search Error"),
@@ -38,7 +35,11 @@ struct SearchBarView : View {
                     dismissButton: .default(Text("OK")
                 ))
             }
-
+            .task {
+                if Settings().showKeyboard {
+                    isFocused = true
+                }
+            }
     }
 }
 
