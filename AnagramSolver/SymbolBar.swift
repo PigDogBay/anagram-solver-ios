@@ -31,13 +31,12 @@ struct SymbolBar : View {
                         .font(.system(size: 20, weight: .semibold))
                         .foregroundColor(Color("accentColor"))
                         .padding(.horizontal,12)
-                        .padding(.vertical,6)
+                        .padding(.vertical,8)
                         .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
             }
         }
-        .padding(.vertical, 8)
         .padding(.horizontal, 12)
     }
     
