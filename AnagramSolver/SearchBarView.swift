@@ -90,7 +90,7 @@ struct EmailKeyboardMod : ViewModifier {
             .accentColor(Color("accentColor")) //Set cursor color
             .font(.system(textStyle, design: fontDesign))
             .keyboardType(keyboardType)
-            .textContentType(nil) //Prevent email addresses being shown
+            .textContentType(.none) //Prevent email addresses being shown
             .autocorrectionDisabled()
             .textInputAutocapitalization(autoCap)
     }
