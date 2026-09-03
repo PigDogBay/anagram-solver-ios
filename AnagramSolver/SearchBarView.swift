@@ -36,9 +36,11 @@ struct SearchBarView : View {
                 ))
             }
             .task {
-                if Settings().showKeyboard {
-                    isFocused = true
-                }
+                guard Settings().showKeyboard else { return }
+                // Let the push transition / layout settle before touching the focus engine
+                try? await Task.sleep(for: .milliseconds(300))
+                guard !Task.isCancelled else { return }
+                isFocused = true
             }
     }
 }
