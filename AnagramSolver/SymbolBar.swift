@@ -14,7 +14,6 @@ struct SymbolBar : View {
     var body: some View {
         if #available(iOS 26.0, *) {
             return glassBar
-                .glassEffect()
         } else {
             return ultraThinBar
         }
@@ -38,8 +37,8 @@ struct SymbolBar : View {
                 .buttonStyle(.plain)
             }
         }
-        .padding(.vertical, 12)
-        .padding(.horizontal, 25)
+        .padding(.vertical, 8)
+        .padding(.horizontal, 12)
     }
     
     //Simulates glass effect using ultraThinMaterial, shadow and border
