@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUtils
 
-class WordEngine : WordListCallback, WordDictionary {
+final class WordEngine : WordListCallback, WordDictionary, @unchecked Sendable {
     var showSynonyms = true
     let wordSearch = WordSearch()
     var resultsLimit = 5000
@@ -25,6 +25,7 @@ class WordEngine : WordListCallback, WordDictionary {
     private var distinctMatchesOnly = false
     ///WordDictionary:: Store lookUpResult for DefinitionView
     var lookUpResult : LookUpResult = LookUpResult(word: "", definitions: [])
+    var isStopped : Bool {return atomicStop.value}
 
     ///Call this code from a background queue
     ///Loads the specified wordlist and also the Nabu database and phrase word lists if not yet loaded

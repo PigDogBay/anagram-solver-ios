@@ -93,9 +93,17 @@ class MatchesViewModel {
         grouped.removeAll()
         model.appState = .searching
         Task {
-            self.engine.combinedSearch(searchQuery, callback: filterPipeline)
-            matches.append(contentsOf: engine.working)
-            synonyms.append(contentsOf: engine.synonymWorking)
+            let (newMatches, newSynonyms) = await Task.detached(priority: .userInitiated) { [engine, filterPipeline] in
+                self.engine.combinedSearch(searchQuery, callback: filterPipeline)
+                return (engine.working, engine.synonymWorking)
+            }.value
+            if engine.isStopped {
+                //maybe have a cancelled state?
+                model.appState = .ready
+                return
+            }
+            matches.append(contentsOf: newMatches)
+            synonyms.append(contentsOf: newSynonyms)
             resultsListMode = calculateListMode()
             model.searchHistoryModel.updateSearchHistory(query: query)
             model.appState = .finished
