@@ -54,6 +54,8 @@ class AutoTest {
             self.model.appState = .ready
         case .error:
             print("AutoTest: App Error Detected")
+        case .cancelled:
+            print("Search stopped")
         }
         
     }

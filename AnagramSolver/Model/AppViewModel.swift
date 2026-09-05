@@ -90,7 +90,7 @@ class AppViewModel {
     }
 
     func canSearch() -> Bool {
-        return model.appState == .ready || model.appState == .finished
+        return model.appState == .ready || model.appState == .finished || model.appState == .cancelled
     }
     
     func search(){

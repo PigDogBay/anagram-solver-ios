@@ -43,6 +43,8 @@ class MatchesViewModel {
             return "Loading..."
         case .error:
             return "App Error"
+        case .cancelled:
+            return "Search Stopped"
         }
     }
     
@@ -63,7 +65,7 @@ class MatchesViewModel {
     }
     
     func onAppear(){
-        if model.appState == .ready {
+        if model.appState == .ready || model.appState == .cancelled {
             search(word: query)
             //Clear any filters if performing a new search (eg no active filters)
             //AND when auto clear filters is active
@@ -93,13 +95,18 @@ class MatchesViewModel {
         grouped.removeAll()
         model.appState = .searching
         Task {
+            //Run the search on a background thread so I don't block the Main UI thread
+            //See issue #16
             let (newMatches, newSynonyms) = await Task.detached(priority: .userInitiated) { [engine, filterPipeline] in
                 self.engine.combinedSearch(searchQuery, callback: filterPipeline)
                 return (engine.working, engine.synonymWorking)
             }.value
             if engine.isStopped {
-                //maybe have a cancelled state?
-                model.appState = .ready
+                //If the device lock button was pressed or the app has gone into the background
+                //MatchesVM needs to indicate that the search has been cancelled
+                //when the user returns to this app.
+                model.appState = .cancelled
+                //Exit, do not update the UI as the app may now be inactive, see #16
                 return
             }
             matches.append(contentsOf: newMatches)

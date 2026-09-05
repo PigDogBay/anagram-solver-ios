@@ -12,7 +12,7 @@ import SwiftUtils
 
 enum AppStates
 {
-    case uninitialized, loading, ready, searching, finished, error
+    case uninitialized, loading, ready, searching, finished, cancelled, error
 }
 
 /*
