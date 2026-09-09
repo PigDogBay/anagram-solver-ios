@@ -30,7 +30,9 @@ struct MatchesViewModelTests {
         try await model.engine.loadWordList(name:"words")
         viewModel.search(word: "ab initoi")
         //Wait for search Task to complete
-        try await Task.sleep(for: .seconds(1))
+        while(model.appState != .finished){
+            try await Task.sleep(for: .milliseconds(500))
+        }
         #expect(model.appState == .finished)
         #expect(viewModel.grouped[0][0] == "ab initio")
         #expect(viewModel.grouped[0][1] == "ai biotin")
@@ -43,7 +45,9 @@ struct MatchesViewModelTests {
         try await model.engine.loadWordList(name:"words")
         viewModel.search(word: "condiments")
         //Wait for search Task to complete
-        try await Task.sleep(for: .seconds(1))
+        while(model.appState != .finished){
+            try await Task.sleep(for: .milliseconds(500))
+        }
         #expect(model.appState == .finished)
         #expect(viewModel.synonyms.count == 34)
         #expect(viewModel.synonyms[6] == "chili sauce")
