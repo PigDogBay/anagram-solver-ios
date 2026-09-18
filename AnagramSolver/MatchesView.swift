@@ -58,15 +58,6 @@ struct MatchesView: View {
             status()
             ///Not using ExpandableSection here, as I want to persist the expanded states
             Section(
-                isExpanded: $isThesaurusExpanded,
-                content: {
-                    resultRows(matchesVM.synonyms, NoFormatting())
-                },
-                header: {
-                    Text("Thesaurus (\(matchesVM.synonyms.count))")
-                }
-            ).tint(Color("accentColor")) //tint only works for iOS 18
-            Section(
                 isExpanded: $isAnagramsExpanded,
                 content: {
                     resultRows(matchesVM.matches, matchesVM.wordFormatter)
@@ -75,6 +66,15 @@ struct MatchesView: View {
                     Text("Anagrams (\(matchesVM.matches.count))")
                 }
             ).tint(Color("accentColor"))
+            Section(
+                isExpanded: $isThesaurusExpanded,
+                content: {
+                    resultRows(matchesVM.synonyms, NoFormatting())
+                },
+                header: {
+                    Text("Thesaurus (\(matchesVM.synonyms.count))")
+                }
+            ).tint(Color("accentColor")) //tint only works for iOS 18
         }
         .listStyle(.sidebar)
         .scrollDismissesKeyboard(.immediately)
