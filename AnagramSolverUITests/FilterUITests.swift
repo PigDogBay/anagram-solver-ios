@@ -38,6 +38,8 @@ class FilterUITests: XCTestCase {
         app.navigationBars.buttons["Reset"].tap()
         //Accessibility ID can be applied to child elements, so need to use first match
         app.alerts.buttons["dialogResetSettings"].firstMatch.tap()
+        app.swipeUp()
+        app.swipeUp()
         app.switches["dictationToggle"].switches.firstMatch.tap()
         //press back button
         app.navigationBars.buttons.element(boundBy: 0).tap()
