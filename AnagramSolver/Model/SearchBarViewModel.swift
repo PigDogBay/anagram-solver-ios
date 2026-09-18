@@ -11,6 +11,7 @@ import SwiftUtils
 
 @Observable class SearchBarViewModel {
     var query = ""
+    var selection : TextSelection?
     @ObservationIgnored let settings = Settings()
     @ObservationIgnored let searchParser = SearchParser()
     
@@ -57,12 +58,18 @@ import SwiftUtils
         }
     }
     
-    func append(symbol : String){
-        //If the symbol is a space but convert space to ? is active, convert the symbol to a comma
-        if settings.spaceToQuestionMark && symbol == " "{
-            query.append(",")
-        } else {
+    func insert(symbol : String){
+        guard let selection, case .selection(let range) = selection.indices else {
+            // No tracked selection (e.g. field not focused) — fall back to append
             query.append(symbol)
+            return
         }
+        // If there's an actual selection, replace it; otherwise range is a collapsed cursor
+        query.replaceSubrange(range, with: symbol)
+
+        // Move the cursor to just after the inserted text
+        let offset = query.distance(from: query.startIndex, to: range.lowerBound)
+        let newIndex = query.index(query.startIndex, offsetBy: offset + symbol.count)
+        self.selection = TextSelection(insertionPoint: newIndex)
     }
 }

@@ -25,7 +25,7 @@ struct SymbolBar : View {
             ForEach(searchBarVM.symbols, id: \.0) { char, icon in
                 Button {
                     haptic.impactOccurred()
-                    searchBarVM.append(symbol: char)
+                    searchBarVM.insert(symbol: char)
                 } label: {
                     Image(systemName: icon)
                         .font(.system(size: 20, weight: .semibold))
@@ -46,7 +46,7 @@ struct SymbolBar : View {
             ForEach(searchBarVM.symbols, id: \.0) { char, icon in
                 Button {
                     haptic.impactOccurred()
-                    searchBarVM.append(symbol: char)
+                    searchBarVM.insert(symbol: char)
                 } label: {
                     Image(systemName: icon)
                         .font(.system(size: 20, weight: .semibold))

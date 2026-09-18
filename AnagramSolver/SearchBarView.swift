@@ -13,7 +13,7 @@ struct SearchBarView : View {
     @Environment(AppViewModel.self) var appVM
 
     var body: some View {
-        return TextField("Enter letters", text: $searchBarVM.query)
+        return TextField("Enter letters", text: $searchBarVM.query, selection: $searchBarVM.selection)
             .onChange(of: searchBarVM.query){ oldValue, newValue in
                 if (oldValue != newValue) {
                     searchBarVM.updateQuery(newValue)
