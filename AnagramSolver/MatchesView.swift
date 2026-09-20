@@ -12,7 +12,7 @@ import SwiftUtils
 struct MatchesView: View {
     @Environment(AppViewModel.self) var appVM
     @AppStorage(Keys.expandSynonyms) var isThesaurusExpanded: Bool = true
-    @State private var isAnagramsExpanded : Bool = true
+    @AppStorage(Keys.expandAnagrams) var isAnagramsExpanded : Bool = true
     @State var matchesVM : MatchesViewModel
     @State var isAdLoaded = false
     @State private var isShareOptionsPresented: Bool = false

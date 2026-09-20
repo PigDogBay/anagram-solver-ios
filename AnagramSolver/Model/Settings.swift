@@ -31,6 +31,7 @@ enum Keys {
     static let autoClearFilters = "autoClearFilters"
     static let showSynonyms = "showSynonyms"
     static let expandSynonyms = "expandSynonyms"
+    static let expandAnagrams = "expandAnagrams"
 }
 
 class Settings
@@ -149,6 +150,7 @@ class Settings
     let defaultAutoClearFilters = false
     let defaultShowSynonyms = true
     let defaultExpandSynonyms = true
+    let defaultExpandAnagrams = true
 
     var highlight : UIColor {
         get {
@@ -424,7 +426,19 @@ class Settings
         }
     }
 
-    
+    var expandAnagrams : Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: Keys.expandAnagrams)
+        }
+        set(flag) {
+            if flag != expandAnagrams {
+                let defaults = UserDefaults.standard
+                defaults.set(flag, forKey: Keys.expandAnagrams)
+            }
+        }
+    }
+
+
     func registerDefaultSettings() {
         let defaultSettings : [ String : Any] = [Keys.definition : defaultDefinition,
                                                  Keys.highlight : defaultHighlight,
@@ -446,6 +460,7 @@ class Settings
                                                  Keys.autoClearFilters : defaultAutoClearFilters,
                                                  Keys.showSynonyms : defaultShowSynonyms,
                                                  Keys.expandSynonyms : defaultExpandSynonyms,
+                                                 Keys.expandAnagrams : defaultExpandAnagrams,
                                                  Keys.enableSearchHistory: defaultEnableSearchHistory,
                                       ]
         UserDefaults.standard.register(defaults: defaultSettings)
