@@ -75,6 +75,9 @@
       <StoreKitConfigurationFileReference
          identifier = "../AnagramSolver/InAppPurchaseStore.storekit">
       </StoreKitConfigurationFileReference>
+      <MetalAPIValidationSettings
+         isEnabled = "No">
+      </MetalAPIValidationSettings>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
