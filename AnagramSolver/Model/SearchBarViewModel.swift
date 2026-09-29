@@ -48,10 +48,23 @@ import SwiftUtils
             : casedQuery)
     }
 
+    ///The Query TextField is bound to query and selection
+    ///When the user types, query/selection will be updated and then this function will be called via onChange
+    ///
+    ///Converts ellipsis to three dots ...
+    ///Handles converting space/. to ?
+    ///Ensures the cursor position is correctly updated
     func updateQuery (_ newValue : String) {
         let working = normalize(newValue)
         guard working != query else { return }
+        // Where was the cursor (end of selection), in terms of the normalized text?
+        var cursor = working.count
+        if let selection, case .selection(let r) = selection.indices {
+            cursor = normalize(String(query[..<r.upperBound])).count
+        }
         query = working
+        let idx = working.index(working.startIndex, offsetBy: min(cursor, working.count))
+        selection = TextSelection(insertionPoint: idx)
     }
     
     /// The .webSearch (Allow Dictation) keyboard has smart punctuation so,

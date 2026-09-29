@@ -123,6 +123,52 @@ struct SearchBarViewModelInsertTests {
 @Suite("SearchBarViewModel ShowMe Regression Tests")
 struct SearchBarViewModelRegressionTests {
     
+    ///Keyboard type B will convert three dots into an ellipsis
+    ///The is now way yet to disable this behaviour in iOS27
+    @Test("Converting …| to ...|")
+    func updateQueryEllipsisCursorPos1(){
+        let initial = "…"
+        let expected = "..."
+        let viewModel = SearchBarViewModel()
+        //UITextfield will set query / selection values to the following
+        viewModel.query = initial
+        viewModel.selection = TextSelection(insertionPoint: initial.endIndex)
+        
+        viewModel.updateQuery(initial)
+        #expect(viewModel.query == expected)
+        #expect(viewModel.selection == TextSelection(insertionPoint: expected.endIndex))
+    }
+    
+    @Test("Converting ab…| to ab...|")
+    func updateQueryEllipsisCursorPos2(){
+        let initial = "ab…"
+        let expected = "ab..."
+        let viewModel = SearchBarViewModel()
+        //UITextfield will set query / selection values to the following
+        viewModel.query = initial
+        viewModel.selection = TextSelection(insertionPoint: initial.endIndex)
+
+        viewModel.updateQuery(initial)
+        #expect(viewModel.query == expected)
+        #expect(viewModel.selection == TextSelection(insertionPoint: expected.endIndex))
+    }
+
+    @Test("Converting a…|b to a...|b")
+    func updateQueryEllipsisCursorPos3(){
+        let initialQuery = "a…b"
+        let expectedQuery = "a...b"
+        let viewModel = SearchBarViewModel()
+        //UITextfield will set query to be a…b (via the binding) and then call onChange(){updateQuery}
+        viewModel.query = initialQuery
+        //Place cursor at a…|b
+        viewModel.selection = TextSelection(insertionPoint: initialQuery.index(initialQuery.startIndex, offsetBy: 2))
+
+        viewModel.updateQuery("a…b")
+        #expect(viewModel.query == expectedQuery)
+        //expect that the cursor will be placed a...|b
+        #expect(viewModel.selection == TextSelection(insertionPoint: expectedQuery.index(expectedQuery.startIndex, offsetBy: 4)))
+    }
+    
     @Test("Ensure that the selection is set to the end of the string")
     func showMeCrash(){
         let longString = "this is a longer string here"
