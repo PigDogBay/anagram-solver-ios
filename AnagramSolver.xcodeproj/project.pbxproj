@@ -118,6 +118,7 @@
 		4D45EFC11A9DFABA00C40BB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */; };
 		4D45EFC41A9DFABA00C40BB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */; };
 		4D8DEA2A306BBC0D009FA880 /* SearchBarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8DEA28306BBC00009FA880 /* SearchBarViewModelTests.swift */; };
+		4D8DEA2C306BFAA5009FA880 /* QueryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8DEA2B306BFA9A009FA880 /* QueryTests.swift */; };
 		4DBBEEA9239A7C3800ADCA41 /* colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBBEEA8239A7C3800ADCA41 /* colors.xcassets */; };
 		4DE5CA8B238EB6170013D3F5 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5CA89238EB6170013D3F5 /* words.txt */; };
 		4DE5CA8D238EB6250013D3F5 /* sowpods.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5CA8C238EB6250013D3F5 /* sowpods.txt */; };
@@ -281,6 +282,7 @@
 		4D45EFC91A9DFABA00C40BB4 /* AnagramSolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnagramSolverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D45EFCE1A9DFABA00C40BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D8DEA28306BBC00009FA880 /* SearchBarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModelTests.swift; sourceTree = "<group>"; };
+		4D8DEA2B306BFA9A009FA880 /* QueryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryTests.swift; sourceTree = "<group>"; };
 		4DBBEEA8239A7C3800ADCA41 /* colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = colors.xcassets; sourceTree = "<group>"; };
 		4DE5CA89238EB6170013D3F5 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		4DE5CA8C238EB6250013D3F5 /* sowpods.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sowpods.txt; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 				00CD12D227CE326C008191B2 /* AnagramSolverUITests.swift */,
 				00CD12D427CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift */,
 				004A98602FBCCFFC00137C8B /* FilterUITests.swift */,
+				4D8DEA2B306BFA9A009FA880 /* QueryTests.swift */,
 				00E4B60927D21000002ACEF8 /* SearchTests.swift */,
 				00E4B60727D20FD3002ACEF8 /* SettingsTests.swift */,
 				00CD12DC27CE3CAD008191B2 /* UITestUtils.swift */,
@@ -791,6 +794,7 @@
 				00CD12DD27CE3CAD008191B2 /* UITestUtils.swift in Sources */,
 				00CD12D327CE326C008191B2 /* AnagramSolverUITests.swift in Sources */,
 				00E4B60A27D21000002ACEF8 /* SearchTests.swift in Sources */,
+				4D8DEA2C306BFAA5009FA880 /* QueryTests.swift in Sources */,
 				004A98622FBCD00800137C8B /* FilterUITests.swift in Sources */,
 				00E4B60827D20FD3002ACEF8 /* SettingsTests.swift in Sources */,
 				00CD12D527CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift in Sources */,
