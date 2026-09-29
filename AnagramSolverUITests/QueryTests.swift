@@ -38,4 +38,30 @@ class QueryTests: XCTestCase {
         app.buttons["SHOW ME"].firstMatch.tap()
     }
 
+    ///Ensure ... is not converted to an ellipsis
+    ///This test types out x......x and then checks that this is what is displayed
+    ///Note keyboard type B setting, this is the keyboard that uses smart punctuation that converts ... to an ellipsis
+    func testEllipsis() throws {
+        let app = XCUIApplication()
+
+        //press settings button
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        //press Reset button to ensure settings are in a known state
+        app.navigationBars.buttons["Reset"].tap()
+        //Accessibility ID can be applied to child elements, so need to use first match
+        app.alerts.buttons["dialogResetSettings"].firstMatch.tap()
+
+        app.swipeUp()
+        //Select keyboard type B as this generates the ellipsis
+        app.switches["dictationToggle"].switches.firstMatch.tap()
+        //press back button
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        app.textFields.element.tap()
+        app.mpdbDeleteAll()
+        app.mpdbUIType(msg: "x......x")
+        sleep(2)
+        let query = app.textFields.element.value as? String
+        XCTAssertTrue("x......x" == query)
+    }
+    
 }
