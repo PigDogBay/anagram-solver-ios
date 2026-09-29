@@ -41,7 +41,7 @@ class AutoTest {
             print("AutoTest: Loading")
         case .ready:
             print("AutoTest: Ready")
-            self.appVM.searchBarVM.query = self.randomQuery.query()
+            self.appVM.searchBarVM.showMe(example: self.randomQuery.query())
             try await Task.sleep(for: .seconds(2))
             self.appVM.search()
         case .searching:

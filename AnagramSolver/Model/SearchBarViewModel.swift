@@ -33,42 +33,49 @@ import SwiftUtils
         return clean.length>0
     }
     
+    ///When programmatically setting the query, selection also needs updating
+    ///If selection is not updated, this will cause a crash in iOS 18
+    func setQuery(_ newValue: String) {
+        query = newValue
+        selection = TextSelection(insertionPoint: newValue.endIndex)
+    }
+
     func showMe(example : String){
         let casedQuery = settings.useUpperCase ? example.uppercased() : example
-        if settings.spaceToQuestionMark {
-            //Convert spaces to -, otherwise they will be converted to ? in updateQuery
-            self.query = casedQuery.replacingOccurrences(of: " ", with: "-")
-        } else {
-            self.query = casedQuery
-        }
+        //Convert spaces to -, otherwise they will be converted to ? in updateQuery
+        setQuery(settings.spaceToQuestionMark
+            ? casedQuery.replacingOccurrences(of: " ", with: "-")
+            : casedQuery)
     }
 
     func updateQuery (_ newValue : String) {
-        // The .webSearch (Allow Dictation) keyboard has smart punctuation so,
-        // Convert ellipsis back to three periods
-        var working = newValue.replacingOccurrences(of: "…", with: "...")
-        if settings.spaceToQuestionMark {
-            working = working.replacingOccurrences(of: " ", with: "?")
-        }
-        if settings.fullStopToQuestionMark {
-            working = working.replacingOccurrences(of: ".", with: "?")
-        }
-        if query != working {
-           query = working
-        }
+        let working = normalize(newValue)
+        guard working != query else { return }
+        query = working
     }
     
+    /// The .webSearch (Allow Dictation) keyboard has smart punctuation so,
+    /// Convert ellipsis back to three periods
+    private func normalize(_ s: String) -> String {
+        var w = s.replacingOccurrences(of: "…", with: "...")
+        if settings.spaceToQuestionMark { w = w.replacingOccurrences(of: " ", with: "?") }
+        if settings.fullStopToQuestionMark { w = w.replacingOccurrences(of: ".", with: "?") }
+        return w
+    }
+    
+    ///Inserts the symbol at the current cursor position, also takes account of the any text selection
     func insert(symbol : String){
         guard let selection, case .selection(let range) = selection.indices else {
             // No tracked selection (e.g. field not focused) — fall back to append
-            query.append(symbol)
+            setQuery(query + symbol)
             return
         }
+        // Move the cursor to just after the inserted text
+        let offset = query.distance(from: query.startIndex, to: range.lowerBound)
+
         // If there's an actual selection, replace it; otherwise range is a collapsed cursor
         query.replaceSubrange(range, with: symbol)
 
-        // Move the cursor to just after the inserted text
-        let offset = query.distance(from: query.startIndex, to: range.lowerBound)
         let newIndex = query.index(query.startIndex, offsetBy: offset + symbol.count)
         self.selection = TextSelection(insertionPoint: newIndex)
     }

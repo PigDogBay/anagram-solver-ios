@@ -117,6 +117,7 @@
 		4D45EFBA1A9DFABA00C40BB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45EFB91A9DFABA00C40BB4 /* AppDelegate.swift */; };
 		4D45EFC11A9DFABA00C40BB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFC01A9DFABA00C40BB4 /* Images.xcassets */; };
 		4D45EFC41A9DFABA00C40BB4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D45EFC21A9DFABA00C40BB4 /* LaunchScreen.xib */; };
+		4D8DEA2A306BBC0D009FA880 /* SearchBarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8DEA28306BBC00009FA880 /* SearchBarViewModelTests.swift */; };
 		4DBBEEA9239A7C3800ADCA41 /* colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBBEEA8239A7C3800ADCA41 /* colors.xcassets */; };
 		4DE5CA8B238EB6170013D3F5 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5CA89238EB6170013D3F5 /* words.txt */; };
 		4DE5CA8D238EB6250013D3F5 /* sowpods.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5CA8C238EB6250013D3F5 /* sowpods.txt */; };
@@ -279,6 +280,7 @@
 		4D45EFC31A9DFABA00C40BB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4D45EFC91A9DFABA00C40BB4 /* AnagramSolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnagramSolverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D45EFCE1A9DFABA00C40BB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D8DEA28306BBC00009FA880 /* SearchBarViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModelTests.swift; sourceTree = "<group>"; };
 		4DBBEEA8239A7C3800ADCA41 /* colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = colors.xcassets; sourceTree = "<group>"; };
 		4DE5CA89238EB6170013D3F5 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		4DE5CA8C238EB6250013D3F5 /* sowpods.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sowpods.txt; sourceTree = "<group>"; };
@@ -508,10 +510,11 @@
 			isa = PBXGroup;
 			children = (
 				4D45EFCD1A9DFABA00C40BB4 /* Supporting Files */,
+				0067FCB42F97A65900819282 /* FiltersTests.swift */,
 				008C16AF2F8E53EF00520640 /* MatchesViewModelTests.swift */,
+				4D8DEA28306BBC00009FA880 /* SearchBarViewModelTests.swift */,
 				009283D12F59B960008439F2 /* StoreViewModelTests.swift */,
 				008C16B92F8E5E4100520640 /* WordEngineTests.swift */,
-				0067FCB42F97A65900819282 /* FiltersTests.swift */,
 			);
 			path = AnagramSolverTests;
 			sourceTree = "<group>";
@@ -877,6 +880,7 @@
 				008C16BA2F8E5E4800520640 /* WordEngineTests.swift in Sources */,
 				008C16B52F8E55F300520640 /* Filters.swift in Sources */,
 				008C16B22F8E552A00520640 /* DefinitionViewModel.swift in Sources */,
+				4D8DEA2A306BBC0D009FA880 /* SearchBarViewModelTests.swift in Sources */,
 				009283D22F59B960008439F2 /* StoreViewModelTests.swift in Sources */,
 				008C16B12F8E53FD00520640 /* MatchesViewModelTests.swift in Sources */,
 				008C16B82F8E571500520640 /* Strings.swift in Sources */,
