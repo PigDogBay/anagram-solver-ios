@@ -57,6 +57,13 @@ import SwiftUtils
     func updateQuery (_ newValue : String) {
         let working = normalize(newValue)
         guard working != query else { return }
+        
+        if !isValid(selection, in: query){
+            query = working
+            selection = TextSelection(insertionPoint: working.endIndex)
+            return
+        }
+        
         // Where was the cursor (end of selection), in terms of the normalized text?
         var cursor = working.count
         if let selection, case .selection(let r) = selection.indices {

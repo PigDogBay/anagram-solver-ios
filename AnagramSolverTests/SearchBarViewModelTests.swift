@@ -10,6 +10,179 @@ import Testing
 import SwiftUI
 @testable import AnagramSolver
 
+@Suite("SearchBarViewModel Update Query Tests")
+struct SearchBarViewModelUpdateQueryTests {
+    private struct UpdateQueryCase {
+        let query: String
+        let selection: TextSelection?
+        let update: String
+        let expected: String
+        let expectedSelection: TextSelection?
+    }
+    
+    private func verifyUpdateQuery(
+        _ testCase: UpdateQueryCase,
+        sourceLocation: SourceLocation = #_sourceLocation
+    ) {
+        let viewModel = SearchBarViewModel()
+        viewModel.query = testCase.query
+        viewModel.selection = testCase.selection
+
+        viewModel.updateQuery(testCase.update)
+
+        #expect(viewModel.query == testCase.expected, sourceLocation: sourceLocation)
+        #expect(viewModel.selection == testCase.expectedSelection, sourceLocation: sourceLocation)
+    }
+
+    @Test("Empty query, nil selection, update with abc, expect \"\" nil")
+    func updateEmptyNilWithEmpty() {
+        verifyUpdateQuery(
+            UpdateQueryCase(
+                query: "",
+                selection: nil,
+                update: "",
+                expected: "",
+                expectedSelection: nil
+            )
+        )
+    }
+
+    @Test("Empty query, nil selection, update with abc, expect abc|")
+    func updateEmptyNilWithABC() {
+        verifyUpdateQuery(
+            UpdateQueryCase(
+                query: "",
+                selection: nil,
+                update: "abc",
+                expected: "abc",
+                expectedSelection: TextSelection(insertionPoint: "abc".endIndex)
+            )
+        )
+    }
+    
+    @Test("abc| to abc|d")
+    func updateToABCD() {
+        verifyUpdateQuery(
+            UpdateQueryCase(
+                query: "abc",
+                selection: TextSelection(insertionPoint: "abc".endIndex),
+                update: "abcd",
+                expected: "abcd",
+                expectedSelection: TextSelection(insertionPoint: "abc".endIndex)
+            )
+        )
+    }
+
+    @Test("…| to ...|")
+    func updateToEllipsis() {
+        let settings = Settings()
+        settings.fullStopToQuestionMark = false
+        verifyUpdateQuery(
+            UpdateQueryCase(
+                query: "…",
+                selection: TextSelection(insertionPoint: "…".endIndex),
+                update: "…",
+                expected: "...",
+                expectedSelection: TextSelection(insertionPoint: "...".endIndex)
+            )
+        )
+    }
+
+    @Test("|… to |...")
+    func updateToEllipsisStartIndex() {
+        let settings = Settings()
+        settings.fullStopToQuestionMark = false
+        verifyUpdateQuery(
+            UpdateQueryCase(
+                query: "…",
+                selection: TextSelection(insertionPoint: "…".startIndex),
+                update: "…",
+                expected: "...",
+                expectedSelection: TextSelection(insertionPoint: "...".startIndex)
+            )
+        )
+    }
+
+    @Test("x…|x to x...|x")
+    func updateToEllipsisXerox() {
+        let settings = Settings()
+        settings.fullStopToQuestionMark = false
+        verifyUpdateQuery(
+            UpdateQueryCase(
+                query: "x…x",
+                selection: TextSelection(insertionPoint: "x…".endIndex),
+                update: "x…x",
+                expected: "x...x",
+                expectedSelection: TextSelection(insertionPoint: "x...".endIndex)
+            )
+        )
+    }
+
+    @Test("…| to ???|")
+    func updateToEllipsisQM() {
+        let settings = Settings()
+        settings.fullStopToQuestionMark = true
+        verifyUpdateQuery(
+            UpdateQueryCase(
+                query: "…",
+                selection: TextSelection(insertionPoint: "…".endIndex),
+                update: "…",
+                expected: "???",
+                expectedSelection: TextSelection(insertionPoint: "???".endIndex)
+            )
+        )
+    }
+
+    @Test("Space to ?")
+    func updateToSpaceToQM() {
+        let settings = Settings()
+        settings.fullStopToQuestionMark = true
+        settings.spaceToQuestionMark = true
+        verifyUpdateQuery(
+            UpdateQueryCase(
+                query: "   ",
+                selection: TextSelection(insertionPoint: "   ".endIndex),
+                update: "   ",
+                expected: "???",
+                expectedSelection: TextSelection(insertionPoint: "???".endIndex)
+            )
+        )
+    }
+
+    @Test("ab|..|ef ab??|ef")
+    func updateRange() {
+        let settings = Settings()
+        settings.fullStopToQuestionMark = true
+        verifyUpdateQuery(
+            UpdateQueryCase(
+                query: "ab..ef",
+                selection: TextSelection(range: "ab".endIndex..<"ab..".endIndex),
+                update: "ab..ef",
+                expected: "ab??ef",
+                expectedSelection: TextSelection(insertionPoint: "ab??".endIndex)
+            )
+        )
+    }
+
+    @Test("ab.  | ab?|")
+    func updateBadRange() {
+        let settings = Settings()
+        settings.fullStopToQuestionMark = true
+        verifyUpdateQuery(
+            UpdateQueryCase(
+                query: "ab.",
+                selection: TextSelection(insertionPoint: "ab.   ".endIndex),
+                update: "ab.",
+                expected: "ab?",
+                expectedSelection: TextSelection(insertionPoint: "ab?".endIndex)
+            )
+        )
+    }
+
+
+
+}
+
 @Suite("SearchBarViewModel Insert Symbol Tests")
 struct SearchBarViewModelInsertTests {
     
@@ -162,7 +335,7 @@ struct SearchBarViewModelInsertTests {
 
 @Suite("SearchBarViewModel ShowMe Regression Tests")
 struct SearchBarViewModelRegressionTests {
-    
+   
     ///Keyboard type B will convert three dots into an ellipsis
     ///The is now way yet to disable this behaviour in iOS27
     @Test("Converting …| to ...|")
@@ -170,6 +343,7 @@ struct SearchBarViewModelRegressionTests {
         let initial = "…"
         let expected = "..."
         let viewModel = SearchBarViewModel()
+        Settings().fullStopToQuestionMark = false
         //UITextfield will set query / selection values to the following
         viewModel.query = initial
         viewModel.selection = TextSelection(insertionPoint: initial.endIndex)
@@ -198,6 +372,7 @@ struct SearchBarViewModelRegressionTests {
         let initialQuery = "a…b"
         let expectedQuery = "a...b"
         let viewModel = SearchBarViewModel()
+        Settings().fullStopToQuestionMark = false
         //UITextfield will set query to be a…b (via the binding) and then call onChange(){updateQuery}
         viewModel.query = initialQuery
         //Place cursor at a…|b
