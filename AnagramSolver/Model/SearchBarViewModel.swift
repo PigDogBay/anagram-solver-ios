@@ -78,7 +78,9 @@ import SwiftUtils
     
     ///Inserts the symbol at the current cursor position, also takes account of the any text selection
     func insert(symbol : String){
-        guard let selection, case .selection(let range) = selection.indices else {
+        guard let selection,
+            case .selection(let range) = selection.indices,
+            isValid(selection, in: query) else {
             // No tracked selection (e.g. field not focused) — fall back to append
             setQuery(query + symbol)
             return
@@ -91,5 +93,20 @@ import SwiftUtils
 
         let newIndex = query.index(query.startIndex, offsetBy: offset + symbol.count)
         self.selection = TextSelection(insertionPoint: newIndex)
+    }
+
+    /// Validates whether a `TextSelection` falls within the valid range of a given string.
+    /// - Parameters:
+    ///   - selection: The optional `TextSelection` to validate.
+    ///   - text: The target string being selected.
+    /// - Returns: `true` if the selection is non-nil and completely within the string's bounds; otherwise `false`.
+    func isValid(_ selection: TextSelection?, in text: String) -> Bool {
+        guard let selection,
+              case .selection(let range) = selection.indices else { return false }
+
+        return range.lowerBound >= text.startIndex
+            && range.upperBound <= text.endIndex
+            && range.lowerBound.samePosition(in: text) != nil
+            && range.upperBound.samePosition(in: text) != nil
     }
 }

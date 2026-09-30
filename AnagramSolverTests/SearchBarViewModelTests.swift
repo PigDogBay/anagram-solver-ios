@@ -21,6 +21,46 @@ struct SearchBarViewModelInsertTests {
     }
    
     
+    @Test("Inserting symbol with index out of range, appends to end")
+    func insertSelectionOutOfRange() {
+        let initialQuery = "abc"
+        let initialSelection : TextSelection = TextSelection(insertionPoint: "abcdef".endIndex)
+        let expectedQuery = "abc?"
+        let expectedSelection = TextSelection(insertionPoint: expectedQuery.endIndex)
+
+        let viewModel = create(initialQuery, initialSelection)
+        viewModel.insert(symbol: "?")
+        #expect(viewModel.query == expectedQuery)
+        #expect(viewModel.selection == expectedSelection)
+    }
+
+    @Test("Inserting symbol with end index out of range, appends to end")
+    func insertSelectionEndOutOfRange() {
+        let initialQuery = "abc"
+        let initialSelection : TextSelection = TextSelection(range: "abc".startIndex ..< "abcdef".endIndex)
+        let expectedQuery = "abc?"
+        let expectedSelection = TextSelection(insertionPoint: expectedQuery.endIndex)
+
+        let viewModel = create(initialQuery, initialSelection)
+        viewModel.insert(symbol: "?")
+        #expect(viewModel.query == expectedQuery)
+        #expect(viewModel.selection == expectedSelection)
+    }
+
+
+    @Test("Inserting symbol with start and end index out of range, appends to end")
+    func insertSelectionStartOutOfRange() {
+        let initialQuery = "abc"
+        let initialSelection : TextSelection = TextSelection(range: "abcd".endIndex ..< "abcdef".endIndex)
+        let expectedQuery = "abc?"
+        let expectedSelection = TextSelection(insertionPoint: expectedQuery.endIndex)
+
+        let viewModel = create(initialQuery, initialSelection)
+        viewModel.insert(symbol: "?")
+        #expect(viewModel.query == expectedQuery)
+        #expect(viewModel.selection == expectedSelection)
+    }
+
     @Test("Inserting symbol with no selection appends to end")
     func insertSelectionNil() {
         let initialQuery = "moonstarer"
