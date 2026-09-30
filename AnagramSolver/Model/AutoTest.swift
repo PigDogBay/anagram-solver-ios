@@ -9,12 +9,13 @@
 import Foundation
 import SwiftUtils
 
+
 @MainActor
 class AutoTest {
     private let model : Model
     private let appVM : AppViewModel
     private let randomQuery = RandomQuery()
-    
+    private let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     init(model: Model, appVM: AppViewModel) {
         self.model = model
         self.appVM = appVM
@@ -59,11 +60,14 @@ class AutoTest {
     }
     
     private func randomQuery() async throws {
-        self.appVM.searchBarVM.selection = appVM.searchBarVM.query.randomTextSelection()
+        self.appVM.searchBarVM.selection = appVM.searchBarVM.query.mpdbRandomTextSelection()
         self.appVM.searchBarVM.showMe(example: self.randomQuery.query())
         try await Task.sleep(for: .seconds(1))
-        self.appVM.searchBarVM.selection = appVM.searchBarVM.query.randomTextSelection()
+        self.appVM.searchBarVM.selection = appVM.searchBarVM.query.mpdbRandomTextSelection()
         try await Task.sleep(for: .seconds(1))
-        
+        if Bool.random() {
+            self.appVM.searchBarVM.insert(symbol: alphabet.randomElement() ?? "?")
+            try await Task.sleep(for: .seconds(1))
+        }
     }
 }
