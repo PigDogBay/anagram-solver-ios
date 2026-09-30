@@ -12,15 +12,6 @@ struct SymbolBar : View {
     let haptic = UIImpactFeedbackGenerator(style: .light)
 
     var body: some View {
-        if #available(iOS 26.0, *) {
-            return glassBar
-        } else {
-            return ultraThinBar
-        }
-
-    }
-    
-    private var glassBar : some View {
         HStack(spacing: 0) {
             ForEach(searchBarVM.symbols, id: \.0) { char, icon in
                 Button {
@@ -39,31 +30,4 @@ struct SymbolBar : View {
         }
         .padding(.horizontal, 12)
     }
-    
-    //Simulates glass effect using ultraThinMaterial, shadow and border
-    private var ultraThinBar : some View {
-        HStack(spacing: 25) {
-            ForEach(searchBarVM.symbols, id: \.0) { char, icon in
-                Button {
-                    haptic.impactOccurred()
-                    searchBarVM.insert(symbol: char)
-                } label: {
-                    Image(systemName: icon)
-                        .font(.system(size: 20, weight: .semibold))
-                        .foregroundColor(Color("accentColor"))
-                }
-            }
-        }
-        .padding(.vertical, 12)
-        .padding(.horizontal, 25)
-        .background(.ultraThinMaterial)
-        .clipShape(Capsule())
-        .overlay(
-            Capsule()
-                .stroke(.white.opacity(0.2), lineWidth: 0.5) // Subtle border for depth
-        )
-        .shadow(color: .black.opacity(0.15), radius: 10, x: 0, y: 5)
-
-    }
-
 }
