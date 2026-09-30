@@ -41,8 +41,7 @@ class AutoTest {
             print("AutoTest: Loading")
         case .ready:
             print("AutoTest: Ready")
-            self.appVM.searchBarVM.showMe(example: self.randomQuery.query())
-            try await Task.sleep(for: .seconds(2))
+            try await randomQuery()
             self.appVM.search()
         case .searching:
             print("AutoTest: Searching")
@@ -57,6 +56,14 @@ class AutoTest {
         case .cancelled:
             print("Search stopped")
         }
+    }
+    
+    private func randomQuery() async throws {
+        self.appVM.searchBarVM.selection = appVM.searchBarVM.query.randomTextSelection()
+        self.appVM.searchBarVM.showMe(example: self.randomQuery.query())
+        try await Task.sleep(for: .seconds(1))
+        self.appVM.searchBarVM.selection = appVM.searchBarVM.query.randomTextSelection()
+        try await Task.sleep(for: .seconds(1))
         
     }
 }
