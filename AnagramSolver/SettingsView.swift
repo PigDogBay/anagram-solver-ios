@@ -167,7 +167,9 @@ struct SettingsView: View {
             Section(header: Text("KEYBOARD"),
                     footer: Text("Use a monospaced font for the query and filter input fields")){
                 showKeyboardToggle
+                    .accessibilityIdentifier("showKeyboardToggle")
                 showSymbolBarToggle
+                    .accessibilityIdentifier("symbolBarToggle")
                 dictationToggle
                     .accessibilityIdentifier("dictationToggle")
 

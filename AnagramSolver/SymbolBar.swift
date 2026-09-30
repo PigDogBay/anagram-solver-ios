@@ -26,6 +26,7 @@ struct SymbolBar : View {
                         .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
+                .accessibilityIdentifier(char)
             }
         }
         .padding(.horizontal, 12)
