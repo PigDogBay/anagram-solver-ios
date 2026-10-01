@@ -19,6 +19,7 @@ enum NavigationScreens : Hashable {
 class AppViewModel {
     let model = Model()
     let searchBarVM = SearchBarViewModel()
+    @ObservationIgnored let ratings = Ratings(appId: Strings.appId)
     @ObservationIgnored let settings = Settings()
     @ObservationIgnored let ads = Ads()
     @ObservationIgnored private var autoTest : AutoTest? = nil
@@ -105,6 +106,7 @@ class AppViewModel {
         filters.isActive = false
         goBack()
         model.appState = .ready
+        ratings.requestRating()
     }
     
     func settingsExited(didChangeWordList : Bool){
