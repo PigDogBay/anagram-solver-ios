@@ -104,7 +104,7 @@ struct MatchesViewModelTests {
         let content = result[0]
         
         #expect(content.contains("Available on the App Store"))
-        #expect(content.contains("https://itunes.apple.com/app/"))
+        #expect(content.contains("https://apps.apple.com/app/"))
     }
 
 
