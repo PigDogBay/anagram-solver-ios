@@ -18,8 +18,20 @@ class SearchTests: XCTestCase {
 
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
+        
+        //
+        //Reset the settings
+        //
+        let app = XCUIApplication()
+        //press settings button
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        //press Reset button to ensure settings are in a known state
+        app.navigationBars.buttons["Reset"].tap()
+        //Accessibility ID can be applied to child elements, so need to use first match
+        app.alerts.buttons["dialogResetSettings"].firstMatch.tap()
+        //press back button
+        app.navigationBars.buttons.element(boundBy: 0).tap()
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
     override func tearDownWithError() throws {
