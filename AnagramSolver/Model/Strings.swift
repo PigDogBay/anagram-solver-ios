@@ -12,7 +12,7 @@ struct Strings {
     static var version : String {Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String }
     static let appId = "id973923699"
     static let privacyURL = "https://pigdogbay.blogspot.co.uk/2018/05/privacy-policy.html"
-    static let itunesAppURL = "https://itunes.apple.com/app/"+Strings.appId
+    static let itunesAppURL = "https://apps.apple.com/app/"+Strings.appId+"?action=write-review"
     static let userGuideURL = "https://pigdogbay.blogspot.co.uk/2017/11/anagram-solver-guide.html"
     static let emailAddress = "mpdbailey@yahoo.co.uk"
     static let webAddress = "www.mpdbailey.co.uk"

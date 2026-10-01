@@ -42,7 +42,8 @@ class AboutViewModel {
     }
     
     class func rate(){
-        UIApplication.shared.open(URL(string: Strings.itunesAppURL)!, options: [:])
+        guard let url = URL(string: Strings.itunesAppURL) else {return}
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 
     func feedback(){
