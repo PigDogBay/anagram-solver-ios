@@ -13,7 +13,7 @@ struct SearchBarView : View {
     @Environment(AppViewModel.self) var appVM
 
     var body: some View {
-        return TextField("Enter letters", text: $searchBarVM.query, selection: $searchBarVM.selection)
+        queryTextField
             .onChange(of: searchBarVM.query){ oldValue, newValue in
                 if (oldValue != newValue) {
                     searchBarVM.updateQuery(newValue)
@@ -42,6 +42,16 @@ struct SearchBarView : View {
                 guard !Task.isCancelled else { return }
                 isFocused = true
             }
+    }
+
+    ///Selection binding is iOS 26+ only, see SearchBarViewModel.isSelectionSupported
+    @ViewBuilder
+    private var queryTextField : some View {
+        if #available(iOS 26, *) {
+            TextField("Enter letters", text: $searchBarVM.query, selection: $searchBarVM.selection)
+        } else {
+            TextField("Enter letters", text: $searchBarVM.query)
+        }
     }
 }
 

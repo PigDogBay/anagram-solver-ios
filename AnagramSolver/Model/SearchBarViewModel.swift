@@ -28,6 +28,14 @@ import SwiftUtils
         ("!","exclamationmark")
     ]
 
+    ///The query TextField is only bound to selection on iOS 26+
+    ///On iOS 18, SwiftUI crashes when the selection and text are briefly out of sync (eg when accessibility reads the TextField)
+    ///Without the binding, selection would never track the cursor, so it is kept nil and symbols are appended instead
+    static var isSelectionSupported : Bool {
+        if #available(iOS 26, *) { return true }
+        return false
+    }
+
     func isValid() -> Bool{
         let clean = searchParser.clean(query)
         return clean.length>0
@@ -37,7 +45,11 @@ import SwiftUtils
     ///If selection is not updated, this will cause a crash in iOS 18
     func setQuery(_ newValue: String) {
         query = newValue
-        selection = TextSelection(insertionPoint: newValue.endIndex)
+        moveCursor(to: newValue.endIndex)
+    }
+
+    private func moveCursor(to index : String.Index) {
+        selection = Self.isSelectionSupported ? TextSelection(insertionPoint: index) : nil
     }
 
     func showMe(example : String){
@@ -60,7 +72,7 @@ import SwiftUtils
         
         if !isValid(selection, in: query){
             query = working
-            selection = TextSelection(insertionPoint: working.endIndex)
+            moveCursor(to: working.endIndex)
             return
         }
         
@@ -71,7 +83,7 @@ import SwiftUtils
         }
         query = working
         let idx = working.index(working.startIndex, offsetBy: min(cursor, working.count))
-        selection = TextSelection(insertionPoint: idx)
+        moveCursor(to: idx)
     }
     
     /// The .webSearch (Allow Dictation) keyboard has smart punctuation so,
@@ -85,10 +97,11 @@ import SwiftUtils
     
     ///Inserts the symbol at the current cursor position, also takes account of the any text selection
     func insert(symbol : String){
-        guard let selection,
+        guard Self.isSelectionSupported,
+            let selection,
             case .selection(let range) = selection.indices,
             isValid(selection, in: query) else {
-            // No tracked selection (e.g. field not focused) — fall back to append
+            // No tracked selection (e.g. field not focused or iOS 18) — fall back to append
             setQuery(query + symbol)
             return
         }
@@ -99,7 +112,7 @@ import SwiftUtils
         query.replaceSubrange(range, with: symbol)
 
         let newIndex = query.index(query.startIndex, offsetBy: offset + symbol.count)
-        self.selection = TextSelection(insertionPoint: newIndex)
+        moveCursor(to: newIndex)
     }
 
     /// Validates whether a `TextSelection` falls within the valid range of a given string.
