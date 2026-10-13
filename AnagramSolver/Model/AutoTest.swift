@@ -29,7 +29,9 @@ class AutoTest {
     
     private func stateDidChange(_ newState : AppStates) {
         Task {
-            try await update(newState)
+            do {
+                try await update(newState)
+            } catch {}
         }
     }
     
