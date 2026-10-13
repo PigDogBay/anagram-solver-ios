@@ -47,7 +47,6 @@ struct SearchBarViewModelUpdateQueryTests {
         )
     }
 
-    @available(iOS 26.0, *)
     @Test("Empty query, nil selection, update with abc, expect abc|")
     func updateEmptyNilWithABC() {
         verifyUpdateQuery(
@@ -61,7 +60,6 @@ struct SearchBarViewModelUpdateQueryTests {
         )
     }
     
-    @available(iOS 26.0, *)
     @Test("abc| to abc|d")
     func updateToABCD() {
         verifyUpdateQuery(
@@ -75,7 +73,6 @@ struct SearchBarViewModelUpdateQueryTests {
         )
     }
 
-    @available(iOS 26.0, *)
     @Test("…| to ...|")
     func updateToEllipsis() {
         let settings = Settings()
@@ -91,7 +88,6 @@ struct SearchBarViewModelUpdateQueryTests {
         )
     }
 
-    @available(iOS 26.0, *)
     @Test("|… to |...")
     func updateToEllipsisStartIndex() {
         let settings = Settings()
@@ -107,7 +103,6 @@ struct SearchBarViewModelUpdateQueryTests {
         )
     }
 
-    @available(iOS 26.0, *)
     @Test("x…|x to x...|x")
     func updateToEllipsisXerox() {
         let settings = Settings()
@@ -123,7 +118,6 @@ struct SearchBarViewModelUpdateQueryTests {
         )
     }
 
-    @available(iOS 26.0, *)
     @Test("…| to ???|")
     func updateToEllipsisQM() {
         let settings = Settings()
@@ -139,7 +133,6 @@ struct SearchBarViewModelUpdateQueryTests {
         )
     }
 
-    @available(iOS 26.0, *)
     @Test("Space to ?")
     func updateToSpaceToQM() {
         let settings = Settings()
@@ -156,7 +149,6 @@ struct SearchBarViewModelUpdateQueryTests {
         )
     }
 
-    @available(iOS 26.0, *)
     @Test("ab|..|ef ab??|ef")
     func updateRange() {
         let settings = Settings()
@@ -172,7 +164,6 @@ struct SearchBarViewModelUpdateQueryTests {
         )
     }
 
-    @available(iOS 26.0, *)
     @Test("ab.  | ab?|")
     func updateBadRange() {
         let settings = Settings()
@@ -187,10 +178,8 @@ struct SearchBarViewModelUpdateQueryTests {
             )
         )
     }
-
-
-
 }
+
 
 @Suite("SearchBarViewModel Insert Symbol Tests")
 struct SearchBarViewModelInsertTests {
@@ -203,7 +192,6 @@ struct SearchBarViewModelInsertTests {
     }
    
     
-    @available(iOS 26.0, *)
     @Test("Inserting symbol with index out of range, appends to end")
     func insertSelectionOutOfRange() {
         let initialQuery = "abc"
@@ -217,7 +205,6 @@ struct SearchBarViewModelInsertTests {
         #expect(viewModel.selection == expectedSelection)
     }
 
-    @available(iOS 26.0, *)
     @Test("Inserting symbol with end index out of range, appends to end")
     func insertSelectionEndOutOfRange() {
         let initialQuery = "abc"
@@ -232,7 +219,6 @@ struct SearchBarViewModelInsertTests {
     }
 
 
-    @available(iOS 26.0, *)
     @Test("Inserting symbol with start and end index out of range, appends to end")
     func insertSelectionStartOutOfRange() {
         let initialQuery = "abc"
@@ -246,7 +232,6 @@ struct SearchBarViewModelInsertTests {
         #expect(viewModel.selection == expectedSelection)
     }
 
-    @available(iOS 26.0, *)
     @Test("Inserting symbol with no selection appends to end")
     func insertSelectionNil() {
         let initialQuery = "moonstarer"
@@ -260,7 +245,6 @@ struct SearchBarViewModelInsertTests {
         #expect(viewModel.selection == expectedSelection)
     }
     
-    @available(iOS 26.0, *)
     @Test("Insert at position 0")
     func insertPositionZero(){
         let initialQuery = "moonstarer"
@@ -275,7 +259,6 @@ struct SearchBarViewModelInsertTests {
 
     }
 
-    @available(iOS 26.0, *)
     @Test("Insert in the middle of the query")
     func insertMiddle(){
         let initialQuery = "moonstarer"
@@ -289,7 +272,6 @@ struct SearchBarViewModelInsertTests {
         #expect(viewModel.selection == expectedSelection)
     }
 
-    @available(iOS 26.0, *)
     @Test("Insert at the end of the query")
     func insertEnd(){
         let initialQuery = "moonstarer"
@@ -303,7 +285,6 @@ struct SearchBarViewModelInsertTests {
         #expect(viewModel.selection == expectedSelection)
     }
 
-    @available(iOS 26.0, *)
     @Test("Insert with all selected")
     func insertSelectedAll(){
         let initialQuery = "moonstarer"
@@ -317,7 +298,6 @@ struct SearchBarViewModelInsertTests {
         #expect(viewModel.selection == expectedSelection)
     }
 
-    @available(iOS 26.0, *)
     @Test("Insert with one char selected")
     func insertSelectedOne(){
         let initialQuery = "moonstarer"
@@ -333,7 +313,6 @@ struct SearchBarViewModelInsertTests {
         #expect(viewModel.selection == expectedSelection)
     }
 
-    @available(iOS 26.0, *)
     @Test("Insert with two chars selected")
     func insertSelectedTwoChars(){
         let initialQuery = "moonstarer"
@@ -352,12 +331,11 @@ struct SearchBarViewModelInsertTests {
 }
 
 
-@Suite("SearchBarViewModel ShowMe Regression Tests")
+@Suite("SearchBarViewModel Regression Tests")
 struct SearchBarViewModelRegressionTests {
    
     ///Keyboard type B will convert three dots into an ellipsis
     ///The is now way yet to disable this behaviour in iOS27
-    @available(iOS 26.0, *)
     @Test("Converting …| to ...|")
     func updateQueryEllipsisCursorPos1(){
         let initial = "…"
@@ -373,7 +351,6 @@ struct SearchBarViewModelRegressionTests {
         #expect(viewModel.selection == TextSelection(insertionPoint: expected.endIndex))
     }
     
-    @available(iOS 26.0, *)
     @Test("Converting ab…| to ab...|")
     func updateQueryEllipsisCursorPos2(){
         let initial = "ab…"
@@ -388,7 +365,6 @@ struct SearchBarViewModelRegressionTests {
         #expect(viewModel.selection == TextSelection(insertionPoint: expected.endIndex))
     }
 
-    @available(iOS 26.0, *)
     @Test("Converting a…|b to a...|b")
     func updateQueryEllipsisCursorPos3(){
         let initialQuery = "a…b"
@@ -406,7 +382,6 @@ struct SearchBarViewModelRegressionTests {
         #expect(viewModel.selection == TextSelection(insertionPoint: expectedQuery.index(expectedQuery.startIndex, offsetBy: 4)))
     }
     
-    @available(iOS 26.0, *)
     @Test("Ensure that the selection is set to the end of the string")
     func showMeCrash(){
         let longString = "this is a longer string here"
@@ -421,38 +396,37 @@ struct SearchBarViewModelRegressionTests {
         #expect(viewModel.selection == TextSelection(insertionPoint: shortString.endIndex))
     }
 
-    @available(iOS 26.0, *)
-    @Test("Ensure spaces are still converted to hyphens")
+    @Test("Ensure spaces are still converted to hyphens and upper case setting is respected")
     func showMeHyphen(){
         let spacedString = "babylon 5 alien breed"
-        let hyphenString = "babylon-5-alien-breed"
+        let hyphenString = "BABYLON-5-ALIEN-BREED"
         
         let settings = Settings()
-        let origValue = settings.spaceToQuestionMark
         settings.spaceToQuestionMark = false
+        settings.useUpperCase = true
         
         let viewModel = SearchBarViewModel()
         viewModel.showMe(example: spacedString)
-        #expect(viewModel.query == spacedString)
+        #expect(viewModel.query == spacedString.uppercased())
 
+        settings.useUpperCase = true
         settings.spaceToQuestionMark = true
         viewModel.showMe(example: spacedString)
         #expect(viewModel.query == hyphenString)
         
-        //Restore original value
-        settings.spaceToQuestionMark = origValue
+        settings.spaceToQuestionMark = false
+        settings.useUpperCase = false
     }
 
 }
 
-@Suite("SearchBarViewModel ShowMe Regression Tests - for iOS 18")
-    struct SearchBarViewModelNoSelectionTests {
+@Suite("SearchBarViewModelIOS18 Tests")
+struct SearchBarViewModelIOS18Tests {
 
-    @Test("Inserting symbol appends to end and selection stays nil")
+    @Test("Inserting symbol appends to end")
     func insertAppends() {
-        let viewModel = SearchBarViewModel()
+        let viewModel = SearchBarViewModelIOS18()
         viewModel.query = "moonstarer"
-        viewModel.selection = TextSelection(insertionPoint: viewModel.query.startIndex)
         viewModel.insert(symbol: "?")
         #expect(viewModel.query == "moonstarer?")
         #expect(viewModel.selection == nil)
@@ -460,11 +434,26 @@ struct SearchBarViewModelRegressionTests {
 
     @Test("Show me does not set a selection")
     func showMeNoSelection() {
-        let viewModel = SearchBarViewModel()
+        let viewModel = SearchBarViewModelIOS18()
         viewModel.showMe(example: "this is a longer string here")
         viewModel.showMe(example: "short")
+        #expect(viewModel.query == "short")
         #expect(viewModel.selection == nil)
     }
+    
+    @Test("Show me respects settings")
+    func showMeSettings() {
+        let settings = Settings()
+        settings.spaceToQuestionMark = true
+        settings.useUpperCase = true
+        
+        let viewModel = SearchBarViewModel()
+        viewModel.showMe(example: "babylon 5 alien breed")
+        #expect(viewModel.query == "BABYLON-5-ALIEN-BREED")
+        settings.spaceToQuestionMark = false
+        settings.useUpperCase = false
+    }
+
 
     @Test("Ellipsis is still converted without a selection")
     func updateQueryEllipsis() {
@@ -472,7 +461,7 @@ struct SearchBarViewModelRegressionTests {
         let origValue = settings.fullStopToQuestionMark
         settings.fullStopToQuestionMark = false
 
-        let viewModel = SearchBarViewModel()
+        let viewModel = SearchBarViewModelIOS18()
         viewModel.query = "ab…"
         viewModel.updateQuery("ab…")
         #expect(viewModel.query == "ab...")
