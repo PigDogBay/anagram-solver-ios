@@ -10,7 +10,7 @@ This repo is the SwiftUI iOS app (Anagram Solver by MPD Bailey Technology). It b
 
 ## Build & test
 
-Always build through the workspace (CocoaPods: `Google-Mobile-Ads-SDK`; `Pods/` is checked in, run `pod install` only if the Podfile changes). Run commands from this repo's root.
+Always build through the workspace. Google Mobile Ads and UMP come in via Swift Package Manager (pinned in `AnagramSolver.xcworkspace/xcshareddata/swiftpm/Package.resolved`); the app target needs `-ObjC` in Other Linker Flags for them. Run commands from this repo's root.
 
 ```sh
 DEST='platform=iOS Simulator,name=iPhone 18 Pro'

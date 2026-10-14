@@ -110,7 +110,8 @@
 		00F17DDF26AAB8EB00452020 /* AboutCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F17DDE26AAB8EB00452020 /* AboutCard.swift */; };
 		4D0543851CFDBE060084538A /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; };
 		4D0543861CFDBE060084538A /* SwiftUtils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0543811CFDBC530084538A /* SwiftUtils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4D1D6E621FA0CE33008466F2 /* Pods_AnagramSolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */; };
+		4D11DBFD307F8EBE001B9F88 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 4D11DBFC307F8EBE001B9F88 /* GoogleMobileAds */; };
+		4D11DC00307F8F7A001B9F88 /* GoogleUserMessagingPlatform in Frameworks */ = {isa = PBXBuildFile; productRef = 4D11DBFF307F8F7A001B9F88 /* GoogleUserMessagingPlatform */; };
 		4D3596411CFEEA50008D2FAF /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3596401CFEEA50008D2FAF /* Ads.swift */; };
 		4D45D7B01E2901BF00EC2D27 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D45D7AF1E2901BF00EC2D27 /* Settings.bundle */; };
 		4D45D7B31E2CF0C500EC2D27 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D45D7B21E2CF0C500EC2D27 /* Settings.swift */; };
@@ -127,7 +128,6 @@
 		4DE5CA8D238EB6250013D3F5 /* sowpods.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5CA8C238EB6250013D3F5 /* sowpods.txt */; };
 		4DE5CA8F238EB6330013D3F5 /* twl.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4DE5CA8E238EB6330013D3F5 /* twl.txt */; };
 		4DF7B6D61D10419F00A26A20 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF7B6D51D10419F00A26A20 /* StoreKit.framework */; };
-		B98A90515758048121BFEF80 /* Pods_AnagramSolverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7965FE98B3E9D2A1706D894 /* Pods_AnagramSolverTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -271,7 +271,6 @@
 		00F17DDC26A9E17300452020 /* FilterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCard.swift; sourceTree = "<group>"; };
 		00F17DDE26AAB8EB00452020 /* AboutCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCard.swift; sourceTree = "<group>"; };
 		4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftUtils.xcodeproj; path = ../SwiftUtils/SwiftUtils.xcodeproj; sourceTree = "<group>"; };
-		4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_AnagramSolver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3596401CFEEA50008D2FAF /* Ads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
 		4D45D7AF1E2901BF00EC2D27 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		4D45D7B21E2CF0C500EC2D27 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -291,11 +290,6 @@
 		4DE5CA8C238EB6250013D3F5 /* sowpods.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sowpods.txt; sourceTree = "<group>"; };
 		4DE5CA8E238EB6330013D3F5 /* twl.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = twl.txt; sourceTree = "<group>"; };
 		4DF7B6D51D10419F00A26A20 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		9F767D7B066CC063F11B0CB8 /* Pods-AnagramSolver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnagramSolver.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver.release.xcconfig"; sourceTree = "<group>"; };
-		C818D066BAB2E9CF4F60E3A1 /* Pods-AnagramSolverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnagramSolverTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnagramSolverTests/Pods-AnagramSolverTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EB50C070B1073CE365C9392E /* Pods-AnagramSolver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnagramSolver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver.debug.xcconfig"; sourceTree = "<group>"; };
-		F26459812A8DD854C17A8DEA /* Pods-AnagramSolverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnagramSolverTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnagramSolverTests/Pods-AnagramSolverTests.release.xcconfig"; sourceTree = "<group>"; };
-		F7965FE98B3E9D2A1706D894 /* Pods_AnagramSolverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnagramSolverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,7 +301,8 @@
 		4D45EFB11A9DFABA00C40BB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
-				4D1D6E621FA0CE33008466F2 /* Pods_AnagramSolver.framework in Frameworks */,
+				4D11DBFD307F8EBE001B9F88 /* GoogleMobileAds in Frameworks */,
+				4D11DC00307F8F7A001B9F88 /* GoogleUserMessagingPlatform in Frameworks */,
 				00B81C572AD56BAB00A4FF17 /* AppTrackingTransparency.framework in Frameworks */,
 				4DF7B6D61D10419F00A26A20 /* StoreKit.framework in Frameworks */,
 				4D0543851CFDBE060084538A /* SwiftUtils.framework in Frameworks */,
@@ -316,7 +311,6 @@
 		4D45EFC61A9DFABA00C40BB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
-				B98A90515758048121BFEF80 /* Pods_AnagramSolverTests.framework in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -429,10 +423,8 @@
 			isa = PBXGroup;
 			children = (
 				00B81C562AD56BAB00A4FF17 /* AppTrackingTransparency.framework */,
-				4D1D6E631FA0CE33008466F2 /* Pods_AnagramSolver.framework */,
 				4DF7B6D51D10419F00A26A20 /* StoreKit.framework */,
 				4D05437B1CFDBC530084538A /* SwiftUtils.xcodeproj */,
-				F7965FE98B3E9D2A1706D894 /* Pods_AnagramSolverTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -455,7 +447,6 @@
 				4D45EFCC1A9DFABA00C40BB4 /* AnagramSolverTests */,
 				00CD12D127CE326C008191B2 /* AnagramSolverUITests */,
 				4D45EFB51A9DFABA00C40BB4 /* Products */,
-				7FB7BD6A460C0022C46DE682 /* Pods */,
 				1E9D5EE9EB3E676642812536 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -529,17 +520,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7FB7BD6A460C0022C46DE682 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EB50C070B1073CE365C9392E /* Pods-AnagramSolver.debug.xcconfig */,
-				9F767D7B066CC063F11B0CB8 /* Pods-AnagramSolver.release.xcconfig */,
-				C818D066BAB2E9CF4F60E3A1 /* Pods-AnagramSolverTests.debug.xcconfig */,
-				F26459812A8DD854C17A8DEA /* Pods-AnagramSolverTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -565,12 +545,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D45EFD31A9DFABA00C40BB4 /* Build configuration list for PBXNativeTarget "AnagramSolver" */;
 			buildPhases = (
-				64B75DAE61084E7DD7508C15 /* [CP] Check Pods Manifest.lock */,
 				4D45EFB01A9DFABA00C40BB4 /* Sources */,
 				4D45EFB11A9DFABA00C40BB4 /* Frameworks */,
 				4D45EFB21A9DFABA00C40BB4 /* Resources */,
 				4D0543891CFDBE060084538A /* Embed Frameworks */,
-				EC7E5DDC287E01AD85DA20B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -578,6 +556,10 @@
 				4D0543881CFDBE060084538A /* PBXTargetDependency */,
 			);
 			name = AnagramSolver;
+			packageProductDependencies = (
+				4D11DBFC307F8EBE001B9F88 /* GoogleMobileAds */,
+				4D11DBFF307F8F7A001B9F88 /* GoogleUserMessagingPlatform */,
+			);
 			productName = AnagramSolver;
 			productReference = 4D45EFB41A9DFABA00C40BB4 /* AnagramSolver.app */;
 			productType = "com.apple.product-type.application";
@@ -586,7 +568,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D45EFD61A9DFABA00C40BB4 /* Build configuration list for PBXNativeTarget "AnagramSolverTests" */;
 			buildPhases = (
-				AE6A03C175EDED863D07CFC7 /* [CP] Check Pods Manifest.lock */,
 				4D45EFC51A9DFABA00C40BB4 /* Sources */,
 				4D45EFC61A9DFABA00C40BB4 /* Frameworks */,
 				4D45EFC71A9DFABA00C40BB4 /* Resources */,
@@ -643,6 +624,10 @@
 				Base,
 			);
 			mainGroup = 4D45EFAB1A9DFABA00C40BB4;
+			packageReferences = (
+				4D11DBFB307F8EBE001B9F88 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				4D11DBFE307F8F7A001B9F88 /* XCRemoteSwiftPackageReference "swift-package-manager-google-user-messaging-platform" */,
+			);
 			preferredProjectObjectVersion = 100;
 			productRefGroup = 4D45EFB51A9DFABA00C40BB4 /* Products */;
 			projectDirPath = "";
@@ -718,73 +703,6 @@
 			);
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		64B75DAE61084E7DD7508C15 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AnagramSolver-checkManifestLockResult.txt",
-			);
-			shellPath = /bin/sh;
-			shellScript = (
-				"diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null",
-				"if [ $? != 0 ] ; then",
-				"    # print error to STDERR",
-				"    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2",
-				"    exit 1",
-				"fi",
-				"# This output is used by Xcode 'outputs' to avoid re-running this script phase.",
-				"echo \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"",
-				"",
-			);
-			showEnvVarsInLog = 0;
-		};
-		AE6A03C175EDED863D07CFC7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AnagramSolverTests-checkManifestLockResult.txt",
-			);
-			shellPath = /bin/sh;
-			shellScript = (
-				"diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null",
-				"if [ $? != 0 ] ; then",
-				"    # print error to STDERR",
-				"    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2",
-				"    exit 1",
-				"fi",
-				"# This output is used by Xcode 'outputs' to avoid re-running this script phase.",
-				"echo \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"",
-				"",
-			);
-			showEnvVarsInLog = 0;
-		};
-		EC7E5DDC287E01AD85DA20B8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			shellPath = /bin/sh;
-			shellScript = (
-				"\"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-resources.sh\"",
-				"",
-			);
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		00CD12CC27CE326C008191B2 /* Sources */ = {
@@ -1101,7 +1019,6 @@
 		};
 		4D45EFD41A9DFABA00C40BB4 /* Debug configuration for PBXNativeTarget "AnagramSolver" */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB50C070B1073CE365C9392E /* Pods-AnagramSolver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = GlassIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1119,6 +1036,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.27.01;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pigdogbay.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1132,7 +1053,6 @@
 		};
 		4D45EFD51A9DFABA00C40BB4 /* Release configuration for PBXNativeTarget "AnagramSolver" */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F767D7B066CC063F11B0CB8 /* Pods-AnagramSolver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = GlassIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1150,6 +1070,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.27.01;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pigdogbay.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1161,7 +1085,6 @@
 		};
 		4D45EFD71A9DFABA00C40BB4 /* Debug configuration for PBXNativeTarget "AnagramSolverTests" */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C818D066BAB2E9CF4F60E3A1 /* Pods-AnagramSolverTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1185,7 +1108,6 @@
 		};
 		4D45EFD81A9DFABA00C40BB4 /* Release configuration for PBXNativeTarget "AnagramSolverTests" */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F26459812A8DD854C17A8DEA /* Pods-AnagramSolverTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1239,6 +1161,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D11DBFB307F8EBE001B9F88 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.11.0;
+			};
+		};
+		4D11DBFE307F8F7A001B9F88 /* XCRemoteSwiftPackageReference "swift-package-manager-google-user-messaging-platform" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D11DBFC307F8EBE001B9F88 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D11DBFB307F8EBE001B9F88 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+		4D11DBFF307F8F7A001B9F88 /* GoogleUserMessagingPlatform */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D11DBFE307F8F7A001B9F88 /* XCRemoteSwiftPackageReference "swift-package-manager-google-user-messaging-platform" */;
+			productName = GoogleUserMessagingPlatform;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4D45EFAC1A9DFABA00C40BB4 /* Project object */;
 }
