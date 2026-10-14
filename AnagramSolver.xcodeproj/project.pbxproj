@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 100;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -171,14 +171,12 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		4D0543891CFDBE060084538A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolder = Frameworks;
 			files = (
 				4D0543861CFDBE060084538A /* SwiftUtils.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -303,29 +301,23 @@
 /* Begin PBXFrameworksBuildPhase section */
 		00CD12CD27CE326C008191B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4D45EFB11A9DFABA00C40BB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				4D1D6E621FA0CE33008466F2 /* Pods_AnagramSolver.framework in Frameworks */,
 				00B81C572AD56BAB00A4FF17 /* AppTrackingTransparency.framework in Frameworks */,
 				4DF7B6D61D10419F00A26A20 /* StoreKit.framework in Frameworks */,
 				4D0543851CFDBE060084538A /* SwiftUtils.framework in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4D45EFC61A9DFABA00C40BB4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				B98A90515758048121BFEF80 /* Pods_AnagramSolverTests.framework in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -644,7 +636,6 @@
 				};
 			};
 			buildConfigurationList = 4D45EFAF1A9DFABA00C40BB4 /* Build configuration list for PBXProject "AnagramSolver" */;
-			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -652,6 +643,7 @@
 				Base,
 			);
 			mainGroup = 4D45EFAB1A9DFABA00C40BB4;
+			preferredProjectObjectVersion = 100;
 			productRefGroup = 4D45EFB51A9DFABA00C40BB4 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
@@ -689,16 +681,13 @@
 /* Begin PBXResourcesBuildPhase section */
 		00CD12CE27CE326C008191B2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				00D596982EE31E6300EF6D7A /* game.txt in Resources */,
 				00DEE1442BC7FEAF00669505 /* nabu.db in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4D45EFB21A9DFABA00C40BB4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				0081F01625B1BB6C00792552 /* wordlist-pt.txt in Resources */,
 				003E10EC253EF72400AE8155 /* wordlist-de.txt in Resources */,
@@ -720,25 +709,19 @@
 				00D596972EE31E6300EF6D7A /* game.txt in Resources */,
 				001AAC2326EA9093000CC6B6 /* phrases.txt in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4D45EFC71A9DFABA00C40BB4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				009283D52F59B984008439F2 /* InAppPurchaseStore.storekit in Resources */,
 				00D596962EE31E6300EF6D7A /* game.txt in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		64B75DAE61084E7DD7508C15 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
@@ -747,16 +730,22 @@
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-AnagramSolver-checkManifestLockResult.txt",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = (
+				"diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null",
+				"if [ $? != 0 ] ; then",
+				"    # print error to STDERR",
+				"    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2",
+				"    exit 1",
+				"fi",
+				"# This output is used by Xcode 'outputs' to avoid re-running this script phase.",
+				"echo \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"",
+				"",
+			);
 			showEnvVarsInLog = 0;
 		};
 		AE6A03C175EDED863D07CFC7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
@@ -765,30 +754,34 @@
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-AnagramSolverTests-checkManifestLockResult.txt",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = (
+				"diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null",
+				"if [ $? != 0 ] ; then",
+				"    # print error to STDERR",
+				"    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2",
+				"    exit 1",
+				"fi",
+				"# This output is used by Xcode 'outputs' to avoid re-running this script phase.",
+				"echo \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"",
+				"",
+			);
 			showEnvVarsInLog = 0;
 		};
 		EC7E5DDC287E01AD85DA20B8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-resources.sh\"\n";
+			shellScript = (
+				"\"${PODS_ROOT}/Target Support Files/Pods-AnagramSolver/Pods-AnagramSolver-resources.sh\"",
+				"",
+			);
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -796,7 +789,6 @@
 /* Begin PBXSourcesBuildPhase section */
 		00CD12CC27CE326C008191B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				00CD12DD27CE3CAD008191B2 /* UITestUtils.swift in Sources */,
 				00CD12D327CE326C008191B2 /* AnagramSolverUITests.swift in Sources */,
@@ -807,11 +799,9 @@
 				00E4B60827D20FD3002ACEF8 /* SettingsTests.swift in Sources */,
 				00CD12D527CE326C008191B2 /* AnagramSolverUITestsLaunchTests.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4D45EFB01A9DFABA00C40BB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				001059642F6308CD0064A149 /* FiltersView.swift in Sources */,
 				00EEA71D25CAC5050017F6A4 /* AboutViewModel.swift in Sources */,
@@ -883,11 +873,9 @@
 				001059662F6309C30064A149 /* TextFilterRow.swift in Sources */,
 				00F17DDD26A9E17300452020 /* FilterCard.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4D45EFC51A9DFABA00C40BB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				009283D42F59B97A008439F2 /* StoreViewModel.swift in Sources */,
 				008C16BA2F8E5E4800520640 /* WordEngineTests.swift in Sources */,
@@ -905,7 +893,6 @@
 				008C16B32F8E553F00520640 /* Model.swift in Sources */,
 				008C16B62F8E569F00520640 /* SearchHistoryModel.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -939,7 +926,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		00CD12D827CE326C008191B2 /* Debug */ = {
+		00CD12D827CE326C008191B2 /* Debug configuration for PBXNativeTarget "AnagramSolverUITests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
@@ -967,7 +954,7 @@
 			};
 			name = Debug;
 		};
-		00CD12D927CE326C008191B2 /* Release */ = {
+		00CD12D927CE326C008191B2 /* Release configuration for PBXNativeTarget "AnagramSolverUITests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
@@ -994,7 +981,7 @@
 			};
 			name = Release;
 		};
-		4D45EFD11A9DFABA00C40BB4 /* Debug */ = {
+		4D45EFD11A9DFABA00C40BB4 /* Debug configuration for PBXProject "AnagramSolver" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1056,7 +1043,7 @@
 			};
 			name = Debug;
 		};
-		4D45EFD21A9DFABA00C40BB4 /* Release */ = {
+		4D45EFD21A9DFABA00C40BB4 /* Release configuration for PBXProject "AnagramSolver" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1112,7 +1099,7 @@
 			};
 			name = Release;
 		};
-		4D45EFD41A9DFABA00C40BB4 /* Debug */ = {
+		4D45EFD41A9DFABA00C40BB4 /* Debug configuration for PBXNativeTarget "AnagramSolver" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB50C070B1073CE365C9392E /* Pods-AnagramSolver.debug.xcconfig */;
 			buildSettings = {
@@ -1143,7 +1130,7 @@
 			};
 			name = Debug;
 		};
-		4D45EFD51A9DFABA00C40BB4 /* Release */ = {
+		4D45EFD51A9DFABA00C40BB4 /* Release configuration for PBXNativeTarget "AnagramSolver" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F767D7B066CC063F11B0CB8 /* Pods-AnagramSolver.release.xcconfig */;
 			buildSettings = {
@@ -1172,7 +1159,7 @@
 			};
 			name = Release;
 		};
-		4D45EFD71A9DFABA00C40BB4 /* Debug */ = {
+		4D45EFD71A9DFABA00C40BB4 /* Debug configuration for PBXNativeTarget "AnagramSolverTests" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C818D066BAB2E9CF4F60E3A1 /* Pods-AnagramSolverTests.debug.xcconfig */;
 			buildSettings = {
@@ -1196,7 +1183,7 @@
 			};
 			name = Debug;
 		};
-		4D45EFD81A9DFABA00C40BB4 /* Release */ = {
+		4D45EFD81A9DFABA00C40BB4 /* Release configuration for PBXNativeTarget "AnagramSolverTests" */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F26459812A8DD854C17A8DEA /* Pods-AnagramSolverTests.release.xcconfig */;
 			buildSettings = {
@@ -1222,37 +1209,33 @@
 		00CD12DB27CE326C008191B2 /* Build configuration list for PBXNativeTarget "AnagramSolverUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00CD12D827CE326C008191B2 /* Debug */,
-				00CD12D927CE326C008191B2 /* Release */,
+				00CD12D827CE326C008191B2 /* Debug configuration for PBXNativeTarget "AnagramSolverUITests" */,
+				00CD12D927CE326C008191B2 /* Release configuration for PBXNativeTarget "AnagramSolverUITests" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		4D45EFAF1A9DFABA00C40BB4 /* Build configuration list for PBXProject "AnagramSolver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D45EFD11A9DFABA00C40BB4 /* Debug */,
-				4D45EFD21A9DFABA00C40BB4 /* Release */,
+				4D45EFD11A9DFABA00C40BB4 /* Debug configuration for PBXProject "AnagramSolver" */,
+				4D45EFD21A9DFABA00C40BB4 /* Release configuration for PBXProject "AnagramSolver" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		4D45EFD31A9DFABA00C40BB4 /* Build configuration list for PBXNativeTarget "AnagramSolver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D45EFD41A9DFABA00C40BB4 /* Debug */,
-				4D45EFD51A9DFABA00C40BB4 /* Release */,
+				4D45EFD41A9DFABA00C40BB4 /* Debug configuration for PBXNativeTarget "AnagramSolver" */,
+				4D45EFD51A9DFABA00C40BB4 /* Release configuration for PBXNativeTarget "AnagramSolver" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		4D45EFD61A9DFABA00C40BB4 /* Build configuration list for PBXNativeTarget "AnagramSolverTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4D45EFD71A9DFABA00C40BB4 /* Debug */,
-				4D45EFD81A9DFABA00C40BB4 /* Release */,
+				4D45EFD71A9DFABA00C40BB4 /* Debug configuration for PBXNativeTarget "AnagramSolverTests" */,
+				4D45EFD81A9DFABA00C40BB4 /* Release configuration for PBXNativeTarget "AnagramSolverTests" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
