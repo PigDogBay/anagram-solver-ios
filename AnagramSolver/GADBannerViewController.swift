@@ -60,6 +60,21 @@ struct GADBannerViewController: UIViewControllerRepresentable {
         Coordinator(self)
     }
     
+    static func bannerWidth(for scene: UIWindowScene) -> CGFloat {
+        let sceneBounds: CGRect
+        if #available(iOS 26.0, *) {
+            sceneBounds = scene.effectiveGeometry.coordinateSpace.bounds
+        } else {
+            sceneBounds = scene.coordinateSpace.bounds
+        }
+
+        // Banner should still respect the safe area (notch / Dynamic Island in landscape)
+        let insets = scene.windows.first(where: \.isKeyWindow)?.safeAreaInsets
+            ?? scene.windows.first?.safeAreaInsets
+            ?? .zero
+
+        return sceneBounds.inset(by: insets).width
+    }
     /*
         An adaptive banner's size is based on the screen width, this calculates the safe area screen width
         and then uses this to calculate the banner size.
@@ -67,10 +82,7 @@ struct GADBannerViewController: UIViewControllerRepresentable {
      */
     static func getAdBannerSize() -> AdSize {
         if let scene = UIApplication.shared.connectedScenes.first(where:{$0 is UIWindowScene}) as? UIWindowScene {
-            if let rootView = scene.windows.first?.rootViewController?.view {
-                let frame = rootView.frame.inset(by: rootView.safeAreaInsets)
-                return largeAnchoredAdaptiveBanner(width: frame.width)
-            }
+            return largeAnchoredAdaptiveBanner(width: bannerWidth(for: scene))
         }
         //No root VC, use 320x50 ad banner
         return AdSizeBanner
